@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'woojooaidpmedium';
+    src: url('woojooaidp-webfont.woff2') format('woff2'),
+         url('woojooaidp-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body,
+html {
+	width:100%;
+	height:100%;
+	font-family: 'woojooaidpmedium', sans-serif;
+	background: url(MaySaleBaHeader.png) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+h1 {
+	font-size: 16vmin;
+	color: white;
+	line-height: 0.60;
+}
+
+h1 span {
+	color: #ffb912;
+}
+
+hr {
+	border-color: #ffb912;
+	border-width: 3px;
+	max-width: 75px;
+}
+
+.btn {
+	font-weight: 700;
+	border-radius: 500px;
+	text-transform: uppercase;
+}
+
+.btn-primary {
+	background-color: #ffb912; 
+	border-color: #ffb912;
+}
+
+.btn-primary:hover {
+	background-color: #ff9d12;
+	border-color: #ff9d12;
+	/*transform: scale(1.1);*/
+	/*border-width: 3px;*/
+}
+
+.btn-xl{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1vmax;
+	padding: 0.5vmax 1vmax;
+}
+
+.buffer {
+	height: 1vmax;
+}
