@@ -202,7 +202,7 @@ var gridOptions = {
         lockPinned: true,
 
     },
-     onFirstDataRendered: onFirstDataRendered,
+     // onFirstDataRendered: onFirstDataRendered,
     enableCellTextSelection: true,
     ensureDomOrder: true,
     columnDefs: columnDefs,
@@ -214,9 +214,9 @@ var gridOptions = {
 
 };
 
-function onFirstDataRendered(params) {
-  params.api.sizeColumnsToFit();
-}
+// function onFirstDataRendered(params) {
+//   params.api.sizeColumnsToFit();
+// }
 
 var saleFilterParams = {
     allowedCharPattern: '\\d\\-\\,\\P',
@@ -228,18 +228,18 @@ var saleFilterParams = {
 };
 
 
-// function sizeToFit() {
-//     gridOptions.api.sizeColumnsToFit();
-// }
+function sizeToFit() {
+    gridOptions.api.sizeColumnsToFit();
+}
 
-// function autoSizeAll(skipHeader) {
-//     var allColumnIds = [];
-//     gridOptions.columnApi.getAllColumns().forEach(function(column) {
-//         allColumnIds.push(column.colId);
-//     });
+function autoSizeAll(skipHeader) {
+    var allColumnIds = [];
+    gridOptions.columnApi.getAllColumns().forEach(function(column) {
+        allColumnIds.push(column.colId);
+    });
 
-//     gridOptions.columnApi.autoSizeColumns(allColumnIds, skipHeader);
-// }
+    gridOptions.columnApi.autoSizeColumns(allColumnIds, skipHeader);
+}
 
 function currencyFormatter(params) {
     let peso = params.value;
@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(function(data) {
             gridOptions.api.setRowData(data);
-            // autoSizeAll(false);
+            autoSizeAll(false);
         });
 });
 
