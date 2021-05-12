@@ -31,12 +31,9 @@ var ratingGetter = function(params) {
 
 var columnDefs = [{
         field: "Title",
-     
         filter: true,
-        resizable: false,
         lockPosition: true,
-        suppressSizeToFit: true,
-        // pinned: 'left',
+        minWidth: 150,
         cellRenderer: function(params) {
             let keyData = params.value
             let keyLink = params.data.URL
@@ -48,7 +45,7 @@ var columnDefs = [{
         field: "Price",
         sortable: true,
         filter: true,
-        suppressSizeToFit: true,
+        minWidth: 100,
         valueGetter: priceGetter,
         valueFormatter: currencyFormatter,
         filter: 'agNumberColumnFilter',
@@ -62,13 +59,13 @@ var columnDefs = [{
     {
         headerName: "% Off",
         field: "PercentOff",
-        suppressSizeToFit: true,
+        minWidth: 100,
         sortable: true,
         filter: true
     },
     {
         field: "SalePrice",
-        suppressSizeToFit: true,
+        minWidth: 100,
         sortable: true,
         filter: true,
 
@@ -202,11 +199,12 @@ var columnDefs = [{
 var gridOptions = {
 
     defaultColDef: {
-        resizable: false,
-        lockPinned: true,
+        resizable: true,
+        // lockPinned: true,
 
     },
      onFirstDataRendered: onFirstDataRendered,
+      onGridSizeChanged: onGridSizeChanged,
     enableCellTextSelection: true,
     ensureDomOrder: true,
     columnDefs: columnDefs,
@@ -222,6 +220,36 @@ function onFirstDataRendered(params) {
   params.api.sizeColumnsToFit();
 }
 
+function onGridSizeChanged(params) {
+  // get the current grids width
+  var gridWidth = document.getElementById('grid-wrapper').offsetWidth;
+
+  // keep track of which columns to hide/show
+  var columnsToShow = [];
+  var columnsToHide = [];
+
+  // iterate over all columns (visible or not) and work out
+  // now many columns can fit (based on their minWidth)
+  var totalColsWidth = 0;
+  var allColumns = params.columnApi.getAllColumns();
+  for (var i = 0; i < allColumns.length; i++) {
+    var column = allColumns[i];
+    totalColsWidth += column.getMinWidth();
+    if (totalColsWidth > gridWidth) {
+      columnsToHide.push(column.colId);
+    } else {
+      columnsToShow.push(column.colId);
+    }
+  }
+
+  // show/hide columns based on current grid width
+  params.columnApi.setColumnsVisible(columnsToShow, true);
+  params.columnApi.setColumnsVisible(columnsToHide, false);
+
+  // fill out any available space to ensure there are no gaps
+  params.api.sizeColumnsToFit();
+}
+
 var saleFilterParams = {
     allowedCharPattern: '\\d\\-\\,\\P',
     numberParser: function(text) {
@@ -232,9 +260,9 @@ var saleFilterParams = {
 };
 
 
-function sizeToFit() {
-    gridOptions.api.sizeColumnsToFit();
-}
+// function sizeToFit() {
+//     gridOptions.api.sizeColumnsToFit();
+// }
 
 function autoSizeAll(skipHeader) {
     var allColumnIds = [];
@@ -279,7 +307,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(function(data) {
             gridOptions.api.setRowData(data);
-            autoSizeAll(false);
+            // autoSizeAll(false);
         });
 });
 
