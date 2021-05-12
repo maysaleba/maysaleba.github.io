@@ -1,0 +1,902 @@
+[
+  {
+    "TITLE": "Among Pipes",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "75%",
+    "SALEENDS": "2021-05-24",
+    "URL": "/games/detail/among-pipes-switch/",
+    "PUBLISHER": "Prison Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/among-pipes-switch/hero.jpg"
+  },
+  {
+    "TITLE": "A HERO AND A GARDEN",
+    "ORIGPRICE": 3.24,
+    "PERCENTOFF": "35%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/a-hero-and-a-garden-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/a-hero-and-a-garden-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Birthday of Midnight",
+    "ORIGPRICE": 3.24,
+    "PERCENTOFF": "35%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/birthday-of-midnight-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/birthday-of-midnight-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Ellipsis",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "60%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/ellipsis-switch/",
+    "PUBLISHER": "Silesia Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/e/ellipsis-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Fall Gummies",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "75%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/fall-gummies-switch/",
+    "PUBLISHER": "Prison Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/fall-gummies-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Food Truck Tycoon",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "60%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/food-truck-tycoon-switch/",
+    "PUBLISHER": "Baltoro Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/food-truck-tycoon-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Fantasy Checkers",
+    "ORIGPRICE": 4.99,
+    "PERCENTOFF": "38%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/fantasy-checkers-switch/",
+    "PUBLISHER": "Prison Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/fantasy-checkers-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Clash Force",
+    "ORIGPRICE": 2.99,
+    "PERCENTOFF": "40%",
+    "SALEENDS": "2021-05-24",
+    "URL": "/games/detail/clash-force-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/clash-force-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Ganbare! Super Strikers",
+    "ORIGPRICE": 5.49,
+    "PERCENTOFF": "45%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/ganbare-super-strikers-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/ganbare-super-strikers-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Golf Zero",
+    "ORIGPRICE": 2.99,
+    "PERCENTOFF": "40%",
+    "SALEENDS": "2021-05-26",
+    "URL": "/games/detail/golf-zero-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/golf-zero-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Chess Ace",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "75%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/chess-ace-switch/",
+    "PUBLISHER": "Cool Small Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/chess-ace-switch/hero.jpg"
+  },
+  {
+    "TITLE": "WRC 8 FIA World Rally Championship",
+    "ORIGPRICE": 19.99,
+    "PERCENTOFF": "60%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/wrc-8-fia-world-rally-championship-switch/",
+    "PUBLISHER": "Nacon",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/wrc-8-fia-world-rally-championship-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Jet Ski Rush",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "50%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/jet-ski-rush-switch/",
+    "PUBLISHER": "Cool Small Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/jet-ski-rush-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Urban Flow",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "87%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/urban-flow-switch/",
+    "PUBLISHER": "Baltoro Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/urban-flow-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Trancelation",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "80%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/trancelation-switch/",
+    "PUBLISHER": "Baltoro Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/trancelation-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Traffix",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "60%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/traffix-switch/",
+    "PUBLISHER": "Nerd Monkeys",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/traffix-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Two Parsecs From Earth",
+    "ORIGPRICE": 4.79,
+    "PERCENTOFF": "40%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/two-parsecs-from-earth-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/two-parsecs-from-earth-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Tamiku",
+    "ORIGPRICE": 3.24,
+    "PERCENTOFF": "35%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/tamiku-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tamiku-switch/hero.jpg"
+  },
+  {
+    "TITLE": "WINGSPAN",
+    "ORIGPRICE": 13.99,
+    "PERCENTOFF": "30%",
+    "SALEENDS": "2021-05-17",
+    "URL": "/games/detail/wingspan-switch/",
+    "PUBLISHER": "Monster Couch",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/wingspan-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Super Street: Racer",
+    "ORIGPRICE": 12.49,
+    "PERCENTOFF": "69%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/super-street-racer-switch/",
+    "PUBLISHER": "Funbox Media",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/super-street-racer-switch/hero.jpg"
+  },
+  {
+    "TITLE": "SpongeBob: Krusty Cook-Off",
+    "ORIGPRICE": 14.99,
+    "PERCENTOFF": "50%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/spongebob-krusty-cook-off-switch/",
+    "PUBLISHER": "Tilting Point",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/spongebob-krusty-cook-off-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Rush Rover",
+    "ORIGPRICE": 2.49,
+    "PERCENTOFF": "50%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/rush-rover-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/rush-rover-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Speed 3: Grand Prix",
+    "ORIGPRICE": 14.99,
+    "PERCENTOFF": "63%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/speed-3-grand-prix-switch/",
+    "PUBLISHER": "Orange One",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/speed-3-grand-prix-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Royal Tower Defense",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "75%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/royal-tower-defense-switch/",
+    "PUBLISHER": "Prison Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/royal-tower-defense-switch/hero.jpg"
+  },
+  {
+    "TITLE": "RogueCube",
+    "ORIGPRICE": 2.49,
+    "PERCENTOFF": "50%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/roguecube-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/roguecube-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Reed Remastered",
+    "ORIGPRICE": 2.24,
+    "PERCENTOFF": "55%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/reed-remastered-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "undefined.jpg"
+  },
+  {
+    "TITLE": "Reed 2",
+    "ORIGPRICE": 2.49,
+    "PERCENTOFF": "50%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/reed-2-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/reed-2-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Real Drift Racing",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "60%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/real-drift-racing-switch/",
+    "PUBLISHER": "Cool Small Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/real-drift-racing-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Radio Squid",
+    "ORIGPRICE": 2.74,
+    "PERCENTOFF": "45%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/radio-squid-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/radio-squid-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Street Basketball",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "67%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/street-basketball-switch/",
+    "PUBLISHER": "Baltoro Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/street-basketball-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Perfect Traffic Simulator",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "80%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/perfect-traffic-simulator-switch/",
+    "PUBLISHER": "Prison Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/perfect-traffic-simulator-switch/hero.jpg"
+  },
+  {
+    "TITLE": "My Magic Florist",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "72%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/my-magic-florist-switch/",
+    "PUBLISHER": "Cool Small Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/my-magic-florist-switch/hero.jpg"
+  },
+  {
+    "TITLE": "SpellKeeper",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "67%",
+    "SALEENDS": "2021-05-17",
+    "URL": "/games/detail/spellkeeper-switch/",
+    "PUBLISHER": "Silesia Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/spellkeeper-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Among Us",
+    "ORIGPRICE": 4,
+    "PERCENTOFF": "20%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/among-us-switch/",
+    "PUBLISHER": "Innersloth",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/among-us-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Music Racer",
+    "ORIGPRICE": 4.89,
+    "PERCENTOFF": "30%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/music-racer-switch/",
+    "PUBLISHER": "Sometimes You",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/music-racer-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Autumn's Journey",
+    "ORIGPRICE": 3.24,
+    "PERCENTOFF": "35%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/autumns-journey-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/autumns-journey-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Anodyne 2: Return to Dust",
+    "ORIGPRICE": 13.99,
+    "PERCENTOFF": "30%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/anodyne-2-return-to-dust-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/anodyne-2-return-to-dust-switch/anodyne-2-return-to-dust-switch-hero.jpg"
+  },
+  {
+    "TITLE": "Balancelot",
+    "ORIGPRICE": 5.19,
+    "PERCENTOFF": "35%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/balancelot-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/balancelot-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Castle Pals",
+    "ORIGPRICE": 2.49,
+    "PERCENTOFF": "50%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/castle-pals-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/castle-pals-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Concept Destruction",
+    "ORIGPRICE": 2.99,
+    "PERCENTOFF": "40%",
+    "SALEENDS": "2021-05-24",
+    "URL": "/games/detail/concept-destruction-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/concept-destruction-switch/hero.jpg"
+  },
+  {
+    "TITLE": "CrossKrush",
+    "ORIGPRICE": 2.99,
+    "PERCENTOFF": "40%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/crosskrush-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/crosskrush-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Destrobots",
+    "ORIGPRICE": 4.99,
+    "PERCENTOFF": "50%",
+    "SALEENDS": "2021-05-22",
+    "URL": "/games/detail/destrobots-switch/",
+    "PUBLISHER": "7Levels",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/destrobots-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Duck Souls+",
+    "ORIGPRICE": 2.49,
+    "PERCENTOFF": "50%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/duck-souls-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/duck-soulsplus-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Even the Ocean",
+    "ORIGPRICE": 8.99,
+    "PERCENTOFF": "40%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/even-the-ocean-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/e/even-the-ocean-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Freddy Spaghetti",
+    "ORIGPRICE": 3.24,
+    "PERCENTOFF": "35%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/freddy-spaghetti-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/freddy-spaghetti-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Fantasy Tower Defense",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "60%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/fantasy-tower-defense-switch/",
+    "PUBLISHER": "Prison Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/fantasy-tower-defense-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Fin and the Ancient Mystery",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "60%",
+    "SALEENDS": "2021-05-30",
+    "URL": "/games/detail/fin-and-the-ancient-mystery-switch/",
+    "PUBLISHER": "Silesia Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/fin-and-the-ancient-mystery-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Jet Kave Adventure",
+    "ORIGPRICE": 13.39,
+    "PERCENTOFF": "33%",
+    "SALEENDS": "2021-05-27",
+    "URL": "/games/detail/jet-kave-adventure-switch/",
+    "PUBLISHER": "7Levels",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/jet-kave-adventure-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Pinkman+",
+    "ORIGPRICE": 3.49,
+    "PERCENTOFF": "30%",
+    "SALEENDS": "2021-05-17",
+    "URL": "/games/detail/pinkmanplus-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/pinkmanplus-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Gun Crazy",
+    "ORIGPRICE": 2.49,
+    "PERCENTOFF": "50%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/gun-crazy-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/gun-crazy-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Last Encounter",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "87%",
+    "SALEENDS": "2021-05-17",
+    "URL": "/games/detail/last-encounter-switch/",
+    "PUBLISHER": "Silesia Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/l/last-encounter-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Loot Hero DX",
+    "ORIGPRICE": 3.24,
+    "PERCENTOFF": "35%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/loot-hero-dx-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/l/loot-hero-dx-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Prehistoric Dude",
+    "ORIGPRICE": 2.74,
+    "PERCENTOFF": "45%",
+    "SALEENDS": "2021-05-17",
+    "URL": "/games/detail/prehistoric-dude-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/prehistoric-dude-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Random Heroes: Gold Edition",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "60%",
+    "SALEENDS": "2021-05-24",
+    "URL": "/games/detail/random-heroes-gold-edition-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/random-heroes-gold-edition-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Spacejacked",
+    "ORIGPRICE": 4.99,
+    "PERCENTOFF": "50%",
+    "SALEENDS": "2021-05-17",
+    "URL": "/games/detail/spacejacked-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/spacejacked-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Knightin'+",
+    "ORIGPRICE": 2.99,
+    "PERCENTOFF": "50%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/knightin-plus-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/k/knightin-plus-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Zero Zero Zero Zero",
+    "ORIGPRICE": 2.24,
+    "PERCENTOFF": "55%",
+    "SALEENDS": "2021-05-28",
+    "URL": "/games/detail/zero-zero-zero-zero-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/z/zero-zero-zero-zero-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Warplanes: WW2 Dogfight",
+    "ORIGPRICE": 4.99,
+    "PERCENTOFF": "50%",
+    "SALEENDS": "2021-05-17",
+    "URL": "/games/detail/warplanes-ww2-dogfight-switch/",
+    "PUBLISHER": "7Levels",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/warplanes-ww2-dogfight-switch/warplanes-ww2-dogfight-switch-hero.jpg"
+  },
+  {
+    "TITLE": "Ultra Hat Dimension",
+    "ORIGPRICE": 2.99,
+    "PERCENTOFF": "40%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/ultra-hat-dimension-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/ultra-hat-dimension-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Ultra Foodmess",
+    "ORIGPRICE": 2.39,
+    "PERCENTOFF": "40%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/ultra-foodmess-switch/",
+    "PUBLISHER": "Silesia Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/ultra-foodmess-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Thunderflash",
+    "ORIGPRICE": 3.49,
+    "PERCENTOFF": "30%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/thunderflash-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/thunderflash-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Thunder Paw",
+    "ORIGPRICE": 2.24,
+    "PERCENTOFF": "55%",
+    "SALEENDS": "2021-05-17",
+    "URL": "/games/detail/thunder-paw-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/thunder-paw-switch/hero.jpg"
+  },
+  {
+    "TITLE": "The Legend of Ninja",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "60%",
+    "SALEENDS": "2021-05-24",
+    "URL": "/games/detail/the-legend-of-ninja-switch/",
+    "PUBLISHER": "Prison Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-legend-of-ninja-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Super Destronaut: Land Wars",
+    "ORIGPRICE": 2.74,
+    "PERCENTOFF": "45%",
+    "SALEENDS": "2021-05-17",
+    "URL": "/games/detail/super-destronaut-land-wars-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "undefined.jpg"
+  },
+  {
+    "TITLE": "Quest Hunter",
+    "ORIGPRICE": 10.49,
+    "PERCENTOFF": "65%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/quest-hunter-switch/",
+    "PUBLISHER": "2 Zombie Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/q/quest-hunter-switch/hero.jpg"
+  },
+  {
+    "TITLE": "A Summer with the Shiba Inu",
+    "ORIGPRICE": 5.49,
+    "PERCENTOFF": "45%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/a-summer-with-the-shiba-inu-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/a-summer-with-the-shiba-inu-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Endless Fables: Dark Moor",
+    "ORIGPRICE": 2.09,
+    "PERCENTOFF": "86%",
+    "SALEENDS": "2021-05-17",
+    "URL": "/games/detail/endless-fables-dark-moor-switch/",
+    "PUBLISHER": "Artifex Mundi",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/e/endless-fables-dark-moor-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Deadly Fighter 2",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "50%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/deadly-fighter-2-switch/",
+    "PUBLISHER": "Cool Small Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/deadly-fighter-2-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Devious Dungeon Collection",
+    "ORIGPRICE": 7.14,
+    "PERCENTOFF": "45%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/devious-dungeon-collection-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/devious-dungeon-collection-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Enigmatis 2: The Mists of Ravenwood",
+    "ORIGPRICE": 2.09,
+    "PERCENTOFF": "86%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/enigmatis-2-the-mists-of-ravenwood-switch/",
+    "PUBLISHER": "Artifex Mundi",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/e/enigmatis-2-the-mists-of-ravenwood-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Gangsta Paradise",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "80%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/gangsta-paradise-switch/",
+    "PUBLISHER": "Prison Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/gangsta-paradise-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Guard Duty",
+    "ORIGPRICE": 4.99,
+    "PERCENTOFF": "50%",
+    "SALEENDS": "2021-05-23",
+    "URL": "/games/detail/guard-duty-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/guard-duty-switch/hero.jpg"
+  },
+  {
+    "TITLE": "How to take off your Mask Remastered",
+    "ORIGPRICE": 10.49,
+    "PERCENTOFF": "30%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/how-to-take-off-your-mask-remastered-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/how-to-take-off-your-mask-remastered-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Jet Set Knights",
+    "ORIGPRICE": 5.99,
+    "PERCENTOFF": "40%",
+    "SALEENDS": "2021-05-17",
+    "URL": "/games/detail/jet-set-knights-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/jet-set-knights-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Jisei: The First Case HD",
+    "ORIGPRICE": 2.99,
+    "PERCENTOFF": "40%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/jisei-the-first-case-hd-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/jisei-the-first-case-hd-switch/hero.jpg"
+  },
+  {
+    "TITLE": "More Dark",
+    "ORIGPRICE": 3.24,
+    "PERCENTOFF": "35%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/more-dark-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/more-dark-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Nicole",
+    "ORIGPRICE": 11.39,
+    "PERCENTOFF": "40%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/nicole-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/n/nicole-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Ord.",
+    "ORIGPRICE": 3.24,
+    "PERCENTOFF": "35%",
+    "SALEENDS": "2021-05-17",
+    "URL": "/games/detail/ord-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/ord-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Paw Paw Paw",
+    "ORIGPRICE": 6.49,
+    "PERCENTOFF": "35%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/paw-paw-paw-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/paw-paw-paw-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Dreaming Sarah",
+    "ORIGPRICE": 3.49,
+    "PERCENTOFF": "30%",
+    "SALEENDS": "2021-05-23",
+    "URL": "/games/detail/dreaming-sarah-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/dreaming-sarah-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Vera Blanc: Ghost In The Castle",
+    "ORIGPRICE": 3.49,
+    "PERCENTOFF": "30%",
+    "SALEENDS": "2021-05-17",
+    "URL": "/games/detail/vera-blanc-ghost-in-the-castle-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/v/vera-blanc-ghost-in-the-castle-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Thy Sword",
+    "ORIGPRICE": 5.49,
+    "PERCENTOFF": "45%",
+    "SALEENDS": "2021-05-30",
+    "URL": "/games/detail/thy-sword-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/thy-sword-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Castle of Heart",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "87%",
+    "SALEENDS": "2021-05-17",
+    "URL": "/games/detail/castle-of-heart-switch/",
+    "PUBLISHER": "7Levels",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/castle-of-heart-switch/hero.jpg"
+  },
+  {
+    "TITLE": "The Language Of Love",
+    "ORIGPRICE": 7.79,
+    "PERCENTOFF": "35%",
+    "SALEENDS": "2021-05-17",
+    "URL": "/games/detail/the-language-of-love-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-language-of-love-switch/hero.jpg"
+  },
+  {
+    "TITLE": "The Innsmouth Case",
+    "ORIGPRICE": 3.74,
+    "PERCENTOFF": "75%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/the-innsmouth-case-switch/",
+    "PUBLISHER": "Assemble Entertainment",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-innsmouth-case-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Wrestling Empire",
+    "ORIGPRICE": 15.99,
+    "PERCENTOFF": "20%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/wrestling-empire-switch/",
+    "PUBLISHER": "MDickie",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/wrestling-empire-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Syrup and The Ultimate Sweet",
+    "ORIGPRICE": 2.74,
+    "PERCENTOFF": "45%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/syrup-and-the-ultimate-sweet-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/syrup-and-the-ultimate-sweet-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Strawberry Vinegar",
+    "ORIGPRICE": 5.49,
+    "PERCENTOFF": "45%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/strawberry-vinegar-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/strawberry-vinegar-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Sumatra: Fate of Yandi",
+    "ORIGPRICE": 4.89,
+    "PERCENTOFF": "30%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/sumatra-fate-of-yandi-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/sumatra-fate-of-yandi-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Roommates",
+    "ORIGPRICE": 11.99,
+    "PERCENTOFF": "40%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/roommates-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/roommates-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Slide Stars",
+    "ORIGPRICE": 19.99,
+    "PERCENTOFF": "33%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/slide-stars-switch/",
+    "PUBLISHER": "Orange One",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/slide-stars-switch/hero.jpg"
+  },
+  {
+    "TITLE": "RoboPhobik",
+    "ORIGPRICE": 7.99,
+    "PERCENTOFF": "20%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/robophobik-switch/",
+    "PUBLISHER": "Haruneko Entertainment",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/robophobik-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Reflection of Mine",
+    "ORIGPRICE": 4.79,
+    "PERCENTOFF": "40%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/reflection-of-mine-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/reflection-of-mine-switch/hero.jpg"
+  },
+  {
+    "TITLE": "UltraGoodness 2",
+    "ORIGPRICE": 3.49,
+    "PERCENTOFF": "30%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/ultragoodness-2-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/ultragoodness-2-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Pantsu Hunter: Back to the 90s",
+    "ORIGPRICE": 9.09,
+    "PERCENTOFF": "30%",
+    "SALEENDS": "2021-05-26",
+    "URL": "/games/detail/pantsu-hunter-back-to-the-90s-switch/",
+    "PUBLISHER": "Sometimes You",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/pantsu-hunter-back-to-the-90s-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Blind Men",
+    "ORIGPRICE": 2.74,
+    "PERCENTOFF": "45%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/blind-men-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/blind-men-switch/hero.jpg"
+  },
+  {
+    "TITLE": "DISTRAINT 2",
+    "ORIGPRICE": 4.49,
+    "PERCENTOFF": "50%",
+    "SALEENDS": "2021-05-17",
+    "URL": "/games/detail/distraint-2-switch/",
+    "PUBLISHER": "Ratalaika Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/distraint-2-switch/hero.jpg"
+  },
+  {
+    "TITLE": "S.N.I.P.E.R. - Hunter Scope",
+    "ORIGPRICE": 1.99,
+    "PERCENTOFF": "87%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/sniper-hunter-scope-switch/",
+    "PUBLISHER": "Baltoro Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/sniper-hunter-scope-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Team Troopers",
+    "ORIGPRICE": 9.3,
+    "PERCENTOFF": "40%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/team-troopers-switch/",
+    "PUBLISHER": "Kistler Benjamin",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/team-troopers-switch/hero.jpg"
+  },
+  {
+    "TITLE": "Paratopic",
+    "ORIGPRICE": 2.19,
+    "PERCENTOFF": "60%",
+    "SALEENDS": "2021-05-31",
+    "URL": "/games/detail/paratopic-switch/",
+    "PUBLISHER": "Baltoro Games",
+    "IMAGE": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/paratopic-switch/hero.jpg"
+  }
+]
