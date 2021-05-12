@@ -33,7 +33,7 @@ var columnDefs = [{
         field: "Title",
         filter: true,
         lockPosition: true,
-        minWidth: 180,
+        minWidth: 170,
         sortable: true,
         
         cellRenderer: function(params) {
@@ -43,26 +43,18 @@ var columnDefs = [{
             return newLink;
         }
     },
-    {
-        field: "Price",
+
+        {
+        headerName: "% Off",
+        field: "PercentOff",
+        minWidth: 70,
+       
         sortable: true,
-        filter: true,
-        minWidth: 60,
-
-        valueGetter: priceGetter,
-        valueFormatter: currencyFormatter,
-        filter: 'agNumberColumnFilter',
-        cellStyle: params => {
-            // you can use either came case or dashes, the grid converts to whats needed
-            return {
-                textDecoration: 'line-through'
-            };
-        },
+        filter: true
     },
-
-     {
+         {
         field: "SalePrice",
-        minWidth: 60,
+        minWidth: 70,
         sortable: true,
         filter: true,
 
@@ -75,14 +67,36 @@ var columnDefs = [{
         filter: 'agNumberColumnFilter',
 
     },
-    {
-        headerName: "% Off",
-        field: "PercentOff",
-        minWidth: 60,
-       
+
+     {
+        headerName: "Rating",
+        field: "SCORE",
         sortable: true,
-        filter: true
+        filter: true,
+         minWidth: 70,
+        filter: 'agNumberColumnFilter',
+        valueGetter: ratingGetter,
+
     },
+    {
+        field: "Price",
+        sortable: true,
+        filter: true,
+        minWidth: 70,
+
+        valueGetter: priceGetter,
+        valueFormatter: currencyFormatter,
+        filter: 'agNumberColumnFilter',
+        cellStyle: params => {
+            // you can use either came case or dashes, the grid converts to whats needed
+            return {
+                textDecoration: 'line-through'
+            };
+        },
+    },
+
+
+
    
 
     {
@@ -164,16 +178,7 @@ var columnDefs = [{
             }
         }
     },
-    {
-        headerName: "Rating",
-        field: "SCORE",
-        sortable: true,
-        filter: true,
-         minWidth: 100,
-        filter: 'agNumberColumnFilter',
-        valueGetter: ratingGetter,
-
-    },
+   
     {
         field: "Publisher",
          minWidth: 100,
