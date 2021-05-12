@@ -33,7 +33,7 @@ var columnDefs = [{
         field: "Title",
         filter: true,
         lockPosition: true,
-        minWidth: 200,
+        minWidth: 180,
         sortable: true,
         
         cellRenderer: function(params) {
@@ -47,7 +47,7 @@ var columnDefs = [{
         field: "Price",
         sortable: true,
         filter: true,
-        minWidth: 70,
+        minWidth: 60,
 
         valueGetter: priceGetter,
         valueFormatter: currencyFormatter,
@@ -59,17 +59,10 @@ var columnDefs = [{
             };
         },
     },
-    {
-        headerName: "% Off",
-        field: "PercentOff",
-        minWidth: 70,
-       
-        sortable: true,
-        filter: true
-    },
-    {
+
+     {
         field: "SalePrice",
-        minWidth: 70,
+        minWidth: 60,
         sortable: true,
         filter: true,
 
@@ -82,6 +75,15 @@ var columnDefs = [{
         filter: 'agNumberColumnFilter',
 
     },
+    {
+        headerName: "% Off",
+        field: "PercentOff",
+        minWidth: 60,
+       
+        sortable: true,
+        filter: true
+    },
+   
 
     {
         headerName: "All Time Low",
@@ -205,7 +207,7 @@ var columnDefs = [{
         field: "URL",
         sortable: true,
         filter: true,
-        hide: true
+        // hide: true
     }
 ];
 
@@ -239,7 +241,7 @@ function onGridSizeChanged(params) {
 
   // keep track of which columns to hide/show
   var columnsToShow = [];
-  var columnsToHide = [];
+  var columnsToHide = ["URL"];
 
   // iterate over all columns (visible or not) and work out
   // now many columns can fit (based on their minWidth)
