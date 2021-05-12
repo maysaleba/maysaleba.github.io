@@ -47,7 +47,7 @@ var columnDefs = [{
         {
         headerName: "% Off",
         field: "PercentOff",
-        minWidth: 70,
+        minWidth: 60,
        
         sortable: true,
         filter: true
