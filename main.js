@@ -31,11 +31,12 @@ var ratingGetter = function(params) {
 
 var columnDefs = [{
         field: "Title",
-        width: 300,
+     
         filter: true,
         resizable: false,
         lockPosition: true,
-        pinned: 'left',
+        suppressSizeToFit: true,
+        // pinned: 'left',
         cellRenderer: function(params) {
             let keyData = params.value
             let keyLink = params.data.URL
@@ -47,6 +48,7 @@ var columnDefs = [{
         field: "Price",
         sortable: true,
         filter: true,
+        suppressSizeToFit: true,
         valueGetter: priceGetter,
         valueFormatter: currencyFormatter,
         filter: 'agNumberColumnFilter',
@@ -60,11 +62,13 @@ var columnDefs = [{
     {
         headerName: "% Off",
         field: "PercentOff",
+        suppressSizeToFit: true,
         sortable: true,
         filter: true
     },
     {
         field: "SalePrice",
+        suppressSizeToFit: true,
         sortable: true,
         filter: true,
 
@@ -202,7 +206,7 @@ var gridOptions = {
         lockPinned: true,
 
     },
-     // onFirstDataRendered: onFirstDataRendered,
+     onFirstDataRendered: onFirstDataRendered,
     enableCellTextSelection: true,
     ensureDomOrder: true,
     columnDefs: columnDefs,
@@ -214,9 +218,9 @@ var gridOptions = {
 
 };
 
-// function onFirstDataRendered(params) {
-//   params.api.sizeColumnsToFit();
-// }
+function onFirstDataRendered(params) {
+  params.api.sizeColumnsToFit();
+}
 
 var saleFilterParams = {
     allowedCharPattern: '\\d\\-\\,\\P',
