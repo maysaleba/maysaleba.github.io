@@ -202,6 +202,7 @@ var gridOptions = {
         lockPinned: true,
 
     },
+     onFirstDataRendered: onFirstDataRendered,
     enableCellTextSelection: true,
     ensureDomOrder: true,
     columnDefs: columnDefs,
@@ -213,6 +214,10 @@ var gridOptions = {
 
 };
 
+function onFirstDataRendered(params) {
+  params.api.sizeColumnsToFit();
+}
+
 var saleFilterParams = {
     allowedCharPattern: '\\d\\-\\,\\P',
     numberParser: function(text) {
@@ -223,18 +228,18 @@ var saleFilterParams = {
 };
 
 
-function sizeToFit() {
-    gridOptions.api.sizeColumnsToFit();
-}
+// function sizeToFit() {
+//     gridOptions.api.sizeColumnsToFit();
+// }
 
-function autoSizeAll(skipHeader) {
-    var allColumnIds = [];
-    gridOptions.columnApi.getAllColumns().forEach(function(column) {
-        allColumnIds.push(column.colId);
-    });
+// function autoSizeAll(skipHeader) {
+//     var allColumnIds = [];
+//     gridOptions.columnApi.getAllColumns().forEach(function(column) {
+//         allColumnIds.push(column.colId);
+//     });
 
-    gridOptions.columnApi.autoSizeColumns(allColumnIds, skipHeader);
-}
+//     gridOptions.columnApi.autoSizeColumns(allColumnIds, skipHeader);
+// }
 
 function currencyFormatter(params) {
     let peso = params.value;
@@ -257,6 +262,8 @@ function formatNumber(number) {
 
 
 
+
+
 // setup the grid after the page has finished loading
 document.addEventListener('DOMContentLoaded', function() {
     var gridDiv = document.querySelector('#myGrid');
@@ -268,7 +275,8 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(function(data) {
             gridOptions.api.setRowData(data);
-            sizeToFit();
+            // autoSizeAll(false);
         });
 });
+
 
