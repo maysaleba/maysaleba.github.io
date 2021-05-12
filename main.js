@@ -1,9 +1,9 @@
 var columnDefs = [
-  { field: "Title", sortable: true, filter: true, resizable: true },
+  { field: "Title", filter: true, resizable: true },
   { field: "Release Date", sortable: true, filter: true, hide: true },
   { field: "ESRB Rating", sortable: true, filter: true  },
   { field: "Number of Players", sortable: true, filter: true  },
-  { field: "Publisher", sortable: true, filter: true  },
+  { field: "Publisher", filter: true  },
   { field: "Price", sortable: true, filter: true  },
   { field: "Sale Price", sortable: true, filter: true  },
   { field: "Percent Off", sortable: true, filter: true  },
