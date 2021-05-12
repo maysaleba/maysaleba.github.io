@@ -1,6 +1,6 @@
 var columnDefs = [
   { field: "Title", filter: true, resizable: true },
-  { field: "Release Date", sortable: true, filter: true, hide: true },
+  { field: "Release Date", filter: true, hide: true },
   { field: "ESRB Rating", sortable: true, filter: true  },
   { field: "Number of Players", sortable: true, filter: true  },
   { field: "Publisher", filter: true  },
