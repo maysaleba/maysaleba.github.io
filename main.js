@@ -33,7 +33,9 @@ var columnDefs = [{
         field: "Title",
         filter: true,
         lockPosition: true,
-        minWidth: 150,
+        minWidth: 200,
+        sortable: true,
+        
         cellRenderer: function(params) {
             let keyData = params.value
             let keyLink = params.data.URL
@@ -45,7 +47,8 @@ var columnDefs = [{
         field: "Price",
         sortable: true,
         filter: true,
-        minWidth: 100,
+        minWidth: 80,
+
         valueGetter: priceGetter,
         valueFormatter: currencyFormatter,
         filter: 'agNumberColumnFilter',
@@ -59,13 +62,14 @@ var columnDefs = [{
     {
         headerName: "% Off",
         field: "PercentOff",
-        minWidth: 100,
+        minWidth: 70,
+       
         sortable: true,
         filter: true
     },
     {
         field: "SalePrice",
-        minWidth: 100,
+        minWidth: 80,
         sortable: true,
         filter: true,
 
@@ -84,6 +88,7 @@ var columnDefs = [{
         field: "LowestPrice",
         sortable: true,
         filter: true,
+        minWidth: 100,
         valueGetter: alltimelowGetter,
         valueFormatter: currencyFormatter,
         filter: 'agNumberColumnFilter',
@@ -93,6 +98,7 @@ var columnDefs = [{
         field: "SaleStarted",
         sortable: true,
         sort: 'desc',
+         minWidth: 100,
         filter: 'agDateColumnFilter',
         valueFormatter: dateFormatter,
         filterParams: {
@@ -126,6 +132,7 @@ var columnDefs = [{
         field: "SaleEnds",
         sortable: true,
         filter: true,
+         minWidth: 100,
         filter: 'agDateColumnFilter',
         valueFormatter: dateFormatter,
         filterParams: {
@@ -160,17 +167,21 @@ var columnDefs = [{
         field: "SCORE",
         sortable: true,
         filter: true,
+         minWidth: 100,
         filter: 'agNumberColumnFilter',
         valueGetter: ratingGetter,
 
     },
     {
         field: "Publisher",
+         minWidth: 100,
         filter: true
+
     },
 
     {
         field: "ReleaseDate",
+         minWidth: 100,
         filter: true,
         hide: true
     },
@@ -178,11 +189,13 @@ var columnDefs = [{
     {
         headerName: "# of Players",
         field: "NumberofPlayers",
+         minWidth: 100,
         sortable: true,
         filter: true
     },
     {
         field: "ESRBRating",
+         minWidth: 100,
         sortable: true,
         filter: true
     },
