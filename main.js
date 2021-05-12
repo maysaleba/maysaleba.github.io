@@ -33,7 +33,7 @@ var columnDefs = [{
         field: "Title",
         width: 300,
         filter: true,
-        resizable: true,
+        resizable: false,
         lockPosition: true,
         pinned: 'left',
         cellRenderer: function(params) {
@@ -198,7 +198,7 @@ var columnDefs = [{
 var gridOptions = {
 
     defaultColDef: {
-        resizable: true,
+        resizable: false,
         lockPinned: true,
 
     },
