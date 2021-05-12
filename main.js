@@ -31,6 +31,7 @@ var ratingGetter = function(params) {
 
 var columnDefs = [{
         field: "Title",
+        width: 300,
         filter: true,
         resizable: true,
         lockPosition: true,
@@ -38,7 +39,7 @@ var columnDefs = [{
         cellRenderer: function(params) {
             let keyData = params.value
             let keyLink = params.data.URL
-            let newLink = `<a href= https://www.nintendo.com${keyLink}>${keyData}</a>`;
+            let newLink = `<a href= https://www.nintendo.com${keyLink} class="link-dark">${keyData}</a>`;
             return newLink;
         }
     },
@@ -82,7 +83,7 @@ var columnDefs = [{
         field: "LowestPrice",
         sortable: true,
         filter: true,
-        valueGetter: priceGetter,
+        valueGetter: alltimelowGetter,
         valueFormatter: currencyFormatter,
         filter: 'agNumberColumnFilter',
     },
@@ -267,6 +268,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(function(data) {
             gridOptions.api.setRowData(data);
-            autoSizeAll(false);
+            sizeToFit();
         });
 });
+
