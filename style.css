@@ -1,9 +1,16 @@
              .flex-container {
   display: flex;
   flex-direction: column;
+align-items: center;
+ background-color: DodgerBlue;
   height:100%;
 }
 
+
+img {
+  width: 100%;
+  height: auto;
+}
 
 
               html, body {
@@ -34,6 +41,11 @@
 
 
 
+/*.header-right {
+  float: right;
+}*/
+
+
 /*                 html {
                 position: absolute;
                 top: 0;
@@ -54,6 +66,18 @@
 #header {
     height: 100%;
 }
+
+
+@media screen and (max-width: 500px) {
+img {
+  width: 50%;
+  height: auto;
+}
+
+ .flex-container {
+  align-items: flex-start;
+  }
+  }
 
 /*body { 
   margin: 0;
