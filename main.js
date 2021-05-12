@@ -47,7 +47,7 @@ var columnDefs = [{
         field: "Price",
         sortable: true,
         filter: true,
-        minWidth: 80,
+        minWidth: 70,
 
         valueGetter: priceGetter,
         valueFormatter: currencyFormatter,
@@ -69,7 +69,7 @@ var columnDefs = [{
     },
     {
         field: "SalePrice",
-        minWidth: 80,
+        minWidth: 70,
         sortable: true,
         filter: true,
 
