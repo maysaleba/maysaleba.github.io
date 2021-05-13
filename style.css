@@ -69,6 +69,11 @@ img {
   border-radius: 4px;
   background-color: #ff7d00;
   color:white;
+  transition: 0.5s;
+}
+
+.header button:hover{
+  opacity:0.8;
 }
 
 .footer{
@@ -129,7 +134,9 @@ img {
   height: auto;
 }
 
- .flex-container {
+ .subtitle {
+   display: block;
+   float: none;
   /*align-items: flex-start;*/
   }
   }
