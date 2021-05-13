@@ -59,7 +59,8 @@ var columnDefs = [{
         filter: true,
 
         cellStyle: {
-            backgroundColor: '#aaffaa'
+            color: '#149414',
+            fontWeight: 'bold',
         },
 
         valueGetter: salePriceGetter,

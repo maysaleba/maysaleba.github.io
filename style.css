@@ -1,15 +1,16 @@
              .flex-container {
   display: flex;
   flex-direction: column;
-align-items: center;
- background-color: DodgerBlue;
+  justify-content: center;
+/*align-items: center;*/
+ background-color: #f1f1f1;
   height:100%;
 }
 
 
 img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 
@@ -34,12 +35,66 @@ img {
                 overflow: auto;
             }
 
+
+.header {
+  /*overflow: hidden;*/
+  background-color: #f1f1f1;
+  padding: 10px
+}
             .header a {
+
+              /*background-color: DodgerBlue;*/
   float: left;
+/*  padding: 10px;*/
+}
+
+.header img {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.header img:hover {opacity: 0.8}
+
+
+.header button {
+  /*vertical-align: middle;*/
+  /*color: black;*/
+  text-align: center;
+  border: none;
+  padding: 8.5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 11px;
+  border-radius: 4px;
+  background-color: #ff7d00;
+  color:white;
+}
+
+.footer{
+  /*height: 10%;*/
+  font-size: small;
+   text-align: center;
+}
+
+.subtitle {
+   display: flex;
+  flex-direction: row;
+ /* justify-content: center;*/
+  align-items: center;
+  /*vertical-align: middle;*/
+  float: right;
+}
+
+.fb-like{
+  opacity:1;
+  transition: 0.5s;
   padding: 10px;
 }
 
-
+.fb-like:hover {
+  opacity:0.8;
+}
 
 /*.header-right {
   float: right;
@@ -75,7 +130,7 @@ img {
 }
 
  .flex-container {
-  align-items: flex-start;
+  /*align-items: flex-start;*/
   }
   }
 
