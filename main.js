@@ -201,6 +201,7 @@ var columnDefs = [{
     {
         field: "Publisher",
          minWidth: 100,
+         sortable: true,
         filter: true
 
     },
@@ -208,8 +209,9 @@ var columnDefs = [{
     {
         field: "ReleaseDate",
          minWidth: 100,
+         sortable: true,
         filter: true,
-        hide: true
+        // hide: true
     },
 
     {
