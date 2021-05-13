@@ -3,19 +3,19 @@ var phpExchange = 47.83;
 
 var salePriceGetter = function(params) {
     let newSale = params.data.SalePrice * phpExchange;
-    let formatted = Math.ceil(newSale);
+    let formatted = Math.round(newSale);
     return formatted
 };
 
 var priceGetter = function(params) {
     let newSale = params.data.Price * phpExchange;
-    let formatted = Math.ceil(newSale);
+    let formatted = Math.round(newSale);
     return formatted
 };
 
 var alltimelowGetter = function(params) {
     let newSale = params.data.LowestPrice * phpExchange;
-    let formatted = Math.ceil(newSale);
+    let formatted = Math.round(newSale);
     return formatted
 };
 
