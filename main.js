@@ -25,6 +25,7 @@ var ratingGetter = function(params) {
         return null
     }
     return newRating
+
 };
 
 
@@ -67,6 +68,11 @@ var columnDefs = [{
         valueFormatter: currencyFormatter,
         filter: 'agNumberColumnFilter',
 
+          cellRenderer: function(params) {
+            let keyData =  "\u20B1" + params.value    
+            return keyData
+        }
+
     },
 
      {
@@ -86,7 +92,7 @@ var columnDefs = [{
         minWidth: 70,
 
         valueGetter: priceGetter,
-        valueFormatter: currencyFormatter,
+        // valueFormatter: currencyFormatter,
         filter: 'agNumberColumnFilter',
         cellStyle: params => {
             // you can use either came case or dashes, the grid converts to whats needed
@@ -94,6 +100,12 @@ var columnDefs = [{
                 textDecoration: 'line-through'
             };
         },
+
+            cellRenderer: function(params) {
+            let keyData =  "\u20B1" + params.value    
+            return keyData
+        }
+
     },
 
 
@@ -107,7 +119,12 @@ var columnDefs = [{
         filter: true,
         minWidth: 100,
         valueGetter: alltimelowGetter,
-        valueFormatter: currencyFormatter,
+        // valueFormatter: currencyFormatter,
+   cellRenderer: function(params) {
+            let keyData =  "\u20B1" + params.value    
+            return keyData
+        },
+
         filter: 'agNumberColumnFilter',
     },
 
@@ -296,7 +313,7 @@ function autoSizeAll(skipHeader) {
 
 function currencyFormatter(params) {
     let peso = params.value;
-    return 'P' + formatNumber(peso);
+    return '₱' + formatNumber(peso);
 }
 
 function dateFormatter(params) {
