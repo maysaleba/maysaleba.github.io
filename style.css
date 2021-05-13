@@ -125,7 +125,7 @@ img {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
 img {
   width: 50%;
   height: auto;
