@@ -79,6 +79,7 @@ var columnDefs = [{
         headerName: "Rating",
         field: "SCORE",
         sortable: true,
+        sort: 'desc',
         filter: true,
          minWidth: 70,
         filter: 'agNumberColumnFilter',
