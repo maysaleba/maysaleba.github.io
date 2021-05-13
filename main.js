@@ -86,6 +86,7 @@ var columnDefs = [{
 
     },
     {
+        headerName: "Retail Price",
         field: "Price",
         sortable: true,
         filter: true,
