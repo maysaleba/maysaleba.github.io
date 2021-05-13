@@ -1,7 +1,7 @@
              .flex-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /*justify-content: center;*/
 /*align-items: center;*/
  background-color: #f1f1f1;
   height:100%;
@@ -36,17 +36,29 @@ img {
             }
 
 
+
 .header {
+  display: flex;
+  /*align-items: flex-start;*/
   /*overflow: hidden;*/
+  align-items: center;
+  justify-content: space-between;
   background-color: #f1f1f1;
   padding: 10px
 }
-            .header a {
 
-              /*background-color: DodgerBlue;*/
-  float: left;
-/*  padding: 10px;*/
+.link-right {
+  display: flex;
+  align-items: center;
+  padding:10px;
+ /* justify-content: flex-end;;*/
 }
+/*            .header a {
+
+              background-color: DodgerBlue;
+  float: left;
+  padding: 10px;
+}*/
 
 .header img {
   opacity: 1;
@@ -74,21 +86,6 @@ img {
 
 .header button:hover{
   opacity:0.8;
-}
-
-.footer{
-  /*height: 10%;*/
-  font-size: small;
-   text-align: center;
-}
-
-.subtitle {
-   display: flex;
-  flex-direction: row;
- /* justify-content: center;*/
-  align-items: center;
-  /*vertical-align: middle;*/
-  float: right;
 }
 
 .fb-like{
@@ -134,10 +131,14 @@ img {
   height: auto;
 }
 
- .subtitle {
-   display: block;
-   float: none;
-  /*align-items: flex-start;*/
+ .header a {
+  float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header button {
+/*    font-size: 8px;*/
   }
   }
 
