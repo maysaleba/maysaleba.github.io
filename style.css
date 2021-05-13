@@ -5,8 +5,8 @@
 /*align-items: center;*/
  background-color: #f1f1f1;
   height:100%;
-}
 
+}
 
 img {
   width: 100%;
@@ -137,6 +137,14 @@ img {
     display: block;
     text-align: left;
   }
+
+  div.ag-theme-balham div.ag-header {
+    font-size: 10px !important;
+}
+
+  div.ag-theme-balham div.ag-row {
+    font-size: 10px !important;
+}
 
   .header button {
 /*    font-size: 8px;*/
