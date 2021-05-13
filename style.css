@@ -66,7 +66,7 @@ img {
   transition: 0.5s;
 }
 
-.header img:hover {opacity: 0.8}
+.header img:hover {opacity: 0.5}
 
 
 .header button {
@@ -86,7 +86,7 @@ img {
 }
 
 .header button:hover{
-  opacity:0.8;
+  opacity:0.5;
 }
 
 .fb-like{
@@ -96,7 +96,7 @@ img {
 }
 
 .fb-like:hover {
-  opacity:0.8;
+  opacity:0.5;
 }
 
 /*.header-right {
