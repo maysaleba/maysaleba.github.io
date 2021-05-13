@@ -344,7 +344,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     agGrid
         .simpleHttpRequest({
-            url: 'https://raw.githubusercontent.com/maysaleba/maysaleba.github.io/main/source.json',
+            url: 'https://raw.githubusercontent.com/maysaleba/maysaleba.github.io/main/csvjson.json',
         })
         .then(function(data) {
             gridOptions.api.setRowData(data);
