@@ -13,7 +13,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/1/1-anagrams-switch/hero.jpg",
-    "SCORE": 0
+    "SCORE": null
   },
   {
     "Title": "#Halloween, Super Puzzles Dream",
@@ -109,7 +109,7 @@
     "LowestPrice": 2.09,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/n/n-verlore-verstand-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "16-Bit Soccer",
@@ -125,7 +125,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-04",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/1/16-bit-soccer-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "39 Days to Mars",
@@ -141,7 +141,7 @@
     "LowestPrice": 10.04,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/3/39-days-to-mars-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 70
   },
   {
     "Title": 64,
@@ -157,7 +157,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/6/640-switch/hero.jpg",
-    "SCORE": 70
+    "SCORE": null
   },
   {
     "Title": "A HERO AND A GARDEN",
@@ -173,7 +173,7 @@
     "LowestPrice": 3.24,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/a-hero-and-a-garden-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Abbie's Farm for kids and toddlers",
@@ -189,7 +189,7 @@
     "LowestPrice": 8.99,
     "SaleStarted": "2021-05-09",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/abbies-farm-for-kids-and-toddlers-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Aborigenus",
@@ -253,7 +253,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/active-neurons-3-wonders-of-the-world-switch/active-neurons-3-wonders-of-the-world-switch-hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Adventures of Chris",
@@ -269,7 +269,7 @@
     "LowestPrice": 7.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/adventures-of-chris-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 72
   },
   {
     "Title": "Aeolis Tournament",
@@ -285,7 +285,7 @@
     "LowestPrice": 2.24,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/aeolis-tournament-switch/hero.jpg",
-    "SCORE": 72
+    "SCORE": 65
   },
   {
     "Title": "Aery - Broken Memories",
@@ -301,7 +301,7 @@
     "LowestPrice": 7.49,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/aery-broken-memories-switch/hero.jpg",
-    "SCORE": 65
+    "SCORE": null
   },
   {
     "Title": "Air Bounce - The Jump 'n' Run Challenge",
@@ -333,7 +333,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/air-hockey-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Airfield Mania",
@@ -349,7 +349,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-04",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/airfield-mania-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Alchemist Simulator",
@@ -365,7 +365,7 @@
     "LowestPrice": 10.61,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/alchemist-simulator-switch/alchemist-simulator-switch-hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "All-Star Fruit Racing",
@@ -381,7 +381,7 @@
     "LowestPrice": 7.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/all-star-fruit-racing-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 60
   },
   {
     "Title": "Alphaset by POWGI",
@@ -397,7 +397,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/alphaset-by-powgi-switch/hero.jpg",
-    "SCORE": 60
+    "SCORE": -1
   },
   {
     "Title": "Among Pipes",
@@ -413,7 +413,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/among-pipes-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "ATV Drift & Tricks",
@@ -493,7 +493,7 @@
     "LowestPrice": 2.59,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/binaries-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 69
   },
   {
     "Title": "Binarystar Infinity",
@@ -509,7 +509,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/binarystar-infinity-switch/hero.jpg",
-    "SCORE": 69
+    "SCORE": null
   },
   {
     "Title": "Biped",
@@ -525,7 +525,7 @@
     "LowestPrice": 8.84,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/biped-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 76
   },
   {
     "Title": "Birds and Blocks",
@@ -541,7 +541,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-04",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/birds-and-blocks-switch/hero.jpg",
-    "SCORE": 76
+    "SCORE": null
   },
   {
     "Title": "Birthday of Midnight",
@@ -557,7 +557,7 @@
     "LowestPrice": 3.24,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/birthday-of-midnight-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Block-a-Pix Deluxe",
@@ -605,7 +605,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bomber-fox-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Bonkies",
@@ -621,7 +621,7 @@
     "LowestPrice": 10.49,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bonkies-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 72
   },
   {
     "Title": "Bowling",
@@ -637,7 +637,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bowling-switch/hero.jpg",
-    "SCORE": 72
+    "SCORE": -1
   },
   {
     "Title": "Brawl Chess",
@@ -653,7 +653,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/brawl-chess-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 48
   },
   {
     "Title": "Bridge Constructor Ultimate Edition",
@@ -669,7 +669,7 @@
     "LowestPrice": 5.24,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bridge-constructor-ultimate-edition-switch/hero.jpg",
-    "SCORE": 48
+    "SCORE": 73
   },
   {
     "Title": "Bubble Cats Rescue",
@@ -685,7 +685,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-08",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bubble-cats-rescue-switch/hero.jpg",
-    "SCORE": 73
+    "SCORE": null
   },
   {
     "Title": "Bullet Beat",
@@ -701,7 +701,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bullet-beat-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Bunny Adventure",
@@ -733,7 +733,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/burger-master-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Calculation Castle : Greco's Ghostly Challenge \"Addition",
@@ -829,7 +829,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/cattails-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 77
   },
   {
     "Title": "Cave Bad",
@@ -845,7 +845,7 @@
     "LowestPrice": 3.49,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/cave-bad-switch/hero.jpg",
-    "SCORE": 77
+    "SCORE": -1
   },
   {
     "Title": "Caveman Tales",
@@ -877,7 +877,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/caves-and-castles-underworld-switch/caves-and-castles-underworld-switch-hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Chess",
@@ -941,7 +941,7 @@
     "LowestPrice": 6.24,
     "SaleStarted": "2021-05-09",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/chess-ultra-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 83
   },
   {
     "Title": "Chill Panda",
@@ -957,7 +957,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-04",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/chill-panda-switch/hero.jpg",
-    "SCORE": 83
+    "SCORE": null
   },
   {
     "Title": "City Bus Driving Simulator",
@@ -989,7 +989,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/clash-force-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Classic Checkers",
@@ -1005,7 +1005,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/classic-checkers-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Classic Games Collection Vol.1",
@@ -1037,7 +1037,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/clock-simulator-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 54
   },
   {
     "Title": "Coast Guard: Beach Rescue Team",
@@ -1053,7 +1053,7 @@
     "LowestPrice": 4.79,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/coast-guard-beach-rescue-team-switch/hero.jpg",
-    "SCORE": 54
+    "SCORE": null
   },
   {
     "Title": "Color Your World",
@@ -1085,7 +1085,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/cooking-simulator-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Cooking Tycoons 2 - 3 in 1 Bundle",
@@ -1101,7 +1101,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/cooking-tycoons-2-3-in-1-bundle-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Crayola Scoot",
@@ -1117,7 +1117,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/crayola-scoot-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 69
   },
   {
     "Title": "Crazy Zen Mini Golf",
@@ -1133,7 +1133,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-04",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/crazy-zen-mini-golf-switch/hero.jpg",
-    "SCORE": 69
+    "SCORE": -1
   },
   {
     "Title": "Croc's World",
@@ -1149,7 +1149,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-04",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/crocs-world-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Croc's World 2",
@@ -1197,7 +1197,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/crypto-by-powgi-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Cybxus Hearts",
@@ -1213,7 +1213,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/cybxus-hearts-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Dandy Dungeon - Legend of Brave Yamada -",
@@ -1245,7 +1245,7 @@
     "LowestPrice": 3.49,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/debris-infinity-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 73
   },
   {
     "Title": "Deep Diving Adventures",
@@ -1261,7 +1261,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/deep-diving-adventures-switch/hero.jpg",
-    "SCORE": 73
+    "SCORE": -1
   },
   {
     "Title": "Deployment",
@@ -1277,7 +1277,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/deployment-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 65
   },
   {
     "Title": "Detective Driver: Miami Files",
@@ -1293,7 +1293,7 @@
     "LowestPrice": 4.79,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/detective-driver-miami-files-switch/hero.jpg",
-    "SCORE": 65
+    "SCORE": null
   },
   {
     "Title": "Diggerman",
@@ -1341,7 +1341,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/doodle-derby-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "DORAEMON  STORY OF SEASONS",
@@ -1357,7 +1357,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/doraemon-story-of-seasons-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 73
   },
   {
     "Title": "Down in Bermuda",
@@ -1373,7 +1373,7 @@
     "LowestPrice": 7.99,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/down-in-bermuda-switch/hero.jpg",
-    "SCORE": 73
+    "SCORE": 67
   },
   {
     "Title": "DreamGallery",
@@ -1389,7 +1389,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/dreamgallery-switch/hero.jpg",
-    "SCORE": 67
+    "SCORE": null
   },
   {
     "Title": "Dungeonoid",
@@ -1421,7 +1421,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/e/earth-atlantis-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 66
   },
   {
     "Title": "Ellipsis",
@@ -1437,7 +1437,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/e/ellipsis-switch/hero.jpg",
-    "SCORE": 66
+    "SCORE": 78
   },
   {
     "Title": "Epic Word Search Collection",
@@ -1453,7 +1453,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-13",
     "Image": "undefined.jpg",
-    "SCORE": 78
+    "SCORE": null
   },
   {
     "Title": "Epic Word Search Collection 2",
@@ -1469,7 +1469,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/e/epic-word-search-collection-2-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 70
   },
   {
     "Title": "Escape From Tethys",
@@ -1485,7 +1485,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/e/escape-from-tethys-switch/hero.jpg",
-    "SCORE": 70
+    "SCORE": null
   },
   {
     "Title": "Explosive Dinosaurs",
@@ -1501,7 +1501,7 @@
     "LowestPrice": 5.59,
     "SaleStarted": "2021-05-04",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/e/explosive-dinosaurs-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Faircroft's Antiques: Home for Christmas Collector's Edition",
@@ -1533,7 +1533,7 @@
     "LowestPrice": 6.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/faircrofts-antiques-treasures-of-treffenburg-collectors-edition-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Fall Gummies",
@@ -1581,7 +1581,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/fifty-words-by-powgi-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Fill-a-Pix: Phil's Epic Adventure",
@@ -1629,7 +1629,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/fishing-universe-simulator-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Flat Heroes",
@@ -1645,7 +1645,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/flat-heroes-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 81
   },
   {
     "Title": "Flood of Light",
@@ -1661,7 +1661,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/flood-of-light-switch/hero.jpg",
-    "SCORE": 81
+    "SCORE": 71
   },
   {
     "Title": "Flying Soldiers",
@@ -1677,7 +1677,7 @@
     "LowestPrice": 4.85,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/flying-soldiers-switch/hero.jpg",
-    "SCORE": 71
+    "SCORE": -1
   },
   {
     "Title": "Food Truck Tycoon",
@@ -1693,7 +1693,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/food-truck-tycoon-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Football Cup 2021",
@@ -1709,7 +1709,7 @@
     "LowestPrice": 6.99,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/football-cup-2021-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "FunBox Party",
@@ -1725,7 +1725,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/funbox-party-switch/funbox-party-switch-hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Funny Bunny Adventures",
@@ -1741,7 +1741,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/funny-bunny-adventures-switch/funny-bunny-adventures-switch-hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Futoshiki Math",
@@ -1757,7 +1757,7 @@
     "LowestPrice": 3.49,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/futoshiki-math-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Ganbare! Super Strikers",
@@ -1773,7 +1773,7 @@
     "LowestPrice": 5.49,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/ganbare-super-strikers-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 58
   },
   {
     "Title": "Garfield Kart Furious Racing",
@@ -1789,7 +1789,7 @@
     "LowestPrice": 8.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/garfield-kart-furious-racing-switch/hero.jpg",
-    "SCORE": 58
+    "SCORE": -1
   },
   {
     "Title": "Gas Station: Highway Services",
@@ -1805,7 +1805,7 @@
     "LowestPrice": 4.79,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/gas-station-highway-services-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Gear.Club Unlimited",
@@ -1821,7 +1821,7 @@
     "LowestPrice": 2.98,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/gearclub-unlimited-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 66
   },
   {
     "Title": "Gear.Club Unlimited 2",
@@ -1837,7 +1837,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/gearclub-unlimited-2-switch/hero.jpg",
-    "SCORE": 66
+    "SCORE": 59
   },
   {
     "Title": "Genetic Disaster",
@@ -1853,7 +1853,7 @@
     "LowestPrice": 3.49,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/genetic-disaster-switch/hero.jpg",
-    "SCORE": 59
+    "SCORE": 72
   },
   {
     "Title": "Get Ogre It",
@@ -1869,7 +1869,7 @@
     "LowestPrice": 8.99,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/get-ogre-it-switch/hero.jpg",
-    "SCORE": 72
+    "SCORE": null
   },
   {
     "Title": "Gigantosaurus The Game",
@@ -1885,7 +1885,7 @@
     "LowestPrice": 19.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/gigantosaurus-the-game-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 56
   },
   {
     "Title": "Girabox",
@@ -1901,7 +1901,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/girabox-switch/girabox-switch-hero.jpg",
-    "SCORE": 56
+    "SCORE": -1
   },
   {
     "Title": "Glaive: Brick Breaker",
@@ -1933,7 +1933,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/glams-incredible-run-escape-from-dukha-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Glass Masquerade",
@@ -1949,7 +1949,7 @@
     "LowestPrice": 3.59,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/glass-masquerade-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Glass Masquerade 2: Illusions",
@@ -1965,7 +1965,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/glass-masquerade-2-illusions-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 74
   },
   {
     "Title": "Golf Peaks",
@@ -1981,7 +1981,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/golf-peaks-switch/hero.jpg",
-    "SCORE": 74
+    "SCORE": 75
   },
   {
     "Title": "Golf Zero",
@@ -1997,7 +1997,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/golf-zero-switch/hero.jpg",
-    "SCORE": 75
+    "SCORE": -1
   },
   {
     "Title": "Grab Lab",
@@ -2013,7 +2013,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/grab-lab-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Grand Prix Racing",
@@ -2061,7 +2061,7 @@
     "LowestPrice": 2,
     "SaleStarted": "2021-04-24",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/green-game-timeswapper-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Grood",
@@ -2109,7 +2109,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/hacky-zack-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 68
   },
   {
     "Title": "Halloween Pinball",
@@ -2125,7 +2125,7 @@
     "LowestPrice": 2,
     "SaleStarted": "2021-04-26",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/halloween-pinball-switch/hero.jpg",
-    "SCORE": 68
+    "SCORE": -1
   },
   {
     "Title": "Happy Animals Bowling",
@@ -2141,7 +2141,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/happy-animals-bowling-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "HardCube",
@@ -2173,7 +2173,7 @@
     "LowestPrice": 22.49,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/hexagroove-tactical-dj-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 80
   },
   {
     "Title": "Home Run High",
@@ -2189,7 +2189,7 @@
     "LowestPrice": 8.4,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/home-run-high-switch/hero.jpg",
-    "SCORE": 80
+    "SCORE": null
   },
   {
     "Title": "Hyperlight Ultimate",
@@ -2205,7 +2205,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/hyperlight-ultimate-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 82
   },
   {
     "Title": "Ice Age Scrat's Nutty Adventure!",
@@ -2221,7 +2221,7 @@
     "LowestPrice": 19.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/i/ice-age-scrats-nutty-adventure-switch/hero.jpg",
-    "SCORE": 82
+    "SCORE": 53
   },
   {
     "Title": "inbento",
@@ -2237,7 +2237,7 @@
     "LowestPrice": 3.49,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/i/inbento-switch/hero.jpg",
-    "SCORE": 53
+    "SCORE": 77
   },
   {
     "Title": "INK",
@@ -2253,7 +2253,7 @@
     "LowestPrice": 2.24,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/i/ink-switch/hero.jpg",
-    "SCORE": 77
+    "SCORE": 71
   },
   {
     "Title": "INVERSUS Deluxe",
@@ -2269,7 +2269,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/i/inversus-deluxe-switch/hero.jpg",
-    "SCORE": 71
+    "SCORE": 77
   },
   {
     "Title": "Jeopardy!®",
@@ -2285,7 +2285,7 @@
     "LowestPrice": 7.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/jeopardy-switch/hero.jpg",
-    "SCORE": 77
+    "SCORE": 68
   },
   {
     "Title": "Jet Ski Rush",
@@ -2301,7 +2301,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/jet-ski-rush-switch/hero.jpg",
-    "SCORE": 68
+    "SCORE": null
   },
   {
     "Title": "Jewel Fever 2",
@@ -2349,7 +2349,7 @@
     "LowestPrice": 3.74,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/joggernauts-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 71
   },
   {
     "Title": "Johnny Turbo's Arcade: Super Burger Time",
@@ -2365,7 +2365,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/johnny-turbos-arcade-super-burger-time-switch/hero.jpg",
-    "SCORE": 71
+    "SCORE": -1
   },
   {
     "Title": "Johnny Turbo's Arcade: Super Real Darwin",
@@ -2381,7 +2381,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/johnny-turbos-arcade-super-real-darwin-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Journey of the Broken Circle",
@@ -2397,7 +2397,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/journey-of-the-broken-circle-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 74
   },
   {
     "Title": "Zotrix Starglider",
@@ -2413,7 +2413,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/z/zotrix-starglider-switch/hero.jpg",
-    "SCORE": 74
+    "SCORE": -1
   },
   {
     "Title": "Yellow Fins",
@@ -2429,7 +2429,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-04",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/y/yellow-fins-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "WRC 8 FIA World Rally Championship",
@@ -2461,7 +2461,7 @@
     "LowestPrice": 9.79,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/world-for-two-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Wordsweeper by POWGI",
@@ -2493,7 +2493,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/wordify-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Word Wheel by POWGI",
@@ -2509,7 +2509,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/word-wheel-by-powgi-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Word Sudoku by POWGI",
@@ -2557,7 +2557,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/word-puzzles-by-powgi-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Wood Block Escape Puzzles",
@@ -2589,7 +2589,7 @@
     "LowestPrice": 13.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/wingspan-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 83
   },
   {
     "Title": "WildTrax Racing",
@@ -2605,7 +2605,7 @@
     "LowestPrice": 3.19,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/wildtrax-racing-switch/hero.jpg",
-    "SCORE": 83
+    "SCORE": null
   },
   {
     "Title": "WHIP! WHIP!",
@@ -2653,7 +2653,7 @@
     "LowestPrice": 2,
     "SaleStarted": "2021-04-26",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/werewolf-pinball-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Wenjia",
@@ -2669,7 +2669,7 @@
     "LowestPrice": 5.59,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/wenjia-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 60
   },
   {
     "Title": "Watermelon Party",
@@ -2685,7 +2685,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/watermelon-party-switch/hero.jpg",
-    "SCORE": 60
+    "SCORE": null
   },
   {
     "Title": "Water Balloon Mania",
@@ -2717,7 +2717,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/wanderjahr-tryagainorwalkaway-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Violett",
@@ -2733,7 +2733,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/v/violett-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 49
   },
   {
     "Title": "Urban Flow",
@@ -2749,7 +2749,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/urban-flow-switch/hero.jpg",
-    "SCORE": 49
+    "SCORE": 79
   },
   {
     "Title": "Up Cliff Drive",
@@ -2765,7 +2765,7 @@
     "LowestPrice": 2.1,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/up-cliff-drive-switch/hero.jpg",
-    "SCORE": 79
+    "SCORE": null
   },
   {
     "Title": "Unrailed!",
@@ -2781,7 +2781,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/unrailed-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 75
   },
   {
     "Title": "UNO®",
@@ -2797,7 +2797,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/uno-switch/hero.jpg",
-    "SCORE": 75
+    "SCORE": 64
   },
   {
     "Title": "Under Leaves",
@@ -2813,7 +2813,7 @@
     "LowestPrice": 8.44,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/under-leaves-switch/under-leaves-switch-hero.jpg",
-    "SCORE": 64
+    "SCORE": -1
   },
   {
     "Title": "Ultimate Ski Jumping 2020",
@@ -2829,7 +2829,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/ultimate-ski-jumping-2020-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Ultimate Racing 2D",
@@ -2845,7 +2845,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-01",
     "Image": "undefined.jpg",
-    "SCORE": null
+    "SCORE": 59
   },
   {
     "Title": "Ultimate Fishing Simulator",
@@ -2861,7 +2861,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/ultimate-fishing-simulator-switch/hero.jpg",
-    "SCORE": 59
+    "SCORE": 60
   },
   {
     "Title": "Tyd wag vir Niemand",
@@ -2877,7 +2877,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tyd-wag-vir-niemand-switch/hero.jpg",
-    "SCORE": 60
+    "SCORE": null
   },
   {
     "Title": "Two Parsecs From Earth",
@@ -2893,7 +2893,7 @@
     "LowestPrice": 4.79,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/two-parsecs-from-earth-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Truck Simulator",
@@ -2909,7 +2909,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/truck-simulator-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "TRIVIAL PURSUIT® Live!",
@@ -2925,7 +2925,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/trivial-pursuit-live-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Trancelation",
@@ -2973,7 +2973,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/traffix-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 82
   },
   {
     "Title": "Tower Inferno",
@@ -2989,7 +2989,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tower-inferno-switch/hero.jpg",
-    "SCORE": 82
+    "SCORE": null
   },
   {
     "Title": "Tower Climb",
@@ -3053,7 +3053,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-04-24",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tiny-racer-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 35
   },
   {
     "Title": "Tiny Hands Adventure",
@@ -3069,7 +3069,7 @@
     "LowestPrice": 2.39,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tiny-hands-adventure-switch/hero.jpg",
-    "SCORE": 35
+    "SCORE": 51
   },
   {
     "Title": "Tiger Trio's Tasty Travels",
@@ -3085,7 +3085,7 @@
     "LowestPrice": 13.49,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tiger-trios-tasty-travels-switch/hero.jpg",
-    "SCORE": 51
+    "SCORE": null
   },
   {
     "Title": "Tic-Tac-Letters by POWGI",
@@ -3101,7 +3101,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tic-tac-letters-by-powgi-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "The Ramen Sensei",
@@ -3117,7 +3117,7 @@
     "LowestPrice": 8.4,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-ramen-sensei-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "The Mahjong Huntress",
@@ -3149,7 +3149,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-lost-light-of-sisu-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "The King's Bird",
@@ -3165,7 +3165,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-kings-bird-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 70
   },
   {
     "Title": "The Game is ON",
@@ -3181,7 +3181,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-game-is-on-switch/hero.jpg",
-    "SCORE": 70
+    "SCORE": -1
   },
   {
     "Title": "The Explorer of Night",
@@ -3197,7 +3197,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-explorer-of-night-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Tested on Humans: Escape Room",
@@ -3293,7 +3293,7 @@
     "LowestPrice": 3.24,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tamiku-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Tales of the Tiny Planet",
@@ -3357,7 +3357,7 @@
     "LowestPrice": 6.74,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tadpole-treble-encore-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 82
   },
   {
     "Title": "Tactical Mind 2",
@@ -3373,7 +3373,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tactical-mind-2-switch/hero.jpg",
-    "SCORE": 82
+    "SCORE": -1
   },
   {
     "Title": "Tachyon Project",
@@ -3389,7 +3389,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tachyon-project-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 65
   },
   {
     "Title": "Table Soccer Foosball",
@@ -3405,7 +3405,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/table-soccer-foosball-switch/hero.jpg",
-    "SCORE": 65
+    "SCORE": null
   },
   {
     "Title": "Switchy Road",
@@ -3437,7 +3437,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/swap-this-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 61
   },
   {
     "Title": "Surfingers",
@@ -3453,7 +3453,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/surfingers-switch/hero.jpg",
-    "SCORE": 61
+    "SCORE": null
   },
   {
     "Title": "Super Toy Cars",
@@ -3469,7 +3469,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/super-toy-cars-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 56
   },
   {
     "Title": "Super Street: Racer",
@@ -3485,7 +3485,7 @@
     "LowestPrice": 12.49,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/super-street-racer-switch/hero.jpg",
-    "SCORE": 56
+    "SCORE": 60
   },
   {
     "Title": "Super Star Path",
@@ -3501,7 +3501,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/super-star-path-switch/hero.jpg",
-    "SCORE": 60
+    "SCORE": null
   },
   {
     "Title": "Super Sports Blast",
@@ -3517,7 +3517,7 @@
     "LowestPrice": 17.49,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/super-sports-blast-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Super Space Serpent Secondary Edition",
@@ -3533,7 +3533,7 @@
     "LowestPrice": 3.49,
     "SaleStarted": "2021-05-11",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/super-space-serpent-secondary-edition-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Super Jumpy Ball",
@@ -3565,7 +3565,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/super-chariot-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 77
   },
   {
     "Title": "Sudoky",
@@ -3581,7 +3581,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/sudoky-switch/hero.jpg",
-    "SCORE": 77
+    "SCORE": null
   },
   {
     "Title": "Sudoku Universe",
@@ -3645,7 +3645,7 @@
     "LowestPrice": 20.09,
     "SaleStarted": "2021-05-05",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/street-power-soccer-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 47
   },
   {
     "Title": "Street Basketball",
@@ -3661,7 +3661,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/street-basketball-switch/hero.jpg",
-    "SCORE": 47
+    "SCORE": null
   },
   {
     "Title": "Steam Tactics",
@@ -3677,7 +3677,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/steam-tactics-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Spot The Difference",
@@ -3693,7 +3693,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/spot-the-difference-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Spooky Chase",
@@ -3709,7 +3709,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-04",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/spooky-chase-switch/spooky-chase-switch-hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "SpongeBob: Krusty Cook-Off",
@@ -3741,7 +3741,7 @@
     "LowestPrice": 8.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/spitlings-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 73
   },
   {
     "Title": "Spirit of the North",
@@ -3757,7 +3757,7 @@
     "LowestPrice": 12.49,
     "SaleStarted": "2021-04-26",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/spirit-of-the-north-switch/hero.jpg",
-    "SCORE": 73
+    "SCORE": 63
   },
   {
     "Title": "Spheroids",
@@ -3773,7 +3773,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/spheroids-switch/hero.jpg",
-    "SCORE": 63
+    "SCORE": 47
   },
   {
     "Title": "SpellKeeper",
@@ -3789,7 +3789,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/spellkeeper-switch/hero.jpg",
-    "SCORE": 47
+    "SCORE": 65
   },
   {
     "Title": "Speedway Bundle Stock & Truck",
@@ -3805,7 +3805,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/speedway-bundle-stock-and-truck-switch/hero.jpg",
-    "SCORE": 65
+    "SCORE": null
   },
   {
     "Title": "Speed 3: Grand Prix",
@@ -3821,7 +3821,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/speed-3-grand-prix-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Spectrum",
@@ -3853,7 +3853,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/sparkle-zero-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Sparkle 4 Tales",
@@ -3901,7 +3901,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/sparkle-2-evo-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Space Ribbon",
@@ -3949,7 +3949,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/space-aliens-invaders-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Solitaire Klondike BLACK",
@@ -3981,7 +3981,7 @@
     "LowestPrice": 17.49,
     "SaleStarted": "2021-05-09",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/snooker-19-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 66
   },
   {
     "Title": "Snakes & Ladders",
@@ -3997,7 +3997,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/snakes-and-ladders-switch/hero.jpg",
-    "SCORE": 66
+    "SCORE": -1
   },
   {
     "Title": "Snake vs Snake",
@@ -4013,7 +4013,7 @@
     "LowestPrice": 3.59,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/snake-vs-snake-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Smart Moves",
@@ -4061,7 +4061,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/shift-happens-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 75
   },
   {
     "Title": "Seeds of Resilience",
@@ -4077,7 +4077,7 @@
     "LowestPrice": 2.09,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/seeds-of-resilience-switch/hero.jpg",
-    "SCORE": 75
+    "SCORE": -1
   },
   {
     "Title": "Scarlett Mysteries: Cursed Child",
@@ -4093,7 +4093,7 @@
     "LowestPrice": 2.09,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/scarlett-mysteries-cursed-child-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Salad Bar Tycoon",
@@ -4125,7 +4125,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/rush-rover-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Run the Fan",
@@ -4141,7 +4141,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-05",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/run-the-fan-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 69
   },
   {
     "Title": "Royal Tower Defense",
@@ -4157,7 +4157,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/royal-tower-defense-switch/hero.jpg",
-    "SCORE": 69
+    "SCORE": null
   },
   {
     "Title": "Route Me Mail and Delivery Co",
@@ -4189,7 +4189,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/roundout-by-powgi-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "RogueCube",
@@ -4221,7 +4221,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/rogue-bit-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Robozarro",
@@ -4285,7 +4285,7 @@
     "LowestPrice": 2.24,
     "SaleStarted": "2021-05-10",
     "Image": "undefined.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Reed 2",
@@ -4317,7 +4317,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/real-drift-racing-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "RAZED",
@@ -4333,7 +4333,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/razed-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 68
   },
   {
     "Title": "Radio Squid",
@@ -4349,7 +4349,7 @@
     "LowestPrice": 2.74,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/radio-squid-switch/hero.jpg",
-    "SCORE": 68
+    "SCORE": -1
   },
   {
     "Title": "Race with Ryan",
@@ -4365,7 +4365,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/race-with-ryan-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 55
   },
   {
     "Title": "Rabisco+",
@@ -4381,7 +4381,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/rabisco-plus-switch/hero.jpg",
-    "SCORE": 55
+    "SCORE": null
   },
   {
     "Title": "Quest for the Golden Duck",
@@ -4445,7 +4445,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/q/qbik-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Pure Pool",
@@ -4461,7 +4461,7 @@
     "LowestPrice": 10.49,
     "SaleStarted": "2021-05-09",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/pure-pool-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 73
   },
   {
     "Title": "Pure Mahjong",
@@ -4477,7 +4477,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/pure-mahjong-switch/hero.jpg",
-    "SCORE": 73
+    "SCORE": null
   },
   {
     "Title": "Project Starship",
@@ -4557,7 +4557,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/polyroll-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 60
   },
   {
     "Title": "Poly Puzzle",
@@ -4573,7 +4573,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/poly-puzzle-switch/hero.jpg",
-    "SCORE": 60
+    "SCORE": -1
   },
   {
     "Title": "PlataGO! Super Platform Game Maker",
@@ -4589,7 +4589,7 @@
     "LowestPrice": 6.59,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/platago-super-platform-game-maker-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Pixboy",
@@ -4621,7 +4621,7 @@
     "LowestPrice": 2,
     "SaleStarted": "2021-04-26",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/pirates-pinball-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Pipe Push Paradise",
@@ -4637,7 +4637,7 @@
     "LowestPrice": 2.74,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/pipe-push-paradise-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 72
   },
   {
     "Title": "Pinkman+",
@@ -4653,7 +4653,7 @@
     "LowestPrice": 3.49,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/pinkmanplus-switch/hero.jpg",
-    "SCORE": 72
+    "SCORE": -1
   },
   {
     "Title": "Pinball Lockdown",
@@ -4701,7 +4701,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/pic-a-pix-deluxe-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 65
   },
   {
     "Title": "Piano",
@@ -4717,7 +4717,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/piano-switch/hero.jpg",
-    "SCORE": 65
+    "SCORE": null
   },
   {
     "Title": "PGA TOUR 2K21",
@@ -4733,7 +4733,7 @@
     "LowestPrice": 19.79,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/pga-tour-2k21-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 76
   },
   {
     "Title": "Pet Shop Snacks",
@@ -4749,7 +4749,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-11",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/pet-shop-snacks-switch/hero.jpg",
-    "SCORE": 76
+    "SCORE": null
   },
   {
     "Title": "Perfect Traffic Simulator",
@@ -4781,7 +4781,7 @@
     "LowestPrice": 19.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/paw-patrol-on-a-roll-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 68
   },
   {
     "Title": "PAW Patrol Mighty Pups Save Adventure Bay",
@@ -4797,7 +4797,7 @@
     "LowestPrice": 27.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/paw-patrol-mighty-pups-save-adventure-bay-switch/hero.jpg",
-    "SCORE": 68
+    "SCORE": 66
   },
   {
     "Title": "Parking Madness",
@@ -4813,7 +4813,7 @@
     "LowestPrice": 2.1,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/parking-madness-switch/hero.jpg",
-    "SCORE": 66
+    "SCORE": null
   },
   {
     "Title": "Paint",
@@ -4845,7 +4845,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/pack-master-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Pacific Wings",
@@ -4861,7 +4861,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-04",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/pacific-wings-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "One Person Story",
@@ -4877,7 +4877,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/one-person-story-switch/one-person-story-switch-hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "OmoTomO",
@@ -4909,7 +4909,7 @@
     "LowestPrice": 4.79,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/olympic-basketball-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Old Man's Journey",
@@ -4925,7 +4925,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/old-mans-journey-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 75
   },
   {
     "Title": "Offroad Racing - Buggy X ATV X Moto",
@@ -4941,7 +4941,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/offroad-racing-buggy-x-atv-x-moto-switch/hero.jpg",
-    "SCORE": 75
+    "SCORE": null
   },
   {
     "Title": "Offroad Mini Racing",
@@ -5037,7 +5037,7 @@
     "LowestPrice": 6.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/n/never-breakup-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 55
   },
   {
     "Title": "NBA 2K21",
@@ -5053,7 +5053,7 @@
     "LowestPrice": 9.59,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/n/nba-2k21-switch/hero.jpg",
-    "SCORE": 55
+    "SCORE": 68
   },
   {
     "Title": "NBA 2K Playgrounds 2",
@@ -5069,7 +5069,7 @@
     "LowestPrice": 7.49,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/n/nba-2k-playgrounds-2-switch/hero.jpg",
-    "SCORE": 68
+    "SCORE": 70
   },
   {
     "Title": "Naught",
@@ -5085,7 +5085,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/n/naught-switch/hero.jpg",
-    "SCORE": 70
+    "SCORE": -1
   },
   {
     "Title": "My Universe - School Teacher",
@@ -5101,7 +5101,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/my-universe-school-teacher-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "My Universe - PET CLINIC CATS & DOGS",
@@ -5117,7 +5117,7 @@
     "LowestPrice": 20.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/my-universe-pet-clinic-cats-and-dogs-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 60
   },
   {
     "Title": "My Universe - My Baby",
@@ -5133,7 +5133,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/my-universe-my-baby-switch/hero.jpg",
-    "SCORE": 60
+    "SCORE": null
   },
   {
     "Title": "My Universe - Fashion Boutique",
@@ -5149,7 +5149,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/my-universe-fashion-boutique-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "My Universe - Cooking Star Restaurant",
@@ -5181,7 +5181,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/my-magic-florist-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "My little IceCream Booth",
@@ -5229,7 +5229,7 @@
     "LowestPrice": 4.68,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/my-hidden-things-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "My Brother Rabbit",
@@ -5245,7 +5245,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/my-brother-rabbit-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 77
   },
   {
     "Title": "Music Racer",
@@ -5261,7 +5261,7 @@
     "LowestPrice": 4.89,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/music-racer-switch/hero.jpg",
-    "SCORE": 77
+    "SCORE": 58
   },
   {
     "Title": "Mushroom Quest",
@@ -5277,7 +5277,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/mushroom-quest-switch/mushroom-quest-switch-hero.jpg",
-    "SCORE": 58
+    "SCORE": -1
   },
   {
     "Title": "Mummy Pinball",
@@ -5325,7 +5325,7 @@
     "LowestPrice": 3.74,
     "SaleStarted": "2021-05-04",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/k/klaus-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 77
   },
   {
     "Title": "1912: Titanic Mystery",
@@ -5341,7 +5341,7 @@
     "LowestPrice": 6.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/1/1912-titanic-mystery-switch/hero.jpg",
-    "SCORE": 77
+    "SCORE": -1
   },
   {
     "Title": "3000th Duel",
@@ -5357,7 +5357,7 @@
     "LowestPrice": 7.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/3/3000th-duel-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 72
   },
   {
     "Title": "A Ch'ti Bundle",
@@ -5373,7 +5373,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/a-chti-bundle-switch/hero.jpg",
-    "SCORE": 72
+    "SCORE": null
   },
   {
     "Title": "Adventure Time: Pirates of the Enchiridion",
@@ -5389,7 +5389,7 @@
     "LowestPrice": 19.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/adventure-time-pirates-of-the-enchiridion-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 61
   },
   {
     "Title": "AER Memories of Old",
@@ -5405,7 +5405,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/aer-memories-of-old-switch/hero.jpg",
-    "SCORE": 61
+    "SCORE": 67
   },
   {
     "Title": "AeternoBlade",
@@ -5421,7 +5421,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/aeternoblade-switch/hero.jpg",
-    "SCORE": 67
+    "SCORE": null
   },
   {
     "Title": "Aircraft Evolution",
@@ -5437,7 +5437,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/aircraft-evolution-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Alvastia Chronicles",
@@ -5469,7 +5469,7 @@
     "LowestPrice": 4,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/among-us-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 82
   },
   {
     "Title": "AngerForce: Reloaded for Nintendo Switch",
@@ -5485,7 +5485,7 @@
     "LowestPrice": 6.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/angerforce-reloaded-for-nintendo-switch/hero.jpg",
-    "SCORE": 82
+    "SCORE": null
   },
   {
     "Title": "Anodyne 2: Return to Dust",
@@ -5501,7 +5501,7 @@
     "LowestPrice": 13.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/anodyne-2-return-to-dust-switch/anodyne-2-return-to-dust-switch-hero.jpg",
-    "SCORE": null
+    "SCORE": 72
   },
   {
     "Title": "Aperion Cyberstorm",
@@ -5517,7 +5517,7 @@
     "LowestPrice": 7.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/aperion-cyberstorm-switch/hero.jpg",
-    "SCORE": 72
+    "SCORE": 63
   },
   {
     "Title": "Archaica: The Path Of Light",
@@ -5533,7 +5533,7 @@
     "LowestPrice": 3.97,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/archaica-the-path-of-light-switch/hero.jpg",
-    "SCORE": 63
+    "SCORE": -1
   },
   {
     "Title": "Arrog",
@@ -5549,7 +5549,7 @@
     "LowestPrice": 2.79,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/arrog-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 69
   },
   {
     "Title": "Asterix & Obelix XXL 3  - The Crystal Menhir",
@@ -5565,7 +5565,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/asterix-and-obelix-xxl-3-the-crystal-menhir-switch/hero.jpg",
-    "SCORE": 69
+    "SCORE": 61
   },
   {
     "Title": "Asterix & Obelix XXL: Romastered",
@@ -5581,7 +5581,7 @@
     "LowestPrice": 17.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/asterix-and-obelix-xxl-romastered-switch/hero.jpg",
-    "SCORE": 61
+    "SCORE": 49
   },
   {
     "Title": "Atomic Heist",
@@ -5597,7 +5597,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/atomic-heist-switch/atomic-heist-switch-hero.jpg",
-    "SCORE": 49
+    "SCORE": -1
   },
   {
     "Title": "Autumn's Journey",
@@ -5629,7 +5629,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-11",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bakugan-champions-of-vestroia-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 51
   },
   {
     "Title": "Balancelot",
@@ -5645,7 +5645,7 @@
     "LowestPrice": 5.19,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/balancelot-switch/hero.jpg",
-    "SCORE": 51
+    "SCORE": -1
   },
   {
     "Title": "Beat Me!",
@@ -5661,7 +5661,7 @@
     "LowestPrice": 3.24,
     "SaleStarted": "2021-04-28",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/beat-me-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Ben 10",
@@ -5677,7 +5677,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/ben-10-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 54
   },
   {
     "Title": "Ben 10: Power Trip!",
@@ -5693,7 +5693,7 @@
     "LowestPrice": 27.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/ben-10-power-trip-switch/hero.jpg",
-    "SCORE": 54
+    "SCORE": 68
   },
   {
     "Title": "BLACK BIRD",
@@ -5709,7 +5709,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/black-bird-switch/hero.jpg",
-    "SCORE": 68
+    "SCORE": 74
   },
   {
     "Title": "Blink: Rogues",
@@ -5725,7 +5725,7 @@
     "LowestPrice": 7.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/blink-rogues-switch/hero.jpg",
-    "SCORE": 74
+    "SCORE": -1
   },
   {
     "Title": "Blossom Tales: The Sleeping King",
@@ -5741,7 +5741,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/blossom-tales-the-sleeping-king-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 79
   },
   {
     "Title": "Blue Fire",
@@ -5757,7 +5757,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/blue-fire-switch/hero.jpg",
-    "SCORE": 79
+    "SCORE": 72
   },
   {
     "Title": "Boomerang Fu",
@@ -5773,7 +5773,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/boomerang-fu-switch/hero51321.jpg",
-    "SCORE": 72
+    "SCORE": 78
   },
   {
     "Title": "Bot Vice",
@@ -5789,7 +5789,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bot-vice-switch/hero.jpg",
-    "SCORE": 78
+    "SCORE": -1
   },
   {
     "Title": "Bounty Battle",
@@ -5805,7 +5805,7 @@
     "LowestPrice": 7.49,
     "SaleStarted": "2021-04-26",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bounty-battle-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 28
   },
   {
     "Title": "Brawlout",
@@ -5821,7 +5821,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/brawlout-switch/hero.jpg",
-    "SCORE": 28
+    "SCORE": 64
   },
   {
     "Title": "Candleman",
@@ -5837,7 +5837,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/candleman-switch/hero.jpg",
-    "SCORE": 64
+    "SCORE": 77
   },
   {
     "Title": "Captain Tsubasa: Rise of New Champions",
@@ -5853,7 +5853,7 @@
     "LowestPrice": 29.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/captain-tsubasa-rise-of-new-champions-switch/hero.jpg",
-    "SCORE": 77
+    "SCORE": 73
   },
   {
     "Title": "Carnival Games®",
@@ -5869,7 +5869,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/carnival-games-switch/hero.jpg",
-    "SCORE": 73
+    "SCORE": 65
   },
   {
     "Title": "Cars 3: Driven to Win",
@@ -5885,7 +5885,7 @@
     "LowestPrice": 7.99,
     "SaleStarted": "2021-05-11",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/cars-3-driven-to-win-switch/hero.jpg",
-    "SCORE": 65
+    "SCORE": 67
   },
   {
     "Title": "Castle Pals",
@@ -5901,7 +5901,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/castle-pals-switch/hero.jpg",
-    "SCORE": 67
+    "SCORE": -1
   },
   {
     "Title": "Child of Light® Ultimate Edition",
@@ -5917,7 +5917,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/child-of-light-ultimate-edition-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 80
   },
   {
     "Title": "Ciel Fledge: A Daughter Raising Simulator",
@@ -5933,7 +5933,7 @@
     "LowestPrice": 5.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/ciel-fledge-a-daughter-raising-simulator-switch/hero.jpg",
-    "SCORE": 80
+    "SCORE": 57
   },
   {
     "Title": "Clan N",
@@ -5949,7 +5949,7 @@
     "LowestPrice": 7.49,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/clan-n-switch/hero.jpg",
-    "SCORE": 57
+    "SCORE": null
   },
   {
     "Title": "Concept Destruction",
@@ -5965,7 +5965,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/concept-destruction-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 62
   },
   {
     "Title": "CRAYON SHINCHAN The Storm Called FLAMING KASUKABE RUNNER!!",
@@ -5981,7 +5981,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/crayon-shinchan-the-storm-called-flaming-kasukabe-runner-switch/hero.jpg",
-    "SCORE": 62
+    "SCORE": null
   },
   {
     "Title": "Creepy Road",
@@ -5997,7 +5997,7 @@
     "LowestPrice": 7.79,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/creepy-road-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 63
   },
   {
     "Title": "CrossKrush",
@@ -6013,7 +6013,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/crosskrush-switch/hero.jpg",
-    "SCORE": 63
+    "SCORE": -1
   },
   {
     "Title": "CrunchTime",
@@ -6029,7 +6029,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/crunchtime-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Cube Creator X",
@@ -6045,7 +6045,7 @@
     "LowestPrice": 10.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/cube-creator-x-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Danger Scavenger",
@@ -6061,7 +6061,7 @@
     "LowestPrice": 6.69,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/danger-scavenger-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 70
   },
   {
     "Title": "Dark Water: Slime Invader",
@@ -6077,7 +6077,7 @@
     "LowestPrice": 11.99,
     "SaleStarted": "2021-05-09",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/dark-water-slime-invader-switch/hero.jpg",
-    "SCORE": 70
+    "SCORE": null
   },
   {
     "Title": "Daylife in Japan - Pixel Art Jigsaw Puzzle",
@@ -6109,7 +6109,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/dead-end-job-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 66
   },
   {
     "Title": "DEMON'S TILT",
@@ -6125,7 +6125,7 @@
     "LowestPrice": 11.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/demons-tilt-switch/hero.jpg",
-    "SCORE": 66
+    "SCORE": -1
   },
   {
     "Title": "Demong Hunter",
@@ -6141,7 +6141,7 @@
     "LowestPrice": 6.39,
     "SaleStarted": "2021-05-09",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/demong-hunter-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Destrobots",
@@ -6157,7 +6157,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/destrobots-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Diabolic",
@@ -6189,7 +6189,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/double-cross-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 67
   },
   {
     "Title": "Drawngeon: Dungeons of Ink and Paper",
@@ -6205,7 +6205,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/drawngeon-dungeons-of-ink-and-paper-switch/drawngeon-dungeons-of-ink-and-paper-switch-hero.jpg",
-    "SCORE": 67
+    "SCORE": -1
   },
   {
     "Title": "DreamWorks Dragons Dawn of New Riders",
@@ -6221,7 +6221,7 @@
     "LowestPrice": 19.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/dreamworks-dragons-dawn-of-new-riders-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Duck Souls+",
@@ -6237,7 +6237,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/duck-soulsplus-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Duel on Board",
@@ -6253,7 +6253,7 @@
     "LowestPrice": 5.59,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/duel-on-board-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Dungeon Limbus",
@@ -6301,7 +6301,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/e/eqqo-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 63
   },
   {
     "Title": "Escape 2088",
@@ -6317,7 +6317,7 @@
     "LowestPrice": 3.2,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/e/escape-2088-switch/hero.jpg",
-    "SCORE": 63
+    "SCORE": null
   },
   {
     "Title": "Escape First",
@@ -6365,7 +6365,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/e/escape-from-the-universe-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Escape Game Fort Boyard",
@@ -6397,7 +6397,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-06",
     "Image": "undefined.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Even the Ocean",
@@ -6413,7 +6413,7 @@
     "LowestPrice": 8.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/e/even-the-ocean-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Event Horizon",
@@ -6493,7 +6493,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/farabel-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 74
   },
   {
     "Title": "Fin and the Ancient Mystery",
@@ -6509,7 +6509,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/fin-and-the-ancient-mystery-switch/hero.jpg",
-    "SCORE": 74
+    "SCORE": null
   },
   {
     "Title": "Fire: Ungh’s Quest",
@@ -6541,7 +6541,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/flashback-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 76
   },
   {
     "Title": "Fred3ric",
@@ -6557,7 +6557,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/fred3ric-switch/hero.jpg",
-    "SCORE": 76
+    "SCORE": -1
   },
   {
     "Title": "Freddy Spaghetti",
@@ -6621,7 +6621,7 @@
     "LowestPrice": 44.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/groove-coaster-wai-wai-party-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 83
   },
   {
     "Title": "Gun Crazy",
@@ -6637,7 +6637,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/gun-crazy-switch/hero.jpg",
-    "SCORE": 83
+    "SCORE": 53
   },
   {
     "Title": "Gunlord X",
@@ -6653,7 +6653,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/gunlord-x-switch/hero.jpg",
-    "SCORE": 53
+    "SCORE": 80
   },
   {
     "Title": "Headsnatchers",
@@ -6669,7 +6669,7 @@
     "LowestPrice": 3.74,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/headsnatchers-switch/hero.jpg",
-    "SCORE": 80
+    "SCORE": 67
   },
   {
     "Title": "Hexagon Defense",
@@ -6685,7 +6685,7 @@
     "LowestPrice": 2.19,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/hexagon-defense-switch/hexagon-defense-switch-hero.jpg",
-    "SCORE": 67
+    "SCORE": null
   },
   {
     "Title": "Hotel Transylvania 3 Monsters Overboard",
@@ -6701,7 +6701,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/hotel-transylvania-3-monsters-overboard-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 55
   },
   {
     "Title": "I, AI",
@@ -6717,7 +6717,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/i/i-ai-switch/hero.jpg",
-    "SCORE": 55
+    "SCORE": -1
   },
   {
     "Title": "IHUGU",
@@ -6733,7 +6733,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/i/ihugu-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "In Between",
@@ -6749,7 +6749,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/i/in-between-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 70
   },
   {
     "Title": "Infestor",
@@ -6765,7 +6765,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/i/infestor-switch/hero.jpg",
-    "SCORE": 70
+    "SCORE": null
   },
   {
     "Title": "Infinite - Beyond the Mind",
@@ -6781,7 +6781,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-11",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/i/infinite-beyond-the-mind-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 71
   },
   {
     "Title": "Inside My Radio",
@@ -6797,7 +6797,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/i/inside-my-radio-switch/hero.jpg",
-    "SCORE": 71
+    "SCORE": 63
   },
   {
     "Title": "IRONCAST",
@@ -6813,7 +6813,7 @@
     "LowestPrice": 6.49,
     "SaleStarted": "2021-05-09",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/i/ironcast-switch/hero.jpg",
-    "SCORE": 63
+    "SCORE": 76
   },
   {
     "Title": "Jet Kave Adventure",
@@ -6829,7 +6829,7 @@
     "LowestPrice": 13.39,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/jet-kave-adventure-switch/hero.jpg",
-    "SCORE": 76
+    "SCORE": 65
   },
   {
     "Title": "Johnny Turbo's Arcade Joe and Mac Caveman Ninja",
@@ -6845,7 +6845,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/johnny-turbos-arcade-joe-and-mac-caveman-ninja-switch/hero.jpg",
-    "SCORE": 65
+    "SCORE": 76
   },
   {
     "Title": "Johnny Turbo's Arcade: Bad Dudes",
@@ -6861,7 +6861,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/johnny-turbos-arcade-bad-dudes-switch/hero.jpg",
-    "SCORE": 76
+    "SCORE": -1
   },
   {
     "Title": "Johnny Turbo's Arcade: Break Thru",
@@ -6877,7 +6877,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/johnny-turbos-arcade-break-thru-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Johnny Turbo’s Arcade: Express Raider",
@@ -6893,7 +6893,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/johnny-turbos-arcade-express-raider-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 50
   },
   {
     "Title": "Johnny Turbo's Arcade: Gate Of Doom",
@@ -6909,7 +6909,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/johnny-turbos-arcade-gate-of-doom-switch/hero.jpg",
-    "SCORE": 50
+    "SCORE": 52
   },
   {
     "Title": "Johnny Turbo's Arcade: Heavy Barrel",
@@ -6925,7 +6925,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/johnny-turbos-arcade-heavy-barrel-switch/hero.jpg",
-    "SCORE": 52
+    "SCORE": -1
   },
   {
     "Title": "Johnny Turbo's Arcade: Heavy Burger",
@@ -6989,7 +6989,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/johnny-turbos-arcade-sly-spy-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 71
   },
   {
     "Title": "Johnny Turbo's Arcade: Two Crude Dudes",
@@ -7005,7 +7005,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/johnny-turbos-arcade-two-crude-dudes-switch/hero.jpg",
-    "SCORE": 71
+    "SCORE": 68
   },
   {
     "Title": "Just Dance® 2020",
@@ -7021,7 +7021,7 @@
     "LowestPrice": 19.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/just-dance-2020-switch/hero.jpg",
-    "SCORE": 68
+    "SCORE": 74
   },
   {
     "Title": "King of Seas",
@@ -7037,7 +7037,7 @@
     "LowestPrice": 19.99,
     "SaleStarted": "2021-04-27",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/k/king-of-seas-switch/hero.jpg",
-    "SCORE": 74
+    "SCORE": null
   },
   {
     "Title": "Knightin'+",
@@ -7053,7 +7053,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/k/knightin-plus-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 53
   },
   {
     "Title": "Last Encounter",
@@ -7069,7 +7069,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/l/last-encounter-switch/hero.jpg",
-    "SCORE": 53
+    "SCORE": 54
   },
   {
     "Title": "Lazy Galaxy: Rebel Story",
@@ -7085,7 +7085,7 @@
     "LowestPrice": 5.27,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/l/lazy-galaxy-rebel-story-switch/hero.jpg",
-    "SCORE": 54
+    "SCORE": -1
   },
   {
     "Title": "Legend of the Tetrarchs",
@@ -7101,7 +7101,7 @@
     "LowestPrice": 8.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/l/legend-of-the-tetrarchs-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Leopoldo Manquiseil",
@@ -7133,7 +7133,7 @@
     "LowestPrice": 3.24,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/l/loot-hero-dx-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Mad Carnage",
@@ -7149,7 +7149,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/mad-carnage-switch/mad-carnage-switch-hero.jpg",
-    "SCORE": -1
+    "SCORE": 47
   },
   {
     "Title": "Mario + Rabbids® Kingdom Battle",
@@ -7165,7 +7165,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/mario-plus-rabbids-kingdom-battle-switch/hero.jpg",
-    "SCORE": 47
+    "SCORE": 85
   },
   {
     "Title": "Mask of Mists",
@@ -7181,7 +7181,7 @@
     "LowestPrice": 8.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/mask-of-mists-switch/hero.jpg",
-    "SCORE": 85
+    "SCORE": -1
   },
   {
     "Title": "Miner Warfare",
@@ -7197,7 +7197,7 @@
     "LowestPrice": 4.79,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/miner-warfare-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Mini Island Challenge Bundle",
@@ -7229,7 +7229,7 @@
     "LowestPrice": 15.99,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/monster-boy-and-the-cursed-kingdom-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 86
   },
   {
     "Title": "My Aunt is a Witch",
@@ -7245,7 +7245,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/my-aunt-is-a-witch-switch/hero.jpg",
-    "SCORE": 86
+    "SCORE": -1
   },
   {
     "Title": "My Memory of Us",
@@ -7261,7 +7261,7 @@
     "LowestPrice": 4.49,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/my-memory-of-us-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 75
   },
   {
     "Title": "Mystery Mine",
@@ -7277,7 +7277,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/mystery-mine-switch/hero.jpg",
-    "SCORE": 75
+    "SCORE": null
   },
   {
     "Title": "Myths of Orion: Light from the North",
@@ -7293,7 +7293,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/myths-of-orion-light-from-the-north-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Nightmares from the Deep 2: The Siren`s Call",
@@ -7309,7 +7309,7 @@
     "LowestPrice": 2.09,
     "SaleStarted": "2021-04-26",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/n/nightmares-from-the-deep-2-the-sirens-call-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Nine Parchments",
@@ -7325,7 +7325,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-05",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/n/nine-parchments-switch/nine-parchments-switch-hero.jpg",
-    "SCORE": null
+    "SCORE": 65
   },
   {
     "Title": "Ninja Village",
@@ -7341,7 +7341,7 @@
     "LowestPrice": 8.4,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/n/ninja-village-switch/hero.jpg",
-    "SCORE": 65
+    "SCORE": -1
   },
   {
     "Title": "Nippon Marathon",
@@ -7357,7 +7357,7 @@
     "LowestPrice": 3.74,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/n/nippon-marathon-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 49
   },
   {
     "Title": "NoReload Heroes",
@@ -7373,7 +7373,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/n/noreload-heroes-switch/hero.jpg",
-    "SCORE": 49
+    "SCORE": -1
   },
   {
     "Title": "NoReload Heroes Enhanced Edition",
@@ -7405,7 +7405,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/oceanhorn-monster-of-uncharted-seas-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 67
   },
   {
     "Title": "Oceanhorn 2: Knights of the Lost Realm",
@@ -7421,7 +7421,7 @@
     "LowestPrice": 22.49,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/oceanhorn-2-knights-of-the-lost-realm-switch/hero.jpg",
-    "SCORE": 67
+    "SCORE": 71
   },
   {
     "Title": "One Dog Story",
@@ -7437,7 +7437,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/one-dog-story-switch/hero.jpg",
-    "SCORE": 71
+    "SCORE": 57
   },
   {
     "Title": "Overdriven Reloaded: Special Edition",
@@ -7453,7 +7453,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/overdriven-reloaded-special-edition-switch/hero.jpg",
-    "SCORE": 57
+    "SCORE": null
   },
   {
     "Title": "Party Trivia",
@@ -7501,7 +7501,7 @@
     "LowestPrice": 44.99,
     "SaleStarted": "2021-05-08",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/port-royale-4-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 68
   },
   {
     "Title": "Prehistoric Dude",
@@ -7517,7 +7517,7 @@
     "LowestPrice": 2.74,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/prehistoric-dude-switch/hero.jpg",
-    "SCORE": 68
+    "SCORE": -1
   },
   {
     "Title": "PROJECT : KNIGHT",
@@ -7533,7 +7533,7 @@
     "LowestPrice": 3.24,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/project-knight-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Puzzle Bundle - 3 in 1",
@@ -7565,7 +7565,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/q/q-yo-blaster-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 63
   },
   {
     "Title": "Quest Hunter",
@@ -7581,7 +7581,7 @@
     "LowestPrice": 10.49,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/q/quest-hunter-switch/hero.jpg",
-    "SCORE": 63
+    "SCORE": -1
   },
   {
     "Title": "Raji: An Ancient Epic",
@@ -7597,7 +7597,7 @@
     "LowestPrice": 12.49,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/raji-an-ancient-epic-switch/raji-an-ancient-epic-switch-hero.jpg",
-    "SCORE": -1
+    "SCORE": 70
   },
   {
     "Title": "Random Heroes: Gold Edition",
@@ -7613,7 +7613,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/random-heroes-gold-edition-switch/hero.jpg",
-    "SCORE": 70
+    "SCORE": -1
   },
   {
     "Title": "Rayman® Legends Definitive Edition",
@@ -7629,7 +7629,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/rayman-legends-definitive-edition-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 85
   },
   {
     "Title": "Real Heroes: Firefighter",
@@ -7645,7 +7645,7 @@
     "LowestPrice": 3.74,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/real-heroes-firefighter-switch/hero.jpg",
-    "SCORE": 85
+    "SCORE": -1
   },
   {
     "Title": "Realpolitiks",
@@ -7661,7 +7661,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/realpolitiks-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 65
   },
   {
     "Title": "Red Rope: Don't Fall Behind +",
@@ -7677,7 +7677,7 @@
     "LowestPrice": 3.89,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/red-rope-dont-fall-behind-switch/hero.jpg",
-    "SCORE": 65
+    "SCORE": -1
   },
   {
     "Title": "Reknum Cheri Dreamland",
@@ -7693,7 +7693,7 @@
     "LowestPrice": 5.94,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/reknum-cheri-dreamland-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Retro Classix 2-in-1 Pack: Express Raider & Shootout",
@@ -7757,7 +7757,7 @@
     "LowestPrice": 7.79,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/revenant-dogma-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Revenant Saga",
@@ -7773,7 +7773,7 @@
     "LowestPrice": 6.49,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/revenant-saga-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 53
   },
   {
     "Title": "Ring of Pain",
@@ -7789,7 +7789,7 @@
     "LowestPrice": 13.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/ring-of-pain-switch/hero.jpg",
-    "SCORE": 53
+    "SCORE": 75
   },
   {
     "Title": "RISK® Global Domination",
@@ -7805,7 +7805,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/risk-global-domination-switch/hero.jpg",
-    "SCORE": 75
+    "SCORE": null
   },
   {
     "Title": "RIVE: Ultimate Edition",
@@ -7821,7 +7821,7 @@
     "LowestPrice": 2.09,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/rive-ultimate-edition-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 86
   },
   {
     "Title": "Robox",
@@ -7837,7 +7837,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/robox-switch/hero.jpg",
-    "SCORE": 86
+    "SCORE": null
   },
   {
     "Title": "Say No! More",
@@ -7853,7 +7853,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-09",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/say-no-more-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 71
   },
   {
     "Title": "Scribblenauts Mega Pack",
@@ -7869,7 +7869,7 @@
     "LowestPrice": 7.99,
     "SaleStarted": "2021-05-11",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/scribblenauts-mega-pack-switch/hero.jpg",
-    "SCORE": 71
+    "SCORE": 79
   },
   {
     "Title": "Scribblenauts Showdown",
@@ -7885,7 +7885,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-11",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/scribblenauts-showdown-switch/hero.jpg",
-    "SCORE": 79
+    "SCORE": 57
   },
   {
     "Title": "Seeders Puzzle Reboot",
@@ -7901,7 +7901,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/seeders-puzzle-reboot-switch/hero.jpg",
-    "SCORE": 57
+    "SCORE": null
   },
   {
     "Title": "Sephirothic Stories",
@@ -7917,7 +7917,7 @@
     "LowestPrice": 8.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/sephirothic-stories-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Sid Meier’s Civilization VI",
@@ -7933,7 +7933,7 @@
     "LowestPrice": 19.79,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/sid-meiers-civilization-vi-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 89
   },
   {
     "Title": "Signs of the Sojourner",
@@ -7949,7 +7949,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/signs-of-the-sojourner-switch/hero.jpg",
-    "SCORE": 89
+    "SCORE": 75
   },
   {
     "Title": "Sir Eatsalot",
@@ -7965,7 +7965,7 @@
     "LowestPrice": 3.24,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/sir-eatsalot-switch/hero.jpg",
-    "SCORE": 75
+    "SCORE": -1
   },
   {
     "Title": "Slayin 2",
@@ -7981,7 +7981,7 @@
     "LowestPrice": 4.79,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/slayin-2-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 63
   },
   {
     "Title": "Space Commander: War and Trade",
@@ -7997,7 +7997,7 @@
     "LowestPrice": 7.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/space-commander-war-and-trade-switch/hero.jpg",
-    "SCORE": 63
+    "SCORE": 62
   },
   {
     "Title": "Spacejacked",
@@ -8013,7 +8013,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/spacejacked-switch/hero.jpg",
-    "SCORE": 62
+    "SCORE": 68
   },
   {
     "Title": "Spirit Roots",
@@ -8029,7 +8029,7 @@
     "LowestPrice": 2.09,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/spirit-roots-switch/spirit-roots-switch-hero.jpg",
-    "SCORE": 68
+    "SCORE": -1
   },
   {
     "Title": "Zoids Wild Blast Unleashed",
@@ -8045,7 +8045,7 @@
     "LowestPrice": 19.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/z/zoids-wild-blast-unleashed-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 61
   },
   {
     "Title": "Zero Zero Zero Zero",
@@ -8061,7 +8061,7 @@
     "LowestPrice": 2.24,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/z/zero-zero-zero-zero-switch/hero.jpg",
-    "SCORE": 61
+    "SCORE": -1
   },
   {
     "Title": "Woven",
@@ -8077,7 +8077,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-04-27",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/woven-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 62
   },
   {
     "Title": "Wizards of Brandel",
@@ -8093,7 +8093,7 @@
     "LowestPrice": 7.79,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/wizards-of-brandel-switch/hero.jpg",
-    "SCORE": 62
+    "SCORE": null
   },
   {
     "Title": "Windmill Kings",
@@ -8125,7 +8125,7 @@
     "LowestPrice": 17.99,
     "SaleStarted": "2021-05-11",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/windbound-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 65
   },
   {
     "Title": "Where Angels Cry",
@@ -8141,7 +8141,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/where-angels-cry-switch/hero.jpg",
-    "SCORE": 65
+    "SCORE": null
   },
   {
     "Title": "What Comes After",
@@ -8157,7 +8157,7 @@
     "LowestPrice": 4.89,
     "SaleStarted": "2021-05-04",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/what-comes-after-switch/what-comes-after-switch-hero.jpg",
-    "SCORE": null
+    "SCORE": 67
   },
   {
     "Title": "WeakWood Throne",
@@ -8173,7 +8173,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/weakwood-throne-switch/weakwood-throne-switch-hero.jpg",
-    "SCORE": 67
+    "SCORE": -1
   },
   {
     "Title": "Warplanes: WW2 Dogfight",
@@ -8189,7 +8189,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/warplanes-ww2-dogfight-switch/warplanes-ww2-dogfight-switch-hero.jpg",
-    "SCORE": -1
+    "SCORE": 59
   },
   {
     "Title": "WARBORN",
@@ -8205,7 +8205,7 @@
     "LowestPrice": 16.24,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/warborn-switch/hero.jpg",
-    "SCORE": 59
+    "SCORE": 66
   },
   {
     "Title": "Void Source",
@@ -8221,7 +8221,7 @@
     "LowestPrice": 3.29,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/v/void-source-switch/hero.jpg",
-    "SCORE": 66
+    "SCORE": null
   },
   {
     "Title": "Vertical Drop Heroes HD",
@@ -8237,7 +8237,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/v/vertical-drop-heroes-hd-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 65
   },
   {
     "Title": "Venture Kid",
@@ -8253,7 +8253,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/v/venture-kid-switch/hero.jpg",
-    "SCORE": 65
+    "SCORE": 59
   },
   {
     "Title": "Valthirian Arc: Hero School Story",
@@ -8269,7 +8269,7 @@
     "LowestPrice": 3.74,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/v/valthirian-arc-hero-school-story-switch/hero.jpg",
-    "SCORE": 59
+    "SCORE": 63
   },
   {
     "Title": "Ultra Hat Dimension",
@@ -8285,7 +8285,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/ultra-hat-dimension-switch/hero.jpg",
-    "SCORE": 63
+    "SCORE": -1
   },
   {
     "Title": "Ultra Foodmess",
@@ -8301,7 +8301,7 @@
     "LowestPrice": 2.39,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/ultra-foodmess-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 58
   },
   {
     "Title": "Trollhunters: Defenders of Arcadia",
@@ -8317,7 +8317,7 @@
     "LowestPrice": 19.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/trollhunters-defenders-of-arcadia-switch/hero.jpg",
-    "SCORE": 58
+    "SCORE": 47
   },
   {
     "Title": "Trine Enchanted Edition",
@@ -8333,7 +8333,7 @@
     "LowestPrice": 3.74,
     "SaleStarted": "2021-05-05",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/trine-enchanted-edition-switch/hero.jpg",
-    "SCORE": 47
+    "SCORE": 82
   },
   {
     "Title": "Trine 3: The Artifacts of Power",
@@ -8349,7 +8349,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-05",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/trine-3-the-artifacts-of-power-switch/hero.jpg",
-    "SCORE": 82
+    "SCORE": 67
   },
   {
     "Title": "Trine 2: Complete Story",
@@ -8365,7 +8365,7 @@
     "LowestPrice": 4.24,
     "SaleStarted": "2021-05-05",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/trine-2-complete-story-switch/hero.jpg",
-    "SCORE": 67
+    "SCORE": 87
   },
   {
     "Title": "Treadnauts",
@@ -8381,7 +8381,7 @@
     "LowestPrice": 7.49,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/treadnauts-switch/hero.jpg",
-    "SCORE": 87
+    "SCORE": -1
   },
   {
     "Title": "TRANSFORMERS: BATTLEGROUNDS",
@@ -8397,7 +8397,7 @@
     "LowestPrice": 27.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/transformers-battlegrounds-switch/transformers-battlegrounds-switch-hero.jpg",
-    "SCORE": -1
+    "SCORE": 68
   },
   {
     "Title": "Towaga: Among Shadows",
@@ -8413,7 +8413,7 @@
     "LowestPrice": 2.24,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/towaga-among-shadows-switch/hero.jpg",
-    "SCORE": 68
+    "SCORE": 57
   },
   {
     "Title": "Toki",
@@ -8429,7 +8429,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/toki-switch/hero.jpg",
-    "SCORE": 57
+    "SCORE": 66
   },
   {
     "Title": "ToeJam & Earl: Back in the Groove!",
@@ -8445,7 +8445,7 @@
     "LowestPrice": 4.79,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/toejam-and-earl-back-in-the-groove-switch/hero.jpg",
-    "SCORE": 66
+    "SCORE": 72
   },
   {
     "Title": "Toby: The Secret Mine",
@@ -8461,7 +8461,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/toby-the-secret-mine-switch/hero.jpg",
-    "SCORE": 72
+    "SCORE": 52
   },
   {
     "Title": "Tied Together",
@@ -8477,7 +8477,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tied-together-switch/hero.jpg",
-    "SCORE": 52
+    "SCORE": 49
   },
   {
     "Title": "Thunderflash",
@@ -8493,7 +8493,7 @@
     "LowestPrice": 3.49,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/thunderflash-switch/hero.jpg",
-    "SCORE": 49
+    "SCORE": -1
   },
   {
     "Title": "Thunder Paw",
@@ -8525,7 +8525,7 @@
     "LowestPrice": 4.19,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-office-quest-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 73
   },
   {
     "Title": "The Little Acre",
@@ -8541,7 +8541,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-little-acre-switch/hero.jpg",
-    "SCORE": 73
+    "SCORE": 69
   },
   {
     "Title": "The Legend of Ninja",
@@ -8557,7 +8557,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-legend-of-ninja-switch/hero.jpg",
-    "SCORE": 69
+    "SCORE": null
   },
   {
     "Title": "The Experiment: Escape Room",
@@ -8605,7 +8605,7 @@
     "LowestPrice": 27.95,
     "SaleStarted": "2021-05-08",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/taxi-chaos-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 50
   },
   {
     "Title": "Tales from the Dragon Mountain 2: The Lair",
@@ -8621,7 +8621,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tales-from-the-dragon-mountain-2-the-lair-switch/hero.jpg",
-    "SCORE": 50
+    "SCORE": -1
   },
   {
     "Title": "Takeshi and Hiroshi",
@@ -8637,7 +8637,7 @@
     "LowestPrice": 7.19,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/takeshi-and-hiroshi-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Supermarket Shriek",
@@ -8653,7 +8653,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/supermarket-shriek-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 68
   },
   {
     "Title": "Superbrothers: Sword & Sworcery EP",
@@ -8669,7 +8669,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/superbrothers-sword-and-sworcery-ep-switch/hero.jpg",
-    "SCORE": 68
+    "SCORE": null
   },
   {
     "Title": "Super Destronaut: Land Wars",
@@ -8685,7 +8685,7 @@
     "LowestPrice": 2.74,
     "SaleStarted": "2021-05-10",
     "Image": "undefined.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Super Crush KO",
@@ -8701,7 +8701,7 @@
     "LowestPrice": 8.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/super-crush-ko-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 76
   },
   {
     "Title": "Super Battle Cards",
@@ -8717,7 +8717,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/super-battle-cards-switch/hero.jpg",
-    "SCORE": 76
+    "SCORE": null
   },
   {
     "Title": "Subsurface Circular",
@@ -8733,7 +8733,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/subsurface-circular-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 80
   },
   {
     "Title": "Subdivision Infinity DX",
@@ -8749,7 +8749,7 @@
     "LowestPrice": 7.49,
     "SaleStarted": "2021-05-11",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/subdivision-infinity-dx-switch/hero.jpg",
-    "SCORE": 80
+    "SCORE": 63
   },
   {
     "Title": "Stranded Sails - Explorers of the Cursed Islands",
@@ -8765,7 +8765,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-04-26",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/stranded-sails-explorers-of-the-cursed-islands-switch/hero.jpg",
-    "SCORE": 63
+    "SCORE": 56
   },
   {
     "Title": "Startide",
@@ -8781,7 +8781,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "undefined.jpg",
-    "SCORE": 56
+    "SCORE": null
   },
   {
     "Title": "Starlink: Battle for Atlas™ Digital Edition",
@@ -8813,7 +8813,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/star-story-the-horizon-escape-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "7th Sector",
@@ -8829,7 +8829,7 @@
     "LowestPrice": 11.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/7/7th-sector-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 69
   },
   {
     "Title": "9 Monkeys of Shaolin",
@@ -8845,7 +8845,7 @@
     "LowestPrice": 17.99,
     "SaleStarted": "2021-05-11",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/9/9-monkeys-of-shaolin-switch/hero.jpg",
-    "SCORE": 69
+    "SCORE": 74
   },
   {
     "Title": "A Summer with the Shiba Inu",
@@ -8861,7 +8861,7 @@
     "LowestPrice": 5.49,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/a-summer-with-the-shiba-inu-switch/hero.jpg",
-    "SCORE": 74
+    "SCORE": 65
   },
   {
     "Title": "Achtung! Cthulhu Tactics",
@@ -8877,7 +8877,7 @@
     "LowestPrice": 12.49,
     "SaleStarted": "2021-05-09",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/achtung-cthulhu-tactics-switch/hero.jpg",
-    "SCORE": 65
+    "SCORE": 57
   },
   {
     "Title": "Agatha Christie - The ABC Murders",
@@ -8893,7 +8893,7 @@
     "LowestPrice": 19.49,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/agatha-christie-the-abc-murders-switch/hero.jpg",
-    "SCORE": 57
+    "SCORE": 67
   },
   {
     "Title": "Angels with Scaly Wings",
@@ -8909,7 +8909,7 @@
     "LowestPrice": 7.99,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/angels-with-scaly-wings-switch/hero.jpg",
-    "SCORE": 67
+    "SCORE": 73
   },
   {
     "Title": "Anima: Gate of Memories",
@@ -8925,7 +8925,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/anima-gate-of-memories-switch/hero.jpg",
-    "SCORE": 73
+    "SCORE": 56
   },
   {
     "Title": "Anima: Gate of Memories - Arcane Edition",
@@ -8941,7 +8941,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/anima-gate-of-memories-arcane-edition-switch/hero.jpg",
-    "SCORE": 56
+    "SCORE": -1
   },
   {
     "Title": "Anima: Gate of Memories - The Nameless Chronicles",
@@ -8957,7 +8957,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/anima-gate-of-memories-the-nameless-chronicles-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 68
   },
   {
     "Title": "ANIMUS",
@@ -8973,7 +8973,7 @@
     "LowestPrice": 3.19,
     "SaleStarted": "2021-05-09",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/animus-switch/hero.jpg",
-    "SCORE": 68
+    "SCORE": null
   },
   {
     "Title": "ANIMUS: Harbinger",
@@ -8989,7 +8989,7 @@
     "LowestPrice": 3.19,
     "SaleStarted": "2021-05-09",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/animus-harbinger-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Artifact Adventure Gaiden DX",
@@ -9037,7 +9037,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/battle-for-blood-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "BEAUTIFUL DESOLATION",
@@ -9053,7 +9053,7 @@
     "LowestPrice": 17.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/beautiful-desolation-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 79
   },
   {
     "Title": "Bedtime Blues",
@@ -9069,7 +9069,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bedtime-blues-switch/hero.jpg",
-    "SCORE": 79
+    "SCORE": null
   },
   {
     "Title": "Bishoujo Battle Cyber Panic!",
@@ -9085,7 +9085,7 @@
     "LowestPrice": 4.19,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bishoujo-battle-cyber-panic-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Bite the Bullet",
@@ -9101,7 +9101,7 @@
     "LowestPrice": 7.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bite-the-bullet-switch/bite-the-bullet-switch-hero.jpg",
-    "SCORE": -1
+    "SCORE": 61
   },
   {
     "Title": "Bleed",
@@ -9117,7 +9117,7 @@
     "LowestPrice": 3.59,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bleed-switch/hero.jpg",
-    "SCORE": 61
+    "SCORE": 74
   },
   {
     "Title": "Bleed 2",
@@ -9133,7 +9133,7 @@
     "LowestPrice": 4.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bleed-2-switch/hero.jpg",
-    "SCORE": 74
+    "SCORE": 81
   },
   {
     "Title": "Bullet Battle: Evolution",
@@ -9149,7 +9149,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-09",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bullet-battle-evolution-switch/hero.jpg",
-    "SCORE": 81
+    "SCORE": -1
   },
   {
     "Title": "C14 Dating",
@@ -9165,7 +9165,7 @@
     "LowestPrice": 15.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/c14-dating-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "CAN ANDROIDS PRAY:BLUE",
@@ -9181,7 +9181,7 @@
     "LowestPrice": 3.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/can-androids-prayblue-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Card Game Bundle Vol. 1",
@@ -9213,7 +9213,7 @@
     "LowestPrice": 3.89,
     "SaleStarted": "2021-04-26",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/cast-of-the-seven-godsends-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 52
   },
   {
     "Title": "Castle of Heart",
@@ -9229,7 +9229,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/castle-of-heart-switch/hero.jpg",
-    "SCORE": 52
+    "SCORE": 58
   },
   {
     "Title": "Castle of no Escape",
@@ -9245,7 +9245,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/castle-of-no-escape-switch/hero.jpg",
-    "SCORE": 58
+    "SCORE": null
   },
   {
     "Title": "Chaos on Deponia",
@@ -9261,7 +9261,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/chaos-on-deponia-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 70
   },
   {
     "Title": "Cinders",
@@ -9277,7 +9277,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/cinders-switch/hero.jpg",
-    "SCORE": 70
+    "SCORE": 71
   },
   {
     "Title": "Cloudbase Prime",
@@ -9293,7 +9293,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/cloudbase-prime-switch/hero.jpg",
-    "SCORE": 71
+    "SCORE": 80
   },
   {
     "Title": "Collapsed",
@@ -9309,7 +9309,7 @@
     "LowestPrice": 9.75,
     "SaleStarted": "2021-05-05",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/collapsed-switch/hero.jpg",
-    "SCORE": 80
+    "SCORE": 57
   },
   {
     "Title": "Colossus Down",
@@ -9325,7 +9325,7 @@
     "LowestPrice": 13.49,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/colossus-down-switch/hero.jpg",
-    "SCORE": 57
+    "SCORE": 67
   },
   {
     "Title": "Colt Canyon",
@@ -9341,7 +9341,7 @@
     "LowestPrice": 7.49,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/colt-canyon-switch/hero.jpg",
-    "SCORE": 67
+    "SCORE": 78
   },
   {
     "Title": "Conarium",
@@ -9357,7 +9357,7 @@
     "LowestPrice": 13.39,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/conarium-switch/hero.jpg",
-    "SCORE": 78
+    "SCORE": 70
   },
   {
     "Title": "Counter Recon: The First Mission",
@@ -9373,7 +9373,7 @@
     "LowestPrice": 11.99,
     "SaleStarted": "2021-05-09",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/counter-recon-the-first-mission-switch/counter-recon-the-first-mission-switch-hero.jpg",
-    "SCORE": 70
+    "SCORE": null
   },
   {
     "Title": "Cruel Bands Career",
@@ -9389,7 +9389,7 @@
     "LowestPrice": 2.79,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/cruel-bands-career-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 63
   },
   {
     "Title": "Crying Suns",
@@ -9405,7 +9405,7 @@
     "LowestPrice": 22.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/crying-suns-switch/hero.jpg",
-    "SCORE": 63
+    "SCORE": 76
   },
   {
     "Title": "Curious Cases",
@@ -9421,7 +9421,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/curious-cases-switch/hero.jpg",
-    "SCORE": 76
+    "SCORE": null
   },
   {
     "Title": "Dark Burial",
@@ -9485,7 +9485,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/dead-dungeon-switch/dead-dungeon-switch-hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Deadly Fighter 2",
@@ -9501,7 +9501,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/deadly-fighter-2-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Demon Hunter: Revelation",
@@ -9533,7 +9533,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/deponia-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Depth of Extinction",
@@ -9549,7 +9549,7 @@
     "LowestPrice": 6.74,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/depth-of-extinction-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 73
   },
   {
     "Title": "Deuces Wild - Video Poker",
@@ -9565,7 +9565,7 @@
     "LowestPrice": 3.74,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/deuces-wild-video-poker-switch/hero.jpg",
-    "SCORE": 73
+    "SCORE": null
   },
   {
     "Title": "Devious Dungeon Collection",
@@ -9629,7 +9629,7 @@
     "LowestPrice": 19.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/digimon-story-cyber-sleuth-complete-edition-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 77
   },
   {
     "Title": "Doom & Destiny Advanced",
@@ -9645,7 +9645,7 @@
     "LowestPrice": 9.59,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/doom-and-destiny-advanced-switch/doom-and-destiny-advanced-switch-hero.jpg",
-    "SCORE": 77
+    "SCORE": null
   },
   {
     "Title": "DRAGON BALL FIGHTERZ",
@@ -9661,7 +9661,7 @@
     "LowestPrice": 9.59,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/dragon-ball-fighterz-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 86
   },
   {
     "Title": "DRAGON BALL Xenoverse 2 for Nintendo Switch",
@@ -9677,7 +9677,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/dragon-ball-xenoverse-2-for-nintendo-switch-switch/hero.jpg",
-    "SCORE": 86
+    "SCORE": null
   },
   {
     "Title": "Dreaming Sarah",
@@ -9693,7 +9693,7 @@
     "LowestPrice": 3.49,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/dreaming-sarah-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Dungeon Warfare",
@@ -9709,7 +9709,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-02",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/dungeon-warfare-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Dusk Diver",
@@ -9725,7 +9725,7 @@
     "LowestPrice": 19.24,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/dusk-diver-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 62
   },
   {
     "Title": "Edna & Harvey: Harvey's New Eyes",
@@ -9741,7 +9741,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/e/edna-and-harvey-harveys-new-eyes-switch/hero.jpg",
-    "SCORE": 62
+    "SCORE": -1
   },
   {
     "Title": "Edna & Harvey: The Breakout – Anniversary Edition",
@@ -9757,7 +9757,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/e/edna-and-harvey-the-breakout-anniversary-edition-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Elden: Path of the Forgotten",
@@ -9773,7 +9773,7 @@
     "LowestPrice": 4.79,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/e/elden-path-of-the-forgotten-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "ENDER LILIES: Quietus of the Knights",
@@ -9805,7 +9805,7 @@
     "LowestPrice": 2.09,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/e/endless-fables-dark-moor-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Enigmatis 2: The Mists of Ravenwood",
@@ -9853,7 +9853,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/felix-the-reaper-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 70
   },
   {
     "Title": "Frane: Dragons' Odyssey",
@@ -9869,7 +9869,7 @@
     "LowestPrice": 7.79,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/frane-dragons-odyssey-switch/hero.jpg",
-    "SCORE": 70
+    "SCORE": null
   },
   {
     "Title": "Freaky Awesome",
@@ -9885,7 +9885,7 @@
     "LowestPrice": 3.89,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/freaky-awesome-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Frederic: Resurrection of Music",
@@ -9917,7 +9917,7 @@
     "LowestPrice": 2.39,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/frontline-zed-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Gangsta Paradise",
@@ -9997,7 +9997,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/god-eater-3-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 73
   },
   {
     "Title": "GODS Remastered",
@@ -10013,7 +10013,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/gods-remastered-switch/hero.jpg",
-    "SCORE": 73
+    "SCORE": 56
   },
   {
     "Title": "Goetia",
@@ -10029,7 +10029,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/goetia-switch/hero.jpg",
-    "SCORE": 56
+    "SCORE": 78
   },
   {
     "Title": "Goodbye Deponia",
@@ -10045,7 +10045,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/goodbye-deponia-switch/hero.jpg",
-    "SCORE": 78
+    "SCORE": -1
   },
   {
     "Title": "Gothic Murder: Adventure That Changes Destiny",
@@ -10093,7 +10093,7 @@
     "LowestPrice": 12.49,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/grimshade-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 51
   },
   {
     "Title": "Grindstone",
@@ -10109,7 +10109,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/grindstone-switch/hero.jpg",
-    "SCORE": 51
+    "SCORE": 84
   },
   {
     "Title": "Guard Duty",
@@ -10125,7 +10125,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/guard-duty-switch/hero.jpg",
-    "SCORE": 84
+    "SCORE": 73
   },
   {
     "Title": "Gunpowder on The Teeth: Arcade",
@@ -10141,7 +10141,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/gunpowder-on-the-teeth-arcade-switch/hero.jpg",
-    "SCORE": 73
+    "SCORE": -1
   },
   {
     "Title": "Heaven Dust",
@@ -10157,7 +10157,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/heaven-dust-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 65
   },
   {
     "Title": "Hell Warders",
@@ -10173,7 +10173,7 @@
     "LowestPrice": 3.74,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/hell-warders-switch/hero.jpg",
-    "SCORE": 65
+    "SCORE": 55
   },
   {
     "Title": "Hero-U: Rogue to Redemption",
@@ -10189,7 +10189,7 @@
     "LowestPrice": 13.99,
     "SaleStarted": "2021-05-05",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/hero-u-rogue-to-redemption-switch/hero.jpg",
-    "SCORE": 55
+    "SCORE": 78
   },
   {
     "Title": "Heroes of the Monkey Tavern",
@@ -10205,7 +10205,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/heroes-of-the-monkey-tavern-switch/hero.jpg",
-    "SCORE": 78
+    "SCORE": -1
   },
   {
     "Title": "Hot Shot Burn",
@@ -10221,7 +10221,7 @@
     "LowestPrice": 2.24,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/hot-shot-burn-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "How to take off your Mask Remastered",
@@ -10237,7 +10237,7 @@
     "LowestPrice": 10.49,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/how-to-take-off-your-mask-remastered-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Infini",
@@ -10253,7 +10253,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/i/infini-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 71
   },
   {
     "Title": "Iris School of Wizardry -Vinculum Hearts-",
@@ -10269,7 +10269,7 @@
     "LowestPrice": 16.74,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/i/iris-school-of-wizardry-vinculum-hearts-switch/hero.jpg",
-    "SCORE": 71
+    "SCORE": null
   },
   {
     "Title": "Iro Hero",
@@ -10285,7 +10285,7 @@
     "LowestPrice": 3.89,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/i/iro-hero-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 59
   },
   {
     "Title": "Irony Curtain: From Matryoshka with Love",
@@ -10301,7 +10301,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-04-26",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/i/irony-curtain-from-matryoshka-with-love-switch/hero.jpg",
-    "SCORE": 59
+    "SCORE": 77
   },
   {
     "Title": "Jet Set Knights",
@@ -10317,7 +10317,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/jet-set-knights-switch/hero.jpg",
-    "SCORE": 77
+    "SCORE": -1
   },
   {
     "Title": "Jisei: The First Case HD",
@@ -10349,7 +10349,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/johnny-turbos-arcade-fighters-history-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Johnny Turbo's Arcade: Joe and Mac Returns",
@@ -10381,7 +10381,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/johnny-turbos-arcade-night-slashers-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Johnny Turbo's Arcade: Wizard Fire",
@@ -10397,7 +10397,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/johnny-turbos-arcade-wizard-fire-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 65
   },
   {
     "Title": "JUMANJI: The Video Game",
@@ -10413,7 +10413,7 @@
     "LowestPrice": 19.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/jumanji-the-video-game-switch/hero.jpg",
-    "SCORE": 65
+    "SCORE": 27
   },
   {
     "Title": "JUMP FORCE - Deluxe Edition",
@@ -10429,7 +10429,7 @@
     "LowestPrice": 24.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/jump-force-deluxe-edition-switch/hero.jpg",
-    "SCORE": 27
+    "SCORE": 53
   },
   {
     "Title": "Kaptain Brawe: A Brawe New World",
@@ -10445,7 +10445,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/k/kaptain-brawe-a-brawe-new-world-switch/hero.jpg",
-    "SCORE": 53
+    "SCORE": -1
   },
   {
     "Title": "Kitty Love -Way to look for love-",
@@ -10461,7 +10461,7 @@
     "LowestPrice": 16.74,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/k/kitty-love-way-to-look-for-love-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Kona",
@@ -10477,7 +10477,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-11",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/k/kona-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 71
   },
   {
     "Title": "Kotodama: The 7 Mysteries of Fujisawa",
@@ -10493,7 +10493,7 @@
     "LowestPrice": 9.89,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/k/kotodama-the-7-mysteries-of-fujisawa-switch/hero.jpg",
-    "SCORE": 71
+    "SCORE": 63
   },
   {
     "Title": "LEGRAND LEGACY: Tale of the Fatebounds",
@@ -10509,7 +10509,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/l/legrand-legacy-tale-of-the-fatebounds-switch/hero.jpg",
-    "SCORE": 63
+    "SCORE": 64
   },
   {
     "Title": "Lichtspeer: Double Speer Edition",
@@ -10525,7 +10525,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/l/lichtspeer-double-speer-edition-switch/hero.jpg",
-    "SCORE": 64
+    "SCORE": 66
   },
   {
     "Title": "Life of Fly",
@@ -10541,7 +10541,7 @@
     "LowestPrice": 8.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/l/life-of-fly-switch/hero.jpg",
-    "SCORE": 66
+    "SCORE": null
   },
   {
     "Title": "Lily of the Hollow - Resurrection",
@@ -10557,7 +10557,7 @@
     "LowestPrice": 4.89,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/l/lily-of-the-hollow-resurrection-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Lost Castle",
@@ -10589,7 +10589,7 @@
     "LowestPrice": 4.49,
     "SaleStarted": "2021-04-26",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/mainlining-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 62
   },
   {
     "Title": "MEGA PARTY - a tootuff adventure",
@@ -10605,7 +10605,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/mega-party-a-tootuff-adventure-switch/hero.jpg",
-    "SCORE": 62
+    "SCORE": null
   },
   {
     "Title": "Merchants of Kaidan",
@@ -10653,7 +10653,7 @@
     "LowestPrice": 4.49,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/mittelborg-city-of-mages-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 30
   },
   {
     "Title": "moon",
@@ -10669,7 +10669,7 @@
     "LowestPrice": 17.09,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/moon-switch/hero.jpg",
-    "SCORE": 30
+    "SCORE": 82
   },
   {
     "Title": "More Dark",
@@ -10685,7 +10685,7 @@
     "LowestPrice": 3.24,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/more-dark-switch/hero.jpg",
-    "SCORE": 82
+    "SCORE": -1
   },
   {
     "Title": "MY HERO ONE'S JUSTICE",
@@ -10701,7 +10701,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/my-hero-ones-justice-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 68
   },
   {
     "Title": "MY HERO ONE'S JUSTICE 2",
@@ -10717,7 +10717,7 @@
     "LowestPrice": 23.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/my-hero-ones-justice-2-switch/my-hero-ones-justice-2-switch-hero.jpg",
-    "SCORE": 68
+    "SCORE": 69
   },
   {
     "Title": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 2",
@@ -10733,7 +10733,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/n/naruto-shippuden-ultimate-ninja-storm-2-switch/hero.jpg",
-    "SCORE": 69
+    "SCORE": null
   },
   {
     "Title": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 3 Full Burst",
@@ -10765,7 +10765,7 @@
     "LowestPrice": 24.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/n/naruto-shippuden-ultimate-ninja-storm-4-road-to-boruto-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 74
   },
   {
     "Title": "NARUTO: Ultimate Ninja STORM",
@@ -10781,7 +10781,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/n/naruto-ultimate-ninja-storm-switch/hero.jpg",
-    "SCORE": 74
+    "SCORE": null
   },
   {
     "Title": "Nerdook Bundle Vol. 1",
@@ -10829,7 +10829,7 @@
     "LowestPrice": 11.39,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/n/nicole-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Nine Witches: Family Disruption",
@@ -10861,7 +10861,7 @@
     "LowestPrice": 11.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/n/nongunz-doppelganger-edition-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Norman's Great Illusion",
@@ -10877,7 +10877,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/n/normans-great-illusion-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Omega Strike",
@@ -10893,7 +10893,7 @@
     "LowestPrice": 4.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/omega-strike-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 67
   },
   {
     "Title": "ONE PIECE Pirate Warriors 3 Deluxe Edition",
@@ -10909,7 +10909,7 @@
     "LowestPrice": 7.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/one-piece-pirate-warriors-3-deluxe-edition-switch/hero.jpg",
-    "SCORE": 67
+    "SCORE": 80
   },
   {
     "Title": "ONE PIECE: PIRATE WARRIORS 4",
@@ -10925,7 +10925,7 @@
     "LowestPrice": 23.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/one-piece-pirate-warriors-4-switch/hero.jpg",
-    "SCORE": 80
+    "SCORE": 75
   },
   {
     "Title": "ONE PIECE: Unlimited World Red Deluxe Edition",
@@ -10941,7 +10941,7 @@
     "LowestPrice": 7.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/one-piece-unlimited-world-red-deluxe-edition-switch/hero.jpg",
-    "SCORE": 75
+    "SCORE": 71
   },
   {
     "Title": "Oniken: Unstoppable Edition & Odallus: The Dark Call Bundle",
@@ -10957,7 +10957,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/oniken-unstoppable-edition-and-odallus-the-dark-call-bundle-switch/hero.jpg",
-    "SCORE": 71
+    "SCORE": null
   },
   {
     "Title": "Ord.",
@@ -10973,7 +10973,7 @@
     "LowestPrice": 3.24,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/ord-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Paper Wars: Cannon Fodder Devastated",
@@ -10989,7 +10989,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-04-24",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/paper-wars-cannon-fodder-devastated-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 53
   },
   {
     "Title": "Paranautical Activity",
@@ -11021,7 +11021,7 @@
     "LowestPrice": 12.79,
     "SaleStarted": "2021-05-11",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/pathway-switch/hero.jpg",
-    "SCORE": 53
+    "SCORE": 68
   },
   {
     "Title": "Paw Paw Paw",
@@ -11037,7 +11037,7 @@
     "LowestPrice": 6.49,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/paw-paw-paw-switch/hero.jpg",
-    "SCORE": 68
+    "SCORE": -1
   },
   {
     "Title": "Persian Nights: Sands of Wonders",
@@ -11069,7 +11069,7 @@
     "LowestPrice": 19.99,
     "SaleStarted": "2021-05-11",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/phoenix-wright-ace-attorney-trilogy-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 82
   },
   {
     "Title": "Pixel Gladiator",
@@ -11085,7 +11085,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/pixel-gladiator-switch/pixel-gladiator-switch-hero.jpg",
-    "SCORE": 82
+    "SCORE": -1
   },
   {
     "Title": "Poker Pretty Girls Battle: Fantasy World Edition",
@@ -11117,7 +11117,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/z/zombillie-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Zombie Hill Race",
@@ -11149,7 +11149,7 @@
     "LowestPrice": 19.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/x/xcom-2-collection-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 75
   },
   {
     "Title": "X-Morph: Defense",
@@ -11165,7 +11165,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-02",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/x/x-morph-defense-switch/hero.jpg",
-    "SCORE": 75
+    "SCORE": 78
   },
   {
     "Title": "WWE 2K18",
@@ -11181,7 +11181,7 @@
     "LowestPrice": 19.79,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/wwe-2k18-switch/hero.jpg",
-    "SCORE": 78
+    "SCORE": 66
   },
   {
     "Title": "WWE 2K Battlegrounds",
@@ -11197,7 +11197,7 @@
     "LowestPrice": 15.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/wwe-2k-battlegrounds-switch/wwe-2k-battlegrounds-switch-hero.jpg",
-    "SCORE": 66
+    "SCORE": 59
   },
   {
     "Title": "Wrestling Empire",
@@ -11213,7 +11213,7 @@
     "LowestPrice": 15.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/wrestling-empire-switch/hero.jpg",
-    "SCORE": 59
+    "SCORE": 58
   },
   {
     "Title": "Where Angels Cry: Tears of the Fallen Collector's Edition",
@@ -11229,7 +11229,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/where-angels-cry-tears-of-the-fallen-collectors-edition-switch/hero.jpg",
-    "SCORE": 58
+    "SCORE": -1
   },
   {
     "Title": "WARSAW",
@@ -11245,7 +11245,7 @@
     "LowestPrice": 11.99,
     "SaleStarted": "2021-05-04",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/warsaw-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 69
   },
   {
     "Title": "Viviette",
@@ -11261,7 +11261,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/v/viviette-switch/hero.jpg",
-    "SCORE": 69
+    "SCORE": 58
   },
   {
     "Title": "VIRUS: The Outbreak",
@@ -11277,7 +11277,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/v/virus-the-outbreak-switch/hero.jpg",
-    "SCORE": 58
+    "SCORE": null
   },
   {
     "Title": "Video Poker Collection",
@@ -11325,7 +11325,7 @@
     "LowestPrice": 3.49,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/v/vera-blanc-ghost-in-the-castle-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "VASARA Collection",
@@ -11341,7 +11341,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-04",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/v/vasara-collection-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 68
   },
   {
     "Title": "Vambrace: Cold Soul",
@@ -11357,7 +11357,7 @@
     "LowestPrice": 8.24,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/v/vambrace-cold-soul-switch/hero.jpg",
-    "SCORE": 68
+    "SCORE": 62
   },
   {
     "Title": "Valiant Hearts: The Great War",
@@ -11373,7 +11373,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/v/valiant-hearts-the-great-war-switch/hero.jpg",
-    "SCORE": 62
+    "SCORE": 80
   },
   {
     "Title": "Unto The End",
@@ -11389,7 +11389,7 @@
     "LowestPrice": 17.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/unto-the-end-switch/hero.jpg",
-    "SCORE": 80
+    "SCORE": 70
   },
   {
     "Title": "Unepic",
@@ -11405,7 +11405,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/unepic-switch/hero.jpg",
-    "SCORE": 70
+    "SCORE": 72
   },
   {
     "Title": "Underhero",
@@ -11421,7 +11421,7 @@
     "LowestPrice": 10.19,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/underhero-switch/hero.jpg",
-    "SCORE": 72
+    "SCORE": 80
   },
   {
     "Title": "UltraGoodness 2",
@@ -11437,7 +11437,7 @@
     "LowestPrice": 3.49,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/ultragoodness-2-switch/hero.jpg",
-    "SCORE": 80
+    "SCORE": -1
   },
   {
     "Title": "Trüberbrook",
@@ -11453,7 +11453,7 @@
     "LowestPrice": 9.89,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/truberbrook-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Trials Rising Standard Edition",
@@ -11501,7 +11501,7 @@
     "LowestPrice": 16.24,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tower-of-time-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 70
   },
   {
     "Title": "Tokyo School Life",
@@ -11517,7 +11517,7 @@
     "LowestPrice": 3.74,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tokyo-school-life-switch/hero.jpg",
-    "SCORE": 70
+    "SCORE": -1
   },
   {
     "Title": "Thy Sword",
@@ -11533,7 +11533,7 @@
     "LowestPrice": 5.49,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/thy-sword-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 60
   },
   {
     "Title": "Three Fourths Home: Extended Edition",
@@ -11549,7 +11549,7 @@
     "LowestPrice": 2.24,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/three-fourths-home-extended-edition-switch/hero.jpg",
-    "SCORE": 60
+    "SCORE": null
   },
   {
     "Title": "Thief Simulator",
@@ -11565,7 +11565,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/thief-simulator-switch/thief-simulator-switch-hero.jpg",
-    "SCORE": null
+    "SCORE": 61
   },
   {
     "Title": "The Spectrum Retreat",
@@ -11581,7 +11581,7 @@
     "LowestPrice": 6.49,
     "SaleStarted": "2021-05-09",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-spectrum-retreat-switch/hero.jpg",
-    "SCORE": 61
+    "SCORE": 70
   },
   {
     "Title": "The Shapeshifting Detective",
@@ -11613,7 +11613,7 @@
     "LowestPrice": 6.74,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-pew-pew-bundle-vol-1-switch/hero.jpg",
-    "SCORE": 70
+    "SCORE": null
   },
   {
     "Title": "The Man With The Ivory Cane",
@@ -11629,7 +11629,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-man-with-the-ivory-cane-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "The Language Of Love",
@@ -11661,7 +11661,7 @@
     "LowestPrice": 3.74,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-innsmouth-case-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 72
   },
   {
     "Title": "The Great Perhaps",
@@ -11677,7 +11677,7 @@
     "LowestPrice": 4.49,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-great-perhaps-switch/the-great-perhaps-switch-hero.jpg",
-    "SCORE": 72
+    "SCORE": 50
   },
   {
     "Title": "The Forbidden Arts",
@@ -11693,7 +11693,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-forbidden-arts-switch/hero.jpg",
-    "SCORE": 50
+    "SCORE": 53
   },
   {
     "Title": "The Deer God",
@@ -11709,7 +11709,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-11",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-deer-god-switch/hero.jpg",
-    "SCORE": 53
+    "SCORE": 52
   },
   {
     "Title": "The Dark Eye: Memoria",
@@ -11725,7 +11725,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-dark-eye-memoria-switch/hero.jpg",
-    "SCORE": 52
+    "SCORE": 77
   },
   {
     "Title": "The Dark Eye: Chains of Satinav",
@@ -11741,7 +11741,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-dark-eye-chains-of-satinav-switch/hero.jpg",
-    "SCORE": 77
+    "SCORE": -1
   },
   {
     "Title": "The Count Lucanor",
@@ -11757,7 +11757,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-04-26",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-count-lucanor-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 76
   },
   {
     "Title": "The Childs Sight",
@@ -11773,7 +11773,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-childs-sight-switch/hero.jpg",
-    "SCORE": 76
+    "SCORE": -1
   },
   {
     "Title": "The Bunker",
@@ -11789,7 +11789,7 @@
     "LowestPrice": 6.49,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-bunker-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 65
   },
   {
     "Title": "The Bluecoats North & South",
@@ -11805,7 +11805,7 @@
     "LowestPrice": 17.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-bluecoats-north-and-south-switch/hero.jpg",
-    "SCORE": 65
+    "SCORE": null
   },
   {
     "Title": "The Aquatic Adventure of the Last Human",
@@ -11821,7 +11821,7 @@
     "LowestPrice": 3.89,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-aquatic-adventure-of-the-last-human-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 78
   },
   {
     "Title": "Tales of Vesperia™: Definitive Edition",
@@ -11837,7 +11837,7 @@
     "LowestPrice": 12.49,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tales-of-vesperia-definitive-edition-switch/hero.jpg",
-    "SCORE": 78
+    "SCORE": 83
   },
   {
     "Title": "Syrup and The Ultimate Sweet",
@@ -11853,7 +11853,7 @@
     "LowestPrice": 2.74,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/syrup-and-the-ultimate-sweet-switch/hero.jpg",
-    "SCORE": 83
+    "SCORE": 70
   },
   {
     "Title": "Syberia 3",
@@ -11869,7 +11869,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/syberia-3-switch/hero.jpg",
-    "SCORE": 70
+    "SCORE": 51
   },
   {
     "Title": "Syberia",
@@ -11885,7 +11885,7 @@
     "LowestPrice": 2.98,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/syberia-switch/hero.jpg",
-    "SCORE": 51
+    "SCORE": null
   },
   {
     "Title": "Swords & Soldiers",
@@ -11933,7 +11933,7 @@
     "LowestPrice": 9.59,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/sword-art-online-fatal-bullet-complete-edition-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 63
   },
   {
     "Title": "Swaps and Traps",
@@ -11949,7 +11949,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/swaps-and-traps-switch/swaps-and-traps-switch-hero.jpg",
-    "SCORE": 63
+    "SCORE": null
   },
   {
     "Title": "SUPER DRAGON BALL HEROES WORLD MISSION",
@@ -11965,7 +11965,7 @@
     "LowestPrice": 8.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/super-dragon-ball-heroes-world-mission-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 69
   },
   {
     "Title": "Super Blackjack Battle 2 Turbo Edition - The Card Warriors",
@@ -11981,7 +11981,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/super-blackjack-battle-2-turbo-edition-the-card-warriors-switch/hero.jpg",
-    "SCORE": 69
+    "SCORE": 48
   },
   {
     "Title": "Sunless Sea: Zubmariner Edition",
@@ -11997,7 +11997,7 @@
     "LowestPrice": 11.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/sunless-sea-zubmariner-edition-switch/hero.jpg",
-    "SCORE": 48
+    "SCORE": null
   },
   {
     "Title": "Summer Sweetheart",
@@ -12013,7 +12013,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/summer-sweetheart-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Sumatra: Fate of Yandi",
@@ -12061,7 +12061,7 @@
     "LowestPrice": 5.49,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/strawberry-vinegar-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 70
   },
   {
     "Title": "Steampunk Tower 2",
@@ -12077,7 +12077,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/steampunk-tower-2-switch/steampunk-tower-2-switch-hero.jpg",
-    "SCORE": 70
+    "SCORE": -1
   },
   {
     "Title": "SpyHack",
@@ -12093,7 +12093,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/spyhack-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Spiral Memoria -The Summer I Meet Myself-",
@@ -12125,7 +12125,7 @@
     "LowestPrice": 5.49,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/soulslayer-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Soul Searching",
@@ -12173,7 +12173,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-05",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/smash-boats-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Slide Stars",
@@ -12189,7 +12189,7 @@
     "LowestPrice": 19.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/slide-stars-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 47
   },
   {
     "Title": "Skulls of the Shogun: Bone-A-Fide Edition",
@@ -12205,7 +12205,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/skulls-of-the-shogun-bone-a-fide-edition-switch/hero.jpg",
-    "SCORE": 47
+    "SCORE": 60
   },
   {
     "Title": "Skelly Selest &  Straimium Immortaly Double Pack",
@@ -12221,7 +12221,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/skelly-selest-and-straimium-immortaly-double-pack-switch/hero.jpg",
-    "SCORE": 60
+    "SCORE": null
   },
   {
     "Title": "Sin Slayers",
@@ -12237,7 +12237,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/sin-slayers-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Silence",
@@ -12253,7 +12253,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/silence-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 73
   },
   {
     "Title": "Shut Eye",
@@ -12269,7 +12269,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/shut-eye-switch/hero.jpg",
-    "SCORE": 73
+    "SCORE": null
   },
   {
     "Title": "Shing!",
@@ -12285,7 +12285,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/shing-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 63
   },
   {
     "Title": "Shikhondo - Soul Eater",
@@ -12301,7 +12301,7 @@
     "LowestPrice": 4.19,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/shikhondo-soul-eater-switch/hero.jpg",
-    "SCORE": 63
+    "SCORE": 64
   },
   {
     "Title": "Save Koch",
@@ -12317,7 +12317,7 @@
     "LowestPrice": 5,
     "SaleStarted": "2021-04-26",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/save-koch-switch/hero.jpg",
-    "SCORE": 64
+    "SCORE": 61
   },
   {
     "Title": "Sam & Max Save the World",
@@ -12333,7 +12333,7 @@
     "LowestPrice": 15.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/sam-and-max-save-the-world-switch/hero.jpg",
-    "SCORE": 61
+    "SCORE": null
   },
   {
     "Title": "Roommates",
@@ -12349,7 +12349,7 @@
     "LowestPrice": 11.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/roommates-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "RoboPhobik",
@@ -12397,7 +12397,7 @@
     "LowestPrice": 17.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/rise-eterna-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "REZ PLZ",
@@ -12413,7 +12413,7 @@
     "LowestPrice": 7.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/rez-plz-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 70
   },
   {
     "Title": "Retro Classix 4in1 Pack: Sly Spy, Shootout, Wizard Fire & Super Real Darwin",
@@ -12429,7 +12429,7 @@
     "LowestPrice": 6.39,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/retro-classix-4in1-pack-sly-spy-shootout-wizard-fire-and-super-real-darwin-switch/hero.jpg",
-    "SCORE": 70
+    "SCORE": null
   },
   {
     "Title": "Retro Classix 2in1 pack: Bad Dudes & Two Crude Dudes",
@@ -12477,7 +12477,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/regalia-of-men-and-monarchs-royal-edition-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 70
   },
   {
     "Title": "Reflection of Mine",
@@ -12493,7 +12493,7 @@
     "LowestPrice": 4.79,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/reflection-of-mine-switch/hero.jpg",
-    "SCORE": 70
+    "SCORE": -1
   },
   {
     "Title": "Quantum Replica",
@@ -12509,7 +12509,7 @@
     "LowestPrice": 8.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/q/quantum-replica-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Pumpkin Jack",
@@ -12525,7 +12525,7 @@
     "LowestPrice": 19.79,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/pumpkin-jack-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 75
   },
   {
     "Title": "Project Starship X",
@@ -12541,7 +12541,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/project-starship-x-switch/hero.jpg",
-    "SCORE": 75
+    "SCORE": -1
   },
   {
     "Title": "1979 Revolution: Black Friday",
@@ -12557,7 +12557,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/1/1979-revolution-black-friday-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 78
   },
   {
     "Title": "2in1 - Application Driver and Serial Killer / Sniper",
@@ -12573,7 +12573,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-05",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/2/2in1-application-driver-and-serial-killer-sniper-switch/hero.jpg",
-    "SCORE": 78
+    "SCORE": null
   },
   {
     "Title": "2URVIVE",
@@ -12589,7 +12589,7 @@
     "LowestPrice": 4.19,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/2/2urvive-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Agony",
@@ -12605,7 +12605,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/agony-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 40
   },
   {
     "Title": "Amnesia: Collection",
@@ -12621,7 +12621,7 @@
     "LowestPrice": 8.99,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/amnesia-collection-switch/hero.jpg",
-    "SCORE": 40
+    "SCORE": null
   },
   {
     "Title": "Apocryph: an old-school shooter",
@@ -12653,7 +12653,7 @@
     "LowestPrice": 11.99,
     "SaleStarted": "2021-05-11",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/ash-of-gods-redemption-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 64
   },
   {
     "Title": "Assassin's Creed® III: Remastered",
@@ -12669,7 +12669,7 @@
     "LowestPrice": 15.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/assassins-creed-iii-remastered-switch/hero.jpg",
-    "SCORE": 64
+    "SCORE": 69
   },
   {
     "Title": "Ayakashi Koi Gikyoku -Forbidden Romance with Mysterious Spirit-",
@@ -12685,7 +12685,7 @@
     "LowestPrice": 16.74,
     "SaleStarted": "2021-04-29",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/ayakashi-koi-gikyoku-forbidden-romance-with-mysterious-spirit-switch/hero.jpg",
-    "SCORE": 69
+    "SCORE": null
   },
   {
     "Title": "Bad Dream: Coma",
@@ -12701,7 +12701,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bad-dream-coma-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "BDSM: Big Drunk Satanic Massacre",
@@ -12717,7 +12717,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bdsm-big-drunk-satanic-massacre-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 58
   },
   {
     "Title": "Beach Bounce Remastered",
@@ -12733,7 +12733,7 @@
     "LowestPrice": 7.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/beach-bounce-remastered-switch/hero.jpg",
-    "SCORE": 58
+    "SCORE": -1
   },
   {
     "Title": "BioShock 2 Remastered",
@@ -12749,7 +12749,7 @@
     "LowestPrice": 7.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bioshock-2-remastered-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "BioShock Infinite: The Complete Edition",
@@ -12765,7 +12765,7 @@
     "LowestPrice": 7.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bioshock-infinite-the-complete-edition-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "BioShock Remastered",
@@ -12797,7 +12797,7 @@
     "LowestPrice": 19.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bioshock-the-collection-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 84
   },
   {
     "Title": "Blacksad: Under the Skin",
@@ -12813,7 +12813,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/blacksad-under-the-skin-switch/hero.jpg",
-    "SCORE": 84
+    "SCORE": 62
   },
   {
     "Title": "Blind Men",
@@ -12829,7 +12829,7 @@
     "LowestPrice": 2.74,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/blind-men-switch/hero.jpg",
-    "SCORE": 62
+    "SCORE": -1
   },
   {
     "Title": "Blood and Guts Bundle",
@@ -12845,7 +12845,7 @@
     "LowestPrice": 6.74,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/blood-and-guts-bundle-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Borderlands Legendary Collection",
@@ -12861,7 +12861,7 @@
     "LowestPrice": 19.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/borderlands-legendary-collection-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 84
   },
   {
     "Title": "Borderlands: Game of the Year Edition",
@@ -12877,7 +12877,7 @@
     "LowestPrice": 11.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/borderlands-game-of-the-year-edition-switch/hero.jpg",
-    "SCORE": 84
+    "SCORE": 77
   },
   {
     "Title": "Borderlands: The Handsome Collection",
@@ -12893,7 +12893,7 @@
     "LowestPrice": 15.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/borderlands-the-handsome-collection-switch/hero.jpg",
-    "SCORE": 77
+    "SCORE": 81
   },
   {
     "Title": "Boreal Blade",
@@ -12909,7 +12909,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-05",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/boreal-blade-switch/hero.jpg",
-    "SCORE": 81
+    "SCORE": -1
   },
   {
     "Title": "Broken Lines",
@@ -12925,7 +12925,7 @@
     "LowestPrice": 12.49,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/broken-lines-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 70
   },
   {
     "Title": "Brotherhood United",
@@ -12941,7 +12941,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-04-26",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/brotherhood-united-switch/hero.jpg",
-    "SCORE": 70
+    "SCORE": 48
   },
   {
     "Title": "BRUTAL RAGE",
@@ -12957,7 +12957,7 @@
     "LowestPrice": 4.19,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/brutal-rage-switch/hero.jpg",
-    "SCORE": 48
+    "SCORE": null
   },
   {
     "Title": "BUTCHER",
@@ -12973,7 +12973,7 @@
     "LowestPrice": 3.99,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/butcher-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 71
   },
   {
     "Title": "Call of Juarez: Gunslinger",
@@ -12989,7 +12989,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/call-of-juarez-gunslinger-switch/hero.jpg",
-    "SCORE": 71
+    "SCORE": null
   },
   {
     "Title": "Crawlco Block Knockers",
@@ -13005,7 +13005,7 @@
     "LowestPrice": 5.39,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/crawlco-block-knockers-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Crime Opera: The Butterfly Effect",
@@ -13037,7 +13037,7 @@
     "LowestPrice": 10.49,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/darkwood-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 77
   },
   {
     "Title": "Deponia Doomsday",
@@ -13053,7 +13053,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/deponia-doomsday-switch/hero.jpg",
-    "SCORE": 77
+    "SCORE": 73
   },
   {
     "Title": "DISTRAINT 2",
@@ -13069,7 +13069,7 @@
     "LowestPrice": 4.49,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/distraint-2-switch/hero.jpg",
-    "SCORE": 73
+    "SCORE": -1
   },
   {
     "Title": "Doom & Destiny",
@@ -13085,7 +13085,7 @@
     "LowestPrice": 7.19,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/doom-and-destiny-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Dungeon Nightmares 1+2 Collection",
@@ -13101,7 +13101,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/dungeon-nightmares-1plus2-collection-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Gal*Gun 2",
@@ -13117,7 +13117,7 @@
     "LowestPrice": 16.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/galgun-2-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 59
   },
   {
     "Title": "Gal*Gun Returns",
@@ -13133,7 +13133,7 @@
     "LowestPrice": 42.49,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/galgun-returns-switch/hero.jpg",
-    "SCORE": 59
+    "SCORE": 68
   },
   {
     "Title": "Green Hell",
@@ -13149,7 +13149,7 @@
     "LowestPrice": 12.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/green-hell-switch/hero.jpg",
-    "SCORE": 68
+    "SCORE": 80
   },
   {
     "Title": "Gun Gun Pixies",
@@ -13165,7 +13165,7 @@
     "LowestPrice": 24.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/gun-gun-pixies-switch/hero.jpg",
-    "SCORE": 80
+    "SCORE": 47
   },
   {
     "Title": "HALF DEAD",
@@ -13181,7 +13181,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/half-dead-switch/hero.jpg",
-    "SCORE": 47
+    "SCORE": null
   },
   {
     "Title": "Hard West",
@@ -13197,7 +13197,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/hard-west-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 71
   },
   {
     "Title": "Hollow",
@@ -13213,7 +13213,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/hollow-switch/hero.jpg",
-    "SCORE": 71
+    "SCORE": 26
   },
   {
     "Title": "Indie Darling Bundle Vol 2",
@@ -13229,7 +13229,7 @@
     "LowestPrice": 5.24,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/i/indie-darling-bundle-vol-2-switch/hero.jpg",
-    "SCORE": 26
+    "SCORE": null
   },
   {
     "Title": "Indie Puzzle Bundle Vol 1",
@@ -13261,7 +13261,7 @@
     "LowestPrice": 7.19,
     "SaleStarted": "2021-05-05",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/i/infernal-radiation-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": -1
   },
   {
     "Title": "Infliction: Extended Cut",
@@ -13277,7 +13277,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-11",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/i/infliction-extended-cut-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 68
   },
   {
     "Title": "L.A. Noire",
@@ -13293,7 +13293,7 @@
     "LowestPrice": 24.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/l/la-noire-switch/hero.jpg",
-    "SCORE": 68
+    "SCORE": null
   },
   {
     "Title": "Layers of Fear 2",
@@ -13309,7 +13309,7 @@
     "LowestPrice": 26.99,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/l/layers-of-fear-2-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 70
   },
   {
     "Title": "Liberated: Enhanced Edition",
@@ -13325,7 +13325,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/l/liberated-enhanced-edition-switch/liberated-enhanced-edition-switch-hero.jpg",
-    "SCORE": 70
+    "SCORE": null
   },
   {
     "Title": "Lydia",
@@ -13341,7 +13341,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/l/lydia-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 74
   },
   {
     "Title": "Mahluk dark demon",
@@ -13357,7 +13357,7 @@
     "LowestPrice": 4.99,
     "SaleStarted": "2021-05-14",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/mahluk-dark-demon-switch/hero.jpg",
-    "SCORE": 74
+    "SCORE": null
   },
   {
     "Title": "Moero Crystal H",
@@ -13373,7 +13373,7 @@
     "LowestPrice": 27.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/moero-crystal-h-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 71
   },
   {
     "Title": "Monster Prom: XXL",
@@ -13389,7 +13389,7 @@
     "LowestPrice": 6.39,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/monster-prom-xxl-switch/hero.jpg",
-    "SCORE": 71
+    "SCORE": 79
   },
   {
     "Title": "Need a packet?",
@@ -13405,7 +13405,7 @@
     "LowestPrice": 4.19,
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/n/need-a-packet-switch/hero.jpg",
-    "SCORE": 79
+    "SCORE": -1
   },
   {
     "Title": "Omen Exitio: Plague",
@@ -13437,7 +13437,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/our-world-is-ended-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 48
   },
   {
     "Title": "Outbreak: Epidemic",
@@ -13453,7 +13453,7 @@
     "LowestPrice": 7.49,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/outbreak-epidemic-switch/hero.jpg",
-    "SCORE": 48
+    "SCORE": null
   },
   {
     "Title": "Outbreak: The New Nightmare",
@@ -13469,7 +13469,7 @@
     "LowestPrice": 6.49,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/outbreak-the-new-nightmare-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 42
   },
   {
     "Title": "Outbuddies DX",
@@ -13485,7 +13485,7 @@
     "LowestPrice": 6.29,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/outbuddies-dx-switch/hero.jpg",
-    "SCORE": 42
+    "SCORE": 55
   },
   {
     "Title": "Pantsu Hunter: Back to the 90s",
@@ -13501,7 +13501,7 @@
     "LowestPrice": 9.09,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/pantsu-hunter-back-to-the-90s-switch/hero.jpg",
-    "SCORE": 55
+    "SCORE": 45
   },
   {
     "Title": "Paratopic",
@@ -13517,7 +13517,7 @@
     "LowestPrice": 2.19,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/paratopic-switch/hero.jpg",
-    "SCORE": 45
+    "SCORE": -1
   },
   {
     "Title": "Phantaruk",
@@ -13533,7 +13533,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/phantaruk-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 53
   },
   {
     "Title": "Phantom Doctrine",
@@ -13549,7 +13549,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/phantom-doctrine-switch/hero.jpg",
-    "SCORE": 53
+    "SCORE": 73
   },
   {
     "Title": "Project Warlock",
@@ -13565,7 +13565,7 @@
     "LowestPrice": 8.99,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/project-warlock-switch/hero.jpg",
-    "SCORE": 73
+    "SCORE": 77
   },
   {
     "Title": "Raging Loop",
@@ -13581,7 +13581,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/raging-loop-switch/hero.jpg",
-    "SCORE": 77
+    "SCORE": 78
   },
   {
     "Title": "Redeemer: Enhanced Edition",
@@ -13597,7 +13597,7 @@
     "LowestPrice": 8.99,
     "SaleStarted": "2021-05-11",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/redeemer-enhanced-edition-switch/hero.jpg",
-    "SCORE": 78
+    "SCORE": 65
   },
   {
     "Title": "Retrace: Memories of Death",
@@ -13613,7 +13613,7 @@
     "LowestPrice": 4.79,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/retrace-memories-of-death-switch/hero.jpg",
-    "SCORE": 65
+    "SCORE": -1
   },
   {
     "Title": "Root Letter: Last Answer",
@@ -13629,7 +13629,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/root-letter-last-answer-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 67
   },
   {
     "Title": "S.N.I.P.E.R. - Hunter Scope",
@@ -13645,7 +13645,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/sniper-hunter-scope-switch/hero.jpg",
-    "SCORE": 67
+    "SCORE": null
   },
   {
     "Title": "SELF",
@@ -13661,7 +13661,7 @@
     "LowestPrice": 3.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/self-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 63
   },
   {
     "Title": "Silver Chains",
@@ -13677,7 +13677,7 @@
     "LowestPrice": 16.49,
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/silver-chains-switch/hero.jpg",
-    "SCORE": 63
+    "SCORE": 53
   },
   {
     "Title": "Sinless",
@@ -13693,7 +13693,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/sinless-switch/hero.jpg",
-    "SCORE": 53
+    "SCORE": -1
   },
   {
     "Title": "SINNER: Sacrifice for Redemption",
@@ -13709,7 +13709,7 @@
     "LowestPrice": 4.74,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/sinner-sacrifice-for-redemption-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": 63
   },
   {
     "Title": "South Park™: The Fractured but Whole™ - Standard Edition",
@@ -13725,7 +13725,7 @@
     "LowestPrice": 14.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/south-park-the-fractured-but-whole-standard-edition-switch/hero.jpg",
-    "SCORE": 63
+    "SCORE": null
   },
   {
     "Title": "South Park™: The Stick of Truth™",
@@ -13741,7 +13741,7 @@
     "LowestPrice": 11.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/south-park-the-stick-of-truth-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 85
   },
   {
     "Title": "State of Mind",
@@ -13757,7 +13757,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/state-of-mind-switch/hero.jpg",
-    "SCORE": 85
+    "SCORE": 68
   },
   {
     "Title": "Still There",
@@ -13773,7 +13773,7 @@
     "LowestPrice": 7.49,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/still-there-switch/hero.jpg",
-    "SCORE": 68
+    "SCORE": 80
   },
   {
     "Title": "Suicide Guy",
@@ -13789,7 +13789,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-01",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/suicide-guy-switch/hero.jpg",
-    "SCORE": 80
+    "SCORE": 62
   },
   {
     "Title": "Synergia",
@@ -13805,7 +13805,7 @@
     "LowestPrice": 9.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/synergia-switch/hero.jpg",
-    "SCORE": 62
+    "SCORE": -1
   },
   {
     "Title": "Tales from the Borderlands",
@@ -13821,7 +13821,7 @@
     "LowestPrice": 19.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tales-from-the-borderlands-switch/hero.jpg",
-    "SCORE": -1
+    "SCORE": null
   },
   {
     "Title": "Tamashii",
@@ -13837,7 +13837,7 @@
     "LowestPrice": 5.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tamashii-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 68
   },
   {
     "Title": "Team Troopers",
@@ -13853,7 +13853,7 @@
     "LowestPrice": 9.3,
     "SaleStarted": "2021-05-10",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/team-troopers-switch/hero.jpg",
-    "SCORE": 68
+    "SCORE": null
   },
   {
     "Title": "The Long Journey Home",
@@ -13869,7 +13869,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-long-journey-home-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 64
   },
   {
     "Title": "The Outer Worlds",
@@ -13885,7 +13885,7 @@
     "LowestPrice": 29.99,
     "SaleStarted": "2021-05-07",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-outer-worlds-switch/the-outer-worlds-switch-hero.jpg",
-    "SCORE": 64
+    "SCORE": 82
   },
   {
     "Title": "The Wardrobe: Even Better Edition",
@@ -13901,7 +13901,7 @@
     "LowestPrice": 1.99,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-wardrobe-even-better-edition-switch/hero.jpg",
-    "SCORE": 82
+    "SCORE": null
   },
   {
     "Title": "Uncanny Valley",
@@ -13917,7 +13917,7 @@
     "LowestPrice": 2.49,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/uncanny-valley-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 59
   },
   {
     "Title": "Valfaris & Slain Double Pack",
@@ -13933,7 +13933,7 @@
     "LowestPrice": 13.99,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/v/valfaris-and-slain-double-pack-switch/hero.jpg",
-    "SCORE": 59
+    "SCORE": null
   },
   {
     "Title": "Vampire: The Masquerade - Coteries of New York",
@@ -13949,7 +13949,7 @@
     "LowestPrice": 8.99,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/v/vampire-the-masquerade-coteries-of-new-york-switch/hero.jpg",
-    "SCORE": null
+    "SCORE": 70
   },
   {
     "Title": "Vampire: The Masquerade - Shadows of New York",
@@ -13965,7 +13965,7 @@
     "LowestPrice": 8.44,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/v/vampire-the-masquerade-shadows-of-new-york-switch/hero.jpg",
-    "SCORE": 70
+    "SCORE": 63
   },
   {
     "Title": "Waifu Uncovered",
@@ -13997,7 +13997,7 @@
     "LowestPrice": 2.24,
     "SaleStarted": "2021-05-06",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/wanderlust-travel-stories-switch/hero.jpg",
-    "SCORE": 63
+    "SCORE": 77
   },
   {
     "Title": "Werewolf: The Apocalypse — Heart of the Forest",
@@ -14013,7 +14013,7 @@
     "LowestPrice": 11.99,
     "SaleStarted": "2021-04-30",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/werewolf-the-apocalypse-heart-of-the-forest-switch/hero.jpg",
-    "SCORE": 77
+    "SCORE": 74
   },
   {
     "Title": "Zombie Driver Immortal Edition",
@@ -14029,7 +14029,7 @@
     "LowestPrice": 2.99,
     "SaleStarted": "2021-05-02",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/z/zombie-driver-immortal-edition-switch/hero.jpg",
-    "SCORE": 74
+    "SCORE": 61
   },
   {
     "Title": "Let it roll slide puzzle",
@@ -14045,22 +14045,6 @@
     "LowestPrice": 3.14,
     "SaleStarted": "2021-05-13",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/l/let-it-roll-slide-puzzle-switch/hero.jpg",
-    "SCORE": 61
-  },
-  {
-    "Title": "",
-    "SalePrice": "",
-    "PercentOff": "",
-    "SaleEnds": "",
-    "URL": "",
-    "ReleaseDate": "",
-    "ESRBRating": "",
-    "NumberofPlayers": "",
-    "Publisher": "",
-    "Price": "",
-    "LowestPrice": "",
-    "SaleStarted": "",
-    "Image": "",
     "SCORE": null
   }
 ]
