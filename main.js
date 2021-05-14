@@ -49,7 +49,7 @@ var columnDefs = [
 
 
 {
-        field: "Game",
+        field: "Title",
         filter: true, 
         minWidth: 170,
           lockPosition: true,
