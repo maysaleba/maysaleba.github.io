@@ -30,18 +30,46 @@ var ratingGetter = function(params) {
 
 
 
-var columnDefs = [{
+var columnDefs = [
+ // {
+ //        headerName: "Slug",
+ //        field: "Slug",
+ //        minWidth: 150,
+ //        sortable: true,
+ //        lockPosition: true,
+ //        filter: true,
+ //                  cellRenderer: function(params) {
+ //                    let newimg = params.data.Slug
+ //                    let firstLet = newimg.charAt(0)
+ //            let newimgdata = `<img onerror="this.style.display='none'" src="https://assets.nintendo.com/image/upload/c_fill,f_auto,q_auto,w_360/ncom/en_US/games/switch/${firstLet}/${newimg}/hero"/>`;
+ //             return newimgdata;
+ //        }
+
+ //    },
+
+
+{
         field: "Title",
-        filter: true,
-        lockPosition: true,
+        filter: true, 
         minWidth: 170,
+          lockPosition: true,
+          resizable: false,
         sortable: true,
+
+        //     cellRenderer: function(params) {
+        //     let newimg = `<img height="200px" src=https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/en_US/games/switch/g/grindstone-switch/hero.jpg />`;
+        //     return newimg;
+        // }
         
         cellRenderer: function(params) {
             let keyData = params.value
             let keyLink = params.data.URL
             let newLink = `<a href= https://www.nintendo.com${keyLink} class="link-dark">${keyData}</a>`;
-            return newLink;
+            let newimg = params.data.Slug
+                    let firstLet = newimg.charAt(0)
+            let newimgdata = `<a href= https://www.nintendo.com${keyLink}><img onerror="this.style.display='none'" src="https://assets.nintendo.com/image/upload/c_fill,f_auto,q_auto,w_360/ncom/en_US/games/switch/${firstLet}/${newimg}/hero"/></a>`;
+            let imgTitle = newimgdata +'<br>' + newLink
+            return imgTitle
         }
     },
 
@@ -239,7 +267,7 @@ var columnDefs = [{
 ];
 
 var gridOptions = {
-
+  rowHeight: 100,
     defaultColDef: {
         resizable: true,
         // lockPinned: true,
