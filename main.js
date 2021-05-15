@@ -267,7 +267,7 @@ var columnDefs = [
 ];
 
 var gridOptions = {
-  rowHeight: 100,
+  rowHeight: 95,
     defaultColDef: {
         resizable: true,
         // lockPinned: true,
