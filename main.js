@@ -67,7 +67,7 @@ var columnDefs = [
             let newLink = `<a href= https://www.nintendo.com${keyLink} class="link-dark">${keyData}</a>`;
             let newimg = params.data.Slug
                     let firstLet = newimg.charAt(0)
-            let newimgdata = `<a href= https://www.nintendo.com${keyLink}><img onerror="this.style.display='none'" src="https://assets.nintendo.com/image/upload/c_fill,f_auto,q_auto,w_360/ncom/en_US/games/switch/${firstLet}/${newimg}/hero"/></a>`;
+            let newimgdata = `<a class="imgData" href= https://www.nintendo.com${keyLink}><img onerror="this.style.display='none'" src="https://assets.nintendo.com/image/upload/c_fill,f_auto,q_auto,w_360/ncom/en_US/games/switch/${firstLet}/${newimg}/hero"/></a>`;
             let imgTitle = newimgdata +'<br>' + newLink
             return imgTitle
         }
