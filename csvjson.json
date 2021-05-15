@@ -17,23 +17,6 @@
     "SCORE": null
   },
   {
-    "Title": "#Halloween, Super Puzzles Dream",
-    "SalePrice": 1.99,
-    "PercentOff": "67%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/halloween-super-puzzles-dream-switch/",
-    "ReleaseDate": "2020-10-29",
-    "ESRBRating": "Everyone",
-    "NumberofPlayers": "up to 2 players",
-    "Publisher": "JORGE BIEDMA AZUAR",
-    "Price": 5.99,
-    "LowestPrice": 1.99,
-    "SaleStarted": "2021-04-24",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/halloween-super-puzzles-dream-switch/hero.jpg",
-    "Slug": "halloween-super-puzzles-dream-switch",
-    "SCORE": null
-  },
-  {
     "Title": "#NoLimitFantasy, Super Puzzles Dream",
     "SalePrice": 1.99,
     "PercentOff": "68%",
@@ -82,23 +65,6 @@
     "SaleStarted": "2021-05-02",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/womenup-super-puzzles-dream-switch/hero.jpg",
     "Slug": "womenup-super-puzzles-dream-switch",
-    "SCORE": null
-  },
-  {
-    "Title": "#Xmas, Super Puzzles Dream",
-    "SalePrice": 1.99,
-    "PercentOff": "67%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/xmas-super-puzzles-dream-switch/",
-    "ReleaseDate": "2020-12-31",
-    "ESRBRating": "Everyone",
-    "NumberofPlayers": "up to 2 players",
-    "Publisher": "JORGE BIEDMA AZUAR",
-    "Price": 5.99,
-    "LowestPrice": 1.99,
-    "SaleStarted": "2021-04-24",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/x/xmas-super-puzzles-dream-switch/hero.jpg",
-    "Slug": "xmas-super-puzzles-dream-switch",
     "SCORE": null
   },
   {
@@ -1139,6 +1105,23 @@
     "SCORE": null
   },
   {
+    "Title": "Colorfall",
+    "SalePrice": 1.99,
+    "PercentOff": "60%",
+    "SaleEnds": "2021-05-30",
+    "URL": "/games/detail/colorfall-switch/",
+    "ReleaseDate": "2021-04-16",
+    "ESRBRating": "Everyone",
+    "NumberofPlayers": "1 player",
+    "Publisher": "Prison Games",
+    "Price": 4.99,
+    "LowestPrice": 1.99,
+    "SaleStarted": "2021-05-15",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/colorfall-switch/hero.jpg",
+    "Slug": "colorfall-switch",
+    "SCORE": null
+  },
+  {
     "Title": "Cooking Simulator",
     "SalePrice": 1.99,
     "PercentOff": "90%",
@@ -1289,23 +1272,6 @@
     "SaleStarted": "2021-05-03",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/cybxus-hearts-switch/hero.jpg",
     "Slug": "cybxus-hearts-switch",
-    "SCORE": null
-  },
-  {
-    "Title": "Dandy Dungeon - Legend of Brave Yamada -",
-    "SalePrice": 9.49,
-    "PercentOff": "50%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/dandy-dungeon-legend-of-brave-yamada--switch/",
-    "ReleaseDate": "2019-06-27",
-    "ESRBRating": "Everyone",
-    "NumberofPlayers": "1 player",
-    "Publisher": "Onion Games",
-    "Price": 18.99,
-    "LowestPrice": 9.49,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/dandy-dungeon-legend-of-brave-yamada--switch/hero.jpg",
-    "Slug": "dandy-dungeon-legend-of-brave-yamada--switch",
     "SCORE": null
   },
   {
@@ -2176,23 +2142,6 @@
     "SCORE": null
   },
   {
-    "Title": "Green Game: TimeSwapper",
-    "SalePrice": 2,
-    "PercentOff": "33%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/green-game-timeswapper-switch/",
-    "ReleaseDate": "2017-11-17",
-    "ESRBRating": "Everyone",
-    "NumberofPlayers": "1 player",
-    "Publisher": "iFun4all",
-    "Price": 2.99,
-    "LowestPrice": 2,
-    "SaleStarted": "2021-04-24",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/green-game-timeswapper-switch/hero.jpg",
-    "Slug": "green-game-timeswapper-switch",
-    "SCORE": -1
-  },
-  {
     "Title": "Grood",
     "SalePrice": 1.99,
     "PercentOff": "60%",
@@ -2414,23 +2363,6 @@
     "SCORE": 77
   },
   {
-    "Title": "Jeopardy!®",
-    "SalePrice": 7.99,
-    "PercentOff": "60%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/jeopardy-switch/",
-    "ReleaseDate": "2018-10-30",
-    "ESRBRating": "Everyone",
-    "NumberofPlayers": "up to 3 players",
-    "Publisher": "Ubisoft",
-    "Price": 19.99,
-    "LowestPrice": 7.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/jeopardy-switch/hero.jpg",
-    "Slug": "jeopardy-switch",
-    "SCORE": 68
-  },
-  {
     "Title": "Jet Ski Rush",
     "SalePrice": 1.99,
     "PercentOff": "50%",
@@ -2599,23 +2531,6 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/wrc-8-fia-world-rally-championship-switch/hero.jpg",
     "Slug": "wrc-8-fia-world-rally-championship-switch",
     "SCORE": null
-  },
-  {
-    "Title": "World for Two",
-    "SalePrice": 9.79,
-    "PercentOff": "30%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/world-for-two-switch/",
-    "ReleaseDate": "2020-09-17",
-    "ESRBRating": "Everyone",
-    "NumberofPlayers": "1 player",
-    "Publisher": "room6",
-    "Price": 13.99,
-    "LowestPrice": 9.79,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/world-for-two-switch/hero.jpg",
-    "Slug": "world-for-two-switch",
-    "SCORE": -1
   },
   {
     "Title": "Wordsweeper by POWGI",
@@ -2788,23 +2703,6 @@
     "SCORE": null
   },
   {
-    "Title": "Wheel of Fortune®",
-    "SalePrice": 7.99,
-    "PercentOff": "60%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/wheel-of-fortune-switch/",
-    "ReleaseDate": "2018-10-30",
-    "ESRBRating": "Everyone",
-    "NumberofPlayers": "up to 3 players",
-    "Publisher": "Ubisoft",
-    "Price": 19.99,
-    "LowestPrice": 7.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/w/wheel-of-fortune-switch/hero.jpg",
-    "Slug": "wheel-of-fortune-switch",
-    "SCORE": null
-  },
-  {
     "Title": "Werewolf Pinball",
     "SalePrice": 2,
     "PercentOff": "33%",
@@ -2958,23 +2856,6 @@
     "SCORE": 75
   },
   {
-    "Title": "UNO®",
-    "SalePrice": 3.99,
-    "PercentOff": "60%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/uno-switch/",
-    "ReleaseDate": "2021-01-05",
-    "ESRBRating": "Everyone",
-    "NumberofPlayers": "up to 4 players",
-    "Publisher": "Ubisoft",
-    "Price": 9.99,
-    "LowestPrice": 3.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/u/uno-switch/hero.jpg",
-    "Slug": "uno-switch",
-    "SCORE": 64
-  },
-  {
     "Title": "Under Leaves",
     "SalePrice": 8.44,
     "PercentOff": "35%",
@@ -3094,23 +2975,6 @@
     "SCORE": null
   },
   {
-    "Title": "TRIVIAL PURSUIT® Live!",
-    "SalePrice": 9.99,
-    "PercentOff": "50%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/trivial-pursuit-live-switch/",
-    "ReleaseDate": "2018-10-30",
-    "ESRBRating": "Everyone",
-    "NumberofPlayers": "up to 4 players",
-    "Publisher": "Ubisoft",
-    "Price": 19.99,
-    "LowestPrice": 9.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/trivial-pursuit-live-switch/hero.jpg",
-    "Slug": "trivial-pursuit-live-switch",
-    "SCORE": -1
-  },
-  {
     "Title": "Trancelation",
     "SalePrice": 1.99,
     "PercentOff": "80%",
@@ -3228,23 +3092,6 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/toki-tori-switch/hero.jpg",
     "Slug": "toki-tori-switch",
     "SCORE": null
-  },
-  {
-    "Title": "Tiny Racer",
-    "SalePrice": 2.49,
-    "PercentOff": "75%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/tiny-racer-switch/",
-    "ReleaseDate": "2020-07-31",
-    "ESRBRating": "Everyone",
-    "NumberofPlayers": "up to 2 players",
-    "Publisher": "IceTorch",
-    "Price": 9.99,
-    "LowestPrice": 2.49,
-    "SaleStarted": "2021-04-24",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tiny-racer-switch/hero.jpg",
-    "Slug": "tiny-racer-switch",
-    "SCORE": 35
   },
   {
     "Title": "Tiny Hands Adventure",
@@ -3789,6 +3636,23 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/super-chariot-switch/hero.jpg",
     "Slug": "super-chariot-switch",
     "SCORE": 77
+  },
+  {
+    "Title": "Super Arcade Racing",
+    "SalePrice": 2.99,
+    "PercentOff": "70%",
+    "SaleEnds": "2021-06-05",
+    "URL": "/games/detail/super-arcade-racing-switch/",
+    "ReleaseDate": "2020-10-08",
+    "ESRBRating": "Everyone",
+    "NumberofPlayers": "up to 4 players",
+    "Publisher": "OutOfTheBit",
+    "Price": 9.99,
+    "LowestPrice": 2.99,
+    "SaleStarted": "2021-05-15",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/super-arcade-racing-switch/hero.jpg",
+    "Slug": "super-arcade-racing-switch",
+    "SCORE": null
   },
   {
     "Title": "Sudoky",
@@ -5202,6 +5066,23 @@
     "SCORE": -1
   },
   {
+    "Title": "Olympic Table Tennis",
+    "SalePrice": 2.99,
+    "PercentOff": "40%",
+    "SaleEnds": "2021-06-05",
+    "URL": "/games/detail/olympic-table-tennis-switch/",
+    "ReleaseDate": "2021-01-18",
+    "ESRBRating": "Everyone",
+    "NumberofPlayers": "1 player",
+    "Publisher": "Pix Arts",
+    "Price": 4.99,
+    "LowestPrice": 2.99,
+    "SaleStarted": "2021-05-15",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/olympic-table-tennis-switch/hero.jpg",
+    "Slug": "olympic-table-tennis-switch",
+    "SCORE": null
+  },
+  {
     "Title": "Olympic Basketball",
     "SalePrice": 4.79,
     "PercentOff": "20%",
@@ -5712,6 +5593,23 @@
     "SCORE": null
   },
   {
+    "Title": "Ace Strike",
+    "SalePrice": 2.79,
+    "PercentOff": "30%",
+    "SaleEnds": "2021-06-05",
+    "URL": "/games/detail/ace-strike-switch/",
+    "ReleaseDate": "2021-03-06",
+    "ESRBRating": "Everyone 10+",
+    "NumberofPlayers": "1 player",
+    "Publisher": "Pix Arts",
+    "Price": 3.99,
+    "LowestPrice": 2.79,
+    "SaleStarted": "2021-05-15",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/ace-strike-switch/hero.jpg",
+    "Slug": "ace-strike-switch",
+    "SCORE": null
+  },
+  {
     "Title": "Adventure Time: Pirates of the Enchiridion",
     "SalePrice": 19.99,
     "PercentOff": "50%",
@@ -5795,6 +5693,23 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/alvastia-chronicles-switch/hero.jpg",
     "Slug": "alvastia-chronicles-switch",
     "SCORE": -1
+  },
+  {
+    "Title": "America Wild Hunting",
+    "SalePrice": 2.79,
+    "PercentOff": "30%",
+    "SaleEnds": "2021-06-05",
+    "URL": "/games/detail/america-wild-hunting-switch/",
+    "ReleaseDate": "2021-03-05",
+    "ESRBRating": "Everyone 10+",
+    "NumberofPlayers": "1 player",
+    "Publisher": "Pix Arts",
+    "Price": 3.99,
+    "LowestPrice": 2.79,
+    "SaleStarted": "2021-05-15",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/america-wild-hunting-switch/america-wild-hunting-switch-hero.jpg",
+    "Slug": "america-wild-hunting-switch",
+    "SCORE": null
   },
   {
     "Title": "Among Us",
@@ -6052,21 +5967,21 @@
     "SCORE": 68
   },
   {
-    "Title": "BLACK BIRD",
-    "SalePrice": 9.99,
-    "PercentOff": "50%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/black-bird-switch/",
-    "ReleaseDate": "2018-10-18",
+    "Title": "BFF or Die",
+    "SalePrice": 5.59,
+    "PercentOff": "30%",
+    "SaleEnds": "2021-05-18",
+    "URL": "/games/detail/bff-or-die-switch/",
+    "ReleaseDate": "2020-11-27",
     "ESRBRating": "Everyone 10+",
-    "NumberofPlayers": "1 player",
-    "Publisher": "Onion Games",
-    "Price": 19.99,
-    "LowestPrice": 9.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/black-bird-switch/hero.jpg",
-    "Slug": "black-bird-switch",
-    "SCORE": 74
+    "NumberofPlayers": "up to 4 players",
+    "Publisher": "2Awesome Studio",
+    "Price": 7.99,
+    "LowestPrice": 5.59,
+    "SaleStarted": "2021-05-15",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bff-or-die-switch/hero.jpg",
+    "Slug": "bff-or-die-switch",
+    "SCORE": -1
   },
   {
     "Title": "Blink: Rogues",
@@ -6271,23 +6186,6 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/castle-pals-switch/hero.jpg",
     "Slug": "castle-pals-switch",
     "SCORE": -1
-  },
-  {
-    "Title": "Child of Light® Ultimate Edition",
-    "SalePrice": 4.99,
-    "PercentOff": "75%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/child-of-light-ultimate-edition-switch/",
-    "ReleaseDate": "2018-10-11",
-    "ESRBRating": "Everyone 10+",
-    "NumberofPlayers": "up to 2 players",
-    "Publisher": "Ubisoft",
-    "Price": 19.99,
-    "LowestPrice": 4.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/child-of-light-ultimate-edition-switch/hero.jpg",
-    "Slug": "child-of-light-ultimate-edition-switch",
-    "SCORE": 80
   },
   {
     "Title": "Ciel Fledge: A Daughter Raising Simulator",
@@ -7021,6 +6919,23 @@
     "SCORE": -1
   },
   {
+    "Title": "Galaxy Champions TV",
+    "SalePrice": 1.99,
+    "PercentOff": "72%",
+    "SaleEnds": "2021-05-29",
+    "URL": "/games/detail/galaxy-champions-tv-switch/",
+    "ReleaseDate": "2019-10-03",
+    "ESRBRating": "Everyone 10+",
+    "NumberofPlayers": "up to 2 players",
+    "Publisher": "Silesia Games",
+    "Price": 6.99,
+    "LowestPrice": 1.99,
+    "SaleStarted": "2021-05-15",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/galaxy-champions-tv-switch/hero.jpg",
+    "Slug": "galaxy-champions-tv-switch",
+    "SCORE": 66
+  },
+  {
     "Title": "GROOVE COASTER WAI WAI PARTY!!!!",
     "SalePrice": 44.99,
     "PercentOff": "25%",
@@ -7446,23 +7361,6 @@
     "SCORE": 68
   },
   {
-    "Title": "Just Dance® 2020",
-    "SalePrice": 19.99,
-    "PercentOff": "50%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/just-dance-2020-switch/",
-    "ReleaseDate": "2019-11-05",
-    "ESRBRating": "Everyone 10+",
-    "NumberofPlayers": "up to 64 players",
-    "Publisher": "Ubisoft",
-    "Price": 39.99,
-    "LowestPrice": 19.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/j/just-dance-2020-switch/hero.jpg",
-    "Slug": "just-dance-2020-switch",
-    "SCORE": 74
-  },
-  {
     "Title": "King of Seas",
     "SalePrice": 19.99,
     "PercentOff": "20%",
@@ -7597,23 +7495,6 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/mad-carnage-switch/mad-carnage-switch-hero.jpg",
     "Slug": "mad-carnage-switch",
     "SCORE": 47
-  },
-  {
-    "Title": "Mario + Rabbids® Kingdom Battle",
-    "SalePrice": 14.99,
-    "PercentOff": "75%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/mario-plus-rabbids-kingdom-battle-switch/",
-    "ReleaseDate": "2017-08-29",
-    "ESRBRating": "Everyone 10+",
-    "NumberofPlayers": "up to 2 players",
-    "Publisher": "Ubisoft",
-    "Price": 59.99,
-    "LowestPrice": 14.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/mario-plus-rabbids-kingdom-battle-switch/hero.jpg",
-    "Slug": "mario-plus-rabbids-kingdom-battle-switch",
-    "SCORE": 85
   },
   {
     "Title": "Mask of Mists",
@@ -7905,23 +7786,6 @@
     "SCORE": 57
   },
   {
-    "Title": "Overdriven Reloaded: Special Edition",
-    "SalePrice": 1.99,
-    "PercentOff": "75%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/overdriven-reloaded-special-edition-switch/",
-    "ReleaseDate": "2019-01-10",
-    "ESRBRating": "Everyone 10+",
-    "NumberofPlayers": "up to 4 players",
-    "Publisher": "TOMAGameStudio",
-    "Price": 7.99,
-    "LowestPrice": 1.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/overdriven-reloaded-special-edition-switch/hero.jpg",
-    "Slug": "overdriven-reloaded-special-edition-switch",
-    "SCORE": null
-  },
-  {
     "Title": "Party Trivia",
     "SalePrice": 1.99,
     "PercentOff": "80%",
@@ -7988,23 +7852,6 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/prehistoric-dude-switch/hero.jpg",
     "Slug": "prehistoric-dude-switch",
     "SCORE": -1
-  },
-  {
-    "Title": "PROJECT : KNIGHT",
-    "SalePrice": 3.24,
-    "PercentOff": "35%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/project-knight-switch/",
-    "ReleaseDate": "2021-05-15",
-    "ESRBRating": "Everyone 10+",
-    "NumberofPlayers": "1 player",
-    "Publisher": "Ilya Chkoliar",
-    "Price": 4.99,
-    "LowestPrice": 3.24,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/project-knight-switch/hero.jpg",
-    "Slug": "project-knight-switch",
-    "SCORE": null
   },
   {
     "Title": "Puzzle Bundle - 3 in 1",
@@ -8090,23 +7937,6 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/random-heroes-gold-edition-switch/hero.jpg",
     "Slug": "random-heroes-gold-edition-switch",
     "SCORE": -1
-  },
-  {
-    "Title": "Rayman® Legends Definitive Edition",
-    "SalePrice": 9.99,
-    "PercentOff": "75%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/rayman-legends-definitive-edition-switch/",
-    "ReleaseDate": "2017-09-12",
-    "ESRBRating": "Everyone 10+",
-    "NumberofPlayers": "up to 4 players",
-    "Publisher": "Ubisoft",
-    "Price": 39.99,
-    "LowestPrice": 9.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/rayman-legends-definitive-edition-switch/hero.jpg",
-    "Slug": "rayman-legends-definitive-edition-switch",
-    "SCORE": 85
   },
   {
     "Title": "Real Heroes: Firefighter",
@@ -8277,23 +8107,6 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/ring-of-pain-switch/hero.jpg",
     "Slug": "ring-of-pain-switch",
     "SCORE": 75
-  },
-  {
-    "Title": "RISK® Global Domination",
-    "SalePrice": 9.99,
-    "PercentOff": "50%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/risk-global-domination-switch/",
-    "ReleaseDate": "2018-10-30",
-    "ESRBRating": "Everyone 10+",
-    "NumberofPlayers": "up to 5 players",
-    "Publisher": "Ubisoft",
-    "Price": 19.99,
-    "LowestPrice": 9.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/risk-global-domination-switch/hero.jpg",
-    "Slug": "risk-global-domination-switch",
-    "SCORE": null
   },
   {
     "Title": "RIVE: Ultimate Edition",
@@ -9333,23 +9146,6 @@
     "SCORE": null
   },
   {
-    "Title": "Starlink: Battle for Atlas™ Digital Edition",
-    "SalePrice": 14.99,
-    "PercentOff": "75%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/starlink-battle-for-atlas-digital-edition-switch/",
-    "ReleaseDate": "2018-10-16",
-    "ESRBRating": "Everyone 10+",
-    "NumberofPlayers": "up to 2 players",
-    "Publisher": "Ubisoft",
-    "Price": 59.99,
-    "LowestPrice": 14.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/starlink-battle-for-atlas-digital-edition-switch/hero.jpg",
-    "Slug": "starlink-battle-for-atlas-digital-edition-switch",
-    "SCORE": null
-  },
-  {
     "Title": "Star Story: The Horizon Escape",
     "SalePrice": 1.99,
     "PercentOff": "80%",
@@ -9551,23 +9347,6 @@
     "SaleStarted": "2021-05-09",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/animus-harbinger-switch/hero.jpg",
     "Slug": "animus-harbinger-switch",
-    "SCORE": -1
-  },
-  {
-    "Title": "Artifact Adventure Gaiden DX",
-    "SalePrice": 6.99,
-    "PercentOff": "30%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/artifact-adventure-gaiden-dx-switch/",
-    "ReleaseDate": "2019-06-06",
-    "ESRBRating": "Teen",
-    "NumberofPlayers": "up to 2 players",
-    "Publisher": "room6",
-    "Price": 9.99,
-    "LowestPrice": 6.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/artifact-adventure-gaiden-dx-switch/hero.jpg",
-    "Slug": "artifact-adventure-gaiden-dx-switch",
     "SCORE": -1
   },
   {
@@ -11288,23 +11067,6 @@
     "SCORE": null
   },
   {
-    "Title": "Midnight Evil",
-    "SalePrice": 1.99,
-    "PercentOff": "80%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/midnight-evil-switch/",
-    "ReleaseDate": "2019-10-10",
-    "ESRBRating": "Teen",
-    "NumberofPlayers": "1 player",
-    "Publisher": "iFun4all",
-    "Price": 9.99,
-    "LowestPrice": 1.99,
-    "SaleStarted": "2021-04-24",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/midnight-evil-switch/hero.jpg",
-    "Slug": "midnight-evil-switch",
-    "SCORE": null
-  },
-  {
     "Title": "Mittelborg: City of Mages",
     "SalePrice": 4.49,
     "PercentOff": "50%",
@@ -11320,23 +11082,6 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/mittelborg-city-of-mages-switch/hero.jpg",
     "Slug": "mittelborg-city-of-mages-switch",
     "SCORE": 30
-  },
-  {
-    "Title": "moon",
-    "SalePrice": 17.09,
-    "PercentOff": "10%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/moon-switch/",
-    "ReleaseDate": "2020-08-27",
-    "ESRBRating": "Teen",
-    "NumberofPlayers": "1 player",
-    "Publisher": "Onion Games",
-    "Price": 18.99,
-    "LowestPrice": 17.09,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/moon-switch/hero.jpg",
-    "Slug": "moon-switch",
-    "SCORE": 82
   },
   {
     "Title": "More Dark",
@@ -11660,23 +11405,6 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/ord-switch/hero.jpg",
     "Slug": "ord-switch",
     "SCORE": -1
-  },
-  {
-    "Title": "Paper Wars: Cannon Fodder Devastated",
-    "SalePrice": 1.99,
-    "PercentOff": "80%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/paper-wars-cannon-fodder-devastated-switch/",
-    "ReleaseDate": "2018-03-01",
-    "ESRBRating": "Teen",
-    "NumberofPlayers": "1 player",
-    "Publisher": "iFun4all",
-    "Price": 9.99,
-    "LowestPrice": 1.99,
-    "SaleStarted": "2021-04-24",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/paper-wars-cannon-fodder-devastated-switch/hero.jpg",
-    "Slug": "paper-wars-cannon-fodder-devastated-switch",
-    "SCORE": 53
   },
   {
     "Title": "Paranautical Activity",
@@ -12070,23 +11798,6 @@
     "SCORE": 62
   },
   {
-    "Title": "Valiant Hearts: The Great War",
-    "SalePrice": 4.99,
-    "PercentOff": "75%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/valiant-hearts-the-great-war-switch/",
-    "ReleaseDate": "2018-11-08",
-    "ESRBRating": "Teen",
-    "NumberofPlayers": "1 player",
-    "Publisher": "Ubisoft",
-    "Price": 19.99,
-    "LowestPrice": 4.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/v/valiant-hearts-the-great-war-switch/hero.jpg",
-    "Slug": "valiant-hearts-the-great-war-switch",
-    "SCORE": 80
-  },
-  {
     "Title": "Unto The End",
     "SalePrice": 17.49,
     "PercentOff": "30%",
@@ -12169,40 +11880,6 @@
     "SaleStarted": "2021-05-12",
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/truberbrook-switch/hero.jpg",
     "Slug": "truberbrook-switch",
-    "SCORE": null
-  },
-  {
-    "Title": "Trials Rising Standard Edition",
-    "SalePrice": 5.99,
-    "PercentOff": "70%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/trials-rising-standard-edition-switch/",
-    "ReleaseDate": "2019-02-26",
-    "ESRBRating": "Teen",
-    "NumberofPlayers": "up to 4 players",
-    "Publisher": "Ubisoft",
-    "Price": 19.99,
-    "LowestPrice": 5.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/trials-rising-standard-edition-switch/hero.jpg",
-    "Slug": "trials-rising-standard-edition-switch",
-    "SCORE": null
-  },
-  {
-    "Title": "Trials Rising Gold Edition",
-    "SalePrice": 8.99,
-    "PercentOff": "70%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/trials-rising-gold-edition-switch/",
-    "ReleaseDate": "2019-02-25",
-    "ESRBRating": "Teen",
-    "NumberofPlayers": "up to 4 players",
-    "Publisher": "Ubisoft",
-    "Price": 29.99,
-    "LowestPrice": 8.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/trials-rising-gold-edition-switch/hero.jpg",
-    "Slug": "trials-rising-gold-edition-switch",
     "SCORE": null
   },
   {
@@ -13073,23 +12750,6 @@
     "SCORE": 64
   },
   {
-    "Title": "Save Koch",
-    "SalePrice": 5,
-    "PercentOff": "75%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/save-koch-switch/",
-    "ReleaseDate": "2020-03-06",
-    "ESRBRating": "Teen",
-    "NumberofPlayers": "1 player",
-    "Publisher": "OverGamez",
-    "Price": 20,
-    "LowestPrice": 5,
-    "SaleStarted": "2021-04-26",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/save-koch-switch/hero.jpg",
-    "Slug": "save-koch-switch",
-    "SCORE": 61
-  },
-  {
     "Title": "Sam & Max Save the World",
     "SalePrice": 15.99,
     "PercentOff": "20%",
@@ -13445,23 +13105,6 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/ash-of-gods-redemption-switch/hero.jpg",
     "Slug": "ash-of-gods-redemption-switch",
     "SCORE": 64
-  },
-  {
-    "Title": "Assassin's Creed® III: Remastered",
-    "SalePrice": 15.99,
-    "PercentOff": "60%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/assassins-creed-iii-remastered-switch/",
-    "ReleaseDate": "2019-05-21",
-    "ESRBRating": "Mature",
-    "NumberofPlayers": "1 player",
-    "Publisher": "Ubisoft",
-    "Price": 39.99,
-    "LowestPrice": 15.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/assassins-creed-iii-remastered-switch/hero.jpg",
-    "Slug": "assassins-creed-iii-remastered-switch",
-    "SCORE": 69
   },
   {
     "Title": "Ayakashi Koi Gikyoku -Forbidden Romance with Mysterious Spirit-",
@@ -14567,40 +14210,6 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/sinner-sacrifice-for-redemption-switch/hero.jpg",
     "Slug": "sinner-sacrifice-for-redemption-switch",
     "SCORE": 63
-  },
-  {
-    "Title": "South Park™: The Fractured but Whole™ - Standard Edition",
-    "SalePrice": 14.99,
-    "PercentOff": "75%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/south-park-the-fractured-but-whole-standard-edition-switch/",
-    "ReleaseDate": "2018-04-24",
-    "ESRBRating": "Mature",
-    "NumberofPlayers": "1 player",
-    "Publisher": "Ubisoft",
-    "Price": 59.99,
-    "LowestPrice": 14.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/south-park-the-fractured-but-whole-standard-edition-switch/hero.jpg",
-    "Slug": "south-park-the-fractured-but-whole-standard-edition-switch",
-    "SCORE": null
-  },
-  {
-    "Title": "South Park™: The Stick of Truth™",
-    "SalePrice": 11.99,
-    "PercentOff": "60%",
-    "SaleEnds": "2021-05-15",
-    "URL": "/games/detail/south-park-the-stick-of-truth-switch/",
-    "ReleaseDate": "2018-09-25",
-    "ESRBRating": "Mature",
-    "NumberofPlayers": "1 player",
-    "Publisher": "Ubisoft",
-    "Price": 29.99,
-    "LowestPrice": 11.99,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/south-park-the-stick-of-truth-switch/hero.jpg",
-    "Slug": "south-park-the-stick-of-truth-switch",
-    "SCORE": 85
   },
   {
     "Title": "State of Mind",
