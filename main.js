@@ -82,6 +82,7 @@ var columnDefs = [
         filter: true
     },
          {
+          headerName: "Sale Price (US)",
         field: "SalePrice",
         minWidth: 70,
         sortable: true,
