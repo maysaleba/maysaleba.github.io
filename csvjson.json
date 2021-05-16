@@ -629,6 +629,23 @@
     "SCORE": 72
   },
   {
+    "Title": "Bounce Mania",
+    "SalePrice": 2.79,
+    "PercentOff": "30%",
+    "SaleEnds": "2021-06-06",
+    "URL": "/games/detail/bounce-mania-switch/",
+    "ReleaseDate": "2021-05-14",
+    "ESRBRating": "Everyone",
+    "NumberofPlayers": "1 player",
+    "Publisher": "Pix Arts",
+    "Price": 3.99,
+    "LowestPrice": 2.79,
+    "SaleStarted": "2021-05-16",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/bounce-mania-switch/hero.jpg",
+    "Slug": "bounce-mania-switch",
+    "SCORE": null
+  },
+  {
     "Title": "Bowling",
     "SalePrice": 1.99,
     "PercentOff": "80%",
@@ -2057,6 +2074,23 @@
     "SCORE": 74
   },
   {
+    "Title": "Glyph",
+    "SalePrice": 9.99,
+    "PercentOff": "50%",
+    "SaleEnds": "2021-05-24",
+    "URL": "/games/detail/glyph-switch/",
+    "ReleaseDate": "2021-02-01",
+    "ESRBRating": "Everyone",
+    "NumberofPlayers": "1 player",
+    "Publisher": "Bolverk Games",
+    "Price": 19.99,
+    "LowestPrice": 9.99,
+    "SaleStarted": "2021-05-16",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/glyph-switch/hero.jpg",
+    "Slug": "glyph-switch",
+    "SCORE": 75
+  },
+  {
     "Title": "Golf Peaks",
     "SalePrice": 1.99,
     "PercentOff": "60%",
@@ -2210,23 +2244,6 @@
     "SCORE": -1
   },
   {
-    "Title": "Happy Animals Bowling",
-    "SalePrice": 2.49,
-    "PercentOff": "50%",
-    "SaleEnds": "2021-05-16",
-    "URL": "/games/detail/happy-animals-bowling-switch/",
-    "ReleaseDate": "2019-11-29",
-    "ESRBRating": "Everyone",
-    "NumberofPlayers": "up to 4 players",
-    "Publisher": "Room710Games",
-    "Price": 4.99,
-    "LowestPrice": 2.49,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/happy-animals-bowling-switch/hero.jpg",
-    "Slug": "happy-animals-bowling-switch",
-    "SCORE": null
-  },
-  {
     "Title": "HardCube",
     "SalePrice": 2.1,
     "PercentOff": "70%",
@@ -2276,6 +2293,23 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/home-run-high-switch/hero.jpg",
     "Slug": "home-run-high-switch",
     "SCORE": null
+  },
+  {
+    "Title": "Hyper Sentinel",
+    "SalePrice": 1.99,
+    "PercentOff": "75%",
+    "SaleEnds": "2021-05-24",
+    "URL": "/games/detail/hyper-sentinel-switch/",
+    "ReleaseDate": "2018-05-11",
+    "ESRBRating": "Everyone",
+    "NumberofPlayers": "1 player",
+    "Publisher": "Huey Games",
+    "Price": 7.99,
+    "LowestPrice": 1.99,
+    "SaleStarted": "2021-05-16",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/hyper-sentinel-switch/hero.jpg",
+    "Slug": "hyper-sentinel-switch",
+    "SCORE": 70
   },
   {
     "Title": "Hyperlight Ultimate",
@@ -2958,6 +2992,23 @@
     "SCORE": -1
   },
   {
+    "Title": "Turbo Skiddy Racing",
+    "SalePrice": 3.49,
+    "PercentOff": "30%",
+    "SaleEnds": "2021-06-06",
+    "URL": "/games/detail/turbo-skiddy-racing-switch/",
+    "ReleaseDate": "2021-05-15",
+    "ESRBRating": "Everyone",
+    "NumberofPlayers": "up to 4 players",
+    "Publisher": "Pix Arts",
+    "Price": 4.99,
+    "LowestPrice": 3.49,
+    "SaleStarted": "2021-05-16",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/turbo-skiddy-racing-switch/hero.jpg",
+    "Slug": "turbo-skiddy-racing-switch",
+    "SCORE": null
+  },
+  {
     "Title": "Truck Simulator",
     "SalePrice": 5.99,
     "PercentOff": "50%",
@@ -3434,23 +3485,6 @@
     "SCORE": -1
   },
   {
-    "Title": "Tachyon Project",
-    "SalePrice": 1.99,
-    "PercentOff": "80%",
-    "SaleEnds": "2021-05-16",
-    "URL": "/games/detail/tachyon-project-switch/",
-    "ReleaseDate": "2018-01-25",
-    "ESRBRating": "Everyone",
-    "NumberofPlayers": "up to 4 players",
-    "Publisher": "Eclipse Games",
-    "Price": 9.99,
-    "LowestPrice": 1.99,
-    "SaleStarted": "2021-04-29",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tachyon-project-switch/hero.jpg",
-    "Slug": "tachyon-project-switch",
-    "SCORE": 65
-  },
-  {
     "Title": "Table Soccer Foosball",
     "SalePrice": 2.99,
     "PercentOff": "40%",
@@ -3517,23 +3551,6 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/surfingers-switch/hero.jpg",
     "Slug": "surfingers-switch",
     "SCORE": null
-  },
-  {
-    "Title": "Super Toy Cars",
-    "SalePrice": 1.99,
-    "PercentOff": "80%",
-    "SaleEnds": "2021-05-16",
-    "URL": "/games/detail/super-toy-cars-switch/",
-    "ReleaseDate": "2018-03-02",
-    "ESRBRating": "Everyone",
-    "NumberofPlayers": "up to 4 players",
-    "Publisher": "Eclipse Games",
-    "Price": 9.99,
-    "LowestPrice": 1.99,
-    "SaleStarted": "2021-04-29",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/super-toy-cars-switch/hero.jpg",
-    "Slug": "super-toy-cars-switch",
-    "SCORE": 56
   },
   {
     "Title": "Super Street: Racer",
@@ -3859,23 +3876,6 @@
     "SCORE": 63
   },
   {
-    "Title": "Spheroids",
-    "SalePrice": 1.99,
-    "PercentOff": "75%",
-    "SaleEnds": "2021-05-16",
-    "URL": "/games/detail/spheroids-switch/",
-    "ReleaseDate": "2018-07-20",
-    "ESRBRating": "Everyone",
-    "NumberofPlayers": "1 player",
-    "Publisher": "Eclipse Games",
-    "Price": 7.99,
-    "LowestPrice": 1.99,
-    "SaleStarted": "2021-04-29",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/spheroids-switch/hero.jpg",
-    "Slug": "spheroids-switch",
-    "SCORE": 47
-  },
-  {
     "Title": "SpellKeeper",
     "SalePrice": 1.99,
     "PercentOff": "67%",
@@ -4146,6 +4146,23 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/smart-moves-switch/hero.jpg",
     "Slug": "smart-moves-switch",
     "SCORE": null
+  },
+  {
+    "Title": "Silk",
+    "SalePrice": 1.99,
+    "PercentOff": "85%",
+    "SaleEnds": "2021-05-24",
+    "URL": "/games/detail/silk-switch/",
+    "ReleaseDate": "2019-10-11",
+    "ESRBRating": "Everyone",
+    "NumberofPlayers": "1 player",
+    "Publisher": "Huey Games",
+    "Price": 12.99,
+    "LowestPrice": 1.99,
+    "SaleStarted": "2021-05-16",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/silk-switch/hero.jpg",
+    "Slug": "silk-switch",
+    "SCORE": -1
   },
   {
     "Title": "Shikaku Shapes",
@@ -5627,6 +5644,23 @@
     "SCORE": 61
   },
   {
+    "Title": "ADVERSE",
+    "SalePrice": 3.89,
+    "PercentOff": "35%",
+    "SaleEnds": "2021-06-01",
+    "URL": "/games/detail/adverse-switch/",
+    "ReleaseDate": "2021-01-22",
+    "ESRBRating": "Everyone 10+",
+    "NumberofPlayers": "1 player",
+    "Publisher": "Loneminded",
+    "Price": 5.99,
+    "LowestPrice": 3.89,
+    "SaleStarted": "2021-05-16",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/adverse-switch/hero.jpg",
+    "Slug": "adverse-switch",
+    "SCORE": -1
+  },
+  {
     "Title": "AER Memories of Old",
     "SalePrice": 1.99,
     "PercentOff": "90%",
@@ -6849,6 +6883,23 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/flashback-switch/hero.jpg",
     "Slug": "flashback-switch",
     "SCORE": 76
+  },
+  {
+    "Title": "Fobia",
+    "SalePrice": 1.99,
+    "PercentOff": "80%",
+    "SaleEnds": "2021-06-06",
+    "URL": "/games/detail/fobia-switch/",
+    "ReleaseDate": "2019-08-01",
+    "ESRBRating": "Everyone 10+",
+    "NumberofPlayers": "1 player",
+    "Publisher": "Eugene Lazebny",
+    "Price": 9.99,
+    "LowestPrice": 1.99,
+    "SaleStarted": "2021-05-16",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/f/fobia-switch/hero.jpg",
+    "Slug": "fobia-switch",
+    "SCORE": null
   },
   {
     "Title": "Fred3ric",
@@ -8141,23 +8192,6 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/robox-switch/hero.jpg",
     "Slug": "robox-switch",
     "SCORE": null
-  },
-  {
-    "Title": "Say No! More",
-    "SalePrice": 9.99,
-    "PercentOff": "33%",
-    "SaleEnds": "2021-05-16",
-    "URL": "/games/detail/say-no-more-switch/",
-    "ReleaseDate": "2021-04-09",
-    "ESRBRating": "Everyone 10+",
-    "NumberofPlayers": "1 player",
-    "Publisher": "Thunderful",
-    "Price": 14.99,
-    "LowestPrice": 9.99,
-    "SaleStarted": "2021-05-09",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/say-no-more-switch/hero.jpg",
-    "Slug": "say-no-more-switch",
-    "SCORE": 71
   },
   {
     "Title": "Scribblenauts Mega Pack",
@@ -10081,23 +10115,6 @@
     "SCORE": -1
   },
   {
-    "Title": "Dungeon Warfare",
-    "SalePrice": 2.49,
-    "PercentOff": "75%",
-    "SaleEnds": "2021-05-16",
-    "URL": "/games/detail/dungeon-warfare-switch/",
-    "ReleaseDate": "2019-08-01",
-    "ESRBRating": "Teen",
-    "NumberofPlayers": "1 player",
-    "Publisher": "Singlecore Games",
-    "Price": 9.99,
-    "LowestPrice": 2.49,
-    "SaleStarted": "2021-05-02",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/dungeon-warfare-switch/hero.jpg",
-    "Slug": "dungeon-warfare-switch",
-    "SCORE": null
-  },
-  {
     "Title": "Dusk Diver",
     "SalePrice": 19.24,
     "PercentOff": "45%",
@@ -12019,6 +12036,23 @@
     "SCORE": null
   },
   {
+    "Title": "The Mystery of Woolley Mountain",
+    "SalePrice": 3.99,
+    "PercentOff": "69%",
+    "SaleEnds": "2021-05-24",
+    "URL": "/games/detail/the-mystery-of-woolley-mountain-switch/",
+    "ReleaseDate": "2019-04-10",
+    "ESRBRating": "Teen",
+    "NumberofPlayers": "1 player",
+    "Publisher": "Huey Games",
+    "Price": 12.99,
+    "LowestPrice": 3.99,
+    "SaleStarted": "2021-05-16",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-mystery-of-woolley-mountain-switch/hero.jpg",
+    "Slug": "the-mystery-of-woolley-mountain-switch",
+    "SCORE": 61
+  },
+  {
     "Title": "The Man With The Ivory Cane",
     "SalePrice": 2.99,
     "PercentOff": "70%",
@@ -12238,6 +12272,23 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-aquatic-adventure-of-the-last-human-switch/hero.jpg",
     "Slug": "the-aquatic-adventure-of-the-last-human-switch",
     "SCORE": 78
+  },
+  {
+    "Title": "Terraria",
+    "SalePrice": 14.99,
+    "PercentOff": "50%",
+    "SaleEnds": "2021-05-23",
+    "URL": "/games/detail/terraria-switch/",
+    "ReleaseDate": "2019-06-27",
+    "ESRBRating": "Teen",
+    "NumberofPlayers": "up to 8 players",
+    "Publisher": "505 Games",
+    "Price": 29.99,
+    "LowestPrice": 14.99,
+    "SaleStarted": "2021-05-16",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/terraria-switch/hero.jpg",
+    "Slug": "terraria-switch",
+    "SCORE": 79
   },
   {
     "Title": "Tales of Vesperia™: Definitive Edition",
@@ -13632,23 +13683,6 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/gun-gun-pixies-switch/hero.jpg",
     "Slug": "gun-gun-pixies-switch",
     "SCORE": 47
-  },
-  {
-    "Title": "HALF DEAD",
-    "SalePrice": 2.49,
-    "PercentOff": "50%",
-    "SaleEnds": "2021-05-16",
-    "URL": "/games/detail/half-dead-switch/",
-    "ReleaseDate": "2020-06-12",
-    "ESRBRating": "Mature",
-    "NumberofPlayers": "up to 2 players",
-    "Publisher": "Room710Games",
-    "Price": 4.99,
-    "LowestPrice": 2.49,
-    "SaleStarted": "2021-05-01",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/h/half-dead-switch/hero.jpg",
-    "Slug": "half-dead-switch",
-    "SCORE": null
   },
   {
     "Title": "Hard West",
