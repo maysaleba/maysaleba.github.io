@@ -51,7 +51,7 @@ var columnDefs = [
 {
         field: "Title",
         filter: true, 
-        minWidth: 150,
+        minWidth: 170,
           lockPosition: true,
           resizable: false,
         sortable: true,
