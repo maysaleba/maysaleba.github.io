@@ -51,7 +51,7 @@ var columnDefs = [
 {
         field: "Title",
         filter: true, 
-        minWidth: 170,
+        minWidth: 150,
           lockPosition: true,
           resizable: false,
         sortable: true,
@@ -82,9 +82,9 @@ var columnDefs = [
         filter: true
     },
          {
-          headerName: "Sale Price (US)",
+          headerName: "Sale",
         field: "SalePrice",
-        minWidth: 70,
+        minWidth: 60,
         sortable: true,
         filter: true,
 
@@ -105,7 +105,7 @@ var columnDefs = [
     },
 
      {
-        headerName: "Rating",
+        headerName: "Score",
         field: "SCORE",
         sortable: true,
         sort: 'desc',
