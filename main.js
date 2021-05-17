@@ -1,4 +1,4 @@
-var phpExchange = 47.75;
+var phpExchange = 47.90;
 
 
 var salePriceGetter = function(params) {
@@ -272,7 +272,6 @@ var gridOptions = {
     defaultColDef: {
         resizable: true,
         // lockPinned: true,
-
     },
      onFirstDataRendered: onFirstDataRendered,
       onGridSizeChanged: onGridSizeChanged,
@@ -283,8 +282,6 @@ var gridOptions = {
     onColumnResized: function(params) {
         console.log(params);
     },
-
-
 };
 
 function onFirstDataRendered(params) {
