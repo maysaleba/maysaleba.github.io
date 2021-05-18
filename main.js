@@ -108,7 +108,7 @@ var columnDefs = [
         headerName: "Score",
         field: "SCORE",
         sortable: true,
-        sort: 'desc',
+        // sort: 'desc',
         filter: true,
          minWidth: 70,
         filter: 'agNumberColumnFilter',
@@ -162,7 +162,7 @@ var columnDefs = [
     {
         field: "SaleStarted",
         sortable: true,
-        sort: 'desc',
+        // sort: 'desc',
          minWidth: 100,
         filter: 'agDateColumnFilter',
         valueFormatter: dateFormatter,
