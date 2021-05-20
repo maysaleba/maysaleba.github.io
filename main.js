@@ -1,4 +1,4 @@
-var phpExchange = 47.87;
+var phpExchange = 47.82;
 
 
 var salePriceGetter = function(params) {
