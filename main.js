@@ -1,4 +1,4 @@
-var phpExchange = 47.94;
+var phpExchange = 47.92;
 var mexExchange = 2.40;
 
 
@@ -212,7 +212,7 @@ var columnDefs = [
         field: "Price",
         sortable: true,
         filter: true,
-        minWidth: 70,
+        minWidth: 100,
 
         valueGetter: priceGetter,
         // valueFormatter: currencyFormatter,
