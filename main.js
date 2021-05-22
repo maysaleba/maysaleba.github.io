@@ -65,11 +65,12 @@ var columnDefs = [
 {
         field: "Title",
         filter: true, 
-        minWidth: 170,
+        minWidth: 140,
         pinned: 'left',
           lockPosition: true,
           resizable: false,
         sortable: true,
+
 
         //     cellRenderer: function(params) {
         //     let newimg = `<img height="200px" src=https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/en_US/games/switch/g/grindstone-switch/hero.jpg />`;

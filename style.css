@@ -14,6 +14,11 @@ img {
   /*image-rendering: crisp-edges;*/
 }
 
+.header img {
+    width: 70%;
+  height: 70%;
+}
+
 .cell-fail {
   font-weight: bold;
   color: #149414;
@@ -147,6 +152,12 @@ img {
   height: auto;
 }
 
+.header img {
+  width: 50%;
+  height: auto;
+}
+
+
  .header a {
   float: none;
     display: block;
@@ -154,11 +165,11 @@ img {
   }
 
   div.ag-theme-balham div.ag-header {
-    font-size: 10px !important;
+    font-size: 9px !important;
 }
 
   div.ag-theme-balham div.ag-row {
-    font-size: 10px !important;
+    font-size: 9px !important;
 }
 
   .header button {
