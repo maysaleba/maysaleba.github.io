@@ -68,6 +68,8 @@ var columnDefs = [
         minWidth: 140,
         pinned: 'left',
           lockPosition: true,
+            lockPinned: true,
+    cellClass: 'lock-pinned',
           resizable: false,
         sortable: true,
 

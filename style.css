@@ -21,7 +21,7 @@ img {
 
 .cell-fail {
   font-weight: bold;
-  color: #149414;
+  color: #ff7d00;
 }
 
 
@@ -143,6 +143,10 @@ img {
 
 #header {
     height: 100%;
+}
+
+.lock-pinned {
+  background: #f5f7f7;
 }
 
 
