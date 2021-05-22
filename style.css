@@ -9,10 +9,25 @@
 }
 
 img {
-  width: 80%;
-  height: 80%;
+  width: 85%;
+  height: 85%;
   /*image-rendering: crisp-edges;*/
 }
+
+.cell-fail {
+  font-weight: bold;
+  color: #ff7d00;
+}
+
+
+.flag {
+  width: 15px;
+  height: 15px;
+  /*image-rendering: crisp-edges;*/
+}
+
+
+
 
 
               html, body {
@@ -128,7 +143,7 @@ img {
 
 @media screen and (max-width: 900px) {
 img {
-  width: 50%;
+  width: 70%;
   height: auto;
 }
 
@@ -149,7 +164,15 @@ img {
   .header button {
 /*    font-size: 8px;*/
   }
+
+  .flag {
+  width: 10px;
+  height: 10px;
+  /*image-rendering: crisp-edges;*/
+}
   }
+
+
 
 /*body { 
   margin: 0;

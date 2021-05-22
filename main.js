@@ -1,10 +1,24 @@
 var phpExchange = 47.94;
+var mexExchange = 2.40;
 
 
-var salePriceGetter = function(params) {
+var usPriceGetter = function(params) {
     let newSale = params.data.SalePrice * phpExchange;
     let formatted = Math.round(newSale);
     return formatted
+};
+
+var mexPriceGetter = function(params) {
+    let newSale = params.data.MexPrice * mexExchange;
+if (newSale != 0) {
+ let formatted = Math.round(newSale);
+    return formatted
+
+} else {
+  return 9999
+}
+
+   
 };
 
 var priceGetter = function(params) {
@@ -52,6 +66,7 @@ var columnDefs = [
         field: "Title",
         filter: true, 
         minWidth: 170,
+        pinned: 'left',
           lockPosition: true,
           resizable: false,
         sortable: true,
@@ -76,33 +91,102 @@ var columnDefs = [
         {
         headerName: "% Off",
         field: "PercentOff",
-        minWidth: 60,
+        minWidth: 70,
+        
        
         sortable: true,
         filter: true
     },
          {
-          headerName: "Sale",
+          headerName: "USA",
         field: "SalePrice",
-        minWidth: 60,
+        minWidth: 80,
         sortable: true,
         filter: true,
 
-        cellStyle: {
-            color: '#149414',
-            fontWeight: 'bold',
-        },
+        // cellStyle: {
+        //     color: '#149414',
+        //     fontWeight: 'bold',
+        // },
 
-        valueGetter: salePriceGetter,
-        valueFormatter: currencyFormatter,
+        valueGetter: usPriceGetter,
+       
+         headerComponentParams: {
+            template: 
+                  '<div class="ag-cell-label-container" role="presentation">' +
+                '  <span ref="eMenu" class="ag-header-icon ag-header-cell-menu-button"></span>' +
+                '  <div ref="eLabel" class="ag-header-cell-label" role="presentation">' +
+                '    <span ref="eSortOrder" class="ag-header-icon ag-sort-order"></span>' +
+                '    <span ref="eSortAsc" class="ag-header-icon ag-sort-ascending-icon"></span>' +
+                '    <span ref="eSortDesc" class="ag-header-icon ag-sort-descending-icon"></span>' +
+                '    <span ref="eSortNone" class="ag-header-icon ag-sort-none-icon"></span>' +
+                '    <img class="flag" src="united-states-of-america.svg" alt="United States Minor Outlying Islands Flag">&nbsp;USA' +
+                '    <span ref="eFilter" class="ag-header-icon ag-filter-icon"></span>' +
+                '  </div>' +
+                '</div>'
+          },
         filter: 'agNumberColumnFilter',
 
           cellRenderer: function(params) {
-            let keyData =  "\u20B1" + params.value    
+          
+               let keyData =  "\u20B1" + params.value    
             return keyData
-        }
+            
+           
+        },
+                cellClassRules: {
+      "cell-fail": params => params.api.getValue("SalePrice", params.node) <= params.api.getValue("MexPrice", params.node)
 
+
+  },
     },
+
+        {
+          headerName: "MEX",
+        field: "MexPrice",
+        colId: "MexPrice",
+        minWidth: 80,
+        sortable: true,
+        filter: true,
+
+        // cellStyle: {
+        //     color: '#149414',
+        //     fontWeight: 'bold',
+        // },
+
+        valueGetter: mexPriceGetter,
+         headerComponentParams: {
+            template: 
+                  '<div class="ag-cell-label-container" role="presentation">' +
+                '  <span ref="eMenu" class="ag-header-icon ag-header-cell-menu-button"></span>' +
+                '  <div ref="eLabel" class="ag-header-cell-label" role="presentation">' +
+                '    <span ref="eSortOrder" class="ag-header-icon ag-sort-order"></span>' +
+                '    <span ref="eSortAsc" class="ag-header-icon ag-sort-ascending-icon"></span>' +
+                '    <span ref="eSortDesc" class="ag-header-icon ag-sort-descending-icon"></span>' +
+                '    <span ref="eSortNone" class="ag-header-icon ag-sort-none-icon"></span>' +
+                '    <img class="flag" src="mexico.svg" alt="United States Minor Outlying Islands Flag">&nbsp;MEX' +
+                '    <span ref="eFilter" class="ag-header-icon ag-filter-icon"></span>' +
+                '  </div>' +
+                '</div>'
+          },
+        filter: 'agNumberColumnFilter',
+
+          cellRenderer: function(params) {
+            if (params.value != 9999) {
+              let keyData =  "\u20B1" + params.value    
+            return keyData
+
+            } 
+
+            else { return "N/A"}
+            
+        },
+       cellClassRules: {
+      "cell-fail": params => params.api.getValue("SalePrice", params.node) >= params.api.getValue("MexPrice", params.node)
+
+  },
+    },
+
 
      {
         headerName: "Score",
@@ -162,6 +246,7 @@ var columnDefs = [
         },
 
         filter: 'agNumberColumnFilter',
+        hide: true
     },
 
     {
@@ -268,25 +353,28 @@ var columnDefs = [
         field: "URL",
         sortable: true,
         filter: true,
-        // hide: true
+        hide: true
     }
 ];
 
 var gridOptions = {
-  rowHeight: 95,
+  rowHeight: 110,
     defaultColDef: {
         resizable: true,
         // lockPinned: true,
     },
+
      onFirstDataRendered: onFirstDataRendered,
       onGridSizeChanged: onGridSizeChanged,
     enableCellTextSelection: true,
     ensureDomOrder: true,
     columnDefs: columnDefs,
     rowData: null,
+ 
     onColumnResized: function(params) {
         console.log(params);
     },
+
 };
 
 function onFirstDataRendered(params) {
@@ -316,8 +404,8 @@ function onGridSizeChanged(params) {
   }
 
   // show/hide columns based on current grid width
-  params.columnApi.setColumnsVisible(columnsToShow, true);
-  params.columnApi.setColumnsVisible(columnsToHide, false);
+  // params.columnApi.setColumnsVisible(columnsToShow, true);
+  // params.columnApi.setColumnsVisible(columnsToHide, false);
 
   // fill out any available space to ensure there are no gaps
   params.api.sizeColumnsToFit();
@@ -344,11 +432,6 @@ function autoSizeAll(skipHeader) {
     });
 
     gridOptions.columnApi.autoSizeColumns(allColumnIds, skipHeader);
-}
-
-function currencyFormatter(params) {
-    let peso = params.value;
-    return '₱' + formatNumber(peso);
 }
 
 function dateFormatter(params) {
