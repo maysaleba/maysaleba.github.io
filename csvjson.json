@@ -2358,6 +2358,24 @@
     "SCORE": 69
   },
   {
+    "Title": "Potata: Fairy Flower",
+    "SalePrice": 6,
+    "PercentOff": "50%",
+    "SaleEnds": "2021-06-11",
+    "URL": "/games/detail/potata-fairy-flower-switch/",
+    "ReleaseDate": "2020-06-06",
+    "ESRBRating": "Everyone",
+    "NumberofPlayers": "1 player",
+    "Publisher": "OverGamez",
+    "Price": 12,
+    "LowestPrice": 6,
+    "SaleStarted": "2021-05-22",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/p/potata-fairy-flower-switch/hero.jpg",
+    "Slug": "potata-fairy-flower-switch",
+    "MexPrice": 115,
+    "SCORE": 69
+  },
+  {
     "Title": "Arrog",
     "SalePrice": 2.79,
     "PercentOff": "30%",
@@ -8100,6 +8118,24 @@
     "SCORE": -1
   },
   {
+    "Title": "Sweet Witches",
+    "SalePrice": 1.99,
+    "PercentOff": "80%",
+    "SaleEnds": "2021-06-08",
+    "URL": "/games/detail/sweet-witches-switch/",
+    "ReleaseDate": "2019-07-27",
+    "ESRBRating": "Everyone 10+",
+    "NumberofPlayers": "up to 4 players",
+    "Publisher": "Drageus Games",
+    "Price": 9.99,
+    "LowestPrice": 1.99,
+    "SaleStarted": "2021-05-22",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/sweet-witches-switch/sweet-witches-switch-hero.jpg",
+    "Slug": "sweet-witches-switch",
+    "MexPrice": 38.6,
+    "SCORE": -1
+  },
+  {
     "Title": "Super Destronaut: Land Wars",
     "SalePrice": 2.74,
     "PercentOff": "45%",
@@ -13731,6 +13767,24 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/demon-hunter-revelation-switch/demon-hunter-revelation-switch-hero.jpg",
     "Slug": "demon-hunter-revelation-switch",
     "MexPrice": 40.46,
+    "SCORE": ""
+  },
+  {
+    "Title": "Demon's Rise - Lords of Chaos",
+    "SalePrice": 4.95,
+    "PercentOff": "38%",
+    "SaleEnds": "2021-06-10",
+    "URL": "/games/detail/demons-rise-lords-of-chaos-switch/",
+    "ReleaseDate": "2021-02-25",
+    "ESRBRating": "Teen",
+    "NumberofPlayers": "1 player",
+    "Publisher": "Silesia Games",
+    "Price": 7.99,
+    "LowestPrice": 4.95,
+    "SaleStarted": "2021-05-22",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/demons-rise-lords-of-chaos-switch/hero.jpg",
+    "Slug": "demons-rise-lords-of-chaos-switch",
+    "MexPrice": 109,
     "SCORE": ""
   },
   {
