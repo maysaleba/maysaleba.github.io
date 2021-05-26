@@ -1,4 +1,4 @@
-var phpExchange = 48.10;
+var phpExchange = 48.13;
 var mexExchange = 2.42;
 
 
