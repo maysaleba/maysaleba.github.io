@@ -259,6 +259,7 @@ var columnDefs = [
          minWidth: 100,
         filter: 'agDateColumnFilter',
         valueFormatter: dateFormatter,
+
         filterParams: {
             // provide comparator function
             comparator: (filterLocalDateAtMidnight, cellValue) => {
@@ -440,7 +441,7 @@ function autoSizeAll(skipHeader) {
 function dateFormatter(params) {
     var dateAsString = params.value;
     var dateParts = dateAsString.split('-');
-    return `${dateParts[2]} - ${dateParts[1]} - ${dateParts[0]}`;
+    return `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
 }
 
 function formatNumber(number) {
@@ -449,6 +450,10 @@ function formatNumber(number) {
     return Math.floor(number)
         .toString()
         .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+}
+
+function onFilterTextBoxChanged() {
+    gridOptions.api.setQuickFilter(document.getElementById('filter-text-box').value);
 }
 
 
@@ -466,6 +471,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(function(data) {
             gridOptions.api.setRowData(data);
+
             // autoSizeAll(false);
         });
 });

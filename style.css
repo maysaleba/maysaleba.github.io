@@ -137,6 +137,19 @@ img {
                 overflow: hidden;
             }*/
 
+.example-header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+   margin: 0 auto;
+    width: 50%;
+    padding: 10px;
+}
+
+#filter-text-box {
+   font-size: 13px;
+}
+
+
 #myGrid {
     height: 100%;
 }
@@ -150,10 +163,18 @@ img {
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
 img {
   width: 70%;
   height: auto;
+}
+
+.example-header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+   margin: none;
+    width: 100%;
+    padding: 10px;
 }
 
 .header img {
@@ -174,6 +195,10 @@ img {
 
   div.ag-theme-balham div.ag-row {
     font-size: 9px !important;
+}
+
+#filter-text-box {
+   font-size: 10px;
 }
 
   .header button {
@@ -240,3 +265,15 @@ img {
 
 }
 */
+
+/*.example-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}*/
+
+
+
+/*#filter-text-box {
+  width: 150px;
+}*/
