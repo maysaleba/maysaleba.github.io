@@ -1188,6 +1188,24 @@
     "SCORE": 76
   },
   {
+    "Title": "Muse Dash",
+    "SalePrice": 19.49,
+    "PercentOff": "35%",
+    "SaleEnds": "2021-06-13",
+    "URL": "/games/detail/muse-dash-switch/",
+    "ReleaseDate": "2019-06-20",
+    "ESRBRating": "Teen",
+    "NumberofPlayers": "1 player",
+    "Publisher": "X.D. Network",
+    "Price": 29.99,
+    "LowestPrice": 19.49,
+    "SaleStarted": "2021-05-29",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/m/muse-dash-switch/hero.jpg",
+    "Slug": "muse-dash-switch",
+    "MexPrice": 341.25,
+    "SCORE": 76
+  },
+  {
     "Title": "Neon Abyss",
     "SalePrice": 13.39,
     "PercentOff": "33%",
@@ -2086,6 +2104,24 @@
     "Slug": "sludge-life-switch",
     "MexPrice": 261.2,
     "SCORE": 71
+  },
+  {
+    "Title": "Element",
+    "SalePrice": 7.19,
+    "PercentOff": "40%",
+    "SaleEnds": "2021-06-07",
+    "URL": "/games/detail/element-switch/",
+    "ReleaseDate": "2018-07-27",
+    "ESRBRating": "Everyone",
+    "NumberofPlayers": "1 player",
+    "Publisher": "Flightless",
+    "Price": 11.99,
+    "LowestPrice": 7.19,
+    "SaleStarted": "2021-05-29",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/e/element-switch/hero.jpg",
+    "Slug": "element-switch",
+    "MexPrice": 137.4,
+    "SCORE": 70
   },
   {
     "Title": "XenoRaptor",
@@ -2988,24 +3024,6 @@
     "SCORE": 66
   },
   {
-    "Title": "Galaxy Champions TV",
-    "SalePrice": 1.99,
-    "PercentOff": "72%",
-    "SaleEnds": "2021-05-29",
-    "URL": "/games/detail/galaxy-champions-tv-switch/",
-    "ReleaseDate": "2019-10-03",
-    "ESRBRating": "Everyone 10+",
-    "NumberofPlayers": "up to 2 players",
-    "Publisher": "Silesia Games",
-    "Price": 6.99,
-    "LowestPrice": 1.99,
-    "SaleStarted": "2021-05-15",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/galaxy-champions-tv-switch/hero.jpg",
-    "Slug": "galaxy-champions-tv-switch",
-    "MexPrice": 39,
-    "SCORE": 66
-  },
-  {
     "Title": "Ghost Blade HD",
     "SalePrice": 4.49,
     "PercentOff": "70%",
@@ -3129,6 +3147,24 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/american-fugitive-switch/hero.jpg",
     "Slug": "american-fugitive-switch",
     "MexPrice": 38.7,
+    "SCORE": 66
+  },
+  {
+    "Title": "Crysis Remastered",
+    "SalePrice": 14.99,
+    "PercentOff": "50%",
+    "SaleEnds": "2021-06-19",
+    "URL": "/games/detail/crysis-remastered-switch/",
+    "ReleaseDate": "2020-07-23",
+    "ESRBRating": "Mature",
+    "NumberofPlayers": "1 player",
+    "Publisher": "Crytek",
+    "Price": 29.99,
+    "LowestPrice": 14.99,
+    "SaleStarted": "2021-05-29",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/c/crysis-remastered-switch/hero.jpg",
+    "Slug": "crysis-remastered-switch",
+    "MexPrice": 290.9,
     "SCORE": 66
   },
   {
@@ -6480,6 +6516,24 @@
     "SCORE": -1
   },
   {
+    "Title": "Speedway Racing",
+    "SalePrice": 3.49,
+    "PercentOff": "65%",
+    "SaleEnds": "2021-06-19",
+    "URL": "/games/detail/speedway-racing-switch/",
+    "ReleaseDate": "2020-02-14",
+    "ESRBRating": "Everyone",
+    "NumberofPlayers": "up to 4 players",
+    "Publisher": "SuperPowerUpGames",
+    "Price": 9.99,
+    "LowestPrice": 3.49,
+    "SaleStarted": "2021-05-29",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/s/speedway-racing-switch/hero.jpg",
+    "Slug": "speedway-racing-switch",
+    "MexPrice": 67.83,
+    "SCORE": -1
+  },
+  {
     "Title": "Space Elite Force 2",
     "SalePrice": 1.99,
     "PercentOff": "60%",
@@ -6747,6 +6801,24 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/radio-squid-switch/hero.jpg",
     "Slug": "radio-squid-switch",
     "MexPrice": 53.34,
+    "SCORE": -1
+  },
+  {
+    "Title": "Rabisco+",
+    "SalePrice": 3.99,
+    "PercentOff": "20%",
+    "SaleEnds": "2021-06-04",
+    "URL": "/games/detail/rabisco-plus-switch/",
+    "ReleaseDate": "2021-05-14",
+    "ESRBRating": "Everyone",
+    "NumberofPlayers": "1 player",
+    "Publisher": "Ratalaika Games",
+    "Price": 4.99,
+    "LowestPrice": 3.99,
+    "SaleStarted": "2021-05-14",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/rabisco-plus-switch/hero.jpg",
+    "Slug": "rabisco-plus-switch",
+    "MexPrice": 81.59,
     "SCORE": -1
   },
   {
@@ -10026,6 +10098,24 @@
     "SCORE": ""
   },
   {
+    "Title": "Dragon Pinball",
+    "SalePrice": 2,
+    "PercentOff": "33%",
+    "SaleEnds": "2021-06-19",
+    "URL": "/games/detail/dragon-pinball-switch/",
+    "ReleaseDate": "2019-05-10",
+    "ESRBRating": "Everyone",
+    "NumberofPlayers": "1 player",
+    "Publisher": "SuperPowerUpGames",
+    "Price": 2.99,
+    "LowestPrice": 2,
+    "SaleStarted": "2021-05-29",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/d/dragon-pinball-switch/hero.jpg",
+    "Slug": "dragon-pinball-switch",
+    "MexPrice": 38.92,
+    "SCORE": ""
+  },
+  {
     "Title": "Dragon Snakes",
     "SalePrice": 1.99,
     "PercentOff": "50%",
@@ -10476,24 +10566,6 @@
     "SCORE": ""
   },
   {
-    "Title": "Grand Prix Racing",
-    "SalePrice": 2.99,
-    "PercentOff": "50%",
-    "SaleEnds": "2021-05-29",
-    "URL": "/games/detail/grand-prix-racing-switch/",
-    "ReleaseDate": "2021-01-11",
-    "ESRBRating": "Everyone",
-    "NumberofPlayers": "1 player",
-    "Publisher": "Pix Arts",
-    "Price": 5.99,
-    "LowestPrice": 2.99,
-    "SaleStarted": "2021-05-08",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/grand-prix-racing-switch/hero.jpg",
-    "Slug": "grand-prix-racing-switch",
-    "MexPrice": 64.99,
-    "SCORE": ""
-  },
-  {
     "Title": "Hitori Logic",
     "SalePrice": 2.49,
     "PercentOff": "50%",
@@ -10689,6 +10761,24 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/touchdown-pinball-switch/hero.jpg",
     "Slug": "touchdown-pinball-switch",
     "MexPrice": 38.99,
+    "SCORE": ""
+  },
+  {
+    "Title": "Titans Pinball",
+    "SalePrice": 2,
+    "PercentOff": "33%",
+    "SaleEnds": "2021-06-19",
+    "URL": "/games/detail/titans-pinball-switch/",
+    "ReleaseDate": "2019-07-26",
+    "ESRBRating": "Everyone",
+    "NumberofPlayers": "1 player",
+    "Publisher": "SuperPowerUpGames",
+    "Price": 2.99,
+    "LowestPrice": 2,
+    "SaleStarted": "2021-05-29",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/titans-pinball-switch/hero.jpg",
+    "Slug": "titans-pinball-switch",
+    "MexPrice": 38.86,
     "SCORE": ""
   },
   {
@@ -11466,24 +11556,6 @@
     "SCORE": ""
   },
   {
-    "Title": "Rabisco+",
-    "SalePrice": 3.99,
-    "PercentOff": "20%",
-    "SaleEnds": "2021-06-04",
-    "URL": "/games/detail/rabisco-plus-switch/",
-    "ReleaseDate": "2021-05-14",
-    "ESRBRating": "Everyone",
-    "NumberofPlayers": "1 player",
-    "Publisher": "Ratalaika Games",
-    "Price": 4.99,
-    "LowestPrice": 3.99,
-    "SaleStarted": "2021-05-14",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/rabisco-plus-switch/hero.jpg",
-    "Slug": "rabisco-plus-switch",
-    "MexPrice": 81.59,
-    "SCORE": ""
-  },
-  {
     "Title": "Purrs In Heaven",
     "SalePrice": 2.02,
     "PercentOff": "71%",
@@ -11823,24 +11895,6 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/offroad-racing-buggy-x-atv-x-moto-switch/hero.jpg",
     "Slug": "offroad-racing-buggy-x-atv-x-moto-switch",
     "MexPrice": 34.99,
-    "SCORE": ""
-  },
-  {
-    "Title": "Off And On Again",
-    "SalePrice": 11.2,
-    "PercentOff": "20%",
-    "SaleEnds": "2021-05-29",
-    "URL": "/games/detail/off-and-on-again-switch/",
-    "ReleaseDate": "2021-05-29",
-    "ESRBRating": "Everyone",
-    "NumberofPlayers": "up to 4 players",
-    "Publisher": "subSilico",
-    "Price": 14,
-    "LowestPrice": 11.2,
-    "SaleStarted": "2021-05-08",
-    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/o/off-and-on-again-switch/hero.jpg",
-    "Slug": "off-and-on-again-switch",
-    "MexPrice": 229.6,
     "SCORE": ""
   },
   {
@@ -12708,6 +12762,24 @@
     "SCORE": ""
   },
   {
+    "Title": "Top Speed: Drag & Fast Racing",
+    "SalePrice": 1.99,
+    "PercentOff": "75%",
+    "SaleEnds": "2021-06-19",
+    "URL": "/games/detail/top-speed-drag-and-fast-racing-switch/",
+    "ReleaseDate": "2020-03-18",
+    "ESRBRating": "Everyone 10+",
+    "NumberofPlayers": "1 player",
+    "Publisher": "T-Bull",
+    "Price": 7.99,
+    "LowestPrice": 1.99,
+    "SaleStarted": "2021-05-29",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/top-speed-drag-and-fast-racing-switch/hero.jpg",
+    "Slug": "top-speed-drag-and-fast-racing-switch",
+    "MexPrice": 38.75,
+    "SCORE": ""
+  },
+  {
     "Title": "Tiny Gladiators",
     "SalePrice": 1.99,
     "PercentOff": "87%",
@@ -12795,6 +12867,24 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/the-experiment-escape-room-switch/hero.jpg",
     "Slug": "the-experiment-escape-room-switch",
     "MexPrice": 61.92,
+    "SCORE": ""
+  },
+  {
+    "Title": "Tank Battle Heroes",
+    "SalePrice": 1.99,
+    "PercentOff": "75%",
+    "SaleEnds": "2021-06-19",
+    "URL": "/games/detail/tank-battle-heroes-switch/",
+    "ReleaseDate": "2021-03-23",
+    "ESRBRating": "Everyone 10+",
+    "NumberofPlayers": "up to 4 players",
+    "Publisher": "T-Bull",
+    "Price": 7.99,
+    "LowestPrice": 1.99,
+    "SaleStarted": "2021-05-29",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/tank-battle-heroes-switch/hero.jpg",
+    "Slug": "tank-battle-heroes-switch",
+    "MexPrice": 37.25,
     "SCORE": ""
   },
   {
@@ -14145,6 +14235,24 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/a/always-sometimes-monsters-switch/hero.jpg",
     "Slug": "always-sometimes-monsters-switch",
     "MexPrice": 109.99,
+    "SCORE": ""
+  },
+  {
+    "Title": "Best Sniper Legacy: Dino Hunt & Shooter 3D",
+    "SalePrice": 3.99,
+    "PercentOff": "43%",
+    "SaleEnds": "2021-06-19",
+    "URL": "/games/detail/best-sniper-legacy-dino-hunt-and-shooter-3d-switch/",
+    "ReleaseDate": "2021-05-27",
+    "ESRBRating": "Mature",
+    "NumberofPlayers": "1 player",
+    "Publisher": "T-Bull",
+    "Price": 6.99,
+    "LowestPrice": 3.99,
+    "SaleStarted": "2021-05-29",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/b/best-sniper-legacy-dino-hunt-and-shooter-3d-switch/hero.jpg",
+    "Slug": "best-sniper-legacy-dino-hunt-and-shooter-3d-switch",
+    "MexPrice": 79.8,
     "SCORE": ""
   },
   {
