@@ -3,14 +3,36 @@
   flex-direction: column;
   /*justify-content: center;*/
 /*align-items: center;*/
- /*background-color: #f1f1f1;*/
+ /*background-color: green;*/
   height:100%;
+ 
 
 }
 
-.navbar-custom {
-    background-color: #f1f1f1;
+
+
+
+
+
+.background::before {
+  content: '';
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+   background-image: 
+   linear-gradient(to bottom, rgba(245, 246, 252, 1), rgba(117, 19, 93, 0)),
+   url('hero.jpg') ;
+  /*filter: blur(10px);*/
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+
 
 img {
   width: 85%;
