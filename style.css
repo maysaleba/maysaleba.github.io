@@ -107,12 +107,12 @@ img {
   padding: 10px;
 }*/
 
-.container img {
+.container-fluid img {
   opacity: 1;
   transition: 0.5s;
 }
 
-.container img:hover {opacity: 0.5}
+.container-fluid img:hover {opacity: 0.5}
 
 
 .navbar-nav button {
@@ -131,7 +131,7 @@ img {
   transition: 0.5s;
 }
 
-.container button:hover{
+.container-fluid button:hover{
   opacity:0.5;
 }
 
@@ -168,7 +168,7 @@ img {
     font-size: 13px;
    margin: 0 auto;
     width: 50%;
-    padding: 10px;
+    padding: 0px 10px 10px;
 }
 
 #filter-text-box {
@@ -200,7 +200,7 @@ img {
     font-size: 13px;
    margin: none;
     width: 100%;
-    padding: 10px;
+      padding: 0px 10px 10px;
 }
 
 .navbar-brand img {
