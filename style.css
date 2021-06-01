@@ -235,7 +235,17 @@ height: 100%;
   border:  none;
 }
 
+.logo {
+    display: block;
+    height: auto;
+    width: 52px;
+    
+    /*padding-top: 50px;*/
+    margin-right: -10px;
+    margin-top: 10px;
+    /*margin: 0 auto;*/
 
+}
 
 
 @media screen and (max-width: 900px) {
@@ -253,11 +263,11 @@ height: 100%;
 }
 
 
-/*.navbar-brand img {
+.starlogo {
   width: 50%;
   height: auto;
 }
-*/
+
 
  .header a {
   float: none;
