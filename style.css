@@ -238,7 +238,7 @@ height: 100%;
 
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
 .imageInside {
   width: 80%;
   height: auto;
