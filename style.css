@@ -239,7 +239,7 @@ height: 100%;
     display: block;
     height: auto;
     width: 52px;
-    
+
     /*padding-top: 50px;*/
     margin-right: -10px;
     margin-top: 10px;
@@ -252,6 +252,18 @@ height: 100%;
 .imageInside {
   width: 80%;
   height: auto;
+}
+
+.logo {
+    display: block;
+    height: auto;
+    width: 52px;
+    
+    /*padding-top: 50px;*/
+    margin-right: -10px;
+    margin-top: 10px;
+    /*margin: 0 auto;*/
+
 }
 
 .example-header {
