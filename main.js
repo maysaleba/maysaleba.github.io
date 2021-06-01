@@ -1,5 +1,5 @@
-var phpExchange = 47.76;
-var mexExchange = 2.40;
+var phpExchange = 47.73;
+var mexExchange = 2.39;
 
 
 var usPriceGetter = function(params) {
@@ -89,7 +89,7 @@ var columnDefs = [
             let newimg = params.data.Slug
                     let firstLet = newimg.charAt(0)
             let newimgdata = `<a class="imgData" href= https://www.nintendo.com${keyLink}><img class="imageInside" onerror="this.style.display='none'" src="https://assets.nintendo.com/image/upload/c_fill,f_auto,q_auto,w_360/ncom/en_US/games/switch/${firstLet}/${newimg}/hero"/></a>`;
-            let imgTitle = newimgdata +'<span class="br"></span>' + newLink
+            let imgTitle = newimgdata +'<br>' + newLink
             return imgTitle
         },
     },
@@ -370,7 +370,7 @@ var columnDefs = [
 ];
 
 var gridOptions = {
-  rowHeight: 130,
+  rowHeight: 110,
     defaultColDef: {
         resizable: true,
         // lockPinned: true,

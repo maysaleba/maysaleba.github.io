@@ -210,13 +210,11 @@ height: 100%;
 
 .lock-pinned {
   background: #f5f7f7;
+
  
 }
 
-   .br {
-            display: block;
-            margin-bottom: 1000;
-        }
+
 
 
   div.ag-theme-alpine div.ag-header {
@@ -225,14 +223,16 @@ height: 100%;
 
   div.ag-theme-alpine div.ag-row {
     font-size: 12px !important;
+
 }
 
 .ag-theme-alpine .ag-row-hover {
     background-color: #e9eaf5;
 }
 
-.ag-theme-alpine  {
+.ag-theme-alpine .ag-row  {
   border:  none;
+
 }
 
 .logo {
