@@ -3,20 +3,24 @@
   flex-direction: column;
   /*justify-content: center;*/
 /*align-items: center;*/
- background-color: #f1f1f1;
+ /*background-color: green;*/
   height:100%;
+ 
 
 }
 
-.background
-{
-position: relative;
-width: 100%;
-height: 100px;
-}
 
-.flex-container::before{
-    content: '';
+  .modal-title {
+    font-size: 17px;
+  }
+
+  .modal-body {
+    font-size: 15px;
+  }
+
+
+/*.example-header::before {
+  content: '';
 display: block;
 position: absolute;
 top: 0;
@@ -24,30 +28,42 @@ left: 0;
 width: 100%;
 height: 100%;
    background-image: 
-   linear-gradient(to bottom, rgba(245, 246, 252, 0.8), rgba(0, 0, 0, 0)),
+   linear-gradient(to bottom, rgba(245, 246, 252, 0.9), rgba(0, 0, 0, 0)),
    url('hero.jpg') ;
+  filter: blur(5px);
 
-     filter: blur(15px);
-
-  background-position: center 100%;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+*/
 
-img {
-  width: 85%;
-  height: 85%;
+
+.imageInside {
+  width: 90%;
+  height: 90%;
   /*image-rendering: crisp-edges;*/
 }
 
-.header img {
-    width: 60%;
-  height: 60%;
+/*.navbar-brand img {
+    width: 20%;
+  height: 20%;
+}*/
+
+.cell-normal {
+   text-decoration: underline;
+  cursor:  pointer;
 }
 
 .cell-fail {
   font-weight: bold;
-  color: #149414;
+  color: #f73f00;
+
+}
+
+.thisis {
+  text-decoration: underline;
+  cursor:  pointer;
 }
 
 
@@ -56,6 +72,8 @@ img {
   height: 15px;
   /*image-rendering: crisp-edges;*/
 }
+
+
 
 
 
@@ -78,6 +96,7 @@ img {
             }
 
             body {
+
                 padding: 0;
                 overflow: auto;
             }
@@ -90,11 +109,11 @@ img {
   /*overflow: hidden;*/
   align-items: center;
   justify-content: space-between;
-  /*background-color: #f1f1f1;*/
+  background-color: #f1f1f1;
   padding: 10px 20px; 
 }
 
-.link-right {
+.navbar-nav {
   display: flex;
   align-items: center;
   padding:10px;
@@ -107,15 +126,19 @@ img {
   padding: 10px;
 }*/
 
-.header img {
+/*.container-fluid img {
   opacity: 1;
   transition: 0.5s;
 }
 
-.header img:hover {opacity: 0.5}
+.container-fluid img:hover {opacity: 0.5}*/
+
+.usaprice{
+  hover: pointer;
+}
 
 
-.header button {
+.navbar-nav button {
   /*vertical-align: middle;*/
   /*color: black;*/
   text-align: center;
@@ -131,7 +154,7 @@ img {
   transition: 0.5s;
 }
 
-.header button:hover{
+.container-fluid button:hover{
   opacity:0.5;
 }
 
@@ -144,6 +167,7 @@ img {
 .fb-like:hover {
   opacity:0.5;
 }
+
 
 /*.header-right {
   float: right;
@@ -168,7 +192,7 @@ img {
     font-size: 13px;
    margin: 0 auto;
     width: 50%;
-    padding: 0px 10px 10px;
+    padding: 10px;
 }
 
 #filter-text-box {
@@ -186,12 +210,37 @@ img {
 
 .lock-pinned {
   background: #f5f7f7;
+ 
+}
+
+   .br {
+            display: block;
+            margin-bottom: 1000;
+        }
+
+
+  div.ag-theme-alpine div.ag-header {
+    font-size: 12px !important;
+}
+
+  div.ag-theme-alpine div.ag-row {
+    font-size: 12px !important;
+}
+
+.ag-theme-alpine .ag-row-hover {
+    background-color: #e9eaf5;
+}
+
+.ag-theme-alpine  {
+  border:  none;
 }
 
 
-@media screen and (max-width: 600px) {
-img {
-  width: 70%;
+
+
+@media screen and (max-width: 800px) {
+.imageInside {
+  width: 80%;
   height: auto;
 }
 
@@ -200,14 +249,15 @@ img {
     font-size: 13px;
    margin: none;
     width: 100%;
-    padding: 0px 10px 10px;
+      padding: 10px;
 }
 
-.header img {
+
+/*.navbar-brand img {
   width: 50%;
   height: auto;
 }
-
+*/
 
  .header a {
   float: none;
@@ -215,12 +265,20 @@ img {
     text-align: left;
   }
 
-  div.ag-theme-balham div.ag-header {
-    font-size: 9px !important;
+  .modal-title {
+    font-size: 13px;
+  }
+
+  .modal-body {
+    font-size: 13px;
+  }
+
+  div.ag-theme-alpine div.ag-header {
+    font-size: 10px !important;
 }
 
-  div.ag-theme-balham div.ag-row {
-    font-size: 9px !important;
+  div.ag-theme-alpine div.ag-row {
+    font-size: 10px !important;
 }
 
 #filter-text-box {
@@ -237,6 +295,7 @@ img {
   /*image-rendering: crisp-edges;*/
 }
   }
+
 
 
 
@@ -303,3 +362,8 @@ img {
 /*#filter-text-box {
   width: 150px;
 }*/
+
+.modal-body a {
+  font-weight: bold;
+  color: #f73f00;
+}

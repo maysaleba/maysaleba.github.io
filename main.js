@@ -1,5 +1,5 @@
-var phpExchange = 47.64;
-var mexExchange = 2.39;
+var phpExchange = 47.76;
+var mexExchange = 2.40;
 
 
 var usPriceGetter = function(params) {
@@ -65,13 +65,16 @@ var columnDefs = [
 {
         field: "Title",
         filter: true, 
-        minWidth: 140,
+        minWidth: 150,
         pinned: 'left',
           lockPosition: true,
             lockPinned: true,
     cellClass: 'lock-pinned',
           resizable: false,
         sortable: true,
+        // wrapText: true,
+       
+        // cellStyle: {'white-space': 'normal'},
 
 
         //     cellRenderer: function(params) {
@@ -85,16 +88,18 @@ var columnDefs = [
             let newLink = `<a href= https://www.nintendo.com${keyLink} class="link-dark">${keyData}</a>`;
             let newimg = params.data.Slug
                     let firstLet = newimg.charAt(0)
-            let newimgdata = `<a class="imgData" href= https://www.nintendo.com${keyLink}><img onerror="this.style.display='none'" src="https://assets.nintendo.com/image/upload/c_fill,f_auto,q_auto,w_360/ncom/en_US/games/switch/${firstLet}/${newimg}/hero"/></a>`;
-            let imgTitle = newimgdata +'<br>' + newLink
+            let newimgdata = `<a class="imgData" href= https://www.nintendo.com${keyLink}><img class="imageInside" onerror="this.style.display='none'" src="https://assets.nintendo.com/image/upload/c_fill,f_auto,q_auto,w_360/ncom/en_US/games/switch/${firstLet}/${newimg}/hero"/></a>`;
+            let imgTitle = newimgdata +'<span class="br"></span>' + newLink
             return imgTitle
-        }
+        },
     },
+
+
 
         {
         headerName: "% Off",
         field: "PercentOff",
-        minWidth: 70,
+        minWidth: 80,
         
        
         sortable: true,
@@ -107,12 +112,14 @@ var columnDefs = [
         sortable: true,
         filter: true,
 
+
         // cellStyle: {
         //     color: '#149414',
         //     fontWeight: 'bold',
         // },
 
         valueGetter: usPriceGetter,
+
        
          headerComponentParams: {
             template: 
@@ -123,7 +130,7 @@ var columnDefs = [
                 '    <span ref="eSortAsc" class="ag-header-icon ag-sort-ascending-icon"></span>' +
                 '    <span ref="eSortDesc" class="ag-header-icon ag-sort-descending-icon"></span>' +
                 '    <span ref="eSortNone" class="ag-header-icon ag-sort-none-icon"></span>' +
-                '    <img class="flag" src="united-states-of-america.svg" alt="United States Minor Outlying Islands Flag">&nbsp;USA' +
+                '    <img class="flag" src="united-states-of-america.svg" alt="United States Minor Outlying Islands Flag">&nbsp;US' +
                 '    <span ref="eFilter" class="ag-header-icon ag-filter-icon"></span>' +
                 '  </div>' +
                 '</div>'
@@ -131,13 +138,14 @@ var columnDefs = [
         filter: 'agNumberColumnFilter',
 
           cellRenderer: function(params) {
-          
-               let keyData =  "\u20B1" + params.value    
+                
+               let keyData = `<span class="thisis"><a data-bs-toggle="modal" data-bs-target="#usModal">${ "\u20B1" + params.value}</span></a>`; 
             return keyData
             
            
         },
                 cellClassRules: {
+                    // "cell-normal": params => params.api.getValue("SalePrice", params.node),
       "cell-fail": params => params.api.getValue("SalePrice", params.node) <= params.api.getValue("MexPrice", params.node)
 
 
@@ -167,7 +175,7 @@ var columnDefs = [
                 '    <span ref="eSortAsc" class="ag-header-icon ag-sort-ascending-icon"></span>' +
                 '    <span ref="eSortDesc" class="ag-header-icon ag-sort-descending-icon"></span>' +
                 '    <span ref="eSortNone" class="ag-header-icon ag-sort-none-icon"></span>' +
-                '    <img class="flag" src="mexico.svg" alt="United States Minor Outlying Islands Flag">&nbsp;MEX' +
+                '    <img class="flag" src="mexico.svg" alt="United States Minor Outlying Islands Flag">&nbsp;MX' +
                 '    <span ref="eFilter" class="ag-header-icon ag-filter-icon"></span>' +
                 '  </div>' +
                 '</div>'
@@ -176,7 +184,7 @@ var columnDefs = [
 
           cellRenderer: function(params) {
             if (params.value != 9999) {
-              let keyData =  "\u20B1" + params.value    
+              let keyData =  `<span class="thisis"><a data-bs-toggle="modal" data-bs-target="#mxModal">${"\u20B1" + params.value}</span></a>`;    
             return keyData
 
             } 
@@ -197,7 +205,7 @@ var columnDefs = [
         sortable: true,
         // sort: 'desc',
         filter: true,
-         minWidth: 70,
+         minWidth: 80,
         filter: 'agNumberColumnFilter',
         valueGetter: ratingGetter,
 
@@ -212,7 +220,7 @@ var columnDefs = [
         field: "Price",
         sortable: true,
         filter: true,
-        minWidth: 100,
+        minWidth: 110,
 
         valueGetter: priceGetter,
         // valueFormatter: currencyFormatter,
@@ -256,7 +264,7 @@ var columnDefs = [
         field: "SaleStarted",
         sortable: true,
         // sort: 'desc',
-         minWidth: 100,
+         minWidth: 110,
         filter: 'agDateColumnFilter',
         valueFormatter: dateFormatter,
 
@@ -332,7 +340,7 @@ var columnDefs = [
 
     {
         field: "ReleaseDate",
-         minWidth: 100,
+         minWidth: 115,
          sortable: true,
         filter: true,
         // hide: true
@@ -341,13 +349,13 @@ var columnDefs = [
     {
         headerName: "# of Players",
         field: "NumberofPlayers",
-         minWidth: 100,
+         minWidth: 110,
         sortable: true,
         filter: true
     },
     {
         field: "ESRBRating",
-         minWidth: 100,
+         minWidth: 110,
         sortable: true,
         filter: true
     },
@@ -362,7 +370,7 @@ var columnDefs = [
 ];
 
 var gridOptions = {
-  rowHeight: 110,
+  rowHeight: 130,
     defaultColDef: {
         resizable: true,
         // lockPinned: true,
@@ -374,14 +382,17 @@ var gridOptions = {
     ensureDomOrder: true,
     columnDefs: columnDefs,
     rowData: null,
+
  
     onColumnResized: function(params) {
+
         console.log(params);
     },
 
 };
 
 function onFirstDataRendered(params) {
+
   params.api.sizeColumnsToFit();
 }
 
@@ -472,7 +483,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(function(data) {
             gridOptions.api.setRowData(data);
 
-            // autoSizeAll(false);
+            autoSizeAll(false);
         });
 });
 
