@@ -72,6 +72,7 @@ var columnDefs = [
     cellClass: 'lock-pinned',
           resizable: false,
         sortable: true,
+        // autoHeight: true,
         // wrapText: true,
        
         // cellStyle: {'white-space': 'normal'},
