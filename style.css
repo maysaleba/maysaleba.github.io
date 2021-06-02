@@ -42,6 +42,9 @@ height: 100%;
 .imageInside {
   width: 90%;
   height: 90%;
+  border-radius: 5%;
+  margin-bottom: -5px;
+  margin-top:  10px;
   /*image-rendering: crisp-edges;*/
 }
 
@@ -239,7 +242,7 @@ height: 100%;
     display: block;
     height: auto;
     width: 52px;
-
+    shape-rendering: geometricPrecision;
     /*padding-top: 50px;*/
     margin-right: -5px;
     margin-top: -10px;
@@ -253,6 +256,10 @@ height: 100%;
 .imageInside {
   width: 80%;
   height: auto;
+  border-radius: 5%;
+  margin-bottom: -5px;
+  margin-top:  10px;
+  /*image-rendering: crisp-edges;*/
 }
 
 .logo {
@@ -267,6 +274,7 @@ height: 100%;
     /*margin: 0 auto;*/
 
 }
+
 
 .example-header {
     font-family: Verdana, Geneva, Tahoma, sans-serif;

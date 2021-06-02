@@ -209,10 +209,10 @@ var columnDefs = [
         filter: 'agNumberColumnFilter',
         valueGetter: ratingGetter,
 
-        //    cellRenderer: function(params) {
-        //     let keyData =  params.value    
-        //     return keyData
-        // },
+           cellRenderer: function(params) {
+            let keyData =  params.value    
+            return keyData
+        },
 
     },
     {
