@@ -241,12 +241,13 @@ height: 100%;
 .logo {
     display: block;
     height: auto;
-    width: 52px;
+    width: 38px;
     shape-rendering: geometricPrecision;
     /*padding-top: 50px;*/
-    margin-right: -5px;
-    margin-top: -10px;
-    margin-bottom: -30px;
+    margin-left:  5px;
+    margin-right: 5px;
+    margin-top: -12px;
+    margin-bottom: -10px;
     /*margin: 0 auto;*/
 
 }
@@ -265,12 +266,13 @@ height: 100%;
 .logo {
     display: block;
     height: auto;
-    width: 52px;
-
+    width: 38px;
+    shape-rendering: geometricPrecision;
     /*padding-top: 50px;*/
-    margin-right: -5px;
-    margin-top: -10px;
-    margin-bottom: -30px;
+    margin-left:  5px;
+    margin-right: 5px;
+    margin-top: -12px;
+    margin-bottom: -10px;
     /*margin: 0 auto;*/
 
 }
