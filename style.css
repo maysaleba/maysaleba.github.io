@@ -252,6 +252,11 @@ height: 100%;
 
 }
 
+li {
+  margin: 5px 0;
+}
+
+
 
 @media screen and (max-width: 900px) {
 .imageInside {
@@ -276,6 +281,12 @@ height: 100%;
     /*margin: 0 auto;*/
 
 }
+
+li {
+  margin: 2px 0;
+}
+
+
 
 
 .example-header {
@@ -304,7 +315,7 @@ height: 100%;
   }
 
   .modal-body {
-    font-size: 13px;
+    font-size: 10px;
   }
 
   div.ag-theme-alpine div.ag-header {
