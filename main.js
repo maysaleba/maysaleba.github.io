@@ -88,8 +88,11 @@ var columnDefs = [
             let keyLink = params.data.URL
             let newLink = `<a href= https://www.nintendo.com${keyLink} class="link-dark">${keyData}</a>`;
             let newimg = params.data.Slug
-                    let firstLet = newimg.charAt(0)
-            let newimgdata = `<a class="imgData" href= https://www.nintendo.com${keyLink}><img class="imageInside" onerror="this.style.display='none'" src="https://assets.nintendo.com/image/upload/c_fill,f_auto,q_auto,w_360/ncom/en_US/games/switch/${firstLet}/${newimg}/hero"/></a>`;
+            let firstLet = newimg.charAt(0)
+            let heroImg = params.data.Image
+            let newHero = heroImg.split("/")
+            let pishu = newHero[11]
+            let newimgdata = `<a class="imgData" href= https://www.nintendo.com${keyLink}><img class="imageInside" onerror="this.style.display='none'" src="https://assets.nintendo.com/image/upload/c_fill,f_auto,q_auto,w_360/ncom/en_US/games/switch/${firstLet}/${newimg}/${pishu}"/></a>`;
             let imgTitle = newimgdata +'<br>' + newLink
             return imgTitle
         },
@@ -367,7 +370,15 @@ var columnDefs = [
         sortable: true,
         filter: true,
         hide: true
+    },
+
+    {
+        field: "Image",
+        sortable: true,
+        filter: true,
+        hide: true
     }
+
 ];
 
 var gridOptions = {
