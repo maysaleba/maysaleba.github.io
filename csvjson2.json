@@ -1,38 +1,5 @@
 [
   {
-    PPID: '4001',
-    Name: 'Pato Box',
-    Difficulty: '-1',
-    HoursLow: '-1',
-    HoursHigh: '-1',
-    IsPS4: '1',
-    IsPS5: '0',
-    LastDiscounted: '2021-06-04 15:10:31',
-    DiscountedUntil: '2021-06-19 06:59:00',
-    BasePrice: '1499',
-    SalePrice: '449',
-    PlusPrice: '299',
-    formattedBasePrice: '$14.99',
-    formattedSalePrice: '$4.49',
-    formattedPlusPrice: '$2.99',
-    PlatPricesURL: 'https://platprices.com/en-us/game/4001-pato-box'
-  },
-  {
-    PPID: '7110',
-    Name: 'Moonfall Ultimate',
-    Difficulty: '-1',
-    HoursLow: '-1',
-    HoursHigh: '-1',
-    IsPS4: '1',
-    IsPS5: '0',
-    LastDiscounted: '2021-06-04 15:10:30',
-    DiscountedUntil: '2021-06-19 06:59:00',
-    BasePrice: '1299',
-    SalePrice: '519',
-    PlusPrice: '519',
-    formattedBasePrice: '$12.99',
-    formattedSalePrice: '$5.19',
-    formattedPlusPrice: '$5.19',
-    PlatPricesURL: 'https://platprices.com/en-us/game/7110-moonfall-ultimate'
+    "PPID": "4001"
   }
 ]
