@@ -9,6 +9,10 @@
 
 }
 
+.dropdown-item.active{
+  background-color: #5a33ff;
+}
+
 
   .modal-title {
     font-size: 17px;
@@ -40,8 +44,20 @@ height: 100%;
 
 
 .imageInside {
-  width: 90%;
-  height: 90%;
+  width: 127px;
+  height: 71px;
+  border-radius: 5%;
+  margin-bottom: -5px;
+  margin-top:  10px;
+  /*padding:  5px;*/
+  /*image-rendering: crisp-edges;*/
+}
+
+
+
+.imageInsideps4 {
+  width: 90px;
+  height: 90px;
   border-radius: 5%;
   margin-bottom: -5px;
   margin-top:  10px;
@@ -234,6 +250,7 @@ height: 100%;
 
 .ag-theme-alpine .ag-row  {
   border:  none;
+
 }
 
 .ag-theme-alpine {
@@ -262,8 +279,8 @@ li {
 
 @media screen and (max-width: 900px) {
 .imageInside {
-  width: 90%;
-  height: 90%;
+  width: 110px;
+  height: auto;
   border-radius: 5%;
   margin-bottom: -5px;
   margin-top:  10px;
