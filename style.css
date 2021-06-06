@@ -13,6 +13,10 @@
   background-color: #5a33ff;
 }
 
+.dropdown-menu a:focus {
+    background-color: #686868;
+}
+
 
   .modal-title {
     font-size: 17px;
@@ -71,14 +75,24 @@ height: 100%;
 }*/
 
 .cell-normal {
-   text-decoration: underline;
-  cursor:  pointer;
+   font-weight: bold;
+   color:  #000000;
 }
 
 .cell-fail {
   font-weight: bold;
   color: #f73f00;
 
+}
+
+.ps4price {
+    font-weight: bold;
+  color: #000000;
+}
+
+.psprice {
+    font-weight: bold;
+  color: #f73f00;
 }
 
 .thisis {
@@ -271,10 +285,20 @@ height: 100%;
 
 }
 
+
+.ddicon{
+  height:  15px;
+  width:  auto;
+}
+
 li {
   margin: 5px 0;
 }
 
+.switchlogo {
+  height:  30px;
+  width:  auto;
+}
 
 
 @media screen and (max-width: 900px) {
@@ -360,6 +384,11 @@ li {
   width: 10px;
   height: 10px;
   /*image-rendering: crisp-edges;*/
+}
+
+.ddicon{
+  height:  15px;
+  width:  auto;
 }
 
 

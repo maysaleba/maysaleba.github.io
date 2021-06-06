@@ -1,4 +1,4 @@
-var usExchange = 47.69;
+var usExchange = 36.01;
 
 
 var usPriceGetter = function(params) {
@@ -8,15 +8,11 @@ var usPriceGetter = function(params) {
     return formatted
 };
 
-var mexPriceGetter = function(params) {
-    let newSale = params.data.MexPrice * mexExchange;
-if (newSale != 0) {
- let formatted = Math.round(newSale);
+var psPriceGetter = function(params) {
+    let newSale = params.data.PlusPrice * usExchange;
+  let saleDec = (newSale/100).toFixed(2)
+    let formatted = Math.round(saleDec);
     return formatted
-
-} else {
-  return 9999
-}
 
    
 };
@@ -98,7 +94,7 @@ var columnDefs = [
                 '    <span ref="eSortAsc" class="ag-header-icon ag-sort-ascending-icon"></span>' +
                 '    <span ref="eSortDesc" class="ag-header-icon ag-sort-descending-icon"></span>' +
                 '    <span ref="eSortNone" class="ag-header-icon ag-sort-none-icon"></span>' +
-                '    <img class="flag" src="united-states-of-america.svg" alt="United States Minor Outlying Islands Flag">&nbsp;US' +
+                '    <img class="flag" src="Singapore.svg" alt="United States Minor Outlying Islands Flag">&nbsp;SG' +
                 '    <span ref="eFilter" class="ag-header-icon ag-filter-icon"></span>' +
                 '  </div>' +
                 '</div>'
@@ -114,7 +110,43 @@ var columnDefs = [
         },
         cellClassRules: {
                     // "cell-normal": params => params.api.getValue("SalePrice", params.node),
-      "cell-fail": params => params.api.getValue("SalePrice", params.node) 
+      "ps4price": params => params.api.getValue("SalePrice", params.node) 
+  }
+    },
+
+      {
+        headerName: "Plus Price",
+        field: "PlusPrice",
+        sortable: true,
+        filter: true,
+        minWidth: 80,
+         valueGetter: psPriceGetter,
+          headerComponentParams: {
+            template: 
+                  '<div class="ag-cell-label-container" role="presentation">' +
+                '  <span ref="eMenu" class="ag-header-icon ag-header-cell-menu-button"></span>' +
+                '  <div ref="eLabel" class="ag-header-cell-label" role="presentation">' +
+                '    <span ref="eSortOrder" class="ag-header-icon ag-sort-order"></span>' +
+                '    <span ref="eSortAsc" class="ag-header-icon ag-sort-ascending-icon"></span>' +
+                '    <span ref="eSortDesc" class="ag-header-icon ag-sort-descending-icon"></span>' +
+                '    <span ref="eSortNone" class="ag-header-icon ag-sort-none-icon"></span>' +
+                '    <img class="flag" src="psplus.svg" alt="United States Minor Outlying Islands Flag">&nbsp;PS+' +
+                '    <span ref="eFilter" class="ag-header-icon ag-filter-icon"></span>' +
+                '  </div>' +
+                '</div>'
+          },
+        filter: 'agNumberColumnFilter',
+
+          cellRenderer: function(params) {
+                
+               let keyData = `<span class="thisis"><a data-bs-toggle="modal" data-bs-target="#usModal">${ "\u20B1" + params.value}</span></a>`; 
+            return keyData
+            
+           
+        },
+        cellClassRules: {
+                    // "cell-normal": params => params.api.getValue("SalePrice", params.node),
+      "psprice": params => params.api.getValue("PlusPrice", params.node) 
   }
     },
         {
@@ -162,18 +194,79 @@ var columnDefs = [
         field: "LastDiscounted",
         sortable: true,
         filter: true,
-        hide: false
+           minWidth: 110,
+        filter: 'agDateColumnFilter',
+        valueFormatter: dateFormatter,
+
+        filterParams: {
+            // provide comparator function
+            comparator: (filterLocalDateAtMidnight, cellValue) => {
+                const dateAsString = cellValue;
+                const dateAsString2 = dateAsString.substring(0,10);
+
+                if (dateAsString2 == null) {
+                    return 0;
+                }
+
+                // In the example application, dates are stored as dd/mm/yyyy
+                // We create a Date object for comparison against the filter date
+                const dateParts = dateAsString2.split('-');
+                const day = Number(dateParts[2]);
+                const month = Number(dateParts[1]) - 1;
+                const year = Number(dateParts[0]);
+                const cellDate = new Date(year, month, day);
+
+                // Now that both parameters are Date objects, we can compare
+                if (cellDate < filterLocalDateAtMidnight) {
+                    return -1;
+                } else if (cellDate > filterLocalDateAtMidnight) {
+                    return 1;
+                }
+                return 0;
+            }
+        }
     },
      {
         headerName: "Sale Ends",
         field: "DiscountedUntil",
         sortable: true,
         filter: true,
-        hide: false
+             minWidth: 100,
+        filter: 'agDateColumnFilter',
+        valueFormatter: dateFormatter,
+
+        filterParams: {
+            // provide comparator function
+            comparator: (filterLocalDateAtMidnight, cellValue) => {
+                const dateAsString = cellValue;
+                const dateAsString2 = dateAsString.substring(0,10);
+
+                if (dateAsString2 == null) {
+                    return 0;
+                }
+
+                // In the example application, dates are stored as dd/mm/yyyy
+                // We create a Date object for comparison against the filter date
+                const dateParts = dateAsString2.split('-');
+                const day = Number(dateParts[2]);
+                const month = Number(dateParts[1]) - 1;
+                const year = Number(dateParts[0]);
+                const cellDate = new Date(year, month, day);
+
+                // Now that both parameters are Date objects, we can compare
+                if (cellDate < filterLocalDateAtMidnight) {
+                    return -1;
+                } else if (cellDate > filterLocalDateAtMidnight) {
+                    return 1;
+                }
+                return 0;
+            }
+        }
     },
     {
         headerName: "Publisher",
         field: "Publisher",
+         minWidth: 100,
         sortable: true,
         filter: true,
         hide: false
@@ -181,6 +274,7 @@ var columnDefs = [
        {
         headerName: "Release Date",
         field: "ReleaseDate",
+        minWidth: 115,
         sortable: true,
         filter: true,
         hide: false
@@ -188,6 +282,7 @@ var columnDefs = [
     {
         headerName: "ESRB Rating",
         field: "Rating",
+        minWidth: 110,
         sortable: true,
         filter: true,
         hide: false
@@ -216,6 +311,7 @@ var columnDefs = [
         filter: true,
         hide: true
     },
+   
 
 ];
 
@@ -306,7 +402,8 @@ function percentFormatter(params) {
 
 function dateFormatter(params) {
     var dateAsString = params.value;
-    var dateParts = dateAsString.split('-');
+    var dateSub = dateAsString.substring(0,10)
+    var dateParts = dateSub.split('-');
     return `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
 }
 
@@ -333,7 +430,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     agGrid
         .simpleHttpRequest({
-            url: 'https://raw.githubusercontent.com/maysaleba/maysaleba.github.io/main/csvjsonus.json',
+            url: 'https://raw.githubusercontent.com/maysaleba/maysaleba.github.io/main/csvjsonsg.json',
         })
         .then(data => {
             const newData = Object.values(data);
