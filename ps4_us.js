@@ -117,7 +117,7 @@ var columnDefs = [
       {
         headerName: "Plus Price",
         field: "PlusPrice",
-        minWidth: 90,
+        minWidth: 100,
         sortable: true,
         filter: true,
          valueGetter: psPriceGetter,

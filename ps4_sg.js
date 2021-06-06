@@ -119,7 +119,7 @@ var columnDefs = [
         field: "PlusPrice",
         sortable: true,
         filter: true,
-        minWidth: 90,
+        minWidth: 100,
          valueGetter: psPriceGetter,
           headerComponentParams: {
             template: 
