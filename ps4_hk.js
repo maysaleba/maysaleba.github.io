@@ -94,7 +94,7 @@ var columnDefs = [
                 '    <span ref="eSortAsc" class="ag-header-icon ag-sort-ascending-icon"></span>' +
                 '    <span ref="eSortDesc" class="ag-header-icon ag-sort-descending-icon"></span>' +
                 '    <span ref="eSortNone" class="ag-header-icon ag-sort-none-icon"></span>' +
-                '    <img class="flag" src="hong-kong.svg" alt="United States Minor Outlying Islands Flag">&nbsp;HK' +
+                '    <img class="flag" src="hong-kong.svg" alt="Hong Kong">&nbsp;HK' +
                 '    <span ref="eFilter" class="ag-header-icon ag-filter-icon"></span>' +
                 '  </div>' +
                 '</div>'
