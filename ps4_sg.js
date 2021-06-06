@@ -264,6 +264,14 @@ var columnDefs = [
         }
     },
     {
+        headerName: "Developer",
+        field: "Developer",
+        sortable: true,
+        minWidth: 100,
+        filter: true,
+        hide: false
+    },
+    {
         headerName: "Publisher",
         field: "Publisher",
          minWidth: 100,
