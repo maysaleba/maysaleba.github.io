@@ -39,13 +39,32 @@ var ratingGetter = function(params) {
 
 };
 
+var ps4Getter = function(params) {
+    let ps = params.data.IsPS4
+    if (ps == 1) {
+        return "Yes"
+    }
+
+    return "No"
+
+};
+
+var ps5Getter = function(params) {
+    let ps = params.data.IsPS5
+    if (ps == 1) {
+        return "Yes"
+    }
+
+    return "Playable"
+
+};
 
 
 var columnDefs = [
 
 
     {
-        headerName: "Title",
+        headerName: "PS Title",
         field: "ProductName",
         sortable: true,
         filter: true,
@@ -267,7 +286,7 @@ var columnDefs = [
         headerName: "Developer",
         field: "Developer",
         sortable: true,
-        minWidth: 100,
+        minWidth: 110,
         filter: true,
         hide: false
     },
@@ -294,6 +313,24 @@ var columnDefs = [
         sortable: true,
         filter: true,
         hide: false
+    },
+         {
+        headerName: "PS4",
+        field: "IsPS4",
+        minWidth: 100,
+        sortable: true,
+        filter: true,
+        hide: false,
+        valueGetter: ps4Getter,
+    },
+      {
+        headerName: "PS5",
+        field: "IsPS5",
+        minWidth: 100,
+        sortable: true,
+        filter: true,
+        hide: false,
+        valueGetter: ps5Getter,
     },
 
 

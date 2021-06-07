@@ -63,7 +63,7 @@ var columnDefs = [
 
 
 {
-        field: "Title",
+        field: "NS Title",
         filter: true, 
         minWidth: 150,
         pinned: 'left',
