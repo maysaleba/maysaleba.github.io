@@ -1,4 +1,4 @@
-var usExchange = 47.69;
+var usExchange = 47.68;
 
 
 var usPriceGetter = function(params) {
@@ -66,7 +66,7 @@ var columnDefs = [
 
 
     {
-        headerName: "PS Title",
+        headerName: "Playstation",
         field: "ProductName",
         sortable: true,
         filter: true,

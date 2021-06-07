@@ -1,5 +1,5 @@
-var phpExchange = 47.69;
-var mexExchange = 2.39;
+var phpExchange = 47.68;
+var mexExchange = 2.40;
 
 
 var usPriceGetter = function(params) {
@@ -63,7 +63,8 @@ var columnDefs = [
 
 
 {
-        field: "NS Title",
+         headerName: "Switch",
+        field: "Title",
         filter: true, 
         minWidth: 150,
         pinned: 'left',
