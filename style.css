@@ -5,9 +5,10 @@
 /*align-items: center;*/
  /*background-color: green;*/
   height:100%;
- 
 
 }
+
+ /*@font-face { font-family: Delicious; src: url('LemonMilk.otf'); } */
 
 .dropdown-item.active{
   background-color: #5a33ff;
