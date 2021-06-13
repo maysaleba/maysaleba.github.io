@@ -396,6 +396,24 @@
     "SCORE": 81
   },
   {
+    "Title": "Golf Story",
+    "SalePrice": 7.49,
+    "PercentOff": "50%",
+    "SaleEnds": "2021-06-29",
+    "URL": "/games/detail/golf-story-switch/",
+    "ReleaseDate": "2017-09-28",
+    "ESRBRating": "Everyone",
+    "NumberofPlayers": "up to 2 players",
+    "Publisher": "Sidebar Games",
+    "Price": 14.99,
+    "LowestPrice": 7.49,
+    "SaleStarted": "2021-06-13",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/g/golf-story-switch/hero",
+    "Slug": "golf-story-switch",
+    "MexPrice": 161.77,
+    "SCORE": 81
+  },
+  {
     "Title": "The First Tree",
     "SalePrice": 2.49,
     "PercentOff": "75%",
@@ -7902,6 +7920,24 @@
     "SCORE": -1
   },
   {
+    "Title": "Top Run",
+    "SalePrice": 3.24,
+    "PercentOff": "35%",
+    "SaleEnds": "2021-06-20",
+    "URL": "/games/detail/top-run-switch/",
+    "ReleaseDate": "2020-02-12",
+    "ESRBRating": "Everyone 10+",
+    "NumberofPlayers": "1 player",
+    "Publisher": "Fantastico Studio",
+    "Price": 4.99,
+    "LowestPrice": 3.24,
+    "SaleStarted": "2021-06-13",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/t/top-run-switch/hero",
+    "Slug": "top-run-switch",
+    "MexPrice": 62.92,
+    "SCORE": -1
+  },
+  {
     "Title": ".cat",
     "SalePrice": 1.99,
     "PercentOff": "80%",
@@ -14001,6 +14037,24 @@
     "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/l/luciform-switch/hero",
     "Slug": "luciform-switch",
     "MexPrice": 99.7,
+    "SCORE": ""
+  },
+  {
+    "Title": "Red Ball Escape",
+    "SalePrice": 1.99,
+    "PercentOff": "33%",
+    "SaleEnds": "2021-07-04",
+    "URL": "/games/detail/red-ball-escape-switch/",
+    "ReleaseDate": "2021-06-08",
+    "ESRBRating": "Everyone",
+    "NumberofPlayers": "1 player",
+    "Publisher": "Kistler Benjamin",
+    "Price": 2.99,
+    "LowestPrice": 1.99,
+    "SaleStarted": "2021-06-13",
+    "Image": "https://assets.nintendo.com/image/upload/ncom/en_US/games/switch/r/red-ball-escape-switch/hero",
+    "Slug": "red-ball-escape-switch",
+    "MexPrice": 40.88,
     "SCORE": ""
   }
 ]
