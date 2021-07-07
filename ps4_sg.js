@@ -1,4 +1,4 @@
-var usExchange = 36.63;
+var usExchange = 36.94;
 
 
 var usPriceGetter = function(params) {
