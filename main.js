@@ -1,5 +1,5 @@
-var phpExchange = 50.35;
-var mexExchange = 2.49;
+var phpExchange = 50.10;
+var mexExchange = 2.48;
 
 
 var usPriceGetter = function(params) {
