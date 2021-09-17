@@ -1,4 +1,12 @@
-var usExchange = 49.96;
+var requestURL = 'https://api.exchangerate.host/latest';
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+
+request.onload = function() {
+    var usdrate = 1/request.response.rates.USD;
+    var usExchange = usdrate;
 
 
 var usPriceGetter = function(params) {
@@ -487,5 +495,10 @@ document.addEventListener('DOMContentLoaded', function() {
             autoSizeAll(false);
         });
 });
+
+
+
+
+}
 
 

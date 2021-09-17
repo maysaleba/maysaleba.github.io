@@ -1,15 +1,23 @@
-var usExchange = 6.42;
+var requestURL = 'https://api.exchangerate.host/latest?base=PHP';
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+
+request.onload = function() {
+    var hkdrate = 1/request.response.rates.HKD;
+    var hkExchange = hkdrate;
 
 
 var usPriceGetter = function(params) {
-    let newSale = params.data.SalePrice * usExchange;
+    let newSale = params.data.SalePrice * hkExchange;
     let saleDec = (newSale/100).toFixed(2)
     let formatted = Math.round(saleDec);
     return formatted
 };
 
 var psPriceGetter = function(params) {
-    let newSale = params.data.PlusPrice * usExchange;
+    let newSale = params.data.PlusPrice * hkExchange;
   let saleDec = (newSale/100).toFixed(2)
     let formatted = Math.round(saleDec);
     return formatted
@@ -18,7 +26,7 @@ var psPriceGetter = function(params) {
 };
 
 var priceGetter = function(params) {
-    let newSale = params.data.BasePrice * usExchange;
+    let newSale = params.data.BasePrice * hkExchange;
      let saleDec = (newSale/100).toFixed(2)
     let formatted = Math.round(saleDec);
     return formatted
@@ -486,5 +494,12 @@ document.addEventListener('DOMContentLoaded', function() {
             autoSizeAll(false);
         });
 });
+
+
+
+
+}
+
+
 
 

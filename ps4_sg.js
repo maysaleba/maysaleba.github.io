@@ -1,15 +1,23 @@
-var usExchange = 37.15;
+var requestURL = 'https://api.exchangerate.host/latest?base=PHP';
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+
+request.onload = function() {
+    var sgdrate = 1/request.response.rates.SGD;
+    var sgExchange = sgdrate;
 
 
 var usPriceGetter = function(params) {
-    let newSale = params.data.SalePrice * usExchange;
+    let newSale = params.data.SalePrice * sgExchange;
     let saleDec = (newSale/100).toFixed(2)
     let formatted = Math.round(saleDec);
     return formatted
 };
 
 var psPriceGetter = function(params) {
-    let newSale = params.data.PlusPrice * usExchange;
+    let newSale = params.data.PlusPrice * sgExchange;
   let saleDec = (newSale/100).toFixed(2)
     let formatted = Math.round(saleDec);
     return formatted
@@ -18,7 +26,7 @@ var psPriceGetter = function(params) {
 };
 
 var priceGetter = function(params) {
-    let newSale = params.data.BasePrice * usExchange;
+    let newSale = params.data.BasePrice * sgExchange;
      let saleDec = (newSale/100).toFixed(2)
     let formatted = Math.round(saleDec);
     return formatted
@@ -485,5 +493,10 @@ document.addEventListener('DOMContentLoaded', function() {
             autoSizeAll(false);
         });
 });
+
+
+
+ 
+}
 
 
