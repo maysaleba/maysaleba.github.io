@@ -1,4 +1,4 @@
-var requestURL = 'https://api.exchangerate.host/latest';
+var requestURL = 'https://api.exchangerate.host/latest?base=PHP';
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
