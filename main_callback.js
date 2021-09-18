@@ -1,43 +1,62 @@
-var theURL='https://api.exchangerate.host/latest?base=PHP';
+// var requestURL = 'https://api.exchangerate.host/latest?base=PHP';
+// var request = new XMLHttpRequest();
+// request.open('GET', requestURL);
+// request.responseType = 'json';
+// request.send();
 
+// request.onload = function(){
+//   var usdrate = 1/request.response.rates.USD;
+//   return usdrate
+// }
 
-function httpGet(theUrl)
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theURL, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.response;
+let usdrate = 0;
+
+function fxc(callback) {
+    var requestURL = 'https://api.exchangerate.host/latest?base=PHP';
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.onload = function(){ // When the request is loaded
+       callback(httpRequest.response);// We're calling our method
+    };
+    httpRequest.open('GET', requestURL);
+    httpRequest.send();
 }
 
 
-fxc = httpGet();
-const fxcp = JSON.parse(fxc)
-console.log(fxcp.rates.USD);
 
+fxc(function(result) {
+   const xxhr = JSON.parse(result)
+   usdrate = 1/xxhr.rates.USD
 
-    var sgExchange = 1/fxcp.rates.SGD;
+});
+
+console.log(usdrate);
+
+var phpExchange = 1;
+var mexExchange = 1;
 
 
 var usPriceGetter = function(params) {
-    let newSale = params.data.SalePrice * sgExchange;
-    let saleDec = (newSale/100).toFixed(2)
-    let formatted = Math.round(saleDec);
+    let newSale = params.data.SalePrice * phpExchange;
+    let formatted = Math.round(newSale);
     return formatted
 };
 
-var psPriceGetter = function(params) {
-    let newSale = params.data.PlusPrice * sgExchange;
-  let saleDec = (newSale/100).toFixed(2)
-    let formatted = Math.round(saleDec);
+var mexPriceGetter = function(params) {
+    let newSale = params.data.MexPrice * mexExchange;
+if (newSale != 0) {
+ let formatted = Math.round(newSale);
     return formatted
+
+} else {
+  return 9999
+}
 
    
 };
 
 var priceGetter = function(params) {
-    let newSale = params.data.BasePrice * sgExchange;
-     let saleDec = (newSale/100).toFixed(2)
-    let formatted = Math.round(saleDec);
+    let newSale = params.data.Price * phpExchange;
+    let formatted = Math.round(newSale);
     return formatted
 };
 
@@ -50,78 +69,97 @@ var alltimelowGetter = function(params) {
 var ratingGetter = function(params) {
     let newRating = params.data.SCORE
     if (newRating == -1) {
-        return ""
+        return null
     }
     return newRating
 
 };
 
-var ps4Getter = function(params) {
-    let ps = params.data.IsPS4
-    if (ps == 1) {
-        return "Yes"
-    }
-
-    return "No"
-
-};
-
-var ps5Getter = function(params) {
-    let ps = params.data.IsPS5
-    if (ps == 1) {
-        return "Yes"
-    }
-
-    return "Playable"
-
-};
 
 
 var columnDefs = [
+ // {
+ //        headerName: "Slug",
+ //        field: "Slug",
+ //        minWidth: 150,
+ //        sortable: true,
+ //        lockPosition: true,
+ //        filter: true,
+ //                  cellRenderer: function(params) {
+ //                    let newimg = params.data.Slug
+ //                    let firstLet = newimg.charAt(0)
+ //            let newimgdata = `<img onerror="this.style.display='none'" src="https://assets.nintendo.com/image/upload/c_fill,f_auto,q_auto,w_360/ncom/en_US/games/switch/${firstLet}/${newimg}/hero"/>`;
+ //             return newimgdata;
+ //        }
+
+ //    },
 
 
-    {
-        headerName: "Playstation",
-        field: "ProductName",
-        sortable: true,
-        filter: true,
+{
+         headerName: "Switch",
+        field: "Title",
+        filter: true, 
         minWidth: 150,
-        // wrapText: true,
-       
-
-               pinned: 'left',
+        pinned: 'left',
           lockPosition: true,
             lockPinned: true,
     cellClass: 'lock-pinned',
           resizable: true,
         sortable: true,
-              cellRenderer: function(params) {
+        // autoHeight: true,
+        // wrapText: true,
+       
+        // cellStyle: {'white-space': 'normal'},
+
+
+        //     cellRenderer: function(params) {
+        //     let newimg = `<img height="200px" src=https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/en_US/games/switch/g/grindstone-switch/hero.jpg />`;
+        //     return newimg;
+        // }
+        
+        cellRenderer: function(params) {
             let keyData = params.value
-            let keyLink = params.data.PSStoreURL
-            let keyImg = params.data.Img
-            let newLink = `<a href=${keyLink} class="link-dark">${keyData}</a>`;
-            let newimgdata = `<a class="imgData" href= ${keyLink}><img class="imageInsideps4" onerror="this.style.display='none'" src="${keyImg}?w=60"/></a>`;
+            let keyLink = params.data.URL
+            let newLink = `<a href= https://www.nintendo.com${keyLink} class="link-dark">${keyData}</a>`;
+            let newimg = params.data.Slug
+            let firstLet = newimg.charAt(0)
+            let heroImg = params.data.Image
+            let newHero = heroImg.split("/")
+            let pishu = newHero[11]
+            let newimgdata = `<a class="imgData" href= https://www.nintendo.com${keyLink}><img class="imageInside" onerror="this.style.display='none'" src="https://assets.nintendo.com/image/upload/c_fill,f_auto,q_auto,w_360/ncom/en_US/games/switch/${firstLet}/${newimg}/${pishu}"/></a>`;
             let imgTitle = newimgdata +'<br>' + newLink
             return imgTitle
         },
     },
-    {
+
+
+
+        {
         headerName: "% Off",
-        field: "DiscPerc",
-        sortable: true,
-        filter: true,
-        hide: false,
-        valueFormatter: percentFormatter,
+        field: "PercentOff",
         minWidth: 80,
+        
+       
+        sortable: true,
+        filter: true
     },
-       {
-        headerName: "US",
+         {
+          headerName: "USA",
         field: "SalePrice",
         minWidth: 80,
         sortable: true,
         filter: true,
-         valueGetter: usPriceGetter,
-          headerComponentParams: {
+
+
+        // cellStyle: {
+        //     color: '#149414',
+        //     fontWeight: 'bold',
+        // },
+
+        valueGetter: usPriceGetter,
+
+       
+         headerComponentParams: {
             template: 
                   '<div class="ag-cell-label-container" role="presentation">' +
                 '  <span ref="eMenu" class="ag-header-icon ag-header-cell-menu-button"></span>' +
@@ -130,7 +168,7 @@ var columnDefs = [
                 '    <span ref="eSortAsc" class="ag-header-icon ag-sort-ascending-icon"></span>' +
                 '    <span ref="eSortDesc" class="ag-header-icon ag-sort-descending-icon"></span>' +
                 '    <span ref="eSortNone" class="ag-header-icon ag-sort-none-icon"></span>' +
-                '    <img class="flag" src="singapore.svg" alt="Singapore">&nbsp;SG' +
+                '    <img class="flag" src="united-states-of-america.svg" alt="United States Minor Outlying Islands Flag">&nbsp;US' +
                 '    <span ref="eFilter" class="ag-header-icon ag-filter-icon"></span>' +
                 '  </div>' +
                 '</div>'
@@ -144,20 +182,29 @@ var columnDefs = [
             
            
         },
-        cellClassRules: {
-                    // "cell-normal": params => params.api.getValue("SalePrice", params.node),
-      "ps4price": params => params.api.getValue("SalePrice", params.node) 
-  }
+                cellClassRules: {
+      "cell-normal": params => params.api.getValue("SalePrice", params.node),
+      "cell-fail": params => params.api.getValue("SalePrice", params.node) <= params.api.getValue("MexPrice", params.node)
+
+
+  },
     },
 
-      {
-        headerName: "Plus Price",
-        field: "PlusPrice",
+        {
+          headerName: "MEX",
+        field: "MexPrice",
+        colId: "MexPrice",
+        minWidth: 80,
         sortable: true,
         filter: true,
-        minWidth: 100,
-         valueGetter: psPriceGetter,
-          headerComponentParams: {
+
+        // cellStyle: {
+        //     color: '#149414',
+        //     fontWeight: 'bold',
+        // },
+
+        valueGetter: mexPriceGetter,
+         headerComponentParams: {
             template: 
                   '<div class="ag-cell-label-container" role="presentation">' +
                 '  <span ref="eMenu" class="ag-header-icon ag-header-cell-menu-button"></span>' +
@@ -166,7 +213,7 @@ var columnDefs = [
                 '    <span ref="eSortAsc" class="ag-header-icon ag-sort-ascending-icon"></span>' +
                 '    <span ref="eSortDesc" class="ag-header-icon ag-sort-descending-icon"></span>' +
                 '    <span ref="eSortNone" class="ag-header-icon ag-sort-none-icon"></span>' +
-                '    <img class="flag" src="psplus.svg" alt="United States Minor Outlying Islands Flag">&nbsp;PS+' +
+                '    <img class="flag" src="mexico.svg" alt="United States Minor Outlying Islands Flag">&nbsp;MX' +
                 '    <span ref="eFilter" class="ag-header-icon ag-filter-icon"></span>' +
                 '  </div>' +
                 '</div>'
@@ -174,42 +221,47 @@ var columnDefs = [
         filter: 'agNumberColumnFilter',
 
           cellRenderer: function(params) {
-                
-               let keyData = `<span class="thisis"><a data-bs-toggle="modal" data-bs-target="#usModal">${ "\u20B1" + params.value}</span></a>`; 
+            if (params.value != 9999) {
+              let keyData =  `<span class="thisis"><a data-bs-toggle="modal" data-bs-target="#mxModal">${"\u20B1" + params.value}</span></a>`;    
             return keyData
+
+            } 
+
+            else { return "N/A"}
             
-           
         },
-        cellClassRules: {
-                    // "cell-normal": params => params.api.getValue("SalePrice", params.node),
-      "psprice": params => params.api.getValue("PlusPrice", params.node) 
-  }
+       cellClassRules: {
+        "cell-normal": params => params.api.getValue("MexPrice", params.node),
+      "cell-fail": params => params.api.getValue("SalePrice", params.node) >= params.api.getValue("MexPrice", params.node)
+
+  },
     },
-        {
+
+
+     {
         headerName: "Score",
         field: "SCORE",
         sortable: true,
+        // sort: 'desc',
         filter: true,
-        sort: 'desc',
-        minWidth: 80,
+         minWidth: 80,
         filter: 'agNumberColumnFilter',
         valueGetter: ratingGetter,
 
            cellRenderer: function(params) {
-            let openId = params.data.OpenCriticID
-            let openName = params.data.ProductName
-            let openScore = params.value
-            let keyData = `<a href= https://opencritic.com/game/${openId}/${openId} class="link-dark">${openScore}</a>`;
+            let keyData =  params.value    
             return keyData
         },
+
     },
     {
         headerName: "Retail Price",
-        field: "BasePrice",
+        field: "Price",
         sortable: true,
         filter: true,
         minWidth: 110,
-          valueGetter: priceGetter,
+
+        valueGetter: priceGetter,
         // valueFormatter: currencyFormatter,
         filter: 'agNumberColumnFilter',
         cellStyle: params => {
@@ -225,49 +277,33 @@ var columnDefs = [
         }
 
     },
+
+
+
+   
+
     {
-        headerName: "Sale Started",
-        field: "LastDiscounted",
+        headerName: "All Time Low",
+        field: "LowestPrice",
         sortable: true,
         filter: true,
-           minWidth: 110,
-        filter: 'agDateColumnFilter',
-        valueFormatter: dateFormatter,
+        minWidth: 100,
+        valueGetter: alltimelowGetter,
+        // valueFormatter: currencyFormatter,
+   cellRenderer: function(params) {
+            let keyData =  "\u20B1" + params.value    
+            return keyData
+        },
 
-        filterParams: {
-            // provide comparator function
-            comparator: (filterLocalDateAtMidnight, cellValue) => {
-                const dateAsString = cellValue;
-                const dateAsString2 = dateAsString.substring(0,10);
-
-                if (dateAsString2 == null) {
-                    return 0;
-                }
-
-                // In the example application, dates are stored as dd/mm/yyyy
-                // We create a Date object for comparison against the filter date
-                const dateParts = dateAsString2.split('-');
-                const day = Number(dateParts[2]);
-                const month = Number(dateParts[1]) - 1;
-                const year = Number(dateParts[0]);
-                const cellDate = new Date(year, month, day);
-
-                // Now that both parameters are Date objects, we can compare
-                if (cellDate < filterLocalDateAtMidnight) {
-                    return -1;
-                } else if (cellDate > filterLocalDateAtMidnight) {
-                    return 1;
-                }
-                return 0;
-            }
-        }
+        filter: 'agNumberColumnFilter',
+        hide: true
     },
-     {
-        headerName: "Sale Ends",
-        field: "DiscountedUntil",
+
+    {
+        field: "SaleStarted",
         sortable: true,
-        filter: true,
-             minWidth: 100,
+        // sort: 'desc',
+         minWidth: 110,
         filter: 'agDateColumnFilter',
         valueFormatter: dateFormatter,
 
@@ -275,15 +311,14 @@ var columnDefs = [
             // provide comparator function
             comparator: (filterLocalDateAtMidnight, cellValue) => {
                 const dateAsString = cellValue;
-                const dateAsString2 = dateAsString.substring(0,10);
 
-                if (dateAsString2 == null) {
+                if (dateAsString == null) {
                     return 0;
                 }
 
                 // In the example application, dates are stored as dd/mm/yyyy
                 // We create a Date object for comparison against the filter date
-                const dateParts = dateAsString2.split('-');
+                const dateParts = dateAsString.split('-');
                 const day = Number(dateParts[2]);
                 const month = Number(dateParts[1]) - 1;
                 const year = Number(dateParts[0]);
@@ -300,85 +335,89 @@ var columnDefs = [
         }
     },
     {
-        headerName: "Developer",
-        field: "Developer",
+        field: "SaleEnds",
         sortable: true,
-        minWidth: 110,
         filter: true,
-        hide: false
-    },
-    {
-        headerName: "Publisher",
-        field: "Publisher",
          minWidth: 100,
-        sortable: true,
-        filter: true,
-        hide: false
-    },
-       {
-        headerName: "Release Date",
-        field: "ReleaseDate",
-        minWidth: 115,
-        sortable: true,
-        filter: true,
-        hide: false
-    },
-    {
-        headerName: "ESRB Rating",
-        field: "Rating",
-        minWidth: 110,
-        sortable: true,
-        filter: true,
-        hide: false
-    },
-         {
-        headerName: "PS4",
-        field: "IsPS4",
-        minWidth: 100,
-        sortable: true,
-        filter: true,
-        hide: false,
-        valueGetter: ps4Getter,
-    },
-      {
-        headerName: "PS5",
-        field: "IsPS5",
-        minWidth: 100,
-        sortable: true,
-        filter: true,
-        hide: false,
-        valueGetter: ps5Getter,
-    },
+        filter: 'agDateColumnFilter',
+        valueFormatter: dateFormatter,
+        filterParams: {
+            // provide comparator function
+            comparator: (filterLocalDateAtMidnight, cellValue) => {
+                const dateAsString = cellValue;
 
+                if (dateAsString == null) {
+                    return 0;
+                }
 
+                // In the example application, dates are stored as dd/mm/yyyy
+                // We create a Date object for comparison against the filter date
+                const dateParts = dateAsString.split('-');
+                const day = Number(dateParts[2]);
+                const month = Number(dateParts[1]) - 1;
+                const year = Number(dateParts[0]);
+                const cellDate = new Date(year, month, day);
 
-    {
-        headerName: "PSStoreURL",
-        field: "PSStoreURL",
-        sortable: true,
-        filter: true,
-        hide: true
-    },
-       {
-        headerName: "Img",
-        field: "Img",
-        sortable: true,
-        filter: true,
-        hide: true
-    },
-     {
-        headerName: "OpenCriticID",
-        field: "OpenCriticID",
-        sortable: true,
-        filter: true,
-        hide: true
+                // Now that both parameters are Date objects, we can compare
+                if (cellDate < filterLocalDateAtMidnight) {
+                    return -1;
+                } else if (cellDate > filterLocalDateAtMidnight) {
+                    return 1;
+                }
+                return 0;
+            }
+        }
     },
    
+    {
+        field: "Publisher",
+         minWidth: 100,
+         sortable: true,
+        filter: true
+
+    },
+
+    {
+        field: "ReleaseDate",
+         minWidth: 115,
+         sortable: true,
+        filter: true,
+        // hide: true
+    },
+
+    {
+        headerName: "# of Players",
+        field: "NumberofPlayers",
+         minWidth: 110,
+        sortable: true,
+        filter: true
+    },
+    {
+        field: "ESRBRating",
+         minWidth: 110,
+        sortable: true,
+        filter: true
+    },
+
+
+    {
+        field: "URL",
+        sortable: true,
+        filter: true,
+        hide: true
+    },
+
+    {
+        field: "Image",
+        sortable: true,
+        filter: true,
+        hide: true
+    }
 
 ];
 
 var gridOptions = {
-  rowHeight: 140,
+  rowHeight: 110,
     defaultColDef: {
         resizable: true,
         // lockPinned: true,
@@ -457,15 +496,9 @@ function autoSizeAll(skipHeader) {
     gridOptions.columnApi.autoSizeColumns(allColumnIds, skipHeader);
 }
 
-function percentFormatter(params) {
-    var percentAsString = params.value;
-    return percentAsString + '%';
-}
-
 function dateFormatter(params) {
     var dateAsString = params.value;
-    var dateSub = dateAsString.substring(0,10)
-    var dateParts = dateSub.split('-');
+    var dateParts = dateAsString.split('-');
     return `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
 }
 
@@ -492,11 +525,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     agGrid
         .simpleHttpRequest({
-            url: 'https://raw.githubusercontent.com/maysaleba/maysaleba.github.io/main/csvjsonsg.json',
+            url: 'https://raw.githubusercontent.com/maysaleba/maysaleba.github.io/main/csvjson.json',
         })
-        .then(data => {
-            const newData = Object.values(data);
-            // const myJSON = JSON.stringify(newData, null, 2);
+        .then(function(data) {
             gridOptions.api.setRowData(data);
 
             autoSizeAll(false);
@@ -504,6 +535,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
- 
 

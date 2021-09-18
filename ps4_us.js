@@ -1,12 +1,20 @@
-var requestURL = 'https://api.exchangerate.host/latest?base=PHP';
-var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
+var theURL='https://api.exchangerate.host/latest?base=PHP';
 
-request.onload = function() {
-    var usdrate = 1/request.response.rates.USD;
-    var usExchange = usdrate;
+
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theURL, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.response;
+}
+
+
+fxc = httpGet();
+const fxcp = JSON.parse(fxc)
+console.log(fxcp.rates.USD);
+
+    var usExchange = 1/fxcp.rates.USD;
 
 
 var usPriceGetter = function(params) {
@@ -497,8 +505,5 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-
-}
 
 
