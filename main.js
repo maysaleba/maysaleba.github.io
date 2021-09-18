@@ -8,19 +8,14 @@ request.onload = function(){
   var usdrate = 1/request.response.rates.USD;
   var mxnrate = 1/request.response.rates.MXN;
 
-console.log("This is the usdrate"+usdrate)
-  var phpExchange = usdrate;
-var mexExchange = mxnrate;
-
-
 var usPriceGetter = function(params) {
-    let newSale = params.data.SalePrice * phpExchange;
+    let newSale = params.data.SalePrice * usdrate;
     let formatted = Math.round(newSale);
     return formatted
 };
 
 var mexPriceGetter = function(params) {
-    let newSale = params.data.MexPrice * mexExchange;
+    let newSale = params.data.MexPrice * mxnrate;
 if (newSale != 0) {
  let formatted = Math.round(newSale);
     return formatted
@@ -33,13 +28,13 @@ if (newSale != 0) {
 };
 
 var priceGetter = function(params) {
-    let newSale = params.data.Price * phpExchange;
+    let newSale = params.data.Price * usdrate;
     let formatted = Math.round(newSale);
     return formatted
 };
 
 var alltimelowGetter = function(params) {
-    let newSale = params.data.LowestPrice * phpExchange;
+    let newSale = params.data.LowestPrice * usdrate;
     let formatted = Math.round(newSale);
     return formatted
 };
