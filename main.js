@@ -11,10 +11,8 @@ function fxc(callback) {
 
 fxc(function(result) {
    const xxhr = JSON.parse(result)
-   var usdrate = 1/xxhr.rates.USD
-   var mxnrate = 1/xxhr.rates.MXN
-    var phpExchange = usdrate;
-    var mexExchange = mxnrate;
+    var phpExchange = 1/xxhr.rates.USD;
+    var mexExchange = 1/xxhr.rates.MXN;
 
     var usPriceGetter = function(params) {
     let newSale = params.data.SalePrice * phpExchange;
@@ -506,6 +504,7 @@ document.addEventListener('DOMContentLoaded', function() {
     agGrid
         .simpleHttpRequest({
             url: 'https://raw.githubusercontent.com/maysaleba/maysaleba.github.io/main/csvjson.json',
+
         })
         .then(function(data) {
             gridOptions.api.setRowData(data);
