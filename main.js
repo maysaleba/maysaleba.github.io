@@ -1,20 +1,41 @@
-var requestURL = 'https://api.exchangerate.host/latest?base=PHP';
-var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
+// var requestURL = 'https://api.exchangerate.host/latest?base=PHP';
+// var request = new XMLHttpRequest();
+// request.open('GET', requestURL);
+// request.responseType = 'json';
+// request.send();
 
-request.onload = function(){
-  var usdrate = 1/request.response.rates.USD;
-  var mxnrate = 1/request.response.rates.MXN;
+// request.onload = function(){
+//   var usdrate = 1/request.response.rates.USD;
+//   return usdrate
+// }
+
+function fxc(callback) {
+    var requestURL = 'https://api.exchangerate.host/latest?base=PHP';
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.onload = function(){ // When the request is loaded
+       callback(httpRequest.response);// We're calling our method
+    };
+    httpRequest.open('GET', requestURL);
+    httpRequest.send();
+}
+
+
+
+fxc(function(result) {
+   const xxhr = JSON.parse(result)
+   
+   
+
 
 var usPriceGetter = function(params) {
+    var usdrate = 1/xxhr.rates.USD
     let newSale = params.data.SalePrice * usdrate;
     let formatted = Math.round(newSale);
     return formatted
 };
 
 var mexPriceGetter = function(params) {
+    var mxnrate = 1/xxhr.rates.MXN
     let newSale = params.data.MexPrice * mxnrate;
 if (newSale != 0) {
  let formatted = Math.round(newSale);
@@ -28,13 +49,15 @@ if (newSale != 0) {
 };
 
 var priceGetter = function(params) {
+      var usdrate = 1/xxhr.rates.USD
     let newSale = params.data.Price * usdrate;
     let formatted = Math.round(newSale);
     return formatted
 };
 
 var alltimelowGetter = function(params) {
-    let newSale = params.data.LowestPrice * usdrate;
+    var mxnrate = 1/xxhr.rates.MXN
+    let newSale = params.data.LowestPrice * mxnrate;
     let formatted = Math.round(newSale);
     return formatted
 };
@@ -510,7 +533,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+   
 
-
-}
+});
 
