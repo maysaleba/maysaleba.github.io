@@ -1,36 +1,15 @@
-// var requestURL = 'https://api.exchangerate.host/latest?base=PHP';
-// var request = new XMLHttpRequest();
-// request.open('GET', requestURL);
-// request.responseType = 'json';
-// request.send();
+var requestURL = 'https://api.exchangerate.host/latest?base=PHP';
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.timeout = 100000;
+request.responseType = 'json';
+request.send();
 
-// request.onload = function(){
-//   var usdrate = 1/request.response.rates.USD;
-//   return usdrate
-// }
+request.onload = function(){
+  var usdrate = 1/request.response.rates.USD;
+  var mxnrate = 1/request.response.rates.MXN;
 
-
-
-function fxc(callback) {
-    var requestURL = 'https://api.exchangerate.host/latest?base=PHP';
-    var httpRequest = new XMLHttpRequest();
-    httpRequest.onload = function(){ // When the request is loaded
-       callback(httpRequest.response);// We're calling our method
-    };
-    httpRequest.open('GET', requestURL);
-    httpRequest.timeout = 4000;
-    httpRequest.send();
-    
-}
-
-
-
-fxc(function(result) {
-   const xxhr = JSON.parse(result)
-   var usdrate = 1/xxhr.rates.USD
-   var mxnrate = 1/xxhr.rates.MXN
-
-   var phpExchange = usdrate;
+  var phpExchange = usdrate;
 var mexExchange = mxnrate;
 
 
@@ -536,6 +515,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+}
 
-});
+
 
