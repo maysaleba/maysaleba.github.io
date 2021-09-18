@@ -224,7 +224,7 @@ console.log(fxcp.rates.USD);
                 headerName: "Score",
                 field: "SCORE",
                 sortable: true,
-                // sort: 'desc',
+                sort: 'desc',
                 filter: true,
                 minWidth: 80,
                 filter: 'agNumberColumnFilter',
