@@ -18,7 +18,9 @@ function fxc(callback) {
        callback(httpRequest.response);// We're calling our method
     };
     httpRequest.open('GET', requestURL);
+    httpRequest.timeout = 4000;
     httpRequest.send();
+    
 }
 
 
@@ -27,8 +29,9 @@ fxc(function(result) {
    const xxhr = JSON.parse(result)
    var usdrate = 1/xxhr.rates.USD
    var mxnrate = 1/xxhr.rates.MXN
+
    var phpExchange = usdrate;
-   var mexExchange = mxnrate;
+var mexExchange = mxnrate;
 
 
 var usPriceGetter = function(params) {
@@ -510,6 +513,10 @@ function onFilterTextBoxChanged() {
     gridOptions.api.setQuickFilter(document.getElementById('filter-text-box').value);
 }
 
+
+
+
+
 // setup the grid after the page has finished loading
 document.addEventListener('DOMContentLoaded', function() {
     var gridDiv = document.querySelector('#myGrid');
@@ -527,13 +534,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+
+
 });
-
-
-
-
-
-
-
-
 
