@@ -1,20 +1,19 @@
-function fxc(callback) {
-    var requestURL = 'https://api.exchangerate.host/latest?base=PHP';
-    var httpRequest = new XMLHttpRequest();
-    httpRequest.onload = function(){ 
-       callback(httpRequest.response);
-    };
-    httpRequest.open('GET', requestURL);
-    httpRequest.send();
-}
+var requestURL = 'https://api.exchangerate.host/latest?base=PHP';
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+
+request.onload = function(){
+  var usdrate = 1/request.response.rates.USD;
+  var mxnrate = 1/request.response.rates.MXN;
+
+console.log("This is the usdrate"+usdrate)
+  var phpExchange = usdrate;
+var mexExchange = mxnrate;
 
 
-fxc(function(result) {
-   const xxhr = JSON.parse(result)
-    var phpExchange = 1/xxhr.rates.USD;
-    var mexExchange = 1/xxhr.rates.MXN;
-
-    var usPriceGetter = function(params) {
+var usPriceGetter = function(params) {
     let newSale = params.data.SalePrice * phpExchange;
     let formatted = Math.round(newSale);
     return formatted
@@ -32,6 +31,7 @@ if (newSale != 0) {
 
    
 };
+
 var priceGetter = function(params) {
     let newSale = params.data.Price * phpExchange;
     let formatted = Math.round(newSale);
@@ -504,7 +504,6 @@ document.addEventListener('DOMContentLoaded', function() {
     agGrid
         .simpleHttpRequest({
             url: 'https://raw.githubusercontent.com/maysaleba/maysaleba.github.io/main/csvjson.json',
-
         })
         .then(function(data) {
             gridOptions.api.setRowData(data);
@@ -518,8 +517,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-});
-
-
-
+}
 
