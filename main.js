@@ -221,8 +221,8 @@ console.log(fxcp.rates.USD);
 
 
             {
-                headerName: "Score2",
-                field: "0",
+                headerName: "Score",
+                field: "SCORE",
                 sortable: true,
                 sort: 'desc',
                 filter: true,
