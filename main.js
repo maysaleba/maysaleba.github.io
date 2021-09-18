@@ -221,7 +221,7 @@ console.log(fxcp.rates.USD);
 
 
             {
-                headerName: "Score",
+                headerName: "Score2",
                 field: "0",
                 sortable: true,
                 sort: 'desc',
