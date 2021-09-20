@@ -10,6 +10,17 @@
 
  /*@font-face { font-family: Delicious; src: url('LemonMilk.otf'); } */
 
+
+@font-face {
+    font-family: 'woojooaidpmedium';
+    src: url('woojooaidp-webfont.woff2') format('woff2'),
+         url('woojooaidp-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 .dropdown-item.active{
   background-color: #5a33ff;
 }
@@ -71,6 +82,7 @@ height: 100%;
 }
 
 .navbar-brand {
+  font-family:  woojooaidpmedium;
   font-size: 1.5rem;
 }
 
