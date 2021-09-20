@@ -70,6 +70,10 @@ height: 100%;
   /*image-rendering: crisp-edges;*/
 }
 
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
 /*.navbar-brand img {
     width: 20%;
   height: 20%;
