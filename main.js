@@ -30,6 +30,8 @@ console.log(fxcp.rates.USD);
         var phpExchange = 1/fxcp.rates.USD;
         var mexExchange = 1/fxcp.rates.MXN;
 
+        console.log(phpExchange);
+
 
         var usPriceGetter = function(params) {
             let newSale = params.data.SalePrice * phpExchange;
