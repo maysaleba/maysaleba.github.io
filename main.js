@@ -6,6 +6,7 @@ function httpGet(theUrl)
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", theURL, false ); // false for synchronous request
     xmlHttp.send( null );
+    console.log(xmlHttp)
     return xmlHttp.response;
 }
 
@@ -13,6 +14,8 @@ function httpGet(theUrl)
 fxc = httpGet();
 const fxcp = JSON.parse(fxc)
 console.log(fxcp.rates.USD);
+
+
 
 
         var phpExchange = 1/fxcp.rates.USD;

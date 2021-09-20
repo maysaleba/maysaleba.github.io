@@ -27,11 +27,9 @@ fxc(function(result) {
    const xxhr = JSON.parse(result)
    usdrate = 1/xxhr.rates.USD
 
-});
+   console.log(usdrate);
 
-console.log(usdrate);
-
-var phpExchange = 1;
+var phpExchange = usdrate;
 var mexExchange = 1;
 
 
@@ -535,4 +533,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+
+
+});
 
