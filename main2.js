@@ -187,58 +187,13 @@ console.log(fxcp.rates.USD);
                 },
             },
 
-            {
-                headerName: "MEX",
-                field: "MexPrice",
-                colId: "MexPrice",
-                minWidth: 80,
-                sortable: true,
-                filter: true,
-
-                // cellStyle: {
-                //     color: '#149414',
-                //     fontWeight: 'bold',
-                // },
-
-                valueGetter: mexPriceGetter,
-                headerComponentParams: {
-                    template: '<div class="ag-cell-label-container" role="presentation">' +
-                        '  <span ref="eMenu" class="ag-header-icon ag-header-cell-menu-button"></span>' +
-                        '  <div ref="eLabel" class="ag-header-cell-label" role="presentation">' +
-                        '    <span ref="eSortOrder" class="ag-header-icon ag-sort-order"></span>' +
-                        '    <span ref="eSortAsc" class="ag-header-icon ag-sort-ascending-icon"></span>' +
-                        '    <span ref="eSortDesc" class="ag-header-icon ag-sort-descending-icon"></span>' +
-                        '    <span ref="eSortNone" class="ag-header-icon ag-sort-none-icon"></span>' +
-                        '    <img class="flag" src="mexico.svg" alt="United States Minor Outlying Islands Flag">&nbsp;MX' +
-                        '    <span ref="eFilter" class="ag-header-icon ag-filter-icon"></span>' +
-                        '  </div>' +
-                        '</div>'
-                },
-                filter: 'agNumberColumnFilter',
-
-                cellRenderer: function(params) {
-                    if (params.value != 9999) {
-                        let keyData = `<span class="thisis"><a data-bs-toggle="modal" data-bs-target="#mxModal">${"\u20B1" + params.value}</span></a>`;
-                        return keyData
-
-                    } else {
-                        return "N/A"
-                    }
-
-                },
-                cellClassRules: {
-                    "cell-normal": params => params.api.getValue("MexPrice", params.node),
-                    "cell-fail": params => params.api.getValue("SalePrice", params.node) >= params.api.getValue("MexPrice", params.node)
-
-                },
-            },
-
+           
 
             {
                 headerName: "Score",
                 field: "SCORE",
                 sortable: true,
-                // sort: 'desc',
+                sort: 'desc',
                 filter: true,
                 minWidth: 80,
                 filter: 'agNumberColumnFilter',
@@ -277,137 +232,7 @@ console.log(fxcp.rates.USD);
 
 
 
-            {
-                headerName: "All Time Low",
-                field: "LowestPrice",
-                sortable: true,
-                filter: true,
-                minWidth: 100,
-                valueGetter: alltimelowGetter,
-                // valueFormatter: currencyFormatter,
-                cellRenderer: function(params) {
-                    let keyData = "\u20B1" + params.value
-                    return keyData
-                },
-
-                filter: 'agNumberColumnFilter',
-                hide: true
-            },
-
-            {
-                field: "SaleStarted",
-                sortable: true,
-                // sort: 'desc',
-                minWidth: 110,
-                filter: 'agDateColumnFilter',
-                valueFormatter: dateFormatter,
-
-                filterParams: {
-                    // provide comparator function
-                    comparator: (filterLocalDateAtMidnight, cellValue) => {
-                        const dateAsString = cellValue;
-
-                        if (dateAsString == null) {
-                            return 0;
-                        }
-
-                        // In the example application, dates are stored as dd/mm/yyyy
-                        // We create a Date object for comparison against the filter date
-                        const dateParts = dateAsString.split('-');
-                        const day = Number(dateParts[2]);
-                        const month = Number(dateParts[1]) - 1;
-                        const year = Number(dateParts[0]);
-                        const cellDate = new Date(year, month, day);
-
-                        // Now that both parameters are Date objects, we can compare
-                        if (cellDate < filterLocalDateAtMidnight) {
-                            return -1;
-                        } else if (cellDate > filterLocalDateAtMidnight) {
-                            return 1;
-                        }
-                        return 0;
-                    }
-                }
-            },
-            {
-                field: "SaleEnds",
-                sortable: true,
-                filter: true,
-                minWidth: 100,
-                filter: 'agDateColumnFilter',
-                valueFormatter: dateFormatter,
-                filterParams: {
-                    // provide comparator function
-                    comparator: (filterLocalDateAtMidnight, cellValue) => {
-                        const dateAsString = cellValue;
-
-                        if (dateAsString == null) {
-                            return 0;
-                        }
-
-                        // In the example application, dates are stored as dd/mm/yyyy
-                        // We create a Date object for comparison against the filter date
-                        const dateParts = dateAsString.split('-');
-                        const day = Number(dateParts[2]);
-                        const month = Number(dateParts[1]) - 1;
-                        const year = Number(dateParts[0]);
-                        const cellDate = new Date(year, month, day);
-
-                        // Now that both parameters are Date objects, we can compare
-                        if (cellDate < filterLocalDateAtMidnight) {
-                            return -1;
-                        } else if (cellDate > filterLocalDateAtMidnight) {
-                            return 1;
-                        }
-                        return 0;
-                    }
-                }
-            },
-
-            {
-                field: "Publisher",
-                minWidth: 100,
-                sortable: true,
-                filter: true
-
-            },
-
-            {
-                field: "ReleaseDate",
-                minWidth: 115,
-                sortable: true,
-                filter: true,
-                // hide: true
-            },
-
-            {
-                headerName: "# of Players",
-                field: "NumberofPlayers",
-                minWidth: 110,
-                sortable: true,
-                filter: true
-            },
-            {
-                field: "ESRBRating",
-                minWidth: 110,
-                sortable: true,
-                filter: true
-            },
-
-
-            {
-                field: "URL",
-                sortable: true,
-                filter: true,
-                hide: true
-            },
-
-            {
-                field: "Image",
-                sortable: true,
-                filter: true,
-                hide: true
-            }
+            
 
         ];
 
@@ -424,6 +249,8 @@ console.log(fxcp.rates.USD);
             ensureDomOrder: true,
             columnDefs: columnDefs,
             rowData: null,
+            pagination: true,
+            paginationPageSize: 5,
 
 
             onColumnResized: function(params) {
