@@ -201,7 +201,7 @@ var columnDefs = [
         field: "SCORE",
         sortable: true,
         filter: true,
-        sort: 'desc',
+        // sort: 'desc',
         minWidth: 80,
         filter: 'agNumberColumnFilter',
         valueGetter: ratingGetter,

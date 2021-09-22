@@ -109,43 +109,87 @@
   <div class="card">
 <img id="imgur" class="card-img-top">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <h5 id="title1" class="card-title"></h5>
+      <p class="card-text">This</p>
     </div>
   </div>
   <div class="card">
     <img id="imgur2" class="card-img-top">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <h5 id="title2" class="card-title"></h5>
+      <p class="card-text"></p>
     </div>
   </div>
   <div class="card">
      <img id="imgur3" class="card-img-top">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text">This </p>
     </div>
      </div>
      <div class="card">
      <img id="imgur4" class="card-img-top">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text">This</p>
     </div>
      </div>
      <div class="card">
      <img id="imgur5" class="card-img-top">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text">This </p>
     </div>
      </div>
 </div>
+<p>
+  <!-- Playstation Start -->
+
+    <div class="card-group">
+  <div class="card">
+<img id="psn1" class="card-img-top">
+    <div class="card-body">
+      <h5 id="title1" class="card-title"></h5>
+      <p class="card-text">This </p>
+    </div>
+  </div>
+  <div class="card">
+    <img id="psn2" class="card-img-top">
+    <div class="card-body">
+      <h5 id="title2" class="card-title"></h5>
+      <p class="card-text"></p>
+    </div>
+  </div>
+  <div class="card">
+     <img id="psn3" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This</p>
+    </div>
+     </div>
+     <div class="card">
+     <img id="psn4" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This</p>
+    </div>
+     </div>
+     <div class="card">
+     <img id="psn5" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This </p>
+    </div>
+     </div>
+</div>
+
+
+
 </div>
     <script>
         //first add an event listener for page load
         document.addEventListener( "DOMContentLoaded", get_json_data, false ); // get_json_data is the function name that will fire on page load
+         document.addEventListener( "DOMContentLoaded", get_json_data2, false )
 
         //this function is in the event listener and will execute on page load
         function get_json_data(){
@@ -172,14 +216,47 @@
         }
 
 
+  function get_json_data2(){
+            // Relative URL of external json file
+            var json_url = 'csvjsonus.json';
+
+            //Build the XMLHttpRequest (aka AJAX Request)
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() { 
+                if (this.readyState == 4 && this.status == 200) {//when a good response is given do this
+
+                    var data2 = JSON.parse(this.responseText); // convert the response to a json object
+                    append_json2(data2);
+                    console.log(data2);
+                   
+                }
+            }
+            //set the request destination and type
+            xmlhttp.open("GET", 'https://raw.githubusercontent.com/maysaleba/maysaleba.github.io/main/csvjsonus.json', true);
+            //set required headers for the request
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            // send the request
+            xmlhttp.send(); // when the request completes it will execute the code in onreadystatechange section
+        }
+
+
+
 
         //this function appends the json data to the table 'gable'
         function append_json(data){
             var game1 = document.getElementById('imgur');
             game1.setAttribute('src', data[0].Image+'.jpg')
 
+            var title1 = document.getElementById('title1')
+            var t1 = data[0].Title
+            title1.append(t1);
+
             var game2 = document.getElementById('imgur2');
             game2.setAttribute('src', data[1].Image+'.jpg')
+
+            var title2 = document.getElementById('title2')
+            var t2 = data[1].Title
+            title2.append(t2);
 
             var game3 = document.getElementById('imgur3');
             game3.setAttribute('src', data[2].Image+'.jpg')
@@ -189,6 +266,24 @@
             
             var game5 = document.getElementById('imgur5');
             game5.setAttribute('src', data[4].Image+'.jpg')
+        }
+
+                function append_json2(data2){
+            var psgame1 = document.getElementById('psn1');
+            psgame1.setAttribute('src', data2[0].Img)
+
+             var psgame2 = document.getElementById('psn2');
+            psgame2.setAttribute('src', data2[1].Img)
+
+              var psgame3 = document.getElementById('psn3');
+            psgame3.setAttribute('src', data2[2].Img)
+
+                var psgame4 = document.getElementById('psn4');
+            psgame4.setAttribute('src', data2[3].Img)
+
+                            var psgame5 = document.getElementById('psn5');
+            psgame5.setAttribute('src', data2[4].Img)
+           
         }
     </script>
 
