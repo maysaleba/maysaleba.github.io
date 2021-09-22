@@ -104,9 +104,17 @@
 
 <p>
 
+
+
+
   <div class="mx-auto" style="width: 70%;">
+<!-- Nintendo Switch Start -->
+
+<div class="container" >
+  
+  <div class="card-header-custom"><b>TOP NINTENDO SWITCH GAMES ON SALE</b></div>
   <div class="card-group">
-  <div class="card">
+  <div class="card" >
 <img id="imgur" class="card-img-top">
     <div class="card-body">
       <h5 id="title1" class="card-title"></h5>
@@ -123,28 +131,31 @@
   <div class="card">
      <img id="imgur3" class="card-img-top">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
+      <h5 id="title3" class="card-title"></h5>
       <p class="card-text">This </p>
     </div>
      </div>
      <div class="card">
      <img id="imgur4" class="card-img-top">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
+      <h5 id="title4" class="card-title"></h5>
       <p class="card-text">This</p>
     </div>
      </div>
      <div class="card">
      <img id="imgur5" class="card-img-top">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
+      <h5 id="title5" class="card-title"></h5>
       <p class="card-text">This </p>
     </div>
      </div>
 </div>
+</div>
 <p>
   <!-- Playstation Start -->
-
+<div class="container">
+  
+  <div class="card-header-custom"><b>TOP PLAYSTATION GAMES ON SALE</b></div>
     <div class="card-group">
   <div class="card">
 <img id="psn1" class="card-img-top">
@@ -182,7 +193,7 @@
     </div>
      </div>
 </div>
-
+</div>
 
 
 </div>
@@ -246,26 +257,33 @@
         function append_json(data){
             var game1 = document.getElementById('imgur');
             game1.setAttribute('src', data[0].Image+'.jpg')
-
             var title1 = document.getElementById('title1')
             var t1 = data[0].Title
             title1.append(t1);
 
             var game2 = document.getElementById('imgur2');
             game2.setAttribute('src', data[1].Image+'.jpg')
-
             var title2 = document.getElementById('title2')
             var t2 = data[1].Title
             title2.append(t2);
 
             var game3 = document.getElementById('imgur3');
             game3.setAttribute('src', data[2].Image+'.jpg')
+            var title3 = document.getElementById('title3')
+            var t3 = data[2].Title
+            title3.append(t3);
 
             var game4 = document.getElementById('imgur4');
             game4.setAttribute('src', data[3].Image+'.jpg')
+            var title4 = document.getElementById('title4')
+            var t4 = data[3].Title
+            title4.append(t4);
             
             var game5 = document.getElementById('imgur5');
             game5.setAttribute('src', data[4].Image+'.jpg')
+            var title5 = document.getElementById('title5')
+            var t5 = data[4].Title
+            title5.append(t5);
         }
 
                 function append_json2(data2){
