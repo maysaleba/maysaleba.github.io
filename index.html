@@ -115,35 +115,35 @@
   <div class="card-header-custom"><b>TOP NINTENDO SWITCH GAMES ON SALE</b></div>
   <div class="card-group">
   <div class="card" >
-<img id="imgur" class="card-img-top" >
+<a id="url1"><img id="imgur" class="card-img-top" ></a>
     <div class="card-body">
       <h5 id="title1" class="card-title"></h5>
       <p id="price1" class="card-text" style="font-weight:bold"><span class="badge rounded-pill bg-danger" id="disc1"></span></p>
     </div>
   </div>
   <div class="card">
-    <img id="imgur2" class="card-img-top">
+    <a id="url2"><img id="imgur2" class="card-img-top"></a>
     <div class="card-body">
       <h5 id="title2" class="card-title"></h5>
       <p id="price2" class="card-text" style="font-weight:bold"><span class="badge rounded-pill bg-danger " id="disc2"></span></p>
     </div>
   </div>
   <div class="card">
-     <img id="imgur3" class="card-img-top">
+     <a id="url3"><img id="imgur3" class="card-img-top"></a>
     <div class="card-body">
       <h5 id="title3" class="card-title"></h5>
       <p id="price3" class="card-text" style="font-weight:bold"><span class="badge rounded-pill bg-danger " id="disc3"></span></p>
     </div>
      </div>
      <div class="card">
-     <img id="imgur4" class="card-img-top">
+     <a id="url4"><img id="imgur4" class="card-img-top"></a>
     <div class="card-body">
       <h5 id="title4" class="card-title"></h5>
       <p id="price4" class="card-text" style="font-weight:bold"><span class="badge rounded-pill bg-danger " id="disc4"></span></p>
     </div>
      </div>
      <div class="card">
-     <img id="imgur5" class="card-img-top">
+     <a id="url5"><img id="imgur5" class="card-img-top"></a>
     <div class="card-body">
       <h5 id="title5" class="card-title"></h5>
       <p id="price5" class="card-text" style="font-weight:bold"><span class="badge rounded-pill bg-danger " id="disc5"></span></p>
@@ -161,7 +161,7 @@
   <div class="card-header-custom"><b>TOP PLAYSTATION GAMES ON SALE</b></div>
     <div class="card-group">
   <div class="card">
-<img id="psn1" class="card-img-top">
+<a id="psurl1"><img id="psn1" class="card-img-top"></a>
     <div class="card-body">
       <h5 id="pstitle1" class="card-title"></h5>
       <p id="psprice1" class="card-text" style="font-weight:light"><span class="badge rounded-pill bg-primary" id="psdisc1"></span></p>
@@ -169,7 +169,7 @@
     </div>
   </div>
   <div class="card">
-    <img id="psn2" class="card-img-top">
+   <a id="psurl2"> <img id="psn2" class="card-img-top"></a>
     <div class="card-body">
       <h5 id="pstitle2" class="card-title"></h5>
       <p id="psprice2" class="card-text" style="font-weight:light"><span class="badge rounded-pill bg-primary" id="psdisc2"></span></p>
@@ -177,7 +177,7 @@
     </div>
   </div>
   <div class="card">
-     <img id="psn3" class="card-img-top">
+    <a id="psurl3"> <img id="psn3" class="card-img-top"></a>
     <div class="card-body">
       <h5 id="pstitle3" class="card-title"></h5>
       <p id="psprice3" class="card-text" style="font-weight:light"><span class="badge rounded-pill bg-primary" id="psdisc3"></span></p>
@@ -185,7 +185,7 @@
     </div>
      </div>
      <div class="card">
-     <img id="psn4" class="card-img-top">
+     <a id="psurl4"><img id="psn4" class="card-img-top"></a>
     <div class="card-body">
       <h5 id="pstitle4" class="card-title"></h5>
       <p id="psprice4" class="card-text" style="font-weight:light"><span class="badge rounded-pill bg-primary" id="psdisc4"></span></p>
@@ -193,7 +193,7 @@
     </div>
      </div>
      <div class="card">
-     <img id="psn5" class="card-img-top">
+     <a id="psurl5"><img id="psn5" class="card-img-top"></a>
     <div class="card-body">
       <h5 id="pstitle5" class="card-title"></h5>
      <p id="psprice5" class="card-text" style="font-weight:light"><span class="badge rounded-pill bg-primary" id="psdisc5"></span></p>
@@ -205,7 +205,7 @@
         <small class="text-muted"><a href="ps/us">VIEW MORE</a></small>
       </div>
 </div>
-
+<p>
 
 </div>
     <script>
@@ -299,16 +299,23 @@ console.log(fxcp.rates.USD);
         function append_json(data){
             var game1 = document.getElementById('imgur');
             game1.setAttribute('src', data[0].Image+'.jpg')
+            
             var title1 = document.getElementById('title1')
             var t1 = data[0].Title
             title1.append(t1);
+           
             var price1 = document.getElementById('price1')
             var p1 = data[0].SalePrice*phpExchange
             p1 = Math.round(p1)
             price1.append('  ₱'+p1);
+            
             var disc1 = document.getElementById('disc1')
             var d1 = data[0].PercentOff
             disc1.append('-'+d1+' ');
+
+            var url1=document.getElementById('url1')
+            url1.setAttribute('href', 'https://www.nintendo.com'+data[0].URL)
+           
 
             var game2 = document.getElementById('imgur2');
             game2.setAttribute('src', data[1].Image+'.jpg')
@@ -323,6 +330,9 @@ console.log(fxcp.rates.USD);
             var d2 = data[1].PercentOff
             disc2.append('-'+d2+' ');
 
+            var url2=document.getElementById('url2')
+            url2.setAttribute('href', 'https://www.nintendo.com'+data[1].URL)
+
             var game3 = document.getElementById('imgur3');
             game3.setAttribute('src', data[2].Image+'.jpg')
             var title3 = document.getElementById('title3')
@@ -336,6 +346,9 @@ console.log(fxcp.rates.USD);
             var d3 = data[2].PercentOff
             disc3.append('-'+d3+' ');
 
+             var url3=document.getElementById('url3')
+            url3.setAttribute('href', 'https://www.nintendo.com'+data[2].URL)
+
             var game4 = document.getElementById('imgur4');
             game4.setAttribute('src', data[3].Image+'.jpg')
             var title4 = document.getElementById('title4')
@@ -348,6 +361,9 @@ console.log(fxcp.rates.USD);
             var disc4 = document.getElementById('disc4')
             var d4 = data[3].PercentOff
             disc4.append('-'+d4+' ');
+
+             var url4=document.getElementById('url4')
+            url4.setAttribute('href', 'https://www.nintendo.com'+data[3].URL)
             
             var game5 = document.getElementById('imgur5');
             game5.setAttribute('src', data[4].Image+'.jpg')
@@ -361,6 +377,9 @@ console.log(fxcp.rates.USD);
             var disc5 = document.getElementById('disc5')
             var d5 = data[4].PercentOff
             disc5.append('-'+d5+' ');
+
+             var url5=document.getElementById('url5')
+            url5.setAttribute('href', 'https://www.nintendo.com'+data[4].URL)
         }
 
 // Playstation Start
@@ -371,17 +390,23 @@ console.log(fxcp.rates.USD);
             var pstitle1 = document.getElementById('pstitle1')
             var pst1 = data2[0].GameName
             pstitle1.append(pst1);
-               var psprice1 = document.getElementById('psprice1')
+            
+            var psprice1 = document.getElementById('psprice1')
             var psp1 = (data2[0].SalePrice)/100*phpExchange
             psp1 = Math.round(psp1)
             psprice1.append('  ₱'+psp1);
+            
             var psdisc1 = document.getElementById('psdisc1')
             var psd1 = data2[0].DiscPerc
             psdisc1.append('-'+psd1+'% ');
+           
             var plusprice1 = document.getElementById('plusprice1')
             var plusp1 = (data2[0].PlusPrice)/100*phpExchange
             plusp1 = Math.round(plusp1)
             plusprice1.append(' ₱'+plusp1);
+
+            var psurl1=document.getElementById('psurl1')
+            psurl1.setAttribute('href', data2[0].PSStoreURL)
 
             var psgame2 = document.getElementById('psn2');
             psgame2.setAttribute('src', data2[1].Img)
@@ -400,6 +425,9 @@ console.log(fxcp.rates.USD);
             plusp2 = Math.round(plusp2)
             plusprice2.append(' ₱'+plusp2);
 
+            var psurl2=document.getElementById('psurl2')
+            psurl2.setAttribute('href', data2[1].PSStoreURL)
+
             var psgame3 = document.getElementById('psn3');
             psgame3.setAttribute('src', data2[2].Img)
             var pstitle3 = document.getElementById('pstitle3')
@@ -416,6 +444,9 @@ console.log(fxcp.rates.USD);
             var plusp3 = (data2[2].PlusPrice)/100*phpExchange
             plusp3 = Math.round(plusp3)
             plusprice3.append(' ₱'+plusp3);
+
+            var psurl3=document.getElementById('psurl3')
+            psurl3.setAttribute('href', data2[2].PSStoreURL)
 
             var psgame4 = document.getElementById('psn4');
             psgame4.setAttribute('src', data2[3].Img)
@@ -434,6 +465,9 @@ console.log(fxcp.rates.USD);
             plusp4 = Math.round(plusp4)
             plusprice4.append(' ₱'+plusp4);
 
+            var psurl4=document.getElementById('psurl4')
+            psurl4.setAttribute('href', data2[3].PSStoreURL)
+
             var psgame5 = document.getElementById('psn5');
             psgame5.setAttribute('src', data2[4].Img)
             var pstitle5 = document.getElementById('pstitle5')
@@ -450,6 +484,9 @@ console.log(fxcp.rates.USD);
             var plusp5 = (data2[4].PlusPrice)/100*phpExchange
             plusp5 = Math.round(plusp5)
             plusprice5.append(' ₱'+plusp5);
+
+            var psurl5=document.getElementById('psurl5')
+            psurl5.setAttribute('href', data2[4].PSStoreURL)
            
         }
 
