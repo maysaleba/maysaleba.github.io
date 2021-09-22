@@ -347,19 +347,7 @@ li {
   margin: 2px 0;
 }
 
-img {
-    width:100%;
-}
-.container {
-    max-width:100%;
-    width: 100%;
-}
-.col-md-3{
-    width:100%;
-    float:left;
-    margin:0;
-}
-}
+
 
 
 .example-header {
