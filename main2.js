@@ -217,6 +217,9 @@
                 var d8 = data[7].PercentOff
                 disc8.append('-'+d8+' ');
 
+                var url8=document.getElementById('url8')
+                url8.setAttribute('href', 'https://www.nintendo.com'+data[7].URL)
+
 
 
 
