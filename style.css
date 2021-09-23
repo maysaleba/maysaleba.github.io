@@ -401,7 +401,9 @@ li {
 }
 
 
-
+.card-title{
+  font-size: 16px;
+}
 
 .example-header {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
