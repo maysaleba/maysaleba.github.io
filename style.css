@@ -28,11 +28,6 @@
   background-color: #ffffff;
 }
 
-.card-header-custom + .card-group > .card {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
 .card-title{
   font-size: 18px;
 }
