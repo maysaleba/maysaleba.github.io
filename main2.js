@@ -98,7 +98,7 @@
                 var p1 = data[0].SalePrice*phpExchange
                 p1 = Math.round(p1)
                 price1.append('  ₱'+p1);
-                
+
                 
                 var disc1 = document.getElementById('disc1')
                 var d1 = data[0].PercentOff
@@ -171,6 +171,55 @@
             
                  var url5=document.getElementById('url5')
                 url5.setAttribute('href', 'https://www.nintendo.com'+data[4].URL)
+
+               var game6 = document.getElementById('imgur6');
+                game6.setAttribute('src', data[5].Image+'.jpg')
+                var title6 = document.getElementById('title6')
+                var t6 = data[5].Title
+                title6.append(t6);
+                    var price6 = document.getElementById('price6')
+                var p6 = data[5].SalePrice*phpExchange
+                p6 = Math.round(p6)
+                price6.append('  ₱'+p6);
+                var disc6 = document.getElementById('disc6')
+                var d6 = data[5].PercentOff
+                disc6.append('-'+d6+' ');
+            
+                 var url6=document.getElementById('url6')
+                url6.setAttribute('href', 'https://www.nintendo.com'+data[5].URL)
+                
+             var game7 = document.getElementById('imgur7');
+                game7.setAttribute('src', data[6].Image+'.jpg')
+                var title7 = document.getElementById('title7')
+                var t7 = data[6].Title
+                title7.append(t7);
+                    var price7 = document.getElementById('price7')
+                var p7 = data[6].SalePrice*phpExchange
+                p7 = Math.round(p7)
+                price7.append('  ₱'+p7);
+                var disc7 = document.getElementById('disc7')
+                var d7 = data[6].PercentOff
+                disc7.append('-'+d7+' ');
+            
+                 var url7=document.getElementById('url7')
+                url7.setAttribute('href', 'https://www.nintendo.com'+data[6].URL)
+                
+                      var game8 = document.getElementById('imgur8');
+                game8.setAttribute('src', data[7].Image+'.jpg')
+                var title8 = document.getElementById('title8')
+                var t8 = data[7].Title
+                title8.append(t8);
+                    var price8 = document.getElementById('price8')
+                var p8 = data[7].SalePrice*phpExchange
+                p8 = Math.round(p8)
+                price8.append('  ₱'+p8);
+                var disc8 = document.getElementById('disc8')
+                var d8 = data[7].PercentOff
+                disc8.append('-'+d8+' ');
+
+
+
+
             }
             
             // Playstation Start
@@ -278,6 +327,70 @@
             
                 var psurl5=document.getElementById('psurl5')
                 psurl5.setAttribute('href', data2[4].PSStoreURL)
+
+                 var psgame6 = document.getElementById('psn6');
+                psgame6.setAttribute('src', data2[5].Img)
+                var pstitle6 = document.getElementById('pstitle6')
+                var pst6 = data2[5].GameName
+                pstitle6.append(pst6);
+                        var psprice6 = document.getElementById('psprice6')
+                var psp6 = (data2[5].SalePrice)/100*phpExchange
+                psp6 = Math.round(psp6)
+                psprice6.append('  ₱'+psp6);
+                var psdisc6 = document.getElementById('psdisc6')
+                var psd6 = data2[5].DiscPerc
+                psdisc6.append('-'+psd6+'% ');
+                var plusprice6 = document.getElementById('plusprice6')
+                var plusp6 = (data2[5].PlusPrice)/100*phpExchange
+                plusp6 = Math.round(plusp6)
+                plusprice6.append(' ₱'+plusp6);
+            
+                var psurl6=document.getElementById('psurl6')
+                psurl6.setAttribute('href', data2[5].PSStoreURL)
+
+                 var psgame7 = document.getElementById('psn7');
+                psgame7.setAttribute('src', data2[6].Img)
+                var pstitle7 = document.getElementById('pstitle7')
+                var pst7 = data2[6].GameName
+                pstitle7.append(pst7);
+                        var psprice7 = document.getElementById('psprice7')
+                var psp7 = (data2[6].SalePrice)/100*phpExchange
+                psp7 = Math.round(psp7)
+                psprice7.append('  ₱'+psp7);
+                var psdisc7 = document.getElementById('psdisc7')
+                var psd7 = data2[6].DiscPerc
+                psdisc7.append('-'+psd7+'% ');
+                var plusprice7 = document.getElementById('plusprice7')
+                var plusp7 = (data2[6].PlusPrice)/100*phpExchange
+                plusp7 = Math.round(plusp7)
+                plusprice7.append(' ₱'+plusp7);
+            
+                var psurl7=document.getElementById('psurl7')
+                psurl7.setAttribute('href', data2[6].PSStoreURL)
+
+
+                 var psgame8 = document.getElementById('psn8');
+                psgame8.setAttribute('src', data2[7].Img)
+                var pstitle8 = document.getElementById('pstitle8')
+                var pst8 = data2[7].GameName
+                pstitle8.append(pst8);
+                        var psprice8 = document.getElementById('psprice8')
+                var psp8 = (data2[7].SalePrice)/100*phpExchange
+                psp8 = Math.round(psp8)
+                psprice8.append('  ₱'+psp8);
+                var psdisc8 = document.getElementById('psdisc8')
+                var psd8 = data2[7].DiscPerc
+                psdisc8.append('-'+psd8+'% ');
+                var plusprice8 = document.getElementById('plusprice8')
+                var plusp8 = (data2[7].PlusPrice)/100*phpExchange
+                plusp8 = Math.round(plusp8)
+                plusprice8.append(' ₱'+plusp8);
+            
+                var psurl8=document.getElementById('psurl8')
+                psurl8.setAttribute('href', data2[7].PSStoreURL)
+
+
+
                
             }
             
