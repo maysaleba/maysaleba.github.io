@@ -35,3 +35,93 @@
  .card-text{
     font-size:14px;
 }
+
+.footer {
+  font-size: 14px;
+  background-color: #f5f5f5;
+}
+
+a, a:hover, a:visited, a:active {
+  color: inherit;
+  text-decoration: none;
+ }
+
+@font-face {
+    font-family: 'woojooaidpmedium';
+    src: url('woojooaidp-webfont.woff2') format('woff2'),
+         url('woojooaidp-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.navbar-brand {
+  font-family:  woojooaidpmedium;
+  font-size: 1.5rem;
+}
+
+
+
+.dropdown-item.active{
+  background-color: #5a33ff;
+}
+
+.dropdown-menu a:focus {
+    background-color: #686868;
+}
+
+.header {
+  display: flex;
+  /*align-items: flex-start;*/
+  /*overflow: hidden;*/
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1f1f1;
+  padding: 10px 20px; 
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  padding:10px;
+ /* justify-content: flex-end;;*/
+}
+
+.navbar-nav button {
+  /*vertical-align: middle;*/
+  /*color: black;*/
+  text-align: center;
+  border: none;
+  padding: 8.5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 11px;
+  border-radius: 4px;
+  background-color: #ff7d00;
+  color:white;
+  transition: 0.5s;
+}
+
+#header {
+    height: 100%;
+}
+
+.logo {
+    display: block;
+    height: auto;
+    width: 38px;
+    shape-rendering: geometricPrecision;
+    /*padding-top: 50px;*/
+    margin-left:  5px;
+    margin-right: 5px;
+    margin-top: -12px;
+    margin-bottom: -10px;
+    /*margin: 0 auto;*/
+
+}
+
+.ddicon{
+  height:  15px;
+  width:  auto;
+}
