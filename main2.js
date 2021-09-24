@@ -260,7 +260,7 @@
             
                 function append_json2(data2){
                 var psgame1 = document.getElementById('psn1');
-                psgame1.setAttribute('src', data2[0].CoverArt)
+                psgame1.setAttribute('src', data2[0].CoverArt+'?w=500')
                 var pstitle1 = document.getElementById('pstitle1')
                 var pst1 = data2[0].GameName
                 pstitle1.append(pst1);
@@ -287,7 +287,7 @@
                 psscr1.append(pss1)
             
                 var psgame2 = document.getElementById('psn2');
-                psgame2.setAttribute('src', data2[3].CoverArt)
+                psgame2.setAttribute('src', data2[3].CoverArt+'?w=500')
                 var pstitle2 = document.getElementById('pstitle2')
                 var pst2 = data2[3].GameName
                 pstitle2.append(pst2);
@@ -311,7 +311,7 @@
                 psscr2.append(pss2)
             
                 var psgame3 = document.getElementById('psn3');
-                psgame3.setAttribute('src', data2[4].CoverArt)
+                psgame3.setAttribute('src', data2[4].CoverArt+'?w=500')
                 var pstitle3 = document.getElementById('pstitle3')
                 var pst3 = data2[4].GameName
                 pstitle3.append(pst3);
@@ -337,7 +337,7 @@
 
                 var z4 = 14;
                 var psgame4 = document.getElementById('psn4');
-                psgame4.setAttribute('src', data2[z4].CoverArt)
+                psgame4.setAttribute('src', data2[z4].CoverArt+'?w=500')
                 var pstitle4 = document.getElementById('pstitle4')
                 var pst4 = data2[z4].GameName
                 pstitle4.append(pst4);
@@ -363,7 +363,7 @@
 
                 var z5 = 8;
                 var psgame5 = document.getElementById('psn5');
-                psgame5.setAttribute('src', data2[z5].CoverArt)
+                psgame5.setAttribute('src', data2[z5].CoverArt+'?w=500')
                 var pstitle5 = document.getElementById('pstitle5')
                 var pst5 = data2[z5].GameName
                 pstitle5.append(pst5);
@@ -388,7 +388,7 @@
 
                 var z6 = 9;
                 var psgame6 = document.getElementById('psn6');
-                psgame6.setAttribute('src', data2[z6].CoverArt)
+                psgame6.setAttribute('src', data2[z6].CoverArt+'?w=500')
                 var pstitle6 = document.getElementById('pstitle6')
                 var pst6 = data2[z6].GameName
                 pstitle6.append(pst6);
@@ -413,7 +413,7 @@
 
                 var z7 = 10;
                 var psgame7 = document.getElementById('psn7');
-                psgame7.setAttribute('src', data2[z7].CoverArt)
+                psgame7.setAttribute('src', data2[z7].CoverArt+'?w=500')
                 var pstitle7 = document.getElementById('pstitle7')
                 var pst7 = data2[z7].GameName
                 pstitle7.append(pst7);
@@ -438,7 +438,7 @@
 
                 var z8 = 20;
                 var psgame8 = document.getElementById('psn8');
-                psgame8.setAttribute('src', data2[z8].CoverArt)
+                psgame8.setAttribute('src', data2[z8].CoverArt+'?w=500')
                 var pstitle8 = document.getElementById('pstitle8')
                 var pst8 = data2[z8].GameName
                 pstitle8.append(pst8);
