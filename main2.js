@@ -91,7 +91,6 @@
                 
                 var title1 = document.getElementById('title1')
                 var t1 = data[0].Title
-
                 title1.append(t1);
                
                 var price1 = document.getElementById('price1')
@@ -103,9 +102,13 @@
                 var disc1 = document.getElementById('disc1')
                 var d1 = data[0].PercentOff
                 disc1.append('-'+d1+' ');
-            
+
                 var url1=document.getElementById('url1')
                 url1.setAttribute('href', 'https://www.nintendo.com'+data[0].URL)
+
+                var scr1=document.getElementById('scr1')
+                var s1 = data[0].SCORE
+                scr1.append(s1)
                
             
                 var game2 = document.getElementById('imgur2');
@@ -123,6 +126,10 @@
             
                 var url2=document.getElementById('url2')
                 url2.setAttribute('href', 'https://www.nintendo.com'+data[1].URL)
+
+                var scr2=document.getElementById('scr2')
+                var s2 = data[1].SCORE
+                scr2.append(s2)
             
                 var game3 = document.getElementById('imgur3');
                 game3.setAttribute('src', data[2].Image+'.jpg')
@@ -139,6 +146,10 @@
             
                  var url3=document.getElementById('url3')
                 url3.setAttribute('href', 'https://www.nintendo.com'+data[2].URL)
+
+                var scr3=document.getElementById('scr3')
+                var s3 = data[2].SCORE
+                scr3.append(s3)
             
                 var game4 = document.getElementById('imgur4');
                 game4.setAttribute('src', data[3].Image+'.jpg')
@@ -155,6 +166,10 @@
             
                  var url4=document.getElementById('url4')
                 url4.setAttribute('href', 'https://www.nintendo.com'+data[3].URL)
+
+                    var scr4=document.getElementById('scr4')
+                var s4 = data[3].SCORE
+                scr4.append(s4)
                 
                 var game5 = document.getElementById('imgur5');
                 game5.setAttribute('src', data[4].Image+'.jpg')
@@ -172,6 +187,10 @@
                  var url5=document.getElementById('url5')
                 url5.setAttribute('href', 'https://www.nintendo.com'+data[4].URL)
 
+                    var scr5=document.getElementById('scr5')
+                var s5 = data[4].SCORE
+                scr5.append(s5)
+
                var game6 = document.getElementById('imgur6');
                 game6.setAttribute('src', data[5].Image+'.jpg')
                 var title6 = document.getElementById('title6')
@@ -187,6 +206,10 @@
             
                  var url6=document.getElementById('url6')
                 url6.setAttribute('href', 'https://www.nintendo.com'+data[5].URL)
+
+                        var scr6=document.getElementById('scr6')
+                var s6 = data[5].SCORE
+                scr6.append(s6)
                 
              var game7 = document.getElementById('imgur7');
                 game7.setAttribute('src', data[6].Image+'.jpg')
@@ -203,6 +226,10 @@
             
                  var url7=document.getElementById('url7')
                 url7.setAttribute('href', 'https://www.nintendo.com'+data[6].URL)
+
+                        var scr7=document.getElementById('scr7')
+                var s7 = data[6].SCORE
+                scr7.append(s7)
                 
                       var game8 = document.getElementById('imgur8');
                 game8.setAttribute('src', data[7].Image+'.jpg')
@@ -219,6 +246,10 @@
 
                 var url8=document.getElementById('url8')
                 url8.setAttribute('href', 'https://www.nintendo.com'+data[7].URL)
+
+                        var scr8=document.getElementById('scr8')
+                var s8 = data[7].SCORE
+                scr8.append(s8)
 
 
 
@@ -250,6 +281,10 @@
             
                 var psurl1=document.getElementById('psurl1')
                 psurl1.setAttribute('href', data2[0].PSStoreURL)
+
+                var psscr1=document.getElementById('psscr1')
+                var pss1 = data2[0].SCORE
+                psscr1.append(pss1)
             
                 var psgame2 = document.getElementById('psn2');
                 psgame2.setAttribute('src', data2[1].Img)
@@ -270,6 +305,10 @@
             
                 var psurl2=document.getElementById('psurl2')
                 psurl2.setAttribute('href', data2[1].PSStoreURL)
+
+                   var psscr2=document.getElementById('psscr2')
+                var pss2 = data2[1].SCORE
+                psscr2.append(pss2)
             
                 var psgame3 = document.getElementById('psn3');
                 psgame3.setAttribute('src', data2[2].Img)
@@ -290,6 +329,10 @@
             
                 var psurl3=document.getElementById('psurl3')
                 psurl3.setAttribute('href', data2[2].PSStoreURL)
+
+                     var psscr3=document.getElementById('psscr3')
+                var pss3 = data2[2].SCORE
+                psscr3.append(pss3)
             
                 var psgame4 = document.getElementById('psn4');
                 psgame4.setAttribute('src', data2[3].Img)
@@ -310,6 +353,10 @@
             
                 var psurl4=document.getElementById('psurl4')
                 psurl4.setAttribute('href', data2[3].PSStoreURL)
+
+                     var psscr4=document.getElementById('psscr4')
+                var pss4 = data2[3].SCORE
+                psscr4.append(pss4)
             
                 var psgame5 = document.getElementById('psn5');
                 psgame5.setAttribute('src', data2[4].Img)
@@ -331,6 +378,10 @@
                 var psurl5=document.getElementById('psurl5')
                 psurl5.setAttribute('href', data2[4].PSStoreURL)
 
+                       var psscr5=document.getElementById('psscr5')
+                var pss5 = data2[4].SCORE
+                psscr5.append(pss5)
+
                  var psgame6 = document.getElementById('psn6');
                 psgame6.setAttribute('src', data2[5].Img)
                 var pstitle6 = document.getElementById('pstitle6')
@@ -350,6 +401,10 @@
             
                 var psurl6=document.getElementById('psurl6')
                 psurl6.setAttribute('href', data2[5].PSStoreURL)
+
+                       var psscr6=document.getElementById('psscr6')
+                var pss6 = data2[5].SCORE
+                psscr6.append(pss6)
 
                  var psgame7 = document.getElementById('psn7');
                 psgame7.setAttribute('src', data2[6].Img)
@@ -371,6 +426,10 @@
                 var psurl7=document.getElementById('psurl7')
                 psurl7.setAttribute('href', data2[6].PSStoreURL)
 
+                         var psscr7=document.getElementById('psscr7')
+                var pss7 = data2[6].SCORE
+                psscr7.append(pss7)
+
 
                  var psgame8 = document.getElementById('psn8');
                 psgame8.setAttribute('src', data2[7].Img)
@@ -391,6 +450,10 @@
             
                 var psurl8=document.getElementById('psurl8')
                 psurl8.setAttribute('href', data2[7].PSStoreURL)
+
+                      var psscr8=document.getElementById('psscr8')
+                var pss8 = data2[7].SCORE
+                psscr8.append(pss8)
 
 
 
