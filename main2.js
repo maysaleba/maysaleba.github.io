@@ -260,7 +260,7 @@
             
                 function append_json2(data2){
                 var psgame1 = document.getElementById('psn1');
-                psgame1.setAttribute('src', data2[0].Img)
+                psgame1.setAttribute('src', data2[0].CoverArt)
                 var pstitle1 = document.getElementById('pstitle1')
                 var pst1 = data2[0].GameName
                 pstitle1.append(pst1);
@@ -287,178 +287,185 @@
                 psscr1.append(pss1)
             
                 var psgame2 = document.getElementById('psn2');
-                psgame2.setAttribute('src', data2[1].Img)
+                psgame2.setAttribute('src', data2[3].CoverArt)
                 var pstitle2 = document.getElementById('pstitle2')
-                var pst2 = data2[1].GameName
+                var pst2 = data2[3].GameName
                 pstitle2.append(pst2);
                         var psprice2 = document.getElementById('psprice2')
-                var psp2 = (data2[1].SalePrice)/100*phpExchange
+                var psp2 = (data2[3].SalePrice)/100*phpExchange
                 psp2 = Math.round(psp2)
                 psprice2.append('  ₱'+psp2);
                 var psdisc2 = document.getElementById('psdisc2')
-                var psd2 = data2[1].DiscPerc
+                var psd2 = data2[3].DiscPerc
                 psdisc2.append('-'+psd2+'% ');
                 var plusprice2 = document.getElementById('plusprice2')
-                var plusp2 = (data2[1].PlusPrice)/100*phpExchange
+                var plusp2 = (data2[3].PlusPrice)/100*phpExchange
                 plusp2 = Math.round(plusp2)
                 plusprice2.append(' ₱'+plusp2);
             
                 var psurl2=document.getElementById('psurl2')
-                psurl2.setAttribute('href', data2[1].PSStoreURL)
+                psurl2.setAttribute('href', data2[3].PSStoreURL)
 
                    var psscr2=document.getElementById('psscr2')
-                var pss2 = data2[1].SCORE
+                var pss2 = data2[3].SCORE
                 psscr2.append(pss2)
             
                 var psgame3 = document.getElementById('psn3');
-                psgame3.setAttribute('src', data2[2].Img)
+                psgame3.setAttribute('src', data2[4].CoverArt)
                 var pstitle3 = document.getElementById('pstitle3')
-                var pst3 = data2[2].GameName
+                var pst3 = data2[4].GameName
                 pstitle3.append(pst3);
                         var psprice3 = document.getElementById('psprice3')
-                var psp3 = (data2[2].SalePrice)/100*phpExchange
+                var psp3 = (data2[4].SalePrice)/100*phpExchange
                 psp3 = Math.round(psp3)
                 psprice3.append('  ₱'+psp3);
                 var psdisc3 = document.getElementById('psdisc3')
-                var psd3 = data2[2].DiscPerc
+                var psd3 = data2[4].DiscPerc
                 psdisc3.append('-'+psd3+'% ');
                 var plusprice3 = document.getElementById('plusprice3')
-                var plusp3 = (data2[2].PlusPrice)/100*phpExchange
+                var plusp3 = (data2[4].PlusPrice)/100*phpExchange
                 plusp3 = Math.round(plusp3)
                 plusprice3.append(' ₱'+plusp3);
             
                 var psurl3=document.getElementById('psurl3')
-                psurl3.setAttribute('href', data2[2].PSStoreURL)
+                psurl3.setAttribute('href', data2[4].PSStoreURL)
 
                      var psscr3=document.getElementById('psscr3')
-                var pss3 = data2[2].SCORE
+                var pss3 = data2[4].SCORE
                 psscr3.append(pss3)
-            
+                
+
+                var z4 = 14;
                 var psgame4 = document.getElementById('psn4');
-                psgame4.setAttribute('src', data2[3].Img)
+                psgame4.setAttribute('src', data2[z4].CoverArt)
                 var pstitle4 = document.getElementById('pstitle4')
-                var pst4 = data2[3].GameName
+                var pst4 = data2[z4].GameName
                 pstitle4.append(pst4);
                         var psprice4 = document.getElementById('psprice4')
-                var psp4 = (data2[3].SalePrice)/100*phpExchange
+                var psp4 = (data2[z4].SalePrice)/100*phpExchange
                 psp4 = Math.round(psp4)
                 psprice4.append('  ₱'+psp4);
                 var psdisc4 = document.getElementById('psdisc4')
-                var psd4 = data2[3].DiscPerc
+                var psd4 = data2[z4].DiscPerc
                 psdisc4.append('-'+psd4+'% ');
                 var plusprice4 = document.getElementById('plusprice4')
-                var plusp4 = (data2[3].PlusPrice)/100*phpExchange
+                var plusp4 = (data2[z4].PlusPrice)/100*phpExchange
                 plusp4 = Math.round(plusp4)
                 plusprice4.append(' ₱'+plusp4);
             
                 var psurl4=document.getElementById('psurl4')
-                psurl4.setAttribute('href', data2[3].PSStoreURL)
+                psurl4.setAttribute('href', data2[z4].PSStoreURL)
 
-                     var psscr4=document.getElementById('psscr4')
-                var pss4 = data2[3].SCORE
+                var psscr4=document.getElementById('psscr4')
+                var pss4 = data2[z4].SCORE
                 psscr4.append(pss4)
-            
+
+
+                var z5 = 8;
                 var psgame5 = document.getElementById('psn5');
-                psgame5.setAttribute('src', data2[4].Img)
+                psgame5.setAttribute('src', data2[z5].CoverArt)
                 var pstitle5 = document.getElementById('pstitle5')
-                var pst5 = data2[4].GameName
+                var pst5 = data2[z5].GameName
                 pstitle5.append(pst5);
                         var psprice5 = document.getElementById('psprice5')
-                var psp5 = (data2[4].SalePrice)/100*phpExchange
+                var psp5 = (data2[z5].SalePrice)/100*phpExchange
                 psp5 = Math.round(psp5)
                 psprice5.append('  ₱'+psp5);
                 var psdisc5 = document.getElementById('psdisc5')
-                var psd5 = data2[4].DiscPerc
+                var psd5 = data2[z5].DiscPerc
                 psdisc5.append('-'+psd5+'% ');
                 var plusprice5 = document.getElementById('plusprice5')
-                var plusp5 = (data2[4].PlusPrice)/100*phpExchange
+                var plusp5 = (data2[z5].PlusPrice)/100*phpExchange
                 plusp5 = Math.round(plusp5)
                 plusprice5.append(' ₱'+plusp5);
             
                 var psurl5=document.getElementById('psurl5')
-                psurl5.setAttribute('href', data2[4].PSStoreURL)
+                psurl5.setAttribute('href', data2[z5].PSStoreURL)
 
                        var psscr5=document.getElementById('psscr5')
-                var pss5 = data2[4].SCORE
+                var pss5 = data2[z5].SCORE
                 psscr5.append(pss5)
 
-                 var psgame6 = document.getElementById('psn6');
-                psgame6.setAttribute('src', data2[5].Img)
+                var z6 = 9;
+                var psgame6 = document.getElementById('psn6');
+                psgame6.setAttribute('src', data2[z6].CoverArt)
                 var pstitle6 = document.getElementById('pstitle6')
-                var pst6 = data2[5].GameName
+                var pst6 = data2[z6].GameName
                 pstitle6.append(pst6);
                         var psprice6 = document.getElementById('psprice6')
-                var psp6 = (data2[5].SalePrice)/100*phpExchange
+                var psp6 = (data2[z6].SalePrice)/100*phpExchange
                 psp6 = Math.round(psp6)
                 psprice6.append('  ₱'+psp6);
                 var psdisc6 = document.getElementById('psdisc6')
-                var psd6 = data2[5].DiscPerc
+                var psd6 = data2[z6].DiscPerc
                 psdisc6.append('-'+psd6+'% ');
                 var plusprice6 = document.getElementById('plusprice6')
-                var plusp6 = (data2[5].PlusPrice)/100*phpExchange
+                var plusp6 = (data2[z6].PlusPrice)/100*phpExchange
                 plusp6 = Math.round(plusp6)
                 plusprice6.append(' ₱'+plusp6);
             
                 var psurl6=document.getElementById('psurl6')
-                psurl6.setAttribute('href', data2[5].PSStoreURL)
+                psurl6.setAttribute('href', data2[z6].PSStoreURL)
 
                        var psscr6=document.getElementById('psscr6')
-                var pss6 = data2[5].SCORE
+                var pss6 = data2[z6].SCORE
                 psscr6.append(pss6)
 
-                 var psgame7 = document.getElementById('psn7');
-                psgame7.setAttribute('src', data2[6].Img)
+                var z7 = 10;
+                var psgame7 = document.getElementById('psn7');
+                psgame7.setAttribute('src', data2[z7].CoverArt)
                 var pstitle7 = document.getElementById('pstitle7')
-                var pst7 = data2[6].GameName
+                var pst7 = data2[z7].GameName
                 pstitle7.append(pst7);
                         var psprice7 = document.getElementById('psprice7')
-                var psp7 = (data2[6].SalePrice)/100*phpExchange
+                var psp7 = (data2[z7].SalePrice)/100*phpExchange
                 psp7 = Math.round(psp7)
                 psprice7.append('  ₱'+psp7);
                 var psdisc7 = document.getElementById('psdisc7')
-                var psd7 = data2[6].DiscPerc
+                var psd7 = data2[z7].DiscPerc
                 psdisc7.append('-'+psd7+'% ');
                 var plusprice7 = document.getElementById('plusprice7')
-                var plusp7 = (data2[6].PlusPrice)/100*phpExchange
+                var plusp7 = (data2[z7].PlusPrice)/100*phpExchange
                 plusp7 = Math.round(plusp7)
                 plusprice7.append(' ₱'+plusp7);
             
                 var psurl7=document.getElementById('psurl7')
-                psurl7.setAttribute('href', data2[6].PSStoreURL)
+                psurl7.setAttribute('href', data2[z7].PSStoreURL)
 
                          var psscr7=document.getElementById('psscr7')
-                var pss7 = data2[6].SCORE
+                var pss7 = data2[z7].SCORE
                 psscr7.append(pss7)
 
-
-                 var psgame8 = document.getElementById('psn8');
-                psgame8.setAttribute('src', data2[7].Img)
+                var z8 = 20;
+                var psgame8 = document.getElementById('psn8');
+                psgame8.setAttribute('src', data2[z8].CoverArt)
                 var pstitle8 = document.getElementById('pstitle8')
-                var pst8 = data2[7].GameName
+                var pst8 = data2[z8].GameName
                 pstitle8.append(pst8);
                         var psprice8 = document.getElementById('psprice8')
-                var psp8 = (data2[7].SalePrice)/100*phpExchange
+                var psp8 = (data2[z8].SalePrice)/100*phpExchange
                 psp8 = Math.round(psp8)
                 psprice8.append('  ₱'+psp8);
                 var psdisc8 = document.getElementById('psdisc8')
-                var psd8 = data2[7].DiscPerc
+                var psd8 = data2[z8].DiscPerc
                 psdisc8.append('-'+psd8+'% ');
                 var plusprice8 = document.getElementById('plusprice8')
-                var plusp8 = (data2[7].PlusPrice)/100*phpExchange
+                var plusp8 = (data2[z8].PlusPrice)/100*phpExchange
                 plusp8 = Math.round(plusp8)
                 plusprice8.append(' ₱'+plusp8);
             
                 var psurl8=document.getElementById('psurl8')
-                psurl8.setAttribute('href', data2[7].PSStoreURL)
+                psurl8.setAttribute('href', data2[z8].PSStoreURL)
 
                       var psscr8=document.getElementById('psscr8')
-                var pss8 = data2[7].SCORE
+                var pss8 = data2[z8].SCORE
                 psscr8.append(pss8)
 
 
 
                
             }
+
             
             
             
