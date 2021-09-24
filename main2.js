@@ -182,7 +182,7 @@
                 var s3 = data[ns3].SCORE
                 scr3.append(s3)
             
-                var ns4 = 3;
+                var ns4 = 10;
 
                 var discuntil4 = document.getElementById('discuntil4');
                 var dscun4= data[ns4].SaleEnds;
