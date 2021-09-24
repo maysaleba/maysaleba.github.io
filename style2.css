@@ -194,6 +194,10 @@ li {
   font-size: 16px;
 }
 
+.card-text{
+    font-size:12px;
+}
+
 .starlogo {
   width: 50%;
   height: auto;
