@@ -62,7 +62,8 @@
             
             
             var theURL='https://api.exchangerate.host/latest?base=PHP&v=_'+today+'_';
-            
+
+
             
             function httpGet(theUrl)
             {
@@ -82,6 +83,7 @@
             var mexExchange = 1/fxcp.rates.MXN;
             
             
+
             
             // Nintendo switch start
             //this function appends the json data to the table 'gable'
@@ -262,7 +264,7 @@
                 var psgame1 = document.getElementById('psn1');
                 psgame1.setAttribute('src', data2[0].CoverArt+'?w=500')
                 var pstitle1 = document.getElementById('pstitle1')
-                var pst1 = data2[0].GameName
+                var pst1 = data2[0].ProductName
                 pstitle1.append(pst1);
                 
                 var psprice1 = document.getElementById('psprice1')
@@ -289,7 +291,7 @@
                 var psgame2 = document.getElementById('psn2');
                 psgame2.setAttribute('src', data2[3].CoverArt+'?w=500')
                 var pstitle2 = document.getElementById('pstitle2')
-                var pst2 = data2[3].GameName
+                var pst2 = data2[3].ProductName
                 pstitle2.append(pst2);
                         var psprice2 = document.getElementById('psprice2')
                 var psp2 = (data2[3].SalePrice)/100*phpExchange
@@ -313,7 +315,7 @@
                 var psgame3 = document.getElementById('psn3');
                 psgame3.setAttribute('src', data2[4].CoverArt+'?w=500')
                 var pstitle3 = document.getElementById('pstitle3')
-                var pst3 = data2[4].GameName
+                var pst3 = data2[4].ProductName
                 pstitle3.append(pst3);
                         var psprice3 = document.getElementById('psprice3')
                 var psp3 = (data2[4].SalePrice)/100*phpExchange
@@ -339,7 +341,7 @@
                 var psgame4 = document.getElementById('psn4');
                 psgame4.setAttribute('src', data2[z4].CoverArt+'?w=500')
                 var pstitle4 = document.getElementById('pstitle4')
-                var pst4 = data2[z4].GameName
+                var pst4 = data2[z4].ProductName
                 pstitle4.append(pst4);
                         var psprice4 = document.getElementById('psprice4')
                 var psp4 = (data2[z4].SalePrice)/100*phpExchange
@@ -365,7 +367,7 @@
                 var psgame5 = document.getElementById('psn5');
                 psgame5.setAttribute('src', data2[z5].CoverArt+'?w=500')
                 var pstitle5 = document.getElementById('pstitle5')
-                var pst5 = data2[z5].GameName
+                var pst5 = data2[z5].ProductName
                 pstitle5.append(pst5);
                         var psprice5 = document.getElementById('psprice5')
                 var psp5 = (data2[z5].SalePrice)/100*phpExchange
@@ -390,7 +392,7 @@
                 var psgame6 = document.getElementById('psn6');
                 psgame6.setAttribute('src', data2[z6].CoverArt+'?w=500')
                 var pstitle6 = document.getElementById('pstitle6')
-                var pst6 = data2[z6].GameName
+                var pst6 = data2[z6].ProductName
                 pstitle6.append(pst6);
                         var psprice6 = document.getElementById('psprice6')
                 var psp6 = (data2[z6].SalePrice)/100*phpExchange
@@ -415,7 +417,7 @@
                 var psgame7 = document.getElementById('psn7');
                 psgame7.setAttribute('src', data2[z7].CoverArt+'?w=500')
                 var pstitle7 = document.getElementById('pstitle7')
-                var pst7 = data2[z7].GameName
+                var pst7 = data2[z7].ProductName
                 pstitle7.append(pst7);
                         var psprice7 = document.getElementById('psprice7')
                 var psp7 = (data2[z7].SalePrice)/100*phpExchange
@@ -440,7 +442,7 @@
                 var psgame8 = document.getElementById('psn8');
                 psgame8.setAttribute('src', data2[z8].CoverArt+'?w=500')
                 var pstitle8 = document.getElementById('pstitle8')
-                var pst8 = data2[z8].GameName
+                var pst8 = data2[z8].ProductName
                 pstitle8.append(pst8);
                         var psprice8 = document.getElementById('psprice8')
                 var psp8 = (data2[z8].SalePrice)/100*phpExchange
@@ -462,6 +464,22 @@
                 psscr8.append(pss8)
 
 
+
+                     var dscun1= data2[0].DiscountedUntil;
+                    
+
+
+
+            const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+            const firstDate = new Date(today);
+            const secondDate = new Date(dscun1);
+
+            console.log(secondDate);
+            console.log(firstDate);
+
+            const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
+            
+            console.log(diffDays);
 
                
             }
