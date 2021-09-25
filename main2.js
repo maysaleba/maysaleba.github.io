@@ -82,529 +82,188 @@
             var phpExchange = 1/fxcp.rates.USD;
             var mexExchange = 1/fxcp.rates.MXN;
             
-            
+            const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+            const firstDate = new Date(today);
 
             
-            // Nintendo switch start
+            // nintendo switch start
             //this function appends the json data to the table 'gable'
             function append_json(data){
 
-                const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-                const firstDate = new Date(today);
-                
 
-                var ns1 = 0;
-                var discuntil1 = document.getElementById('discuntil1');
-                var dscun1= data[ns1].SaleEnds;
-                const secondDate1 = new Date(dscun1);
-                const diffDays1 = Math.round(Math.abs((firstDate - secondDate1) / oneDay));
-                discuntil1.append(diffDays1+' days left');
 
-                var game1 = document.getElementById('imgur');
-                game1.setAttribute('src', data[ns1].Image+'.jpg')
-                
-                var title1 = document.getElementById('title1')
-                var t1 = data[ns1].Title
-                title1.append(t1);
+
+                function days_checker(id, numvalue){
+                    var discuntil = document.getElementById(id);
+                    var dscun = data[numvalue].SaleEnds
+                    const secondDate = new Date(dscun);
+                    const diffDays = Math.round((secondDate - firstDate) / oneDay);
+                    
+                     if (diffDays <= 0){
+                    console.log("expired")
+                    discuntil.classList.add("badge")
+                    discuntil.classList.add("bg-secondary")
+                    discuntil.append('Expired');
+                    } else {
+                    console.log("active")
+                    discuntil.classList.add("badge")
+                    discuntil.classList.add("bg-warning")
+                    discuntil.classList.add("text-dark")
+                    discuntil.append(diffDays+' days left');
+                 }
+                }
+
                
-                var price1 = document.getElementById('price1')
-                var p1 = data[ns1].SalePrice*phpExchange
-                p1 = Math.round(p1)
-                price1.append('  ₱'+p1);
+               function card_setter(image, title, price, discount, url, score, index){
+                var card_image = document.getElementById(image);
+                var card_title = document.getElementById(title);
+                var price = document.getElementById(price);
+                var discount = document.getElementById(discount);
+                var url = document.getElementById(url);
+                var score = document.getElementById(score)
+                var pesoprice = Math.round(data[index].SalePrice*phpExchange)
+                card_image.setAttribute('src', data[index].Image+'.jpg')
+                card_title.append(data[index].Title)
+                price.append('  ₱'+pesoprice);
+                discount.append('-'+data[index].PercentOff+' ');
+                url.setAttribute('href', 'https://www.nintendo.com'+data[index].URL)
+                score.append(data[index].SCORE);
+               }
 
-                
-                var disc1 = document.getElementById('disc1')
-                var d1 = data[ns1].PercentOff
-                disc1.append('-'+d1+' ');
-
-                var url1=document.getElementById('url1')
-                url1.setAttribute('href', 'https://www.nintendo.com'+data[ns1].URL)
-
-                var scr1=document.getElementById('scr1')
-                var s1 = data[ns1].SCORE
-                scr1.append(s1)
                
-            
-                var ns2 = 1;
+               // Playstation start
 
-                var discuntil2 = document.getElementById('discuntil2');
-                var dscun2= data[ns2].SaleEnds;
-                const secondDate2 = new Date(dscun2);
-                const diffDays2 = Math.round(Math.abs((firstDate - secondDate2) / oneDay));
-                discuntil2.append(diffDays2+' days left');
-
-                var game2 = document.getElementById('imgur2');
-                game2.setAttribute('src', data[ns2].Image+'.jpg')
-                var title2 = document.getElementById('title2')
-                var t2 = data[ns2].Title
-                title2.append(t2);
-                 var price2 = document.getElementById('price2')
-                var p2 = data[ns2].SalePrice*phpExchange
-                p2 = Math.round(p2)
-                price2.append('  ₱'+p2);
-                var disc2 = document.getElementById('disc2')
-                var d2 = data[ns2].PercentOff
-                disc2.append('-'+d2+' ');
-            
-                var url2=document.getElementById('url2')
-                url2.setAttribute('href', 'https://www.nintendo.com'+data[ns2].URL)
-
-                var scr2=document.getElementById('scr2')
-                var s2 = data[ns2].SCORE
-                scr2.append(s2)
-            
-
-                var ns3 = 2;
-
-                var discuntil3 = document.getElementById('discuntil3');
-                var dscun3= data[ns3].SaleEnds;
-                const secondDate3 = new Date(dscun3);
-                const diffDays3 = Math.round(Math.abs((firstDate - secondDate3) / oneDay));
-                discuntil3.append(diffDays3+' days left');
-
-                var game3 = document.getElementById('imgur3');
-                game3.setAttribute('src', data[ns3].Image+'.jpg')
-                var title3 = document.getElementById('title3')
-                var t3 = data[ns3].Title
-                title3.append(t3);
-                    var price3 = document.getElementById('price3')
-                var p3 = data[ns3].SalePrice*phpExchange
-                p3 = Math.round(p3)
-                price3.append('  ₱'+p3);
-                var disc3 = document.getElementById('disc3')
-                var d3 = data[ns3].PercentOff
-                disc3.append('-'+d3+' ');
-            
-                var url3=document.getElementById('url3')
-                url3.setAttribute('href', 'https://www.nintendo.com'+data[ns3].URL)
-
-                var scr3=document.getElementById('scr3')
-                var s3 = data[ns3].SCORE
-                scr3.append(s3)
-            
-                var ns4 = 10;
-
-                var discuntil4 = document.getElementById('discuntil4');
-                var dscun4= data[ns4].SaleEnds;
-                const secondDate4 = new Date(dscun4);
-                const diffDays4 = Math.round(Math.abs((firstDate - secondDate4) / oneDay));
-                discuntil4.append(diffDays4+' days left');
-
-
-                var game4 = document.getElementById('imgur4');
-                game4.setAttribute('src', data[ns4].Image+'.jpg')
-                var title4 = document.getElementById('title4')
-                var t4 = data[ns4].Title
-                title4.append(t4);
-                    var price4 = document.getElementById('price4')
-                var p4 = data[ns4].SalePrice*phpExchange
-                p4 = Math.round(p4)
-                price4.append('  ₱'+p4);
-                var disc4 = document.getElementById('disc4')
-                var d4 = data[ns4].PercentOff
-                disc4.append('-'+d4+' ');
-            
-                var url4=document.getElementById('url4')
-                url4.setAttribute('href', 'https://www.nintendo.com'+data[ns4].URL)
-
-                var scr4=document.getElementById('scr4')
-                var s4 = data[ns4].SCORE
-                scr4.append(s4)
-
-                var ns5 = 4;
-
-                var discuntil5 = document.getElementById('discuntil5');
-                var dscun5= data[ns5].SaleEnds;
-                const secondDate5 = new Date(dscun5);
-                const diffDays5 = Math.round(Math.abs((firstDate - secondDate5) / oneDay));
-                discuntil5.append(diffDays5+' days left');
                 
-                var game5 = document.getElementById('imgur5');
-                game5.setAttribute('src', data[ns5].Image+'.jpg')
-                var title5 = document.getElementById('title5')
-                var t5 = data[ns5].Title
-                title5.append(t5);
-                    var price5 = document.getElementById('price5')
-                var p5 = data[ns5].SalePrice*phpExchange
-                p5 = Math.round(p5)
-                price5.append('  ₱'+p5);
-                var disc5 = document.getElementById('disc5')
-                var d5 = data[ns5].PercentOff
-                disc5.append('-'+d5+' ');
-            
-                var url5=document.getElementById('url5')
-                url5.setAttribute('href', 'https://www.nintendo.com'+data[ns5].URL)
+                var numx = 1;  
+                var index = numx-1;           
+                days_checker('discuntil'+numx, index);
+                card_setter('imgur'+numx, 'title'+numx, 'price'+numx, 'disc'+numx, 'url'+numx, 'scr'+numx, index);
 
-                var scr5=document.getElementById('scr5')
-                var s5 = data[ns5].SCORE
-                scr5.append(s5)
+                var numx = 2;  
+                var index = numx-1;             
+                days_checker('discuntil'+numx, index);
+                card_setter('imgur'+numx, 'title'+numx, 'price'+numx, 'disc'+numx, 'url'+numx, 'scr'+numx, index);
 
-                var ns6 = 5;
+                var numx = 3;  
+                var index = numx-1;            
+                days_checker('discuntil'+numx, index);
+                card_setter('imgur'+numx, 'title'+numx, 'price'+numx, 'disc'+numx, 'url'+numx, 'scr'+numx, index);
 
-                var discuntil6 = document.getElementById('discuntil6');
-                var dscun6= data[ns6].SaleEnds;
-                const secondDate6 = new Date(dscun6);
-                const diffDays6 = Math.round(Math.abs((firstDate - secondDate6) / oneDay));
-                discuntil6.append(diffDays6+' days left');
+                var numx = 4;  
+                var index = numx-1;           
+                days_checker('discuntil'+numx, index);
+                card_setter('imgur'+numx, 'title'+numx, 'price'+numx, 'disc'+numx, 'url'+numx, 'scr'+numx, index);
 
+                var numx = 5;  
+                var index = numx-1;             
+                days_checker('discuntil'+numx, index);
+                card_setter('imgur'+numx, 'title'+numx, 'price'+numx, 'disc'+numx, 'url'+numx, 'scr'+numx, index);
 
-                var game6 = document.getElementById('imgur6');
-                game6.setAttribute('src', data[ns6].Image+'.jpg')
-                var title6 = document.getElementById('title6')
-                var t6 = data[ns6].Title
-                title6.append(t6);
-                    var price6 = document.getElementById('price6')
-                var p6 = data[ns6].SalePrice*phpExchange
-                p6 = Math.round(p6)
-                price6.append('  ₱'+p6);
-                var disc6 = document.getElementById('disc6')
-                var d6 = data[ns6].PercentOff
-                disc6.append('-'+d6+' ');
-            
-                var url6=document.getElementById('url6')
-                url6.setAttribute('href', 'https://www.nintendo.com'+data[ns6].URL)
+                var numx = 6;  
+                var index = numx-1;           
+                days_checker('discuntil'+numx, index);
+                card_setter('imgur'+numx, 'title'+numx, 'price'+numx, 'disc'+numx, 'url'+numx, 'scr'+numx, index);
 
-                var scr6=document.getElementById('scr6')
-                var s6 = data[ns6].SCORE
-                scr6.append(s6)
-                
-                var ns7 = 6;
+                var numx = 7;  
+                var index = numx-1;           
+                days_checker('discuntil'+numx, index);
+                card_setter('imgur'+numx, 'title'+numx, 'price'+numx, 'disc'+numx, 'url'+numx, 'scr'+numx, index);
 
-                var discuntil7 = document.getElementById('discuntil7');
-                var dscun7= data[ns7].SaleEnds;
-                const secondDate7 = new Date(dscun7);
-                const diffDays7 = Math.round(Math.abs((firstDate - secondDate7) / oneDay));
-                discuntil7.append(diffDays7+' days left');
-
-
-                var game7 = document.getElementById('imgur7');
-                game7.setAttribute('src', data[ns7].Image+'.jpg')
-                var title7 = document.getElementById('title7')
-                var t7 = data[ns7].Title
-                title7.append(t7);
-                var price7 = document.getElementById('price7')
-                var p7 = data[ns7].SalePrice*phpExchange
-                p7 = Math.round(p7)
-                price7.append('  ₱'+p7);
-                var disc7 = document.getElementById('disc7')
-                var d7 = data[ns7].PercentOff
-                disc7.append('-'+d7+' ');
-            
-                var url7=document.getElementById('url7')
-                url7.setAttribute('href', 'https://www.nintendo.com'+data[ns7].URL)
-
-                var scr7=document.getElementById('scr7')
-                var s7 = data[ns7].SCORE
-                scr7.append(s7)
-                
-
-                var ns8 = 7;
-
-                var discuntil8 = document.getElementById('discuntil8');
-                var dscun8= data[ns8].SaleEnds;
-                const secondDate8 = new Date(dscun8);
-                const diffDays8 = Math.round(Math.abs((firstDate - secondDate8) / oneDay));
-                discuntil8.append(diffDays8+' days left');
-
-                var game8 = document.getElementById('imgur8');
-                game8.setAttribute('src', data[ns8].Image+'.jpg')
-                var title8 = document.getElementById('title8')
-                var t8 = data[ns8].Title
-                title8.append(t8);
-                    var price8 = document.getElementById('price8')
-                var p8 = data[ns8].SalePrice*phpExchange
-                p8 = Math.round(p8)
-                price8.append('  ₱'+p8);
-                var disc8 = document.getElementById('disc8')
-                var d8 = data[ns8].PercentOff
-                disc8.append('-'+d8+' ');
-
-                var url8=document.getElementById('url8')
-                url8.setAttribute('href', 'https://www.nintendo.com'+data[ns8].URL)
-
-                var scr8=document.getElementById('scr8')
-                var s8 = data[ns8].SCORE
-                scr8.append(s8)
-
-
-
+                var numx = 8;  
+                var index = numx-1;           
+                days_checker('discuntil'+numx, index);
+                card_setter('imgur'+numx, 'title'+numx, 'price'+numx, 'disc'+numx, 'url'+numx, 'scr'+numx, index);
 
             }
             
-            // Playstation Start
+
+            // Playstation Cards
             
                 function append_json2(data2){
 
-                const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-                const firstDate = new Date(today);
+                    function psdays_checker(id, numvalue){
+                    var discuntil = document.getElementById(id);
+                    var dscun = data2[numvalue].DiscountedUntil
+                    const secondDate = new Date(dscun);
+                    const diffDays = Math.round((secondDate - firstDate) / oneDay);
+                    
+                     if (diffDays <= 0){
+                    console.log("expired")
+                    discuntil.classList.add("badge")
+                    discuntil.classList.add("bg-secondary")
+                    discuntil.append('Expired');
+                    } else {
+                    console.log("active")
+                    discuntil.classList.add("badge")
+                    discuntil.classList.add("bg-warning")
+                    discuntil.classList.add("text-dark")
+                    discuntil.append(diffDays+' days left');
+                }
+                }
+              
 
-                var z1 = 0;
+                function pscard_setter(image, title, price, plusprice, discount, url, score, index){
+                var card_image = document.getElementById(image);
+                var card_title = document.getElementById(title);
+                var price = document.getElementById(price);
+                var plusprice = document.getElementById(plusprice);
+                var discount = document.getElementById(discount);
+                var url = document.getElementById(url);
+                var score = document.getElementById(score)
+                var pesoprice = Math.round(data2[index].SalePrice/100*phpExchange)
+                var pesoplusprice = Math.round((data2[index].PlusPrice)/100*phpExchange)
+                card_image.setAttribute('src', data2[index].CoverArt+'?w=500')
+                card_title.append(data2[index].ProductName)
+                price.append('  ₱'+pesoprice);
+                discount.append('-'+data2[index].DiscPerc+' ');
+                url.setAttribute('href', data2[index].PSStoreURL);
+                score.append(data2[index].SCORE);
+                plusprice.append(' ₱'+pesoplusprice);
+                }
 
-                var psdiscuntil1 = document.getElementById('psdiscuntil1');
-                var dscun1= data2[z1].DiscountedUntil;
-                const secondDate1 = new Date(dscun1);
-                const diffDays1 = Math.round(Math.abs((firstDate - secondDate1) / oneDay));
-                psdiscuntil1.append(diffDays1+' days left');
+                var numx = 1;  
+                var index = numx-1;            
+                psdays_checker('psdiscuntil'+numx, index);
+                pscard_setter('psn'+numx, 'pstitle'+numx, 'psprice'+numx, 'plusprice'+numx, 'psdisc'+numx, 'psurl'+numx, 'psscr'+numx, index);
 
 
-                var psgame1 = document.getElementById('psn1');
-                psgame1.setAttribute('src', data2[0].CoverArt+'?w=500')
-                var pstitle1 = document.getElementById('pstitle1')
-                var pst1 = data2[0].ProductName
-                pstitle1.append(pst1);
+                var numx = 2;  
+                var index = 3;              
+                psdays_checker('psdiscuntil'+numx, index);
+                pscard_setter('psn'+numx, 'pstitle'+numx, 'psprice'+numx, 'plusprice'+numx, 'psdisc'+numx, 'psurl'+numx, 'psscr'+numx, index);
+
+                var numx = 3;  
+                var index = 4;              
+                psdays_checker('psdiscuntil'+numx, index);
+                pscard_setter('psn'+numx, 'pstitle'+numx, 'psprice'+numx, 'plusprice'+numx, 'psdisc'+numx, 'psurl'+numx, 'psscr'+numx, index);
+
+
+                var numx = 4;  
+                var index = 14;              
+                psdays_checker('psdiscuntil'+numx, index);
+                pscard_setter('psn'+numx, 'pstitle'+numx, 'psprice'+numx, 'plusprice'+numx, 'psdisc'+numx, 'psurl'+numx, 'psscr'+numx, index);
+
+
+                var numx = 5;  
+                var index = 8;              
+                psdays_checker('psdiscuntil'+numx, index);
+                pscard_setter('psn'+numx, 'pstitle'+numx, 'psprice'+numx, 'plusprice'+numx, 'psdisc'+numx, 'psurl'+numx, 'psscr'+numx, index);
+
+                var numx = 6;  
+                var index = 9;              
+                psdays_checker('psdiscuntil'+numx, index);
+                pscard_setter('psn'+numx, 'pstitle'+numx, 'psprice'+numx, 'plusprice'+numx, 'psdisc'+numx, 'psurl'+numx, 'psscr'+numx, index);
                 
-                var psprice1 = document.getElementById('psprice1')
-                var psp1 = (data2[0].SalePrice)/100*phpExchange
-                psp1 = Math.round(psp1)
-                psprice1.append('  ₱'+psp1);
-                
-                var psdisc1 = document.getElementById('psdisc1')
-                var psd1 = data2[0].DiscPerc
-                psdisc1.append('-'+psd1+'% ');
-               
-                var plusprice1 = document.getElementById('plusprice1')
-                var plusp1 = (data2[0].PlusPrice)/100*phpExchange
-                plusp1 = Math.round(plusp1)
-                plusprice1.append(' ₱'+plusp1);
-            
-                var psurl1=document.getElementById('psurl1')
-                psurl1.setAttribute('href', data2[0].PSStoreURL)
-
-                var psscr1=document.getElementById('psscr1')
-                var pss1 = data2[0].SCORE
-                psscr1.append(pss1)
-
-                var z2 = 3;
-
-                var psdiscuntil2 = document.getElementById('psdiscuntil2');
-                var dscun2= data2[z2].DiscountedUntil;
-                const secondDate2 = new Date(dscun2);
-                const diffDays2 = Math.round(Math.abs((firstDate - secondDate2) / oneDay));
-                psdiscuntil2.append(diffDays2+' days left');
+                var numx = 7;  
+                var index = 10;              
+                psdays_checker('psdiscuntil'+numx, index);
+                pscard_setter('psn'+numx, 'pstitle'+numx, 'psprice'+numx, 'plusprice'+numx, 'psdisc'+numx, 'psurl'+numx, 'psscr'+numx, index);
 
 
-                var psgame2 = document.getElementById('psn2');
-                psgame2.setAttribute('src', data2[3].CoverArt+'?w=500')
-                var pstitle2 = document.getElementById('pstitle2')
-                var pst2 = data2[3].ProductName
-                pstitle2.append(pst2);
-                        var psprice2 = document.getElementById('psprice2')
-                var psp2 = (data2[3].SalePrice)/100*phpExchange
-                psp2 = Math.round(psp2)
-                psprice2.append('  ₱'+psp2);
-                var psdisc2 = document.getElementById('psdisc2')
-                var psd2 = data2[3].DiscPerc
-                psdisc2.append('-'+psd2+'% ');
-                var plusprice2 = document.getElementById('plusprice2')
-                var plusp2 = (data2[3].PlusPrice)/100*phpExchange
-                plusp2 = Math.round(plusp2)
-                plusprice2.append(' ₱'+plusp2);
-            
-                var psurl2=document.getElementById('psurl2')
-                psurl2.setAttribute('href', data2[3].PSStoreURL)
-
-                var psscr2=document.getElementById('psscr2')
-                var pss2 = data2[3].SCORE
-                psscr2.append(pss2)
-
-                var z3 = 4;
-
-                var psdiscuntil3 = document.getElementById('psdiscuntil3');
-                var dscun3= data2[z3].DiscountedUntil;
-                const secondDate3 = new Date(dscun3);
-                const diffDays3 = Math.round(Math.abs((firstDate - secondDate3) / oneDay));
-                psdiscuntil3.append(diffDays3+' days left');
-
-            
-                var psgame3 = document.getElementById('psn3');
-                psgame3.setAttribute('src', data2[4].CoverArt+'?w=500')
-                var pstitle3 = document.getElementById('pstitle3')
-                var pst3 = data2[4].ProductName
-                pstitle3.append(pst3);
-                        var psprice3 = document.getElementById('psprice3')
-                var psp3 = (data2[4].SalePrice)/100*phpExchange
-                psp3 = Math.round(psp3)
-                psprice3.append('  ₱'+psp3);
-                var psdisc3 = document.getElementById('psdisc3')
-                var psd3 = data2[4].DiscPerc
-                psdisc3.append('-'+psd3+'% ');
-                var plusprice3 = document.getElementById('plusprice3')
-                var plusp3 = (data2[4].PlusPrice)/100*phpExchange
-                plusp3 = Math.round(plusp3)
-                plusprice3.append(' ₱'+plusp3);
-            
-                var psurl3=document.getElementById('psurl3')
-                psurl3.setAttribute('href', data2[4].PSStoreURL)
-
-                var psscr3=document.getElementById('psscr3')
-                var pss3 = data2[4].SCORE
-                psscr3.append(pss3)
-                
-
-                var z4 = 14;
-
-                var psdiscuntil4 = document.getElementById('psdiscuntil4');
-                var dscun4= data2[z4].DiscountedUntil;
-                const secondDate4 = new Date(dscun4);
-                const diffDays4 = Math.round(Math.abs((firstDate - secondDate4) / oneDay));
-                psdiscuntil4.append(diffDays4+' days left');
-
-                var psgame4 = document.getElementById('psn4');
-                psgame4.setAttribute('src', data2[z4].CoverArt+'?w=500')
-                var pstitle4 = document.getElementById('pstitle4')
-                var pst4 = data2[z4].ProductName
-                pstitle4.append(pst4);
-                        var psprice4 = document.getElementById('psprice4')
-                var psp4 = (data2[z4].SalePrice)/100*phpExchange
-                psp4 = Math.round(psp4)
-                psprice4.append('  ₱'+psp4);
-                var psdisc4 = document.getElementById('psdisc4')
-                var psd4 = data2[z4].DiscPerc
-                psdisc4.append('-'+psd4+'% ');
-                var plusprice4 = document.getElementById('plusprice4')
-                var plusp4 = (data2[z4].PlusPrice)/100*phpExchange
-                plusp4 = Math.round(plusp4)
-                plusprice4.append(' ₱'+plusp4);
-            
-                var psurl4=document.getElementById('psurl4')
-                psurl4.setAttribute('href', data2[z4].PSStoreURL)
-
-                var psscr4=document.getElementById('psscr4')
-                var pss4 = data2[z4].SCORE
-                psscr4.append(pss4)
-
-
-                var z5 = 8;
-
-                var psdiscuntil5 = document.getElementById('psdiscuntil5');
-                var dscun5= data2[z5].DiscountedUntil;
-                const secondDate5 = new Date(dscun5);
-                const diffDays5 = Math.round(Math.abs((firstDate - secondDate5) / oneDay));
-                psdiscuntil5.append(diffDays5+' days left');
-
-
-                var psgame5 = document.getElementById('psn5');
-                psgame5.setAttribute('src', data2[z5].CoverArt+'?w=500')
-                var pstitle5 = document.getElementById('pstitle5')
-                var pst5 = data2[z5].ProductName
-                pstitle5.append(pst5);
-                        var psprice5 = document.getElementById('psprice5')
-                var psp5 = (data2[z5].SalePrice)/100*phpExchange
-                psp5 = Math.round(psp5)
-                psprice5.append('  ₱'+psp5);
-                var psdisc5 = document.getElementById('psdisc5')
-                var psd5 = data2[z5].DiscPerc
-                psdisc5.append('-'+psd5+'% ');
-                var plusprice5 = document.getElementById('plusprice5')
-                var plusp5 = (data2[z5].PlusPrice)/100*phpExchange
-                plusp5 = Math.round(plusp5)
-                plusprice5.append(' ₱'+plusp5);
-            
-                var psurl5=document.getElementById('psurl5')
-                psurl5.setAttribute('href', data2[z5].PSStoreURL)
-
-                       var psscr5=document.getElementById('psscr5')
-                var pss5 = data2[z5].SCORE
-                psscr5.append(pss5)
-
-                var z6 = 9;
-
-                var psdiscuntil6 = document.getElementById('psdiscuntil6');
-                var dscun6= data2[z6].DiscountedUntil;
-                const secondDate6 = new Date(dscun6);
-                const diffDays6 = Math.round(Math.abs((firstDate - secondDate6) / oneDay));
-                psdiscuntil6.append(diffDays6+' days left');
-
-
-                var psgame6 = document.getElementById('psn6');
-                psgame6.setAttribute('src', data2[z6].CoverArt+'?w=500')
-                var pstitle6 = document.getElementById('pstitle6')
-                var pst6 = data2[z6].ProductName
-                pstitle6.append(pst6);
-                        var psprice6 = document.getElementById('psprice6')
-                var psp6 = (data2[z6].SalePrice)/100*phpExchange
-                psp6 = Math.round(psp6)
-                psprice6.append('  ₱'+psp6);
-                var psdisc6 = document.getElementById('psdisc6')
-                var psd6 = data2[z6].DiscPerc
-                psdisc6.append('-'+psd6+'% ');
-                var plusprice6 = document.getElementById('plusprice6')
-                var plusp6 = (data2[z6].PlusPrice)/100*phpExchange
-                plusp6 = Math.round(plusp6)
-                plusprice6.append(' ₱'+plusp6);
-            
-                var psurl6=document.getElementById('psurl6')
-                psurl6.setAttribute('href', data2[z6].PSStoreURL)
-
-                var psscr6=document.getElementById('psscr6')
-                var pss6 = data2[z6].SCORE
-                psscr6.append(pss6)
-
-                var z7 = 10;
-
-                var psdiscuntil7 = document.getElementById('psdiscuntil7');
-                var dscun7= data2[z7].DiscountedUntil;
-                const secondDate7 = new Date(dscun7);
-                const diffDays7 = Math.round(Math.abs((firstDate - secondDate7) / oneDay));
-                psdiscuntil7.append(diffDays7+' days left');
-
-
-                var psgame7 = document.getElementById('psn7');
-                psgame7.setAttribute('src', data2[z7].CoverArt+'?w=500')
-                var pstitle7 = document.getElementById('pstitle7')
-                var pst7 = data2[z7].ProductName
-                pstitle7.append(pst7);
-                        var psprice7 = document.getElementById('psprice7')
-                var psp7 = (data2[z7].SalePrice)/100*phpExchange
-                psp7 = Math.round(psp7)
-                psprice7.append('  ₱'+psp7);
-                var psdisc7 = document.getElementById('psdisc7')
-                var psd7 = data2[z7].DiscPerc
-                psdisc7.append('-'+psd7+'% ');
-                var plusprice7 = document.getElementById('plusprice7')
-                var plusp7 = (data2[z7].PlusPrice)/100*phpExchange
-                plusp7 = Math.round(plusp7)
-                plusprice7.append(' ₱'+plusp7);
-            
-                var psurl7=document.getElementById('psurl7')
-                psurl7.setAttribute('href', data2[z7].PSStoreURL)
-
-                         var psscr7=document.getElementById('psscr7')
-                var pss7 = data2[z7].SCORE
-                psscr7.append(pss7)
-
-                var z8 = 20;
-
-                var psdiscuntil8 = document.getElementById('psdiscuntil8');
-                var dscun8= data2[z8].DiscountedUntil;
-                const secondDate8 = new Date(dscun8);
-                const diffDays8 = Math.round(Math.abs((firstDate - secondDate8) / oneDay));
-                psdiscuntil8.append(diffDays8+' days left');
-
-
-                var psgame8 = document.getElementById('psn8');
-                psgame8.setAttribute('src', data2[z8].CoverArt+'?w=500')
-                var pstitle8 = document.getElementById('pstitle8')
-                var pst8 = data2[z8].ProductName
-                pstitle8.append(pst8);
-                        var psprice8 = document.getElementById('psprice8')
-                var psp8 = (data2[z8].SalePrice)/100*phpExchange
-                psp8 = Math.round(psp8)
-                psprice8.append('  ₱'+psp8);
-                var psdisc8 = document.getElementById('psdisc8')
-                var psd8 = data2[z8].DiscPerc
-                psdisc8.append('-'+psd8+'% ');
-                var plusprice8 = document.getElementById('plusprice8')
-                var plusp8 = (data2[z8].PlusPrice)/100*phpExchange
-                plusp8 = Math.round(plusp8)
-                plusprice8.append(' ₱'+plusp8);
-            
-                var psurl8=document.getElementById('psurl8')
-                psurl8.setAttribute('href', data2[z8].PSStoreURL)
-
-                      var psscr8=document.getElementById('psscr8')
-                var pss8 = data2[z8].SCORE
-                psscr8.append(pss8)
+                var numx = 8;  
+                var index = 20;              
+                psdays_checker('psdiscuntil'+numx, index);
+                pscard_setter('psn'+numx, 'pstitle'+numx, 'psprice'+numx, 'plusprice'+numx, 'psdisc'+numx, 'psurl'+numx, 'psscr'+numx, index);
                
             }
 
