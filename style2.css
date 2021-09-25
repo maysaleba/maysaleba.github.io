@@ -170,6 +170,17 @@ a, a:hover, a:visited, a:active {
   width: 30%;
 }
 
+
+
+.create
+{
+background-image: url('psplus.svg');
+background-repeat: no-repeat;
+padding-left: 25px;  /* width of the image plus a little extra padding */
+display: inline;  /* may not need this, but I've found I do */
+}
+
+
 @media screen and (max-width: 900px) {
   .custom-container {
             display: block !important;

@@ -131,7 +131,7 @@
                }
 
                
-               // Playstation start
+               // Nintendo start
 
                 
                 var numx = 1;  
@@ -150,7 +150,7 @@
                 card_setter('imgur'+numx, 'title'+numx, 'price'+numx, 'disc'+numx, 'url'+numx, 'scr'+numx, index);
 
                 var numx = 4;  
-                var index = numx-1;           
+                var index = 10;           
                 days_checker('discuntil'+numx, index);
                 card_setter('imgur'+numx, 'title'+numx, 'price'+numx, 'disc'+numx, 'url'+numx, 'scr'+numx, index);
 
