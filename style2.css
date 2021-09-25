@@ -172,8 +172,9 @@ a, a:hover, a:visited, a:active {
 
 .card-img-overlay {
   position: absolute;
-    top: -5px;
-    right: 1px;
+    top: -10px;
+    left: -10px;
+    right: -10px;
     z-index: 1;
 }
 
