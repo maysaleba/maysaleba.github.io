@@ -174,10 +174,13 @@ a, a:hover, a:visited, a:active {
 
 .create
 {
+  background-size:  15px;
+  background-position:  left center;
 background-image: url('psplus.svg');
 background-repeat: no-repeat;
-padding-left: 25px;  /* width of the image plus a little extra padding */
-display: inline;  /* may not need this, but I've found I do */
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
 }
 
 
