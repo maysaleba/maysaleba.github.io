@@ -215,7 +215,7 @@
                 card_image.setAttribute('src', data2[index].CoverArt+'?w=500')
                 card_title.append(data2[index].ProductName)
                 price.append('  ₱'+pesoprice);
-                discount.append('-'+data2[index].DiscPerc+' ');
+                discount.append('-'+data2[index].DiscPerc+'%');
                 url.setAttribute('href', data2[index].PSStoreURL);
                 score.append(data2[index].SCORE);
                 plusprice.append(' ₱'+pesoplusprice);
