@@ -98,7 +98,7 @@
                     const secondDate = new Date(dscun);
                     const diffDays = Math.round((secondDate - firstDate) / oneDay);
 
-                    if (diffDays <= 0) {
+                    if (diffDays < 0) {
                         console.log("expired")
                         discuntil.classList.add("badge")
                         discuntil.classList.add("bg-secondary")
@@ -206,7 +206,7 @@
                     const secondDate = new Date(dscun);
                     const diffDays = Math.round((secondDate - firstDate) / oneDay);
 
-                    if (diffDays <= 0) {
+                    if (diffDays < 0) {
                         console.log("expired")
                         discuntil.classList.add("badge")
                         discuntil.classList.add("bg-secondary")
