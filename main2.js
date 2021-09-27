@@ -113,10 +113,12 @@
 
             fxc = httpGet();
             const fxcp = JSON.parse(fxc)
-            console.log(fxcp.rates.USD);
+            
 
             var phpExchange = 1 / fxcp.rates.USD;
             var mexExchange = 1 / fxcp.rates.MXN;
+
+            console.log(phpExchange);
 
             const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
             const firstDate = new Date(today);
