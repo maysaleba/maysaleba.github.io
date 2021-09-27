@@ -30,6 +30,16 @@
             function get_new_nsw() {
                 // Relative URL of external json file
                 var json_url = 'csvjson.json';
+                var d = new Date();
+                var lastd = new Date(d.setDate(d.getDate()-5));
+                var da = String(d.getDate()).padStart(2, '0');
+                var mo = String(d.getMonth() + 1).padStart(2, '0'); //January is 0!
+                var year = d.getFullYear();
+
+            daysago = year + '-' + mo + '-' + da;
+            console.log(daysago);
+
+
 
                 //Build the XMLHttpRequest (aka AJAX Request)
                 xmlhttp = new XMLHttpRequest();
@@ -38,7 +48,7 @@
 
                         var new_nsw_data = JSON.parse(this.responseText).filter(({
                             SaleStarted
-                        }) => SaleStarted === '2021-09-26'); // convert the response to a json object
+                        }) => SaleStarted > daysago); // convert the response to a json object
                         var new_len = new_nsw_data.length
                         append_new_nsw(new_nsw_data, new_len);
 
@@ -240,7 +250,7 @@
 
                 // Nintendo start
 
-                for (let count = 0; count < new_len && count <= 7; count++) {
+                for (let count = 0; count < new_len && count < 20; count++) {
                     create_cards(count, count);
                     var numx = count;
                     var index = count;
