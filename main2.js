@@ -15,7 +15,7 @@
 
                         var data = JSON.parse(this.responseText); // convert the response to a json object
                         append_json(data);
-                        console.log(data);
+                        
 
                     }
                 }
@@ -37,7 +37,6 @@
                 var year = d.getFullYear();
 
             daysago = year + '-' + mo + '-' + da;
-            console.log(daysago);
 
 
 
@@ -77,7 +76,7 @@
                             LastDiscounted
                         }) => LastDiscounted >'2021-09-22'); // convert the response to a json object
                         append_json2(data2);
-                        console.log(data2);
+                        
 
                     }
                 }
@@ -97,7 +96,7 @@
             var yyyy = today.getFullYear();
 
             today = yyyy + '-' + mm + '-' + dd;
-            console.log(today);
+            
 
 
             var theURL = 'https://api.exchangerate.host/latest?base=PHP&v=_' + today + '_';
@@ -108,7 +107,6 @@
                 var xmlHttp = new XMLHttpRequest();
                 xmlHttp.open("GET", theURL, false); // false for synchronous request
                 xmlHttp.send(null);
-                console.log(xmlHttp)
                 return xmlHttp.response;
             }
 
