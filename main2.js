@@ -160,7 +160,7 @@
                     var url = document.getElementById(url);
                     var score = document.getElementById(score)
                     var pesoprice = Math.round(new_nsw_data[index].SalePrice * phpExchange)
-                    card_image.setAttribute('src', new_nsw_data[index].Image + '.jpg')
+                    card_image.setAttribute('src', new_nsw_data[index].Image)
                     card_title.append(new_nsw_data[index].Title)
                     price.append('  ₱' + pesoprice);
                     discount.append('-' + new_nsw_data[index].PercentOff + ' ');
