@@ -73,8 +73,8 @@
                     if (this.readyState == 4 && this.status == 200) { //when a good response is given do this
 
                         var data2 = JSON.parse(this.responseText).filter(({
-                            SCORE
-                        }) => SCORE >'75'); // convert the response to a json object
+                            SCORE, DiscountedUntil
+                        }) => SCORE >'75' && DiscountedUntil > '2021-10-02'); // convert the response to a json object
                         append_json2(data2);
                         
 
@@ -511,7 +511,7 @@
 
                 }
 
-                for (let count = 0; count < 20; count++) {
+                for (let count = 0; count < 32; count++) {
                     
                     var numx = count;
                     var index = count;
