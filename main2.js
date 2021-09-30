@@ -73,8 +73,8 @@
                     if (this.readyState == 4 && this.status == 200) { //when a good response is given do this
 
                         var data2 = JSON.parse(this.responseText).filter(({
-                            LastDiscounted
-                        }) => LastDiscounted >'2021-09-22'); // convert the response to a json object
+                            SCORE
+                        }) => SCORE >'75'); // convert the response to a json object
                         append_json2(data2);
                         
 
@@ -303,7 +303,7 @@
                     score.append(data[index].SCORE);
                 }
 
-                function create_cards(count) {
+                function create_cards(count, index) {
                     const currentDiv = document.getElementById("switch-create");
                     const newCol = document.createElement("div");
                     const newCard = document.createElement("div");
@@ -420,12 +420,20 @@
                     price.append('  ₱' + pesoprice);
                     discount.append('-' + data2[index].DiscPerc + '%');
                     url.setAttribute('href', data2[index].PSStoreURL);
-                    score.append(data2[index].SCORE);
+                    if ((data2[index].SCORE == -1) || (data2[index].SCORE == "")) {
+
+
+                    } else {
+                        score.append(data2[index].SCORE);
+
+                    }
+
+
                     plusprice.append(' ₱' + pesoplusprice);
                 }
 
 
-                function pscreate_cards(count) {
+                function pscreate_cards(count, index) {
                     const currentDiv = document.getElementById("ps-create");
                     const newCol = document.createElement("div");
                     const newCard = document.createElement("div");
@@ -449,8 +457,8 @@
                     newImage.className = "card-img";
                     overlay.className = "card-img-overlay";
                     badge.className = "img-responsive float-end pbadges playstation";
-                    opencritic.className = "d-flex justify-content-left opencritic";
-                    oclogo.className = "card-text img-responsive oc";
+                    // opencritic.className = "d-flex justify-content-left opencritic";
+                    // oclogo.className = "card-text img-responsive oc";
                     newScore.className = "card-text";
                     newCardBody.className = "card-body";
                     gameTitle.className = "card-title";
@@ -461,7 +469,18 @@
 
                     newURL.setAttribute('id', 'psurl' + count);
                     newImage.setAttribute('id', 'psn' + count);
-                    oclogo.setAttribute('src', "OpenCritic_logo.svg");
+
+                     if ((data2[index].SCORE == -1) || (data2[index].SCORE == "")) {
+
+                    } else {
+                        opencritic.className = "d-flex justify-content-left opencritic";
+                        oclogo.className = "card-text img-responsive oc";
+                        oclogo.setAttribute('src', "OpenCritic_logo.svg");
+
+
+                    }
+
+                    // oclogo.setAttribute('src', "OpenCritic_logo.svg");
                     newScore.setAttribute('id', 'psscr' + count);
                     newScore.setAttribute('style', 'color:white;font-weight:bold;');
                     gameTitle.setAttribute('id', 'pstitle' + count);
@@ -493,9 +512,10 @@
                 }
 
                 for (let count = 0; count < 20; count++) {
-                    pscreate_cards(count);
+                    
                     var numx = count;
                     var index = count;
+                    pscreate_cards(count, index);
                     psdays_checker('psdiscuntil' + numx, index);
                     pscard_setter('psn' + numx, 'pstitle' + numx, 'psprice' + numx, 'plusprice' + numx, 'psdisc' + numx, 'psurl' + numx, 'psscr' + numx, index);
 
