@@ -22,7 +22,7 @@
                 //set the request destination and type
                 xmlhttp.open("GET", 'https://raw.githubusercontent.com/maysaleba/maysaleba.github.io/main/csvjson.json', true);
                 //set required headers for the request
-                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded; ");
                 // send the request
                 xmlhttp.send(); // when the request completes it will execute the code in onreadystatechange section
             }
@@ -56,7 +56,7 @@
                 //set the request destination and type
                 xmlhttp.open("GET", 'https://raw.githubusercontent.com/maysaleba/maysaleba.github.io/main/csvjson.json', true);
                 //set required headers for the request
-                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded;");
                 // send the request
                 xmlhttp.send(); // when the request completes it will execute the code in onreadystatechange section
             }
@@ -415,7 +415,7 @@
                     var score = document.getElementById(score)
                     var pesoprice = Math.round(data2[index].SalePrice / 100 * phpExchange)
                     var pesoplusprice = Math.round((data2[index].PlusPrice) / 100 * phpExchange)
-                    card_image.setAttribute('src', data2[index].CoverArt + '?w=500')
+                    card_image.setAttribute('src', data2[index].Img + '?w=440')
                     card_title.append(data2[index].ProductName)
                     price.append('  ₱' + pesoprice);
                     discount.append('-' + data2[index].DiscPerc + '%');
