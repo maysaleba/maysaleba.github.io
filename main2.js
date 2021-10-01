@@ -134,10 +134,18 @@
 
                 function days_checker(id, numvalue) {
                     var discuntil = document.getElementById(id);
-                    var dscun = new_nsw_data[numvalue].SaleEnds
-                    const secondDate = new Date(dscun);
-                    const diffDays = Math.round((secondDate - firstDate) / oneDay);
-
+                    var dscun = new_nsw_data[numvalue].SaleEnds;
+                    var secondDate
+                    if (dscun == '0000-00-00')
+                    {
+                        secondDate = new Date(daysago);
+                        
+                    } else {
+                        secondDate = new Date(dscun);
+                        
+                    }
+                        const diffDays = Math.round((secondDate - firstDate) / oneDay);
+                     
                     if (diffDays < 0) {
                         discuntil.classList.add("badge")
                         discuntil.classList.add("bg-secondary")
@@ -269,7 +277,18 @@
                 function days_checker(id, numvalue) {
                     var discuntil = document.getElementById(id);
                     var dscun = data[numvalue].SaleEnds
-                    const secondDate = new Date(dscun);
+                    var secondDate
+                    if (dscun == '0000-00-00')
+                    {
+                        secondDate = new Date(daysago);
+                        
+                    } else {
+                        secondDate = new Date(dscun);
+                        
+                    }
+                    
+
+
                     const diffDays = Math.round((secondDate - firstDate) / oneDay);
 
                     if (diffDays < 0) {
