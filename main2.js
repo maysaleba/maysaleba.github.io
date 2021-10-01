@@ -258,7 +258,7 @@
 
                 // Nintendo start
 
-                for (let count = 0; count < new_len && count < 20; count++) {
+                for (let count = 0; count < new_len && count < 32; count++) {
                     create_cards(count, count);
                     var numx = count;
                     var index = count;
@@ -388,7 +388,7 @@
 
                 // Nintendo start
 
-                for (let count = 0; count < 20; count++) {
+                for (let count = 0; count < 32; count++) {
                     create_cards(count);
                     var numx = count;
                     var index = count;
