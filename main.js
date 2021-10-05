@@ -124,7 +124,7 @@ console.log(fxcp.rates.USD);
                     let heroImg = params.data.Image
                     let newHero = heroImg.split("/")
                     let pishu = newHero[11]
-                    let newimgdata = `<a class="imgData" href= https://www.nintendo.com${keyLink}><img class="imageInside" onerror="this.style.display='none'" src="https://assets.nintendo.com/image/upload/c_fill,f_auto,q_auto,w_300/ncom/en_US/games/switch/${firstLet}/${newimg}/${pishu}"/></a>`;
+                    let newimgdata = `<a class="imgData" href= https://www.nintendo.com${keyLink}><img class="imageInside" onerror="this.style.display='none'" src="${heroImg}"/></a>`;
                     let imgTitle = newimgdata + '<br>' + newLink
                     return imgTitle
                 },
