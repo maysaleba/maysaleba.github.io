@@ -505,9 +505,9 @@ document.addEventListener('DOMContentLoaded', function() {
             url: 'https://raw.githubusercontent.com/maysaleba/maysaleba.github.io/main/csvjsonsg.json',
         })
         .then(data => {
-            const newData = Object.values(data);
-            // const myJSON = JSON.stringify(newData, null, 2);
-            gridOptions.api.setRowData(data);
+            const filteredData = data.filter(x => x.DiscountedUntil > today);
+
+            gridOptions.api.setRowData(filteredData);
 
             autoSizeAll(false);
         });

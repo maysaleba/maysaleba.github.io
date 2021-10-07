@@ -74,7 +74,7 @@
 
                         var data2 = JSON.parse(this.responseText).filter(({
                             SCORE, DiscountedUntil
-                        }) => SCORE >'75' && DiscountedUntil > '2021-10-02'); // convert the response to a json object
+                        }) => SCORE >'75' && DiscountedUntil > today); // convert the response to a json object
                         append_json2(data2);
                         
 
