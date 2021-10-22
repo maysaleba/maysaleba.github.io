@@ -108,8 +108,7 @@
 
             function httpGet(theUrl) {
                 var xmlHttp = new XMLHttpRequest();
-                xmlHttp.open("GET", theURL, true); // false for synchronous request
-                xmlHttp.responseType = 'json';
+                xmlHttp.open("GET", theURL, false); // false for synchronous request
                 xmlHttp.send(null);
                 return xmlHttp.response;
             }
