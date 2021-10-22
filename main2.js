@@ -99,7 +99,7 @@
             
 
 
-            var theURL = 'https://api.exchangerate.host/latest?base=PHP&v=_' + today + '_';
+            var theURL = 'https://api.exchangerate.host/latest?base=USD&v=_' + today + '_';
 
 
 
@@ -115,8 +115,8 @@
             const fxcp = JSON.parse(fxc)
             
 
-            var phpExchange = 1 / fxcp.rates.USD;
-            var mexExchange = 1 / fxcp.rates.MXN;
+            var phpExchange = fxcp.rates.PHP;
+            var mexExchange = fxcp.rates.MXN / phpExchange;
 
             console.log(phpExchange);
 
