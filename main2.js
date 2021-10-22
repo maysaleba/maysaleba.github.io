@@ -99,7 +99,10 @@
             
 
 
-            var theURL = 'https://api.exchangerate.host/latest?base=USD&v=_' + today + '_';
+            var theURL = 'https://api.exchangerate.host/latest?base=USD'
+
+
+            // &v=_' + today + '_';
 
 
 
