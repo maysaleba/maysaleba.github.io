@@ -99,10 +99,7 @@
             
 
 
-            var theURL = 'http://api.exchangeratesapi.io/v1/latest?access_key=499ac93c00301caec363ff044603a115&format=1'
-
-
-            // &v=_' + today + '_';
+            var theURL = 'https://api.exchangerate.host/latest?base=PHP&v=_' + today + '_';
 
 
 
@@ -115,17 +112,11 @@
 
 
             fxc = httpGet();
-
-            console.log(fxc);
             const fxcp = JSON.parse(fxc)
             
 
-            var phpx = fxcp.rates.PHP
-            var usdx = fxcp.rates.USD
-
-            var phpExchange = (fxcp.rates.PHP / fxcp.rates.USD)
-
-            // var mexExchange = 1 / fxcp.rates.MXN;
+            var phpExchange = 1 / fxcp.rates.USD;
+            var mexExchange = 1 / fxcp.rates.MXN;
 
             console.log(phpExchange);
 
