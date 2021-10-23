@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/maysaleba.github.io/static/css/main.57b0d5fe.chunk.css",
+    "main.js": "/maysaleba.github.io/static/js/main.43abfe5a.chunk.js",
+    "main.js.map": "/maysaleba.github.io/static/js/main.43abfe5a.chunk.js.map",
+    "runtime-main.js": "/maysaleba.github.io/static/js/runtime-main.e53ca9c1.js",
+    "runtime-main.js.map": "/maysaleba.github.io/static/js/runtime-main.e53ca9c1.js.map",
+    "static/css/2.d8cb5cde.chunk.css": "/maysaleba.github.io/static/css/2.d8cb5cde.chunk.css",
+    "static/js/2.98c4ad68.chunk.js": "/maysaleba.github.io/static/js/2.98c4ad68.chunk.js",
+    "static/js/2.98c4ad68.chunk.js.map": "/maysaleba.github.io/static/js/2.98c4ad68.chunk.js.map",
+    "static/js/3.ba1cb89c.chunk.js": "/maysaleba.github.io/static/js/3.ba1cb89c.chunk.js",
+    "static/js/3.ba1cb89c.chunk.js.map": "/maysaleba.github.io/static/js/3.ba1cb89c.chunk.js.map",
+    "index.html": "/maysaleba.github.io/index.html",
+    "static/css/2.d8cb5cde.chunk.css.map": "/maysaleba.github.io/static/css/2.d8cb5cde.chunk.css.map",
+    "static/css/main.57b0d5fe.chunk.css.map": "/maysaleba.github.io/static/css/main.57b0d5fe.chunk.css.map",
+    "static/js/2.98c4ad68.chunk.js.LICENSE.txt": "/maysaleba.github.io/static/js/2.98c4ad68.chunk.js.LICENSE.txt",
+    "static/media/Cards.css": "/maysaleba.github.io/static/media/psplus.19bc6709.svg",
+    "static/media/logo.55b508d1.svg": "/maysaleba.github.io/static/media/logo.55b508d1.svg",
+    "static/media/App.css": "/maysaleba.github.io/static/media/woojooaidp-webfont.3fa0e295.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e53ca9c1.js",
+    "static/css/2.d8cb5cde.chunk.css",
+    "static/js/2.98c4ad68.chunk.js",
+    "static/css/main.57b0d5fe.chunk.css",
+    "static/js/main.43abfe5a.chunk.js"
+  ]
+}
