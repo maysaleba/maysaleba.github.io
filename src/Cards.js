@@ -154,7 +154,7 @@ const Cards = ({ Title, Image, Score, SaleEnds, Genre, Slug, SalePrice, Discount
       <Card className="border-0">
       
         <LazyLoadImage 
-        effect="blur"
+        effect="opacity"
         key={Image}
         className="card-img" 
         src={Image} />
