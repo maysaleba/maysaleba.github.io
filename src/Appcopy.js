@@ -70,7 +70,7 @@ export default function Main() {
   const [platformField, setPlatformField] = useState("");
   const [filterField, setFilterField] = useState("");
   const [genreDropDown, setGenreDropDown] = useState("All Genres");
-  const [platformDropDown, setPlatformDropDown] = useState("All Platforms")
+  const [platformDropDown, setPlatformDropDown] = useState("Switch")
   const [latestField, setLatestField] = useState([]);
   const [latestDropDown, setLatestDropDown] = useState("New Discounts");
 

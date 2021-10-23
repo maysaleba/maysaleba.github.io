@@ -14,16 +14,6 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
       </Dropdown.Toggle>
 
       <Dropdown.Menu className="w-100">
-       <Dropdown.Item
-          href="#"
-          onClick={() => {
-          clearSearchChange();
-            onPlatformChange("");
-            onPlatformDrop("All Platforms");
-          }}
-        >
-          All Platforms
-        </Dropdown.Item>
         <Dropdown.Item
           href="#"
           onClick={() => {
@@ -43,6 +33,16 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           }}
         >
           Playstation
+        </Dropdown.Item>
+         <Dropdown.Item
+          href="#"
+          onClick={() => {
+          clearSearchChange();
+            onPlatformChange("");
+            onPlatformDrop("All Platforms");
+          }}
+        >
+          All Platforms
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
@@ -280,50 +280,11 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
      <Col className="col-style">
      <Dropdown className="m-2">
       <Dropdown.Toggle size="sm" id="dropdown-basic" className="dropdown-style">
-        {genreDropDown}
+        +
       </Dropdown.Toggle>
 
       <Dropdown.Menu className="w-100">
-       <Dropdown.Item
-          href="#"
-          onClick={() => {
-      clearSearchChange();
-            clearFilter();
-            onDropDownChange("All Genres");
-          }}
-        >
-          All Genres
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-      clearSearchChange();
-            onFilterChange("Action");
-            onDropDownChange("Action");
-          }}
-        >
-          Action
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-            onFilterChange("Adventure");
-            onDropDownChange("Adventure");
-          }}
-        >
-          Adventure
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-            onFilterChange("Role-Playing");
-            onDropDownChange("Role-Playing");
-          }}
-        >
-          Role-Playing
-        </Dropdown.Item>
+     
       </Dropdown.Menu>
     </Dropdown>
     </Col>
