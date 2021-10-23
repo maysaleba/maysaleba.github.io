@@ -476,7 +476,7 @@ const Content = ({ search, setSearch, match }) => {
     -blur-radius: 20px;
     position: absolute;
     z-index: 0;
-    width: 100vw;
+    width: 100%;
     height: 60vh;
     top: 0;
     left: 0;
