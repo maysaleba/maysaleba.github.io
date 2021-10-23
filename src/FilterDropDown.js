@@ -54,16 +54,6 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
       </Dropdown.Toggle>
 
       <Dropdown.Menu className="w-100">
-      <Dropdown.Item
-          href="#"
-          onClick={() => {
-          clearSearchChange();
-            onLatestChange("New Discounts");
-            onLatestDrop("New Discounts");
-          }}
-        >
-          New Discounts
-        </Dropdown.Item>
         <Dropdown.Item
           href="#"
           onClick={() => {
@@ -74,7 +64,17 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
         >
           Top Rated
         </Dropdown.Item>
-               <Dropdown.Item
+         <Dropdown.Item
+          href="#"
+          onClick={() => {
+          clearSearchChange();
+            onLatestChange("New Discounts");
+            onLatestDrop("New Discounts");
+          }}
+        >
+          New Discounts
+        </Dropdown.Item>
+        <Dropdown.Item
           href="#"
           onClick={() => {
           clearSearchChange();
