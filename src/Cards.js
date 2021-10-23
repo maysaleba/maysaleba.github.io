@@ -5,6 +5,8 @@ import {  Link
 } from "react-router-dom";
 import Badge2 from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
             var today = new Date();
@@ -144,13 +146,18 @@ const Cards = ({ Title, Image, Score, SaleEnds, Genre, Slug, SalePrice, Discount
   },
 }));
 
+
   return (
     
     <Col>
     <Link to={`/games/${Slug}`} className="linkto" style={{color: 'black', textDecoration: 'none'}}>
       <Card className="border-0">
       
-        <Card.Img className="card-img" src={Image} />
+        <LazyLoadImage 
+        effect="blur"
+        key={Image}
+        className="card-img" 
+        src={Image} />
 
         <Card.ImgOverlay className="card-img-overlay">
           <PlatformBadge hasBadge={Platform}/>
