@@ -13,7 +13,7 @@ export default function NaviBar() {
           width: "100%",
           maxWidth: {md:'63%', lg: '63%'},
           mx: "auto" }}>
-          <a style={{color: 'white'}} href="https://maysaleba.com">
+          <a className="logocolortext" href="https://maysaleba.com">
           <Stack direction="row" alignItems="center">
             <img
               style={{ marginRight: "10px" }}
