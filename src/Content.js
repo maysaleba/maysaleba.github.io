@@ -88,6 +88,24 @@ const Content = ({ search, setSearch, match }) => {
     });
   }
 
+
+
+
+   function PesoPlusPrice(){
+              if (matchGames[0].platform === "Switch"){
+                   return null;
+              } if  (matchGames[0].platform === "Playstation"){
+                   return (
+                 <>
+                 <span className="psplusbadge">
+                  {"₱"+Math.round((matchGames[0].PlusPrice * phpExchange))}
+                  </span><br/>
+                  </>
+                )
+            }
+          }
+
+
   function ShopeeCard() {
     if (matchGames[0].platform === "Switch")
     {
@@ -614,6 +632,7 @@ const Content = ({ search, setSearch, match }) => {
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
+                    <PesoPlusPrice />
                       <PesoPrice props={matchGames[0].SalePrice} />
                       <span className="ml-2 badge badge-danger">
                         -{matchGames[0].PercentOff}
