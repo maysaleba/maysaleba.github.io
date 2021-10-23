@@ -608,7 +608,7 @@ const Content = ({ search, setSearch, match }) => {
                     rel="noreferrer"
                     style={{ padding: 10 }}
                   >
-               Switch<br />Digital
+               Digital<br />Game
                   </a>
                 </td>
                 <td className="version">
