@@ -13,6 +13,7 @@ export default function NaviBar() {
           width: "100%",
           maxWidth: {md:'63%', lg: '63%'},
           mx: "auto" }}>
+          <a href="maysaleba.com">
           <Stack direction="row" alignItems="center">
             <img
               style={{ marginRight: "10px" }}
@@ -30,7 +31,7 @@ export default function NaviBar() {
             MAYSALEBA?
           </Typography>
           </Stack>
-        
+        </a>
           <IconButton
             size="large"
             edge="start"
