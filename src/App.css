@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Changa:wght@600&display=swap');
+
+@font-face {
+   font-family: 'woojooaidpmedium';
+   src: url('./woojooaidp-webfont.woff2') format('woff2'),
+        url('./woojooaidp-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+
+
+.navbar {
+  background-color: #55597d;
+  font-family: 'woojooaidpmedium';
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.logotext {
+  font-size: 1.5em !important;
+}
+
+.logo {
+  display: block;
+  height: auto;
+  width: 38px;
+  shape-rendering: geometricPrecision;
+  margin-left:  5px;
+  margin-right: 5px;
+  margin-top: -12px;
+  margin-bottom: -10px;
+}
+
+.navlink {
+  font-family:Cairo;
+  display: flex;
+  align-items: center;
+  padding:10px;
+}
+
+.container{
+  padding-right: var(--bs-gutter-x,.75rem);
+  padding-left: var(--bs-gutter-x,.75rem);
+  margin-right: auto;
+}
+

@@ -1,0 +1,579 @@
+@media  only screen and (min-width : 900px) {
+  .custom-container {
+    width: 60vw !important;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: .5rem .5rem .5rem .5rem !important;
+    padding: .75rem 1.25rem;
+    background-color: #ffffff;
+    /*box-shadow: 0 3px 10px rgb(0 0 0 / 0.15);*/
+    margin-bottom: 30px;
+  }
+
+  body {
+  padding-top: 90px;
+  background-color:  #6e7290 !important;
+  }
+
+}
+
+.price-container {
+  width:  100%;
+}
+
+
+.badge-danger {
+    color:  black !important;
+    background-color: white !important;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+
+
+.ml-2, .mx-2 {
+    margin-left: 0.5rem !important;
+}
+
+.btn {
+  white-space: nowrap;
+}
+
+.btn .badge {
+    position: relative;
+    top: -1px;
+}
+
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn{
+  font-size: 0.9rem !important;
+}
+
+.btn-secondary {
+    color: white !important;
+    background-color: #5a33ff !important;
+    border-color: #5a33ff !important;
+}
+
+p {
+   display:block !important;
+}
+
+.logonin.eshop {
+    background-image: url(logo-eshop.svg);
+    max-width: 12em;
+  }
+
+.logonin.shopee {
+    background-image: url(Shopee2.svg);
+    max-width: 12em;
+  }
+
+.logonin.psstore {
+    background-image: url(playstationstore.png);
+    max-width: 12em;
+  }
+
+.logonin {
+    max-width: 10em;
+    max-height: 2.8em;
+    height: 2.8em;
+    width: 8em;
+    background-size: contain;
+    background-position: left;
+    background-attachment: scroll;
+    background-color: transparent;
+    background-repeat: no-repeat;
+  }
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.item-price-table {
+    margin-bottom: 0;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.item-price-table td {
+    padding: 0 !important;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+.table-align-middle td {
+    vertical-align: middle;
+}
+
+.item-price-table .has-notes td a {
+    padding-bottom: 0.25rem;
+}
+
+.pb-1, .py-1 {
+    padding-bottom: 0.25rem !important;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+a {
+    color: #000000 !important;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects !important;
+}
+
+.text-dark, .watch-button.watched:not(:hover) .text {
+    color: #343a40 !important;
+}
+
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff !important;
+    background-color: #9c27b0 !important;
+}
+
+.item-price-table td a {
+    padding: 0.75rem;
+    display: block;
+}
+.item-price-table .has-notes td a {
+    padding-bottom: 0.25rem;
+}
+
+.item-table-best {
+    background-color: #f0e9f8;
+  }
+
+
+  .item-price-table td.version {
+    font-size: 0.8rem;
+    /*border:  none;*/
+}
+
+table tr:first-child td:first-child {
+    border-top-left-radius: 10px;
+    border-color: white;
+    /*border-bottom-left-radius: 10px;*/
+    border:  none;
+}
+
+table tr:first-child td:nth-child(2) {
+    /*border-top-right-radius: 10px;*/
+    border-color: white;
+    /*border-bottom-right-radius: 10px;*/
+    border: none;
+}
+
+table tr:first-child td:last-child {
+    border-top-right-radius: 10px;
+    border-color: white;
+    /*border-bottom-right-radius: 10px;*/
+    border: none;
+}
+
+
+table tr:nth-child(2) td:first-child {
+    
+    border-color: white;
+    /*border-bottom-left-radius: 10px;*/
+    /*border:  none;*/
+}
+
+table tr:nth-child(2) td:nth-child(2) {
+    
+    border-color: white;
+    /*border-bottom-right-radius: 10px;*/
+    /*border: none;*/
+}
+
+table tr:nth-child(2) td:last-child {
+    
+    border-color: white;
+    /*border-bottom-right-radius: 10px;*/
+    /*border: none;*/
+}
+
+
+
+
+table tr:last-child td:first-child {
+    /*border-top-left-radius: 10px;*/
+    border-bottom-left-radius: 10px;
+    border:  none;
+}
+
+table tr:last-child td:nth-child(2) {
+    /*border-top-right-radius: 10px;*/
+    /*border-bottom-right-radius: 10px;*/
+    border: none;
+}
+
+table tr:last-child td:last-child {
+    /*border-top-right-radius: 10px;*/
+    border-bottom-right-radius: 10px;
+    border: none;
+}
+
+
+
+
+.psplusbadge
+{
+background-size:  15px;
+background-position:  left center;
+background-image: url('psplus.svg');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.content-container {
+  width: 40vw !important;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: .5rem .5rem .5rem .5rem;
+    padding: .75rem 1.25rem;
+   /* background-color: #ffffff;*/
+    /*box-shadow: 0 3px 10px rgb(0 0 0 / 0.15);*/
+    margin-bottom: 30px;
+}
+
+.content-container-gameinfo {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: .5rem .5rem .5rem .5rem !important;
+    padding: .75rem 1.25rem;
+    background-color: #ffffff;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.15);
+    margin-bottom: 30px;
+}
+
+.card-header-custom {
+  display: flex;
+  /*background-color: #e70009;*/
+  /*border: 1px solid #e5e5e5;*/
+  margin-bottom: 10px;
+}
+
+.opencritic-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('OpenCritic_logo.svg');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.usregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('US.svg');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.card-img-overlay {
+  position: absolute ;
+  top: -10px !important;
+  left: -10px !important;
+  right: -10px !important;
+  z-index: 1 !important;
+}
+
+.opencritic-container{
+  margin-left:  none;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  width: 50px;
+  background: rgba(0%, 0%, 0%, 0.5); 
+}
+
+.searchbox {
+  /*width: 40%;*/
+  /*border-radius: 5rem;*/
+  padding: 10px;
+  border: 1px solid #55597d;
+  /*box-shadow: 0 3px 10px rgb(0 0 0 / 0.15);*/
+  margin:  10px;
+  outline: none;
+
+}
+
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:none !important;
+    -webkit-appearance:none;
+}
+
+.btn-check:active+.btn-primary:focus, .btn-check:checked+.btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show>.btn-primary.dropdown-toggle:focus {
+   box-shadow: 0 0 8px 0px rgb(0 0 0 / 10%) !important; 
+}
+
+.btn-check:focus+.btn, .btn:focus {
+   box-shadow: 0 0 8px 0px rgb(0 0 0 / 10%) !important; 
+}
+
+::-webkit-input-placeholder {
+	font-size: 15px;
+	font-family: 'Font Awesome 5 Free', 'Cairo';
+	color: #55597d ;
+}
+
+.dropdown-style{
+  /*margin-left:  0px !important;*/
+  background-color: white !important;
+  color: #777 !important;
+  border: 1px solid #e5e5e5 !important;
+  border-radius:  5px !important;
+  padding: 12px !important;
+  width: 100% !important;
+     box-shadow: 0 0 8px 0px rgb(0 0 0 / 10%);
+}
+
+.dropdown-menu {
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.dropdown-item{
+  font-size: 14px !important;
+}
+
+
+
+.dropdown-toggle::after {
+    -ms-transform: rotate(-0deg); /* IE 9 */
+    -webkit-transform: rotate(-0deg); /* Chrome, Safari, Opera */
+    transform: rotate(-0deg);
+    transform:  translate(0, 200%);
+    float:right;
+}
+
+
+
+.col-style {
+  padding: 0 !important; 
+
+}
+
+.card-img{
+  border-radius: 5px !important;
+}
+
+.card-title{
+  font-size: 16px !important;
+}
+
+ .card-text{
+  font-size:14px !important;
+  /*font-weight: bold;*/
+}
+
+ .score-text{
+  font-size:14px !important;
+  color: white;
+  font-weight: bold;
+}
+
+
+.nbadges {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-image: url('platform-icons18.webp');
+  background-repeat: no-repeat;
+  background-size: 30px;
+  display: inline-block;
+  flex: none;
+}
+
+.nbadges.nintendo {
+  background-color: #e70009;
+  background-position: 0px -510px;
+}
+
+.pbadges {
+    width: 31px;
+    height: 31px;
+    border-radius: 100%;
+    background-image: url('platform-icons18.webp');
+    background-repeat: no-repeat;
+    background-size: 35px;
+    display: inline-block;
+    flex: none;
+}
+
+
+.pbadges.playstation {
+    background-color: #004eff;
+    background-position: -3px -298px;
+}
+
+.pbadges.playstation1 {
+    background-color: black;
+    background-position: -3px -298px;
+}
+
+.nbadges.nintendo1 {
+    background-color: black;
+   background-position: 0px -510px;
+}
+
+
+@media screen and (max-width: 575.98px) {
+
+
+.item-price-table {
+    margin-left: -4px;
+    margin-right: -4px;
+    width: initial;
+    max-width: initial;
+    min-width: 100%;
+}
+
+.item-price-table td.version {
+    font-size: 80%;
+    /*border: none;*/
+}
+
+.logonin {
+    max-width: 5.5em !important;
+}
+
+.price-container {
+  width:  100%;
+}
+
+}
+
+
+@media screen and (max-width: 900px) {
+  .custom-container {
+    width: 90% !important;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: .5rem .5rem .5rem .5rem;
+    padding: .75rem 1.25rem;
+    background-color: #ffffff;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.15);
+    margin-bottom: 30px;
+  }
+
+  p {
+   display:block !important;
+}
+
+  .content-container {
+  width: 90% !important;
+}
+/*  .nbadges{
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+  }
+
+  .nbadges.nintendo {
+    background-position:  0px -340px;
+  }
+*/
+  body {
+    padding-top: 80px !important;
+      background-color:  #6e7290 !important;
+
+  }
+
+  .searchbox {
+    width: 80%;
+  }
+
+  .card-title{
+    font-size:1rem !important;
+  }
+
+  .card-text{
+    font-size:12px !important;
+  }
+
+  .dropdown-style{
+    font-size: 12px !important;
+  }
+
+  .dropdown-item{
+  font-size: 12px !important;
+  }
+
+  .score-text{
+  font-size:11px !important;
+  }
+}
+
+
+
