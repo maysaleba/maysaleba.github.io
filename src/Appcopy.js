@@ -67,7 +67,7 @@ export default function Main() {
     return null;
   }
 
-  const [platformField, setPlatformField] = useState("");
+  const [platformField, setPlatformField] = useState("Switch");
   const [filterField, setFilterField] = useState("");
   const [genreDropDown, setGenreDropDown] = useState("All Genres");
   const [platformDropDown, setPlatformDropDown] = useState("Switch")
