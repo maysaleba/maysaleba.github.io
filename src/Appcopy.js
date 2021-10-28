@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import usePagination from "./usePagination.js";
 import reviewssw from "./csvjson.json";
-import reviewsps from "./csvjsonus.json";
+import reviewspsx from "./csvjsonus.json";
 import CardGroup from "./CardGroup2";
 import "./App.css";
 import { HashRouter as Router, Route, useLocation, Switch } from "react-router-dom";
@@ -11,6 +11,17 @@ import styled from 'styled-components';
 import Search from './Search';
 
 
+            var today = new Date();
+            // var lastd = new Date(today.setDate(today.getDate()+1));
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = today.getFullYear();
+
+            today = yyyy + '-' + mm + '-' + dd;
+
+
+let reviewsps = reviewspsx.filter((review) => review.SaleEnds > today);
+console.log(reviewsps);
 
 export default function Main() {
   function sortJson(element, prop, propType, asc) {
