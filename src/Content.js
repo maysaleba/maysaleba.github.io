@@ -39,10 +39,9 @@ const Content = ({ search, setSearch, match }) => {
     return game.Slug === match.params.games;
   });
 
-  console.log(matchGames[0].SalePrice)
+
 
   function PesoPrice(props) {
-    console.log(props.props);
     return "₱" + Math.round(props.props * phpExchange);
   }
 

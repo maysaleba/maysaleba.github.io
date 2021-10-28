@@ -21,7 +21,6 @@ import Search from './Search';
 
 
 let reviewsps = reviewspsx.filter((review) => review.SaleEnds > today);
-console.log(reviewsps);
 
 export default function Main() {
   function sortJson(element, prop, propType, asc) {
@@ -78,6 +77,8 @@ export default function Main() {
     return null;
   }
 
+  const [priceRangeField, setPriceRangeField] = useState(99999);
+  const [priceRangeDropDown, setPriceRangeDropDown] = useState("All Price Range");
   const [platformField, setPlatformField] = useState("Switch");
   const [filterField, setFilterField] = useState("");
   const [genreDropDown, setGenreDropDown] = useState("All Genres");
@@ -92,10 +93,14 @@ export default function Main() {
   }, []);
 
 
-
+  const onPriceRangeDrop = (dropDownValue) => setPriceRangeDropDown(dropDownValue)
   const onPlatformDrop = (dropDownValue) => setPlatformDropDown(dropDownValue);
   const onLatestDrop = (dropDownValue) => setLatestDropDown(dropDownValue);
   const onDropDownChange = (dropDownValue) => setGenreDropDown(dropDownValue);
+
+  const clearPriceRange = (event) => {
+    setPriceRangeField(99999);
+  }
 
   const clearFilter = (event) => {
     setFilterField("");
@@ -104,6 +109,28 @@ export default function Main() {
 
   const clearGenre = (event) => {
     setFilterField("");
+  }
+
+  const onPriceRangeChange = (filterPriceRange) => {
+    if (filterPriceRange === "All Price Range") {
+      setPriceRangeField(99999)
+    }
+    if (filterPriceRange === "< P2500") {
+      setPriceRangeField(50)
+    }
+    if (filterPriceRange === "< P1750") {
+      setPriceRangeField(35)
+    }
+    if (filterPriceRange === "< P1000") {
+      setPriceRangeField(20)
+    }
+    if (filterPriceRange === "< P500") {
+      setPriceRangeField(10)
+    }
+    if (filterPriceRange === "< P250") {
+      setPriceRangeField(5)
+    }
+
   }
 
   const onLatestChange = (filterLatest) => {
@@ -143,12 +170,15 @@ export default function Main() {
     setSearchQuery("");
   };
 
+  console.log(priceRangeField);
+
   let filteredReviews = useMemo(() =>
     latestField.filter((review) => {
       return (
         review.Title.toLowerCase().includes(searchQuery.toLowerCase()) &&
         review.genre.toLowerCase().includes(filterField.toLowerCase()) &&
-        review.platform.toLowerCase().includes(platformField.toLowerCase())
+        review.platform.toLowerCase().includes(platformField.toLowerCase()) &&
+        (review.SalePrice < priceRangeField)
         );
     })
   );
@@ -161,8 +191,8 @@ export default function Main() {
   );
 
   useEffect(() => {
-    if (searchQuery || filterField || latestDropDown || platformField) jumpPage(1);
-  }, [searchQuery, filterField, latestDropDown, platformField, jumpPage]);
+    if (searchQuery || filterField || latestDropDown || platformField || priceRangeField) jumpPage(1);
+  }, [searchQuery, filterField, latestDropDown, platformField, priceRangeField, jumpPage]);
 
 
 
@@ -225,11 +255,17 @@ position: absolute;
           <div>
             <NaviBar />
             <Search 
+              clearPriceRange={clearPriceRange}
+              onPriceRangeDrop={onPriceRangeDrop}
               searchQuery={searchQuery} 
               setSearchQuery={setSearchQuery} 
               clearGenre = {clearGenre} 
               onDropDownChange={onDropDownChange}/>
             <CardGroup
+              clearPriceRange = {clearPriceRange}
+              priceRangeDropDown = {priceRangeDropDown}
+              onPriceRangeDrop = {onPriceRangeDrop}
+              onPriceRangeChange = {onPriceRangeChange}
               clearGenre = {clearGenre}
               onPlatformDrop = {onPlatformDrop}
               onPlatformChange = {onPlatformChange}

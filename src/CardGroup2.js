@@ -7,7 +7,11 @@ import Pagination from '@mui/material/Pagination';
 import Paper from '@mui/material/Paper';
 
 const CardGroup = ({  
-   clearGenre,
+  clearPriceRange,
+  priceRangeDropDown,
+  onPriceRangeDrop,
+  onPriceRangeChange,
+  clearGenre,
   onPlatformDrop,
   onPlatformChange,
   platformDropDown,
@@ -35,7 +39,11 @@ const CardGroup = ({
         <Paper elevation={2} className="custom-container">
           <div className="card-header-custom">
           <FilterDropDown
-             clearGenre={clearGenre}
+            clearPriceRange={clearPriceRange}
+            priceRangeDropDown={priceRangeDropDown}
+            onPriceRangeDrop={onPriceRangeDrop}
+            onPriceRangeChange={onPriceRangeChange}
+            clearGenre={clearGenre}
             onPlatformDrop={onPlatformDrop}
             onPlatformChange={onPlatformChange}
             platformDropDown={platformDropDown}

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Dropdown, Row, Col } from "react-bootstrap";
 
-function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformDropDown, onLatestDrop, onLatestChange, latestDropDown, clearFilter, clearSearchChange, onFilterChange, genreDropDown, onDropDownChange }) {
+function FilterDropDown({clearPriceRange, priceRangeDropDown, onPriceRangeDrop, onPriceRangeChange, clearGenre, onPlatformDrop, onPlatformChange, platformDropDown, onLatestDrop, onLatestChange, latestDropDown, clearFilter, clearSearchChange, onFilterChange, genreDropDown, onDropDownChange }) {
   return (
 
 
@@ -17,7 +17,9 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
         <Dropdown.Item
           href="#"
           onClick={() => {
-      clearSearchChange();
+            clearSearchChange();
+            clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onPlatformChange("Switch");
             onPlatformDrop("Switch");
           }}
@@ -28,6 +30,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
             clearSearchChange();
+            clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onPlatformChange("Playstation");
             onPlatformDrop("Playstation");
           }}
@@ -38,6 +42,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
           clearSearchChange();
+            clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onPlatformChange("");
             onPlatformDrop("All Platforms");
           }}
@@ -58,6 +64,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
             clearSearchChange();
+            clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onLatestChange("Top Rated");
             onLatestDrop("Top Rated");
           }}
@@ -68,6 +76,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
           clearSearchChange();
+                      clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onLatestChange("New Discounts");
             onLatestDrop("New Discounts");
           }}
@@ -78,6 +88,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
           clearSearchChange();
+                      clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onLatestChange("Latest Release");
             onLatestDrop("Latest Release");
           }}
@@ -88,6 +100,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
             clearSearchChange();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onLatestChange("Price ↑");
             onLatestDrop("Price ↑");
           }}
@@ -98,6 +112,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
             clearSearchChange();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onLatestChange("Price ↓");
             onLatestDrop("Price ↓");
           }}
@@ -119,6 +135,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           onClick={() => {
 			      clearSearchChange();
             clearGenre();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onDropDownChange("All Genres");
           }}
         >
@@ -128,6 +146,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
  			      clearSearchChange();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onFilterChange("Action");
             onDropDownChange("Action");
           }}
@@ -138,6 +158,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
           	clearSearchChange();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onFilterChange("Adventure");
             onDropDownChange("Adventure");
           }}
@@ -148,6 +170,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
           	clearSearchChange();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onFilterChange("Arcade");
             onDropDownChange("Arcade");
           }}
@@ -158,6 +182,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
             clearSearchChange();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onFilterChange("Fighting");
             onDropDownChange("Fighting");
           }}
@@ -168,6 +194,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
             clearSearchChange();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onFilterChange("First-Person");
             onDropDownChange("First-Person");
           }}
@@ -178,6 +206,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
             clearSearchChange();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onFilterChange("Multiplayer");
             onDropDownChange("Multiplayer");
           }}
@@ -188,6 +218,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
             clearSearchChange();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onFilterChange("Music");
             onDropDownChange("Music");
           }}
@@ -198,6 +230,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
             clearSearchChange();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onFilterChange("Platformer");
             onDropDownChange("Platformer");
           }}
@@ -208,6 +242,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
             clearSearchChange();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onFilterChange("Puzzle");
             onDropDownChange("Puzzle");
           }}
@@ -218,6 +254,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
             clearSearchChange();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onFilterChange("Racing");
             onDropDownChange("Racing");
           }}
@@ -228,6 +266,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
             clearSearchChange();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onFilterChange("Role-Playing");
             onDropDownChange("Role-Playing");
           }}
@@ -238,6 +278,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
             clearSearchChange();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onFilterChange("Shooter");
             onDropDownChange("Shooter");
           }}
@@ -248,6 +290,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
             clearSearchChange();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onFilterChange("Simulation");
             onDropDownChange("Simulation");
           }}
@@ -258,6 +302,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
             clearSearchChange();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onFilterChange("Sports");
             onDropDownChange("Sports");
           }}
@@ -268,6 +314,8 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
           href="#"
           onClick={() => {
             clearSearchChange();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
             onFilterChange("Strategy");
             onDropDownChange("Strategy");
           }}
@@ -280,11 +328,70 @@ function FilterDropDown({clearGenre, onPlatformDrop, onPlatformChange, platformD
      <Col className="col-style">
      <Dropdown className="m-2">
       <Dropdown.Toggle size="sm" id="dropdown-basic" className="dropdown-style">
-        +
+        {priceRangeDropDown}
       </Dropdown.Toggle>
 
       <Dropdown.Menu className="w-100">
-     
+       <Dropdown.Item
+          href="#"
+          onClick={() => {
+          clearSearchChange();
+          onPriceRangeDrop("All Price Range")
+          onPriceRangeChange("All Price Range");
+          }}
+        >
+          All Price Range
+        </Dropdown.Item>
+       <Dropdown.Item
+          href="#"
+          onClick={() => {
+            clearSearchChange(); 
+          onPriceRangeDrop("< P2500")
+          onPriceRangeChange("< P2500");
+          }}
+        >
+          &lt; P2500
+        </Dropdown.Item>
+        <Dropdown.Item
+          href="#"
+          onClick={() => {
+            clearSearchChange();
+          onPriceRangeDrop("< P1750")
+          onPriceRangeChange("< P1750");
+          }}
+        >
+          &lt; P1750
+        </Dropdown.Item>
+         <Dropdown.Item
+          href="#"
+          onClick={() => {
+          clearSearchChange();
+          onPriceRangeDrop("< P1000")
+          onPriceRangeChange("< P1000");
+          }}
+        >
+          &lt; P1000
+        </Dropdown.Item>
+        <Dropdown.Item
+          href="#"
+          onClick={() => {
+          clearSearchChange();
+          onPriceRangeDrop("< P500")
+          onPriceRangeChange("< P500");
+          }}
+        >
+           &lt; P500
+        </Dropdown.Item>
+        <Dropdown.Item
+          href="#"
+          onClick={() => {
+          clearSearchChange();
+          onPriceRangeDrop("< P250")
+          onPriceRangeChange("< P250");
+          }}
+        >
+          &lt; P250
+        </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
     </Col>

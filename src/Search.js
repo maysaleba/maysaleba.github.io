@@ -49,7 +49,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   }
 }));
 
-export default function SearchAppBar({ searchQuery, setSearchQuery, clearGenre, onDropDownChange}) {
+export default function SearchAppBar({onPriceRangeDrop, clearPriceRange, searchQuery, setSearchQuery, clearGenre, onDropDownChange}) {
 return (
 	 <Box sx={{ flexGrow: 1 }}>
 	 	<Search sx={{width: {xs: '85vw', md: '50vw', lg: '30vw'}, margin: 'auto', marginBottom: '20px'}}>
@@ -61,7 +61,9 @@ return (
 
                 (e) => {
                 clearGenre();
-                onDropDownChange("All Genres")
+                clearPriceRange();
+                onPriceRangeDrop("All Price Range");
+                onDropDownChange("All Genres");
                 setSearchQuery(e.target.value);
                 // document.searchform.submit();
 
