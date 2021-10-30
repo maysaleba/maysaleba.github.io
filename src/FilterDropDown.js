@@ -290,7 +290,7 @@ function FilterDropDown({clearPriceRange, priceRangeDropDown, onPriceRangeDrop, 
           href="#"
           onClick={() => {
             clearSearchChange();
-                        clearPriceRange();
+            clearPriceRange();
             onPriceRangeDrop("All Price Range")
             onFilterChange("Simulation");
             onDropDownChange("Simulation");
@@ -302,7 +302,7 @@ function FilterDropDown({clearPriceRange, priceRangeDropDown, onPriceRangeDrop, 
           href="#"
           onClick={() => {
             clearSearchChange();
-                        clearPriceRange();
+            clearPriceRange();
             onPriceRangeDrop("All Price Range")
             onFilterChange("Sports");
             onDropDownChange("Sports");

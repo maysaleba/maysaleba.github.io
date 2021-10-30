@@ -9,6 +9,8 @@ import Content from "./Content";
 import NaviBar from "./NaviBar";
 import styled from 'styled-components';
 import Search from './Search';
+import GiftCards from "./GiftCards";
+import FAQ from "./FAQ";
 
 
             var today = new Date();
@@ -103,8 +105,15 @@ export default function Main() {
   }
 
   const clearFilter = (event) => {
-    setFilterField("");
-    setPlatformField("");
+        clearPriceRange();
+        clearSearchChange();
+        onDropDownChange("All Genres");
+        onPriceRangeDrop("All Price Range")
+        onPlatformChange("Switch");
+        onPlatformDrop("Switch");
+        onFilterChange("");
+        onLatestChange("Top Rated")
+        onLatestDrop("Top Rated")
   };
 
   const clearGenre = (event) => {
@@ -253,7 +262,9 @@ position: absolute;
         exact
         render={(props) => (
           <div>
-            <NaviBar />
+            <NaviBar
+              clearFilter={clearFilter}
+             />
             <Search 
               clearPriceRange={clearPriceRange}
               onPriceRangeDrop={onPriceRangeDrop}
@@ -289,7 +300,19 @@ position: absolute;
           </div>
         )}
       />
-      <Route path="/games/:games" component={Content} />
+      <Route path="/games/:games" exact component={Content} />
+      <Route path="/giftcards" render={(props) => (
+        <div>
+            <GiftCards 
+            />
+        </div>
+        )} />
+            <Route path="/faq" render={(props) => (
+        <div>
+            <FAQ 
+            />
+        </div>
+        )} />
       <ScrollToTop />
     </Router>
   );

@@ -84,7 +84,7 @@ p {
     max-width: 12em;
   }
 
-.logonin.shopee {
+.shopee {
     background-image: url(Shopee2.svg);
     max-width: 12em;
   }
@@ -93,6 +93,19 @@ p {
     background-image: url(playstationstore.png);
     max-width: 12em;
   }
+
+.logonen {
+    max-width: 10em;
+    max-height: 2.8em;
+    height: 2.8em;
+    width: 8em;
+    background-size: contain;
+    background-position: left;
+    background-attachment: scroll;
+    background-color: transparent;
+    background-repeat: no-repeat;
+  }
+
 
 .logonin {
     max-width: 10em;
@@ -172,6 +185,10 @@ a {
     text-decoration: none !important;
     background-color: transparent;
     -webkit-text-decoration-skip: objects !important;
+}
+
+a.giftcardlink {
+    color: #9c27b0 !important;
 }
 
 .text-dark, .watch-button.watched:not(:hover) .text {
@@ -327,6 +344,16 @@ display: inline-block;  /* may not need this, but I've found I do */
 background-size:  15px;
 background-position:  left center;
 background-image: url('US.svg');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.phregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('philippines.png');
 background-repeat: no-repeat;
 margin-left: 5px;
 padding-left: 20px;  /* width of the image plus a little extra padding */

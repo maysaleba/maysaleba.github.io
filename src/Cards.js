@@ -1,8 +1,7 @@
 import React from "react";
 import { Badge, Card, Col } from "react-bootstrap";
 import "./Cards.css";
-import {  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Badge2 from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import { LazyLoadImage } from 'react-lazy-load-image-component';

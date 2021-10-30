@@ -554,7 +554,7 @@ const Content = ({ search, setSearch, match }) => {
       <BackgroundContainer>
         <Background />
       </BackgroundContainer>
-      <NaviBar search={search} setSearch={setSearch} />
+      <NaviBar />
       <div className="text-center m-3 p-auto" style={{paddingBottom: 15}}>
         <img
           alt=""
@@ -658,7 +658,6 @@ const Content = ({ search, setSearch, match }) => {
             </tbody>
           </table>
         </div>
-
         <div style={{ fontSize: 14 }}>
           <Card.Header style={{ backgroundColor: "white" }}>
             Description
