@@ -8,10 +8,11 @@ import { withRouter, Link } from "react-router-dom";
 import GamesIcon from '@mui/icons-material/Games';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import InfoIcon from '@mui/icons-material/Info';
+import CloseIcon from '@mui/icons-material/Close';
 
 const useStyles = makeStyles({
   list: {
-    width: 250,
+    width: 200,
     fontSize: 10,
   }
 });
@@ -85,7 +86,7 @@ const NaviBar = props => {
             onClose={()=> setOpen(false)}
             onOpen={()=>{}}>
               <div className = {classes.list}>
-                <Box textAlign="left" p={2}>
+                <Box display="flex" justifyContent="space-between" alignItems="space-between" p={2}>
                 <a className="logocolortext" href="https://maysaleba.com">
                   <img
               style={{ marginRight: "10px" }}
@@ -95,6 +96,12 @@ const NaviBar = props => {
               width="38"
               height="38"
             /></a>
+            <IconButton
+            onClick={()=> setOpen(false)}
+
+            >
+            <CloseIcon />
+            </IconButton>
                 </Box>
                 <Divider />
                   <List>
