@@ -12,7 +12,7 @@ import CloseIcon from '@mui/icons-material/Close';
 
 const useStyles = makeStyles({
   list: {
-    width: 200,
+    width: 250,
     fontSize: 10,
   }
 });
