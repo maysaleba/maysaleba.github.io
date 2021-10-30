@@ -14,6 +14,10 @@ const useStyles = makeStyles({
   list: {
     width: 250,
     fontSize: 10,
+  },
+
+  body: {
+    backgroundColor: "black"
   }
 });
 
@@ -86,7 +90,7 @@ const NaviBar = props => {
             onClose={()=> setOpen(false)}
             onOpen={()=>{}}>
               <div className = {classes.list}>
-                <Box display="flex" justifyContent="space-between" alignItems="space-between" p={2}>
+                <Box display="flex" justifyContent="space-between" alignItems="space-between" p={2} style={{backgroundColor: "#55597d"}}>
                 <a className="logocolortext" href="https://maysaleba.com">
                   <img
               style={{ marginRight: "10px" }}
@@ -100,7 +104,7 @@ const NaviBar = props => {
             onClick={()=> setOpen(false)}
 
             >
-            <CloseIcon />
+            <CloseIcon style={{color:'white'}}/>
             </IconButton>
                 </Box>
                 <Divider />
