@@ -406,11 +406,11 @@ label:focus,
 }
 
 .btn-check:active+.btn-primary:focus, .btn-check:checked+.btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show>.btn-primary.dropdown-toggle:focus {
-   box-shadow: 0 0 8px 0px rgb(0 0 0 / 10%) !important; 
+   box-shadow: none !important; 
 }
 
 .btn-check:focus+.btn, .btn:focus {
-   box-shadow: 0 0 8px 0px rgb(0 0 0 / 10%) !important; 
+   box-shadow: none !important; 
 }
 
 ::-webkit-input-placeholder {
@@ -427,7 +427,7 @@ label:focus,
   border-radius:  5px !important;
   padding: 12px !important;
   width: 100% !important;
-     box-shadow: 0 0 8px 0px rgb(0 0 0 / 10%);
+     /*box-shadow: 0 0 8px 0px rgb(0 0 0 / 10%);*/
 }
 
 .dropdown-menu {
