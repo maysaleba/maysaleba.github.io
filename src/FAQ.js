@@ -124,6 +124,24 @@ const About = () => {
            You can buy from our affiliate via Shopee.ph <a className="giftcardlink" href="https://maysaleba.com/#/giftcards">here</a>
            </Card.Body>
            <Card.Header style={{ backgroundColor: "white" }}>
+           <strong>What is the process of buying Gift Cards from your Shopee.ph affiliate?</strong>
+           </Card.Header>
+           <Card.Body>
+            <ol>
+              <li>Select Gift Card denomination</li>
+<li>Click 'Add to Cart' or 'Buy now'</li>
+<li>Proceed with Checkout</li>
+<li>Select any of the available Payment methods</li>
+      <ul>
+        <li>Linked Bank Account (BPI Online)</li>
+        <li>Payment Center / e-Wallet (e.g. Bayad Center, 7-eleven CLiQQ, GCash, Coins.ph Wallet etc...)</li>
+        <li>Over-the-counter</li>
+        <li>Online Payment</li>
+        </ul>
+      <li>Once payment is confirmed, send a chat message to the Shop. <strong>Code will be replied through chat, usually within a few minutes</strong></li>
+            </ol>
+           </Card.Body>
+           <Card.Header style={{ backgroundColor: "white" }}>
            <strong>Does your affiliate accept GCASH?</strong>
            </Card.Header>
            <Card.Body>
