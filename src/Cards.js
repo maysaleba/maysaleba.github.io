@@ -4,7 +4,7 @@ import "./Cards.css";
 import { Link } from "react-router-dom";
 import Badge2 from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage, trackWindowScroll  } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
@@ -34,7 +34,6 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
             console.log(phpExchange);
 
 const Cards = ({ Title, Image, Score, SaleEnds, Genre, Slug, SalePrice, Discount, URL, Platform, PlusPrice }) => {
-
   // var d = new Date();
   // var lastd = new Date(d.setDate(d.getDate() - 3));
   // var da = String(d.getDate()).padStart(2, "0");
@@ -154,9 +153,13 @@ const Cards = ({ Title, Image, Score, SaleEnds, Genre, Slug, SalePrice, Discount
       
         <LazyLoadImage 
         effect="opacity"
+
         key={Image}
         className="card-img" 
-        src={Image} />
+        src={Image}
+        visibleByDefault={Image}
+         />
+
 
         <Card.ImgOverlay className="card-img-overlay">
           <PlatformBadge hasBadge={Platform}/>
