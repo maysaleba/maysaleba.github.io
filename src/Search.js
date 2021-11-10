@@ -63,7 +63,7 @@ return (
                 clearGenre();
                 clearPriceRange();
                 onPlatformChange("");
-                onPlatformDrop("All Genres");
+                onPlatformDrop("All Platforms");
                 onPriceRangeDrop("All Price Range");
                 onDropDownChange("All Genres");
                 setSearchQuery(e.target.value);
