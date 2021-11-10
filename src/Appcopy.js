@@ -68,6 +68,7 @@ export default function Main() {
   const query = new URLSearchParams(search).get('s');
 
 
+
   function ScrollToTop() {
     const { pathname } = useLocation();
 
@@ -254,6 +255,7 @@ position: absolute;
 
   return (
     <Router>
+     <ScrollToTop />
     <BackgroundContainer>
     <Background  />
     </BackgroundContainer>
@@ -266,6 +268,8 @@ position: absolute;
               clearFilter={clearFilter}
              />
             <Search 
+              onPlatformChange={onPlatformChange}
+              onPlatformDrop={onPlatformDrop}
               clearPriceRange={clearPriceRange}
               onPriceRangeDrop={onPriceRangeDrop}
               searchQuery={searchQuery} 
@@ -313,7 +317,8 @@ position: absolute;
             />
         </div>
         )} />
-      <ScrollToTop />
+
+     
     </Router>
   );
 }
