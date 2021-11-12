@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 
 
 const NaviBar = props => {
-  const { history } = props;
+  const { onPlatformChange, onPlatformDrop, history } = props;
   const classes = useStyles();
   const itemsList = [
     {

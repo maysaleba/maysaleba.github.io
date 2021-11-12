@@ -110,11 +110,11 @@ export default function Main() {
         clearSearchChange();
         onDropDownChange("All Genres");
         onPriceRangeDrop("All Price Range")
-        onPlatformChange("Switch");
-        onPlatformDrop("Switch");
+        onPlatformChange("");
+        onPlatformDrop("All Platforms");
         onFilterChange("");
-        onLatestChange("Top Rated")
-        onLatestDrop("Top Rated")
+        onLatestChange("New Discounts")
+        onLatestDrop("New Discounts")
   };
 
   const clearGenre = (event) => {
@@ -260,6 +260,8 @@ position: absolute;
     <Background  />
     </BackgroundContainer>
     <NaviBar
+              onPlatformChange={onPlatformChange}
+              onPlatformDrop={onPlatformDrop}
               clearFilter={clearFilter}
              />
       <Route
@@ -350,7 +352,7 @@ position: absolute;
        <Route path="/playstation" render={(props) => (
 
         <div>
-                  {setPlatformField("Playstation")}
+          {setPlatformField("Playstation")}
           {setPlatformDropDown("Playstation")}
          <Search 
               onPlatformChange={onPlatformChange}
