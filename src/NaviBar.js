@@ -30,6 +30,7 @@ const NaviBar = props => {
       text: 'Games',
       icon: <GamesIcon/>,
       onClick: () => {
+        setOpen(false)
         history.push('/');
       }
     }, 
@@ -37,13 +38,18 @@ const NaviBar = props => {
       text: 'Gift Cards',
       icon: <CardGiftcardIcon />,
       onClick: () => {
+        setOpen(false)
         history.push('/giftcards')
       }
     }, 
     {
       text: "FAQ",
       icon: <InfoIcon />,
-      onClick: () => history.push('/faq')
+      onClick: () =>  {
+        setOpen(false)
+         history.push('/faq')
+      }
+     
     }
   ];
   const [open, setOpen] = useState(false);

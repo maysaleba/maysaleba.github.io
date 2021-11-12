@@ -347,20 +347,7 @@ position: absolute;
           </div>
         )}
       />
-      <Route path="/games/:games" exact component={Content} />
-      <Route path="/giftcards" render={(props) => (
-        <div>
-            <GiftCards 
-            />
-        </div>
-        )} />
-            <Route path="/faq" render={(props) => (
-        <div>
-            <FAQ 
-            />
-        </div>
-        )} />
-             <Route path="/playstation" render={(props) => (
+       <Route path="/playstation" render={(props) => (
 
         <div>
                   {setPlatformField("Playstation")}
@@ -402,6 +389,20 @@ position: absolute;
         
         </div>
         )} />
+      <Route path="/games/:games" exact component={Content} />
+      <Route path="/giftcards" render={(props) => (
+        <div>
+            <GiftCards 
+            />
+        </div>
+        )} />
+            <Route path="/faq" render={(props) => (
+        <div>
+            <FAQ 
+            />
+        </div>
+        )} />
+            
 
      
     </Router>
