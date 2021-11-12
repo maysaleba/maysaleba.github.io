@@ -62,7 +62,6 @@ return (
               onChange={
 
                 (e) => {
-                history.push("/")
                 clearGenre();
                 clearPriceRange();
                 onPlatformChange("");
