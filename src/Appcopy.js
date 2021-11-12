@@ -306,9 +306,10 @@ position: absolute;
       />
        <Route
         path="/switch"
-        
         render={(props) => (
           <div>
+          {setPlatformField("Switch")}
+          {setPlatformDropDown("Switch")}
             <Search 
               onPlatformChange={onPlatformChange}
               onPlatformDrop={onPlatformDrop}
@@ -362,6 +363,8 @@ position: absolute;
              <Route path="/playstation" render={(props) => (
 
         <div>
+                  {setPlatformField("Playstation")}
+          {setPlatformDropDown("Playstation")}
          <Search 
               onPlatformChange={onPlatformChange}
               onPlatformDrop={onPlatformDrop}
