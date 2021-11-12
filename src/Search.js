@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import IconButton from '@mui/material/IconButton';
+import { withRouter, Link } from "react-router-dom";
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -49,7 +50,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   }
 }));
 
-export default function SearchAppBar({onPlatformDrop, onPlatformChange, onPriceRangeDrop, clearPriceRange, searchQuery, setSearchQuery, clearGenre, onDropDownChange}) {
+const SearchAppBar = props => {
+const {history, onPlatformDrop, onPlatformChange, onPriceRangeDrop, clearPriceRange, searchQuery, setSearchQuery, clearGenre, onDropDownChange} = props;
 return (
 	 <Box sx={{ flexGrow: 1 }}>
 	 	<Search sx={{width: {xs: '85vw', md: '50vw', lg: '30vw'}, margin: 'auto', marginBottom: '20px'}}>
@@ -60,6 +62,7 @@ return (
               onChange={
 
                 (e) => {
+                history.push("/")
                 clearGenre();
                 clearPriceRange();
                 onPlatformChange("");
@@ -98,3 +101,5 @@ return (
 
   );
 }
+
+export default withRouter(SearchAppBar);

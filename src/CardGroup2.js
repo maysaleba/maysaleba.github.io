@@ -74,6 +74,7 @@ const CardGroup = ({
                                           URL={review.URL}
                                           Platform={review.platform}
                                           PlusPrice={review.PlusPrice}
+                                          
                                   />
                                   
                     </div>

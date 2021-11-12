@@ -1,7 +1,25 @@
 import React from "react";
 import { Container, Dropdown, Row, Col } from "react-bootstrap";
+import { withRouter, Link } from "react-router-dom";
 
-function FilterDropDown({clearPriceRange, priceRangeDropDown, onPriceRangeDrop, onPriceRangeChange, clearGenre, onPlatformDrop, onPlatformChange, platformDropDown, onLatestDrop, onLatestChange, latestDropDown, clearFilter, clearSearchChange, onFilterChange, genreDropDown, onDropDownChange }) {
+const FilterDropDown = props => {
+  const  {
+ history,
+ clearPriceRange,
+ priceRangeDropDown, 
+ onPriceRangeDrop, 
+ onPriceRangeChange, 
+ clearGenre, onPlatformDrop, 
+ onPlatformChange, 
+ platformDropDown, 
+ onLatestDrop, 
+ onLatestChange, 
+ latestDropDown, 
+ clearFilter, 
+ clearSearchChange, 
+ onFilterChange, 
+ genreDropDown, 
+ onDropDownChange} = props;
   return (
 
 
@@ -14,9 +32,23 @@ function FilterDropDown({clearPriceRange, priceRangeDropDown, onPriceRangeDrop, 
       </Dropdown.Toggle>
 
       <Dropdown.Menu className="w-100">
+               <Dropdown.Item
+          href="#"
+          onClick={() => {
+          history.push('/');  
+          clearSearchChange();
+            clearPriceRange();
+            onPriceRangeDrop("All Price Range")
+            onPlatformChange("");
+            onPlatformDrop("All Platforms");
+          }}
+        >
+          All Platforms
+        </Dropdown.Item>
         <Dropdown.Item
           href="#"
           onClick={() => {
+            history.push('/switch');
             clearSearchChange();
             clearPriceRange();
             onPriceRangeDrop("All Price Range")
@@ -29,6 +61,7 @@ function FilterDropDown({clearPriceRange, priceRangeDropDown, onPriceRangeDrop, 
         <Dropdown.Item
           href="#"
           onClick={() => {
+            history.push('/playstation');
             clearSearchChange();
             clearPriceRange();
             onPriceRangeDrop("All Price Range")
@@ -38,18 +71,7 @@ function FilterDropDown({clearPriceRange, priceRangeDropDown, onPriceRangeDrop, 
         >
           Playstation
         </Dropdown.Item>
-         <Dropdown.Item
-          href="#"
-          onClick={() => {
-          clearSearchChange();
-            clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onPlatformChange("");
-            onPlatformDrop("All Platforms");
-          }}
-        >
-          All Platforms
-        </Dropdown.Item>
+
       </Dropdown.Menu>
     </Dropdown>
     </Col>
@@ -60,6 +82,18 @@ function FilterDropDown({clearPriceRange, priceRangeDropDown, onPriceRangeDrop, 
       </Dropdown.Toggle>
 
       <Dropdown.Menu className="w-100">
+               <Dropdown.Item
+          href="#"
+          onClick={() => {
+          clearSearchChange();
+                      clearPriceRange();
+            onPriceRangeDrop("All Price Range")
+            onLatestChange("New Discounts");
+            onLatestDrop("New Discounts");
+          }}
+        >
+          New Discounts
+        </Dropdown.Item>
         <Dropdown.Item
           href="#"
           onClick={() => {
@@ -72,18 +106,7 @@ function FilterDropDown({clearPriceRange, priceRangeDropDown, onPriceRangeDrop, 
         >
           Top Rated
         </Dropdown.Item>
-         <Dropdown.Item
-          href="#"
-          onClick={() => {
-          clearSearchChange();
-                      clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onLatestChange("New Discounts");
-            onLatestDrop("New Discounts");
-          }}
-        >
-          New Discounts
-        </Dropdown.Item>
+
         <Dropdown.Item
           href="#"
           onClick={() => {
@@ -400,4 +423,4 @@ function FilterDropDown({clearPriceRange, priceRangeDropDown, onPriceRangeDrop, 
   );
 }
 
-export default FilterDropDown;
+export default withRouter(FilterDropDown);

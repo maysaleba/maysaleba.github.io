@@ -82,16 +82,16 @@ export default function Main() {
 
   const [priceRangeField, setPriceRangeField] = useState(99999);
   const [priceRangeDropDown, setPriceRangeDropDown] = useState("All Price Range");
-  const [platformField, setPlatformField] = useState("Switch");
+  const [platformField, setPlatformField] = useState("");
   const [filterField, setFilterField] = useState("");
   const [genreDropDown, setGenreDropDown] = useState("All Genres");
-  const [platformDropDown, setPlatformDropDown] = useState("Switch")
+  const [platformDropDown, setPlatformDropDown] = useState("All Platforms")
   const [latestField, setLatestField] = useState([]);
-  const [latestDropDown, setLatestDropDown] = useState("Top Rated");
+  const [latestDropDown, setLatestDropDown] = useState("New Discounts");
 
   useEffect(() => {
     const reviews = reviewssw.concat(reviewsps);
-    sortJson(reviews, "SCORE", "string", false);
+    sortJson(reviews, "SaleStarted", "string", false);
     setLatestField(reviews);
   }, []);
 
@@ -259,14 +259,56 @@ position: absolute;
     <BackgroundContainer>
     <Background  />
     </BackgroundContainer>
+    <NaviBar
+              clearFilter={clearFilter}
+             />
       <Route
         path="/"
         exact
         render={(props) => (
           <div>
-            <NaviBar
+            <Search 
+              onPlatformChange={onPlatformChange}
+              onPlatformDrop={onPlatformDrop}
+              clearPriceRange={clearPriceRange}
+              onPriceRangeDrop={onPriceRangeDrop}
+              searchQuery={searchQuery} 
+              setSearchQuery={setSearchQuery} 
+              clearGenre = {clearGenre} 
+              onDropDownChange={onDropDownChange}/>
+            <CardGroup
+              clearPriceRange = {clearPriceRange}
+              priceRangeDropDown = {priceRangeDropDown}
+              onPriceRangeDrop = {onPriceRangeDrop}
+              onPriceRangeChange = {onPriceRangeChange}
+              clearGenre = {clearGenre}
+              onPlatformDrop = {onPlatformDrop}
+              onPlatformChange = {onPlatformChange}
+              platformDropDown={platformDropDown}
+              onLatestDrop={onLatestDrop}
+              onLatestChange={onLatestChange}
+              latestDropDown={latestDropDown}
               clearFilter={clearFilter}
-             />
+              genreDropDown={genreDropDown}
+              onDropDownChange={onDropDownChange}
+              onFilterChange={onFilterChange}
+              clearSearchChange={clearSearchChange}
+              searchQuery={searchQuery}
+              page={page}
+              setSearchQuery={setSearchQuery}
+              jumpPage={jumpPage}
+              filteredReviews={filteredReviews}
+              pageData={pageData}
+              maxPage={maxPage}
+            />
+          </div>
+        )}
+      />
+       <Route
+        path="/switch"
+        
+        render={(props) => (
+          <div>
             <Search 
               onPlatformChange={onPlatformChange}
               onPlatformDrop={onPlatformDrop}
@@ -315,6 +357,46 @@ position: absolute;
         <div>
             <FAQ 
             />
+        </div>
+        )} />
+             <Route path="/playstation" render={(props) => (
+
+        <div>
+         <Search 
+              onPlatformChange={onPlatformChange}
+              onPlatformDrop={onPlatformDrop}
+              clearPriceRange={clearPriceRange}
+              onPriceRangeDrop={onPriceRangeDrop}
+              searchQuery={searchQuery} 
+              setSearchQuery={setSearchQuery} 
+              clearGenre = {clearGenre} 
+              onDropDownChange={onDropDownChange}/>
+          <CardGroup
+              clearPriceRange = {clearPriceRange}
+              priceRangeDropDown = {priceRangeDropDown}
+              onPriceRangeDrop = {onPriceRangeDrop}
+              onPriceRangeChange = {onPriceRangeChange}
+              clearGenre = {clearGenre}
+              onPlatformDrop = {onPlatformDrop}
+              onPlatformChange = {onPlatformChange}
+              platformDropDown={platformDropDown}
+              onLatestDrop={onLatestDrop}
+              onLatestChange={onLatestChange}
+              latestDropDown={latestDropDown}
+              clearFilter={clearFilter}
+              genreDropDown={genreDropDown}
+              onDropDownChange={onDropDownChange}
+              onFilterChange={onFilterChange}
+              clearSearchChange={clearSearchChange}
+              searchQuery={searchQuery}
+              page={page}
+              setSearchQuery={setSearchQuery}
+              jumpPage={jumpPage}
+              filteredReviews={filteredReviews}
+              pageData={pageData}
+              maxPage={maxPage}
+            />
+        
         </div>
         )} />
 
