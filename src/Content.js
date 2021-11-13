@@ -160,7 +160,7 @@ const Content = ({ search, setSearch, match }) => {
                 <td>
 
                   <a
-                    href="https://bit.ly/3tvQ3No"
+                    href="https://shp.ee/jzydt4t"
                     target="_blank"
                     rel="noreferrer"
                     style={{ padding: 0 }}
@@ -177,7 +177,7 @@ const Content = ({ search, setSearch, match }) => {
                 </td>
                 <td className="version">
                 <a
-                    href="https://bit.ly/3tvQ3No"
+                    href="https://shp.ee/jzydt4t"
                     target="_blank"
                     rel="noreferrer"
                     style={{ padding: 10 }}
@@ -186,7 +186,7 @@ const Content = ({ search, setSearch, match }) => {
                   </a>
                 </td>
                 <td className="version">
-                  <a href="https://bit.ly/3tvQ3No" target="_blank" rel="noreferrer">
+                  <a href="https://shp.ee/jzydt4t" target="_blank" rel="noreferrer">
                     <GiftCardVar />
                    
                   </a>
@@ -201,7 +201,7 @@ const Content = ({ search, setSearch, match }) => {
                 <td>
 
                   <a
-                    href="https://bit.ly/2T5UXTK"
+                    href="https://shp.ee/dgy26mt"
                     target="_blank"
                     rel="noreferrer"
                     style={{ padding: 0 }}
@@ -218,7 +218,7 @@ const Content = ({ search, setSearch, match }) => {
                 </td>
                 <td className="version">
                 <a
-                    href="https://bit.ly/2T5UXTK"
+                    href="https://shp.ee/dgy26mt"
                     target="_blank"
                     rel="noreferrer"
                     style={{ padding: 10 }}
@@ -227,7 +227,7 @@ const Content = ({ search, setSearch, match }) => {
                   </a>
                 </td>
                 <td className="version">
-                  <a href="https://bit.ly/2T5UXTK" target="_blank" rel="noreferrer">
+                  <a href="https://shp.ee/dgy26mt" target="_blank" rel="noreferrer">
                     <GiftCardVar />
                    
                   </a>

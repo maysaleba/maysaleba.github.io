@@ -112,20 +112,20 @@ const GiftCards = () => {
                 </Col>
               </Row>
               <Row>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://bit.ly/3tvQ3No">$10 - ₱520</a></Col>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://bit.ly/2T5UXTK">$10 - ₱500</a></Col>
+                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shp.ee/jzydt4t">$10 - ₱520</a></Col>
+                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shp.ee/dgy26mt">$10 - ₱500</a></Col>
               </Row>
               <Row>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://bit.ly/3tvQ3No">$20 - ₱1,040</a></Col>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://bit.ly/2T5UXTK">$20 - ₱1,000</a></Col>
+                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shp.ee/jzydt4t">$20 - ₱1,040</a></Col>
+                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shp.ee/dgy26mt">$20 - ₱1,000</a></Col>
               </Row>
               <Row>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://bit.ly/3tvQ3No">$35 - ₱1,750</a></Col>
-                 <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://bit.ly/2T5UXTK">$25 - ₱1,240</a></Col>
+                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shp.ee/jzydt4t">$35 - ₱1,750</a></Col>
+                 <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shp.ee/dgy26mt">$25 - ₱1,240</a></Col>
               </Row>
               <Row>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://bit.ly/3tvQ3No">$50 - ₱2,450</a></Col>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://bit.ly/2T5UXTK">$50 - ₱2,465</a></Col>
+                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shp.ee/jzydt4t">$50 - ₱2,450</a></Col>
+                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shp.ee/dgy26mt">$50 - ₱2,465</a></Col>
               </Row>
             </List>
             <br />
