@@ -29,7 +29,8 @@ import noimage from './noimage.jpg';
             const fxcp = JSON.parse(fxc)
             
 
-            var phpExchange = 1 / fxcp.rates.USD;
+            var phpExchange = 49.94;
+            // 1 / fxcp.rates.USD;
             // var mexExchange = 1 / fxcp.rates.MXN;
 
             console.log(phpExchange);
