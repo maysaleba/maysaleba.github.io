@@ -35,7 +35,7 @@ const FilterDropDown = props => {
                <Dropdown.Item
           href="#"
           onClick={() => {
-          history.push('/');  
+          history.push('/allgames');  
           clearSearchChange();
             clearPriceRange();
             onPriceRangeDrop("All Price Range")

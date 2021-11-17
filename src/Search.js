@@ -55,42 +55,51 @@ const {history, onPlatformDrop, onPlatformChange, onPriceRangeDrop, clearPriceRa
 return (
 	 <Box sx={{ flexGrow: 1 }}>
 	 	<Search sx={{width: {xs: '85vw', md: '50vw', lg: '30vw'}, margin: 'auto', marginBottom: '20px'}}>
-	 	<form action="/" method="get" style={{display: 'flex'}}>	
-            <StyledInputBase
-              defaultValue={searchQuery}
+	 	<form 
+    style={{display: 'flex'}}
+    onSubmit={
+              (e) => {
 
-              onChange={
-
-                (e) => {
+                history.push('/allgames')
                 clearGenre();
                 clearPriceRange();
                 onPlatformChange("");
                 onPlatformDrop("All Platforms");
                 onPriceRangeDrop("All Price Range");
                 onDropDownChange("All Genres");
-                setSearchQuery(e.target.value);
-                // document.searchform.submit();
+                setSearchQuery(e.target.s.value);
+            }}
 
-              }}
+
+    >	
+            <StyledInputBase
+              defaultValue={searchQuery}
+
+
+              // onChange={
+
+              //   (e) => {
+              //   clearGenre();
+              //   clearPriceRange();
+              //   onPlatformChange("");
+              //   onPlatformDrop("All Platforms");
+              //   onPriceRangeDrop("All Price Range");
+              //   onDropDownChange("All Genres");
+              //   setSearchQuery(e.target.value);
+              //   // document.searchform.submit();
+
+              // }}
 
               autoComplete="off"
               placeholder="Search All Games…"
-              inputProps={{ "aria-label": "search" }}
-              type="search"
-              name="s"
-              id="site-search"
+              id="s"
             />
 
-          {/*  <input 
-            type="submit"
-            // onSubmit={
-            // 	(e) => {
-            // 	setSearchQuery(e.target.value);
-            // }}
-            />*/}
+
             
             <SearchIconWrapper>
-            <IconButton type="submit">
+            <IconButton type="submit"
+            >
               <SearchIcon style={{color:'#55597d'}} />
               </IconButton>
             </SearchIconWrapper>

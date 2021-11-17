@@ -11,6 +11,7 @@ import styled from 'styled-components';
 import Search from './Search';
 import GiftCards from "./GiftCards";
 import FAQ from "./FAQ";
+import MainPage from "./MainPage";
 
 
             var today = new Date();
@@ -266,6 +267,29 @@ position: absolute;
              />
       <Route
         path="/"
+        exact
+        render={(props) => (
+          <div>
+            <Search 
+              onPlatformChange={onPlatformChange}
+              onPlatformDrop={onPlatformDrop}
+              clearPriceRange={clearPriceRange}
+              onPriceRangeDrop={onPriceRangeDrop}
+              searchQuery={searchQuery} 
+              setSearchQuery={setSearchQuery} 
+              clearGenre = {clearGenre} 
+              onDropDownChange={onDropDownChange}/>
+            <MainPage
+              filteredReviews={filteredReviews}
+              pageData={pageData}
+              reviewsps={reviewsps}
+
+            />
+          </div>
+        )}
+      />
+            <Route
+        path="/allgames"
         exact
         render={(props) => (
           <div>

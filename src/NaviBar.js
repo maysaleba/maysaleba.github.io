@@ -9,6 +9,7 @@ import GamesIcon from '@mui/icons-material/Games';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import InfoIcon from '@mui/icons-material/Info';
 import CloseIcon from '@mui/icons-material/Close';
+import HomeIcon from '@mui/icons-material/Home';
 
 const useStyles = makeStyles({
   list: {
@@ -26,12 +27,20 @@ const NaviBar = props => {
   const { onPlatformChange, onPlatformDrop, history } = props;
   const classes = useStyles();
   const itemsList = [
+      {
+      text: 'Home',
+      icon: <HomeIcon/>,
+      onClick: () => {
+        setOpen(false)
+        history.push('/');
+      }
+    }, 
     {
       text: 'Games',
       icon: <GamesIcon/>,
       onClick: () => {
         setOpen(false)
-        history.push('/');
+        history.push('/allgames');
       }
     }, 
     {

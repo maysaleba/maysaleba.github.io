@@ -32,7 +32,7 @@ const CardGroup = ({
   genreDropDown,
   onDropDownChange,
 }) => {
-
+  
   return (
     <div>
      {/*     <SearchBox search={search} setSearch={setSearch}/>*/}

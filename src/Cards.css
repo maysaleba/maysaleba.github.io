@@ -327,7 +327,17 @@ display: inline-block;  /* may not need this, but I've found I do */
   display: flex;
   /*background-color: #e70009;*/
   /*border: 1px solid #e5e5e5;*/
+  margin-top: 5px;
   margin-bottom: 10px;
+}
+
+.linedividet {
+    margin-top:  5px;
+}
+
+.linedivideb {
+    margin-top:  5px;
+    margin-bottom: 10px;
 }
 
 .opencritic-logo {
