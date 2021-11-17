@@ -59,7 +59,7 @@ return (
     style={{display: 'flex'}}
     onSubmit={
               (e) => {
-
+                e.preventDefault();
                 history.push('/allgames')
                 clearGenre();
                 clearPriceRange();
