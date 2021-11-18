@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/maysaleba.github.io/static/css/main.3f5d905c.chunk.css",
-    "main.js": "/maysaleba.github.io/static/js/main.8f274d2d.chunk.js",
-    "main.js.map": "/maysaleba.github.io/static/js/main.8f274d2d.chunk.js.map",
+    "main.js": "/maysaleba.github.io/static/js/main.6af0e9bc.chunk.js",
+    "main.js.map": "/maysaleba.github.io/static/js/main.6af0e9bc.chunk.js.map",
     "runtime-main.js": "/maysaleba.github.io/static/js/runtime-main.b3cc5644.js",
     "runtime-main.js.map": "/maysaleba.github.io/static/js/runtime-main.b3cc5644.js.map",
     "static/css/2.9d65f164.chunk.css": "/maysaleba.github.io/static/css/2.9d65f164.chunk.css",
@@ -24,6 +24,6 @@
     "static/css/2.9d65f164.chunk.css",
     "static/js/2.aee533cc.chunk.js",
     "static/css/main.3f5d905c.chunk.css",
-    "static/js/main.8f274d2d.chunk.js"
+    "static/js/main.6af0e9bc.chunk.js"
   ]
 }
