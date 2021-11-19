@@ -12,14 +12,21 @@ import { Link } from "react-router-dom";
 const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
   var d = new Date();
   var lastd = new Date(d.setDate(d.getDate() - 3));
-  var da = String(d.getDate()).padStart(2, "0");
-  var mo = String(d.getMonth() + 1).padStart(2, "0"); //January is 0!
-  var year = d.getFullYear();
+  var da = String(lastd.getDate()).padStart(2, "0");
+  var mo = String(lastd.getMonth() + 1).padStart(2, "0"); //January is 0!
+  var year = lastd.getFullYear();
+
+  var lastmo = new Date(d.setDate(d.getDate() - 180));
+  var damo = String(lastmo.getDate()).padStart(2, "0");
+  var momo = String(lastmo.getMonth() + 1).padStart(2, "0"); //January is 0!
+  var yearmo = lastmo.getFullYear();
 
   let daysago = year + "-" + mo + "-" + da;
+  let moago = yearmo + "-" + momo + "-" + damo;
 
   const newSwitchDiscounts = reviewssw.filter((x) => x.SaleStarted > daysago);
   const topSwitchDiscounts = reviewssw.filter((x) => x.SCORE > 70);
+  const newPSDiscounts = reviewsps.filter((x) => x.SCORE > 75 && x.ReleaseDate > moago );
   const topPSDiscounts = reviewsps.filter((x) => x.SCORE > 70);
 
   return (
@@ -62,6 +69,34 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
 <hr className="linedividet"/>
         <Row xs={2} md={4} className="g-3">
           {topSwitchDiscounts.slice(0, 12).map((review, key) => (
+            <div key={key}>
+              <Cards
+                Score={review.SCORE}
+                Title={review.Title}
+                SaleEnds={review.SaleEnds}
+                Genre={review.genre}
+                Slug={review.Slug}
+                Image={review.Image}
+                SalePrice={review.SalePrice}
+                Discount={review.PercentOff}
+                URL={review.URL}
+                Platform={review.platform}
+                PlusPrice={review.PlusPrice}
+              />
+            </div>
+          ))}
+        </Row>
+             <hr className="linedivideb"/>
+        <div align="center"><Link to="/allgames">VIEW ALL GAMES</Link></div>
+      </Paper>
+      <Paper elevation={2} className="custom-container">
+        <div className="card-header-custom">
+          <b>NEW PLAYSTATION DISCOUNTS</b>
+          
+        </div>
+<hr className="linedividet"/>
+        <Row xs={2} md={4} className="g-3">
+          {newPSDiscounts.slice(0, 12).map((review, key) => (
             <div key={key}>
               <Cards
                 Score={review.SCORE}
