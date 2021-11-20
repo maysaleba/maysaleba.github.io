@@ -12,6 +12,7 @@ import Search from './Search';
 import GiftCards from "./GiftCards";
 import FAQ from "./FAQ";
 import MainPage from "./MainPage";
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 
             var today = new Date();
@@ -265,6 +266,11 @@ position: absolute;
               onPlatformDrop={onPlatformDrop}
               clearFilter={clearFilter}
              />
+
+  <MessengerCustomerChat
+    pageId="110345971129305"
+  />
+
       <Route
         path="/"
         exact
