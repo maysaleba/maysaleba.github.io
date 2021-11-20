@@ -325,6 +325,7 @@ display: inline-block;  /* may not need this, but I've found I do */
 
 .card-header-custom {
   display: flex;
+  font-size: 1em;
   /*background-color: #e70009;*/
   /*border: 1px solid #e5e5e5;*/
   margin-top: 5px;
@@ -575,6 +576,23 @@ label:focus,
 
   .content-container {
   width: 90% !important;
+}
+
+.card-header-custom {
+  display: flex;
+  font-size: 0.8em;
+  /*background-color: #e70009;*/
+  /*border: 1px solid #e5e5e5;*/
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.card-footer-custom {
+  font-size: 0.8em;
+  /*background-color: #e70009;*/
+  /*border: 1px solid #e5e5e5;*/
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 /*  .nbadges{
     width: 20px;

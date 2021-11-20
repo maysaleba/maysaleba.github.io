@@ -59,7 +59,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
           ))}
         </Row>
         <hr className="linedivideb"/>
-        <div align="center"><Link to="/switch">BROWSE ALL SWITCH GAMES</Link></div>
+        <div  className="card-footer-custom" align="center"><Link to="/switch"><b><u>BROWSE ALL SWITCH GAMES</u></b></Link></div>
       </Paper>
       <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
@@ -87,7 +87,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div align="center"><Link to="/switch">BROWSE ALL SWITCH GAMES</Link></div>
+        <div  className="card-footer-custom" align="center"><Link to="/switch"><b><u>BROWSE ALL SWITCH GAMES</u></b></Link></div>
       </Paper>
       <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
@@ -115,7 +115,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div align="center"><Link to="/playstation">BROWSE ALL PLAYSTATION GAMES</Link></div>
+        <div  className="card-footer-custom" align="center"><Link to="/playstation"><b><u>BROWSE ALL PLAYSTATION GAMES</u></b></Link></div>
       </Paper>
         <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
@@ -143,7 +143,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div align="center"><Link to="/playstation">BROWSE ALL PLAYSTATION GAMES</Link></div>
+        <div className="card-footer-custom" align="center"><Link to="/playstation"><b><u>BROWSE ALL PLAYSTATION GAMES</u></b></Link></div>
       </Paper>
     </div>
   );
