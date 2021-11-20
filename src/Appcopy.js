@@ -199,7 +199,7 @@ export default function Main() {
 
   let { pageData, page, maxPage, jumpPage } = usePagination(
     filteredReviews,
-    32
+    40
   );
 
   useEffect(() => {

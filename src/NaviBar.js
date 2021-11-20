@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {List, ListItem, ListItemText, ListItemIcon, Divider, Box, AppBar, Toolbar, IconButton, Typography, Stack, Container, toggleDrawer} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from './logo.svg';
-import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import Drawer from '@mui/material/Drawer';
 import { makeStyles } from '@mui/styles';
 import { withRouter, Link } from "react-router-dom";
 import GamesIcon from '@mui/icons-material/Games';
@@ -108,7 +108,7 @@ const NaviBar = props => {
             >
             <MenuIcon />
             </IconButton>
-            <SwipeableDrawer 
+            <Drawer 
             anchor="right"
             open={open}
             onClose={()=> setOpen(false)}
@@ -145,7 +145,7 @@ const NaviBar = props => {
                     )})}
                   </List>
               </div>
-          </SwipeableDrawer>
+          </Drawer>
         </Toolbar>
       </AppBar>
     </Box>
