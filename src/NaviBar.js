@@ -77,7 +77,7 @@ const NaviBar = props => {
         <Toolbar sx={{ 
           justifyContent: "space-between", 
           width: "100%",
-          maxWidth: {md:'63%', lg: '63%'},
+          maxWidth: {md:'53%', lg: '53%'},
           mx: "auto" }}>
           <a className="logocolortext" href="https://maysaleba.com">
           <Stack direction="row" alignItems="center">
