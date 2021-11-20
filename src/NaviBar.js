@@ -19,7 +19,7 @@ const useStyles = makeStyles({
   },
 
   body: {
-    backgroundColor: "black"
+    backgroundColor: "white",
   }
 });
 
@@ -139,7 +139,7 @@ const NaviBar = props => {
 
                     <ListItem button key={text} onClick={onClick}>
                     {icon && <ListItemIcon>{icon}</ListItemIcon>}
-                    <ListItemText primary={text} />
+                    <ListItemText disableTypography style={{fontFamily: 'Cairo', fontSize: '16px'}} primary={text} />
                     </ListItem>
 
                     )})}
