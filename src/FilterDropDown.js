@@ -31,8 +31,9 @@ const FilterDropDown = props => {
         {platformDropDown}
       </Dropdown.Toggle>
 
-      <Dropdown.Menu className="w-100">
+      <Dropdown.Menu className="w-100 dropdown-style">
                <Dropdown.Item
+
           href="#"
           onClick={() => {
           history.push('/allgames');  
@@ -81,7 +82,7 @@ const FilterDropDown = props => {
         {latestDropDown}
       </Dropdown.Toggle>
 
-      <Dropdown.Menu className="w-100">
+      <Dropdown.Menu className="w-100 dropdown-style">
       <Dropdown.Item
           href="#"
           onClick={() => {
@@ -153,7 +154,7 @@ const FilterDropDown = props => {
         {genreDropDown}
       </Dropdown.Toggle>
 
-      <Dropdown.Menu className="w-100 dropdown-menu">
+      <Dropdown.Menu className="w-100 dropdown-menu dropdown-style">
        <Dropdown.Item 
           href="#"
           onClick={() => {
@@ -355,7 +356,7 @@ const FilterDropDown = props => {
         {priceRangeDropDown}
       </Dropdown.Toggle>
 
-      <Dropdown.Menu className="w-100">
+      <Dropdown.Menu className="w-100 dropdown-style">
        <Dropdown.Item
           href="#"
           onClick={() => {

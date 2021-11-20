@@ -431,6 +431,7 @@ label:focus,
 }
 
 .dropdown-style{
+    font-family: 'Cairo';
   /*margin-left:  0px !important;*/
   background-color: white !important;
   color: #777 !important;
