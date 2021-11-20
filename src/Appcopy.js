@@ -267,11 +267,6 @@ position: absolute;
               clearFilter={clearFilter}
              />
 
-  <MessengerCustomerChat
-    pageId="110345971129305"
-    themeColor="#9c27b0"
-  />
-
       <Route
         path="/"
         exact
@@ -295,6 +290,11 @@ position: absolute;
           </div>
         )}
       />
+        <MessengerCustomerChat
+    pageId="110345971129305"
+    themeColor="#9c27b0"
+  />
+
             <Route
         path="/allgames"
         exact
@@ -337,6 +337,10 @@ position: absolute;
           </div>
         )}
       />
+        <MessengerCustomerChat
+    pageId="110345971129305"
+    themeColor="#9c27b0"
+  />
        <Route
         path="/switch"
         render={(props) => (
@@ -380,6 +384,10 @@ position: absolute;
           </div>
         )}
       />
+        <MessengerCustomerChat
+    pageId="110345971129305"
+    themeColor="#9c27b0"
+  />
        <Route path="/playstation" render={(props) => (
 
         <div>
@@ -423,12 +431,20 @@ position: absolute;
         </div>
         )} />
       <Route path="/games/:games" exact component={Content} />
+        <MessengerCustomerChat
+    pageId="110345971129305"
+    themeColor="#9c27b0"
+  />
       <Route path="/giftcards" render={(props) => (
         <div>
             <GiftCards 
             />
         </div>
         )} />
+        <MessengerCustomerChat
+    pageId="110345971129305"
+    themeColor="#9c27b0"
+  />
             <Route path="/faq" render={(props) => (
         <div>
             <FAQ 
