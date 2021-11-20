@@ -269,6 +269,7 @@ position: absolute;
 
   <MessengerCustomerChat
     pageId="110345971129305"
+    themeColor="#9c27b0"
   />
 
       <Route
