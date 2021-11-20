@@ -1,12 +1,23 @@
 import React from "react";
 import games1 from "./csvjson.json";
-import games2 from "./csvjsonus.json";
+import gamesps from "./csvjsonus.json";
 import { Card, Row, Col } from "react-bootstrap";
 import NaviBar from "./NaviBar";
 import { Paper, Link, Container } from "@mui/material";
 import styled from "styled-components";
 import download from "./download.gif";
 
+
+            var today = new Date();
+            // var lastd = new Date(today.setDate(today.getDate()+1));
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = today.getFullYear();
+
+            today = yyyy + '-' + mm + '-' + dd;
+
+
+let games2 = gamesps.filter((review) => review.SaleEnds > today);
 let games = games1.concat(games2);
 
 const Content = ({ search, setSearch, match }) => {
