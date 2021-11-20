@@ -266,12 +266,15 @@ position: absolute;
               onPlatformDrop={onPlatformDrop}
               clearFilter={clearFilter}
              />
-
       <Route
         path="/"
         exact
         render={(props) => (
           <div>
+            <MessengerCustomerChat
+    pageId="110345971129305"
+    themeColor="#9c27b0"
+  />
             <Search 
               onPlatformChange={onPlatformChange}
               onPlatformDrop={onPlatformDrop}
@@ -290,16 +293,15 @@ position: absolute;
           </div>
         )}
       />
-        <MessengerCustomerChat
-    pageId="110345971129305"
-    themeColor="#9c27b0"
-  />
-
             <Route
         path="/allgames"
         exact
         render={(props) => (
           <div>
+            <MessengerCustomerChat
+    pageId="110345971129305"
+    themeColor="#9c27b0"
+  />
             <Search 
               onPlatformChange={onPlatformChange}
               onPlatformDrop={onPlatformDrop}
@@ -337,16 +339,16 @@ position: absolute;
           </div>
         )}
       />
-        <MessengerCustomerChat
-    pageId="110345971129305"
-    themeColor="#9c27b0"
-  />
        <Route
         path="/switch"
         render={(props) => (
           <div>
           {setPlatformField("Switch")}
           {setPlatformDropDown("Switch")}
+            <MessengerCustomerChat
+    pageId="110345971129305"
+    themeColor="#9c27b0"
+  />
             <Search 
               onPlatformChange={onPlatformChange}
               onPlatformDrop={onPlatformDrop}
@@ -384,15 +386,15 @@ position: absolute;
           </div>
         )}
       />
-        <MessengerCustomerChat
-    pageId="110345971129305"
-    themeColor="#9c27b0"
-  />
        <Route path="/playstation" render={(props) => (
 
         <div>
           {setPlatformField("Playstation")}
           {setPlatformDropDown("Playstation")}
+            <MessengerCustomerChat
+    pageId="110345971129305"
+    themeColor="#9c27b0"
+  />
          <Search 
               onPlatformChange={onPlatformChange}
               onPlatformDrop={onPlatformDrop}
@@ -431,22 +433,22 @@ position: absolute;
         </div>
         )} />
       <Route path="/games/:games" exact component={Content} />
-        <MessengerCustomerChat
+      <Route path="/giftcards" render={(props) => (
+        <div>
+          <MessengerCustomerChat
     pageId="110345971129305"
     themeColor="#9c27b0"
   />
-      <Route path="/giftcards" render={(props) => (
-        <div>
             <GiftCards 
             />
         </div>
         )} />
-        <MessengerCustomerChat
+            <Route path="/faq" render={(props) => (
+        <div>
+          <MessengerCustomerChat
     pageId="110345971129305"
     themeColor="#9c27b0"
   />
-            <Route path="/faq" render={(props) => (
-        <div>
             <FAQ 
             />
         </div>
