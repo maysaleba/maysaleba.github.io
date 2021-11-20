@@ -88,11 +88,11 @@ export default function Main() {
   const [genreDropDown, setGenreDropDown] = useState("All Genres");
   const [platformDropDown, setPlatformDropDown] = useState("All Platforms")
   const [latestField, setLatestField] = useState([]);
-  const [latestDropDown, setLatestDropDown] = useState("New Discounts");
+  const [latestDropDown, setLatestDropDown] = useState("Top Rated");
 
   useEffect(() => {
     const reviews = reviewssw.concat(reviewsps);
-    sortJson(reviews, "SaleStarted", "string", false);
+    sortJson(reviews, "SCORE", "string", false);
     setLatestField(reviews);
   }, []);
 

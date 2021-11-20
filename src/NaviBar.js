@@ -10,6 +10,7 @@ import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import InfoIcon from '@mui/icons-material/Info';
 import CloseIcon from '@mui/icons-material/Close';
 import HomeIcon from '@mui/icons-material/Home';
+import { Icon } from '@iconify/react';
 
 const useStyles = makeStyles({
   list: {
@@ -36,11 +37,19 @@ const NaviBar = props => {
       }
     }, 
     {
-      text: 'Games',
-      icon: <GamesIcon/>,
+      text: 'Switch',
+      icon: <Icon icon="mdi:nintendo-switch" width="24" />,
       onClick: () => {
         setOpen(false)
-        history.push('/allgames');
+        history.push('/switch');
+      }
+    }, 
+        {
+      text: 'Playstation',
+      icon: <Icon icon="bi:playstation" width="24" />,
+      onClick: () => {
+        setOpen(false)
+        history.push('/playstation');
       }
     }, 
     {

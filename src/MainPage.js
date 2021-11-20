@@ -34,7 +34,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
       {/*     <SearchBox search={search} setSearch={setSearch}/>*/}
       <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
-          <b>NEW ESHOP DISCOUNTS</b>
+          <b>NEW SWITCH DISCOUNTS</b>
 
         </div>
          <hr className="linedividet"/>
@@ -59,7 +59,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
           ))}
         </Row>
         <hr className="linedivideb"/>
-        <div align="center"><Link to="/allgames">VIEW ALL GAMES</Link></div>
+        <div align="center"><Link to="/switch">BROWSE ALL SWITCH GAMES</Link></div>
       </Paper>
       <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
@@ -87,7 +87,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div align="center"><Link to="/allgames">VIEW ALL GAMES</Link></div>
+        <div align="center"><Link to="/switch">BROWSE ALL SWITCH GAMES</Link></div>
       </Paper>
       <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
@@ -115,7 +115,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div align="center"><Link to="/allgames">VIEW ALL GAMES</Link></div>
+        <div align="center"><Link to="/playstation">BROWSE ALL PLAYSTATION GAMES</Link></div>
       </Paper>
         <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
@@ -143,7 +143,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div align="center"><Link to="/allgames">VIEW ALL GAMES</Link></div>
+        <div align="center"><Link to="/playstation">BROWSE ALL PLAYSTATION GAMES</Link></div>
       </Paper>
     </div>
   );
