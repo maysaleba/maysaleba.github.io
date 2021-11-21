@@ -24,8 +24,10 @@ const useStyles = makeStyles({
 });
 
 
+
+
 const NaviBar = props => {
-  const { onPlatformChange, onPlatformDrop, history } = props;
+  const { onPlatformChange, onPlatformDrop, clearSearchChange, searchQuery, setSearchQuery, clearFilter, history } = props;
   const classes = useStyles();
   const itemsList = [
       {
@@ -33,7 +35,7 @@ const NaviBar = props => {
       icon: <HomeIcon/>,
       onClick: () => {
         setOpen(false)
-        history.push('/');
+        window.location.href='http://maysaleba.com/#/'
       }
     }, 
     {
@@ -41,7 +43,9 @@ const NaviBar = props => {
       icon: <Icon icon="mdi:nintendo-switch" width="24" />,
       onClick: () => {
         setOpen(false)
-        history.push('/switch');
+        window.location.href='http://maysaleba.com/#/switch'
+       
+        
       }
     }, 
         {
@@ -49,7 +53,9 @@ const NaviBar = props => {
       icon: <Icon icon="bi:playstation" width="24" />,
       onClick: () => {
         setOpen(false)
-        history.push('/playstation');
+        window.location.href='http://maysaleba.com/#/playstation'
+        
+        
       }
     }, 
     {
@@ -58,6 +64,8 @@ const NaviBar = props => {
       onClick: () => {
         setOpen(false)
         history.push('/giftcards')
+        
+       
       }
     }, 
     {
@@ -66,11 +74,15 @@ const NaviBar = props => {
       onClick: () =>  {
         setOpen(false)
          history.push('/faq')
+  
+         
       }
      
     }
   ];
+
   const [open, setOpen] = useState(false);
+  console.log(searchQuery)
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" sx={{ backgroundColor: "#55597d" }}>
