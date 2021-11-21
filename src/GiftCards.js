@@ -17,7 +17,7 @@ import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 
 let games = games1.concat(games2);
 
-const GiftCards = () => {
+const GiftCards = ({searchQuery, setSearchQuery}) => {
   const BackgroundContainer = styled.div`
     -blur-radius: 20px;
     position: absolute;
@@ -120,12 +120,12 @@ const GiftCards = () => {
                 <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://bit.ly/2T5UXTK">$20 - ₱1,000</a></Col>
               </Row>
               <Row>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://bit.ly/3tvQ3No">$35 - ₱1,750</a></Col>
-                 <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://bit.ly/2T5UXTK">$25 - ₱1,240</a></Col>
+                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://bit.ly/3tvQ3No">$35 - ₱1,820</a></Col>
+                 <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://bit.ly/2T5UXTK">$25 - ₱1,250</a></Col>
               </Row>
               <Row>
                 <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://bit.ly/3tvQ3No">$50 - ₱2,450</a></Col>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://bit.ly/2T5UXTK">$50 - ₱2,465</a></Col>
+                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://bit.ly/2T5UXTK">$50 - ₱2,500</a></Col>
               </Row>
             </List>
             <br />
