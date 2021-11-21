@@ -110,11 +110,24 @@ const Cards = ({ Title, Image, Score, SaleEnds, Genre, Slug, SalePrice, Discount
               if (props.psorsw === "Switch"){
                    return null;
               } if  (props.psorsw === "Playstation"){
-                   return (
+
+
+
+                  if (PlusPrice == 0) {
+                      return (
+                         <span className="psplusbadge" style={{fontWeight: 'bold'}}>
+                  FREE
+                  </span>
+
+                        )
+                  }
+else {return (
                  <span className="psplusbadge" style={{fontWeight: 'bold'}}>
                   {"₱"+Math.round((PlusPrice * phpExchange))}
                   </span>
-                )
+                )}
+
+                   
             }
           }
 

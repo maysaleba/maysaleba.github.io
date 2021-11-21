@@ -105,13 +105,28 @@ const Content = ({ search, setSearch, match }) => {
               if (matchGames[0].platform === "Switch"){
                    return null;
               } if  (matchGames[0].platform === "Playstation"){
-                   return (
+                     if (matchGames[0].PlusPrice == 0) {
+                                                 return (
+                 <>
+                 <span className="psplusbadge">
+                  FREE
+                  </span><br/>
+                  </>
+                )
+                     } else {
+
+                         return (
                  <>
                  <span className="psplusbadge">
                   {"₱"+Math.round((matchGames[0].PlusPrice * phpExchange))}
                   </span><br/>
                   </>
                 )
+
+                     }
+ 
+
+                  
             }
           }
 
