@@ -59,7 +59,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
           ))}
         </Row>
         <hr className="linedivideb"/>
-        <div  className="card-footer-custom" align="center"><Link to="/switch"><b><u>VIEW ALL SWITCH GAMES</u></b></Link></div>
+        <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/#/switch"><b><u>VIEW ALL SWITCH GAMES</u></b></a></div>
       </Paper>
       <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
@@ -87,7 +87,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div  className="card-footer-custom" align="center"><Link to="/switch"><b><u>VIEW ALL SWITCH GAMES</u></b></Link></div>
+        <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/#/switch"><b><u>VIEW ALL SWITCH GAMES</u></b></a></div>
       </Paper>
       <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
@@ -115,7 +115,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div  className="card-footer-custom" align="center"><Link to="/playstation"><b><u>VIEW ALL PLAYSTATION GAMES</u></b></Link></div>
+        <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/#/playstation"><b><u>VIEW ALL PLAYSTATION GAMES</u></b></a></div>
       </Paper>
         <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
@@ -143,7 +143,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div className="card-footer-custom" align="center"><Link to="/playstation"><b><u>VIEW ALL PLAYSTATION GAMES</u></b></Link></div>
+        <div className="card-footer-custom" align="center"><a href="https://maysaleba.com/#/playstation"><b><u>VIEW ALL PLAYSTATION GAMES</u></b></a></div>
       </Paper>
     </div>
   );
