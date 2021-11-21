@@ -59,14 +59,14 @@ return (
     style={{display: 'flex'}}
     onSubmit={
               (e) => {
-                e.preventDefault();
+              
                 history.push('/allgames')
-                clearGenre();
-                clearPriceRange();
-                onPlatformChange("");
-                onPlatformDrop("All Platforms");
-                onPriceRangeDrop("All Price Range");
-                onDropDownChange("All Genres");
+                // clearGenre();
+                // clearPriceRange();
+                // onPlatformChange("");
+                // onPlatformDrop("All Platforms");
+                // onPriceRangeDrop("All Price Range");
+                // onDropDownChange("All Genres");
                 setSearchQuery(e.target.s.value);
             }}
 
