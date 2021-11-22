@@ -136,7 +136,7 @@ const NaviBar = (props) => {
             component="div"
             sx={{
               marginLeft: "auto",
-              display: { sm: "flex" },
+              display: { xs: "none", sm: "flex" },
               fontFamily: "Cairo",
               fontSize: 16,
             }}
@@ -166,11 +166,8 @@ const NaviBar = (props) => {
             </Box>
             </a>
             <a className="logocolortext" href="https://maysaleba.com/#/giftcards">
-            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            
               <Typography
-                // white-space="nowrap"
-                // text-overflow="ellipsis"
-                overflow="hidden"
                 noWrap
                 sx={{
                   marginRight: 2,
@@ -181,13 +178,12 @@ const NaviBar = (props) => {
               >
                 Gift Cards
               </Typography>
-            </Box>
+           
             </a>
             <a className="logocolortext" href="https://maysaleba.com/#/faq">
             <Box
               sx={{
                 marginRight: 2,
-                display: { xs: "none", sm: "block" },
                 marginLeft: "auto",
                 fontFamily: "Cairo",
                 fontSize: 16,
