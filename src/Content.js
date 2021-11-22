@@ -208,7 +208,7 @@ const Content = ({ search, setSearch, match }) => {
                     rel="noreferrer"
                     style={{ padding: 10 }}
                   >
-                Buy <ShopeeCard /><br/> Gift Card
+                Suggested <br/> Gift Card: <ShopeeCard />
                   </a>
                 </td>
                 <td className="version">
