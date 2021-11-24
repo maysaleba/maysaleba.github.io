@@ -32,12 +32,15 @@ const CardGroup = ({
   genreDropDown,
   onDropDownChange,
 }) => {
-  
+
   return (
     <div>
+
      {/*     <SearchBox search={search} setSearch={setSearch}/>*/}
+
         <Paper elevation={2} className="custom-container">
           <div className="card-header-custom">
+
           <FilterDropDown
             clearPriceRange={clearPriceRange}
             priceRangeDropDown={priceRangeDropDown}
@@ -57,12 +60,13 @@ const CardGroup = ({
             onDropDownChange={onDropDownChange}
           />
         </div>
+     
             {filteredReviews.length > 0 ? (
               <>        
                 <Row xs={2} md={4} className="g-3">
                   {pageData().map((review, key) => (
                     <div key={key}>
-                                  <Cards
+                                  <Cards  
                                           Score={review.SCORE}
                                           Title={review.Title}
                                           SaleEnds={review.SaleEnds}
@@ -74,9 +78,10 @@ const CardGroup = ({
                                           URL={review.URL}
                                           Platform={review.platform}
                                           PlusPrice={review.PlusPrice}
-                                          
+                                          Price={review.Price}
                                   />
-                                  
+
+
                     </div>
                 ))}
                 </Row>
@@ -97,7 +102,6 @@ const CardGroup = ({
                 />
 
                   </Paper>
-
 
                 </div>
 
