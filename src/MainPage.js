@@ -54,6 +54,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
                 URL={review.URL}
                 Platform={review.platform}
                 PlusPrice={review.PlusPrice}
+                Price={review.Price}
               />
             </div>
           ))}
@@ -82,6 +83,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
                 URL={review.URL}
                 Platform={review.platform}
                 PlusPrice={review.PlusPrice}
+                Price={review.Price}
               />
             </div>
           ))}
@@ -110,6 +112,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
                 URL={review.URL}
                 Platform={review.platform}
                 PlusPrice={review.PlusPrice}
+                Price={review.Price}
               />
             </div>
           ))}
@@ -138,6 +141,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
                 URL={review.URL}
                 Platform={review.platform}
                 PlusPrice={review.PlusPrice}
+                Price={review.Price}
               />
             </div>
           ))}

@@ -34,7 +34,7 @@ import noimage from './noimage.jpg';
 
             console.log(phpExchange);
 
-const Cards = ({ Title, Image, Score, SaleEnds, Genre, Slug, SalePrice, Discount, URL, Platform, PlusPrice }) => {
+const Cards = ({ Title, Image, Score, SaleEnds, Genre, Slug, SalePrice, Discount, URL, Platform, PlusPrice, Price }) => {
   // var d = new Date();
   // var lastd = new Date(d.setDate(d.getDate() - 3));
   // var da = String(d.getDate()).padStart(2, "0");
@@ -92,13 +92,19 @@ const Cards = ({ Title, Image, Score, SaleEnds, Genre, Slug, SalePrice, Discount
               if (props.psorsw === "Switch"){
                    return (
                  <span style={{fontWeight: 'bold'}}>
-                  {"₱"+Math.round((SalePrice * phpExchange))}
+                  {"₱"+Math.round((props.saleprice * phpExchange))}
                   </span>
                 )
               } if  (props.psorsw === "Playstation"){
                    return (
                  <span style={{fontWeight: 'light'}}>
-                  {"₱"+Math.round((SalePrice * phpExchange))}
+                  {"₱"+Math.round((props.saleprice * phpExchange))}
+                  </span>
+                )
+            } if  (props.psorsw === "ogprice"){
+                   return (
+                 <span style={{fontWeight: 'light'}}>
+                  {"₱"+Math.round((props.saleprice * phpExchange))}
                   </span>
                 )
             }
@@ -187,7 +193,7 @@ else {return (
         <Card.Body>
           <Card.Title className="card-title">{Title}</Card.Title>
           <Card.Text className="card-text">
-            <DaysLeft isExpired={SaleEnds} /> <PercentOff /> <PesoPrice psorsw={Platform} /> <PesoPlusPrice psorsw={Platform} pesoplus={PlusPrice} />
+           <PercentOff /> <strike><PesoPrice psorsw="ogprice" saleprice={Price} /></strike>   <PesoPrice psorsw={Platform} saleprice={SalePrice} /> <PesoPlusPrice psorsw={Platform} pesoplus={PlusPrice} /> <DaysLeft isExpired={SaleEnds} />
             {/*<PesoPrice />
             {" "+Genre}
 */}          </Card.Text>
