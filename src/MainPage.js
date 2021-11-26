@@ -8,6 +8,7 @@ import Paper from "@mui/material/Paper";
 import reviewssw from "./csvjson.json";
 import reviewspsx from "./csvjsonus.json";
 import { Link } from "react-router-dom";
+import AdSense from 'react-adsense';
 
 const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
   var d = new Date();
@@ -62,6 +63,10 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
         <hr className="linedivideb"/>
         <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/#/switch"><b><u>VIEW ALL SWITCH GAMES</u></b></a></div>
       </Paper>
+      <AdSense.Google
+  client='ca-pub-4543556906953539'
+  slot='3566322911'
+/>
       <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
           <b>TOP RATED SWITCH GAMES</b>
