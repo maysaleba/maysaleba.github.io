@@ -66,6 +66,9 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
       <AdSense.Google
   client='ca-pub-4543556906953539'
   slot='3566322911'
+  style={{ display: 'block' }}
+  layout='in-article'
+  format='fluid'
 />
       <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
