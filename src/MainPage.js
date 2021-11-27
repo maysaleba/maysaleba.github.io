@@ -12,7 +12,7 @@ import AdSense from 'react-adsense';
 
 const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
   var d = new Date();
-  var lastd = new Date(d.setDate(d.getDate() - 6));
+  var lastd = new Date(d.setDate(d.getDate() - 3));
   var da = String(lastd.getDate()).padStart(2, "0");
   var mo = String(lastd.getMonth() + 1).padStart(2, "0"); //January is 0!
   var year = lastd.getFullYear();
