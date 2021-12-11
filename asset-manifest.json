@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/maysaleba.github.io/static/css/main.c071f2e1.chunk.css",
-    "main.js": "/maysaleba.github.io/static/js/main.2f3c08cd.chunk.js",
-    "main.js.map": "/maysaleba.github.io/static/js/main.2f3c08cd.chunk.js.map",
+    "main.js": "/maysaleba.github.io/static/js/main.e210d133.chunk.js",
+    "main.js.map": "/maysaleba.github.io/static/js/main.e210d133.chunk.js.map",
     "runtime-main.js": "/maysaleba.github.io/static/js/runtime-main.725e9066.js",
     "runtime-main.js.map": "/maysaleba.github.io/static/js/runtime-main.725e9066.js.map",
     "static/css/2.9d65f164.chunk.css": "/maysaleba.github.io/static/css/2.9d65f164.chunk.css",
-    "static/js/2.afeeb5d6.chunk.js": "/maysaleba.github.io/static/js/2.afeeb5d6.chunk.js",
-    "static/js/2.afeeb5d6.chunk.js.map": "/maysaleba.github.io/static/js/2.afeeb5d6.chunk.js.map",
+    "static/js/2.7f39f14d.chunk.js": "/maysaleba.github.io/static/js/2.7f39f14d.chunk.js",
+    "static/js/2.7f39f14d.chunk.js.map": "/maysaleba.github.io/static/js/2.7f39f14d.chunk.js.map",
     "static/js/3.691ebfd4.chunk.js": "/maysaleba.github.io/static/js/3.691ebfd4.chunk.js",
     "static/js/3.691ebfd4.chunk.js.map": "/maysaleba.github.io/static/js/3.691ebfd4.chunk.js.map",
     "index.html": "/maysaleba.github.io/index.html",
     "static/css/2.9d65f164.chunk.css.map": "/maysaleba.github.io/static/css/2.9d65f164.chunk.css.map",
     "static/css/main.c071f2e1.chunk.css.map": "/maysaleba.github.io/static/css/main.c071f2e1.chunk.css.map",
-    "static/js/2.afeeb5d6.chunk.js.LICENSE.txt": "/maysaleba.github.io/static/js/2.afeeb5d6.chunk.js.LICENSE.txt",
+    "static/js/2.7f39f14d.chunk.js.LICENSE.txt": "/maysaleba.github.io/static/js/2.7f39f14d.chunk.js.LICENSE.txt",
     "static/media/Cards.css": "/maysaleba.github.io/static/media/psplus.19bc6709.svg",
     "static/media/logo.55b508d1.svg": "/maysaleba.github.io/static/media/logo.55b508d1.svg",
     "static/media/noimage.52e869e4.jpg": "/maysaleba.github.io/static/media/noimage.52e869e4.jpg",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.725e9066.js",
     "static/css/2.9d65f164.chunk.css",
-    "static/js/2.afeeb5d6.chunk.js",
+    "static/js/2.7f39f14d.chunk.js",
     "static/css/main.c071f2e1.chunk.css",
-    "static/js/main.2f3c08cd.chunk.js"
+    "static/js/main.e210d133.chunk.js"
   ]
 }
