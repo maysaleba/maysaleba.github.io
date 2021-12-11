@@ -63,7 +63,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
         <hr className="linedivideb"/>
         <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/#/switch"><b><u>VIEW ALL SWITCH GAMES</u></b></a></div>
       </Paper>
-      <div align="center">
+    {/*  <div align="center">
       <AdSense.Google
   client='ca-pub-4543556906953539'
   slot='3566322911'
@@ -71,7 +71,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
   layout='in-article'
   format='fluid'
 />
-</div>
+</div>*/}
       <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
           <b>TOP RATED SWITCH GAMES</b>
