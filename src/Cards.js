@@ -7,8 +7,7 @@ import { styled } from '@mui/material/styles';
 import { LazyLoadImage, trackWindowScroll  } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import noimage from './noimage.jpg';
-
-
+import download from "./download.gif";
             var today = new Date();
             var dd = String(today.getDate()).padStart(2, '0');
             var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -29,12 +28,25 @@ import noimage from './noimage.jpg';
             const fxcp = JSON.parse(fxc)
             
 
-            var phpExchange = 1 / fxcp.rates.USD;
-            // var mexExchange = 1 / fxcp.rates.MXN;
+            var usdExchange = 1 / fxcp.rates.USD;
+            var arsExchange = 1 / fxcp.rates.ARS;
+            var audExchange = 1 / fxcp.rates.AUD;
+            var brlExchange = 1 / fxcp.rates.BRL;
+            var cadExchange = 1 / fxcp.rates.CAD;
+            var clpExchange = 1 / fxcp.rates.CLP;
+            var copExchange = 1 / fxcp.rates.COP;
+            var mxnExchange = 1 / fxcp.rates.MXN;
+            var penExchange = 1 / fxcp.rates.PEN;
+            var plnExchange = 1 / fxcp.rates.PLN;
+            var rubExchange = 1 / fxcp.rates.RUB;
+            var zarExchange = 1 / fxcp.rates.ZAR;
 
-            console.log(phpExchange);
 
-const Cards = ({ Title, Image, Score, SaleEnds, Genre, Slug, SalePrice, Discount, URL, Platform, PlusPrice, Price }) => {
+            console.log("USD\n" + usdExchange + "\nARS\n" + arsExchange + "\nAUD\n" + audExchange + "\nBRL\n" + brlExchange + "\nCAD\n" + cadExchange + "\nCLP\n" + clpExchange + "\nCOP\n" + copExchange 
+              + "\nMXN\n" + mxnExchange + "\nPEN\n" + penExchange + "\nPLN\n" + plnExchange + "\nRUB\n" + rubExchange + "\nZAR\n" + zarExchange);
+
+const Cards = ({ Title, Image, Score, SaleEnds, Genre, Slug, SalePrice, Discount, URL, Platform, PlusPrice, Price, CanadaPrice, 
+PeruPrice, ArgentinaPrice, AustraliaPrice, ColombiaPrice, SouthafricaPrice, BrazilPrice, RussiaPrice, PolandPrice, ChilePrice, MexicoPrice }) => {
   // var d = new Date();
   // var lastd = new Date(d.setDate(d.getDate() - 3));
   // var da = String(d.getDate()).padStart(2, "0");
@@ -42,7 +54,6 @@ const Cards = ({ Title, Image, Score, SaleEnds, Genre, Slug, SalePrice, Discount
   // var year = d.getFullYear();
 
   // var daysago = year + "-" + mo + "-" + da;
-
             const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
             const firstDate = new Date();
             const secondDate = new Date(SaleEnds);
@@ -90,21 +101,135 @@ const Cards = ({ Title, Image, Score, SaleEnds, Genre, Slug, SalePrice, Discount
             function PesoPrice(props){
 
               if (props.psorsw === "Switch"){
+                var pricesobj = {
+                  "Canada": CanadaPrice * cadExchange,
+                  "Peru": PeruPrice * penExchange,
+                  "Argentina": ArgentinaPrice * arsExchange * 1.43,
+                  "Australia": AustraliaPrice * audExchange,
+                  "Colombia": ColombiaPrice * copExchange,
+                  "Southafrica": SouthafricaPrice * zarExchange,
+                  "Brazil": BrazilPrice * brlExchange,
+                  "Russia": RussiaPrice * rubExchange,
+                  "Poland": PolandPrice * plnExchange,
+                  "Chile": ChilePrice * clpExchange,
+                  "Mexico": MexicoPrice * mxnExchange,
+                  "US": SalePrice * usdExchange
+                }
+
+               Object.entries(pricesobj).forEach(([k, v]) => {
+                            if (v === 0) delete pricesobj[k];
+                        });
+
+               // console.log(pricesobj)
+
+
+//                 const entries = Object.entries(pricesobj).sort(([, a], [, b]) => a - b);
+
+// var rank1 = entries[0][0] + ": " + entries[0][1]
+// var rank2 = entries[1][0] + ": " + entries[1][1]
+// var rank3 = entries[2][0] + ": " + entries[2][1]
+
+//  console.log(rank1 + "\n" + rank2 + "\n" + rank3);
+
+
+                var smallest = '';
+                var smallestprice;
+                        for (var key in pricesobj) {
+                          if (smallest !== '' && pricesobj[key] < pricesobj[smallest]) {
+                            smallest = key;
+                            smallestprice = pricesobj[key]
+                          } else if (smallest === '') {
+                            smallest = key;
+                            smallestprice = pricesobj[key]
+                          }
+                        }
+                        // console.log("smallest---", smallest + "\n" + smallestprice);
+
+                        function SmallestFlag() {
+                            if (smallest === "US")
+                            {
+                              return (
+                                  <span className="usregion-logo" style={{fontWeight: 'bold'}}>{"₱"+Math.round(smallestprice)}</span>
+                                )
+                            }
+                            else if (smallest === "Argentina"){
+                              return (
+                                  <span className="arregion-logo" style={{fontWeight: 'bold'}}>{"₱"+Math.round(smallestprice)}</span>
+                                )
+                            }
+                            else if (smallest === "Australia"){
+                              return (
+                                  <span className="auregion-logo" style={{fontWeight: 'bold'}}>{"₱"+Math.round(smallestprice)}</span>
+                                )
+                            }
+                            else if (smallest === "Brazil"){
+                              return (
+                                  <span className="brregion-logo" style={{fontWeight: 'bold'}}>{"₱"+Math.round(smallestprice)}</span>
+                                )
+                            }
+                            else if (smallest === "Canada"){
+                              return (
+                                  <span className="caregion-logo" style={{fontWeight: 'bold'}}>{"₱"+Math.round(smallestprice)}</span>
+                                )
+                            }
+                            else if (smallest === "Chile"){
+                              return (
+                                  <span className="clregion-logo" style={{fontWeight: 'bold'}}>{"₱"+Math.round(smallestprice)}</span>
+                                )
+                            }
+                            else if (smallest === "Colombia"){
+                              return (
+                                  <span className="coregion-logo" style={{fontWeight: 'bold'}}>{"₱"+Math.round(smallestprice)}</span>
+                                )
+                            }
+                            else if (smallest === "Mexico"){
+                              return (
+                                  <span className="mxregion-logo" style={{fontWeight: 'bold'}}>{"₱"+Math.round(smallestprice)}</span>
+                                )
+                            }
+                            else if (smallest === "Peru"){
+                              return (
+                                  <span className="peregion-logo" style={{fontWeight: 'bold'}}>{"₱"+Math.round(smallestprice)}</span>
+                                )
+                            }
+                            else if (smallest === "Poland"){
+                              return (
+                                  <span className="plregion-logo" style={{fontWeight: 'bold'}}>{"₱"+Math.round(smallestprice)}</span>
+                                )
+                            }
+                            else if (smallest === "Russia"){
+                              return (
+                                  <span className="ruregion-logo" style={{fontWeight: 'bold'}}>{"₱"+Math.round(smallestprice)}</span>
+                                )
+                            }
+                            else if (smallest === "Southafrica"){
+                              return (
+                                  <span className="zaregion-logo" style={{fontWeight: 'bold'}}>{"₱"+Math.round(smallestprice)}</span>
+                                )
+                            }
+                            else {
+                              return null;
+                            }
+
+
+                        }
+
+
                    return (
-                 <span style={{fontWeight: 'bold'}}>
-                  {"₱"+Math.round((props.saleprice * phpExchange))}
-                  </span>
+                    <>
+                    <SmallestFlag/>
+</>
                 )
               } if  (props.psorsw === "Playstation"){
                    return (
                  <span style={{fontWeight: 'light'}}>
-                  {"₱"+Math.round((props.saleprice * phpExchange))}
+                  {"₱"+Math.round((props.saleprice * usdExchange))}
                   </span>
                 )
             } if  (props.psorsw === "ogprice"){
                    return (
                  <span style={{fontWeight: 'light'}}>
-                  {"₱"+Math.round((props.saleprice * phpExchange))}
+                  {"₱"+Math.round((props.saleprice * usdExchange))}
                   </span>
                 )
             }
@@ -129,7 +254,7 @@ const Cards = ({ Title, Image, Score, SaleEnds, Genre, Slug, SalePrice, Discount
                   }
 else {return (
                  <span className="psplusbadge" style={{fontWeight: 'bold'}}>
-                  {"₱"+Math.round((PlusPrice * phpExchange))}
+                  {"₱"+Math.round((PlusPrice * usdExchange))}
                   </span>
                 )}
 
@@ -193,7 +318,21 @@ else {return (
         <Card.Body>
           <Card.Title className="card-title">{Title}</Card.Title>
           <Card.Text className="card-text">
-           <PercentOff /> <strike><PesoPrice psorsw="ogprice" saleprice={Price} /></strike>   <PesoPrice psorsw={Platform} saleprice={SalePrice} /> <PesoPlusPrice psorsw={Platform} pesoplus={PlusPrice} /> <DaysLeft isExpired={SaleEnds} />
+           <PercentOff /> <strike><PesoPrice psorsw="ogprice" saleprice={Price} /></strike>   <PesoPrice 
+           psorsw={Platform} 
+           saleprice={SalePrice} 
+           canadaprice={CanadaPrice}
+           peruprice={PeruPrice}
+           argentinaprice={ArgentinaPrice}
+           australiaprice={AustraliaPrice}
+           colombiaprice={ColombiaPrice}
+           southafricaprice={SouthafricaPrice}
+           brazilprice={BrazilPrice}
+           russiaprice={RussiaPrice}
+           polandprice={PolandPrice}
+           chileprice={ChilePrice}
+           mexicoprice={MexicoPrice}
+           /> <PesoPlusPrice psorsw={Platform} pesoplus={PlusPrice} /> <DaysLeft isExpired={SaleEnds} />
             {/*<PesoPrice />
             {" "+Genre}
 */}          </Card.Text>

@@ -43,20 +43,32 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
         <Row xs={2} md={4} className="g-3">
           {newSwitchDiscounts.slice(0, 12).map((review, key) => (
             <div key={key}>
-              <Cards
-                Score={review.SCORE}
-                Title={review.Title}
-                SaleEnds={review.SaleEnds}
-                Genre={review.genre}
-                Slug={review.Slug}
-                Image={review.Image}
-                SalePrice={review.SalePrice}
-                Discount={review.PercentOff}
-                URL={review.URL}
-                Platform={review.platform}
-                PlusPrice={review.PlusPrice}
-                Price={review.Price}
-              />
+              <Cards  
+                                          Score={review.SCORE}
+                                          Title={review.Title}
+                                          SaleEnds={review.SaleEnds}
+                                          Genre={review.genre}
+                                          Slug={review.Slug}
+                                          Image={review.Image}
+                                          SalePrice={review.SalePrice}
+                                          CanadaPrice={review.CanadaPrice}
+                                          PeruPrice={review.PeruPrice}
+                                          ArgentinaPrice={review.ArgentinaPrice}
+                                          AustraliaPrice={review.AustraliaPrice}
+                                          ColombiaPrice={review.ColombiaPrice}
+                                          SouthafricaPrice={review.SouthafricaPrice}
+                                          BrazilPrice={review.BrazilPrice}
+                                          RussiaPrice={review.RussiaPrice}
+                                          PolandPrice={review.PolandPrice}
+                                          ChilePrice={review.ChilePrice}
+                                          MexicoPrice={review.MexicoPrice}
+                                          Discount={review.PercentOff}
+                                          URL={review.URL}
+                                          Platform={review.platform}
+                                          PlusPrice={review.PlusPrice}
+                                          Price={review.Price}
+                                  />
+
             </div>
           ))}
         </Row>
@@ -81,20 +93,32 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
         <Row xs={2} md={4} className="g-3">
           {topSwitchDiscounts.slice(0, 12).map((review, key) => (
             <div key={key}>
-              <Cards
-                Score={review.SCORE}
-                Title={review.Title}
-                SaleEnds={review.SaleEnds}
-                Genre={review.genre}
-                Slug={review.Slug}
-                Image={review.Image}
-                SalePrice={review.SalePrice}
-                Discount={review.PercentOff}
-                URL={review.URL}
-                Platform={review.platform}
-                PlusPrice={review.PlusPrice}
-                Price={review.Price}
-              />
+             <Cards  
+                                          Score={review.SCORE}
+                                          Title={review.Title}
+                                          SaleEnds={review.SaleEnds}
+                                          Genre={review.genre}
+                                          Slug={review.Slug}
+                                          Image={review.Image}
+                                          SalePrice={review.SalePrice}
+                                          CanadaPrice={review.CanadaPrice}
+                                          PeruPrice={review.PeruPrice}
+                                          ArgentinaPrice={review.ArgentinaPrice}
+                                          AustraliaPrice={review.AustraliaPrice}
+                                          ColombiaPrice={review.ColombiaPrice}
+                                          SouthafricaPrice={review.SouthafricaPrice}
+                                          BrazilPrice={review.BrazilPrice}
+                                          RussiaPrice={review.RussiaPrice}
+                                          PolandPrice={review.PolandPrice}
+                                          ChilePrice={review.ChilePrice}
+                                          MexicoPrice={review.MexicoPrice}
+                                          Discount={review.PercentOff}
+                                          URL={review.URL}
+                                          Platform={review.platform}
+                                          PlusPrice={review.PlusPrice}
+                                          Price={review.Price}
+                                  />
+
             </div>
           ))}
         </Row>

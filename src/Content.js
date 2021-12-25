@@ -7,23 +7,18 @@ import { Paper, Link, Container } from "@mui/material";
 import styled from "styled-components";
 import download from "./download.gif";
 
+var today = new Date();
+// var lastd = new Date(today.setDate(today.getDate()+1));
+var dd = String(today.getDate()).padStart(2, "0");
+var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+var yyyy = today.getFullYear();
 
-            var today = new Date();
-            // var lastd = new Date(today.setDate(today.getDate()+1));
-            var dd = String(today.getDate()).padStart(2, '0');
-            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-            var yyyy = today.getFullYear();
-
-            today = yyyy + '-' + mm + '-' + dd;
-
+today = yyyy + "-" + mm + "-" + dd;
 
 let games2 = gamesps.filter((review) => review.SaleEnds > today);
 let games = games1.concat(games2);
 
 const Content = ({ search, setSearch, match }) => {
-
-
-
   var today = new Date();
   var dd = String(today.getDate()).padStart(2, "0");
   var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
@@ -44,16 +39,25 @@ const Content = ({ search, setSearch, match }) => {
   let fxc = httpGet();
   const fxcp = JSON.parse(fxc);
 
-  var phpExchange = 1 / fxcp.rates.USD;
+  var usdExchange = 1 / fxcp.rates.USD;
+  var arsExchange = 1 / fxcp.rates.ARS;
+  var audExchange = 1 / fxcp.rates.AUD;
+  var brlExchange = 1 / fxcp.rates.BRL;
+  var cadExchange = 1 / fxcp.rates.CAD;
+  var clpExchange = 1 / fxcp.rates.CLP;
+  var copExchange = 1 / fxcp.rates.COP;
+  var mxnExchange = 1 / fxcp.rates.MXN;
+  var penExchange = 1 / fxcp.rates.PEN;
+  var plnExchange = 1 / fxcp.rates.PLN;
+  var rubExchange = 1 / fxcp.rates.RUB;
+  var zarExchange = 1 / fxcp.rates.ZAR;
 
   const matchGames = games.filter((game) => {
     return game.Slug === match.params.games;
   });
 
-
-
   function PesoPrice(props) {
-    return "₱" + Math.round(props.props * phpExchange);
+    return "₱" + Math.round(props.props * usdExchange);
   }
 
   function ReverseDesc(props) {
@@ -98,301 +102,204 @@ const Content = ({ search, setSearch, match }) => {
     });
   }
 
-
-
-
-   function PesoPlusPrice(){
-              if (matchGames[0].platform === "Switch"){
-                   return null;
-              } if  (matchGames[0].platform === "Playstation"){
-                     if (matchGames[0].PlusPrice == 0) {
-                                                 return (
-                 <>
-                 <span className="psplusbadge">
-                  FREE
-                  </span><br/>
-                  </>
-                )
-                     } else {
-
-                         return (
-                 <>
-                 <span className="psplusbadge">
-                  {"₱"+Math.round((matchGames[0].PlusPrice * phpExchange))}
-                  </span><br/>
-                  </>
-                )
-
-                     }
- 
-
-                  
-            }
-          }
-
+  function PesoPlusPrice() {
+    if (matchGames[0].platform === "Switch") {
+      return null;
+    }
+    if (matchGames[0].platform === "Playstation") {
+      if (matchGames[0].PlusPrice == 0) {
+        return (
+          <>
+            <span className="psplusbadge">FREE</span>
+            <br />
+          </>
+        );
+      } else {
+        return (
+          <>
+            <span className="psplusbadge">
+              {"₱" + Math.round(matchGames[0].PlusPrice * usdExchange)}
+            </span>
+            <br />
+          </>
+        );
+      }
+    }
+  }
 
   function ShopeeCard() {
-    if (matchGames[0].platform === "Switch")
-    {
-      if (parseFloat(matchGames[0].SalePrice) <= 10 )
-        {
-          return <span>$10</span>
-        } else
-      if (parseFloat(matchGames[0].SalePrice) <= 20 ) 
-        {
-          return <span>$20</span>
-        } else
-      if (parseFloat(matchGames[0].SalePrice) <= 35 ) 
-        {
-          return <span>$35</span>
-        } else 
-      if (parseFloat(matchGames[0].SalePrice) <= 50 ) 
-        {
-          return <span>$50</span>
-        } else 
-        {
-          return <span>$50</span>
-        }
-    }
-
-    else {
-      if (parseFloat(matchGames[0].SalePrice) <= 10 )
-        {
-          return <span>$10</span>
-        } else
-      if (parseFloat(matchGames[0].SalePrice) <= 20 ) 
-        {
-          return <span>$20</span>
-        } else
-      if (parseFloat(matchGames[0].SalePrice) <= 25 ) 
-        {
-          return <span>$25</span>
-        } else 
-      if (parseFloat(matchGames[0].SalePrice) <= 50 ) 
-        {
-          return <span>$50</span>
-        } else 
-        {
-          return <span>$50</span>
-        }
+    if (matchGames[0].platform === "Switch") {
+      if (parseFloat(matchGames[0].SalePrice) <= 10) {
+        return <span>$10</span>;
+      } else if (parseFloat(matchGames[0].SalePrice) <= 20) {
+        return <span>$20</span>;
+      } else if (parseFloat(matchGames[0].SalePrice) <= 35) {
+        return <span>$35</span>;
+      } else if (parseFloat(matchGames[0].SalePrice) <= 50) {
+        return <span>$50</span>;
+      } else {
+        return <span>$50</span>;
+      }
+    } else {
+      if (parseFloat(matchGames[0].SalePrice) <= 10) {
+        return <span>$10</span>;
+      } else if (parseFloat(matchGames[0].SalePrice) <= 20) {
+        return <span>$20</span>;
+      } else if (parseFloat(matchGames[0].SalePrice) <= 25) {
+        return <span>$25</span>;
+      } else if (parseFloat(matchGames[0].SalePrice) <= 50) {
+        return <span>$50</span>;
+      } else {
+        return <span>$50</span>;
+      }
     }
   }
 
-
-    function ShopeeURL() {
-    if (matchGames[0].platform === "Switch")
-    { return (
-       <tr className="item-table-best">
-                <td>
-
-                  <a
-                    href="https://bit.ly/3tvQ3No"
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ padding: 0 }}
-                  >
-                                   
-
-                  <div
-                    style={{ marginLeft: "10px" }}
-                    className="logonin shopee"
-                  >
-                    <img src={download} />
-                  </div>
-                  </a>
-                </td>
-                <td className="version">
-                <a
-                    href="https://bit.ly/3tvQ3No"
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ padding: 10 }}
-                  >
-                Suggested <br/> Gift Card: <ShopeeCard />
-                  </a>
-                </td>
-                <td className="version">
-                  <a href="https://bit.ly/3tvQ3No" target="_blank" rel="noreferrer">
-                    <GiftCardVar />
-                   
-                  </a>
-                </td>
-              </tr>
-              )
+  function ShopeeURL() {
+    if (matchGames[0].platform === "Switch") {
+      return (
+        <tr className="item-table-best">
+          <td>
+            <a
+              href="https://bit.ly/3tvQ3No"
+              target="_blank"
+              rel="noreferrer"
+              style={{ padding: 0 }}
+            >
+              <div style={{ marginLeft: "10px" }} className="logonin shopee">
+                <img src={download} />
+              </div>
+            </a>
+          </td>
+          <td className="version">
+            <a
+              href="https://bit.ly/3tvQ3No"
+              target="_blank"
+              rel="noreferrer"
+              style={{ padding: 10 }}
+            >
+              Suggested <br /> Gift Card: <ShopeeCard />
+            </a>
+          </td>
+          <td className="version">
+            <a href="https://bit.ly/3tvQ3No" target="_blank" rel="noreferrer">
+              <GiftCardVar />
+            </a>
+          </td>
+        </tr>
+      );
+    } else {
+      return (
+        <tr className="item-table-best">
+          <td>
+            <a
+              href="https://bit.ly/2T5UXTK"
+              target="_blank"
+              rel="noreferrer"
+              style={{ padding: 0 }}
+            >
+              <div style={{ marginLeft: "10px" }} className="logonin shopee">
+                <img src={download} />
+              </div>
+            </a>
+          </td>
+          <td className="version">
+            <a
+              href="https://bit.ly/2T5UXTK"
+              target="_blank"
+              rel="noreferrer"
+              style={{ padding: 10 }}
+            >
+              Suggested <br /> Gift Card: <ShopeeCard />
+            </a>
+          </td>
+          <td className="version">
+            <a href="https://bit.ly/2T5UXTK" target="_blank" rel="noreferrer">
+              <GiftCardVar />
+            </a>
+          </td>
+        </tr>
+      );
     }
-
-    else 
-    { return (
-       <tr className="item-table-best">
-                <td>
-
-                  <a
-                    href="https://bit.ly/2T5UXTK"
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ padding: 0 }}
-                  >
-                                   
-
-                  <div
-                    style={{ marginLeft: "10px" }}
-                    className="logonin shopee"
-                  >
-                    <img src={download} />
-                  </div>
-                  </a>
-                </td>
-                <td className="version">
-                <a
-                    href="https://bit.ly/2T5UXTK"
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ padding: 10 }}
-                  >
-                 Suggested <br/> Gift Card: <ShopeeCard />
-                  </a>
-                </td>
-                <td className="version">
-                  <a href="https://bit.ly/2T5UXTK" target="_blank" rel="noreferrer">
-                    <GiftCardVar />
-                   
-                  </a>
-                </td>
-              </tr>
-              )
-    }
-    }
-  
+  }
 
   function GiftCardVar() {
-    if (matchGames[0].platform === "Switch")
-    {
-      if (parseFloat(matchGames[0].SalePrice) <= 10 )
-        {
-          return (
-               <div className="btn btn-block btn-secondary">
-                      <span>₱500</span>
-                      <span className="ml-2 badge badge-danger">
-                       -17%
-                      </span>
-                    </div>
-
-            );
-        } else
-      if (parseFloat(matchGames[0].SalePrice) <= 20 ) 
-        {
-          return (
-               <div className="btn btn-block btn-secondary">
-                      <span>₱1000</span>
-                      <span className="ml-2 badge badge-danger">
-                       -9%
-                      </span>
-                    </div>
-
-            );
-        } else
-      if (parseFloat(matchGames[0].SalePrice) <= 35 ) 
-        {
-          return (
-               <div className="btn btn-block btn-secondary">
-                      <span>₱1750</span>
-                      <span className="ml-2 badge badge-danger">
-                       -8%
-                      </span>
-                    </div>
-
-            );
-        } else 
-      if (parseFloat(matchGames[0].SalePrice) <= 50 ) 
-        {
-          return (
-               <div className="btn btn-block btn-secondary">
-                      <span>₱2450</span>
-                      <span className="ml-2 badge badge-danger">
-                       -2%
-                      </span>
-                    </div>
-
-            );
-        } else 
-        {
-          return (
-               <div className="btn btn-block btn-secondary">
-                      <span>₱2450</span>
-                      <span className="ml-2 badge badge-danger">
-                       -2%
-                      </span>
-                    </div>
-
-            );
-        }
-    }
-
-    else {
-      
-      if (parseFloat(matchGames[0].SalePrice) <= 10 )
-        {
-          return (
-               <div className="btn btn-block btn-secondary">
-                      <span>₱500</span>
-                      <span className="ml-2 badge badge-danger">
-                       -17%
-                      </span>
-                    </div>
-
-            );
-        } else
-      if (parseFloat(matchGames[0].SalePrice) <= 20 ) 
-        {
-          return (
-               <div className="btn btn-block btn-secondary">
-                      <span>₱1000</span>
-                      <span className="ml-2 badge badge-danger">
-                       -17%
-                      </span>
-                    </div>
-
-            );
-        } else
-      if (parseFloat(matchGames[0].SalePrice) <= 25 ) 
-        {
-          return (
-               <div className="btn btn-block btn-secondary">
-                      <span>₱1240</span>
-                      <span className="ml-2 badge badge-danger">
-                       -11%
-                      </span>
-                    </div>
-
-            );
-        } else 
-      if (parseFloat(matchGames[0].SalePrice) <= 50 ) 
-        {
-          return (
-               <div className="btn btn-block btn-secondary">
-                      <span>₱2465</span>
-                      <span className="ml-2 badge badge-danger">
-                       -9%
-                      </span>
-                    </div>
-
-            );
-        } else 
-        {
-          return (
-               <div className="btn btn-block btn-secondary">
-                      <span>₱2465</span>
-                      <span className="ml-2 badge badge-danger">
-                       -9%
-                      </span>
-                    </div>
-
-            );
-        }
+    if (matchGames[0].platform === "Switch") {
+      if (parseFloat(matchGames[0].SalePrice) <= 10) {
+        return (
+          <div className="btn btn-block btn-secondary">
+            <span>₱500</span>
+            <span className="ml-2 badge badge-danger">-17%</span>
+          </div>
+        );
+      } else if (parseFloat(matchGames[0].SalePrice) <= 20) {
+        return (
+          <div className="btn btn-block btn-secondary">
+            <span>₱1000</span>
+            <span className="ml-2 badge badge-danger">-9%</span>
+          </div>
+        );
+      } else if (parseFloat(matchGames[0].SalePrice) <= 35) {
+        return (
+          <div className="btn btn-block btn-secondary">
+            <span>₱1750</span>
+            <span className="ml-2 badge badge-danger">-8%</span>
+          </div>
+        );
+      } else if (parseFloat(matchGames[0].SalePrice) <= 50) {
+        return (
+          <div className="btn btn-block btn-secondary">
+            <span>₱2450</span>
+            <span className="ml-2 badge badge-danger">-2%</span>
+          </div>
+        );
+      } else {
+        return (
+          <div className="btn btn-block btn-secondary">
+            <span>₱2450</span>
+            <span className="ml-2 badge badge-danger">-2%</span>
+          </div>
+        );
+      }
+    } else {
+      if (parseFloat(matchGames[0].SalePrice) <= 10) {
+        return (
+          <div className="btn btn-block btn-secondary">
+            <span>₱500</span>
+            <span className="ml-2 badge badge-danger">-17%</span>
+          </div>
+        );
+      } else if (parseFloat(matchGames[0].SalePrice) <= 20) {
+        return (
+          <div className="btn btn-block btn-secondary">
+            <span>₱1000</span>
+            <span className="ml-2 badge badge-danger">-17%</span>
+          </div>
+        );
+      } else if (parseFloat(matchGames[0].SalePrice) <= 25) {
+        return (
+          <div className="btn btn-block btn-secondary">
+            <span>₱1240</span>
+            <span className="ml-2 badge badge-danger">-11%</span>
+          </div>
+        );
+      } else if (parseFloat(matchGames[0].SalePrice) <= 50) {
+        return (
+          <div className="btn btn-block btn-secondary">
+            <span>₱2465</span>
+            <span className="ml-2 badge badge-danger">-9%</span>
+          </div>
+        );
+      } else {
+        return (
+          <div className="btn btn-block btn-secondary">
+            <span>₱2465</span>
+            <span className="ml-2 badge badge-danger">-9%</span>
+          </div>
+        );
+      }
     }
   }
-
-
 
   function WhichPlatform() {
     if (matchGames[0].IsPS4 === 1 && matchGames[0].IsPS5 === 1) {
@@ -467,19 +374,9 @@ const Content = ({ search, setSearch, match }) => {
     }
   }
 
-
   function HasOpenCritic(props) {
     if (props.props === "" || props.props === "-1") {
-      return (
-        <span>
-          <span style={{ marginLeft: 0, color: "#9c27b0" }}>
-            OpenCritic Rating:
-          </span>
-          <span style={{ color: "black" }}>
-            <span className="opencritic-logo"> N/A</span>
-          </span>
-        </span>
-      );
+      return null;
     } else {
       return (
         <Link
@@ -490,9 +387,6 @@ const Content = ({ search, setSearch, match }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <span style={{ marginLeft: 0, color: "#9c27b0" }}>
-            OpenCritic Rating:
-          </span>
           <span style={{ color: "black" }}>
             {" "}
             <span className="opencritic-logo">
@@ -511,6 +405,614 @@ const Content = ({ search, setSearch, match }) => {
             </span>
           </span>
         </Link>
+      );
+    }
+  }
+
+  function PricesTable(props) {
+    console.log(props);
+    if (props.psorsw === "Switch") {
+      var pricesobj = {
+        Canada: matchGames[0].CanadaPrice * cadExchange,
+        Peru: matchGames[0].PeruPrice * penExchange,
+        Argentina: matchGames[0].ArgentinaPrice * arsExchange * 1.43,
+        Australia: matchGames[0].AustraliaPrice * audExchange,
+        Colombia: matchGames[0].ColombiaPrice * copExchange,
+        Southafrica: matchGames[0].SouthafricaPrice * zarExchange,
+        Brazil: matchGames[0].BrazilPrice * brlExchange,
+        Russia: matchGames[0].RussiaPrice * rubExchange,
+        Poland: matchGames[0].PolandPrice * plnExchange,
+        Chile: matchGames[0].ChilePrice * clpExchange,
+        Mexico: matchGames[0].MexicoPrice * mxnExchange,
+        US: matchGames[0].SalePrice * usdExchange,
+      };
+
+      Object.entries(pricesobj).forEach(([k, v]) => {
+        if (v === 0) delete pricesobj[k];
+      });
+
+      console.log(pricesobj);
+      const entries = Object.entries(pricesobj).sort(([, a], [, b]) => a - b);
+
+      function USRank() {
+        return (
+          <div style={{ marginLeft: "10px" }} className="usregion-logo">
+            United States
+          </div>
+        );
+      }
+
+      function Rank1(props) {
+        if (props.rank1country === "US") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="usregion-logo">
+              United States
+            </div>
+          );
+        } else if (props.rank1country === "Canada") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="caregion-logo">
+              Canada
+            </div>
+          );
+        } else if (props.rank1country === "Peru") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="peregion-logo">
+              Peru
+            </div>
+          );
+        } else if (props.rank1country === "Argentina") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="arregion-logo">
+              Argentina
+            </div>
+          );
+        } else if (props.rank1country === "Colombia") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="coregion-logo">
+              Colombia
+            </div>
+          );
+        } else if (props.rank1country === "Southafrica") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="zaregion-logo">
+              South Africa
+            </div>
+          );
+        } else if (props.rank1country === "Brazil") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="brregion-logo">
+              Brazil
+            </div>
+          );
+        } else if (props.rank1country === "Russia") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="ruregion-logo">
+              Russia
+            </div>
+          );
+        } else if (props.rank1country === "Poland") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="plregion-logo">
+              Poland
+            </div>
+          );
+        } else if (props.rank1country === "Chile") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="clregion-logo">
+              Chile
+            </div>
+          );
+        } else if (props.rank1country === "Mexico") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="mxregion-logo">
+              Mexico
+            </div>
+          );
+        } else if (props.rank1country === "Australia") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="auregion-logo">
+              Australia
+            </div>
+          );
+        }
+      }
+
+      function Rank2(props) {
+        if (props.rank2country === "US") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="usregion-logo">
+              United States
+            </div>
+          );
+        } else if (props.rank2country === "Canada") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="caregion-logo">
+              Canada
+            </div>
+          );
+        } else if (props.rank2country === "Peru") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="peregion-logo">
+              Peru
+            </div>
+          );
+        } else if (props.rank2country === "Argentina") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="arregion-logo">
+              Argentina
+            </div>
+          );
+        } else if (props.rank2country === "Colombia") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="coregion-logo">
+              Colombia
+            </div>
+          );
+        } else if (props.rank2country === "Southafrica") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="zaregion-logo">
+              South Africa
+            </div>
+          );
+        } else if (props.rank2country === "Brazil") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="brregion-logo">
+              Brazil
+            </div>
+          );
+        } else if (props.rank2country === "Russia") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="ruregion-logo">
+              Russia
+            </div>
+          );
+        } else if (props.rank2country === "Poland") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="plregion-logo">
+              Poland
+            </div>
+          );
+        } else if (props.rank2country === "Chile") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="clregion-logo">
+              Chile
+            </div>
+          );
+        } else if (props.rank2country === "Mexico") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="mxregion-logo">
+              Mexico
+            </div>
+          );
+        } else if (props.rank2country === "Australia") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="auregion-logo">
+              Australia
+            </div>
+          );
+        }
+      }
+
+      function Rank3(props) {
+        if (props.rank3country === "US") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="usregion-logo">
+              United States
+            </div>
+          );
+        } else if (props.rank3country === "Canada") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="caregion-logo">
+              Canada
+            </div>
+          );
+        } else if (props.rank3country === "Peru") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="peregion-logo">
+              Peru
+            </div>
+          );
+        } else if (props.rank3country === "Argentina") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="arregion-logo">
+              Argentina
+            </div>
+          );
+        } else if (props.rank3country === "Colombia") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="coregion-logo">
+              Colombia
+            </div>
+          );
+        } else if (props.rank3country === "Southafrica") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="zaregion-logo">
+              South Africa
+            </div>
+          );
+        } else if (props.rank3country === "Brazil") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="brregion-logo">
+              Brazil
+            </div>
+          );
+        } else if (props.rank3country === "Russia") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="ruregion-logo">
+              Russia
+            </div>
+          );
+        } else if (props.rank3country === "Poland") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="plregion-logo">
+              Poland
+            </div>
+          );
+        } else if (props.rank3country === "Chile") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="clregion-logo">
+              Chile
+            </div>
+          );
+        } else if (props.rank3country === "Mexico") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="mxregion-logo">
+              Mexico
+            </div>
+          );
+        } else if (props.rank3country === "Australia") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="auregion-logo">
+              Australia
+            </div>
+          );
+        }
+      }
+
+      // var rank1country = entries[0][0]
+      // var rank1price = entries[0][1]
+      // var rank2country = entries[1][0]
+      // var rank2price = entries[1][1]
+      // var rank3country = entries[2][0]
+      // var rank3price = entries[2][1]
+
+      function RankRows() {
+        if (entries.length === 1) {
+          return (
+            <tr className="item-table-best">
+              <td className="version">
+                <span className="fire-logo">
+                  <USRank />
+                </span>
+              </td>
+              <td className="version" style={{ width: "15rem" }}>
+                <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                  <div className="btn btn-block btn-secondary">
+                    <PesoPlusPrice />
+                    {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
+                    <span className="ml-2 badge badge-danger">
+                    <strike>
+                      <PesoPrice props={matchGames[0].Price} />
+                    </strike>
+                    </span>
+                  </div>
+                </a>
+              </td>
+            </tr>
+          );
+        } else if (entries.length === 2) {
+          var rank1country = entries[0][0];
+          var rank1price = entries[0][1];
+          return (
+            <>
+              <tr className="item-table-best">
+                <td className="version">
+                  <span className="fire-logo">
+                    <USRank />
+                  </span>
+                </td>
+                <td className="version" style={{ width: "15rem" }}>
+                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                    <div className="btn btn-block btn-secondary">
+                      <PesoPlusPrice />
+                      {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
+                      <span className="ml-2 badge badge-danger">
+                                            <strike>
+                      <PesoPrice props={matchGames[0].Price} />
+                    </strike>
+                      </span>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+              <tr className="item-table-best">
+                <td className="version">
+                  <span className="gold-medal-logo">
+                    <Rank1 rank1country={rank1country} />
+                  </span>
+                </td>
+                <td className="version" style={{ width: "15rem" }}>
+                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                    <div className="btn btn-block btn-secondary">
+                      <PesoPlusPrice />
+                      {"₱" + Math.round(rank1price)}
+                      <span className="ml-2 badge badge-danger">
+                                           <strike>
+                      <PesoPrice props={matchGames[0].Price} />
+                    </strike>
+                      </span>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+            </>
+          );
+        } else if (entries.length === 3) {
+          var rank1country = entries[0][0];
+          var rank1price = entries[0][1];
+          var rank2country = entries[1][0];
+          var rank2price = entries[1][1];
+          return (
+            <>
+              <tr className="item-table-best">
+                <td className="version">
+                  <span className="fire-logo">
+                    <USRank />
+                  </span>
+                </td>
+
+                <td className="version" style={{ width: "15rem" }}>
+                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                    <div className="btn btn-block btn-secondary">
+                      <PesoPlusPrice />
+                      {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
+                      <span className="ml-2 badge badge-danger">
+                                            <strike>
+                      <PesoPrice props={matchGames[0].Price} />
+                    </strike>
+                      </span>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+              <tr className="item-table-best">
+                <td className="version">
+                  <span className="gold-medal-logo">
+                    <Rank1 rank1country={rank1country} />
+                  </span>
+                </td>
+                <td className="version" style={{ width: "15rem" }}>
+                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                    <div className="btn btn-block btn-secondary">
+                      <PesoPlusPrice />
+                      {"₱" + Math.round(rank1price)}
+                      <span className="ml-2 badge badge-danger">
+                                            <strike>
+                      <PesoPrice props={matchGames[0].Price} />
+                    </strike>
+                      </span>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+              <tr className="item-table-best">
+                <td className="version">
+                  <span className="silver-medal-logo">
+                    <Rank2 rank2country={rank2country} />
+                  </span>
+                </td>
+                <td className="version" style={{ width: "15rem" }}>
+                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                    <div className="btn btn-block btn-secondary">
+                      <PesoPlusPrice />
+                      {"₱" + Math.round(rank2price)}
+                      <span className="ml-2 badge badge-danger">
+                                            <strike>
+                      <PesoPrice props={matchGames[0].Price} />
+                    </strike>
+                      </span>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+            </>
+          );
+        } else if (entries.length > 3) {
+          var rank1country = entries[0][0];
+          var rank1price = entries[0][1];
+          var rank2country = entries[1][0];
+          var rank2price = entries[1][1];
+          var rank3country = entries[2][0];
+          var rank3price = entries[2][1];
+          return (
+            <>
+              <tr className="item-table-best">
+                <td className="version">
+                  <span className="fire-logo">
+                    <USRank />
+                  </span>
+                </td>
+              <td className="version">
+               <a
+              href="https://bit.ly/3tvQ3No"
+              target="_blank"
+              rel="noreferrer"
+              style={{ padding: 10 }}
+            ><span className="shopee-logo"><span className="suggest-text">
+              Suggested <br /> Gift Card: <ShopeeCard /></span><img src={download}/></span>
+            </a>
+              </td>
+                <td className="version">
+                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                    <div className="btn btn-block btn-secondary">
+                      <PesoPlusPrice />
+                      {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
+                      <span className="ml-2 badge badge-danger">
+                                            <strike>
+                      <PesoPrice props={matchGames[0].Price} />
+                    </strike>
+                      </span>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+              <tr className="item-table-best">
+                <td className="item-note text-right" colSpan="3">
+                </td>
+              </tr>
+              <tr className="item-table-best">
+                <td className="version">
+                  <span className="gold-medal-logo">
+                    <Rank1 rank1country={rank1country} />
+                  </span>
+                </td>
+                              <td>
+              </td>
+                <td className="version">
+                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                    <div className="btn btn-block btn-secondary">
+                      <PesoPlusPrice />
+                      {"₱" + Math.round(rank1price)}
+                      <span className="ml-2 badge badge-danger">
+                                            <strike>
+                      <PesoPrice props={matchGames[0].Price} />
+                    </strike>
+                      </span>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+              <tr className="item-table-best">
+                <td className="version">
+                  <span className="silver-medal-logo">
+                    <Rank2 rank2country={rank2country} />
+                  </span>
+                </td>
+                              <td>
+              </td>
+                <td className="version">
+                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                    <div className="btn btn-block btn-secondary">
+                      <PesoPlusPrice />
+                      {"₱" + Math.round(rank2price)}
+                      <span className="ml-2 badge badge-danger">
+                                            <strike>
+                      <PesoPrice props={matchGames[0].Price} />
+                    </strike>
+                      </span>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+              <tr className="item-table-best">
+                <td className="version">
+                  <span className="bronze-medal-logo">
+                    <Rank3 rank3country={rank3country} />
+                  </span>
+                </td>
+                              <td>
+              </td>
+                <td className="version">
+                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                    <div className="btn btn-block btn-secondary">
+                      <PesoPlusPrice />
+                      {"₱" + Math.round(rank3price)}
+                      <span className="ml-2 badge badge-danger">
+                                            <strike>
+                      <PesoPrice props={matchGames[0].Price} />
+                    </strike>
+                      </span>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+            </>
+          );
+        }
+      }
+
+      return (
+        <div
+          className="price-container"
+          style={{ margin: "auto", paddingTop: 10 }}
+        >
+          <table className="table table-align-middle item-price-table">
+            <tbody>
+              <RankRows />
+            </tbody>
+          </table>
+        </div>
+      );
+    } else {
+      return (
+        <div
+          className="price-container"
+          style={{ margin: "auto", padding: 10 }}
+        >
+          <table className="table table-align-middle item-price-table">
+            <tbody>
+              <tr className="item-table-best has-notes">
+                <td>
+                  <a
+                    href={matchGames[0].URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ padding: 0 }}
+                  >
+                    <WhichStore />
+                  </a>
+                </td>
+                <td className="version">
+                  <a
+                    href={matchGames[0].URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ padding: 10 }}
+                  >
+                  <span className="usregion-logo">
+                    Digital
+                  
+                    Game
+                    </span>
+                  </a>
+                </td>
+                <td className="version">
+                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                    <div className="btn btn-block btn-secondary">
+                      <PesoPlusPrice />
+                      <PesoPrice props={matchGames[0].SalePrice} />
+                      <span className="ml-2 badge badge-danger">
+                        -{matchGames[0].PercentOff}
+                      </span>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+              <tr className="item-table-best">
+                <td className="item-note text-right" colSpan="3">
+                  <a
+                    className="pb-1"
+                    href={matchGames[0].URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                      fontSize: 12,
+                      paddingRight: 20,
+                      padding: "0 0.75rem ",
+                    }}
+                  >
+                    Retail Price{" "}
+                    <strike>
+                      <PesoPrice props={matchGames[0].Price} />
+                    </strike>
+                  </a>
+                </td>
+              </tr>
+              <ShopeeURL />
+            </tbody>
+          </table>
+        </div>
       );
     }
   }
@@ -581,7 +1083,7 @@ const Content = ({ search, setSearch, match }) => {
         <Background />
       </BackgroundContainer>
       <NaviBar />
-      <div className="text-center m-3 p-auto" style={{paddingBottom: 15}}>
+      <div className="text-center m-3 p-auto" style={{ paddingBottom: 15 }}>
         <img
           alt=""
           style={{
@@ -596,94 +1098,56 @@ const Content = ({ search, setSearch, match }) => {
         {/*<Card className="content-container-gameinfo">*/}
         <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
           {matchGames[0].Title}
+          <HasOpenCritic props={matchGames[0].SCORE} />
+            <span
+                    className="pb-1"
+                    style={{
+                      fontSize: 12,
+                      paddingRight: 20,
+                      padding: "0 0.75rem ",
+                    }}
+                  >
+
+                    <br />
+                    Sale ends: {DateConvert(matchGames[0].SaleEnds)}
+                  </span>
         </Card.Header>
+        <PricesTable psorsw={matchGames[0].platform} />
+<div style={{ fontSize: 14 }}>
+<Card.Header style={{ backgroundColor: "white" }}>
+            Information
+          </Card.Header>
         <Card.Body style={{ fontSize: 14 }}>
-     
           <Row xs={1} sm={2}>
-            <Col style={{paddingBottom: 10}}>
+            <Col style={{ paddingBottom: 10 }}>
               <span style={{ color: "#9c27b0" }}>Publisher:</span>{" "}
               {matchGames[0].Publisher}
             </Col>
-            <Col style={{paddingBottom: 10}}>
+            <Col style={{ paddingBottom: 10 }}>
               <span style={{ color: "#9c27b0" }}>Release Date:</span>{" "}
               {DateConvert(matchGames[0].ReleaseDate)}
             </Col>
           </Row>
           <Row xs={1} sm={2}>
-            <Col style={{paddingBottom: 10}}>
-             <span style={{ color: "#9c27b0" }}>Platform: </span>{" "}
+            <Col style={{ paddingBottom: 10 }}>
+              <span style={{ color: "#9c27b0" }}>Platform: </span>{" "}
               <WhichPlatform />
-             
             </Col>
-            <Col style={{paddingBottom: 10}}>
-              <span style={{ color: "#9c27b0" }}>Region: </span>
-              <span className="usregion-logo">US</span>{" "}
+            <Col style={{ paddingBottom: 10 }}>
+              <span style={{ color: "#9c27b0" }}>Sale Started: </span>{" "}
+               {DateConvert(matchGames[0].SaleStarted)}
             </Col>
           </Row>
           <Row xs={1} sm={2}>
-            <Col style={{paddingBottom: 10}}>
-              <HasOpenCritic props={matchGames[0].SCORE} />
-            </Col>
-            <Col style={{paddingBottom: 10}}>
+            <Col style={{ paddingBottom: 10 }}>
               <span style={{ color: "#9c27b0" }}>Genre:</span>{" "}
               {matchGames[0].genre}
             </Col>
+            <Col style={{ paddingBottom: 10 }}></Col>
           </Row>
         </Card.Body>
-        <div className="price-container" style={{ margin: "auto" }}>
-          <table className="table table-align-middle item-price-table">
-            <tbody>
-              <tr className="item-table-best has-notes">
-                <td>
-                  <a
-                    href={matchGames[0].URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ padding: 0 }}
-                  >
-                    <WhichStore />
-                  </a>
-                </td>
-                <td className="version">
-                 <a
-                    href={matchGames[0].URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ padding: 10 }}
-                  >
-               Digital<br />Game
-                  </a>
-                </td>
-                <td className="version">
-                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
-                    <div className="btn btn-block btn-secondary">
-                    <PesoPlusPrice />
-                      <PesoPrice props={matchGames[0].SalePrice} />
-                      <span className="ml-2 badge badge-danger">
-                        -{matchGames[0].PercentOff}
-                      </span>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-              <tr className="item-table-best">
-              <td className="item-note text-right" colSpan="3">
-               <a
-                    className="pb-1"
-                    href={matchGames[0].URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{fontSize:12, paddingRight: 20, padding: "0 0.75rem "}}
-                  >
-                    Retail Price <strike><PesoPrice props={matchGames[0].Price} /></strike><br/>
-                   Sale ends {DateConvert(matchGames[0].SaleEnds)}
-                  </a>
-              </td>
-              </tr>
-              <ShopeeURL />
-            </tbody>
-          </table>
         </div>
+
         <div style={{ fontSize: 14 }}>
           <Card.Header style={{ backgroundColor: "white" }}>
             Description

@@ -262,6 +262,47 @@ table tr:nth-child(2) td:last-child {
     /*border: none;*/
 }
 
+table tr:nth-child(3) td:first-child {
+    
+    border-color: white;
+    /*border-bottom-left-radius: 10px;*/
+    /*border:  none;*/
+}
+
+table tr:nth-child(3) td:nth-child(2) {
+    
+    border-color: white;
+    /*border-bottom-right-radius: 10px;*/
+    /*border: none;*/
+}
+
+table tr:nth-child(3) td:last-child {
+    
+    border-color: white;
+    /*border-bottom-right-radius: 10px;*/
+    /*border: none;*/
+}
+
+table tr:nth-child(4) td:first-child {
+    
+    border-color: white;
+    /*border-bottom-left-radius: 10px;*/
+    /*border:  none;*/
+}
+
+table tr:nth-child(4) td:nth-child(2) {
+    
+    border-color: white;
+    /*border-bottom-right-radius: 10px;*/
+    /*border: none;*/
+}
+
+table tr:nth-child(4) td:last-child {
+    
+    border-color: white;
+    /*border-bottom-right-radius: 10px;*/
+    /*border: none;*/
+}
 
 
 
@@ -369,6 +410,171 @@ margin-left: 5px;
 padding-left: 20px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
+
+.arregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/AR.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.auregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/AU.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.brregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/BR.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.caregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/CA.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.clregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/CL.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.coregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/CO.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.mxregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/MX.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.peregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/PE.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.plregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/PL.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.ruregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/RU.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.zaregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/ZA.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.fire-logo {
+background-size:  20px;
+background-position:  left center;
+background-image: url('medals/fire.png');
+background-repeat: no-repeat;
+margin-left: 10px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.gold-medal-logo {
+background-size:  20px;
+background-position:  left center;
+background-image: url('medals/gold-medal.png');
+background-repeat: no-repeat;
+margin-left: 10px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.silver-medal-logo {
+background-size:  20px;
+background-position:  left center;
+background-image: url('medals/silver-medal.png');
+background-repeat: no-repeat;
+margin-left: 10px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.bronze-medal-logo {
+background-size:  20px;
+background-position:  left center;
+background-image: url('medals/bronze-medal.png');
+background-repeat: no-repeat;
+margin-left: 10px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.shopee-logo {
+background-size:  90px;
+background-position:  left center;
+background-image: url('ShopeeIcon.svg');
+background-repeat: no-repeat;
+margin-left: 10px;
+padding-left: 30px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+
+
+
+
 
 .phregion-logo {
 background-size:  15px;
@@ -543,6 +749,14 @@ label:focus,
 
 @media screen and (max-width: 575.98px) {
 
+.suggest-text {
+    display: none;
+}
+
+.shopee-logo {
+
+    background-size:  75px;
+}
 
 .item-price-table {
     margin-left: -4px;
