@@ -776,6 +776,10 @@ const Content = ({ search, setSearch, match }) => {
                   </a>
                 </td>
               </tr>
+                            <tr className="item-table-best">
+                <td className="item-note text-right" colSpan="3">
+                </td>
+              </tr>
               <tr className="item-table-best">
                 <td className="version">
                   <span className="gold-medal-logo">
