@@ -7,6 +7,21 @@ import { Paper, Link, Container } from "@mui/material";
 import styled from "styled-components";
 import download from "./download.gif";
 
+const YoutubeEmbed = ({ embedId }) => (
+  <div className="video-responsive">
+    <iframe
+      width="853"
+      height="480"
+      src={`https://www.youtube.com/embed/${embedId}`}
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      title="Embedded youtube"
+    />
+  </div>
+);
+
+
 var today = new Date();
 // var lastd = new Date(today.setDate(today.getDate()+1));
 var dd = String(today.getDate()).padStart(2, "0");
@@ -409,6 +424,21 @@ const Content = ({ search, setSearch, match }) => {
     }
   }
 
+  function YoutubeTrailer() {
+      if (matchGames[0].platform === "Switch" && matchGames[0].Trailer !== "") {
+          var youtubeid = matchGames[0].Trailer.split('=', 2);
+
+        return (
+                <div style={{paddingBottom: 10}}>
+         <YoutubeEmbed embedId={youtubeid[1]} />
+            </div>
+            )
+      } else {
+        return null;
+      }
+
+  }
+
   function PricesTable(props) {
     console.log(props);
     if (props.psorsw === "Switch") {
@@ -692,9 +722,9 @@ const Content = ({ search, setSearch, match }) => {
                     <PesoPlusPrice />
                     {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
                     <span className="ml-2 badge badge-danger">
-                    <strike>
-                      <PesoPrice props={matchGames[0].Price} />
-                    </strike>
+                      <strike>
+                        <PesoPrice props={matchGames[0].Price} />
+                      </strike>
                     </span>
                   </div>
                 </a>
@@ -718,9 +748,9 @@ const Content = ({ search, setSearch, match }) => {
                       <PesoPlusPrice />
                       {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
                       <span className="ml-2 badge badge-danger">
-                                            <strike>
-                      <PesoPrice props={matchGames[0].Price} />
-                    </strike>
+                        <strike>
+                          <PesoPrice props={matchGames[0].Price} />
+                        </strike>
                       </span>
                     </div>
                   </a>
@@ -738,9 +768,9 @@ const Content = ({ search, setSearch, match }) => {
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank1price)}
                       <span className="ml-2 badge badge-danger">
-                                           <strike>
-                      <PesoPrice props={matchGames[0].Price} />
-                    </strike>
+                        <strike>
+                          <PesoPrice props={matchGames[0].Price} />
+                        </strike>
                       </span>
                     </div>
                   </a>
@@ -768,17 +798,16 @@ const Content = ({ search, setSearch, match }) => {
                       <PesoPlusPrice />
                       {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
                       <span className="ml-2 badge badge-danger">
-                                            <strike>
-                      <PesoPrice props={matchGames[0].Price} />
-                    </strike>
+                        <strike>
+                          <PesoPrice props={matchGames[0].Price} />
+                        </strike>
                       </span>
                     </div>
                   </a>
                 </td>
               </tr>
-                            <tr className="item-table-best">
-                <td className="item-note text-right" colSpan="3">
-                </td>
+              <tr className="item-table-best">
+                <td className="item-note text-right" colSpan="3"></td>
               </tr>
               <tr className="item-table-best">
                 <td className="version">
@@ -792,9 +821,9 @@ const Content = ({ search, setSearch, match }) => {
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank1price)}
                       <span className="ml-2 badge badge-danger">
-                                            <strike>
-                      <PesoPrice props={matchGames[0].Price} />
-                    </strike>
+                        <strike>
+                          <PesoPrice props={matchGames[0].Price} />
+                        </strike>
                       </span>
                     </div>
                   </a>
@@ -812,9 +841,9 @@ const Content = ({ search, setSearch, match }) => {
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank2price)}
                       <span className="ml-2 badge badge-danger">
-                                            <strike>
-                      <PesoPrice props={matchGames[0].Price} />
-                    </strike>
+                        <strike>
+                          <PesoPrice props={matchGames[0].Price} />
+                        </strike>
                       </span>
                     </div>
                   </a>
@@ -837,33 +866,37 @@ const Content = ({ search, setSearch, match }) => {
                     <USRank />
                   </span>
                 </td>
-              <td className="version">
-               <a
-              href="https://bit.ly/3tvQ3No"
-              target="_blank"
-              rel="noreferrer"
-              style={{ padding: 10 }}
-            ><span className="shopee-logo"><span className="suggest-text">
-              Suggested <br /> Gift Card: <ShopeeCard /></span><img src={download}/></span>
-            </a>
-              </td>
+                <td className="version">
+                  <a
+                    href="https://bit.ly/3tvQ3No"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ padding: 10 }}
+                  >
+                    <span className="shopee-logo">
+                      <span className="suggest-text">
+                        Suggested <br /> Gift Card: <ShopeeCard />
+                      </span>
+                      <img src={download} />
+                    </span>
+                  </a>
+                </td>
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
                       {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
                       <span className="ml-2 badge badge-danger">
-                                            <strike>
-                      <PesoPrice props={matchGames[0].Price} />
-                    </strike>
+                        <strike>
+                          <PesoPrice props={matchGames[0].Price} />
+                        </strike>
                       </span>
                     </div>
                   </a>
                 </td>
               </tr>
               <tr className="item-table-best">
-                <td className="item-note text-right" colSpan="3">
-                </td>
+                <td className="item-note text-right" colSpan="3"></td>
               </tr>
               <tr className="item-table-best">
                 <td className="version">
@@ -871,17 +904,16 @@ const Content = ({ search, setSearch, match }) => {
                     <Rank1 rank1country={rank1country} />
                   </span>
                 </td>
-                              <td>
-              </td>
+                <td></td>
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank1price)}
                       <span className="ml-2 badge badge-danger">
-                                            <strike>
-                      <PesoPrice props={matchGames[0].Price} />
-                    </strike>
+                        <strike>
+                          <PesoPrice props={matchGames[0].Price} />
+                        </strike>
                       </span>
                     </div>
                   </a>
@@ -893,17 +925,16 @@ const Content = ({ search, setSearch, match }) => {
                     <Rank2 rank2country={rank2country} />
                   </span>
                 </td>
-                              <td>
-              </td>
+                <td></td>
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank2price)}
                       <span className="ml-2 badge badge-danger">
-                                            <strike>
-                      <PesoPrice props={matchGames[0].Price} />
-                    </strike>
+                        <strike>
+                          <PesoPrice props={matchGames[0].Price} />
+                        </strike>
                       </span>
                     </div>
                   </a>
@@ -915,17 +946,16 @@ const Content = ({ search, setSearch, match }) => {
                     <Rank3 rank3country={rank3country} />
                   </span>
                 </td>
-                              <td>
-              </td>
+                <td></td>
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank3price)}
                       <span className="ml-2 badge badge-danger">
-                                            <strike>
-                      <PesoPrice props={matchGames[0].Price} />
-                    </strike>
+                        <strike>
+                          <PesoPrice props={matchGames[0].Price} />
+                        </strike>
                       </span>
                     </div>
                   </a>
@@ -937,6 +967,8 @@ const Content = ({ search, setSearch, match }) => {
       }
 
       return (
+
+
         <div
           className="price-container"
           style={{ margin: "auto", paddingTop: 10 }}
@@ -974,11 +1006,7 @@ const Content = ({ search, setSearch, match }) => {
                     rel="noreferrer"
                     style={{ padding: 10 }}
                   >
-                  <span className="usregion-logo">
-                    Digital
-                  
-                    Game
-                    </span>
+                    <span className="usregion-logo">Digital Game</span>
                   </a>
                 </td>
                 <td className="version">
@@ -1103,54 +1131,54 @@ const Content = ({ search, setSearch, match }) => {
         <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
           {matchGames[0].Title}
           <HasOpenCritic props={matchGames[0].SCORE} />
-            <span
-                    className="pb-1"
-                    style={{
-                      fontSize: 12,
-                      paddingRight: 20,
-                      padding: "0 0.75rem ",
-                    }}
-                  >
-
-                    <br />
-                    Sale ends: {DateConvert(matchGames[0].SaleEnds)}
-                  </span>
+          <span
+            className="pb-1"
+            style={{
+              fontSize: 12,
+              paddingRight: 20,
+              padding: "0 0.75rem ",
+            }}
+          >
+            <br />
+            Sale ends: {DateConvert(matchGames[0].SaleEnds)}
+          </span>
         </Card.Header>
         <PricesTable psorsw={matchGames[0].platform} />
-<div style={{ fontSize: 14 }}>
-<Card.Header style={{ backgroundColor: "white" }}>
+        <div style={{ fontSize: 14 }}>
+          <Card.Header style={{ backgroundColor: "white" }}>
             Information
           </Card.Header>
-        <Card.Body style={{ fontSize: 14 }}>
-          <Row xs={1} sm={2}>
-            <Col style={{ paddingBottom: 10 }}>
-              <span style={{ color: "#9c27b0" }}>Publisher:</span>{" "}
-              {matchGames[0].Publisher}
-            </Col>
-            <Col style={{ paddingBottom: 10 }}>
-              <span style={{ color: "#9c27b0" }}>Release Date:</span>{" "}
-              {DateConvert(matchGames[0].ReleaseDate)}
-            </Col>
-          </Row>
-          <Row xs={1} sm={2}>
-            <Col style={{ paddingBottom: 10 }}>
-              <span style={{ color: "#9c27b0" }}>Platform: </span>{" "}
-              <WhichPlatform />
-            </Col>
-            <Col style={{ paddingBottom: 10 }}>
-              <span style={{ color: "#9c27b0" }}>Sale Started: </span>{" "}
-               {DateConvert(matchGames[0].SaleStarted)}
-            </Col>
-          </Row>
-          <Row xs={1} sm={2}>
-            <Col style={{ paddingBottom: 10 }}>
-              <span style={{ color: "#9c27b0" }}>Genre:</span>{" "}
-              {matchGames[0].genre}
-            </Col>
-            <Col style={{ paddingBottom: 10 }}></Col>
-          </Row>
-        </Card.Body>
+          <Card.Body style={{ fontSize: 14 }}>
+            <Row xs={1} sm={2}>
+              <Col style={{ paddingBottom: 10 }}>
+                <span style={{ color: "#9c27b0" }}>Publisher:</span>{" "}
+                {matchGames[0].Publisher}
+              </Col>
+              <Col style={{ paddingBottom: 10 }}>
+                <span style={{ color: "#9c27b0" }}>Release Date:</span>{" "}
+                {DateConvert(matchGames[0].ReleaseDate)}
+              </Col>
+            </Row>
+            <Row xs={1} sm={2}>
+              <Col style={{ paddingBottom: 10 }}>
+                <span style={{ color: "#9c27b0" }}>Platform: </span>{" "}
+                <WhichPlatform />
+              </Col>
+              <Col style={{ paddingBottom: 10 }}>
+                <span style={{ color: "#9c27b0" }}>Sale Started: </span>{" "}
+                {DateConvert(matchGames[0].SaleStarted)}
+              </Col>
+            </Row>
+            <Row xs={1} sm={2}>
+              <Col style={{ paddingBottom: 10 }}>
+                <span style={{ color: "#9c27b0" }}>Genre:</span>{" "}
+                {matchGames[0].genre}
+              </Col>
+              <Col style={{ paddingBottom: 10 }}></Col>
+            </Row>
+          </Card.Body>
         </div>
+        <YoutubeTrailer/>
 
         <div style={{ fontSize: 14 }}>
           <Card.Header style={{ backgroundColor: "white" }}>
