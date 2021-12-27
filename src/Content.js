@@ -21,7 +21,6 @@ const YoutubeEmbed = ({ embedId }) => (
   </div>
 );
 
-
 var today = new Date();
 // var lastd = new Date(today.setDate(today.getDate()+1));
 var dd = String(today.getDate()).padStart(2, "0");
@@ -424,29 +423,27 @@ const Content = ({ search, setSearch, match }) => {
     }
   }
 
+  // matchGames[0].platform === "Switch" && (
+
   function YoutubeTrailer() {
-      if (matchGames[0].platform === "Switch" && matchGames[0].Trailer !== "") {
-          var youtubeid = matchGames[0].Trailer.split('=', 2);
+    if (matchGames[0].Trailer === "" || matchGames[0].Trailer === undefined) {
+      return null;
+    } else {
+      
 
-        return (
+      var youtubeid = matchGames[0].Trailer.split("=", 2);
 
-
-                <div style={{paddingBottom: 10, fontSize: 14}}>
-                          <Card.Header style={{ backgroundColor: "white" }}>
+      return (
+        <div style={{ paddingBottom: 10, fontSize: 14 }}>
+          <Card.Header style={{ backgroundColor: "white" }}>
             Trailer
           </Card.Header>
-                    <Card.Body>
-         <YoutubeEmbed embedId={youtubeid[1]} />
-
-
-         
+          <Card.Body>
+            <YoutubeEmbed embedId={youtubeid[1]} />
           </Card.Body>
-            </div>
-            )
-      } else {
-        return null;
-      }
-
+        </div>
+      );
+    }
   }
 
   function PricesTable(props) {
@@ -877,22 +874,19 @@ const Content = ({ search, setSearch, match }) => {
                   </span>
                 </td>
                 <td className="version">
-              
-                  <div style={{display: "flex", justifyContent: "left"}}>
+                  <div style={{ display: "flex", justifyContent: "left" }}>
                     <span className="suggest-text">
-                        Suggested Gift Card: <ShopeeCard />
-                        <br/>
-                      </span>
-                      </div>
+                      Suggested Gift Card: <ShopeeCard />
+                      <br />
+                    </span>
+                  </div>
 
-                 
-                   {/* <span className="shopee-logo">
+                  {/* <span className="shopee-logo">
                       <span className="suggest-text">
                         Suggested <br /> Gift Card: <ShopeeCard />
                       </span>
                       <img src={download} />
                     </span>*/}
-                  
                 </td>
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
@@ -905,37 +899,55 @@ const Content = ({ search, setSearch, match }) => {
                         </strike>
                       </span>
                     </div>
-                
                   </a>
                 </td>
               </tr>
               <tr className="item-table-best">
-              <td></td>
-              <td></td>
+                <td></td>
+                <td></td>
                 <td className="item-note text-right">
-                      <div className="vendors" style={{display: "flex", justifyContent: "center", flexWrap: "wrap"}}>
- <a className="nopaddingA"
-                    href="https://bit.ly/3tvQ3No"
-                    target="_blank"
-                    rel="noreferrer"
-                    // style={{ padding: 10 }}
+                  <div
+                    className="vendors"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      flexWrap: "wrap",
+                    }}
                   >
-                  <span  style={{ fontSize: 14 }} className="shopee-logo"><span className="suggest-text">Shopee</span></span></a>
-                   <a className="nopaddingA"
-                    href="https://bit.ly/3EqxrTL"
-                    target="_blank"
-                    rel="noreferrer"
-                    // style={{ padding: 10 }}
-                  ><span style={{ fontSize: 14 }} className="lazada-logo"><span className="suggest-text">Lazada</span></span></a>
-                    <a className="nopaddingA"
-                    href="https://bit.ly/3pxXLXT"
-                    target="_blank"
-                    rel="noreferrer"
-                    // style={{ padding: 10 }}
-                  ><span style={{ fontSize: 14 }} className="coda-logo"><span className="suggest-text">Codashop</span></span></a>
-                   </div>
-
-
+                    <a
+                      className="nopaddingA"
+                      href="https://bit.ly/3tvQ3No"
+                      target="_blank"
+                      rel="noreferrer"
+                      // style={{ padding: 10 }}
+                    >
+                      <span style={{ fontSize: 14 }} className="shopee-logo">
+                        <span className="suggest-text">Shopee</span>
+                      </span>
+                    </a>
+                    <a
+                      className="nopaddingA"
+                      href="https://bit.ly/3EqxrTL"
+                      target="_blank"
+                      rel="noreferrer"
+                      // style={{ padding: 10 }}
+                    >
+                      <span style={{ fontSize: 14 }} className="lazada-logo">
+                        <span className="suggest-text">Lazada</span>
+                      </span>
+                    </a>
+                    <a
+                      className="nopaddingA"
+                      href="https://bit.ly/3pxXLXT"
+                      target="_blank"
+                      rel="noreferrer"
+                      // style={{ padding: 10 }}
+                    >
+                      <span style={{ fontSize: 14 }} className="coda-logo">
+                        <span className="suggest-text">Codashop</span>
+                      </span>
+                    </a>
+                  </div>
                 </td>
               </tr>
               <tr className="item-table-best">
@@ -1007,8 +1019,6 @@ const Content = ({ search, setSearch, match }) => {
       }
 
       return (
-
-
         <div
           className="price-container"
           style={{ margin: "auto", paddingTop: 10 }}
@@ -1218,8 +1228,7 @@ const Content = ({ search, setSearch, match }) => {
             </Row>
           </Card.Body>
         </div>
-        <YoutubeTrailer/>
-        
+        <YoutubeTrailer />
 
         <div style={{ fontSize: 14 }}>
           <Card.Header style={{ backgroundColor: "white" }}>
