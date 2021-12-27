@@ -913,26 +913,26 @@ const Content = ({ search, setSearch, match }) => {
               <td></td>
               <td></td>
                 <td className="item-note text-right">
-                      <div style={{display: "flex", justifyContent: "center", flexWrap: "nowrap"}}>
+                      <div className="vendors" style={{display: "flex", justifyContent: "center", flexWrap: "wrap"}}>
  <a className="nopaddingA"
                     href="https://bit.ly/3tvQ3No"
                     target="_blank"
                     rel="noreferrer"
                     // style={{ padding: 10 }}
                   >
-                  <span className="shopee-logo"></span></a>
+                  <span  style={{ fontSize: 14 }} className="shopee-logo"><span className="suggest-text">Shopee</span></span></a>
                    <a className="nopaddingA"
                     href="https://bit.ly/3EqxrTL"
                     target="_blank"
                     rel="noreferrer"
                     // style={{ padding: 10 }}
-                  ><span className="lazada-logo"></span></a>
+                  ><span style={{ fontSize: 14 }} className="lazada-logo"><span className="suggest-text">Lazada</span></span></a>
                     <a className="nopaddingA"
                     href="https://bit.ly/3pxXLXT"
                     target="_blank"
                     rel="noreferrer"
                     // style={{ padding: 10 }}
-                  ><span className="coda-logo"></span></a>
+                  ><span style={{ fontSize: 14 }} className="coda-logo"><span className="suggest-text">Codashop</span></span></a>
                    </div>
 
 

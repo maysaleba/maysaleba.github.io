@@ -582,38 +582,38 @@ display: inline-block;
 
 .coda-logo {
 background-size:  20px;
-background-position:  center;
+background-position:  left center;
 background-image: url('flags/coda.png');
 background-repeat: no-repeat;
-/*margin-left: 10px;*/
-padding: 20px;  /* width of the image plus a little extra padding */
-display: inline-flex;  /* may not need this, but I've found I do */
-align-items: center;
+/*margin-right: 10px;*/
+padding-left: 30px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
 }
 
 .shopee-logo {
 background-size:  20px;
-background-position:  center;
+background-position:  left center;
 background-image: url('flags/shopee.png');
 background-repeat: no-repeat;
 /*margin-left: 10px;*/
-padding: 20px;  /* width of the image plus a little extra padding */
-display: inline-flex;  /* may not need this, but I've found I do */
+padding-left: 30px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
 }
 
 .lazada-logo {
 background-size:  20px;
-background-position:  center;
+background-position:  left center;
 background-image: url('flags/lazada.png');
 background-repeat: no-repeat;
 /*margin-left: 10px;*/
-padding: 20px;  /* width of the image plus a little extra padding */
-display: inline-flex;  /* may not need this, but I've found I do */
+padding-left: 30px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
 }
 
 
-
-
+.vendors {
+    padding-bottom: 0.5rem;
+}
 
 
 
@@ -799,6 +799,10 @@ label:focus,
 
     background-size:  75px;
 }*/
+
+.vendors {
+    flex-wrap: nowrap !important;
+}
 
 .nopaddingA {
     padding-left:  1rem !important;
