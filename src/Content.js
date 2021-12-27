@@ -1178,7 +1178,17 @@ const Content = ({ search, setSearch, match }) => {
             </Row>
           </Card.Body>
         </div>
-        <YoutubeTrailer/>
+        <div style={{ fontSize: 14 }}>
+          <Card.Header style={{ backgroundColor: "white" }}>
+            Trailer
+          </Card.Header>
+
+          <Card.Body>
+          <YoutubeTrailer/>
+          </Card.Body>
+          </div>
+
+        
 
         <div style={{ fontSize: 14 }}>
           <Card.Header style={{ backgroundColor: "white" }}>
