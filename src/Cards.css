@@ -580,39 +580,34 @@ padding-left: 30px;
 display: inline-block;  
 }*/
 
-.bg-logo {
-        border-radius: 100%;
-    background-color: #ffffff;
-
-}
 
 .coda-logo {
-background-size:  20px;
+background-size:  10px;
 background-position:  left center;
 background-image: url('flags/coda.png');
 background-repeat: no-repeat;
 /*margin-left: 10px;*/
-padding-left: 30px;  /* width of the image plus a little extra padding */
+padding-left: 15px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
 .shopee-logo {
-background-size:  20px;
+background-size:  10px;
 background-position:  left center;
 background-image: url('flags/shopee.png');
 background-repeat: no-repeat;
 /*margin-left: 10px;*/
-padding-left: 30px;  /* width of the image plus a little extra padding */
+padding-left: 15px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
 .lazada-logo {
-background-size:  20px;
+background-size:  10px;
 background-position:  left center;
 background-image: url('flags/lazada.png');
 background-repeat: no-repeat;
 /*margin-left: 10px;*/
-padding-left: 30px;  /* width of the image plus a little extra padding */
+padding-left: 15px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
@@ -811,35 +806,29 @@ label:focus,
 }
 
 .nopaddingA {
-    padding-left:  1rem !important;
-    padding-right:  1rem !important;
+    padding-left:  0.1rem !important;
+    padding-right:  0.5rem !important;
     padding-bottom: 0.1rem !important;
     padding-top: 0.1rem !important;
     display: block;
 }
 
 .coda-logo {
-    border-radius:  100%;
-    background-color:  #ffffff;
     background-position: center;
     background-size:  15px;
-    padding: 15px;
+    padding: 10px;
 }
 
 .shopee-logo {
-    border-radius:  100%;
-    background-color:  #ffffff;
     background-position: center;
     background-size:  15px;
-    padding: 15px;
+    padding: 10px;
 }
 
 .lazada-logo {
-    border-radius:  100%;
-    background-color:  #ffffff;
     background-position: center;
     background-size:  15px;
-    padding: 15px;
+    padding: 10px;
 }
 
 

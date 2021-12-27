@@ -750,7 +750,7 @@ const Content = ({ search, setSearch, match }) => {
                 <td></td>
                 <td></td>
                 <td className="item-note text-right">
-                  <div
+ <div
                     className="vendors"
                     style={{
                       display: "flex",
@@ -765,9 +765,11 @@ const Content = ({ search, setSearch, match }) => {
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                      <span style={{ fontSize: 14 }} className="shopee-logo">
+                    <div className="ml-2 badge badge-danger">
+                      <span style={{ fontSize: 12 }} className="shopee-logo">
                         <span className="suggest-text">Shopee</span>
-                      </span>
+                        </span>
+                      </div>
                     </a>
                     <a
                       className="nopaddingA"
@@ -776,9 +778,11 @@ const Content = ({ search, setSearch, match }) => {
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                      <span style={{ fontSize: 14 }} className="lazada-logo">
+                    <div className="ml-2 badge badge-danger">
+                      <span style={{ fontSize: 12 }} className="lazada-logo">
                         <span className="suggest-text">Lazada</span>
                       </span>
+                      </div>
                     </a>
                     <a
                       className="nopaddingA"
@@ -787,9 +791,11 @@ const Content = ({ search, setSearch, match }) => {
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                      <span style={{ fontSize: 14 }} className="coda-logo">
+                    <div className="ml-2 badge badge-danger">
+                      <span style={{ fontSize: 12 }} className="coda-logo">
                         <span className="suggest-text">Codashop</span>
                       </span>
+                      </div>
                     </a>
                   </div>
                 </td>
@@ -833,7 +839,7 @@ const Content = ({ search, setSearch, match }) => {
                 <td></td>
                 <td></td>
                 <td className="item-note text-right">
-                  <div
+                   <div
                     className="vendors"
                     style={{
                       display: "flex",
@@ -848,9 +854,11 @@ const Content = ({ search, setSearch, match }) => {
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                      <span style={{ fontSize: 14 }} className="shopee-logo">
+                    <div className="ml-2 badge badge-danger">
+                      <span style={{ fontSize: 12 }} className="shopee-logo">
                         <span className="suggest-text">Shopee</span>
-                      </span>
+                        </span>
+                      </div>
                     </a>
                     <a
                       className="nopaddingA"
@@ -859,9 +867,11 @@ const Content = ({ search, setSearch, match }) => {
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                      <span style={{ fontSize: 14 }} className="lazada-logo">
+                    <div className="ml-2 badge badge-danger">
+                      <span style={{ fontSize: 12 }} className="lazada-logo">
                         <span className="suggest-text">Lazada</span>
                       </span>
+                      </div>
                     </a>
                     <a
                       className="nopaddingA"
@@ -870,9 +880,11 @@ const Content = ({ search, setSearch, match }) => {
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                      <span style={{ fontSize: 14 }} className="coda-logo">
+                    <div className="ml-2 badge badge-danger">
+                      <span style={{ fontSize: 12 }} className="coda-logo">
                         <span className="suggest-text">Codashop</span>
                       </span>
+                      </div>
                     </a>
                   </div>
                 </td>
@@ -940,7 +952,7 @@ const Content = ({ search, setSearch, match }) => {
                 <td></td>
                 <td></td>
                 <td className="item-note text-right">
-                  <div
+                 <div
                     className="vendors"
                     style={{
                       display: "flex",
@@ -955,9 +967,11 @@ const Content = ({ search, setSearch, match }) => {
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                      <span style={{ fontSize: 14 }} className="shopee-logo">
+                    <div className="ml-2 badge badge-danger">
+                      <span style={{ fontSize: 12 }} className="shopee-logo">
                         <span className="suggest-text">Shopee</span>
-                      </span>
+                        </span>
+                      </div>
                     </a>
                     <a
                       className="nopaddingA"
@@ -966,9 +980,11 @@ const Content = ({ search, setSearch, match }) => {
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                      <span style={{ fontSize: 14 }} className="lazada-logo">
+                    <div className="ml-2 badge badge-danger">
+                      <span style={{ fontSize: 12 }} className="lazada-logo">
                         <span className="suggest-text">Lazada</span>
                       </span>
+                      </div>
                     </a>
                     <a
                       className="nopaddingA"
@@ -977,9 +993,11 @@ const Content = ({ search, setSearch, match }) => {
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                      <span style={{ fontSize: 14 }} className="coda-logo">
+                    <div className="ml-2 badge badge-danger">
+                      <span style={{ fontSize: 12 }} className="coda-logo">
                         <span className="suggest-text">Codashop</span>
                       </span>
+                      </div>
                     </a>
                   </div>
                 </td>
@@ -1084,9 +1102,10 @@ const Content = ({ search, setSearch, match }) => {
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                    <div>
-                      <span style={{ fontSize: 14 }} className="shopee-logo"><img className="suggest-text" src={download}/></span>
-                        <span style={{ fontSize: 14 }} className="suggest-text">Shopee</span>
+                    <div className="ml-2 badge badge-danger">
+                      <span style={{ fontSize: 12 }} className="shopee-logo">
+                        <span className="suggest-text">Shopee</span>
+                        </span>
                       </div>
                     </a>
                     <a
@@ -1096,9 +1115,11 @@ const Content = ({ search, setSearch, match }) => {
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                      <span style={{ fontSize: 14 }} className="lazada-logo">
+                    <div className="ml-2 badge badge-danger">
+                      <span style={{ fontSize: 12 }} className="lazada-logo">
                         <span className="suggest-text">Lazada</span>
                       </span>
+                      </div>
                     </a>
                     <a
                       className="nopaddingA"
@@ -1107,9 +1128,11 @@ const Content = ({ search, setSearch, match }) => {
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                      <span style={{ fontSize: 14 }} className="coda-logo">
+                    <div className="ml-2 badge badge-danger">
+                      <span style={{ fontSize: 12 }} className="coda-logo">
                         <span className="suggest-text">Codashop</span>
                       </span>
+                      </div>
                     </a>
                   </div>
                 </td>
