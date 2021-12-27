@@ -801,7 +801,8 @@ label:focus,
 }*/
 
 .vendors {
-    flex-wrap: nowrap !important;
+    justify-content: left !important;
+    flex-wrap: wrap !important;
 }
 
 .nopaddingA {
@@ -815,19 +816,19 @@ label:focus,
 .coda-logo {
 
     background-size:  18px;
-    padding: 12px;
+  
 }
 
 .shopee-logo {
 
     background-size:  18px;
-    padding: 12px;
+   
 }
 
 .lazada-logo {
 
     background-size:  18px;
-    padding: 12px;
+   
 }
 
 

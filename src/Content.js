@@ -1085,7 +1085,7 @@ const Content = ({ search, setSearch, match }) => {
                       // style={{ padding: 10 }}
                     >
                       <span style={{ fontSize: 14 }} className="shopee-logo">
-                        <span className="suggest-text">Shopee</span>
+                        <span >Shopee</span>
                       </span>
                     </a>
                     <a
@@ -1096,7 +1096,7 @@ const Content = ({ search, setSearch, match }) => {
                       // style={{ padding: 10 }}
                     >
                       <span style={{ fontSize: 14 }} className="lazada-logo">
-                        <span className="suggest-text">Lazada</span>
+                        <span >Lazada</span>
                       </span>
                     </a>
                     <a
@@ -1107,7 +1107,7 @@ const Content = ({ search, setSearch, match }) => {
                       // style={{ padding: 10 }}
                     >
                       <span style={{ fontSize: 14 }} className="coda-logo">
-                        <span className="suggest-text">Codashop</span>
+                        <span >Codashop</span>
                       </span>
                     </a>
                   </div>
