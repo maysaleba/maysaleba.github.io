@@ -877,19 +877,22 @@ const Content = ({ search, setSearch, match }) => {
                   </span>
                 </td>
                 <td className="version">
-                  <a
-                    href="https://bit.ly/3tvQ3No"
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ padding: 10 }}
-                  >
-                    <span className="shopee-logo">
+              
+                  <div style={{display: "flex", justifyContent: "left"}}>
+                    <span className="suggest-text">
+                        Suggested Gift Card: <ShopeeCard />
+                        <br/>
+                      </span>
+                      </div>
+
+                 
+                   {/* <span className="shopee-logo">
                       <span className="suggest-text">
                         Suggested <br /> Gift Card: <ShopeeCard />
                       </span>
                       <img src={download} />
-                    </span>
-                  </a>
+                    </span>*/}
+                  
                 </td>
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
@@ -902,11 +905,38 @@ const Content = ({ search, setSearch, match }) => {
                         </strike>
                       </span>
                     </div>
+                
                   </a>
                 </td>
               </tr>
               <tr className="item-table-best">
-                <td className="item-note text-right" colSpan="3"></td>
+              <td></td>
+              <td></td>
+                <td className="item-note text-right">
+                      <div style={{display: "flex", justifyContent: "center", flexWrap: "nowrap"}}>
+ <a className="nopaddingA"
+                    href="https://bit.ly/3tvQ3No"
+                    target="_blank"
+                    rel="noreferrer"
+                    // style={{ padding: 10 }}
+                  >
+                  <span className="shopee-logo"></span></a>
+                   <a className="nopaddingA"
+                    href="https://bit.ly/3EqxrTL"
+                    target="_blank"
+                    rel="noreferrer"
+                    // style={{ padding: 10 }}
+                  ><span className="lazada-logo"></span></a>
+                    <a className="nopaddingA"
+                    href="https://bit.ly/3pxXLXT"
+                    target="_blank"
+                    rel="noreferrer"
+                    // style={{ padding: 10 }}
+                  ><span className="coda-logo"></span></a>
+                   </div>
+
+
+                </td>
               </tr>
               <tr className="item-table-best">
                 <td className="version">

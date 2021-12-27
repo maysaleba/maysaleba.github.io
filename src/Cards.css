@@ -205,6 +205,12 @@ a.giftcardlink {
     padding: 0.75rem;
     display: block;
 }
+
+.nopaddingA {
+    padding: 0rem !important;
+    display: block;
+}
+
 .item-price-table .has-notes td a {
     padding-bottom: 0.25rem;
 }
@@ -561,15 +567,48 @@ padding-left: 20px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
-.shopee-logo {
+/*.shopee-logo {
 background-size:  90px;
 background-position:  left center;
 background-image: url('ShopeeIcon.svg');
 background-repeat: no-repeat;
 margin-left: 10px;
-padding-left: 30px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
+padding-left: 30px;  
+display: inline-block;  
+}*/
+
+.coda-logo {
+background-size:  20px;
+background-position:  center;
+background-image: url('flags/coda.png');
+background-repeat: no-repeat;
+/*margin-left: 10px;*/
+padding: 20px;  /* width of the image plus a little extra padding */
+display: inline-flex;  /* may not need this, but I've found I do */
+align-items: center;
 }
+
+.shopee-logo {
+background-size:  20px;
+background-position:  center;
+background-image: url('flags/shopee.png');
+background-repeat: no-repeat;
+/*margin-left: 10px;*/
+padding: 20px;  /* width of the image plus a little extra padding */
+display: inline-flex;  /* may not need this, but I've found I do */
+}
+
+.lazada-logo {
+background-size:  20px;
+background-position:  center;
+background-image: url('flags/lazada.png');
+background-repeat: no-repeat;
+/*margin-left: 10px;*/
+padding: 20px;  /* width of the image plus a little extra padding */
+display: inline-flex;  /* may not need this, but I've found I do */
+}
+
+
 
 
 
@@ -753,10 +792,34 @@ label:focus,
     display: none;
 }
 
-.shopee-logo {
+/*.shopee-logo {
 
     background-size:  75px;
+}*/
+
+.nopaddingA {
+    padding: 0.5rem !important;
+    display: block;
 }
+
+.coda-logo {
+
+    background-size:  18px;
+    padding: 12px;
+}
+
+.shopee-logo {
+
+    background-size:  18px;
+    padding: 12px;
+}
+
+.lazada-logo {
+
+    background-size:  18px;
+    padding: 12px;
+}
+
 
 .item-price-table {
     margin-left: -4px;
