@@ -717,39 +717,22 @@ const Content = ({ search, setSearch, match }) => {
       function RankRows() {
         if (entries.length === 1) {
           return (
+            <>
             <tr className="item-table-best">
               <td className="version">
                 <span className="fire-logo">
                   <USRank />
                 </span>
               </td>
-              <td className="version" style={{ width: "15rem" }}>
-                <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
-                  <div className="btn btn-block btn-secondary">
-                    <PesoPlusPrice />
-                    {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
-                    <span className="ml-2 badge badge-danger">
-                      <strike>
-                        <PesoPrice props={matchGames[0].Price} />
-                      </strike>
+        <td className="version">
+                  <div style={{ display: "flex", justifyContent: "left" }}>
+                    <span className="suggest-text">
+                      Suggested Gift Card: <ShopeeCard />
+                      <br />
                     </span>
                   </div>
-                </a>
-              </td>
-            </tr>
-          );
-        } else if (entries.length === 2) {
-          var rank1country = entries[0][0];
-          var rank1price = entries[0][1];
-          return (
-            <>
-              <tr className="item-table-best">
-                <td className="version">
-                  <span className="fire-logo">
-                    <USRank />
-                  </span>
                 </td>
-                <td className="version" style={{ width: "15rem" }}>
+                <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
@@ -764,12 +747,144 @@ const Content = ({ search, setSearch, match }) => {
                 </td>
               </tr>
               <tr className="item-table-best">
+                <td></td>
+                <td></td>
+                <td className="item-note text-right">
+                  <div
+                    className="vendors"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    <a
+                      className="nopaddingA"
+                      href="https://bit.ly/3tvQ3No"
+                      target="_blank"
+                      rel="noreferrer"
+                      // style={{ padding: 10 }}
+                    >
+                      <span style={{ fontSize: 14 }} className="shopee-logo">
+                        <span className="suggest-text">Shopee</span>
+                      </span>
+                    </a>
+                    <a
+                      className="nopaddingA"
+                      href="https://bit.ly/3EqxrTL"
+                      target="_blank"
+                      rel="noreferrer"
+                      // style={{ padding: 10 }}
+                    >
+                      <span style={{ fontSize: 14 }} className="lazada-logo">
+                        <span className="suggest-text">Lazada</span>
+                      </span>
+                    </a>
+                    <a
+                      className="nopaddingA"
+                      href="https://bit.ly/3pxXLXT"
+                      target="_blank"
+                      rel="noreferrer"
+                      // style={{ padding: 10 }}
+                    >
+                      <span style={{ fontSize: 14 }} className="coda-logo">
+                        <span className="suggest-text">Codashop</span>
+                      </span>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </>
+          );
+        } else if (entries.length === 2) {
+          var rank1country = entries[0][0];
+          var rank1price = entries[0][1];
+          return (
+            <>
+              <tr className="item-table-best">
+                <td className="version">
+                  <span className="fire-logo">
+                    <USRank />
+                  </span>
+                </td>
+                <td className="version">
+                  <div style={{ display: "flex", justifyContent: "left" }}>
+                    <span className="suggest-text">
+                      Suggested Gift Card: <ShopeeCard />
+                      <br />
+                    </span>
+                  </div>
+                </td>
+                <td className="version">
+                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                    <div className="btn btn-block btn-secondary">
+                      <PesoPlusPrice />
+                      {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
+                      <span className="ml-2 badge badge-danger">
+                        <strike>
+                          <PesoPrice props={matchGames[0].Price} />
+                        </strike>
+                      </span>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+              <tr className="item-table-best">
+                <td></td>
+                <td></td>
+                <td className="item-note text-right">
+                  <div
+                    className="vendors"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    <a
+                      className="nopaddingA"
+                      href="https://bit.ly/3tvQ3No"
+                      target="_blank"
+                      rel="noreferrer"
+                      // style={{ padding: 10 }}
+                    >
+                      <span style={{ fontSize: 14 }} className="shopee-logo">
+                        <span className="suggest-text">Shopee</span>
+                      </span>
+                    </a>
+                    <a
+                      className="nopaddingA"
+                      href="https://bit.ly/3EqxrTL"
+                      target="_blank"
+                      rel="noreferrer"
+                      // style={{ padding: 10 }}
+                    >
+                      <span style={{ fontSize: 14 }} className="lazada-logo">
+                        <span className="suggest-text">Lazada</span>
+                      </span>
+                    </a>
+                    <a
+                      className="nopaddingA"
+                      href="https://bit.ly/3pxXLXT"
+                      target="_blank"
+                      rel="noreferrer"
+                      // style={{ padding: 10 }}
+                    >
+                      <span style={{ fontSize: 14 }} className="coda-logo">
+                        <span className="suggest-text">Codashop</span>
+                      </span>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr className="item-table-best">
                 <td className="version">
                   <span className="gold-medal-logo">
                     <Rank1 rank1country={rank1country} />
                   </span>
                 </td>
-                <td className="version" style={{ width: "15rem" }}>
+                <td></td>
+                <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
@@ -799,7 +914,15 @@ const Content = ({ search, setSearch, match }) => {
                   </span>
                 </td>
 
-                <td className="version" style={{ width: "15rem" }}>
+                <td className="version">
+                  <div style={{ display: "flex", justifyContent: "left" }}>
+                    <span className="suggest-text">
+                      Suggested Gift Card: <ShopeeCard />
+                      <br />
+                    </span>
+                  </div>
+                </td>
+                <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
@@ -814,7 +937,52 @@ const Content = ({ search, setSearch, match }) => {
                 </td>
               </tr>
               <tr className="item-table-best">
-                <td className="item-note text-right" colSpan="3"></td>
+                <td></td>
+                <td></td>
+                <td className="item-note text-right">
+                  <div
+                    className="vendors"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    <a
+                      className="nopaddingA"
+                      href="https://bit.ly/3tvQ3No"
+                      target="_blank"
+                      rel="noreferrer"
+                      // style={{ padding: 10 }}
+                    >
+                      <span style={{ fontSize: 14 }} className="shopee-logo">
+                        <span className="suggest-text">Shopee</span>
+                      </span>
+                    </a>
+                    <a
+                      className="nopaddingA"
+                      href="https://bit.ly/3EqxrTL"
+                      target="_blank"
+                      rel="noreferrer"
+                      // style={{ padding: 10 }}
+                    >
+                      <span style={{ fontSize: 14 }} className="lazada-logo">
+                        <span className="suggest-text">Lazada</span>
+                      </span>
+                    </a>
+                    <a
+                      className="nopaddingA"
+                      href="https://bit.ly/3pxXLXT"
+                      target="_blank"
+                      rel="noreferrer"
+                      // style={{ padding: 10 }}
+                    >
+                      <span style={{ fontSize: 14 }} className="coda-logo">
+                        <span className="suggest-text">Codashop</span>
+                      </span>
+                    </a>
+                  </div>
+                </td>
               </tr>
               <tr className="item-table-best">
                 <td className="version">
@@ -822,7 +990,8 @@ const Content = ({ search, setSearch, match }) => {
                     <Rank1 rank1country={rank1country} />
                   </span>
                 </td>
-                <td className="version" style={{ width: "15rem" }}>
+                <td></td>
+                <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
@@ -842,7 +1011,8 @@ const Content = ({ search, setSearch, match }) => {
                     <Rank2 rank2country={rank2country} />
                   </span>
                 </td>
-                <td className="version" style={{ width: "15rem" }}>
+                <td></td>
+                <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
@@ -880,13 +1050,6 @@ const Content = ({ search, setSearch, match }) => {
                       <br />
                     </span>
                   </div>
-
-                  {/* <span className="shopee-logo">
-                      <span className="suggest-text">
-                        Suggested <br /> Gift Card: <ShopeeCard />
-                      </span>
-                      <img src={download} />
-                    </span>*/}
                 </td>
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
