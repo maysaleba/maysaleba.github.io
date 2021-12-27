@@ -1084,9 +1084,10 @@ const Content = ({ search, setSearch, match }) => {
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                      <span style={{ fontSize: 14 }} className="shopee-logo">
-                        <span >Shopee</span>
-                      </span>
+                    <div>
+                      <span style={{ fontSize: 14 }} className="shopee-logo"><img className="suggest-text" src={download}/></span>
+                        <span style={{ fontSize: 14 }} className="suggest-text">Shopee</span>
+                      </div>
                     </a>
                     <a
                       className="nopaddingA"
@@ -1096,7 +1097,7 @@ const Content = ({ search, setSearch, match }) => {
                       // style={{ padding: 10 }}
                     >
                       <span style={{ fontSize: 14 }} className="lazada-logo">
-                        <span >Lazada</span>
+                        <span className="suggest-text">Lazada</span>
                       </span>
                     </a>
                     <a
@@ -1107,7 +1108,7 @@ const Content = ({ search, setSearch, match }) => {
                       // style={{ padding: 10 }}
                     >
                       <span style={{ fontSize: 14 }} className="coda-logo">
-                        <span >Codashop</span>
+                        <span className="suggest-text">Codashop</span>
                       </span>
                     </a>
                   </div>

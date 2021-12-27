@@ -580,12 +580,18 @@ padding-left: 30px;
 display: inline-block;  
 }*/
 
+.bg-logo {
+        border-radius: 100%;
+    background-color: #ffffff;
+
+}
+
 .coda-logo {
 background-size:  20px;
 background-position:  left center;
 background-image: url('flags/coda.png');
 background-repeat: no-repeat;
-/*margin-right: 10px;*/
+/*margin-left: 10px;*/
 padding-left: 30px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
@@ -801,8 +807,7 @@ label:focus,
 }*/
 
 .vendors {
-    justify-content: left !important;
-    flex-wrap: wrap !important;
+    flex-wrap: nowrap !important;
 }
 
 .nopaddingA {
@@ -814,21 +819,27 @@ label:focus,
 }
 
 .coda-logo {
-
-    background-size:  18px;
-  
+    border-radius:  100%;
+    background-color:  #ffffff;
+    background-position: center;
+    background-size:  15px;
+    padding: 15px;
 }
 
 .shopee-logo {
-
-    background-size:  18px;
-   
+    border-radius:  100%;
+    background-color:  #ffffff;
+    background-position: center;
+    background-size:  15px;
+    padding: 15px;
 }
 
 .lazada-logo {
-
-    background-size:  18px;
-   
+    border-radius:  100%;
+    background-color:  #ffffff;
+    background-position: center;
+    background-size:  15px;
+    padding: 15px;
 }
 
 
