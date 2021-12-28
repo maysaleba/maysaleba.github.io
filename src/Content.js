@@ -725,12 +725,6 @@ const Content = ({ search, setSearch, match }) => {
                 </span>
               </td>
         <td className="version">
-                  <div style={{ display: "flex", justifyContent: "left" }}>
-                    <span className="suggest-text">
-                      Suggested Gift Card: <ShopeeCard />
-                      <br />
-                    </span>
-                  </div>
                 </td>
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
@@ -747,7 +741,18 @@ const Content = ({ search, setSearch, match }) => {
                 </td>
               </tr>
               <tr className="item-table-best">
-                <td></td>
+                <td className="item-note text-left"> 
+                                  <div
+                    className="vendors"
+                    style={{
+                      display: "flex",
+                      justifyContent: "left",
+                      flexWrap: "wrap",
+                      fontSize: 14
+                    }}
+                  >
+                   <span className="nopaddingA"> <div className="ml-2 badge badge-info">  Suggested Gift Card: <ShopeeCard /></div></span>  </div>
+                </td>
                 <td></td>
                 <td className="item-note text-right">
  <div
@@ -814,12 +819,6 @@ const Content = ({ search, setSearch, match }) => {
                   </span>
                 </td>
                 <td className="version">
-                  <div style={{ display: "flex", justifyContent: "left" }}>
-                    <span className="suggest-text">
-                      Suggested Gift Card: <ShopeeCard />
-                      <br />
-                    </span>
-                  </div>
                 </td>
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
@@ -836,7 +835,18 @@ const Content = ({ search, setSearch, match }) => {
                 </td>
               </tr>
               <tr className="item-table-best">
-                <td></td>
+                <td className="item-note text-left"> 
+                                  <div
+                    className="vendors"
+                    style={{
+                      display: "flex",
+                      justifyContent: "left",
+                      flexWrap: "wrap",
+                      fontSize: 14
+                    }}
+                  >
+                   <span className="nopaddingA"> <div className="ml-2 badge badge-info">  Suggested Gift Card: <ShopeeCard /></div></span>  </div>
+                </td>
                 <td></td>
                 <td className="item-note text-right">
                    <div
@@ -925,14 +935,7 @@ const Content = ({ search, setSearch, match }) => {
                     <USRank />
                   </span>
                 </td>
-
                 <td className="version">
-                  <div style={{ display: "flex", justifyContent: "left" }}>
-                    <span className="suggest-text">
-                      Suggested Gift Card: <ShopeeCard />
-                      <br />
-                    </span>
-                  </div>
                 </td>
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
@@ -949,7 +952,18 @@ const Content = ({ search, setSearch, match }) => {
                 </td>
               </tr>
               <tr className="item-table-best">
-                <td></td>
+                <td className="item-note text-left"> 
+                                  <div
+                    className="vendors"
+                    style={{
+                      display: "flex",
+                      justifyContent: "left",
+                      flexWrap: "wrap",
+                      fontSize: 14
+                    }}
+                  >
+                   <span className="nopaddingA"> <div className="ml-2 badge badge-info">  Suggested Gift Card: <ShopeeCard /></div></span>  </div>
+                </td>
                 <td></td>
                 <td className="item-note text-right">
                  <div
@@ -1062,12 +1076,7 @@ const Content = ({ search, setSearch, match }) => {
                   </span>
                 </td>
                 <td className="version">
-                  <div style={{ display: "flex", justifyContent: "left" }}>
-                    <span className="suggest-text">
-                      Suggested Gift Card: <ShopeeCard />
-                      <br />
-                    </span>
-                  </div>
+                
                 </td>
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
@@ -1084,7 +1093,18 @@ const Content = ({ search, setSearch, match }) => {
                 </td>
               </tr>
               <tr className="item-table-best">
-                <td></td>
+                <td className="item-note text-left"> 
+                                  <div
+                    className="vendors"
+                    style={{
+                      display: "flex",
+                      justifyContent: "left",
+                      flexWrap: "wrap",
+                      fontSize: 14
+                    }}
+                  >
+                   <span className="nopaddingA"> <div className="ml-2 badge badge-info">  Suggested Gift Card: <ShopeeCard /></div></span>  </div>
+                </td>
                 <td></td>
                 <td className="item-note text-right">
                   <div
