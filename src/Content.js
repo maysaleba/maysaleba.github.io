@@ -771,7 +771,7 @@ const Content = ({ search, setSearch, match }) => {
                       // style={{ padding: 10 }}
                     >
                     <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 12 }} className="shopee-logo">
+                      <span style={{ fontSize: 13 }} className="shopee-logo">
                         <span className="suggest-text">Shopee</span>
                         </span>
                       </div>
@@ -784,7 +784,7 @@ const Content = ({ search, setSearch, match }) => {
                       // style={{ padding: 10 }}
                     >
                     <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 12 }} className="lazada-logo">
+                      <span style={{ fontSize: 13 }} className="lazada-logo">
                         <span className="suggest-text">Lazada</span>
                       </span>
                       </div>
@@ -797,7 +797,7 @@ const Content = ({ search, setSearch, match }) => {
                       // style={{ padding: 10 }}
                     >
                     <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 12 }} className="coda-logo">
+                      <span style={{ fontSize: 13 }} className="coda-logo">
                         <span className="suggest-text">Codashop</span>
                       </span>
                       </div>
@@ -865,7 +865,7 @@ const Content = ({ search, setSearch, match }) => {
                       // style={{ padding: 10 }}
                     >
                     <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 12 }} className="shopee-logo">
+                      <span style={{ fontSize: 13 }} className="shopee-logo">
                         <span className="suggest-text">Shopee</span>
                         </span>
                       </div>
@@ -878,7 +878,7 @@ const Content = ({ search, setSearch, match }) => {
                       // style={{ padding: 10 }}
                     >
                     <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 12 }} className="lazada-logo">
+                      <span style={{ fontSize: 13 }} className="lazada-logo">
                         <span className="suggest-text">Lazada</span>
                       </span>
                       </div>
@@ -891,7 +891,7 @@ const Content = ({ search, setSearch, match }) => {
                       // style={{ padding: 10 }}
                     >
                     <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 12 }} className="coda-logo">
+                      <span style={{ fontSize: 13 }} className="coda-logo">
                         <span className="suggest-text">Codashop</span>
                       </span>
                       </div>
@@ -982,7 +982,7 @@ const Content = ({ search, setSearch, match }) => {
                       // style={{ padding: 10 }}
                     >
                     <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 12 }} className="shopee-logo">
+                      <span style={{ fontSize: 13 }} className="shopee-logo">
                         <span className="suggest-text">Shopee</span>
                         </span>
                       </div>
@@ -995,7 +995,7 @@ const Content = ({ search, setSearch, match }) => {
                       // style={{ padding: 10 }}
                     >
                     <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 12 }} className="lazada-logo">
+                      <span style={{ fontSize: 13 }} className="lazada-logo">
                         <span className="suggest-text">Lazada</span>
                       </span>
                       </div>
@@ -1008,7 +1008,7 @@ const Content = ({ search, setSearch, match }) => {
                       // style={{ padding: 10 }}
                     >
                     <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 12 }} className="coda-logo">
+                      <span style={{ fontSize: 13 }} className="coda-logo">
                         <span className="suggest-text">Codashop</span>
                       </span>
                       </div>
@@ -1123,7 +1123,7 @@ const Content = ({ search, setSearch, match }) => {
                       // style={{ padding: 10 }}
                     >
                     <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 12 }} className="shopee-logo">
+                      <span style={{ fontSize: 13 }} className="shopee-logo">
                         <span className="suggest-text">Shopee</span>
                         </span>
                       </div>
@@ -1136,7 +1136,7 @@ const Content = ({ search, setSearch, match }) => {
                       // style={{ padding: 10 }}
                     >
                     <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 12 }} className="lazada-logo">
+                      <span style={{ fontSize: 13 }} className="lazada-logo">
                         <span className="suggest-text">Lazada</span>
                       </span>
                       </div>
@@ -1149,7 +1149,7 @@ const Content = ({ search, setSearch, match }) => {
                       // style={{ padding: 10 }}
                     >
                     <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 12 }} className="coda-logo">
+                      <span style={{ fontSize: 13 }} className="coda-logo">
                         <span className="suggest-text">Codashop</span>
                       </span>
                       </div>

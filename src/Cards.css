@@ -587,32 +587,32 @@ display: inline-block;
 
 
 .coda-logo {
-background-size:  10px;
+background-size:  12px;
 background-position:  left center;
 background-image: url('flags/coda.png');
 background-repeat: no-repeat;
 /*margin-left: 10px;*/
-padding-left: 15px;  /* width of the image plus a little extra padding */
+padding-left: 20px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
 .shopee-logo {
-background-size:  10px;
+background-size:  12px;
 background-position:  left center;
 background-image: url('flags/shopee.png');
 background-repeat: no-repeat;
 /*margin-left: 10px;*/
-padding-left: 15px;  /* width of the image plus a little extra padding */
+padding-left: 20px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
 .lazada-logo {
-background-size:  10px;
+background-size:  12px;
 background-position:  left center;
 background-image: url('flags/lazada.png');
 background-repeat: no-repeat;
 /*margin-left: 10px;*/
-padding-left: 15px;  /* width of the image plus a little extra padding */
+padding-left: 20px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
