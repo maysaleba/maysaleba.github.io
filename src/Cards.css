@@ -575,16 +575,6 @@ padding-left: 20px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
-.gift-card-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/gift-card.png');
-background-repeat: no-repeat;
-margin-left: 10px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
 /*.shopee-logo {
 background-size:  90px;
 background-position:  left center;
