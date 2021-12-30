@@ -13,9 +13,13 @@ import download from "./download.gif";
             var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
             var yyyy = today.getFullYear();
 
-            today = yyyy + '-' + mm + '-' + dd;
+           let hour = today.getHours();
 
-            var theURL = 'https://api.exchangerate.host/latest?base=PHP&v=_' + today + '_';
+  today = yyyy + "-" + mm + "-" + dd;
+
+
+  var theURL =
+    "https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
             // var theURL = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json'
             function httpGet(theUrl) {
                 var xmlHttp = new XMLHttpRequest();

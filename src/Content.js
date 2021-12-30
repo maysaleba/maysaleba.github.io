@@ -38,10 +38,14 @@ const Content = ({ search, setSearch, match }) => {
   var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
   var yyyy = today.getFullYear();
 
+ let hour = today.getHours();
+
   today = yyyy + "-" + mm + "-" + dd;
 
+
   var theURL =
-    "https://api.exchangerate.host/latest?base=PHP&v=_" + today + "_";
+    "https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
+
 
   function httpGet(theUrl) {
     var xmlHttp = new XMLHttpRequest();
