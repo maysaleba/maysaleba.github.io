@@ -17,7 +17,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
   var mo = String(lastd.getMonth() + 1).padStart(2, "0"); //January is 0!
   var year = lastd.getFullYear();
 
-  var lastmo = new Date(d.setDate(d.getDate() - 180));
+  var lastmo = new Date(d.setDate(d.getDate() - 640));
   var damo = String(lastmo.getDate()).padStart(2, "0");
   var momo = String(lastmo.getMonth() + 1).padStart(2, "0"); //January is 0!
   var yearmo = lastmo.getFullYear();
@@ -27,7 +27,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
 
   const newSwitchDiscounts = reviewssw.filter((x) => x.SaleStarted > daysago);
   const topSwitchDiscounts = reviewssw.filter((x) => x.SCORE > 70);
-  const newPSDiscounts = reviewsps.filter((x) => x.SCORE > 75 && x.ReleaseDate > moago );
+  const newPSDiscounts = reviewsps.filter((x) => x.SCORE > 85 && x.ReleaseDate > moago );
   const topPSDiscounts = reviewsps.filter((x) => x.SCORE > 70);
 
   return (

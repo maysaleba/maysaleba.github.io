@@ -98,6 +98,8 @@ export default function Main() {
   }, []);
 
 
+
+
   const onPriceRangeDrop = (dropDownValue) => setPriceRangeDropDown(dropDownValue)
   const onPlatformDrop = (dropDownValue) => setPlatformDropDown(dropDownValue);
   const onLatestDrop = (dropDownValue) => setLatestDropDown(dropDownValue);
@@ -115,8 +117,8 @@ export default function Main() {
         onPlatformChange("");
         onPlatformDrop("All Platforms");
         onFilterChange("");
-        onLatestChange("New Discounts")
-        onLatestDrop("New Discounts")
+        onLatestChange("Top Rated")
+        onLatestDrop("Top Rated")
   };
 
   const clearGenre = (event) => {
@@ -182,7 +184,7 @@ export default function Main() {
     setSearchQuery("");
   };
 
-  console.log(priceRangeField);
+
 
   let filteredReviews = useMemo(() =>
     latestField.filter((review) => {
@@ -225,7 +227,7 @@ const BackgroundContainer = styled.div`
 
 
       &:after {
-    --color-background--rgb: 110,114,144;
+    --color-background--rgb: 103,103,171;
     content: "";
     position: absolute;
     height: 50%;
@@ -265,13 +267,16 @@ position: absolute;
               onPlatformChange={onPlatformChange}
               onPlatformDrop={onPlatformDrop}
               clearFilter={clearFilter}
+              clearSearchChange={clearSearchChange}
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
              />
       <Route
         path="/"
         exact
         render={(props) => (
           <div>
-            <MessengerCustomerChat
+            <MessengerCustomerChat       
     pageId="110345971129305"
     themeColor="#9c27b0"
   />
@@ -343,6 +348,7 @@ position: absolute;
         path="/switch"
         render={(props) => (
           <div>
+
           {setPlatformField("Switch")}
           {setPlatformDropDown("Switch")}
             <MessengerCustomerChat
@@ -440,6 +446,8 @@ position: absolute;
     themeColor="#9c27b0"
   />
             <GiftCards 
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
             />
         </div>
         )} />

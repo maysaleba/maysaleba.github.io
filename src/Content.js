@@ -1324,7 +1324,7 @@ const Content = ({ search, setSearch, match }) => {
     z-index: -1;
 
     &:after {
-      --color-background--rgb: 110, 114, 144;
+      --color-background--rgb: 103,103,171;
       content: "";
       position: absolute;
       height: 50%;
