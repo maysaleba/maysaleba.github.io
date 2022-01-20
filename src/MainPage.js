@@ -27,7 +27,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
 
   const newSwitchDiscounts = reviewssw.filter((x) => x.SaleStarted > daysago);
   const topSwitchDiscounts = reviewssw.filter((x) => x.SCORE > 70);
-  const newPSDiscounts = reviewsps.filter((x) => x.SCORE > 85 && x.ReleaseDate > moago );
+  const newPSDiscounts = reviewsps.filter((x) => x.SCORE > 80 && x.ReleaseDate > moago );
   const topPSDiscounts = reviewsps.filter((x) => x.SCORE > 70);
 
   return (
