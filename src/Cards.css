@@ -258,13 +258,15 @@ table tr:first-child td:last-child {
 table tr:nth-child(2) td:first-child {
     
     border-color: white;
+    /*border-bottom-width: thick;*/
     /*border-bottom-left-radius: 10px;*/
-    /*border:  none;*/
+    /*border:  10;*/
 }
 
 table tr:nth-child(2) td:nth-child(2) {
     
     border-color: white;
+
     /*border-bottom-right-radius: 10px;*/
     /*border: none;*/
 }
@@ -272,6 +274,7 @@ table tr:nth-child(2) td:nth-child(2) {
 table tr:nth-child(2) td:last-child {
     
     border-color: white;
+      /*border-bottom-width: thick;*/
     /*border-bottom-right-radius: 10px;*/
     /*border: none;*/
 }
@@ -293,6 +296,7 @@ table tr:nth-child(3) td:nth-child(2) {
 table tr:nth-child(3) td:last-child {
     
     border-color: white;
+    border-bottom-width: 10px;
     /*border-bottom-right-radius: 10px;*/
     /*border: none;*/
 }
@@ -312,6 +316,27 @@ table tr:nth-child(4) td:nth-child(2) {
 }
 
 table tr:nth-child(4) td:last-child {
+    
+    border-color: white;
+    /*border-bottom-right-radius: 10px;*/
+    /*border: none;*/
+}
+
+table tr:nth-child(5) td:first-child {
+    
+    border-color: white;
+    /*border-bottom-left-radius: 10px;*/
+    /*border:  none;*/
+}
+
+table tr:nth-child(5) td:nth-child(2) {
+    
+    border-color: white;
+    /*border-bottom-right-radius: 10px;*/
+    /*border: none;*/
+}
+
+table tr:nth-child(5) td:last-child {
     
     border-color: white;
     /*border-bottom-right-radius: 10px;*/
@@ -339,7 +364,14 @@ table tr:last-child td:last-child {
 }
 
 
-
+.ads {
+   height: 90px;
+   /*background-size: 100%;*/
+   background-position: left center;
+   background-image: url('https://img.involve.asia/rpss/campaigns_banners/1610939924-Eor7UR1fY7PRiMAotSjQLhmtYev6of7H.jpg');
+   background-repeat: no-repeat;
+   display: block;
+}
 
 .psplusbadge
 {
@@ -891,6 +923,15 @@ label:focus,
 
   p {
    display:block !important;
+}
+
+.ads {
+   height: 250px;
+   /*background-size: 100%;*/
+   background-position: center;
+   background-image: url('https://img.involve.asia/rpss/campaigns_banners/1610939924-FZPKAwTqQ6xBoehAv2u5AkGNXW54KWbL.jpg');
+   background-repeat: no-repeat;
+   display: block;
 }
 
   .content-container {

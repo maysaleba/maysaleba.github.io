@@ -451,8 +451,8 @@ const Content = ({ search, setSearch, match }) => {
 
       return (
         <div style={{ paddingBottom: 10, fontSize: 14 }}>
-          <Card.Header style={{ backgroundColor: "white" }}>
-            Trailer
+          <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
+            TRAILER
           </Card.Header>
           <Card.Body>
             <YoutubeEmbed embedId={youtubeid[1]} />
@@ -1173,6 +1173,15 @@ const Content = ({ search, setSearch, match }) => {
                   </div>
                 </td>
               </tr>
+              <tr>
+              <td  colSpan="3">
+              <span style={{ fontSize: 11, fontWeight: 'bold' }}>LIST RESUMES AFTER THIS AD</span>
+              <a href="https://invol.co/cl8yjhx"><div className="ads"></div> </a>
+              {/*<img src="https://img.involve.asia/rpss/campaigns_banners/64963-IdgpwkNSfeDvd1tWCXTpJOIdkbnstrbX.jpg"/>*/}
+              {/*<img src="https://img.involve.asia/rpss/campaigns_banners/1610939924-Eor7UR1fY7PRiMAotSjQLhmtYev6of7H.jpg" />*/}
+              </td>
+             
+              </tr>
               <tr className="item-table-best">
                 <td className="version">
                   <span className="gold-medal-logo">
@@ -1314,6 +1323,12 @@ const Content = ({ search, setSearch, match }) => {
                   </a>
                 </td>
               </tr>
+               <td  colSpan="3">
+              <span style={{ fontSize: 11, fontWeight: 'bold' }}>LIST RESUMES AFTER THIS AD</span>
+              <a href="https://invol.co/cl8yjhx"><div className="ads"></div> </a>
+              {/*<img src="https://img.involve.asia/rpss/campaigns_banners/64963-IdgpwkNSfeDvd1tWCXTpJOIdkbnstrbX.jpg"/>*/}
+              {/*<img src="https://img.involve.asia/rpss/campaigns_banners/1610939924-Eor7UR1fY7PRiMAotSjQLhmtYev6of7H.jpg" />*/}
+              </td>
               <ShopeeURL />
             </tbody>
           </table>
@@ -1401,8 +1416,8 @@ const Content = ({ search, setSearch, match }) => {
       </div>
       <Paper elevation={2} className="content-container">
         {/*<Card className="content-container-gameinfo">*/}
-        <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
-          {matchGames[0].Title}
+        <Card.Header style={{ fontSize: 18, backgroundColor: "white", fontWeight: "bold" }}>
+          {matchGames[0].Title.toUpperCase()}
           <HasOpenCritic props={matchGames[0].SCORE} />
           <span
             className="pb-1"
@@ -1413,13 +1428,13 @@ const Content = ({ search, setSearch, match }) => {
             }}
           >
             <br />
-            Sale ends: {DateConvert(matchGames[0].SaleEnds)}
+            SALE ENDS: {DateConvert(matchGames[0].SaleEnds).toUpperCase()}
           </span>
         </Card.Header>
         <PricesTable psorsw={matchGames[0].platform} />
         <div style={{ fontSize: 14 }}>
-          <Card.Header style={{ backgroundColor: "white" }}>
-            Information
+          <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
+            INFORMATION
           </Card.Header>
           <Card.Body style={{ fontSize: 14 }}>
             <Row xs={1} sm={2}>
@@ -1454,8 +1469,8 @@ const Content = ({ search, setSearch, match }) => {
         <YoutubeTrailer />
 
         <div style={{ fontSize: 14 }}>
-          <Card.Header style={{ backgroundColor: "white" }}>
-            Description
+          <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
+            DESCRIPTION
           </Card.Header>
           <Card.Body>
             <ReverseDesc props={matchGames[0].description} />

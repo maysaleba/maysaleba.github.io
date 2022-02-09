@@ -100,7 +100,7 @@ const NaviBar = (props) => {
           sx={{
             justifyContent: "space-between",
             width: "100%",
-            maxWidth: { md: "53%", lg: "53%" },
+            maxWidth: { sm: "100%", md: "70%", lg: "53%" },
             mx: "auto",
           }}
         >
