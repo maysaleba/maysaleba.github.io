@@ -1176,11 +1176,10 @@ const Content = ({ search, setSearch, match }) => {
               <tr>
               <td  colSpan="3">
               <span style={{ fontSize: 11, fontWeight: 'bold' }}>LIST RESUMES AFTER THIS AD</span>
-              <a href="https://invol.co/cl8yjhx"><div className="ads"></div> </a>
+              <a href="https://invol.co/cl8ylz0"><div className="ads"></div> </a>
               {/*<img src="https://img.involve.asia/rpss/campaigns_banners/64963-IdgpwkNSfeDvd1tWCXTpJOIdkbnstrbX.jpg"/>*/}
               {/*<img src="https://img.involve.asia/rpss/campaigns_banners/1610939924-Eor7UR1fY7PRiMAotSjQLhmtYev6of7H.jpg" />*/}
               </td>
-             
               </tr>
               <tr className="item-table-best">
                 <td className="version">
