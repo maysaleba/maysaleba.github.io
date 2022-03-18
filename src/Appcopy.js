@@ -4,7 +4,7 @@ import reviewssw from "./csvjson.json";
 import reviewspsx from "./csvjsonus.json";
 import CardGroup from "./CardGroup2";
 import "./App.css";
-import { HashRouter as Router, Route, useLocation, Switch, Redirect } from "react-router-dom";
+import { HashRouter as Router, Route, useLocation, Switch } from "react-router-dom";
 import Content from "./Content";
 import NaviBar from "./NaviBar";
 import styled from 'styled-components';
@@ -460,10 +460,7 @@ position: absolute;
             <FAQ 
             />
         </div>
-        )} />
-           <Route render={() => <Redirect to={{pathname: "/"}} />} /> 
-
-     
+        )} />     
     </Router>
   );
 }
