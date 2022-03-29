@@ -337,7 +337,8 @@ const Content = ({ search, setSearch, match }) => {
         <>
           <span
             style={{
-              fontSize: 10,
+            
+              fontSize: 12,
               borderRadius: 30,
               border: "1px solid black",
               paddingLeft: "10px",
@@ -348,7 +349,8 @@ const Content = ({ search, setSearch, match }) => {
           </span>{" "}
           <span
             style={{
-              fontSize: 10,
+               
+              fontSize: 12,
               borderRadius: 30,
               border: "1px solid black",
               paddingLeft: "10px",
@@ -363,7 +365,8 @@ const Content = ({ search, setSearch, match }) => {
       return (
         <span
           style={{
-            fontSize: 10,
+           
+            fontSize: 12,
             borderRadius: 30,
             border: "1px solid black",
             paddingLeft: "10px",
@@ -377,7 +380,8 @@ const Content = ({ search, setSearch, match }) => {
       return (
         <span
           style={{
-            fontSize: 10,
+            
+            fontSize: 12,
             borderRadius: 30,
             border: "1px solid black",
             paddingLeft: "10px",
@@ -391,7 +395,8 @@ const Content = ({ search, setSearch, match }) => {
       return (
         <span
           style={{
-            fontSize: 10,
+           
+            fontSize: 12,
             borderRadius: 30,
             border: "1px solid black",
             paddingLeft: "10px",
@@ -439,6 +444,93 @@ const Content = ({ search, setSearch, match }) => {
     }
   }
 
+
+    function HasHLTB(props) {
+    if (props.props.platform !== "Switch") {
+         return null;
+     
+    } else if (props.props.MainStory == 0 && props.props.MainExtra == 0 && props.props.Completionist == 0){
+         return null;
+      }
+
+      else 
+    {
+      return (
+        <>
+        <Link
+          underline="none"
+          hover="none"
+          color="black"
+          href="https://howlongtobeat.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+         
+             <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
+
+            HOW LONG TO BEAT
+
+            <span className="hltb-logo">
+              <img src={download} />
+            </span>
+             </Card.Header>
+         
+        </Link>
+   <Card.Body style={{ fontSize: 14 }}>
+
+
+            <Row xs={1} sm={3}>
+              <MainStory/>
+             <MainExtra/>
+             <Completionist/>
+            </Row>
+           
+          </Card.Body>
+        </>
+      );
+    }
+  }
+
+      function MainStory(){
+    if (matchGames[0].MainStory == 0 || matchGames[0].MainStory == null) {
+      return null;
+    } else {
+      return (
+ <Col style={{ paddingBottom: 10 }}>
+                <span style={{ fontWeight: "bold" }}>Main Story:</span>{" "}
+                {matchGames[0].MainStory + " Hours"}
+              </Col>
+        )
+    }
+  }
+
+      function MainExtra(){
+    if (matchGames[0].MainExtra == 0 || matchGames[0].MainExtra == null) {
+      return null;
+    } else {
+      return (
+ <Col style={{ paddingBottom: 10 }}>
+                <span style={{ fontWeight: "bold" }}>Main+Extra:</span>{" "}
+                {matchGames[0].MainExtra + " Hours"}
+              </Col>
+        )
+    }
+  }
+
+
+      function Completionist(){
+    if (matchGames[0].Completionist == 0 || matchGames[0].Completionist == null) {
+      return null;
+    } else {
+      return (
+ <Col style={{ paddingBottom: 10 }}>
+                <span style={{ fontWeight: "bold" }}>Completionist:</span>{" "}
+                {matchGames[0].Completionist + " Hours"}
+              </Col>
+        )
+    }
+  }
+
   // matchGames[0].platform === "Switch" && (
 
   function YoutubeTrailer() {
@@ -451,12 +543,11 @@ const Content = ({ search, setSearch, match }) => {
 
       return (
         <div style={{ paddingBottom: 10, fontSize: 14 }}>
-          <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
+         {/* <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
             TRAILER
-          </Card.Header>
-          <Card.Body>
+          </Card.Header>*/}
+
             <YoutubeEmbed embedId={youtubeid[1]} />
-          </Card.Body>
         </div>
       );
     }
@@ -915,12 +1006,6 @@ const Content = ({ search, setSearch, match }) => {
                   </div>
                 </td>
               </tr>
-                <td  colSpan="3">
-              <span style={{ fontSize: 11, fontWeight: 'bold' }}>LIST RESUMES AFTER THIS AD</span>
-              <a href="https://invol.co/cl8yjhx"><div className="ads"></div> </a>
-              {/*<img src="https://img.involve.asia/rpss/campaigns_banners/64963-IdgpwkNSfeDvd1tWCXTpJOIdkbnstrbX.jpg"/>*/}
-              {/*<img src="https://img.involve.asia/rpss/campaigns_banners/1610939924-Eor7UR1fY7PRiMAotSjQLhmtYev6of7H.jpg" />*/}
-              </td>
               <tr className="item-table-best">
                 <td className="version">
                   <span className="gold-medal-logo">
@@ -1038,12 +1123,6 @@ const Content = ({ search, setSearch, match }) => {
                   </div>
                 </td>
               </tr>
-                <td  colSpan="3">
-              <span style={{ fontSize: 11, fontWeight: 'bold' }}>LIST RESUMES AFTER THIS AD</span>
-              <a href="https://invol.co/cl8yjhx"><div className="ads"></div> </a>
-              {/*<img src="https://img.involve.asia/rpss/campaigns_banners/64963-IdgpwkNSfeDvd1tWCXTpJOIdkbnstrbX.jpg"/>*/}
-              {/*<img src="https://img.involve.asia/rpss/campaigns_banners/1610939924-Eor7UR1fY7PRiMAotSjQLhmtYev6of7H.jpg" />*/}
-              </td>
               <tr className="item-table-best">
                 <td className="version">
                   <span className="gold-medal-logo">
@@ -1184,14 +1263,6 @@ const Content = ({ search, setSearch, match }) => {
                     </a>
                   </div>
                 </td>
-              </tr>
-              <tr>
-              <td  colSpan="3">
-              <span style={{ fontSize: 11, fontWeight: 'bold' }}>LIST RESUMES AFTER THIS AD</span>
-              <a href="https://invol.co/cl8yjhx"><div className="ads"></div> </a>
-              {/*<img src="https://img.involve.asia/rpss/campaigns_banners/64963-IdgpwkNSfeDvd1tWCXTpJOIdkbnstrbX.jpg"/>*/}
-              {/*<img src="https://img.involve.asia/rpss/campaigns_banners/1610939924-Eor7UR1fY7PRiMAotSjQLhmtYev6of7H.jpg" />*/}
-              </td>
               </tr>
               <tr className="item-table-best">
                 <td className="version">
@@ -1334,12 +1405,6 @@ const Content = ({ search, setSearch, match }) => {
                   </a>
                 </td>
               </tr>
-               <td  colSpan="3">
-              <span style={{ fontSize: 11, fontWeight: 'bold' }}>LIST RESUMES AFTER THIS AD</span>
-              <a href="https://invol.co/cl8yjhx"><div className="ads"></div> </a>
-              {/*<img src="https://img.involve.asia/rpss/campaigns_banners/64963-IdgpwkNSfeDvd1tWCXTpJOIdkbnstrbX.jpg"/>*/}
-              {/*<img src="https://img.involve.asia/rpss/campaigns_banners/1610939924-Eor7UR1fY7PRiMAotSjQLhmtYev6of7H.jpg" />*/}
-              </td>
               <ShopeeURL />
             </tbody>
           </table>
@@ -1444,33 +1509,37 @@ const Content = ({ search, setSearch, match }) => {
         </Card.Header>
         <PricesTable psorsw={matchGames[0].platform} />
         <div style={{ fontSize: 14 }}>
+                 
+            <HasHLTB props={matchGames[0]} />
+         
+
           <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
             INFORMATION
           </Card.Header>
           <Card.Body style={{ fontSize: 14 }}>
             <Row xs={1} sm={2}>
               <Col style={{ paddingBottom: 10 }}>
-                <span style={{ color: "#9c27b0" }}>Publisher:</span>{" "}
+                <span style={{ fontWeight: "bold" }}>Publisher:</span>{" "}
                 {matchGames[0].Publisher}
               </Col>
               <Col style={{ paddingBottom: 10 }}>
-                <span style={{ color: "#9c27b0" }}>Release Date:</span>{" "}
+                <span style={{ fontWeight: "bold"  }}>Release Date:</span>{" "}
                 {DateConvert(matchGames[0].ReleaseDate)}
               </Col>
             </Row>
             <Row xs={1} sm={2}>
               <Col style={{ paddingBottom: 10 }}>
-                <span style={{ color: "#9c27b0" }}>Platform: </span>{" "}
+                <span style={{  fontWeight: "bold"  }}>Platform: </span>{" "}
                 <WhichPlatform />
               </Col>
               <Col style={{ paddingBottom: 10 }}>
-                <span style={{ color: "#9c27b0" }}>Sale Started: </span>{" "}
+                <span style={{ fontWeight: "bold"  }}>Sale Started: </span>{" "}
                 {DateConvert(matchGames[0].SaleStarted)}
               </Col>
             </Row>
             <Row xs={1} sm={2}>
               <Col style={{ paddingBottom: 10 }}>
-                <span style={{ color: "#9c27b0" }}>Genre:</span>{" "}
+                <span style={{ fontWeight: "bold"  }}>Genre:</span>{" "}
                 {matchGames[0].genre}
               </Col>
               <Col style={{ paddingBottom: 10 }}></Col>

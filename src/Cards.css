@@ -296,7 +296,7 @@ table tr:nth-child(3) td:nth-child(2) {
 table tr:nth-child(3) td:last-child {
     
     border-color: white;
-    border-bottom-width: 10px;
+    /*border-bottom-width: 10px;*/
     /*border-bottom-right-radius: 10px;*/
     /*border: none;*/
 }
@@ -441,6 +441,16 @@ display: inline-block;  /* may not need this, but I've found I do */
 background-size:  15px;
 background-position:  left center;
 background-image: url('OpenCritic_logo.svg');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.hltb-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('hltb.svg');
 background-repeat: no-repeat;
 margin-left: 5px;
 padding-left: 20px;  /* width of the image plus a little extra padding */
