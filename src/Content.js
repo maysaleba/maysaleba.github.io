@@ -1014,7 +1014,7 @@ const Content = ({ search, setSearch, match }) => {
                 </td>
                 <td></td>
                 <td className="version">
-                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                  <a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank1price)}
@@ -1131,7 +1131,7 @@ const Content = ({ search, setSearch, match }) => {
                 </td>
                 <td></td>
                 <td className="version">
-                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                  <a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank1price)}
@@ -1152,7 +1152,7 @@ const Content = ({ search, setSearch, match }) => {
                 </td>
                 <td></td>
                 <td className="version">
-                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                  <a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank2price)}
@@ -1272,7 +1272,7 @@ const Content = ({ search, setSearch, match }) => {
                 </td>
                 <td></td>
                 <td className="version">
-                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                  <a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank1price)}
@@ -1293,7 +1293,7 @@ const Content = ({ search, setSearch, match }) => {
                 </td>
                 <td></td>
                 <td className="version">
-                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                  <a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank2price)}
@@ -1314,7 +1314,7 @@ const Content = ({ search, setSearch, match }) => {
                 </td>
                 <td></td>
                 <td className="version">
-                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                  <a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank3price)}
