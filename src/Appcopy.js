@@ -12,7 +12,7 @@ import Search from './Search';
 import GiftCards from "./GiftCards";
 import FAQ from "./FAQ";
 import MainPage from "./MainPage";
-import MessengerCustomerChat from 'react-messenger-customer-chat';
+// import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 
             var today = new Date();
@@ -276,10 +276,6 @@ position: absolute;
         exact
         render={(props) => (
           <div>
-            <MessengerCustomerChat       
-    pageId="110345971129305"
-    themeColor="#9c27b0"
-  />
             <Search 
               onPlatformChange={onPlatformChange}
               onPlatformDrop={onPlatformDrop}
@@ -303,10 +299,6 @@ position: absolute;
         exact
         render={(props) => (
           <div>
-            <MessengerCustomerChat
-    pageId="110345971129305"
-    themeColor="#9c27b0"
-  />
             <Search 
               onPlatformChange={onPlatformChange}
               onPlatformDrop={onPlatformDrop}
@@ -351,10 +343,6 @@ position: absolute;
 
           {setPlatformField("Switch")}
           {setPlatformDropDown("Switch")}
-            <MessengerCustomerChat
-    pageId="110345971129305"
-    themeColor="#9c27b0"
-  />
             <Search 
               onPlatformChange={onPlatformChange}
               onPlatformDrop={onPlatformDrop}
@@ -397,10 +385,6 @@ position: absolute;
         <div>
           {setPlatformField("Playstation")}
           {setPlatformDropDown("Playstation")}
-            <MessengerCustomerChat
-    pageId="110345971129305"
-    themeColor="#9c27b0"
-  />
          <Search 
               onPlatformChange={onPlatformChange}
               onPlatformDrop={onPlatformDrop}
@@ -441,10 +425,6 @@ position: absolute;
       <Route path="/games/:games" exact component={Content} />
       <Route path="/giftcards" render={(props) => (
         <div>
-          <MessengerCustomerChat
-    pageId="110345971129305"
-    themeColor="#9c27b0"
-  />
             <GiftCards 
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
@@ -453,10 +433,6 @@ position: absolute;
         )} />
             <Route path="/faq" render={(props) => (
         <div>
-          <MessengerCustomerChat
-    pageId="110345971129305"
-    themeColor="#9c27b0"
-  />
             <FAQ 
             />
         </div>

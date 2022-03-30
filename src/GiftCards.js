@@ -28,11 +28,11 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
     left: 0;
     right: 0;
     overflow: hidden;
-    background: #6e7290;
+    background: #6767ab;
     z-index: -1;
 
     &:after {
-      --color-background--rgb: 110, 114, 144;
+      --color-background--rgb: 103, 103, 171;
       content: "";
       position: absolute;
       height: 50%;

@@ -28,11 +28,11 @@ const About = () => {
     left: 0;
     right: 0;
     overflow: hidden;
-    background: #6e7290;
+    background: #6767ab;
     z-index: -1;
 
     &:after {
-      --color-background--rgb: 110, 114, 144;
+      --color-background--rgb: 103, 103, 171;
       content: "";
       position: absolute;
       height: 50%;
@@ -106,6 +106,15 @@ const About = () => {
             <li>Search for the game you want to buy</li>
             <li>Pay using a compatible credit card or use funds on your eShop or PS Store account</li>
            </ol>
+           </Card.Body>
+           <Card.Header style={{ backgroundColor: "white" }}>
+           <strong>How do I buy from other Nintendo eShop region?</strong>
+           </Card.Header>
+           <Card.Body>
+           What the video below:
+           <ul>
+            <li><a className="giftcardlink" href="https://www.youtube.com/watch?v=iIHNfDa8-1o">How to buy from other eShop region</a></li>
+           </ul>
            </Card.Body>
            <Card.Header style={{ backgroundColor: "white" }}>
            <strong>How do I add funds to my Nintendo eShop or PS Store account?</strong>
