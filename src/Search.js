@@ -9,7 +9,7 @@ import { withRouter, Link } from "react-router-dom";
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
-  borderRadius: 40,
+  borderRadius: 20,
   backgroundColor: '#ffffff',
   border: '1px',
   // borderStyle: 'solid',
@@ -54,7 +54,7 @@ const SearchAppBar = props => {
 const {history, onPlatformDrop, onPlatformChange, onPriceRangeDrop, clearPriceRange, searchQuery, setSearchQuery, clearGenre, onDropDownChange} = props;
 return (
 	 <Box sx={{ flexGrow: 1 }}>
-	 	<Search sx={{width: {xs: '85vw', md: '50vw', lg: '30vw'}, margin: 'auto', marginBottom: '20px'}}>
+	 	<Search sx={{width: {xs: '92vw', md: '50vw', lg: '30vw'}, margin: 'auto', marginBottom: '20px'}}>
 	 	<form 
     style={{display: 'flex'}}
     onSubmit={

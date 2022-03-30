@@ -921,7 +921,7 @@ label:focus,
 
 @media screen and (max-width: 900px) {
   .custom-container {
-    width: 90% !important;
+    width: 95% !important;
     margin-left: auto;
     margin-right: auto;
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem !important;
@@ -945,7 +945,7 @@ label:focus,
 }
 
   .content-container {
-  width: 90% !important;
+  width: 95% !important;
 }
 
 .card-header-custom {
