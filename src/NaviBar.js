@@ -95,7 +95,7 @@ const NaviBar = (props) => {
   console.log(searchQuery);
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" sx={{ backgroundColor: "#55597d" }}>
+      <AppBar position="absolute" sx={{margin: 0, background: 'transparent', boxShadow: 'none'}}>
         <Toolbar
           sx={{
             justifyContent: "space-between",
@@ -126,7 +126,7 @@ const NaviBar = (props) => {
                   fontSize: 24,
                 }}
               >
-                MAYSALEBA?
+              maysaleba?
               </Typography>
             </Stack>
           </a>

@@ -91,7 +91,7 @@ return (
               // }}
 
               autoComplete="off"
-              placeholder="Search All Games…"
+              placeholder="May Sale Ba...?"
               id="s"
             />
 
