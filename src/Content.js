@@ -1478,7 +1478,7 @@ const Content = ({ search, setSearch, match }) => {
       <BackgroundContainer>
         <Background />
       </BackgroundContainer>
-      {/*<NaviBar />*/}
+      <NaviBar />
       <div className="text-center m-3 p-auto" style={{ paddingBottom: 15 }}>
         <img
           alt=""
