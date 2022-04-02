@@ -303,6 +303,11 @@ export default function Main() {
           name="description"
           content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
         />
+        <meta property="og:image" content="https://raw.githubusercontent.com/maysaleba/maysaleba.github.io/main/public/fbthumbnail.png?v=1" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://maysaleba.com/" />
+      <meta property="og:title" content="May Sale Ba?" />
+      <meta property="og:description" content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!" />
       </Helmet>
       <Route
       
@@ -530,7 +535,7 @@ export default function Main() {
           </div>
         )}
       />
-      {/*<Route component={Notfound} />*/}
+      {/*<Route path="*" component={Notfound} />*/}
     </Router>
   );
 }
