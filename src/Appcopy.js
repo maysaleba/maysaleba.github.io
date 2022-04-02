@@ -530,7 +530,7 @@ export default function Main() {
           </div>
         )}
       />
-      <Route path="*" component={Notfound} />
+      {/*<Route component={Notfound} />*/}
     </Router>
   );
 }
