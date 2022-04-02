@@ -304,11 +304,10 @@ export default function Main() {
           content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
         />
       </Helmet>
-      <Switch>
       <Route
-      exact
+      
         path="/"
-        
+        exact
         render={(props) => (
           <div>
             <Search
@@ -331,9 +330,9 @@ export default function Main() {
       />
 
       <Route
-      exact
+      
         path="/allgames"
-        
+        exact
         render={(props) => (
           <div>
             <Search
@@ -376,7 +375,7 @@ export default function Main() {
       />
 
       <Route
-      exact
+    
         path="/switch"
         
         render={(props) => (
@@ -434,7 +433,7 @@ export default function Main() {
         )}
       />
       <Route
-      exact
+      
         path="/playstation"
         
         render={(props) => (
@@ -491,9 +490,9 @@ export default function Main() {
           </div>
         )}
       />
-      <Route exact path="/games/:games"  component={Content} />
+      <Route path="/games/:games" exact component={Content} />
       <Route
-      exact
+      
         path="/giftcards"
         
         render={(props) => (
@@ -514,7 +513,7 @@ export default function Main() {
         )}
       />
       <Route
-      exact
+      
         path="/faq"
         
         render={(props) => (
@@ -531,8 +530,7 @@ export default function Main() {
           </div>
         )}
       />
-      <Route component={Notfound} />
-      </Switch>
+      {/*<Route component={Notfound} />*/}
     </Router>
   );
 }
