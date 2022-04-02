@@ -531,7 +531,7 @@ export default function Main() {
           </div>
         )}
       />
-      <Route component={Notfound} />
+      <Route path="*" component={Notfound} />
     </Switch>
     </Router>
   );
