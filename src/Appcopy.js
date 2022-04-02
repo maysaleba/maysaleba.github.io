@@ -304,6 +304,7 @@ export default function Main() {
           content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
         />
       </Helmet>
+      <Switch>
       <Route
       
         path="/"
@@ -530,7 +531,8 @@ export default function Main() {
           </div>
         )}
       />
-      {/*<Route component={Notfound} />*/}
+      <Route component={Notfound} />
+    </Switch>
     </Router>
   );
 }
