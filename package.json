@@ -40,7 +40,6 @@
     "predeploy": "npm run build && npm run sitemap",
     "deploy": "gh-pages -d build",
     "sitemap": "babel-node ./src/sitemap-generator.js"
-
   },
   "eslintConfig": {
     "extends": [
