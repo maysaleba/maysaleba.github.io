@@ -7,6 +7,7 @@ import { Paper, Link, Container } from "@mui/material";
 import styled from "styled-components";
 import download from "./download.gif";
 import {Helmet} from "react-helmet";
+import  { Redirect } from 'react-router-dom'
 
 const YoutubeEmbed = ({ embedId }) => (
   <div className="video-responsive">
@@ -84,8 +85,14 @@ const Content = ({ search, setSearch, match }) => {
   var zarExchange = 1 / fxcp.rates.ZAR;
 
   const matchGames = games.filter((game) => {
-    return game.Slug === match.params.games;
+   
+      return game.Slug === match.params.games;
+
+    
+    
   });
+
+console.log("HELLO"+matchGames)
 
   function PesoPrice(props) {
     return "₱" + Math.round(props.props * usdExchange);
@@ -1458,7 +1465,16 @@ const Content = ({ search, setSearch, match }) => {
     }
   `;
 
-  const Background = styled.div`
+  
+
+  // console.log(matchGames[0].description.split('\n'));
+
+
+
+function HasMatch(){
+  if (matchGames[0] !== undefined)
+  {
+    const Background = styled.div`
     --blur-radius: 20px;
     background-image: url(${matchGames[0].Image});
     position: absolute;
@@ -1472,10 +1488,8 @@ const Content = ({ search, setSearch, match }) => {
     mix-blend-mode: overlay;
     filter: blur(var(--blur-radius));
   `;
-
-  // console.log(matchGames[0].description.split('\n'));
-  return (
-    <div>
+    return (
+           <div>
     <Helmet>
          <meta charset="utf-8" />
    <title>{matchGames[0].Title} on {matchGames[0].platform} - May Sale Ba?</title>
@@ -1564,6 +1578,17 @@ const Content = ({ search, setSearch, match }) => {
         </div>
       </Paper>
     </div>
+
+      )
+  } else {
+    return (
+      <Redirect to="/"/>
+      )
+  }
+}
+
+  return (
+  <HasMatch/>
   );
 };
 
