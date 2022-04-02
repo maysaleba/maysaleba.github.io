@@ -1423,13 +1423,13 @@ console.log("HELLO"+matchGames)
 
   const BackgroundContainer = styled.div`
     -blur-radius: 20px;
-    position: fixed;
-    z-index: 0;
+    position: absolute;
     width: 100%;
-    height: 60%;
+    height: 100%;
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     overflow: hidden;
     background: #6e7290;
     z-index: -1;
