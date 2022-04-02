@@ -6,6 +6,7 @@ import NaviBar from "./NaviBar";
 import { Paper, Link, Container } from "@mui/material";
 import styled from "styled-components";
 import download from "./download.gif";
+import {Helmet} from "react-helmet";
 
 const YoutubeEmbed = ({ embedId }) => (
   <div className="video-responsive">
@@ -1475,6 +1476,11 @@ const Content = ({ search, setSearch, match }) => {
   // console.log(matchGames[0].description.split('\n'));
   return (
     <div>
+    <Helmet>
+         <meta charset="utf-8" />
+   <title>{matchGames[0].Title} on {matchGames[0].platform} - May Sale Ba?</title>
+   <meta name="description" content={'Compare and find the cheapest price to buy ' +matchGames[0].Title+ ' for the ' +matchGames[0].platform+' in Philippine Peso'} />
+        </Helmet>
       <BackgroundContainer>
         <Background />
       </BackgroundContainer>

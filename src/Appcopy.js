@@ -12,6 +12,7 @@ import Search from './Search';
 import GiftCards from "./GiftCards";
 import FAQ from "./FAQ";
 import MainPage from "./MainPage";
+import {Helmet} from "react-helmet";
 // import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 
@@ -271,6 +272,11 @@ position: absolute;
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
              />
+                     <Helmet>
+         <meta charset="utf-8" />
+  
+   <meta name="description" content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!" />
+        </Helmet>
       <Route
         path="/"
         exact
@@ -336,6 +342,8 @@ position: absolute;
           </div>
         )}
       />
+
+
        <Route
         path="/switch"
         render={(props) => (
@@ -377,6 +385,11 @@ position: absolute;
               pageData={pageData}
               maxPage={maxPage}
             />
+                    <Helmet>
+         <meta charset="utf-8" />
+   <title>May Sale Ba? - Nintendo Switch</title>
+   <meta name="description" content={'Get to know about ' + reviewssw.length + ' Nintendo Switch deals in Philippine Peso!'} />
+        </Helmet>
           </div>
         )}
       />
@@ -419,7 +432,11 @@ position: absolute;
               pageData={pageData}
               maxPage={maxPage}
             />
-        
+        <Helmet>
+         <meta charset="utf-8" />
+   <title>May Sale Ba? - Sony Playstation</title>
+   <meta name="description" content={'Get to know about ' + reviewsps.length + ' Sony Playstation deals in Philippine Peso!'} />
+        </Helmet>
         </div>
         )} />
       <Route path="/games/:games" exact component={Content} />
@@ -429,12 +446,20 @@ position: absolute;
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
             />
+            <Helmet>
+         <meta charset="utf-8" />
+  
+        </Helmet>
         </div>
         )} />
             <Route path="/faq" render={(props) => (
         <div>
             <FAQ 
             />
+            <Helmet>
+         <meta charset="utf-8" />
+  
+        </Helmet>
         </div>
         )} />     
     </Router>
