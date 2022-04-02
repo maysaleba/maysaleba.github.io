@@ -1496,7 +1496,7 @@ function HasMatch(){
    <meta property="og:image" content={matchGames[0].Image} />
    <meta property="og:type" content="website" />
    <meta property="og:url" content={'https://maysaleba.com/games/'+matchGames[0].Slug} />
-   <meta property="og:title" content={matchGames[0].Title + 'on' + matchGames[0].platform + '- May Sale Ba?'} />
+   <meta property="og:title" content={matchGames[0].Title + ' on ' + matchGames[0].platform + '- May Sale Ba?'} />
    <meta property="og:description" content={'Compare and find the cheapest price to buy ' +matchGames[0].Title+ ' for the ' +matchGames[0].platform+' in Philippine Peso'}  />
    <meta name="description" content={'Compare and find the cheapest price to buy ' +matchGames[0].Title+ ' for the ' +matchGames[0].platform+' in Philippine Peso'} />
         </Helmet>
