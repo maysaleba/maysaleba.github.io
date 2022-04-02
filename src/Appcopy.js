@@ -271,7 +271,7 @@ export default function Main() {
     bottom: 0;
     margin: calc(var(--blur-radius) * -1) calc(var(--blur-radius) * -1);
     background-size: cover;
-    background-position: 100%;
+    background-position: 50%;
     mix-blend-mode: overlay;
     filter: blur(var(--blur-radius));
   `;
