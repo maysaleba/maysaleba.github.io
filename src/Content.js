@@ -1425,7 +1425,7 @@ console.log("HELLO"+matchGames)
     -blur-radius: 20px;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 60vh;
     top: 0;
     left: 0;
     right: 0;
