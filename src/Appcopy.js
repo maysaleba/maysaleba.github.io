@@ -387,7 +387,7 @@ position: absolute;
             />
                     <Helmet>
          <meta charset="utf-8" />
-   <title>May Sale Ba? - Nintendo Switch</title>
+   <title>Nintendo Switch - May Sale Ba?</title>
    <meta name="description" content={'Get to know about ' + reviewssw.length + ' Nintendo Switch deals in Philippine Peso!'} />
         </Helmet>
           </div>
@@ -434,7 +434,7 @@ position: absolute;
             />
         <Helmet>
          <meta charset="utf-8" />
-   <title>May Sale Ba? - Sony Playstation</title>
+   <title>Sony Playstation - May Sale Ba?</title>
    <meta name="description" content={'Get to know about ' + reviewsps.length + ' Sony Playstation deals in Philippine Peso!'} />
         </Helmet>
         </div>
@@ -448,7 +448,8 @@ position: absolute;
             />
             <Helmet>
          <meta charset="utf-8" />
-  
+   <title>Gift Cards - May Sale Ba?</title>
+   <meta name="description" content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!" />
         </Helmet>
         </div>
         )} />
@@ -458,7 +459,8 @@ position: absolute;
             />
             <Helmet>
          <meta charset="utf-8" />
-  
+   <title>FAQ - May Sale Ba?</title>
+   <meta name="description" content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!" />
         </Helmet>
         </div>
         )} />     
