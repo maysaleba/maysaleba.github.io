@@ -1483,8 +1483,8 @@ function HasMatch(){
     right: 0;
     bottom: 0;
     margin: calc(var(--blur-radius) * -1) calc(var(--blur-radius) * -1);
-    background-size: 100%;
-    background-position: 50%;
+    background-size: cover;
+    background-position: 100%;
     mix-blend-mode: overlay;
     filter: blur(var(--blur-radius));
   `;
