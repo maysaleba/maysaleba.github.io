@@ -18,6 +18,7 @@ import GiftCards from "./GiftCards";
 import FAQ from "./FAQ";
 import MainPage from "./MainPage";
 import { Helmet } from "react-helmet";
+import  { Redirect } from 'react-router-dom'
 // import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 var today = new Date();
@@ -277,23 +278,7 @@ export default function Main() {
 
   function Notfound() {
     return (
-      <div>
-        <Search
-          onPlatformChange={onPlatformChange}
-          onPlatformDrop={onPlatformDrop}
-          clearPriceRange={clearPriceRange}
-          onPriceRangeDrop={onPriceRangeDrop}
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-          clearGenre={clearGenre}
-          onDropDownChange={onDropDownChange}
-        />
-        <MainPage
-          filteredReviews={filteredReviews}
-          pageData={pageData}
-          reviewsps={reviewsps}
-        />
-      </div>
+      <Redirect to="/"/>
     );
   }
 
