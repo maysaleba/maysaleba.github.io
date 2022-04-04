@@ -296,14 +296,6 @@ export default function Main() {
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
       />
-      <Helmet>
-        <meta charset="utf-8" />
-        <title>May Sale Ba? - Get the latest prices on Nintendo Switch and Sony Playstation deals in Philippine Peso! helmet</title>
-        <meta
-          name="description"
-          content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
-        />
-      </Helmet>
       <Route
       
         path="/"
@@ -325,6 +317,15 @@ export default function Main() {
               pageData={pageData}
               reviewsps={reviewsps}
             />
+                  <Helmet>
+        <meta charset="utf-8" />
+        <title>May Sale Ba? - Get the latest prices on Nintendo Switch and Sony Playstation deals in Philippine Peso! MainPage</title>
+        <meta
+          name="description"
+          content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
+        />
+      </Helmet>
+
           </div>
         )}
       />
