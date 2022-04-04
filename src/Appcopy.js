@@ -296,14 +296,14 @@ export default function Main() {
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
       />
-      <Helmet>
+{/*      <Helmet>
         <meta charset="utf-8" />
         <title>May Sale Ba? - Get the latest prices on Nintendo Switch and Sony Playstation deals in Philippine Peso!</title>
         <meta
           name="description"
           content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
         />
-      </Helmet>
+      </Helmet>*/}
       <Route
       
         path="/"
