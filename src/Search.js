@@ -68,6 +68,7 @@ return (
                 onPriceRangeDrop("All Price Range");
                 onDropDownChange("All Genres");
                 setSearchQuery(e.target.s.value);
+                e.preventDefault();
             }}
 
 
