@@ -54,7 +54,7 @@ const NaviBar = (props) => {
       icon: <HomeIcon />,
       onClick: () => {
         setOpen(false);
-        window.location.href = "http://maysaleba.com/#/";
+        window.location.href = "http://maysaleba.com/";
       },
     },
     {
@@ -62,7 +62,7 @@ const NaviBar = (props) => {
       icon: <Icon icon="mdi:nintendo-switch" width="24" />,
       onClick: () => {
         setOpen(false);
-        window.location.href = "http://maysaleba.com/#/switch";
+        window.location.href = "http://maysaleba.com/switch";
       },
     },
     {
@@ -70,7 +70,7 @@ const NaviBar = (props) => {
       icon: <Icon icon="bi:playstation" width="24" />,
       onClick: () => {
         setOpen(false);
-        window.location.href = "http://maysaleba.com/#/playstation";
+        window.location.href = "http://maysaleba.com/playstation";
       },
     },
     {
