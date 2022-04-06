@@ -60,7 +60,7 @@ return (
     onSubmit={
               (e) => {
               
-                // history.push('/allgames')
+                history.push('/allgames')
                 clearGenre();
                 clearPriceRange();
                 onPlatformChange("");
