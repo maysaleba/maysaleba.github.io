@@ -5,10 +5,10 @@ import reviewspsx from "./csvjsonus.json";
 import CardGroup from "./CardGroup2";
 import "./App.css";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Route,
   useLocation,
-  Switch,
+  Switch
 } from "react-router-dom";
 import Content from "./Content";
 import NaviBar from "./NaviBar";
@@ -284,10 +284,12 @@ export default function Main() {
 
   return (
     <Router>
+
       <ScrollToTop />
       <BackgroundContainer>
         <Background />
       </BackgroundContainer>
+
       <NaviBar
         onPlatformChange={onPlatformChange}
         onPlatformDrop={onPlatformDrop}
@@ -296,6 +298,7 @@ export default function Main() {
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
       />
+        <Switch>
       <Route
       
         path="/"
@@ -531,6 +534,7 @@ export default function Main() {
           </div>
         )}
       />
+      </Switch>
       {/*<Route path="*" component={Notfound} />*/}
     </Router>
   );
