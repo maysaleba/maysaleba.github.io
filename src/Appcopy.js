@@ -334,7 +334,7 @@ export default function Main() {
 
       <Route
       
-        path="/allgames"
+        path="/?/allgames"
         exact
         render={(props) => (
           <div>
