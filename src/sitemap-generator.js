@@ -39,7 +39,7 @@ try {
     return (
       new Sitemap(router)
           .applyParams(paramsConfig)
-          .build("https://www.maysaleba.com/?/")
+          .build("https://www.maysaleba.com/?")
           .save("./public/sitemap.xml")
     );
 }
