@@ -317,7 +317,14 @@ export default function Main() {
               pageData={pageData}
               reviewsps={reviewsps}
             />
-
+                  <Helmet>
+        <meta charset="utf-8" />
+        <title>May Sale Ba? - Get the latest prices on Nintendo Switch and Sony Playstation deals in Philippine Peso!</title>
+        <meta
+          name="description"
+          content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
+        />
+      </Helmet>
 
           </div>
         )}
@@ -502,6 +509,11 @@ export default function Main() {
                 name="description"
                 content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
               />
+               <meta property="og:image" content="https://images.weserv.nl/?url=https://fs-prod-cdn.nintendo-europe.com/media/images/11_square_images/games_18/nintendo_switch_download_software/SQ_NSwitchDS_Metamorphosis_image500w.jpg&w=240" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://maysaleba.com/#/games/metamorphosis-switch" />
+      <meta property="og:title" content="Metamorphosis" />
+      <meta property="og:description" content="Meta description" />
             </Helmet>
           </div>
         )}
