@@ -5,7 +5,7 @@ import reviewspsx from "./csvjsonus.json";
 import CardGroup from "./CardGroup2";
 import "./App.css";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Route,
   useLocation,
   Switch
@@ -283,7 +283,7 @@ export default function Main() {
   }
 
   return (
-    <Router>
+    <Router basename={`/${process.env.PUBLIC_URL}`}>
 
       <ScrollToTop />
       <BackgroundContainer>
