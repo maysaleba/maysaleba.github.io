@@ -5,7 +5,7 @@ import reviewspsx from "./csvjsonus.json";
 import CardGroup from "./CardGroup2";
 import "./App.css";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   useLocation,
   Switch
