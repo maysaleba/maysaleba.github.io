@@ -141,7 +141,7 @@ const NaviBar = (props) => {
               fontSize: 16,
             }}
           >
-            <a className="logocolortext" href="https://maysaleba.com/#/switch">
+            <a className="logocolortext" href="https://maysaleba.com/switch">
               <Box
                 sx={{
                   marginRight: 2,
@@ -153,7 +153,7 @@ const NaviBar = (props) => {
                 Switch
               </Box>
             </a>
-            <a className="logocolortext" href="https://maysaleba.com/#/playstation">
+            <a className="logocolortext" href="https://maysaleba.com/playstation">
             <Box
               sx={{
                 marginRight: 2,
@@ -165,7 +165,7 @@ const NaviBar = (props) => {
               Playstation
             </Box>
             </a>
-            <a className="logocolortext" href="https://maysaleba.com/#/giftcards">
+            <a className="logocolortext" href="https://maysaleba.com/giftcards">
             
               <Typography
                 noWrap
@@ -180,7 +180,7 @@ const NaviBar = (props) => {
               </Typography>
            
             </a>
-            <a className="logocolortext" href="https://maysaleba.com/#/faq">
+            <a className="logocolortext" href="https://maysaleba.com/faq">
             <Box
               sx={{
                 marginRight: 2,
