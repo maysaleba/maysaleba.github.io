@@ -1538,11 +1538,13 @@ function HasMatch(){
                  
             <HasHLTB props={matchGames[0]} />
                    <AdSense.Google
+                   key={Math.random()}
   client='ca-pub-4543556906953539'
   slot='3566322911'
-  style={{ display: 'block' }}
-  format='fluid'
-/>
+              style={{ display: 'block' }}
+              format="rectangle"
+              responsive="true"
+   />
           <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
             INFORMATION
           </Card.Header>
