@@ -93,7 +93,7 @@ const Content = ({ search, setSearch, match }) => {
     
   });
 
-console.log("HELLO"+matchGames)
+// console.log("HELLO"+matchGames)
 
   function PesoPrice(props) {
     return "₱" + Math.round(props.props * usdExchange);
@@ -563,7 +563,7 @@ console.log("HELLO"+matchGames)
   }
 
   function PricesTable(props) {
-    console.log(props);
+    // console.log(props);
     if (props.psorsw === "Switch") {
       var pricesobj = {
         Canada: matchGames[0].CanadaPrice * cadExchange,
@@ -584,7 +584,7 @@ console.log("HELLO"+matchGames)
         if (v === 0) delete pricesobj[k];
       });
 
-      console.log(pricesobj);
+      // console.log(pricesobj);
       const entries = Object.entries(pricesobj).sort(([, a], [, b]) => a - b);
 
       function USRank() {
