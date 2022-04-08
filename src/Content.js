@@ -8,7 +8,7 @@ import styled from "styled-components";
 import download from "./download.gif";
 import {Helmet} from "react-helmet";
 import  { Redirect } from 'react-router-dom'
-import AdSense from 'react-adsense';
+import GoogleAds from "./AdSense"
 
 const YoutubeEmbed = ({ embedId }) => (
   <div className="video-responsive">
@@ -1539,14 +1539,7 @@ function HasMatch(){
             <HasHLTB props={matchGames[0]} />
             
 <Card.Body>
-<AdSense.Google
-  client='ca-pub-4543556906953539'
-  slot='1687469656'
-  style={{ display: 'block' }}
-  format='auto'
-  responsive='true'
-  layoutKey='-gw-1+2a-9x+5c'
-/>
+<GoogleAds/>
 
 </Card.Body>
           <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
