@@ -1541,9 +1541,7 @@ function HasMatch(){
   client='ca-pub-4543556906953539'
   slot='3566322911'
   style={{ display: 'block' }}
-  format='auto'
-  responsive='true'
-  layoutKey='-gw-1+2a-9x+5c'
+  format='fluid'
 />
           <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
             INFORMATION
