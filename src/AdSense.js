@@ -7,7 +7,7 @@ export default class Ad extends React.Component {
 
 render () {
     return (
-      <div className='ad' key={Math.random()}>
+      <div className='ad'>
         <ins className='adsbygoogle'
           style={{ display: 'block' }}
           data-ad-client='ca-pub-4543556906953539'
