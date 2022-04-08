@@ -3,7 +3,7 @@
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "favicon.svg",
+      "src": "https://maysaleba.com/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     }
