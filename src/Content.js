@@ -1537,7 +1537,8 @@ function HasMatch(){
         <div style={{ fontSize: 14 }}>
                  
             <HasHLTB props={matchGames[0]} />
-
+            
+<Card.Body>
 <AdSense.Google
  key={Math.random()}
   client='ca-pub-4543556906953539'
@@ -1547,6 +1548,7 @@ function HasMatch(){
   responsive='true'
   layoutKey='-gw-1+2a-9x+5c'
 />
+</Card.Body>
           <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
             INFORMATION
           </Card.Header>
