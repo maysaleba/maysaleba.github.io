@@ -1541,7 +1541,7 @@ function HasMatch(){
 <AdSense.Google
  key={Math.random()}
   client='ca-pub-4543556906953539'
-  slot='1687469656'
+  slot='3566322911'
   style={{ display: 'block' }}
   format='auto'
   responsive='true'
