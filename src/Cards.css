@@ -10,6 +10,7 @@
     margin-bottom: 30px;
   }
 
+
   body {
   padding-top: 90px;
   background-color:  #6767ab !important;
@@ -974,7 +975,15 @@ label:focus,
     background-position:  0px -340px;
   }
 */
+
+
+
+
   body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+-webkit-overflow-scrolling: touch;
     padding-top: 80px !important;
       background-color:  #6767ab !important;
 
