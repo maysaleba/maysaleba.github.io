@@ -44,10 +44,3 @@
   padding-left: var(--bs-gutter-x,.75rem);
   margin-right: auto;
 }
-
-html,
-body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
