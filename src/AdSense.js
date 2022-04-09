@@ -27,12 +27,10 @@ const AdSense = () => {
   }, [])
   return (
     <ins
-      className="adsbygoogle"
+      className="adsbygoogle example_responsive_1"
       style={{ display: "block"}}
       data-ad-client="ca-pub-4543556906953539"
       data-ad-slot="1687469656"
-      data-ad-format="auto"
-     data-full-width-responsive="false"
     ></ins>
   )
 }
