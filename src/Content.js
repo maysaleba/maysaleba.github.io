@@ -1538,10 +1538,10 @@ function HasMatch(){
                  
             <HasHLTB props={matchGames[0]} />
             
-
+<Card.Body style={{padding: 0, paddingBottom: 16}}>
 <GoogleAds/>
 
-
+</Card.Body>
           <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
             INFORMATION
           </Card.Header>
