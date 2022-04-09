@@ -46,8 +46,8 @@ const Content = ({ search, setSearch, match }) => {
   today = yyyy + "-" + mm + "-" + dd;
 
 
-  var theURL = "https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
- // var theURL = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json'
+  // var theURL = "https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
+ var theURL = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json'
 
   function httpGet(theUrl) {
     var xmlHttp = new XMLHttpRequest();
@@ -59,31 +59,31 @@ const Content = ({ search, setSearch, match }) => {
   let fxc = httpGet();
   const fxcp = JSON.parse(fxc);
 
-            // var usdExchange = 1 / fxcp.php.usd;
-            // var arsExchange = 1 / fxcp.php.ars;
-            // var audExchange = 1 / fxcp.php.aud;
-            // var brlExchange = 1 / fxcp.php.brl;
-            // var cadExchange = 1 / fxcp.php.cad;
-            // var clpExchange = 1 / fxcp.php.clp;
-            // var copExchange = 1 / fxcp.php.cop;
-            // var mxnExchange = 1 / fxcp.php.mxn;
-            // var penExchange = 1 / fxcp.php.pen;
-            // var plnExchange = 1 / fxcp.php.pln;
-            // var rubExchange = 1 / fxcp.php.rub;
-            // var zarExchange = 1 / fxcp.php.zar;
+            var usdExchange = 1 / fxcp.php.usd;
+            var arsExchange = 1 / fxcp.php.ars;
+            var audExchange = 1 / fxcp.php.aud;
+            var brlExchange = 1 / fxcp.php.brl;
+            var cadExchange = 1 / fxcp.php.cad;
+            var clpExchange = 1 / fxcp.php.clp;
+            var copExchange = 1 / fxcp.php.cop;
+            var mxnExchange = 1 / fxcp.php.mxn;
+            var penExchange = 1 / fxcp.php.pen;
+            var plnExchange = 1 / fxcp.php.pln;
+            var rubExchange = 1 / fxcp.php.rub;
+            var zarExchange = 1 / fxcp.php.zar;
 
-  var usdExchange = 1 / fxcp.rates.USD;
-  var arsExchange = 1 / fxcp.rates.ARS;
-  var audExchange = 1 / fxcp.rates.AUD;
-  var brlExchange = 1 / fxcp.rates.BRL;
-  var cadExchange = 1 / fxcp.rates.CAD;
-  var clpExchange = 1 / fxcp.rates.CLP;
-  var copExchange = 1 / fxcp.rates.COP;
-  var mxnExchange = 1 / fxcp.rates.MXN;
-  var penExchange = 1 / fxcp.rates.PEN;
-  var plnExchange = 1 / fxcp.rates.PLN;
-  var rubExchange = 1 / fxcp.rates.RUB;
-  var zarExchange = 1 / fxcp.rates.ZAR;
+  // var usdExchange = 1 / fxcp.rates.USD;
+  // var arsExchange = 1 / fxcp.rates.ARS;
+  // var audExchange = 1 / fxcp.rates.AUD;
+  // var brlExchange = 1 / fxcp.rates.BRL;
+  // var cadExchange = 1 / fxcp.rates.CAD;
+  // var clpExchange = 1 / fxcp.rates.CLP;
+  // var copExchange = 1 / fxcp.rates.COP;
+  // var mxnExchange = 1 / fxcp.rates.MXN;
+  // var penExchange = 1 / fxcp.rates.PEN;
+  // var plnExchange = 1 / fxcp.rates.PLN;
+  // var rubExchange = 1 / fxcp.rates.RUB;
+  // var zarExchange = 1 / fxcp.rates.ZAR;
 
   const matchGames = games.filter((game) => {
    
