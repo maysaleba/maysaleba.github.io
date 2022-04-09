@@ -48,4 +48,4 @@
 
 .example_responsive_1 { width: 300px; height: 250px; }
 @media(min-width: 500px) { .example_responsive_1 { width: 468px; height: 250px; } }
-@media(min-width: 800px) { .example_responsive_1 { width: 696px; height: 280px; } }
+@media(min-width: 800px) { .example_responsive_1 { width: 728px; height: 90px; } }
