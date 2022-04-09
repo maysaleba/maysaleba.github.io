@@ -28,9 +28,11 @@ const AdSense = () => {
   return (
     <ins
       className="adsbygoogle"
-      style={{ display: "inline-block", width: "300px", height: "250px" }}
+      style={{ display: "block"}}
       data-ad-client="ca-pub-4543556906953539"
       data-ad-slot="1687469656"
+      data-ad-format="auto"
+     data-full-width-responsive="false"
     ></ins>
   )
 }
