@@ -3,7 +3,7 @@ import games1 from "./csvjson.json";
 import gamesps from "./csvjsonus.json";
 import { Card, Row, Col } from "react-bootstrap";
 import NaviBar from "./NaviBar";
-import { Paper, Link, Container } from "@mui/material";
+import { Box, Paper, Link, Container } from "@mui/material";
 import styled from "styled-components";
 import download from "./download.gif";
 import {Helmet} from "react-helmet";
@@ -1538,10 +1538,15 @@ function HasMatch(){
                  
             <HasHLTB props={matchGames[0]} />
             
-<Card.Body style={{padding: 0, paddingBottom: 16}}>
+<Box 
+  display="flex"
+  justifyContent="center"
+  alignItems="center"
+  style={{paddingBottom: 16}}
+>
 <GoogleAds/>
+</Box>
 
-</Card.Body>
           <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
             INFORMATION
           </Card.Header>
