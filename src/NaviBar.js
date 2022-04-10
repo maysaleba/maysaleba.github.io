@@ -10,16 +10,13 @@ import {
   Toolbar,
   IconButton,
   Typography,
-  Stack,
-  Container,
-  toggleDrawer,
+  Stack
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import logo from "./logo.svg";
 import Drawer from "@mui/material/Drawer";
 import { makeStyles } from "@mui/styles";
-import { withRouter, Link } from "react-router-dom";
-import GamesIcon from "@mui/icons-material/Games";
+import { withRouter } from "react-router-dom";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 import InfoIcon from "@mui/icons-material/Info";
 import CloseIcon from "@mui/icons-material/Close";
@@ -39,12 +36,7 @@ const useStyles = makeStyles({
 
 const NaviBar = (props) => {
   const {
-    onPlatformChange,
-    onPlatformDrop,
-    clearSearchChange,
     searchQuery,
-    setSearchQuery,
-    clearFilter,
     history,
   } = props;
   const classes = useStyles();

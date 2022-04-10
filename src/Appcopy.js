@@ -8,7 +8,6 @@ import {
   BrowserRouter as Router,
   Route,
   useLocation,
-  Switch
 } from "react-router-dom";
 import Content from "./Content";
 import NaviBar from "./NaviBar";
@@ -18,7 +17,6 @@ import GiftCards from "./GiftCards";
 import FAQ from "./FAQ";
 import MainPage from "./MainPage";
 import { Helmet } from "react-helmet";
-import  { Redirect } from 'react-router-dom'
 // import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 var today = new Date();
@@ -276,12 +274,6 @@ export default function Main() {
     filter: blur(var(--blur-radius));
   `;
 
-  function Notfound() {
-    return (
-      <Redirect to="/"/>
-    );
-  }
-
   return (
     <Router>
 
@@ -533,8 +525,6 @@ export default function Main() {
           </div>
         )}
       />
-
-      {/*<Route path="*" component={Notfound} />*/}
     </Router>
   );
 }

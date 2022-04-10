@@ -2,12 +2,10 @@ import React from "react";
 import { Badge, Card, Col } from "react-bootstrap";
 import "./Cards.css";
 import { Link } from "react-router-dom";
-import Badge2 from '@mui/material/Badge';
-import { styled } from '@mui/material/styles';
-import { LazyLoadImage, trackWindowScroll  } from 'react-lazy-load-image-component';
+import { LazyLoadImage  } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import noimage from './noimage.jpg';
-import download from "./download.gif";
+// import download from "./download.gif";
             var today = new Date();
             var dd = String(today.getDate()).padStart(2, '0');
             var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -262,7 +260,7 @@ PeruPrice, ArgentinaPrice, AustraliaPrice, ColombiaPrice, SouthafricaPrice, Braz
 
 
 
-                  if (PlusPrice == 0) {
+                  if (PlusPrice === 0) {
                       return (
                          <span className="psplusbadge" style={{fontWeight: 'bold'}}>
                   FREE
@@ -294,18 +292,6 @@ else {return (
             }
 
 
-            const StyledBadge = styled(Badge2)(({ theme }) => ({
-  '& .MuiBadge-badge': {
-    // size:50,
-    height: 30,
-    width: 60,
-    bottom: 10,
-    right: 25,
-    // backgroundColor: "red"
-    // border: `2px solid ${theme.palette.background.paper}`,
-    padding: '0 4px',
-  },
-}));
 
 
   return (

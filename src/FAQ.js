@@ -1,21 +1,12 @@
 import React from "react";
-import games1 from "./csvjson.json";
-import games2 from "./csvjsonus.json";
-import { Card, Row, Col } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import NaviBar from "./NaviBar";
 import {
-  List,
-  ListItem,
-  ListItemText,
-  Paper,
-  Link,
-  Container,
+  Paper
 } from "@mui/material";
 import styled from "styled-components";
-import download from "./download.gif";
 import InfoIcon from '@mui/icons-material/Info';
 
-let games = games1.concat(games2);
 
 const About = () => {
   const BackgroundContainer = styled.div`

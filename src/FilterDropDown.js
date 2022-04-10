@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Dropdown, Row, Col } from "react-bootstrap";
-import { withRouter, Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 const FilterDropDown = props => {
   const  {
@@ -15,7 +15,6 @@ const FilterDropDown = props => {
  onLatestDrop, 
  onLatestChange, 
  latestDropDown, 
- clearFilter, 
  clearSearchChange, 
  onFilterChange, 
  genreDropDown, 

@@ -2,8 +2,7 @@ import React from "react";
 import games1 from "./csvjson.json";
 import gamesps from "./csvjsonus.json";
 import { Card, Row, Col } from "react-bootstrap";
-import NaviBar from "./NaviBar";
-import { Paper, Link, Container } from "@mui/material";
+import { Paper, Link } from "@mui/material";
 import styled from "styled-components";
 import download from "./download.gif";
 import {Helmet} from "react-helmet";
@@ -132,8 +131,8 @@ const Content = ({ search, setSearch, match }) => {
   }
 
   function DateConvert(s) {
-    var s = s.split(/\D/),
-      dt = new Date(s[0], s[1] - 1, s[2]);
+    var sx = s.split(/\D/),
+      dt = new Date(sx[0], sx[1] - 1, sx[2]);
     return dt.toLocaleString("en-CA", {
       month: "short",
       day: "numeric",
@@ -146,7 +145,7 @@ const Content = ({ search, setSearch, match }) => {
       return null;
     }
     if (matchGames[0].platform === "Playstation") {
-      if (matchGames[0].PlusPrice == 0) {
+      if (matchGames[0].PlusPrice === 0) {
         return (
           <>
             <span className="psplusbadge">FREE</span>
@@ -458,7 +457,7 @@ const Content = ({ search, setSearch, match }) => {
     if (props.props.platform !== "Switch") {
          return null;
      
-    } else if (props.props.MainStory == 0 && props.props.MainExtra == 0 && props.props.Completionist == 0){
+    } else if (props.props.MainStory === 0 && props.props.MainExtra === 0 && props.props.Completionist === 0){
          return null;
       }
 
@@ -501,7 +500,7 @@ const Content = ({ search, setSearch, match }) => {
   }
 
       function MainStory(){
-    if (matchGames[0].MainStory == 0 || matchGames[0].MainStory == null) {
+    if (matchGames[0].MainStory === 0 || matchGames[0].MainStory === null) {
       return null;
     } else {
       return (
@@ -514,7 +513,7 @@ const Content = ({ search, setSearch, match }) => {
   }
 
       function MainExtra(){
-    if (matchGames[0].MainExtra == 0 || matchGames[0].MainExtra == null) {
+    if (matchGames[0].MainExtra === 0 || matchGames[0].MainExtra === null) {
       return null;
     } else {
       return (
@@ -528,7 +527,7 @@ const Content = ({ search, setSearch, match }) => {
 
 
       function Completionist(){
-    if (matchGames[0].Completionist == 0 || matchGames[0].Completionist == null) {
+    if (matchGames[0].Completionist === 0 || matchGames[0].Completionist === null) {
       return null;
     } else {
       return (

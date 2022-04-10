@@ -2,13 +2,8 @@ import React from "react";
 import Cards from "./Cards";
 import { Row } from "react-bootstrap";
 import "./Cards.css";
-import FilterDropDown from "./FilterDropDown";
-import Pagination from "@mui/material/Pagination";
 import Paper from "@mui/material/Paper";
 import reviewssw from "./csvjson.json";
-import reviewspsx from "./csvjsonus.json";
-import { Link } from "react-router-dom";
-import AdSense from 'react-adsense';
 
 const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
   var d = new Date();
