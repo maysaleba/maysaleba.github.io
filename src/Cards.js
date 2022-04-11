@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Badge, Card, Col } from "react-bootstrap";
 import "./Cards.css";
 import { Link } from "react-router-dom";
 import { LazyLoadImage  } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import noimage from './noimage.jpg';
+import axios from 'axios'
 // import download from "./download.gif";
             var today = new Date();
             var dd = String(today.getDate()).padStart(2, '0');
@@ -16,50 +17,11 @@ import noimage from './noimage.jpg';
   today = yyyy + "-" + mm + "-" + dd;
 
 
-  var theURL = "https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
-     // var theURL = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json'
-            function httpGet(theUrl) {
-                var xmlHttp = new XMLHttpRequest();
-                xmlHttp.open("GET", theURL, false); // false for synchronous request
-                xmlHttp.send(null);
-                return xmlHttp.response;
-            }
-
-            let fxc = httpGet();
-            const fxcp = JSON.parse(fxc)
-            
-            // console.log(fxcp.php.usd);
-
-            // var usdExchange = 1 / fxcp.php.usd;
-            // var arsExchange = 1 / fxcp.php.ars;
-            // var audExchange = 1 / fxcp.php.aud;
-            // var brlExchange = 1 / fxcp.php.brl;
-            // var cadExchange = 1 / fxcp.php.cad;
-            // var clpExchange = 1 / fxcp.php.clp;
-            // var copExchange = 1 / fxcp.php.cop;
-            // var mxnExchange = 1 / fxcp.php.mxn;
-            // var penExchange = 1 / fxcp.php.pen;
-            // var plnExchange = 1 / fxcp.php.pln;
-            // var rubExchange = 1 / fxcp.php.rub;
-            // var zarExchange = 1 / fxcp.php.zar;
+  
 
 
-            var usdExchange = 1 / fxcp.rates.USD;
-            var arsExchange = 1 / fxcp.rates.ARS;
-            var audExchange = 1 / fxcp.rates.AUD;
-            var brlExchange = 1 / fxcp.rates.BRL;
-            var cadExchange = 1 / fxcp.rates.CAD;
-            var clpExchange = 1 / fxcp.rates.CLP;
-            var copExchange = 1 / fxcp.rates.COP;
-            var mxnExchange = 1 / fxcp.rates.MXN;
-            var penExchange = 1 / fxcp.rates.PEN;
-            var plnExchange = 1 / fxcp.rates.PLN;
-            var rubExchange = 1 / fxcp.rates.RUB;
-            var zarExchange = 1 / fxcp.rates.ZAR;
-
-
-            console.log("USD\n" + usdExchange + "\nARS\n" + arsExchange + "\nAUD\n" + audExchange + "\nBRL\n" + brlExchange + "\nCAD\n" + cadExchange + "\nCLP\n" + clpExchange + "\nCOP\n" + copExchange 
-              + "\nMXN\n" + mxnExchange + "\nPEN\n" + penExchange + "\nPLN\n" + plnExchange + "\nRUB\n" + rubExchange + "\nZAR\n" + zarExchange);
+            // console.log("USD\n" + usdExchange + "\nARS\n" + arsExchange + "\nAUD\n" + audExchange + "\nBRL\n" + brlExchange + "\nCAD\n" + cadExchange + "\nCLP\n" + clpExchange + "\nCOP\n" + copExchange 
+            //   + "\nMXN\n" + mxnExchange + "\nPEN\n" + penExchange + "\nPLN\n" + plnExchange + "\nRUB\n" + rubExchange + "\nZAR\n" + zarExchange);
 
 const Cards = ({ Title, Image, Score, SaleEnds, Genre, Slug, SalePrice, Discount, URL, Platform, PlusPrice, Price, CanadaPrice, 
 PeruPrice, ArgentinaPrice, AustraliaPrice, ColombiaPrice, SouthafricaPrice, BrazilPrice, RussiaPrice, PolandPrice, ChilePrice, MexicoPrice }) => {
@@ -70,6 +32,66 @@ PeruPrice, ArgentinaPrice, AustraliaPrice, ColombiaPrice, SouthafricaPrice, Braz
   // var year = d.getFullYear();
 
   // var daysago = year + "-" + mo + "-" + da;
+
+var theURL = "https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
+     var theURLa = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json'
+         
+               const [datam, setDatam] = React.useState({})
+      const [makeswitch, setMakeswitch] = React.useState(null)
+
+      useEffect(() => {
+        axios.get(theURL)
+              .then (response => {
+                setDatam(response)
+                setDatam(response.data.rates) // if using exchangerate.host
+                
+                // setDatam(response.data.php) // if using currency-api
+              }).catch((error) => {
+                          console.log(error)
+                           axios.get(theURLa)
+              .then (response => {
+                setDatam(response)
+                setDatam(response.data.php) 
+                setMakeswitch("2")
+                // if using exchangerate.host
+                // setDatam(response.data.php) // if using currency-api
+              })
+
+              }
+                    
+                    )
+      }, [theURL])
+   
+
+if (makeswitch === null){
+            var usdExchange = 1 / JSON.stringify(datam.USD)
+            var arsExchange = 1 / JSON.stringify(datam.ARS)
+            var audExchange = 1 / JSON.stringify(datam.AUD)
+            var brlExchange = 1 / JSON.stringify(datam.BRL)
+            var cadExchange = 1 / JSON.stringify(datam.CAD)
+            var clpExchange = 1 / JSON.stringify(datam.CLP)
+            var copExchange = 1 / JSON.stringify(datam.COP)
+            var mxnExchange = 1 / JSON.stringify(datam.MXN)
+            var penExchange = 1 / JSON.stringify(datam.PEN)
+            var plnExchange = 1 / JSON.stringify(datam.PLN)
+            var rubExchange = 1 / JSON.stringify(datam.RUB)
+            var zarExchange = 1 / JSON.stringify(datam.ZAR)
+} else {
+            var usdExchange = 1 / JSON.stringify(datam.usd)
+            var arsExchange = 1 / JSON.stringify(datam.ars)
+            var audExchange = 1 / JSON.stringify(datam.aud)
+            var brlExchange = 1 / JSON.stringify(datam.brl)
+            var cadExchange = 1 / JSON.stringify(datam.cad)
+            var clpExchange = 1 / JSON.stringify(datam.clp)
+            var copExchange = 1 / JSON.stringify(datam.cop)
+            var mxnExchange = 1 / JSON.stringify(datam.mxn)
+            var penExchange = 1 / JSON.stringify(datam.pen)
+            var plnExchange = 1 / JSON.stringify(datam.pln)
+            var rubExchange = 1 / JSON.stringify(datam.rub)
+            var zarExchange = 1 / JSON.stringify(datam.zar)
+
+}
+
             const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
             const firstDate = new Date();
             const secondDate = new Date(SaleEnds);

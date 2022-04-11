@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import games1 from "./csvjson.json";
 import gamesps from "./csvjsonus.json";
 import { Card, Row, Col } from "react-bootstrap";
@@ -9,6 +9,7 @@ import download from "./download.gif";
 import {Helmet} from "react-helmet";
 import  { Redirect } from 'react-router-dom'
 import GoogleAds from "./AdSense"
+import axios from 'axios'
 
 const YoutubeEmbed = ({ embedId }) => (
   <div className="video-responsive">
@@ -46,44 +47,107 @@ const Content = ({ search, setSearch, match }) => {
   today = yyyy + "-" + mm + "-" + dd;
 
 
+// var theURL = "https://www.npmjs.com/package/adasddasdas";
   var theURL = "https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
- // var theURL = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json'
+ var theURLa = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json'
 
-  function httpGet(theUrl) {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", theURL, false); // false for synchronous request
-    xmlHttp.send(null);
-    return xmlHttp.response;
-  }
+  // function httpGet(theUrl) {
+  //   var xmlHttp = new XMLHttpRequest();
+  //   xmlHttp.open("GET", theURL, false); // false for synchronous request
+  //   xmlHttp.send(null);
+  //   return xmlHttp.response;
+  // }
 
-  let fxc = httpGet();
-  const fxcp = JSON.parse(fxc);
+  // let fxc = httpGet();
+  // const fxcp = JSON.parse(fxc);
 
-            // var usdExchange = 1 / fxcp.php.usd;
-            // var arsExchange = 1 / fxcp.php.ars;
-            // var audExchange = 1 / fxcp.php.aud;
-            // var brlExchange = 1 / fxcp.php.brl;
-            // var cadExchange = 1 / fxcp.php.cad;
-            // var clpExchange = 1 / fxcp.php.clp;
-            // var copExchange = 1 / fxcp.php.cop;
-            // var mxnExchange = 1 / fxcp.php.mxn;
-            // var penExchange = 1 / fxcp.php.pen;
-            // var plnExchange = 1 / fxcp.php.pln;
-            // var rubExchange = 1 / fxcp.php.rub;
-            // var zarExchange = 1 / fxcp.php.zar;
 
-  var usdExchange = 1 / fxcp.rates.USD;
-  var arsExchange = 1 / fxcp.rates.ARS;
-  var audExchange = 1 / fxcp.rates.AUD;
-  var brlExchange = 1 / fxcp.rates.BRL;
-  var cadExchange = 1 / fxcp.rates.CAD;
-  var clpExchange = 1 / fxcp.rates.CLP;
-  var copExchange = 1 / fxcp.rates.COP;
-  var mxnExchange = 1 / fxcp.rates.MXN;
-  var penExchange = 1 / fxcp.rates.PEN;
-  var plnExchange = 1 / fxcp.rates.PLN;
-  var rubExchange = 1 / fxcp.rates.RUB;
-  var zarExchange = 1 / fxcp.rates.ZAR;
+// axios.defaults.headers.post["Content-Type"] = "application/json";
+    
+// const mainAxios = axios.create({
+//     baseURL: 'https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour'
+// });
+    
+// const customAxios = axios.create({
+//     baseURL: 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json'
+// });
+    
+
+ 
+
+      const [datam, setDatam] = React.useState({})
+      const [makeswitch, setMakeswitch] = React.useState(null)
+
+
+
+  // useEffect(async () => {
+  //   const response = await fetch (theURL);
+  //   const data = await response.json();
+  //   // setDatam(data.rates);
+  //   setDatam(data.php);
+  // }, []);
+
+      useEffect(() => {
+        axios.get(theURL)
+              .then (response => {
+                setDatam(response)
+                setDatam(response.data.rates) // if using exchangerate.host
+                // setDatam(response.data.php) // if using currency-api
+              }).catch((error) => {
+                          console.log(error)
+                           axios.get(theURLa)
+              .then (response => {
+                setDatam(response)
+                setMakeswitch("2")
+                setDatam(response.data.php) 
+                // if using exchangerate.host
+                // setDatam(response.data.php) // if using currency-api
+              })
+
+              }
+                    
+                    )
+      }, [theURL])
+   
+
+if (makeswitch === null){
+            var usdExchange = 1 / JSON.stringify(datam.USD)
+            var arsExchange = 1 / JSON.stringify(datam.ARS)
+            var audExchange = 1 / JSON.stringify(datam.AUD)
+            var brlExchange = 1 / JSON.stringify(datam.BRL)
+            var cadExchange = 1 / JSON.stringify(datam.CAD)
+            var clpExchange = 1 / JSON.stringify(datam.CLP)
+            var copExchange = 1 / JSON.stringify(datam.COP)
+            var mxnExchange = 1 / JSON.stringify(datam.MXN)
+            var penExchange = 1 / JSON.stringify(datam.PEN)
+            var plnExchange = 1 / JSON.stringify(datam.PLN)
+            var rubExchange = 1 / JSON.stringify(datam.RUB)
+            var zarExchange = 1 / JSON.stringify(datam.ZAR)
+} else {
+            var usdExchange = 1 / JSON.stringify(datam.usd)
+            var arsExchange = 1 / JSON.stringify(datam.ars)
+            var audExchange = 1 / JSON.stringify(datam.aud)
+            var brlExchange = 1 / JSON.stringify(datam.brl)
+            var cadExchange = 1 / JSON.stringify(datam.cad)
+            var clpExchange = 1 / JSON.stringify(datam.clp)
+            var copExchange = 1 / JSON.stringify(datam.cop)
+            var mxnExchange = 1 / JSON.stringify(datam.mxn)
+            var penExchange = 1 / JSON.stringify(datam.pen)
+            var plnExchange = 1 / JSON.stringify(datam.pln)
+            var rubExchange = 1 / JSON.stringify(datam.rub)
+            var zarExchange = 1 / JSON.stringify(datam.zar)
+
+}
+  ;
+
+
+
+
+ // {100*JSON.stringify(datam.usd)}
+           
+
+
+
 
   const matchGames = games.filter((game) => {
    
@@ -1583,7 +1647,6 @@ function HasMatch(){
           </Card.Body>
         </div>
         <YoutubeTrailer />
-
         <div style={{ fontSize: 14 }}>
           <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
             DESCRIPTION
@@ -1604,6 +1667,7 @@ function HasMatch(){
 }
 
   return (
+
   <HasMatch/>
   );
 };
