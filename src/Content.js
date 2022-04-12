@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import games1 from "./csvjson.json";
 import gamesps from "./csvjsonus.json";
 import { Card, Row, Col } from "react-bootstrap";
@@ -6,10 +6,10 @@ import NaviBar from "./NaviBar";
 import { Box, Paper, Link, Container } from "@mui/material";
 import styled from "styled-components";
 import download from "./download.gif";
-import {Helmet} from "react-helmet";
-import  { Redirect } from 'react-router-dom'
-import GoogleAds from "./AdSense"
-import axios from 'axios'
+import { Helmet } from "react-helmet";
+import { Redirect } from "react-router-dom";
+import GoogleAds from "./AdSense";
+import axios from "axios";
 
 const YoutubeEmbed = ({ embedId }) => (
   <div className="video-responsive">
@@ -36,128 +36,41 @@ today = yyyy + "-" + mm + "-" + dd;
 let games2 = gamesps.filter((review) => review.SaleEnds > today);
 let games = games1.concat(games2);
 
-const Content = ({ search, setSearch, match }) => {
-  var today = new Date();
-  var dd = String(today.getDate()).padStart(2, "0");
-  var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
-  var yyyy = today.getFullYear();
-
- let hour = today.getHours();
-
-  today = yyyy + "-" + mm + "-" + dd;
-
-
-// var theURL = "https://www.npmjs.com/package/adasddasdas";
-  var theURL = "https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
- var theURLa = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json'
-
-  // function httpGet(theUrl) {
-  //   var xmlHttp = new XMLHttpRequest();
-  //   xmlHttp.open("GET", theURL, false); // false for synchronous request
-  //   xmlHttp.send(null);
-  //   return xmlHttp.response;
-  // }
-
-  // let fxc = httpGet();
-  // const fxcp = JSON.parse(fxc);
-
-
-// axios.defaults.headers.post["Content-Type"] = "application/json";
-    
-// const mainAxios = axios.create({
-//     baseURL: 'https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour'
-// });
-    
-// const customAxios = axios.create({
-//     baseURL: 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json'
-// });
-    
-
- 
-
-      const [datam, setDatam] = React.useState({})
-      const [makeswitch, setMakeswitch] = React.useState(null)
-
-
-
-  // useEffect(async () => {
-  //   const response = await fetch (theURL);
-  //   const data = await response.json();
-  //   // setDatam(data.rates);
-  //   setDatam(data.php);
-  // }, []);
-
-      useEffect(() => {
-        axios.get(theURL)
-              .then (response => {
-                setDatam(response)
-                setDatam(response.data.rates) // if using exchangerate.host
-                // setDatam(response.data.php) // if using currency-api
-              }).catch((error) => {
-                          console.log(error)
-                           axios.get(theURLa)
-              .then (response => {
-                setDatam(response)
-                setMakeswitch("2")
-                setDatam(response.data.php) 
-                // if using exchangerate.host
-                // setDatam(response.data.php) // if using currency-api
-              })
-
-              }
-                    
-                    )
-      }, [theURL])
-   
-
-if (makeswitch === null){
-            var usdExchange = 1 / JSON.stringify(datam.USD)
-            var arsExchange = 1 / JSON.stringify(datam.ARS)
-            var audExchange = 1 / JSON.stringify(datam.AUD)
-            var brlExchange = 1 / JSON.stringify(datam.BRL)
-            var cadExchange = 1 / JSON.stringify(datam.CAD)
-            var clpExchange = 1 / JSON.stringify(datam.CLP)
-            var copExchange = 1 / JSON.stringify(datam.COP)
-            var mxnExchange = 1 / JSON.stringify(datam.MXN)
-            var penExchange = 1 / JSON.stringify(datam.PEN)
-            var plnExchange = 1 / JSON.stringify(datam.PLN)
-            var rubExchange = 1 / JSON.stringify(datam.RUB)
-            var zarExchange = 1 / JSON.stringify(datam.ZAR)
-} else {
-            var usdExchange = 1 / JSON.stringify(datam.usd)
-            var arsExchange = 1 / JSON.stringify(datam.ars)
-            var audExchange = 1 / JSON.stringify(datam.aud)
-            var brlExchange = 1 / JSON.stringify(datam.brl)
-            var cadExchange = 1 / JSON.stringify(datam.cad)
-            var clpExchange = 1 / JSON.stringify(datam.clp)
-            var copExchange = 1 / JSON.stringify(datam.cop)
-            var mxnExchange = 1 / JSON.stringify(datam.mxn)
-            var penExchange = 1 / JSON.stringify(datam.pen)
-            var plnExchange = 1 / JSON.stringify(datam.pln)
-            var rubExchange = 1 / JSON.stringify(datam.rub)
-            var zarExchange = 1 / JSON.stringify(datam.zar)
-
-}
-  ;
-
-
-
-
- // {100*JSON.stringify(datam.usd)}
-           
-
-
-
+const Content = ({ makeswitch, datam, search, setSearch, match }) => {
+  if (makeswitch === null) {
+    var usdExchange = 1 / JSON.stringify(datam.USD);
+    var arsExchange = 1 / JSON.stringify(datam.ARS);
+    var audExchange = 1 / JSON.stringify(datam.AUD);
+    var brlExchange = 1 / JSON.stringify(datam.BRL);
+    var cadExchange = 1 / JSON.stringify(datam.CAD);
+    var clpExchange = 1 / JSON.stringify(datam.CLP);
+    var copExchange = 1 / JSON.stringify(datam.COP);
+    var mxnExchange = 1 / JSON.stringify(datam.MXN);
+    var penExchange = 1 / JSON.stringify(datam.PEN);
+    var plnExchange = 1 / JSON.stringify(datam.PLN);
+    var rubExchange = 1 / JSON.stringify(datam.RUB);
+    var zarExchange = 1 / JSON.stringify(datam.ZAR);
+  } else {
+    var usdExchange = 1 / JSON.stringify(datam.usd);
+    var arsExchange = 1 / JSON.stringify(datam.ars);
+    var audExchange = 1 / JSON.stringify(datam.aud);
+    var brlExchange = 1 / JSON.stringify(datam.brl);
+    var cadExchange = 1 / JSON.stringify(datam.cad);
+    var clpExchange = 1 / JSON.stringify(datam.clp);
+    var copExchange = 1 / JSON.stringify(datam.cop);
+    var mxnExchange = 1 / JSON.stringify(datam.mxn);
+    var penExchange = 1 / JSON.stringify(datam.pen);
+    var plnExchange = 1 / JSON.stringify(datam.pln);
+    var rubExchange = 1 / JSON.stringify(datam.rub);
+    var zarExchange = 1 / JSON.stringify(datam.zar);
+  }
+  // {100*JSON.stringify(datam.usd)}
 
   const matchGames = games.filter((game) => {
-   
-      return game.Slug === match.params.games;
-
-    
-    
+    return game.Slug === match.params.games;
   });
 
-// console.log("HELLO"+matchGames)
+  // console.log("HELLO"+matchGames)
 
   function PesoPrice(props) {
     return "₱" + Math.round(props.props * usdExchange);
@@ -410,7 +323,6 @@ if (makeswitch === null){
         <>
           <span
             style={{
-            
               fontSize: 12,
               borderRadius: 30,
               border: "1px solid black",
@@ -422,7 +334,6 @@ if (makeswitch === null){
           </span>{" "}
           <span
             style={{
-               
               fontSize: 12,
               borderRadius: 30,
               border: "1px solid black",
@@ -438,7 +349,6 @@ if (makeswitch === null){
       return (
         <span
           style={{
-           
             fontSize: 12,
             borderRadius: 30,
             border: "1px solid black",
@@ -453,7 +363,6 @@ if (makeswitch === null){
       return (
         <span
           style={{
-            
             fontSize: 12,
             borderRadius: 30,
             border: "1px solid black",
@@ -468,7 +377,6 @@ if (makeswitch === null){
       return (
         <span
           style={{
-           
             fontSize: 12,
             borderRadius: 30,
             border: "1px solid black",
@@ -517,90 +425,86 @@ if (makeswitch === null){
     }
   }
 
-
-    function HasHLTB(props) {
+  function HasHLTB(props) {
     if (props.props.platform !== "Switch") {
-         return null;
-     
-    } else if (props.props.MainStory == 0 && props.props.MainExtra == 0 && props.props.Completionist == 0){
-         return null;
-      }
-
-      else 
-    {
+      return null;
+    } else if (
+      props.props.MainStory == 0 &&
+      props.props.MainExtra == 0 &&
+      props.props.Completionist == 0
+    ) {
+      return null;
+    } else {
       return (
         <>
-        <Link
-          underline="none"
-          hover="none"
-          color="black"
-          href="https://howlongtobeat.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-         
-             <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
-
-            HOW LONG TO BEAT
-
-            <span className="hltb-logo">
-              <img src={download} />
-            </span>
-             </Card.Header>
-         
-        </Link>
-   <Card.Body style={{ fontSize: 14 }}>
-
-
+          <Link
+            underline="none"
+            hover="none"
+            color="black"
+            href="https://howlongtobeat.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Card.Header
+              style={{ backgroundColor: "white", fontWeight: "bold" }}
+            >
+              HOW LONG TO BEAT
+              <span className="hltb-logo">
+                <img src={download} />
+              </span>
+            </Card.Header>
+          </Link>
+          <Card.Body style={{ fontSize: 14 }}>
             <Row xs={1} sm={3}>
-              <MainStory/>
-             <MainExtra/>
-             <Completionist/>
+              <MainStory />
+              <MainExtra />
+              <Completionist />
             </Row>
-           
           </Card.Body>
         </>
       );
     }
   }
 
-      function MainStory(){
+  function MainStory() {
     if (matchGames[0].MainStory == 0 || matchGames[0].MainStory == null) {
       return null;
     } else {
       return (
- <Col style={{ paddingBottom: 10 }}>
-                <span style={{ fontWeight: "bold" }}>Main Story:</span>{" "}
-                {matchGames[0].MainStory + " Hours"}
-              </Col>
-        )
+        <Col style={{ paddingBottom: 10 }}>
+          <span style={{ fontWeight: "bold" }}>Main Story:</span>{" "}
+          {matchGames[0].MainStory + " Hours"}
+        </Col>
+      );
     }
   }
 
-      function MainExtra(){
+  function MainExtra() {
     if (matchGames[0].MainExtra == 0 || matchGames[0].MainExtra == null) {
       return null;
     } else {
       return (
- <Col style={{ paddingBottom: 10 }}>
-                <span style={{ fontWeight: "bold" }}>Main+Extra:</span>{" "}
-                {matchGames[0].MainExtra + " Hours"}
-              </Col>
-        )
+        <Col style={{ paddingBottom: 10 }}>
+          <span style={{ fontWeight: "bold" }}>Main+Extra:</span>{" "}
+          {matchGames[0].MainExtra + " Hours"}
+        </Col>
+      );
     }
   }
 
-
-      function Completionist(){
-    if (matchGames[0].Completionist == 0 || matchGames[0].Completionist == null) {
+  function Completionist() {
+    if (
+      matchGames[0].Completionist == 0 ||
+      matchGames[0].Completionist == null
+    ) {
       return null;
     } else {
       return (
- <Col style={{ paddingBottom: 10 }}>
-                <span style={{ fontWeight: "bold" }}>Completionist:</span>{" "}
-                {matchGames[0].Completionist + " Hours"}
-              </Col>
-        )
+        <Col style={{ paddingBottom: 10 }}>
+          <span style={{ fontWeight: "bold" }}>Completionist:</span>{" "}
+          {matchGames[0].Completionist + " Hours"}
+        </Col>
+      );
     }
   }
 
@@ -610,17 +514,15 @@ if (makeswitch === null){
     if (matchGames[0].Trailer === "" || matchGames[0].Trailer === undefined) {
       return null;
     } else {
-      
-
       var youtubeid = matchGames[0].Trailer.split("=", 2);
 
       return (
         <div style={{ paddingBottom: 10, fontSize: 14 }}>
-         {/* <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
+          {/* <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
             TRAILER
           </Card.Header>*/}
 
-            <YoutubeEmbed embedId={youtubeid[1]} />
+          <YoutubeEmbed embedId={youtubeid[1]} />
         </div>
       );
     }
@@ -898,14 +800,13 @@ if (makeswitch === null){
         if (entries.length === 1) {
           return (
             <>
-            <tr className="item-table-best">
-              <td className="version">
-                <span className="fire-logo">
-                  <USRank />
-                </span>
-              </td>
-        <td className="version">
+              <tr className="item-table-best">
+                <td className="version">
+                  <span className="fire-logo">
+                    <USRank />
+                  </span>
                 </td>
+                <td className="version"></td>
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
@@ -921,21 +822,28 @@ if (makeswitch === null){
                 </td>
               </tr>
               <tr className="item-table-best">
-                <td className="item-note text-left"> 
-                                  <div
+                <td className="item-note text-left">
+                  <div
                     className="vendors"
                     style={{
                       display: "flex",
                       justifyContent: "left",
                       flexWrap: "wrap",
-                      fontSize: 14
+                      fontSize: 14,
                     }}
                   >
-                   <span className="nopaddingA"> <div className="ml-2 badge badge-info">  Suggested Gift Card: <ShopeeCard /></div></span>  </div>
+                    <span className="nopaddingA">
+                      {" "}
+                      <div className="ml-2 badge badge-info">
+                        {" "}
+                        Suggested Gift Card: <ShopeeCard />
+                      </div>
+                    </span>{" "}
+                  </div>
                 </td>
                 <td></td>
                 <td className="item-note text-right">
- <div
+                  <div
                     className="vendors"
                     style={{
                       display: "flex",
@@ -950,9 +858,9 @@ if (makeswitch === null){
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                    <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 13 }} className="shopee-logo">
-                        <span className="suggest-text">Shopee</span>
+                      <div className="ml-2 badge badge-danger">
+                        <span style={{ fontSize: 13 }} className="shopee-logo">
+                          <span className="suggest-text">Shopee</span>
                         </span>
                       </div>
                     </a>
@@ -963,10 +871,10 @@ if (makeswitch === null){
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                    <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 13 }} className="lazada-logo">
-                        <span className="suggest-text">Lazada</span>
-                      </span>
+                      <div className="ml-2 badge badge-danger">
+                        <span style={{ fontSize: 13 }} className="lazada-logo">
+                          <span className="suggest-text">Lazada</span>
+                        </span>
                       </div>
                     </a>
                     <a
@@ -976,10 +884,10 @@ if (makeswitch === null){
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                    <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 13 }} className="coda-logo">
-                        <span className="suggest-text">Codashop</span>
-                      </span>
+                      <div className="ml-2 badge badge-danger">
+                        <span style={{ fontSize: 13 }} className="coda-logo">
+                          <span className="suggest-text">Codashop</span>
+                        </span>
                       </div>
                     </a>
                   </div>
@@ -998,8 +906,7 @@ if (makeswitch === null){
                     <USRank />
                   </span>
                 </td>
-                <td className="version">
-                </td>
+                <td className="version"></td>
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
@@ -1015,21 +922,28 @@ if (makeswitch === null){
                 </td>
               </tr>
               <tr className="item-table-best">
-                <td className="item-note text-left"> 
-                                  <div
+                <td className="item-note text-left">
+                  <div
                     className="vendors"
                     style={{
                       display: "flex",
                       justifyContent: "left",
                       flexWrap: "wrap",
-                      fontSize: 14
+                      fontSize: 14,
                     }}
                   >
-                   <span className="nopaddingA"> <div className="ml-2 badge badge-info">  Suggested Gift Card: <ShopeeCard /></div></span>  </div>
+                    <span className="nopaddingA">
+                      {" "}
+                      <div className="ml-2 badge badge-info">
+                        {" "}
+                        Suggested Gift Card: <ShopeeCard />
+                      </div>
+                    </span>{" "}
+                  </div>
                 </td>
                 <td></td>
                 <td className="item-note text-right">
-                   <div
+                  <div
                     className="vendors"
                     style={{
                       display: "flex",
@@ -1044,9 +958,9 @@ if (makeswitch === null){
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                    <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 13 }} className="shopee-logo">
-                        <span className="suggest-text">Shopee</span>
+                      <div className="ml-2 badge badge-danger">
+                        <span style={{ fontSize: 13 }} className="shopee-logo">
+                          <span className="suggest-text">Shopee</span>
                         </span>
                       </div>
                     </a>
@@ -1057,10 +971,10 @@ if (makeswitch === null){
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                    <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 13 }} className="lazada-logo">
-                        <span className="suggest-text">Lazada</span>
-                      </span>
+                      <div className="ml-2 badge badge-danger">
+                        <span style={{ fontSize: 13 }} className="lazada-logo">
+                          <span className="suggest-text">Lazada</span>
+                        </span>
                       </div>
                     </a>
                     <a
@@ -1070,10 +984,10 @@ if (makeswitch === null){
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                    <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 13 }} className="coda-logo">
-                        <span className="suggest-text">Codashop</span>
-                      </span>
+                      <div className="ml-2 badge badge-danger">
+                        <span style={{ fontSize: 13 }} className="coda-logo">
+                          <span className="suggest-text">Codashop</span>
+                        </span>
                       </div>
                     </a>
                   </div>
@@ -1087,7 +1001,11 @@ if (makeswitch === null){
                 </td>
                 <td></td>
                 <td className="version">
-                  <a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://www.youtube.com/watch?v=iIHNfDa8-1o"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank1price)}
@@ -1115,8 +1033,7 @@ if (makeswitch === null){
                     <USRank />
                   </span>
                 </td>
-                <td className="version">
-                </td>
+                <td className="version"></td>
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
@@ -1132,21 +1049,28 @@ if (makeswitch === null){
                 </td>
               </tr>
               <tr className="item-table-best">
-                <td className="item-note text-left"> 
-                                  <div
+                <td className="item-note text-left">
+                  <div
                     className="vendors"
                     style={{
                       display: "flex",
                       justifyContent: "left",
                       flexWrap: "wrap",
-                      fontSize: 14
+                      fontSize: 14,
                     }}
                   >
-                   <span className="nopaddingA"> <div className="ml-2 badge badge-info">  Suggested Gift Card: <ShopeeCard /></div></span>  </div>
+                    <span className="nopaddingA">
+                      {" "}
+                      <div className="ml-2 badge badge-info">
+                        {" "}
+                        Suggested Gift Card: <ShopeeCard />
+                      </div>
+                    </span>{" "}
+                  </div>
                 </td>
                 <td></td>
                 <td className="item-note text-right">
-                 <div
+                  <div
                     className="vendors"
                     style={{
                       display: "flex",
@@ -1161,9 +1085,9 @@ if (makeswitch === null){
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                    <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 13 }} className="shopee-logo">
-                        <span className="suggest-text">Shopee</span>
+                      <div className="ml-2 badge badge-danger">
+                        <span style={{ fontSize: 13 }} className="shopee-logo">
+                          <span className="suggest-text">Shopee</span>
                         </span>
                       </div>
                     </a>
@@ -1174,10 +1098,10 @@ if (makeswitch === null){
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                    <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 13 }} className="lazada-logo">
-                        <span className="suggest-text">Lazada</span>
-                      </span>
+                      <div className="ml-2 badge badge-danger">
+                        <span style={{ fontSize: 13 }} className="lazada-logo">
+                          <span className="suggest-text">Lazada</span>
+                        </span>
                       </div>
                     </a>
                     <a
@@ -1187,10 +1111,10 @@ if (makeswitch === null){
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                    <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 13 }} className="coda-logo">
-                        <span className="suggest-text">Codashop</span>
-                      </span>
+                      <div className="ml-2 badge badge-danger">
+                        <span style={{ fontSize: 13 }} className="coda-logo">
+                          <span className="suggest-text">Codashop</span>
+                        </span>
                       </div>
                     </a>
                   </div>
@@ -1204,7 +1128,11 @@ if (makeswitch === null){
                 </td>
                 <td></td>
                 <td className="version">
-                  <a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://www.youtube.com/watch?v=iIHNfDa8-1o"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank1price)}
@@ -1225,7 +1153,11 @@ if (makeswitch === null){
                 </td>
                 <td></td>
                 <td className="version">
-                  <a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://www.youtube.com/watch?v=iIHNfDa8-1o"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank2price)}
@@ -1255,9 +1187,7 @@ if (makeswitch === null){
                     <USRank />
                   </span>
                 </td>
-                <td className="version">
-                
-                </td>
+                <td className="version"></td>
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
@@ -1273,17 +1203,24 @@ if (makeswitch === null){
                 </td>
               </tr>
               <tr className="item-table-best">
-                <td className="item-note text-left"> 
-                                  <div
+                <td className="item-note text-left">
+                  <div
                     className="vendors"
                     style={{
                       display: "flex",
                       justifyContent: "left",
                       flexWrap: "wrap",
-                      fontSize: 14
+                      fontSize: 14,
                     }}
                   >
-                   <span className="nopaddingA"> <div className="ml-2 badge badge-info">  Suggested Gift Card: <ShopeeCard /></div></span>  </div>
+                    <span className="nopaddingA">
+                      {" "}
+                      <div className="ml-2 badge badge-info">
+                        {" "}
+                        Suggested Gift Card: <ShopeeCard />
+                      </div>
+                    </span>{" "}
+                  </div>
                 </td>
                 <td></td>
                 <td className="item-note text-right">
@@ -1302,9 +1239,9 @@ if (makeswitch === null){
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                    <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 13 }} className="shopee-logo">
-                        <span className="suggest-text">Shopee</span>
+                      <div className="ml-2 badge badge-danger">
+                        <span style={{ fontSize: 13 }} className="shopee-logo">
+                          <span className="suggest-text">Shopee</span>
                         </span>
                       </div>
                     </a>
@@ -1315,10 +1252,10 @@ if (makeswitch === null){
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                    <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 13 }} className="lazada-logo">
-                        <span className="suggest-text">Lazada</span>
-                      </span>
+                      <div className="ml-2 badge badge-danger">
+                        <span style={{ fontSize: 13 }} className="lazada-logo">
+                          <span className="suggest-text">Lazada</span>
+                        </span>
                       </div>
                     </a>
                     <a
@@ -1328,10 +1265,10 @@ if (makeswitch === null){
                       rel="noreferrer"
                       // style={{ padding: 10 }}
                     >
-                    <div className="ml-2 badge badge-danger">
-                      <span style={{ fontSize: 13 }} className="coda-logo">
-                        <span className="suggest-text">Codashop</span>
-                      </span>
+                      <div className="ml-2 badge badge-danger">
+                        <span style={{ fontSize: 13 }} className="coda-logo">
+                          <span className="suggest-text">Codashop</span>
+                        </span>
                       </div>
                     </a>
                   </div>
@@ -1345,7 +1282,11 @@ if (makeswitch === null){
                 </td>
                 <td></td>
                 <td className="version">
-                  <a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://www.youtube.com/watch?v=iIHNfDa8-1o"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank1price)}
@@ -1366,7 +1307,11 @@ if (makeswitch === null){
                 </td>
                 <td></td>
                 <td className="version">
-                  <a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://www.youtube.com/watch?v=iIHNfDa8-1o"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank2price)}
@@ -1387,7 +1332,11 @@ if (makeswitch === null){
                 </td>
                 <td></td>
                 <td className="version">
-                  <a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://www.youtube.com/watch?v=iIHNfDa8-1o"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank3price)}
@@ -1500,7 +1449,7 @@ if (makeswitch === null){
     z-index: -1;
 
     &:after {
-      --color-background--rgb: 103,103,171;
+      --color-background--rgb: 103, 103, 171;
       content: "";
       position: absolute;
       height: 50%;
@@ -1530,146 +1479,170 @@ if (makeswitch === null){
     }
   `;
 
-  
-
   // console.log(matchGames[0].description.split('\n'));
 
+  function HasMatch() {
+    if (matchGames[0] !== undefined) {
+      const Background = styled.div`
+        --blur-radius: 20px;
+        background-image: url(${matchGames[0].Image});
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: calc(var(--blur-radius) * -1) calc(var(--blur-radius) * -1);
+        background-size: cover;
+        background-position: 50%;
+        mix-blend-mode: overlay;
+        filter: blur(var(--blur-radius));
+      `;
+      return (
+        <div>
+          <Helmet>
+            <meta charset="utf-8" />
+            <title>
+              {matchGames[0].Title} on {matchGames[0].platform} - May Sale Ba?
+            </title>
+            <meta
+              name="description"
+              content={
+                "Compare and find the cheapest price to buy " +
+                matchGames[0].Title +
+                " for the " +
+                matchGames[0].platform +
+                " in Philippine Peso"
+              }
+            />
+            <meta property="og:image" content={matchGames[0].Image} />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content={matchGames[0].URL} />
+            <meta
+              property="og:title"
+              content={
+                matchGames[0].Title +
+                " on " +
+                matchGames[0].platform +
+                " - May Sale Ba?"
+              }
+            />
+            <meta
+              property="og:description"
+              content={
+                "Compare and find the cheapest price to buy " +
+                matchGames[0].Title +
+                " for the " +
+                matchGames[0].platform +
+                " in Philippine Peso"
+              }
+            />
+          </Helmet>
+          <BackgroundContainer>
+            <Background />
+          </BackgroundContainer>
+          {/*    <NaviBar />*/}
+          <div className="text-center m-3 p-auto" style={{ paddingBottom: 15 }}>
+            <img
+              alt=""
+              style={{
+                height: "auto",
+                maxWidth: "50%",
+                borderRadius: "5px",
+              }}
+              src={matchGames[0].Image}
+            />
+          </div>
+          <Paper elevation={2} className="content-container">
+            {/*<Card className="content-container-gameinfo">*/}
+            <Card.Header
+              style={{
+                fontSize: 18,
+                backgroundColor: "white",
+                fontWeight: "bold",
+              }}
+            >
+              {matchGames[0].Title.toUpperCase()}
+              <HasOpenCritic props={matchGames[0].SCORE} />
+              <span
+                className="pb-1"
+                style={{
+                  fontSize: 12,
+                  paddingRight: 20,
+                  padding: "0 0.75rem ",
+                }}
+              >
+                <br />
+                SALE ENDS: {DateConvert(matchGames[0].SaleEnds).toUpperCase()}
+              </span>
+            </Card.Header>
+            <PricesTable psorsw={matchGames[0].platform} />
+            <div style={{ fontSize: 14 }}>
+              <HasHLTB props={matchGames[0]} />
 
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                style={{ paddingBottom: 16 }}
+              >
+                <GoogleAds />
+              </Box>
 
-function HasMatch(){
-  if (matchGames[0] !== undefined)
-  {
-    const Background = styled.div`
-    --blur-radius: 20px;
-    background-image: url(${matchGames[0].Image});
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: calc(var(--blur-radius) * -1) calc(var(--blur-radius) * -1);
-    background-size: cover;
-    background-position: 50%;
-    mix-blend-mode: overlay;
-    filter: blur(var(--blur-radius));
-  `;
-    return (
-           <div>
-    <Helmet>
-         <meta charset="utf-8" />
-   <title>{matchGames[0].Title} on {matchGames[0].platform} - May Sale Ba?</title>
-   <meta name="description" content={'Compare and find the cheapest price to buy ' +matchGames[0].Title+ ' for the ' +matchGames[0].platform+' in Philippine Peso'} />
-      <meta property="og:image" content={matchGames[0].Image} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={matchGames[0].URL} />
-      <meta property="og:title" content={matchGames[0].Title + ' on ' + matchGames[0].platform + ' - May Sale Ba?'} />
-      <meta property="og:description" content={'Compare and find the cheapest price to buy ' +matchGames[0].Title+ ' for the ' +matchGames[0].platform+' in Philippine Peso'} />
-        </Helmet>
-      <BackgroundContainer>
-        <Background />
-      </BackgroundContainer>
-  {/*    <NaviBar />*/}
-      <div className="text-center m-3 p-auto" style={{ paddingBottom: 15 }}>
-        <img
-          alt=""
-          style={{
-            height: "auto",
-            maxWidth: "50%",
-            borderRadius: "5px",
-          }}
-          src={matchGames[0].Image}
-        />
-      </div>
-      <Paper elevation={2} className="content-container">
-        {/*<Card className="content-container-gameinfo">*/}
-        <Card.Header style={{ fontSize: 18, backgroundColor: "white", fontWeight: "bold" }}>
-          {matchGames[0].Title.toUpperCase()}
-          <HasOpenCritic props={matchGames[0].SCORE} />
-          <span
-            className="pb-1"
-            style={{
-              fontSize: 12,
-              paddingRight: 20,
-              padding: "0 0.75rem ",
-            }}
-          >
-            <br />
-            SALE ENDS: {DateConvert(matchGames[0].SaleEnds).toUpperCase()}
-          </span>
-        </Card.Header>
-        <PricesTable psorsw={matchGames[0].platform} />
-        <div style={{ fontSize: 14 }}>
-                 
-            <HasHLTB props={matchGames[0]} />
-            
-<Box 
-  display="flex"
-  justifyContent="center"
-  alignItems="center"
-  style={{paddingBottom: 16}}
->
-<GoogleAds/>
-</Box>
-
-          <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
-            INFORMATION
-          </Card.Header>
-          <Card.Body style={{ fontSize: 14 }}>
-
-
-            <Row xs={1} sm={2}>
-              <Col style={{ paddingBottom: 10 }}>
-                <span style={{ fontWeight: "bold" }}>Publisher:</span>{" "}
-                {matchGames[0].Publisher}
-              </Col>
-              <Col style={{ paddingBottom: 10 }}>
-                <span style={{ fontWeight: "bold"  }}>Release Date:</span>{" "}
-                {DateConvert(matchGames[0].ReleaseDate)}
-              </Col>
-            </Row>
-            <Row xs={1} sm={2}>
-              <Col style={{ paddingBottom: 10 }}>
-                <span style={{  fontWeight: "bold"  }}>Platform: </span>{" "}
-                <WhichPlatform />
-              </Col>
-              <Col style={{ paddingBottom: 10 }}>
-                <span style={{ fontWeight: "bold"  }}>Sale Started: </span>{" "}
-                {DateConvert(matchGames[0].SaleStarted)}
-              </Col>
-            </Row>
-            <Row xs={1} sm={2}>
-              <Col style={{ paddingBottom: 10 }}>
-                <span style={{ fontWeight: "bold"  }}>Genre:</span>{" "}
-                {matchGames[0].genre}
-              </Col>
-              <Col style={{ paddingBottom: 10 }}></Col>
-            </Row>
-          </Card.Body>
+              <Card.Header
+                style={{ backgroundColor: "white", fontWeight: "bold" }}
+              >
+                INFORMATION
+              </Card.Header>
+              <Card.Body style={{ fontSize: 14 }}>
+                <Row xs={1} sm={2}>
+                  <Col style={{ paddingBottom: 10 }}>
+                    <span style={{ fontWeight: "bold" }}>Publisher:</span>{" "}
+                    {matchGames[0].Publisher}
+                  </Col>
+                  <Col style={{ paddingBottom: 10 }}>
+                    <span style={{ fontWeight: "bold" }}>Release Date:</span>{" "}
+                    {DateConvert(matchGames[0].ReleaseDate)}
+                  </Col>
+                </Row>
+                <Row xs={1} sm={2}>
+                  <Col style={{ paddingBottom: 10 }}>
+                    <span style={{ fontWeight: "bold" }}>Platform: </span>{" "}
+                    <WhichPlatform />
+                  </Col>
+                  <Col style={{ paddingBottom: 10 }}>
+                    <span style={{ fontWeight: "bold" }}>Sale Started: </span>{" "}
+                    {DateConvert(matchGames[0].SaleStarted)}
+                  </Col>
+                </Row>
+                <Row xs={1} sm={2}>
+                  <Col style={{ paddingBottom: 10 }}>
+                    <span style={{ fontWeight: "bold" }}>Genre:</span>{" "}
+                    {matchGames[0].genre}
+                  </Col>
+                  <Col style={{ paddingBottom: 10 }}></Col>
+                </Row>
+              </Card.Body>
+            </div>
+            <YoutubeTrailer />
+            <div style={{ fontSize: 14 }}>
+              <Card.Header
+                style={{ backgroundColor: "white", fontWeight: "bold" }}
+              >
+                DESCRIPTION
+              </Card.Header>
+              <Card.Body>
+                <ReverseDesc props={matchGames[0].description} />
+              </Card.Body>
+            </div>
+          </Paper>
         </div>
-        <YoutubeTrailer />
-        <div style={{ fontSize: 14 }}>
-          <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
-            DESCRIPTION
-          </Card.Header>
-          <Card.Body>
-            <ReverseDesc props={matchGames[0].description} />
-          </Card.Body>
-        </div>
-      </Paper>
-    </div>
-
-      )
-  } else {
-    return (
-      <Redirect to="/"/>
-      )
+      );
+    } else {
+      return <Redirect to="/" />;
+    }
   }
-}
 
-  return (
-
-  <HasMatch/>
-  );
+  return <HasMatch />;
 };
 
 export default Content;

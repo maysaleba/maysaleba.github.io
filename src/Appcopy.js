@@ -4,11 +4,7 @@ import reviewssw from "./csvjson.json";
 import reviewspsx from "./csvjsonus.json";
 import CardGroup from "./CardGroup2";
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, useLocation } from "react-router-dom";
 import Content from "./Content";
 import NaviBar from "./NaviBar";
 import styled from "styled-components";
@@ -17,6 +13,7 @@ import GiftCards from "./GiftCards";
 import FAQ from "./FAQ";
 import MainPage from "./MainPage";
 import { Helmet } from "react-helmet";
+import axios from "axios";
 // import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 var today = new Date();
@@ -24,6 +21,8 @@ var today = new Date();
 var dd = String(today.getDate()).padStart(2, "0");
 var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
 var yyyy = today.getFullYear();
+
+let hour = today.getHours();
 
 today = yyyy + "-" + mm + "-" + dd;
 
@@ -80,6 +79,42 @@ export default function Main() {
 
     return null;
   }
+
+  // var theURL = "https://www.npmjs.com/package/adasddasdas";
+  var theURL =
+    "https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
+  var theURLa =
+    "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json";
+
+  const [datam, setDatam] = React.useState({});
+  const [makeswitch, setMakeswitch] = React.useState(null);
+
+  // useEffect(async () => {
+  //   const response = await fetch (theURL);
+  //   const data = await response.json();
+  //   // setDatam(data.rates);
+  //   setDatam(data.php);
+  // }, []);
+
+  useEffect(() => {
+    axios
+      .get(theURL)
+      .then((response) => {
+        setDatam(response);
+        setDatam(response.data.rates); // if using exchangerate.host
+        // setDatam(response.data.php) // if using currency-api
+      })
+      .catch((error) => {
+        console.log(error);
+        axios.get(theURLa).then((response) => {
+          setDatam(response);
+          setMakeswitch("2");
+          setDatam(response.data.php);
+          // if using exchangerate.host
+          // setDatam(response.data.php) // if using currency-api
+        });
+      });
+  }, [theURL]);
 
   const [priceRangeField, setPriceRangeField] = useState(99999);
   const [priceRangeDropDown, setPriceRangeDropDown] =
@@ -276,7 +311,6 @@ export default function Main() {
 
   return (
     <Router>
-
       <ScrollToTop />
       <BackgroundContainer>
         <Background />
@@ -291,7 +325,6 @@ export default function Main() {
         setSearchQuery={setSearchQuery}
       />
       <Route
-      
         path="/"
         exact
         render={(props) => (
@@ -311,21 +344,22 @@ export default function Main() {
               pageData={pageData}
               reviewsps={reviewsps}
             />
-                  <Helmet>
-        <meta charset="utf-8" />
-        <title>May Sale Ba? - Get the latest prices on Nintendo Switch and Sony Playstation deals in Philippine Peso!</title>
-        <meta
-          name="description"
-          content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
-        />
-      </Helmet>
-
+            <Helmet>
+              <meta charset="utf-8" />
+              <title>
+                May Sale Ba? - Get the latest prices on Nintendo Switch and Sony
+                Playstation deals in Philippine Peso!
+              </title>
+              <meta
+                name="description"
+                content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
+              />
+            </Helmet>
           </div>
         )}
       />
 
       <Route
-      
         path="/allgames"
         exact
         render={(props) => (
@@ -370,9 +404,7 @@ export default function Main() {
       />
 
       <Route
-    
         path="/switch"
-        
         render={(props) => (
           <div>
             {setPlatformField("Switch")}
@@ -428,9 +460,7 @@ export default function Main() {
         )}
       />
       <Route
-      
         path="/playstation"
-        
         render={(props) => (
           <div>
             {setPlatformField("Playstation")}
@@ -485,11 +515,17 @@ export default function Main() {
           </div>
         )}
       />
-      <Route path="/games/:games" exact component={Content} />
       <Route
-      
+        path="/games/:games"
+        exact
+        render={({ match }) => (
+          <div>
+            <Content makeswitch={makeswitch} datam={datam} match={match} />
+          </div>
+        )}
+      />
+      <Route
         path="/giftcards"
-        
         render={(props) => (
           <div>
             <GiftCards
@@ -508,9 +544,7 @@ export default function Main() {
         )}
       />
       <Route
-      
         path="/faq"
-        
         render={(props) => (
           <div>
             <FAQ />
