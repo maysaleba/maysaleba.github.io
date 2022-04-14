@@ -31,6 +31,7 @@ const AdSense = () => {
       style={{ display: "block"}}
       data-ad-client="ca-pub-4543556906953539"
       data-ad-slot="1687469656"
+      enable_page_level_ads="true"
       overlays={{bottom: true}}
     ></ins>
   )
