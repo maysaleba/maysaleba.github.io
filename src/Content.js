@@ -1587,11 +1587,13 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                 style={{ paddingBottom: 16 }}
               >
                 <Adsense
+
                   className="example_responsive_1"
-                 style={{ display: 'block' }}
-  client="ca-pub-4543556906953539"
-  slot="1687469656"
-   format="fluid"
+                    client="ca-pub-4543556906953539"
+                    slot="2860928446"
+                     style={{ display: 'block', textAlign: 'center' }}
+                      layout="in-article"
+                    format="fluid" 
 />
               </Box>
 
