@@ -8,7 +8,8 @@ import styled from "styled-components";
 import download from "./download.gif";
 import { Helmet } from "react-helmet";
 import { Redirect } from "react-router-dom";
-import GoogleAds from "./AdSense";
+// import GoogleAds from "./AdSense";
+import {Adsense} from '@ctrl/react-adsense';
 import axios from "axios";
 
 const YoutubeEmbed = ({ embedId }) => (
@@ -1585,7 +1586,15 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                 alignItems="center"
                 style={{ paddingBottom: 16 }}
               >
-                <GoogleAds />
+                <Adsense
+                 style={{ display: 'block' }}
+  className="example_responsive_1"
+  client="ca-pub-4543556906953539"
+  slot="1687469656"
+  pageLevelAds="true"
+  overlays={{bottom: true}}
+ 
+/>
               </Box>
 
               <Card.Header
