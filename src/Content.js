@@ -1590,10 +1590,10 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
 
                   className="example_responsive_1"
                     client="ca-pub-4543556906953539"
-                    slot="2860928446"
-                     style={{ display: 'block', textAlign: 'center' }}
-                      layout="in-article"
-                    format="fluid" 
+                    slot="1687469656"
+                     style={{ display: 'block' }}
+                    format="fluid"
+          
 />
               </Box>
 
