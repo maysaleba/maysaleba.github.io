@@ -391,7 +391,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function HasOpenCritic(props) {
-    if (props.props === "" || props.props === "-1") {
+    if (props.props === "" || props.props === "-1" || props.props === "0") {
       return null;
     } else {
       return (
@@ -1623,10 +1623,12 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                 </Row>
               </Card.Body>
             </div>
+
             <YoutubeTrailer />
+
             <div style={{ fontSize: 14 }}>
               <Card.Header
-                style={{ backgroundColor: "white", fontWeight: "bold" }}
+                style={{backgroundColor: "white", fontWeight: "bold" }}
               >
                 DESCRIPTION
               </Card.Header>

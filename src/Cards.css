@@ -1,4 +1,4 @@
-@media  only screen and (min-width : 900px) {
+@media  only screen and (min-width : 120px) {
   .custom-container {
     width: 50vw !important;
     margin-left: auto;
@@ -837,8 +837,38 @@ label:focus,
    background-position: 0px -510px;
 }
 
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
 
 @media screen and (max-width: 575.98px) {
+
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  width: 100vw;
+    left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+}
 
 .suggest-text {
     display: none;
@@ -903,24 +933,11 @@ label:focus,
 
 }
 
-.video-responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-}
-
-.video-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
 
 
 
-@media screen and (max-width: 900px) {
+
+@media screen and (max-width: 1200px) {
   .custom-container {
     width: 95% !important;
     margin-left: auto;
@@ -935,6 +952,8 @@ label:focus,
   p {
    display:block !important;
 }
+
+
 
 .ads {
    height: 250px;

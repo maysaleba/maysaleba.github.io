@@ -128,7 +128,7 @@ today = yyyy + "-" + mm + "-" + dd;
 
   function OpenScore(score) {
     const hasScore = score.hasScore;
-    if (hasScore === "-1" || hasScore === "") {
+    if (hasScore === "-1" || hasScore === "" || hasScore === "0") {
       return null;
     }
     return (
