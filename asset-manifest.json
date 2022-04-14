@@ -1,29 +1,29 @@
 {
   "files": {
     "main.css": "/maysaleba.github.io/static/css/main.6e79b9e7.chunk.css",
-    "main.js": "/maysaleba.github.io/static/js/main.54c587ab.chunk.js",
-    "main.js.map": "/maysaleba.github.io/static/js/main.54c587ab.chunk.js.map",
-    "runtime-main.js": "/maysaleba.github.io/static/js/runtime-main.2e2849c0.js",
-    "runtime-main.js.map": "/maysaleba.github.io/static/js/runtime-main.2e2849c0.js.map",
+    "main.js": "/maysaleba.github.io/static/js/main.19e0c2d4.chunk.js",
+    "main.js.map": "/maysaleba.github.io/static/js/main.19e0c2d4.chunk.js.map",
+    "runtime-main.js": "/maysaleba.github.io/static/js/runtime-main.91c422a7.js",
+    "runtime-main.js.map": "/maysaleba.github.io/static/js/runtime-main.91c422a7.js.map",
     "static/css/2.9d65f164.chunk.css": "/maysaleba.github.io/static/css/2.9d65f164.chunk.css",
-    "static/js/2.7f464e6b.chunk.js": "/maysaleba.github.io/static/js/2.7f464e6b.chunk.js",
-    "static/js/2.7f464e6b.chunk.js.map": "/maysaleba.github.io/static/js/2.7f464e6b.chunk.js.map",
-    "static/js/3.b0ecd8bd.chunk.js": "/maysaleba.github.io/static/js/3.b0ecd8bd.chunk.js",
-    "static/js/3.b0ecd8bd.chunk.js.map": "/maysaleba.github.io/static/js/3.b0ecd8bd.chunk.js.map",
+    "static/js/2.9a61018f.chunk.js": "/maysaleba.github.io/static/js/2.9a61018f.chunk.js",
+    "static/js/2.9a61018f.chunk.js.map": "/maysaleba.github.io/static/js/2.9a61018f.chunk.js.map",
+    "static/js/3.ec48ae02.chunk.js": "/maysaleba.github.io/static/js/3.ec48ae02.chunk.js",
+    "static/js/3.ec48ae02.chunk.js.map": "/maysaleba.github.io/static/js/3.ec48ae02.chunk.js.map",
     "index.html": "/maysaleba.github.io/index.html",
     "static/css/2.9d65f164.chunk.css.map": "/maysaleba.github.io/static/css/2.9d65f164.chunk.css.map",
     "static/css/main.6e79b9e7.chunk.css.map": "/maysaleba.github.io/static/css/main.6e79b9e7.chunk.css.map",
-    "static/js/2.7f464e6b.chunk.js.LICENSE.txt": "/maysaleba.github.io/static/js/2.7f464e6b.chunk.js.LICENSE.txt",
+    "static/js/2.9a61018f.chunk.js.LICENSE.txt": "/maysaleba.github.io/static/js/2.9a61018f.chunk.js.LICENSE.txt",
     "static/media/Cards.css": "/maysaleba.github.io/static/media/silver-medal.26c1865a.png",
     "static/media/logo.55b508d1.svg": "/maysaleba.github.io/static/media/logo.55b508d1.svg",
     "static/media/noimage.52e869e4.jpg": "/maysaleba.github.io/static/media/noimage.52e869e4.jpg",
     "static/media/App.css": "/maysaleba.github.io/static/media/woojooaidp-webfont.3fa0e295.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.2e2849c0.js",
+    "static/js/runtime-main.91c422a7.js",
     "static/css/2.9d65f164.chunk.css",
-    "static/js/2.7f464e6b.chunk.js",
+    "static/js/2.9a61018f.chunk.js",
     "static/css/main.6e79b9e7.chunk.css",
-    "static/js/main.54c587ab.chunk.js"
+    "static/js/main.19e0c2d4.chunk.js"
   ]
 }
