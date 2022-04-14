@@ -861,7 +861,7 @@ label:focus,
   overflow: hidden;
   padding-bottom: 56.25%;
   position: relative;
-  height: 0;
+  height: 56vw;
   width: 100vw;
     left: 50%;
   right: 50%;
