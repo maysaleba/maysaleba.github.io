@@ -428,12 +428,6 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   function HasHLTB(props) {
     if (props.props.platform !== "Switch") {
       return null;
-    } else if (
-      props.props.MainStory == 0 &&
-      props.props.MainExtra == 0 &&
-      props.props.Completionist == 0
-    ) {
-      return null;
     } else {
       return (
         <>
@@ -454,7 +448,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
               </span>
             </Card.Header>
           </Link>
-          <Card.Body style={{ fontSize: 14 }}>
+          <Card.Body style={{ fontSize: 14, maxWidth: '650px', margin: 'auto'}}>
             <Row xs={3} sm={3} >
               <MainStory />
               <MainExtra />
@@ -468,7 +462,12 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
 
   function MainStory() {
     if (matchGames[0].MainStory == 0 || matchGames[0].MainStory == null) {
-      return null;
+      return ( 
+        <Col style={{ paddingBottom: 10, textAlign: 'center' }}>
+          <span >MAIN</span>{" "}
+          <p style={{ fontWeight: "bold", fontSize: 20 }}>
+          NA</p>
+        </Col>);
     } else {
       return (
         <Col style={{ paddingBottom: 10, textAlign: 'center' }}>
@@ -482,7 +481,14 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
 
   function MainExtra() {
     if (matchGames[0].MainExtra == 0 || matchGames[0].MainExtra == null) {
-      return null;
+      return (
+           <Col style={{ paddingBottom: 10, textAlign: 'center' }}>
+          <span >+EXTRA</span>{" "}
+            <p style={{ fontWeight: "bold", fontSize: 20 }}>
+          NA</p>
+        </Col>
+
+        )
     } else {
       return (
         <Col style={{ paddingBottom: 10, textAlign: 'center' }}>
@@ -499,7 +505,13 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       matchGames[0].Completionist == 0 ||
       matchGames[0].Completionist == null
     ) {
-      return null;
+      return (
+         <Col style={{ paddingBottom: 10, textAlign: 'center' }}>
+          <span >COMPLETE</span>{" "}
+           <p style={{ fontWeight: "bold", fontSize: 20 }}>
+          NA</p>
+        </Col>
+        );
     } else {
       return (
         <Col style={{ paddingBottom: 10, textAlign: 'center' }}>
