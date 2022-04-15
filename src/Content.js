@@ -455,7 +455,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
             </Card.Header>
           </Link>
           <Card.Body style={{ fontSize: 14 }}>
-            <Row xs={1} sm={3}>
+            <Row xs={3} sm={3} >
               <MainStory />
               <MainExtra />
               <Completionist />
@@ -471,9 +471,10 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       return null;
     } else {
       return (
-        <Col style={{ paddingBottom: 10 }}>
-          <span style={{ fontWeight: "bold" }}>Main Story:</span>{" "}
-          {matchGames[0].MainStory + " Hours"}
+        <Col style={{ paddingBottom: 10, textAlign: 'center' }}>
+          <span >MAIN</span>{" "}
+          <p style={{ fontWeight: "bold", fontSize: 20 }}>
+          {matchGames[0].MainStory + "h"}</p>
         </Col>
       );
     }
@@ -484,9 +485,10 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       return null;
     } else {
       return (
-        <Col style={{ paddingBottom: 10 }}>
-          <span style={{ fontWeight: "bold" }}>Main+Extra:</span>{" "}
-          {matchGames[0].MainExtra + " Hours"}
+        <Col style={{ paddingBottom: 10, textAlign: 'center' }}>
+          <span >+EXTRA</span>{" "}
+            <p style={{ fontWeight: "bold", fontSize: 20 }}>
+          {matchGames[0].MainExtra + "h"}</p>
         </Col>
       );
     }
@@ -500,9 +502,10 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       return null;
     } else {
       return (
-        <Col style={{ paddingBottom: 10 }}>
-          <span style={{ fontWeight: "bold" }}>Completionist:</span>{" "}
-          {matchGames[0].Completionist + " Hours"}
+        <Col style={{ paddingBottom: 10, textAlign: 'center' }}>
+          <span >COMPLETE</span>{" "}
+           <p style={{ fontWeight: "bold", fontSize: 20 }}>
+          {matchGames[0].Completionist + "h"}</p>
         </Col>
       );
     }
