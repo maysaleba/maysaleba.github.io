@@ -10,6 +10,7 @@ import { Helmet } from "react-helmet";
 import { Redirect } from "react-router-dom";
 import GoogleAds from "./AdSense";
 import axios from "axios";
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 
 const YoutubeEmbed = ({ embedId }) => (
   <div className="video-responsive">
@@ -405,19 +406,24 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         >
           <span style={{ color: "black" }}>
             {" "}
-            <span className="opencritic-logo">
-              <span
-                style={{
-                  fontSize: 13,
-                  color: "white",
-                  borderRadius: 30,
-                  backgroundColor: "#fc3e04",
-                  paddingLeft: "10px",
-                  paddingRight: "10px",
-                }}
-              >
-                {matchGames[0].SCORE}
-              </span>
+            <span className="opencritic-logo2">
+            <div className="opencritic-container3">
+        <CircularProgressbar
+
+        value={matchGames[0].SCORE}
+        text={matchGames[0].SCORE}
+    
+        backgroundPadding={6}
+        styles={buildStyles({
+          backgroundColor: "rgba(0%, 0%, 0%, 0.5)",
+          textColor: "#000",
+          pathColor: "#fc3e04",
+          textSize: "40px",
+          trailColor: "#fff",
+        })}
+      />
+      </div>
+
             </span>
           </span>
         </Link>

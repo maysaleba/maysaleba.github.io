@@ -6,6 +6,8 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import noimage from "./noimage.jpg";
 import axios from "axios";
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 // import download from "./download.gif";
 // console.log("USD\n" + usdExchange + "\nARS\n" + arsExchange + "\nAUD\n" + audExchange + "\nBRL\n" + brlExchange + "\nCAD\n" + cadExchange + "\nCLP\n" + clpExchange + "\nCOP\n" + copExchange
@@ -132,9 +134,27 @@ today = yyyy + "-" + mm + "-" + dd;
       return null;
     }
     return (
-      <div className="d-flex justify-content-left opencritic-container">
+
+      <div className="d-flex justify-content-left opencritic-container2">
+    
+        <CircularProgressbar
+        className="score-text"
+        value={Score}
+        text={Score}
+        background
+        backgroundPadding={6}
+        styles={buildStyles({
+          backgroundColor: "rgba(0%, 0%, 0%, 0.5)",
+          textColor: "#fff",
+          pathColor: "#fc3e04",
+          textSize: "35px",
+          trailColor: "#600000",
+        })}
+      />
+
+       
         {/*<span className="opencritic-logo" />*/}
-        <span className="opencritic-logo score-text">{Score}</span>
+        {/*<span className="opencritic-logo score-text">{Score}</span>*/}
       </div>
     );
   }
