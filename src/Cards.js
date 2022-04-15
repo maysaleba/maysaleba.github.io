@@ -172,7 +172,7 @@ today = yyyy + "-" + mm + "-" + dd;
       var pricesobj = {
         Canada: CanadaPrice * cadExchange,
         Peru: PeruPrice * penExchange,
-        Argentina: ArgentinaPrice * arsExchange * 1.43,
+        Argentina: ArgentinaPrice * arsExchange * 1.64,
         Australia: AustraliaPrice * audExchange,
         Colombia: ColombiaPrice * copExchange,
         Southafrica: SouthafricaPrice * zarExchange,
