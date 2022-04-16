@@ -11,7 +11,6 @@ import { Redirect } from "react-router-dom";
 import GoogleAds from "./AdSense";
 import axios from "axios";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import Ad from 'react-google-publisher-tag';
 
 const YoutubeEmbed = ({ embedId }) => (
   <div className="video-responsive">
@@ -1607,8 +1606,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                 alignItems="center"
                 style={{ paddingBottom: 16 }}
               >
-               <Ad path="/22720530421/msb-content" />
-              {/*<GoogleAds />*/}
+            
+              <GoogleAds />
               </Box>
 
               <Card.Header
