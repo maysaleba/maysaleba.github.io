@@ -476,7 +476,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         </Col>);
     } else {
       return (
-        <Col style={{paddingBottom: 10, textAlign: 'center' }}>
+        <Col style={{ paddingBottom: 10, textAlign: 'center' }}>
           <span >MAIN</span>{" "}
           <p style={{ fontWeight: "bold", fontSize: 20 }}>
           {matchGames[0].MainStory + "h"}</p>
@@ -1606,8 +1606,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                 alignItems="center"
                 style={{ paddingBottom: 16 }}
               >
-            
-              <GoogleAds />
+                <GoogleAds />
               </Box>
 
               <Card.Header
