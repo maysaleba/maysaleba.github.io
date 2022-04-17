@@ -23,6 +23,18 @@
 }
 
 
+.hltb-container {
+
+padding-top: 10px;
+
+ 
+    color: white !important;
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .price-container {
   width:  100%;
 }
@@ -959,6 +971,8 @@ label:focus,
 .price-container {
   width:  100%;
 }
+
+
 
 }
 

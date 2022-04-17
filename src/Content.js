@@ -11,6 +11,7 @@ import { Redirect } from "react-router-dom";
 import GoogleAds from "./AdSense";
 import axios from "axios";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
 const YoutubeEmbed = ({ embedId }) => (
   <div className="video-responsive">
@@ -449,17 +450,20 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
               style={{ backgroundColor: "white", fontWeight: "bold" }}
             >
               HOW LONG TO BEAT
-              <span className="hltb-logo">
+               <img style={{paddingRight: '5px'}} src={download} /><AccessTimeIcon/>
+{/*              <span className="hltb-logo">
                 <img src={download} />
-              </span>
+              </span>*/}
             </Card.Header>
           </Link>
-          <Card.Body style={{ fontSize: 14, maxWidth: '650px', margin: 'auto'}}>
+          <Card.Body style={{ fontSize: 14, margin: 'auto'}}>
+            <div style={{columnRule: '4px double #ff00ff'}}>
             <Row xs={3} sm={3} >
               <MainStory />
               <MainExtra />
               <Completionist />
             </Row>
+            </div>
           </Card.Body>
         </>
       );
@@ -469,17 +473,22 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   function MainStory() {
     if (matchGames[0].MainStory == 0 || matchGames[0].MainStory == null) {
       return ( 
-        <Col style={{ paddingBottom: 10, textAlign: 'center' }}>
-          <span >MAIN</span>{" "}
-          <p style={{ fontWeight: "bold", fontSize: 20 }}>
-          NA</p>
-        </Col>);
+        <Col className="hltb-container" style={{ backgroundColor: '#3a6db5', paddingBottom: 10, textAlign: 'center' }}>
+        <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
+          <span style={{borderBottom: "1px solid #fff", fontSize: 12}} >MAIN STORY</span>{" "}
+          <span style={{ fontWeight: "bold", fontSize: 22 }}>
+          NA</span>
+          </div>
+        </Col>
+        )
     } else {
       return (
-        <Col style={{ paddingBottom: 10, textAlign: 'center' }}>
-          <span >MAIN</span>{" "}
-          <p style={{ fontWeight: "bold", fontSize: 20 }}>
-          {matchGames[0].MainStory + "h"}</p>
+        <Col className="hltb-container" style={{ backgroundColor: '#3a6db5', paddingBottom: 10, textAlign: 'center' }}>
+        <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
+          <span style={{borderBottom: "1px solid #fff", fontSize: 12}} >MAIN STORY</span>{" "}
+          <span style={{ fontWeight: "bold", fontSize: 22 }}>
+          {matchGames[0].MainStory + "h"}</span>
+          </div>
         </Col>
       );
     }
@@ -488,19 +497,22 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   function MainExtra() {
     if (matchGames[0].MainExtra == 0 || matchGames[0].MainExtra == null) {
       return (
-           <Col style={{ paddingBottom: 10, textAlign: 'center' }}>
-          <span >+EXTRA</span>{" "}
-            <p style={{ fontWeight: "bold", fontSize: 20 }}>
-          NA</p>
+       <Col className="hltb-container" style={{backgroundColor: '#5650a1', paddingBottom: 10, textAlign: 'center' }}>
+       <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
+          <span style={{borderBottom: "1px solid #fff", fontSize: 12}}  >MS+EXTRA</span>{" "}
+            <span style={{ fontWeight: "bold", fontSize: 22 }}>
+          NA</span>
+          </div>
         </Col>
-
         )
     } else {
       return (
-        <Col style={{ paddingBottom: 10, textAlign: 'center' }}>
-          <span >+EXTRA</span>{" "}
-            <p style={{ fontWeight: "bold", fontSize: 20 }}>
-          {matchGames[0].MainExtra + "h"}</p>
+       <Col className="hltb-container" style={{backgroundColor: '#5650a1', paddingBottom: 10, textAlign: 'center' }}>
+       <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
+          <span style={{borderBottom: "1px solid #fff", fontSize: 12}}  >MS+EXTRA</span>{" "}
+            <span style={{ fontWeight: "bold", fontSize: 22 }}>
+          {matchGames[0].MainExtra + "h"}</span>
+          </div>
         </Col>
       );
     }
@@ -512,18 +524,22 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       matchGames[0].Completionist == null
     ) {
       return (
-         <Col style={{ paddingBottom: 10, textAlign: 'center' }}>
-          <span >COMPLETE</span>{" "}
-           <p style={{ fontWeight: "bold", fontSize: 20 }}>
-          NA</p>
+         <Col className="hltb-container" style={{backgroundColor: '#824985', paddingBottom: 10, textAlign: 'center' }}>
+        <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
+          <span style={{borderBottom: "1px solid #fff", fontSize: 12}} >COMPLETE</span>{" "}
+           <span style={{ fontWeight: "bold", fontSize: 22 }}>
+          NA</span>
+          </div>
         </Col>
         );
     } else {
       return (
-        <Col style={{ paddingBottom: 10, textAlign: 'center' }}>
-          <span >COMPLETE</span>{" "}
-           <p style={{ fontWeight: "bold", fontSize: 20 }}>
-          {matchGames[0].Completionist + "h"}</p>
+         <Col className="hltb-container" style={{backgroundColor: '#824985', paddingBottom: 10, textAlign: 'center' }}>
+        <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
+          <span style={{borderBottom: "1px solid #fff", fontSize: 12}} >COMPLETE</span>{" "}
+           <span style={{ fontWeight: "bold", fontSize: 22 }}>
+          {matchGames[0].Completionist + "h"}</span>
+          </div>
         </Col>
       );
     }
