@@ -1654,7 +1654,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                 <Row xs={1} sm={2}>
                   <Col style={{ paddingBottom: 10 }}>
                     <span style={{ fontWeight: "bold" }}>Genre:</span>{" "}
-                    {matchGames[0].genre}
+                  {matchGames[0].genre.replaceAll(',', ', ')}
                   </Col>
                   <Col style={{ paddingBottom: 10 }}></Col>
                 </Row>
