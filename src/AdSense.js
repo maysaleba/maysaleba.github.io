@@ -1,16 +1,19 @@
-import React, { useEffect } from "react"
+import React from "react";
 
-const AdSense = () => {
-  return (
-    <ins
-      className="adsbygoogle example_responsive_1"
-      style={{ display: "block"}}
-      data-ad-client="ca-pub-4543556906953539"
-      data-ad-slot="1687469656"
-      enable_page_level_ads="true"
-      overlays={{bottom: true}}
-    ></ins>
-  )
+export default class AdSense extends React.Component {
+    componentDidMount () {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+    }
+
+    render () {
+        return (
+          
+                <ins className='adsbygoogle example_responsive_1'
+                     style={{ display: 'block' }}
+                     data-ad-client='ca-pub-4543556906953539'
+                     data-ad-slot='1687469656'
+                     >
+            </ins>
+        );
+    }
 }
-
-export default AdSense
