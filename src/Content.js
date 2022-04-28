@@ -392,6 +392,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     }
   }
 
+
+
   function HasOpenCritic(props) {
     if (props.props === "" || props.props === "-1" || props.props === "0") {
       return null;
@@ -1616,13 +1618,21 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
             <div style={{ fontSize: 14 }}>
               <HasHLTB props={matchGames[0]} />
 
-              <Box
+{/*              <Box
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
                 style={{ paddingBottom: 16 }}
               >
-                <GoogleAds />
+*/}
+              <Box
+                style={{ paddingBottom: 16 }}
+              >
+              <span style={{ fontSize: 11, fontWeight: 'bold', display: 'block', textAlign: 'center'}}>ADVERTISMENT</span>
+              <a href="https://invol.co/clakn5p"><div className="ads"></div> </a>
+              {/*<img src="https://img.involve.asia/rpss/campaigns_banners/64963-IdgpwkNSfeDvd1tWCXTpJOIdkbnstrbX.jpg"/>*/}
+              {/*<img src="https://img.involve.asia/rpss/campaigns_banners/1610939924-Eor7UR1fY7PRiMAotSjQLhmtYev6of7H.jpg" />*/}
+
               </Box>
 
               <Card.Header
