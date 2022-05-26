@@ -22,8 +22,50 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
 
   const newSwitchDiscounts = reviewssw.filter((x) => x.SaleStarted > daysago);
   const topSwitchDiscounts = reviewssw.filter((x) => x.SCORE > 70);
+
+
+    function sortJson(element, prop, propType, asc) {
+    switch (propType) {
+      case "int":
+        element = element.sort(function (a, b) {
+          if (asc) {
+            return parseInt(a[prop]) > parseInt(b[prop])
+              ? 1
+              : parseInt(a[prop]) < parseInt(b[prop])
+              ? -1
+              : 0;
+          } else {
+            return parseInt(b[prop]) > parseInt(a[prop])
+              ? 1
+              : parseInt(b[prop]) < parseInt(a[prop])
+              ? -1
+              : 0;
+          }
+        });
+        break;
+      default:
+        element = element.sort(function (a, b) {
+          if (asc) {
+            return a[prop].toLowerCase() > b[prop].toLowerCase()
+              ? 1
+              : a[prop].toLowerCase() < b[prop].toLowerCase()
+              ? -1
+              : 0;
+          } else {
+            return b[prop].toLowerCase() > a[prop].toLowerCase()
+              ? 1
+              : b[prop].toLowerCase() < a[prop].toLowerCase()
+              ? -1
+              : 0;
+          }
+        });
+    }
+  }
+
+  
+  sortJson(reviewsps, "SCORE", "string", false);
   const newPSDiscounts = reviewsps.filter((x) => x.SCORE > 80 && x.ReleaseDate > moago );
-  const topPSDiscounts = reviewsps.filter((x) => x.SCORE > 70);
+  const topPSDiscounts = reviewsps;
 
   return (
     <div>
