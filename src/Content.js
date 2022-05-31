@@ -179,7 +179,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         <tr className="item-table-best">
           <td>
             <a
-              href="https://bit.ly/3tvQ3No"
+              href="https://shope.ee/7evV9dw3HM"
               target="_blank"
               rel="noreferrer"
               style={{ padding: 0 }}
@@ -191,7 +191,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
           </td>
           <td className="version">
             <a
-              href="https://bit.ly/3tvQ3No"
+              href="https://shope.ee/7evV9dw3HM"
               target="_blank"
               rel="noreferrer"
               style={{ padding: 10 }}
@@ -200,7 +200,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
             </a>
           </td>
           <td className="version">
-            <a href="https://bit.ly/3tvQ3No" target="_blank" rel="noreferrer">
+            <a href="https://shope.ee/7evV9dw3HM" target="_blank" rel="noreferrer">
               <GiftCardVar />
             </a>
           </td>
@@ -211,7 +211,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         <tr className="item-table-best">
           <td>
             <a
-              href="https://bit.ly/2T5UXTK"
+              href="https://shope.ee/ApUDw57fU"
               target="_blank"
               rel="noreferrer"
               style={{ padding: 0 }}
@@ -223,7 +223,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
           </td>
           <td className="version">
             <a
-              href="https://bit.ly/2T5UXTK"
+              href="https://shope.ee/ApUDw57fU"
               target="_blank"
               rel="noreferrer"
               style={{ padding: 10 }}
@@ -232,7 +232,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
             </a>
           </td>
           <td className="version">
-            <a href="https://bit.ly/2T5UXTK" target="_blank" rel="noreferrer">
+            <a href="https://shope.ee/ApUDw57fU" target="_blank" rel="noreferrer">
               <GiftCardVar />
             </a>
           </td>
@@ -892,7 +892,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                   >
                     <a
                       className="nopaddingA"
-                      href="https://bit.ly/3tvQ3No"
+                      href="https://shope.ee/7evV9dw3HM"
                       target="_blank"
                       rel="noreferrer"
                       // style={{ padding: 10 }}
@@ -992,7 +992,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                   >
                     <a
                       className="nopaddingA"
-                      href="https://bit.ly/3tvQ3No"
+                      href="https://shope.ee/7evV9dw3HM"
                       target="_blank"
                       rel="noreferrer"
                       // style={{ padding: 10 }}
@@ -1119,7 +1119,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                   >
                     <a
                       className="nopaddingA"
-                      href="https://bit.ly/3tvQ3No"
+                      href="https://shope.ee/7evV9dw3HM"
                       target="_blank"
                       rel="noreferrer"
                       // style={{ padding: 10 }}
@@ -1273,7 +1273,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                   >
                     <a
                       className="nopaddingA"
-                      href="https://bit.ly/3tvQ3No"
+                      href="https://shope.ee/7evV9dw3HM"
                       target="_blank"
                       rel="noreferrer"
                       // style={{ padding: 10 }}
