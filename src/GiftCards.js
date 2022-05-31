@@ -106,20 +106,20 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
                 </Col>
               </Row>
               <Row>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/7evV9dw3HM">$10 - ₱520</a></Col>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/ApUDw57fU">$10 - ₱500</a></Col>
+                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/1L1Rd1cdsH">$10 - ₱520</a></Col>
+                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/4zujzcSWci">$10 - ₱500</a></Col>
               </Row>
               <Row>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/7evV9dw3HM">$20 - ₱1,040</a></Col>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/ApUDw57fU">$20 - ₱1,000</a></Col>
+                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/1L1Rd1cdsH">$20 - ₱1,040</a></Col>
+                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/4zujzcSWci">$20 - ₱1,000</a></Col>
               </Row>
               <Row>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/7evV9dw3HM">$35 - ₱1,820</a></Col>
-                 <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/ApUDw57fU">$25 - ₱1,250</a></Col>
+                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/1L1Rd1cdsH">$35 - ₱1,820</a></Col>
+                 <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/4zujzcSWci">$25 - ₱1,250</a></Col>
               </Row>
               <Row>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/7evV9dw3HM">$50 - ₱2,450</a></Col>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/ApUDw57fU">$50 - ₱2,500</a></Col>
+                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/1L1Rd1cdsH">$50 - ₱2,450</a></Col>
+                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/4zujzcSWci">$50 - ₱2,500</a></Col>
               </Row>
             </List>
             <br />
