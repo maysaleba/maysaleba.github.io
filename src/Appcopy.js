@@ -82,7 +82,7 @@ export default function Main() {
 
   // var theURL = "https://www.npmjs.com/package/adasddasdas";
   var theURL =
-    "https://a11pi.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
+    "https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
   var theURLa =
     "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json";
 

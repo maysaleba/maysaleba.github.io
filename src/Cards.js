@@ -49,7 +49,7 @@ let hour = today.getHours();
 today = yyyy + "-" + mm + "-" + dd;
 
   var theURL =
-    "https://a11pi.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
+    "https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
   var theURLa =
     "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json";
 
@@ -60,15 +60,12 @@ today = yyyy + "-" + mm + "-" + dd;
     axios
       .get(theURL)
       .then((response) => {
-        setDatam(response);
         setDatam(response.data.rates); // if using exchangerate.host
-
         // setDatam(response.data.php) // if using currency-api
       })
       .catch((error) => {
         console.log(error);
         axios.get(theURLa).then((response) => {
-          setDatam(response);
           setDatam(response.data.php);
           setMakeswitch("2");
           // if using exchangerate.host
