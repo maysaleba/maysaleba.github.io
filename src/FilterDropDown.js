@@ -49,7 +49,7 @@ const FilterDropDown = props => {
           href="#"
           onClick={() => {
             history.push('/switch');
-            clearSearchChange();
+            // clearSearchChange();
             clearPriceRange();
             onPriceRangeDrop("All Price Range")
             onPlatformChange("Switch");
@@ -62,7 +62,7 @@ const FilterDropDown = props => {
           href="#"
           onClick={() => {
             history.push('/playstation');
-            clearSearchChange();
+            // clearSearchChange();
             clearPriceRange();
             onPriceRangeDrop("All Price Range")
             onPlatformChange("Playstation");
