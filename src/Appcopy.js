@@ -81,8 +81,8 @@ export default function Main() {
   }
 
   // var theURL = "https://www.npmjs.com/package/adasddasdas";
-  var theURL = "x"
-    // "https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
+  var theURL = "https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
+    //"x"
   var theURLa =
     "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json";
 
