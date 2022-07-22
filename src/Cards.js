@@ -49,7 +49,7 @@ let hour = today.getHours();
 today = yyyy + "-" + mm + "-" + dd;
 
   var theURL = "https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
-    // "x"
+  var theURL = "x";
   var theURLa =
     "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json";
 
