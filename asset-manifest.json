@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/maysaleba.github.io/static/css/main.cba25fbd.chunk.css",
-    "main.js": "/maysaleba.github.io/static/js/main.52b2bb5b.chunk.js",
-    "main.js.map": "/maysaleba.github.io/static/js/main.52b2bb5b.chunk.js.map",
+    "main.js": "/maysaleba.github.io/static/js/main.e7dc74c7.chunk.js",
+    "main.js.map": "/maysaleba.github.io/static/js/main.e7dc74c7.chunk.js.map",
     "runtime-main.js": "/maysaleba.github.io/static/js/runtime-main.9ee584b1.js",
     "runtime-main.js.map": "/maysaleba.github.io/static/js/runtime-main.9ee584b1.js.map",
-    "static/css/2.82d5fd8b.chunk.css": "/maysaleba.github.io/static/css/2.82d5fd8b.chunk.css",
+    "static/css/2.a07948fa.chunk.css": "/maysaleba.github.io/static/css/2.a07948fa.chunk.css",
     "static/js/2.266f5c6d.chunk.js": "/maysaleba.github.io/static/js/2.266f5c6d.chunk.js",
     "static/js/2.266f5c6d.chunk.js.map": "/maysaleba.github.io/static/js/2.266f5c6d.chunk.js.map",
     "static/js/3.e27b53a9.chunk.js": "/maysaleba.github.io/static/js/3.e27b53a9.chunk.js",
     "static/js/3.e27b53a9.chunk.js.map": "/maysaleba.github.io/static/js/3.e27b53a9.chunk.js.map",
     "index.html": "/maysaleba.github.io/index.html",
-    "static/css/2.82d5fd8b.chunk.css.map": "/maysaleba.github.io/static/css/2.82d5fd8b.chunk.css.map",
+    "static/css/2.a07948fa.chunk.css.map": "/maysaleba.github.io/static/css/2.a07948fa.chunk.css.map",
     "static/css/main.cba25fbd.chunk.css.map": "/maysaleba.github.io/static/css/main.cba25fbd.chunk.css.map",
     "static/js/2.266f5c6d.chunk.js.LICENSE.txt": "/maysaleba.github.io/static/js/2.266f5c6d.chunk.js.LICENSE.txt",
     "static/media/Cards.css": "/maysaleba.github.io/static/media/silver-medal.26c1865a.png",
@@ -21,9 +21,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.9ee584b1.js",
-    "static/css/2.82d5fd8b.chunk.css",
+    "static/css/2.a07948fa.chunk.css",
     "static/js/2.266f5c6d.chunk.js",
     "static/css/main.cba25fbd.chunk.css",
-    "static/js/main.52b2bb5b.chunk.js"
+    "static/js/main.e7dc74c7.chunk.js"
   ]
 }
