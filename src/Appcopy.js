@@ -219,7 +219,7 @@ export default function Main() {
   let filteredReviews = useMemo(() =>
     latestField.filter((review) => {
       return (
-        review.Title.toLowerCase().includes(searchQuery.toLowerCase()) &&
+        review.Title.replace("é","e").toLowerCase().includes(searchQuery.toLowerCase()) &&
         review.genre.toLowerCase().includes(filterField.toLowerCase()) &&
         review.platform.toLowerCase().includes(platformField.toLowerCase()) &&
         review.SalePrice < priceRangeField
