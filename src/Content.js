@@ -479,7 +479,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
           <span style={{borderBottom: "1px solid #fff", fontSize: 12}} >MAIN STORY</span>{" "}
           <span style={{ fontWeight: "bold", fontSize: 22 }}>
-          NA</span>
+          -</span>
           </div>
         </Col>
         )
@@ -503,7 +503,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
        <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
           <span style={{borderBottom: "1px solid #fff", fontSize: 12}}  >MS+EXTRA</span>{" "}
             <span style={{ fontWeight: "bold", fontSize: 22 }}>
-          NA</span>
+          -</span>
           </div>
         </Col>
         )
@@ -530,7 +530,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
           <span style={{borderBottom: "1px solid #fff", fontSize: 12}} >COMPLETE</span>{" "}
            <span style={{ fontWeight: "bold", fontSize: 22 }}>
-          NA</span>
+          -</span>
           </div>
         </Col>
         );
