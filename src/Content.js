@@ -1639,7 +1639,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                     {matchGames[0].Publisher}
                   </Col>
                   <Col style={{ paddingBottom: 10 }}>
-                    <span style={{ fontWeight: "bold" }}>Added to eShop:</span>{" "}
+                    <span style={{ fontWeight: "bold" }}>Date Added:</span>{" "}
                     {DateConvert(matchGames[0].ReleaseDate)}
                   </Col>
                 </Row>
