@@ -132,7 +132,7 @@ today = yyyy + "-" + mm + "-" + dd;
     }
     return (
 
-      <div className="d-flex justify-content-left opencritic-container2">
+      <div className="d-flex justify-content-left float-end opencritic-container2">
     
         <CircularProgressbar
         className="score-text"
@@ -333,12 +333,12 @@ today = yyyy + "-" + mm + "-" + dd;
     const platform = props.hasBadge;
     if (platform === "Switch") {
       return (
-        <span className="img-responsive float-end nbadges nintendo"></span>
+        <span className="img-responsive nbadges nintendo"></span>
       );
     }
     if (platform === "Playstation") {
       return (
-        <span className="img-responsive float-end pbadges playstation"></span>
+        <span className="img-responsive pbadges playstation"></span>
       );
     }
   }
