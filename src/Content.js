@@ -444,16 +444,14 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function HasHLTB(props) {
-    if (props.props.platform !== "Switch") {
-      return null;
-    } else {
+  {
       return (
         <>
           <Link
             underline="none"
             hover="none"
             color="black"
-            href="https://howlongtobeat.com/"
+            href={"https://howlongtobeat.com/"+matchGames[0].LowestPrice}
             target="_blank"
             rel="noreferrer"
           >
