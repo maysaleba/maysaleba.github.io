@@ -132,7 +132,16 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
             <br />
           </>
         );
-      } else {
+      } 
+      else if (matchGames[0].PlusPrice == 999999) {
+       return (
+          <>
+            <span className="psplusbadge">GAME TRIAL</span>
+            <br />
+          </>
+        );
+      }
+      else {
         return (
           <>
             <span className="psplusbadge">
