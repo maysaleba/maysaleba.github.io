@@ -484,7 +484,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   function MainStory() {
     if (matchGames[0].MainStory == 0 || matchGames[0].MainStory == null) {
       return ( 
-        <Col className="hltb-container" style={{ backgroundColor: '#3a6db5', paddingBottom: 10, textAlign: 'center' }}>
+        <Col className="hltb-container" style={{borderTopLeftRadius:5, backgroundColor: '#3a6db5', paddingBottom: 10, textAlign: 'center' }}>
         <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
           <span style={{borderBottom: "1px solid #fff", fontSize: 12}} >MAIN STORY</span>{" "}
           <span style={{ fontWeight: "bold", fontSize: 22 }}>
@@ -494,7 +494,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         )
     } else {
       return (
-        <Col className="hltb-container" style={{ backgroundColor: '#3a6db5', paddingBottom: 10, textAlign: 'center' }}>
+        <Col className="hltb-container" style={{borderTopLeftRadius:5, backgroundColor: '#3a6db5', paddingBottom: 10, textAlign: 'center' }}>
         <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
           <span style={{borderBottom: "1px solid #fff", fontSize: 12}} >MAIN STORY</span>{" "}
           <span style={{ fontWeight: "bold", fontSize: 22 }}>
@@ -535,7 +535,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       matchGames[0].Completionist == null
     ) {
       return (
-         <Col className="hltb-container" style={{backgroundColor: '#824985', paddingBottom: 10, textAlign: 'center' }}>
+         <Col className="hltb-container" style={{borderTopRightRadius:5, backgroundColor: '#824985', paddingBottom: 10, textAlign: 'center' }}>
         <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
           <span style={{borderBottom: "1px solid #fff", fontSize: 12}} >COMPLETE</span>{" "}
            <span style={{ fontWeight: "bold", fontSize: 22 }}>
@@ -545,7 +545,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         );
     } else {
       return (
-         <Col className="hltb-container" style={{backgroundColor: '#824985', paddingBottom: 10, textAlign: 'center' }}>
+         <Col className="hltb-container" style={{borderTopRightRadius:5, backgroundColor: '#824985', paddingBottom: 10, textAlign: 'center' }}>
         <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
           <span style={{borderBottom: "1px solid #fff", fontSize: 12}} >COMPLETE</span>{" "}
            <span style={{ fontWeight: "bold", fontSize: 22 }}>
