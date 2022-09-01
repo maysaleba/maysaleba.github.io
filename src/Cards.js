@@ -319,7 +319,14 @@ today = yyyy + "-" + mm + "-" + dd;
             FREE
           </span>
         );
-      } else {
+      } else if (PlusPrice === 999999) {
+        return (
+          <span className="psplusbadge" style={{ fontWeight: "bold" }}>
+            TRIAL
+          </span>
+        );
+}
+      else {
         return (
           <span className="psplusbadge" style={{ fontWeight: "bold" }}>
             {"₱" + Math.round(PlusPrice * usdExchange)}
