@@ -503,6 +503,21 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     }
   }
 
+    function PlatformBadge(props) {
+    const platform = props.hasBadge;
+    if (platform === "Switch") {
+      return (
+        <span className="img-responsive nbadges nintendo"></span>
+      );
+    }
+    if (platform === "Playstation") {
+      return (
+        <span className="img-responsive pbadges playstation"></span>
+      );
+    }
+  }
+
+
   function MainExtra() {
     if (matchGames[0].MainExtra == 0 || matchGames[0].MainExtra == null) {
       return (
@@ -1400,6 +1415,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         }
       }
 
+
+
       return (
         <div
           className="price-container"
@@ -1587,17 +1604,29 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
             <Background />
           </BackgroundContainer>
           {/*    <NaviBar />*/}
-          <div className="text-center m-3 p-auto" style={{ paddingBottom: 15 }}>
-            <img
+
+
+          <div className="m-3 p-auto" style={{ paddingBottom: 15 }}>
+
+            <Card style={{ maxWidth: '236px', width: '50%',
+               marginLeft: 'auto', marginRight: 'auto'}}>
+            <Card.Img
               alt=""
               style={{
-                height: "auto",
-                maxWidth: "50%",
-                borderRadius: "5px",
+
               }}
               src={matchGames[0].Image}
             />
-          </div>
+
+
+
+                      <Card.ImgOverlay className="card-img-overlay">
+            <PlatformBadge hasBadge={matchGames[0].platform} />
+
+          </Card.ImgOverlay>
+          </Card>
+</div>
+
           <Paper elevation={2} className="content-container">
             {/*<Card className="content-container-gameinfo">*/}
             <Card.Header
