@@ -248,23 +248,23 @@ a.giftcardlink {
 
 table tr:first-child td:first-child {
     border-top-left-radius: 10px;
-    border-color: white;
+    border-color: #f0e9f8;
     /*border-bottom-left-radius: 10px;*/
-    border:  none;
+    /*border:  none;*/
 }
 
 table tr:first-child td:nth-child(2) {
     /*border-top-right-radius: 10px;*/
-    border-color: white;
+    border-color: #f0e9f8;
     /*border-bottom-right-radius: 10px;*/
-    border: none;
+    /*border: none;*/
 }
 
 table tr:first-child td:last-child {
     border-top-right-radius: 10px;
-    border-color: white;
+    border-color: #f0e9f8;
     /*border-bottom-right-radius: 10px;*/
-    border: none;
+    /*border: none;*/
 }
 
 
@@ -489,6 +489,27 @@ margin-left: 5px;
 padding-left: 20px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
+
+.sgregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/SG.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.hkregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/HK.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
 
 .arregion-logo {
 background-size:  15px;

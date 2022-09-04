@@ -52,6 +52,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     var plnExchange = 1 / JSON.stringify(datam.PLN);
     var rubExchange = 1 / JSON.stringify(datam.RUB);
     var zarExchange = 1 / JSON.stringify(datam.ZAR);
+    var sgdExchange = 1 / JSON.stringify(datam.SGD);
+    var hkdExchange = 1 / JSON.stringify(datam.HKD);
   } else {
     var usdExchange = 1 / JSON.stringify(datam.usd);
     var arsExchange = 1 / JSON.stringify(datam.ars);
@@ -65,6 +67,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     var plnExchange = 1 / JSON.stringify(datam.pln);
     var rubExchange = 1 / JSON.stringify(datam.rub);
     var zarExchange = 1 / JSON.stringify(datam.zar);
+    var sgdExchange = 1 / JSON.stringify(datam.sgd);
+    var hkdExchange = 1 / JSON.stringify(datam.hkd);
   }
   // {100*JSON.stringify(datam.usd)}
 
@@ -154,6 +158,74 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     }
   }
 
+    function HkPlusPrice() {
+    if (matchGames[0].platform === "Switch") {
+      return null;
+    }
+    if (matchGames[0].platform === "Playstation") {
+      if (matchGames[0].hkPlusPrice == 0) {
+        return (
+          <>
+            <span className="psplusbadge">FREE</span>
+            <br />
+          </>
+        );
+      } 
+      else if (matchGames[0].hkPlusPrice == 999999) {
+       return (
+          <>
+            <span className="psplusbadge">TRIAL</span>
+            <br />
+          </>
+        );
+      }
+      else {
+        return (
+          <>
+            <span className="psplusbadge">
+              {"₱" + Math.round(matchGames[0].hkPlusPrice * hkdExchange)}
+            </span>
+            <br />
+          </>
+        );
+      }
+    }
+  }
+
+    function SgPlusPrice() {
+    if (matchGames[0].platform === "Switch") {
+      return null;
+    }
+    if (matchGames[0].platform === "Playstation") {
+      if (matchGames[0].sgPlusPrice == 0) {
+        return (
+          <>
+            <span className="psplusbadge">FREE</span>
+            <br />
+          </>
+        );
+      } 
+      else if (matchGames[0].sgPlusPrice == 999999) {
+       return (
+          <>
+            <span className="psplusbadge">TRIAL</span>
+            <br />
+          </>
+        );
+      }
+      else {
+        return (
+          <>
+            <span className="psplusbadge">
+              {"₱" + Math.round(matchGames[0].sgPlusPrice * sgdExchange)}
+            </span>
+            <br />
+          </>
+        );
+      }
+    }
+  }
+
   function ShopeeCard() {
     if (matchGames[0].platform === "Switch") {
       if (parseFloat(matchGames[0].SalePrice) <= 10) {
@@ -181,6 +253,32 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       }
     }
   }
+
+
+function HkShopeeCard(){
+       if (parseFloat(matchGames[0].HongKongPrice) <= 80) {
+        return <span>HK$80</span>;
+      } else if (parseFloat(matchGames[0].SalePrice) <= 200) {
+        return <span>HK$200</span>;
+      } else if (parseFloat(matchGames[0].SalePrice) <= 300) {
+        return <span>HK$300</span>;
+      } else {
+        return <span>HK$500</span>;
+      }
+}
+
+function SgShopeeCard(){
+       if (parseFloat(matchGames[0].SingaporePrice) <= 20) {
+        return <span>SG$20</span>;
+      } else if (parseFloat(matchGames[0].SalePrice) <= 30) {
+        return <span>SG$30</span>;
+      } else if (parseFloat(matchGames[0].SalePrice) <= 50) {
+        return <span>SG$50</span>;
+      } else {
+        return <span>SG$80</span>;
+      }
+}
+
 
   function ShopeeURL() {
     if (matchGames[0].platform === "Switch") {
@@ -589,6 +687,260 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     }
   }
 
+  function PsPrices() {
+    if (matchGames[0].HongKongPrice !== "" && matchGames[0].SingaporePrice !== ""){
+return (
+              <>
+              <tr className="item-table-best">
+                <td className="version" style={{borderColor: 'white'}}>
+                  <span>
+                             <div style={{ marginLeft: "1rem" }} className="usregion-logo">
+            United States
+          </div>
+                  </span>
+                </td>
+                <td className="version" style={{borderColor: 'white'}} ></td>
+                <td className="version" style={{borderColor: 'white'}}>
+                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                    <div className="btn btn-block btn-secondary">
+                      <PesoPlusPrice />
+                      {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
+                      <span className="ml-2 badge badge-danger">
+                        <strike>
+                          <PesoPrice props={matchGames[0].Price} />
+                        </strike>
+                      </span>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+              <tr className="item-table-best">
+                <td className="version" >
+                  <span>
+                             <div style={{ marginLeft: "1rem" }} className="sgregion-logo">
+            Singapore
+          </div>
+                  </span>
+                </td>
+                <td className="version" ></td>
+                <td className="version" >
+                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                    <div className="btn btn-block btn-secondary">
+                      <SgPlusPrice />
+                      {"₱" + Math.round(matchGames[0].SingaporePrice * sgdExchange)}
+                      <span className="ml-2 badge badge-danger">
+                        <strike>
+                          <PesoPrice props={matchGames[0].Price} />
+                        </strike>
+                      </span>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+         
+              <tr className="item-table-best">
+                <td className="version" style={{border: 'none'}}>
+                  <span>
+                             <div style={{ marginLeft: "1rem" }} className="hkregion-logo">
+            Hong Kong
+          </div>
+                  </span>
+                </td>
+                <td className="version" style={{border: 'none'}}></td>
+                <td className="version" style={{border: 'none'}}>
+                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                    <div className="btn btn-block btn-secondary">
+                      <HkPlusPrice />
+                      {"₱" + Math.round(matchGames[0].HongKongPrice * hkdExchange)}
+                      <span className="ml-2 badge badge-danger">
+                        <strike>
+                          <PesoPrice props={matchGames[0].Price} />
+                        </strike>
+                      </span>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+              <tr className="item-table-best">
+                <td className="item-note text-left" >
+                  <div
+                    className="vendors"
+                    style={{
+                      display: "flex",
+                      justifyContent: "left",
+                      flexWrap: "wrap",
+                      fontSize: 14,
+                    }}
+                  >
+                    <span className="nopaddingA">
+                      {" "}
+                      <div className="ml-2 badge badge-info">
+                        {" "}
+                        US<ShopeeCard /> | <SgShopeeCard /> | <HkShopeeCard />
+                      </div>
+                    </span>{" "}
+                  </div>
+                </td>
+                <td></td>
+                <td className="item-note text-right">
+                  <div
+                    className="vendors"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    <a
+                      className="nopaddingA"
+                      href="https://shope.ee/6ziEPIJLma"
+                      target="_blank"
+                      rel="noreferrer"
+                      // style={{ padding: 10 }}
+                    >
+                      <div className="ml-2 badge badge-danger">
+                        <span style={{ fontSize: 13 }} className="shopee-logo">
+                          <span className="suggest-text">SHOPEE</span>
+                        </span>
+                      </div>
+                    </a>
+                    <a
+                      className="nopaddingA"
+                      href="https://bit.ly/3TzZMjd"
+                      target="_blank"
+                      rel="noreferrer"
+                      // style={{ padding: 10 }}
+                    >
+                      <div className="ml-2 badge badge-danger">
+                        <span style={{ fontSize: 13 }} className="lazada-logo">
+                          <span className="suggest-text">LAZADA</span>
+                        </span>
+                      </div>
+                    </a>
+                    <a
+                      className="nopaddingA"
+                      href="https://bit.ly/3KPfOSq"
+                      target="_blank"
+                      rel="noreferrer"
+                      // style={{ padding: 10 }}
+                    >
+                      <div className="ml-2 badge badge-danger">
+                        <span style={{ fontSize: 13 }} className="coda-logo">
+                          <span className="suggest-text">CODASHOP</span>
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </>
+  )
+
+    } else {
+
+    return(
+      <>
+        <tr className="item-table-best">
+                <td className="version">
+                  <span>
+                             <div style={{ marginLeft: "1rem" }} className="usregion-logo">
+            United States
+          </div>
+                  </span>
+                </td>
+                <td className="version"></td>
+                <td className="version">
+                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                    <div className="btn btn-block btn-secondary">
+                      <PesoPlusPrice />
+                      {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
+                      <span className="ml-2 badge badge-danger">
+                        <strike>
+                          <PesoPrice props={matchGames[0].Price} />
+                        </strike>
+                      </span>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+              <tr className="item-table-best">
+                <td className="item-note text-left">
+                  <div
+                    className="vendors"
+                    style={{
+                      display: "flex",
+                      justifyContent: "left",
+                      flexWrap: "wrap",
+                      fontSize: 14,
+                    }}
+                  >
+                    <span className="nopaddingA">
+                      {" "}
+                      <div className="ml-2 badge badge-info">
+                        {" "}
+                        Suggested Gift Card: <ShopeeCard />
+                      </div>
+                    </span>{" "}
+                  </div>
+                </td>
+                <td></td>
+                <td className="item-note text-right">
+                  <div
+                    className="vendors"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    <a
+                      className="nopaddingA"
+                      href="https://shope.ee/6ziEPIJLma"
+                      target="_blank"
+                      rel="noreferrer"
+                      // style={{ padding: 10 }}
+                    >
+                      <div className="ml-2 badge badge-danger">
+                        <span style={{ fontSize: 13 }} className="shopee-logo">
+                          <span className="suggest-text">SHOPEE</span>
+                        </span>
+                      </div>
+                    </a>
+                    <a
+                      className="nopaddingA"
+                      href="https://bit.ly/3TzZMjd"
+                      target="_blank"
+                      rel="noreferrer"
+                      // style={{ padding: 10 }}
+                    >
+                      <div className="ml-2 badge badge-danger">
+                        <span style={{ fontSize: 13 }} className="lazada-logo">
+                          <span className="suggest-text">LAZADA</span>
+                        </span>
+                      </div>
+                    </a>
+                    <a
+                      className="nopaddingA"
+                      href="https://bit.ly/3KPfOSq"
+                      target="_blank"
+                      rel="noreferrer"
+                      // style={{ padding: 10 }}
+                    >
+                      <div className="ml-2 badge badge-danger">
+                        <span style={{ fontSize: 13 }} className="coda-logo">
+                          <span className="suggest-text">CODASHOP</span>
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+              </tr></>)
+
+    }
+
+
+      }
+
   function PricesTable(props) {
     // console.log(props);
     if (props.psorsw === "Switch") {
@@ -856,6 +1208,10 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       // var rank2price = entries[1][1]
       // var rank3country = entries[2][0]
       // var rank3price = entries[2][1]
+
+
+      
+
 
       function RankRows() {
         if (entries.length === 1) {
@@ -1433,9 +1789,19 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       return (
         <div
           className="price-container"
-          style={{ margin: "auto", padding: 10 }}
+          style={{ margin: "auto", paddingTop: 10 }}
         >
-          <table className="table table-align-middle item-price-table">
+                  <table className="table table-align-middle item-price-table">
+            <tbody>
+              <PsPrices />
+            </tbody>
+          </table>
+      
+
+
+
+
+        {/*  <table className="table table-align-middle item-price-table">
             <tbody>
               <tr className="item-table-best has-notes">
                 <td>
@@ -1492,7 +1858,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
               </tr>
               <ShopeeURL />
             </tbody>
-          </table>
+          </table>*/}
         </div>
       );
     }
