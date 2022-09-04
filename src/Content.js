@@ -1608,7 +1608,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
 
           <div className="m-3 p-auto" style={{ paddingBottom: 15 }}>
 
-            <Card style={{ maxWidth: '236px', width: '50%',
+            <Card className="border-0" style={{ borderRadius: '7px', maxWidth: '236px', width: '50%',
                marginLeft: 'auto', marginRight: 'auto'}}>
             <Card.Img
               alt=""
