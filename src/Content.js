@@ -724,7 +724,7 @@ return (
                 </td>
                 <td className="version" ></td>
                 <td className="version" >
-                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                  <a href={matchGames[0].URLSG} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
                       <SgPlusPrice />
                       {"₱" + Math.round(matchGames[0].SingaporePrice * sgdExchange)}
@@ -748,7 +748,7 @@ return (
                 </td>
                 <td className="version" style={{border: 'none'}}></td>
                 <td className="version" style={{border: 'none'}}>
-                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                  <a href={matchGames[0].URLHK} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
                       <HkPlusPrice />
                       {"₱" + Math.round(matchGames[0].HongKongPrice * hkdExchange)}

@@ -66,10 +66,36 @@ const FilterDropDown = props => {
             clearPriceRange();
             onPriceRangeDrop("All Price Range")
             onPlatformChange("Playstation");
-            onPlatformDrop("Playstation");
+            onPlatformDrop("Playstation - US");
           }}
         >
-          Playstation
+          Playstation - US
+        </Dropdown.Item>
+         <Dropdown.Item
+          href="#"
+          onClick={() => {
+            history.push('/playstation-sg');
+            // clearSearchChange();
+            clearPriceRange();
+            onPriceRangeDrop("All Price Range")
+            onPlatformChange("Playstation");
+            onPlatformDrop("Playstation - SG");
+          }}
+        >
+          Playstation - SG
+        </Dropdown.Item>
+         <Dropdown.Item
+          href="#"
+          onClick={() => {
+            history.push('/playstation-hk');
+            // clearSearchChange();
+            clearPriceRange();
+            onPriceRangeDrop("All Price Range")
+            onPlatformChange("Playstation");
+            onPlatformDrop("Playstation - HK");
+          }}
+        >
+          Playstation - HK
         </Dropdown.Item>
 
       </Dropdown.Menu>

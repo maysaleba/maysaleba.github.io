@@ -121,6 +121,7 @@ export default function Main() {
     useState("All Price Range");
   const [platformField, setPlatformField] = useState("");
   const [filterField, setFilterField] = useState("");
+  const [regionFilter, setRegionFilter] = useState("");
   const [genreDropDown, setGenreDropDown] = useState("All Genres");
   const [platformDropDown, setPlatformDropDown] = useState("All Platforms");
   const [latestField, setLatestField] = useState([]);
@@ -206,6 +207,10 @@ export default function Main() {
     setPlatformField(filterPlatform);
   };
 
+    const onRegionChange = (regionFilter) => {
+    setRegionFilter(regionFilter);
+  };
+
   const onFilterChange = (filterGenre) => {
     setFilterField(filterGenre);
   };
@@ -216,12 +221,15 @@ export default function Main() {
     setSearchQuery("");
   };
 
+
+
   let filteredReviews = useMemo(() =>
     latestField.filter((review) => {
       return (
         review.Title.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e").toLowerCase().includes(searchQuery.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e").toLowerCase()) &&
         review.genre.toLowerCase().includes(filterField.toLowerCase()) &&
-        review.platform.toLowerCase().includes(platformField.toLowerCase()) &&
+        review.platform.toLowerCase().includes(platformField.toLowerCase()) && 
+        review.ESRBRating.toLowerCase().includes(regionFilter.toLowerCase()) &&
         review.SalePrice < priceRangeField
       );
     })
@@ -238,6 +246,7 @@ export default function Main() {
       filterField ||
       latestDropDown ||
       platformField ||
+      regionFilter ||
       priceRangeField
     )
       jumpPage(1);
@@ -246,6 +255,7 @@ export default function Main() {
     filterField,
     latestDropDown,
     platformField,
+    regionFilter,
     priceRangeField,
     jumpPage,
   ]);
@@ -409,6 +419,7 @@ export default function Main() {
           <div>
             {setPlatformField("Switch")}
             {setPlatformDropDown("Switch")}
+            {setRegionFilter("")}
             <Search
               onPlatformChange={onPlatformChange}
               onPlatformDrop={onPlatformDrop}
@@ -464,7 +475,8 @@ export default function Main() {
         render={(props) => (
           <div>
             {setPlatformField("Playstation")}
-            {setPlatformDropDown("Playstation")}
+            {setPlatformDropDown("Playstation - US")}
+            {setRegionFilter("US")}
             <Search
               onPlatformChange={onPlatformChange}
               onPlatformDrop={onPlatformDrop}
@@ -502,7 +514,178 @@ export default function Main() {
             />
             <Helmet>
               <meta charset="utf-8" />
-              <title>Sony Playstation - May Sale Ba?</title>
+              <title>Sony Playstation - US - May Sale Ba?</title>
+              <meta
+                name="description"
+                content={
+                  "Get to know about " +
+                  reviewsps.length +
+                  " Sony Playstation deals in Philippine Peso!"
+                }
+              />
+            </Helmet>
+          </div>
+        )}
+      />
+            <Route
+        path="/playstation-us"
+        render={(props) => (
+          <div>
+            {setPlatformField("Playstation")}
+            {setPlatformDropDown("Playstation - US")}
+            {setRegionFilter("US")}
+            <Search
+              onPlatformChange={onPlatformChange}
+              onPlatformDrop={onPlatformDrop}
+              clearPriceRange={clearPriceRange}
+              onPriceRangeDrop={onPriceRangeDrop}
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+              clearGenre={clearGenre}
+              onDropDownChange={onDropDownChange}
+            />
+            <CardGroup
+              clearPriceRange={clearPriceRange}
+              priceRangeDropDown={priceRangeDropDown}
+              onPriceRangeDrop={onPriceRangeDrop}
+              onPriceRangeChange={onPriceRangeChange}
+              clearGenre={clearGenre}
+              onPlatformDrop={onPlatformDrop}
+              onPlatformChange={onPlatformChange}
+              platformDropDown={platformDropDown}
+              onLatestDrop={onLatestDrop}
+              onLatestChange={onLatestChange}
+              latestDropDown={latestDropDown}
+              clearFilter={clearFilter}
+              genreDropDown={genreDropDown}
+              onDropDownChange={onDropDownChange}
+              onFilterChange={onFilterChange}
+              clearSearchChange={clearSearchChange}
+              searchQuery={searchQuery}
+              page={page}
+              setSearchQuery={setSearchQuery}
+              jumpPage={jumpPage}
+              filteredReviews={filteredReviews}
+              pageData={pageData}
+              maxPage={maxPage}
+            />
+            <Helmet>
+              <meta charset="utf-8" />
+              <title>Sony Playstation - US - May Sale Ba?</title>
+              <meta
+                name="description"
+                content={
+                  "Get to know about " +
+                  reviewsps.length +
+                  " Sony Playstation deals in Philippine Peso!"
+                }
+              />
+            </Helmet>
+          </div>
+        )}
+      />
+      <Route
+        path="/playstation-sg"
+        render={(props) => (
+          <div>
+            {setPlatformField("Playstation")}
+            {setPlatformDropDown("Playstation - SG")}
+            {setRegionFilter("SG")}
+            <Search
+              onPlatformChange={onPlatformChange}
+              onPlatformDrop={onPlatformDrop}
+              clearPriceRange={clearPriceRange}
+              onPriceRangeDrop={onPriceRangeDrop}
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+              clearGenre={clearGenre}
+              onDropDownChange={onDropDownChange}
+            />
+            <CardGroup
+              clearPriceRange={clearPriceRange}
+              priceRangeDropDown={priceRangeDropDown}
+              onPriceRangeDrop={onPriceRangeDrop}
+              onPriceRangeChange={onPriceRangeChange}
+              clearGenre={clearGenre}
+              onPlatformDrop={onPlatformDrop}
+              onPlatformChange={onPlatformChange}
+              platformDropDown={platformDropDown}
+              onLatestDrop={onLatestDrop}
+              onLatestChange={onLatestChange}
+              latestDropDown={latestDropDown}
+              clearFilter={clearFilter}
+              genreDropDown={genreDropDown}
+              onDropDownChange={onDropDownChange}
+              onFilterChange={onFilterChange}
+              clearSearchChange={clearSearchChange}
+              searchQuery={searchQuery}
+              page={page}
+              setSearchQuery={setSearchQuery}
+              jumpPage={jumpPage}
+              filteredReviews={filteredReviews}
+              pageData={pageData}
+              maxPage={maxPage}
+            />
+            <Helmet>
+              <meta charset="utf-8" />
+              <title>Sony Playstation - SG - May Sale Ba?</title>
+              <meta
+                name="description"
+                content={
+                  "Get to know about " +
+                  reviewsps.length +
+                  " Sony Playstation deals in Philippine Peso!"
+                }
+              />
+            </Helmet>
+          </div>
+        )}
+      />
+            <Route
+        path="/playstation-hk"
+        render={(props) => (
+          <div>
+            {setPlatformField("Playstation")}
+            {setPlatformDropDown("Playstation - HK")}
+            {setRegionFilter("HK")}
+            <Search
+              onPlatformChange={onPlatformChange}
+              onPlatformDrop={onPlatformDrop}
+              clearPriceRange={clearPriceRange}
+              onPriceRangeDrop={onPriceRangeDrop}
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+              clearGenre={clearGenre}
+              onDropDownChange={onDropDownChange}
+            />
+            <CardGroup
+              clearPriceRange={clearPriceRange}
+              priceRangeDropDown={priceRangeDropDown}
+              onPriceRangeDrop={onPriceRangeDrop}
+              onPriceRangeChange={onPriceRangeChange}
+              clearGenre={clearGenre}
+              onPlatformDrop={onPlatformDrop}
+              onPlatformChange={onPlatformChange}
+              platformDropDown={platformDropDown}
+              onLatestDrop={onLatestDrop}
+              onLatestChange={onLatestChange}
+              latestDropDown={latestDropDown}
+              clearFilter={clearFilter}
+              genreDropDown={genreDropDown}
+              onDropDownChange={onDropDownChange}
+              onFilterChange={onFilterChange}
+              clearSearchChange={clearSearchChange}
+              searchQuery={searchQuery}
+              page={page}
+              setSearchQuery={setSearchQuery}
+              jumpPage={jumpPage}
+              filteredReviews={filteredReviews}
+              pageData={pageData}
+              maxPage={maxPage}
+            />
+            <Helmet>
+              <meta charset="utf-8" />
+              <title>Sony Playstation - HK - May Sale Ba?</title>
               <meta
                 name="description"
                 content={
