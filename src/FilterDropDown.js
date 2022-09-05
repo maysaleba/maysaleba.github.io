@@ -58,10 +58,23 @@ const FilterDropDown = props => {
         >
           Switch
         </Dropdown.Item>
-        <Dropdown.Item
+         <Dropdown.Item
           href="#"
           onClick={() => {
             history.push('/playstation');
+            // clearSearchChange();
+            clearPriceRange();
+            onPriceRangeDrop("All Price Range")
+            onPlatformChange("Playstation");
+            onPlatformDrop("Playstation");
+          }}
+        >
+          Playstation
+        </Dropdown.Item>
+        <Dropdown.Item
+          href="#"
+          onClick={() => {
+            history.push('/playstation-us');
             // clearSearchChange();
             clearPriceRange();
             onPriceRangeDrop("All Price Range")

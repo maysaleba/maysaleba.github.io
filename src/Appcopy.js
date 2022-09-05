@@ -2,9 +2,9 @@ import React, { useEffect, useMemo, useState } from "react";
 import usePagination from "./usePagination.js";
 import reviewssw from "./csvjson.json";
 import reviewspsx from "./csvjsonus.json";
+import sgreviewspsx from "./csvjsonsg.json";
+import hkreviewspsx from "./csvjsonhk.json";
 import CardGroup from "./CardGroup";
-import CardGroupHK from "./CardGroupHK";
-import CardGroupSG from "./CardGroupSG";
 import "./App.css";
 import { BrowserRouter as Router, Route, useLocation } from "react-router-dom";
 import Content from "./Content";
@@ -29,6 +29,8 @@ let hour = today.getHours();
 today = yyyy + "-" + mm + "-" + dd;
 
 let reviewsps = reviewspsx.filter((review) => review.SaleEnds > today);
+let sgreviewsps = sgreviewspsx.filter((review) => review.SaleEnds > today);
+let hkreviewsps = hkreviewspsx.filter((review) => review.SaleEnds > today);
 
 export default function Main() {
   function sortJson(element, prop, propType, asc) {
@@ -130,7 +132,7 @@ export default function Main() {
   const [latestDropDown, setLatestDropDown] = useState("Top Rated");
 
   useEffect(() => {
-    const reviews = reviewssw.concat(reviewsps);
+    const reviews = reviewssw.concat(reviewsps).concat(sgreviewsps).concat(hkreviewsps);
     sortJson(reviews, "SCORE", "string", false);
     setLatestField(reviews);
   }, []);
@@ -262,6 +264,7 @@ export default function Main() {
     jumpPage,
   ]);
 
+
   const BackgroundContainer = styled.div`
     -blur-radius: 20px;
     position: absolute;
@@ -376,6 +379,7 @@ export default function Main() {
         exact
         render={(props) => (
           <div>
+          {setRegionFilter("")}
             <Search
               onPlatformChange={onPlatformChange}
               onPlatformDrop={onPlatformDrop}
@@ -472,13 +476,14 @@ export default function Main() {
           </div>
         )}
       />
-      <Route
+    
+                  <Route
         path="/playstation"
         render={(props) => (
           <div>
             {setPlatformField("Playstation")}
-            {setPlatformDropDown("Playstation - US")}
-            {setRegionFilter("US")}
+            {setPlatformDropDown("Playstation")}
+            {setRegionFilter("")}
             <Search
               onPlatformChange={onPlatformChange}
               onPlatformDrop={onPlatformDrop}
@@ -592,7 +597,7 @@ export default function Main() {
           <div>
             {setPlatformField("Playstation")}
             {setPlatformDropDown("Playstation - SG")}
-            {setRegionFilter("SG")}
+            {setRegionFilter("SGD")}
             <Search
               onPlatformChange={onPlatformChange}
               onPlatformDrop={onPlatformDrop}
@@ -603,7 +608,7 @@ export default function Main() {
               clearGenre={clearGenre}
               onDropDownChange={onDropDownChange}
             />
-            <CardGroupSG
+            <CardGroup
               clearPriceRange={clearPriceRange}
               priceRangeDropDown={priceRangeDropDown}
               onPriceRangeDrop={onPriceRangeDrop}
@@ -649,7 +654,7 @@ export default function Main() {
           <div>
             {setPlatformField("Playstation")}
             {setPlatformDropDown("Playstation - HK")}
-            {setRegionFilter("HK")}
+            {setRegionFilter("HKD")}
             <Search
               onPlatformChange={onPlatformChange}
               onPlatformDrop={onPlatformDrop}
@@ -660,7 +665,7 @@ export default function Main() {
               clearGenre={clearGenre}
               onDropDownChange={onDropDownChange}
             />
-            <CardGroupHK
+            <CardGroup
               clearPriceRange={clearPriceRange}
               priceRangeDropDown={priceRangeDropDown}
               onPriceRangeDrop={onPriceRangeDrop}

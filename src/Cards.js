@@ -37,6 +37,7 @@ const Cards = ({
   PolandPrice,
   ChilePrice,
   MexicoPrice,
+  ESRBRating,
 }) => {
 
 var today = new Date();
@@ -87,6 +88,8 @@ today = yyyy + "-" + mm + "-" + dd;
     var plnExchange = 1 / JSON.stringify(datam.PLN);
     var rubExchange = 1 / JSON.stringify(datam.RUB);
     var zarExchange = 1 / JSON.stringify(datam.ZAR);
+    var sgdExchange = 1 / JSON.stringify(datam.SGD);
+    var hkdExchange = 1 / JSON.stringify(datam.HKD);
   } else {
     var usdExchange = 1 / JSON.stringify(datam.usd);
     var arsExchange = 1 / JSON.stringify(datam.ars);
@@ -100,6 +103,8 @@ today = yyyy + "-" + mm + "-" + dd;
     var plnExchange = 1 / JSON.stringify(datam.pln);
     var rubExchange = 1 / JSON.stringify(datam.rub);
     var zarExchange = 1 / JSON.stringify(datam.zar);
+    var sgdExchange = 1 / JSON.stringify(datam.sgd);
+    var hkdExchange = 1 / JSON.stringify(datam.hkd);
   }
 
   const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
@@ -293,18 +298,56 @@ today = yyyy + "-" + mm + "-" + dd;
       );
     }
     if (props.psorsw === "Playstation") {
-      return (
-        <span style={{ fontWeight: "light" }}>
+        if (props.esrbrating === "SGD") {
+                   return (
+        <span className="sgregion-logo" style={{ fontWeight: "light" }}>
+          {"₱" + Math.round(props.saleprice * sgdExchange)}
+        </span>
+      );
+
+        } else if (props.esrbrating === "HKD") {
+                   return (
+        <span className="hkregion-logo" style={{ fontWeight: "light" }}>
+          {"₱" + Math.round(props.saleprice * hkdExchange)}
+        </span>
+      );
+
+        } else {
+          return (
+        <span className="usregion-logo" style={{ fontWeight: "light" }}>
           {"₱" + Math.round(props.saleprice * usdExchange)}
         </span>
       );
+        }
+
     }
+
+
     if (props.psorsw === "ogprice") {
-      return (
+
+        if (props.esrbrating === "SGD"){
+                      return (
+        <span style={{ fontWeight: "light" }}>
+          {"₱" + Math.round(props.saleprice * sgdExchange)}
+        </span>
+      );
+
+        }   else    
+        if (props.esrbrating === "HKD"){
+                      return (
+        <span style={{ fontWeight: "light" }}>
+          {"₱" + Math.round(props.saleprice * hkdExchange)}
+        </span>
+      );
+
+        } else {
+            return (
         <span style={{ fontWeight: "light" }}>
           {"₱" + Math.round(props.saleprice * usdExchange)}
         </span>
       );
+        }
+
     }
   }
 
@@ -313,7 +356,54 @@ today = yyyy + "-" + mm + "-" + dd;
       return null;
     }
     if (props.psorsw === "Playstation") {
-      if (PlusPrice === 0) {
+      if (props.esrbrating === "SGD") {
+                    if (PlusPrice === 0) {
+        return (
+          <span className="psplusbadge" style={{ fontWeight: "bold" }}>
+            FREE
+          </span>
+        );
+      } else if (PlusPrice === 999999) {
+        return (
+          <span className="psplusbadge" style={{ fontWeight: "bold" }}>
+            TRIAL
+          </span>
+        );
+}
+      else {
+        return (
+          <span className="psplusbadge" style={{ fontWeight: "bold" }}>
+            {"₱" + Math.round(PlusPrice * sgdExchange)}
+          </span>
+        );
+      }
+
+      } else       if (props.esrbrating === "HKD") {
+                    if (PlusPrice === 0) {
+        return (
+          <span className="psplusbadge" style={{ fontWeight: "bold" }}>
+            FREE
+          </span>
+        );
+      } else if (PlusPrice === 999999) {
+        return (
+          <span className="psplusbadge" style={{ fontWeight: "bold" }}>
+            TRIAL
+          </span>
+        );
+}
+      else {
+        return (
+          <span className="psplusbadge" style={{ fontWeight: "bold" }}>
+            {"₱" + Math.round(PlusPrice * hkdExchange)}
+          </span>
+        );
+      }
+
+      } 
+
+       else {
+              if (PlusPrice === 0) {
         return (
           <span className="psplusbadge" style={{ fontWeight: "bold" }}>
             FREE
@@ -332,6 +422,7 @@ today = yyyy + "-" + mm + "-" + dd;
             {"₱" + Math.round(PlusPrice * usdExchange)}
           </span>
         );
+      }
       }
     }
   }
@@ -380,10 +471,11 @@ today = yyyy + "-" + mm + "-" + dd;
             <Card.Text className="card-text">
               <PercentOff />{" "}
               <strike>
-                <PesoPrice psorsw="ogprice" saleprice={Price} />
+                <PesoPrice psorsw="ogprice" saleprice={Price} esrbrating={ESRBRating}/>
               </strike>{" "}
               <PesoPrice
                 psorsw={Platform}
+                esrbrating={ESRBRating}
                 saleprice={SalePrice}
                 canadaprice={CanadaPrice}
                 peruprice={PeruPrice}
@@ -397,7 +489,7 @@ today = yyyy + "-" + mm + "-" + dd;
                 chileprice={ChilePrice}
                 mexicoprice={MexicoPrice}
               />{" "}
-              <PesoPlusPrice psorsw={Platform} pesoplus={PlusPrice} />{" "}
+              <PesoPlusPrice psorsw={Platform} pesoplus={PlusPrice}  esrbrating={ESRBRating}/>{" "}
               <DaysLeft isExpired={SaleEnds} />
               {/*<PesoPrice />
             {" "+Genre}

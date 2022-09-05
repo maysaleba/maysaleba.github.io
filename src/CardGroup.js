@@ -90,6 +90,7 @@ const CardGroup = ({
                                           Platform={review.platform}
                                           PlusPrice={review.PlusPrice}
                                           Price={review.Price}
+                                          ESRBRating={review.ESRBRating}
                                   />
 
 
