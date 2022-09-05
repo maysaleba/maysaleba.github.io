@@ -2,7 +2,9 @@ import React, { useEffect, useMemo, useState } from "react";
 import usePagination from "./usePagination.js";
 import reviewssw from "./csvjson.json";
 import reviewspsx from "./csvjsonus.json";
-import CardGroup from "./CardGroup2";
+import CardGroup from "./CardGroup";
+import CardGroupHK from "./CardGroupHK";
+import CardGroupSG from "./CardGroupSG";
 import "./App.css";
 import { BrowserRouter as Router, Route, useLocation } from "react-router-dom";
 import Content from "./Content";
@@ -601,7 +603,7 @@ export default function Main() {
               clearGenre={clearGenre}
               onDropDownChange={onDropDownChange}
             />
-            <CardGroup
+            <CardGroupSG
               clearPriceRange={clearPriceRange}
               priceRangeDropDown={priceRangeDropDown}
               onPriceRangeDrop={onPriceRangeDrop}
@@ -658,7 +660,7 @@ export default function Main() {
               clearGenre={clearGenre}
               onDropDownChange={onDropDownChange}
             />
-            <CardGroup
+            <CardGroupHK
               clearPriceRange={clearPriceRange}
               priceRangeDropDown={priceRangeDropDown}
               onPriceRangeDrop={onPriceRangeDrop}
