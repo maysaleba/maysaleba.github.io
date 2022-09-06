@@ -467,7 +467,7 @@ today = yyyy + "-" + mm + "-" + dd;
             <OpenScore hasScore={Score} />
           </Card.ImgOverlay>
           <Card.Body>
-            <Card.Title className="card-title">{Title}</Card.Title>
+            <Card.Title className="card-title">{Title.replace(/ *\([^)]*\) */g, "")}</Card.Title>
             <Card.Text className="card-text">
               <PercentOff />{" "}
               <strike>

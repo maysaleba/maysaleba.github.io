@@ -2067,7 +2067,7 @@ return (
                 fontWeight: "bold",
               }}
             >
-              {matchGames[0].Title.toUpperCase()}
+              {matchGames[0].Title.toUpperCase().replace(/ *\([^)]*\) */g, "")}
               <HasOpenCritic props={matchGames[0].SCORE} />
               <span
                 className="pb-1"
