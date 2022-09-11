@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import usePagination from "./usePagination.js";
 import reviewssw from "./csvjson.json";
 import reviewspsx from "./csvjsonus.json";
+import exreviewspsx from "./csvjsonusex.json";
 import sgreviewspsx from "./csvjsonsg.json";
 import hkreviewspsx from "./csvjsonhk.json";
 import CardGroup from "./CardGroup";
@@ -28,7 +29,10 @@ let hour = today.getHours();
 
 today = yyyy + "-" + mm + "-" + dd;
 
-let reviewsps = reviewspsx.filter((review) => review.SaleEnds > today);
+
+
+let reviewsps0 = reviewspsx.concat(exreviewspsx);
+let reviewsps = reviewsps0.filter((review) => review.SaleEnds > today);
 let sgreviewsps = sgreviewspsx.filter((review) => review.SaleEnds > today);
 let hkreviewsps = hkreviewspsx.filter((review) => review.SaleEnds > today);
 

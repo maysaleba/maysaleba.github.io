@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import games1 from "./csvjson.json";
 import gamesps from "./csvjsonus.json";
+import exgamesps from "./csvjsonusex.json"
 import sggamesps from "./csvjsonsg.json";
 import hkgamesps from "./csvjsonhk.json";
 import { Card, Row, Col } from "react-bootstrap";
@@ -40,7 +41,8 @@ today = yyyy + "-" + mm + "-" + dd;
 let games2 = gamesps.filter((review) => review.SaleEnds > today);
 let games3 = sggamesps.filter((review) => review.SaleEnds > today);
 let games4 = hkgamesps.filter((review) => review.SaleEnds > today);
-let games = games1.concat(games2).concat(games3).concat(games4);
+let games5 = exgamesps.filter((review) => review.SaleEnds > today);
+let games = games1.concat(games2).concat(games3).concat(games4).concat(games5);
 
 const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   if (makeswitch === null) {
