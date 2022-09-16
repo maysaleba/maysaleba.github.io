@@ -561,7 +561,7 @@ function SgShopeeCard(){
             underline="none"
             hover="none"
             color="black"
-            href={"https://howlongtobeat.com/"+matchGames[0].LowestPrice}
+            href={"https://howlongtobeat.com"+matchGames[0].LowestPrice}
             target="_blank"
             rel="noreferrer"
           >
