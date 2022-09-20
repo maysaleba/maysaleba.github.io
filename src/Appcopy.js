@@ -5,6 +5,7 @@ import reviewspsx from "./csvjsonus.json";
 import exreviewspsx from "./csvjsonusex.json";
 import sgreviewspsx from "./csvjsonsg.json";
 import hkreviewspsx from "./csvjsonhk.json";
+import reviewspsxu from "./csvjsonusu.json";
 import CardGroup from "./CardGroup";
 import "./App.css";
 import { BrowserRouter as Router, Route, useLocation } from "react-router-dom";
@@ -31,10 +32,11 @@ today = yyyy + "-" + mm + "-" + dd;
 
 
 
-let reviewsps0 = reviewspsx.concat(exreviewspsx);
+let reviewsps0 = reviewspsx.concat(exreviewspsx).concat(reviewspsxu);
 let reviewsps = reviewsps0.filter((review) => review.SaleEnds > today);
 let sgreviewsps = sgreviewspsx.filter((review) => review.SaleEnds > today);
 let hkreviewsps = hkreviewspsx.filter((review) => review.SaleEnds > today);
+
 
 export default function Main() {
   function sortJson(element, prop, propType, asc) {
