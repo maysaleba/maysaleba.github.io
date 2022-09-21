@@ -1352,7 +1352,7 @@ return (
                     </a>
                     <a
                       className="nopaddingA"
-                      href="https://bit.ly/3EqxrTL"
+                      href="https://bit.ly/3NyTZGp"
                       target="_blank"
                       rel="noreferrer"
                       // style={{ padding: 10 }}
@@ -1452,7 +1452,7 @@ return (
                     </a>
                     <a
                       className="nopaddingA"
-                      href="https://bit.ly/3EqxrTL"
+                      href="https://bit.ly/3NyTZGp"
                       target="_blank"
                       rel="noreferrer"
                       // style={{ padding: 10 }}
@@ -1579,7 +1579,7 @@ return (
                     </a>
                     <a
                       className="nopaddingA"
-                      href="https://bit.ly/3EqxrTL"
+                      href="https://bit.ly/3NyTZGp"
                       target="_blank"
                       rel="noreferrer"
                       // style={{ padding: 10 }}
@@ -1733,7 +1733,7 @@ return (
                     </a>
                     <a
                       className="nopaddingA"
-                      href="https://bit.ly/3EqxrTL"
+                      href="https://bit.ly/3NyTZGp"
                       target="_blank"
                       rel="noreferrer"
                       // style={{ padding: 10 }}
