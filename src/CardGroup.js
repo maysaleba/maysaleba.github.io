@@ -100,7 +100,7 @@ const CardGroup = ({
               </>
             ) : (
                   <div style={{ textAlign: "center" }}>
-                      <h4>No search results.</h4>
+                      <h4>No ongoing sale.</h4>
                   </div>
                 )
           }
