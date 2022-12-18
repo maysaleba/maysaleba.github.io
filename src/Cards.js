@@ -171,10 +171,27 @@ today = yyyy + "-" + mm + "-" + dd;
 
   function PesoPrice(props) {
     if (props.psorsw === "Switch") {
+
+          var testBoolean;
+    // console.log(props);
+    if (ArgentinaPrice != 0){
+     if ((ArgentinaPrice * arsExchange) / usdExchange <= 10){
+       // console.log((matchGames[0].ArgentinaPrice * arsExchange) / usdExchange)
+        //console.log("less than 10")
+        testBoolean = true;
+             }
+             else {
+        //console.log((matchGames[0].ArgentinaPrice * arsExchange) / usdExchange)
+        //more than 10
+        testBoolean = false;
+             }
+
+    }
       var pricesobj = {
         Canada: CanadaPrice * cadExchange,
         Peru: PeruPrice * penExchange,
-        Argentina: ArgentinaPrice * arsExchange * 1.64,
+        Argentina: testBoolean ? ArgentinaPrice * arsExchange * 1.74 : ArgentinaPrice * arsExchange * 1.53,
+        //Argentina: ArgentinaPrice * arsExchange * 1.64,
         Australia: AustraliaPrice * audExchange,
         Colombia: ColombiaPrice * copExchange,
         Southafrica: SouthafricaPrice * zarExchange,

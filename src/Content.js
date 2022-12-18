@@ -1011,12 +1011,31 @@ return (
       }
 
   function PricesTable(props) {
-    // console.log(props);
+
+
+ 
     if (props.psorsw === "Switch") {
+
+    var testBoolean;
+    // console.log(props);
+    if (matchGames[0].ArgentinaPrice != 0){
+     if ((matchGames[0].ArgentinaPrice * arsExchange) / usdExchange <= 10){
+       // console.log((matchGames[0].ArgentinaPrice * arsExchange) / usdExchange)
+        //console.log("less than 10")
+        testBoolean = true;
+             }
+             else {
+        //console.log((matchGames[0].ArgentinaPrice * arsExchange) / usdExchange)
+        //more than 10
+        testBoolean = false;
+             }
+
+    }
+
       var pricesobj = {
         Canada: matchGames[0].CanadaPrice * cadExchange,
         Peru: matchGames[0].PeruPrice * penExchange,
-        Argentina: matchGames[0].ArgentinaPrice * arsExchange * 1.64,
+        Argentina: testBoolean ? matchGames[0].ArgentinaPrice * arsExchange * 1.74 : matchGames[0].ArgentinaPrice * arsExchange * 1.53,
         Australia: matchGames[0].AustraliaPrice * audExchange,
         Colombia: matchGames[0].ColombiaPrice * copExchange,
         Southafrica: matchGames[0].SouthafricaPrice * zarExchange,
