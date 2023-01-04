@@ -1085,7 +1085,10 @@ return (
           return (
             <div style={{ marginLeft: "10px" }} className="arregion-logo">
               Argentina
+                            <br/>
+              <div style={{fontSize: 9, fontWeight: 'Bold', color: '#fc3e04'}}>TAX INCLUDED</div>
             </div>
+
           );
         } else if (props.rank1country === "Colombia") {
           return (
@@ -1161,6 +1164,8 @@ return (
           return (
             <div style={{ marginLeft: "10px" }} className="arregion-logo">
               Argentina
+              <br/>
+              <div style={{fontSize: 9, fontWeight: 'Bold', color: '#fc3e04'}}>TAX INCLUDED</div>
             </div>
           );
         } else if (props.rank2country === "Colombia") {
@@ -1237,6 +1242,8 @@ return (
           return (
             <div style={{ marginLeft: "10px" }} className="arregion-logo">
               Argentina
+                            <br/>
+              <div style={{fontSize: 9, fontWeight: 'Bold', color: '#fc3e04'}}>TAX INCLUDED</div>
             </div>
           );
         } else if (props.rank3country === "Colombia") {
