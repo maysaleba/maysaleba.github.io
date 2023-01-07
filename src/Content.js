@@ -1031,11 +1031,11 @@ return (
              }
 
     }
-
+      var argentinaTax = Math.round((testBoolean ? matchGames[0].ArgentinaPrice * arsExchange * 1.74 : matchGames[0].ArgentinaPrice * arsExchange * 1.53) - matchGames[0].ArgentinaPrice * arsExchange)
       var pricesobj = {
         Canada: matchGames[0].CanadaPrice * cadExchange,
         Peru: matchGames[0].PeruPrice * penExchange,
-        Argentina: testBoolean ? matchGames[0].ArgentinaPrice * arsExchange * 1.74 : matchGames[0].ArgentinaPrice * arsExchange * 1.53,
+        Argentina: matchGames[0].ArgentinaPrice * arsExchange,
         Australia: matchGames[0].AustraliaPrice * audExchange,
         Colombia: matchGames[0].ColombiaPrice * copExchange,
         Southafrica: matchGames[0].SouthafricaPrice * zarExchange,
@@ -1086,7 +1086,7 @@ return (
             <div style={{ marginLeft: "10px" }} className="arregion-logo">
               Argentina
                             <br/>
-              <div style={{fontSize: 9, fontWeight: 'Bold', color: '#fc3e04'}}>TAX INCLUDED</div>
+              <div style={{fontSize: 11, fontWeight: 'Bold', color: 'red'}}> + ₱{argentinaTax} TAX</div>
             </div>
 
           );
@@ -1165,7 +1165,7 @@ return (
             <div style={{ marginLeft: "10px" }} className="arregion-logo">
               Argentina
               <br/>
-              <div style={{fontSize: 9, fontWeight: 'Bold', color: '#fc3e04'}}>TAX INCLUDED</div>
+               <div style={{fontSize: 11, fontWeight: 'Bold', color: 'red'}}> + ₱{argentinaTax} TAX</div>
             </div>
           );
         } else if (props.rank2country === "Colombia") {
@@ -1243,7 +1243,7 @@ return (
             <div style={{ marginLeft: "10px" }} className="arregion-logo">
               Argentina
                             <br/>
-              <div style={{fontSize: 9, fontWeight: 'Bold', color: '#fc3e04'}}>TAX INCLUDED</div>
+               <div style={{fontSize: 11, fontWeight: 'Bold', color: 'red'}}> + ₱{argentinaTax} TAX</div>
             </div>
           );
         } else if (props.rank3country === "Colombia") {
@@ -1508,7 +1508,7 @@ return (
               <tr className="item-table-best">
                 <td className="version">
                   <span className="gold-medal-logo">
-                    <Rank1 rank1country={rank1country} />
+                    <Rank1 rank1country={rank1country}/>
                   </span>
                 </td>
                 <td></td>
