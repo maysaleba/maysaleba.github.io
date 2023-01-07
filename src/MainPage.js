@@ -7,7 +7,7 @@ import reviewssw from "./csvjson.json";
 
 const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
   var d = new Date();
-  var lastd = new Date(d.setDate(d.getDate() - 3));
+  var lastd = new Date(d.setDate(d.getDate() - 5));
   var da = String(lastd.getDate()).padStart(2, "0");
   var mo = String(lastd.getMonth() + 1).padStart(2, "0"); //January is 0!
   var year = lastd.getFullYear();
@@ -19,6 +19,9 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
 
   let daysago = year + "-" + mo + "-" + da;
   let moago = yearmo + "-" + momo + "-" + damo;
+
+
+console.log(daysago)
 
   const newSwitchDiscounts = reviewssw.filter((x) => x.SaleStarted > daysago);
   const topSwitchDiscounts = reviewssw.filter((x) => x.SCORE > 70);
