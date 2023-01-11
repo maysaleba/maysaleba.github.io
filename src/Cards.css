@@ -212,6 +212,7 @@ a.giftcardlink {
 a.infotax {
     color: #0000EE !important;
     white-space: nowrap !important;
+    text-decoration: underline !important;
 }
 
 .text-dark, .watch-button.watched:not(:hover) .text {
