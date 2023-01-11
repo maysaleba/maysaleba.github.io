@@ -1059,7 +1059,7 @@ return (
 //     {
       return (                     
      <>  <Box style={{borderRadius: 5, backgroundColor: "#ffc4c4", marginBottom: 10, padding: 8, fontSize: 12, textAlign: 'center'}}>
-     Note: +Tax may be charged if buying from Argentina. <a  className="infotax" href="https://www.maya.ph/app/registration?invite=JX6YO2XL4781">Use MAYA virtual card for tax-free price.</a> 
+     Note: +Tax may be charged if buying from Argentina. <a  className="infotax" href="https://www.maya.ph/app/registration?invite=JX6YO2XL4781">Use MAYA virtual card for tax-free purchase.</a> 
                     </Box>
 </>
         );
