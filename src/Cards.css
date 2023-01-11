@@ -209,6 +209,11 @@ a.giftcardlink {
     color: #9c27b0 !important;
 }
 
+a.infotax {
+    color: #0000EE !important;
+    white-space: nowrap !important;
+}
+
 .text-dark, .watch-button.watched:not(:hover) .text {
     color: #343a40 !important;
 }

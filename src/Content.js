@@ -1054,6 +1054,23 @@ return (
       // console.log(pricesobj);
       const entries = Object.entries(pricesobj).sort(([, a], [, b]) => a - b);
 
+      function InfoTax () {
+    if (entries[0][0] == "Argentina" || entries[1][0] == "Argentina" || entries[2][0] == "Argentina")
+//     {
+      return (                     
+     <>  <Box style={{borderRadius: 5, backgroundColor: "#ffc4c4", marginBottom: 10, padding: 8, fontSize: 12, textAlign: 'center'}}>
+     Note: +Tax may be charged if buying from Argentina. <a  className="infotax" href="https://www.maya.ph/app/registration?invite=JX6YO2XL4781">Use MAYA virtual card for tax-free price.</a> 
+                    </Box>
+</>
+        );
+      else {
+        return null;
+      }
+      
+    // }
+      
+}
+
       function USRank() {
         return (
           <div style={{ marginLeft: "10px" }} className="usregion-logo">
@@ -1868,11 +1885,14 @@ return (
 
 
 
+
       return (
         <div
           className="price-container"
           style={{ margin: "auto", paddingTop: 10 }}
         >
+        <InfoTax/>
+
           <table className="table table-align-middle item-price-table">
             <tbody>
               <RankRows />
