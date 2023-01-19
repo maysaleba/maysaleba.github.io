@@ -2128,7 +2128,7 @@ return (
                 }}
               >
                 <br />
-                SALE ENDS: {DateConvert(matchGames[0].SaleEnds).toUpperCase()}
+                SALE ENDS1: {DateConvert(matchGames[0].SaleEnds).toUpperCase()}
               </span>
             </Card.Header>
             <PricesTable psorsw={matchGames[0].platform} />
