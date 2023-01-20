@@ -7,7 +7,7 @@ import reviewssw from "./csvjson.json";
 
 const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
   var d = new Date();
-  var lastd = new Date(d.setDate(d.getDate() - 12));
+  var lastd = new Date(d.setDate(d.getDate() - 7));
   var da = String(lastd.getDate()).padStart(2, "0");
   var mo = String(lastd.getMonth() + 1).padStart(2, "0"); //January is 0!
   var year = lastd.getFullYear();
