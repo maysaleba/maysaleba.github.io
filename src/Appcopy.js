@@ -236,7 +236,7 @@ export default function Main() {
   let filteredReviews = useMemo(() =>
     latestField.filter((review) => {
       return (
-        review.Title.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e").toLowerCase().includes(searchQuery.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e").toLowerCase()) &&
+        review.Title.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e").replace(/\s/g, '').toLowerCase().includes(searchQuery.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e").replace(/\s/g, '').toLowerCase()) &&
         review.genre.toLowerCase().includes(filterField.toLowerCase()) &&
         review.platform.toLowerCase().includes(platformField.toLowerCase()) && 
         review.ESRBRating.toLowerCase().includes(regionFilter.toLowerCase()) &&
