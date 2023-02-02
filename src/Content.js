@@ -540,6 +540,7 @@ function SgShopeeCard(){
 
 
   function HasOpenCritic(props) {
+
     if (props.props === "" || props.props === "-1" || props.props === "0") {
       return null;
     } else {
@@ -555,21 +556,25 @@ function SgShopeeCard(){
           <span style={{ color: "black" }}>
             {" "}
             <span className="opencritic-logo2">
-            <div className="opencritic-container3">
+            <div className="opencritic-container3" style={{width: 30, height: 30 }}>
+            
         <CircularProgressbar
+
+
 
         value={matchGames[0].SCORE}
         text={matchGames[0].SCORE}
-    
-        backgroundPadding={6}
+        // background
+        backgroundPadding={0}
         styles={buildStyles({
-          backgroundColor: "rgba(0%, 0%, 0%, 0.5)",
-          textColor: "#000",
-          pathColor: "#fc3e04",
-          textSize: "40px",
-          trailColor: "#fff",
+          backgroundColor: "rgba(0%, 0%, 0%, 0.15)",
+          textColor: 'black',
+          pathColor: matchGames[0].SCORE <= 49 ? "#ff0000" : (matchGames[0].SCORE <= 74 ? "#ffcc33" : "#66cc33"),
+          textSize: "2.6rem",
+          trailColor: matchGames[0].SCORE <= 49 ? "#ff000060" : (matchGames[0].SCORE <= 74 ? "#ffcc3360" : "#66cc3360"),
         })}
       />
+   
       </div>
 
             </span>
@@ -641,10 +646,27 @@ function SgShopeeCard(){
 
     function PlatformBadge(props) {
     const platform = props.hasBadge;
+    const esrbrating = props.esrbrating;
     if (platform === "Switch") {
+        if (props.esrbrating === "Individual") {
       return (
-        <span className="img-responsive nbadges nintendo"></span>
+        <>
+        <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>
+      <div className="d-flex justify-content float-start opencritic-container2">
+        <Box style={{fontWeight: 'bold', borderRadius: 5, backgroundColor: "#fc3e04", marginTop: 3, marginLeft: 5, paddingTop: 1, paddingBottom: 1, paddingLeft: 5, paddingRight: 5, fontSize: '0.65rem', textAlign: 'center', color: 'white'}}>
+        DLC</Box>
+      </div>
+</>
       );
+
+
+      }
+
+      else {
+        return (
+        <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>
+        )
+      }
     }
     if (platform === "Playstation") {
       return (
@@ -2126,8 +2148,10 @@ return (
 
 
                       <Card.ImgOverlay className="card-img-overlay">
-            <PlatformBadge hasBadge={matchGames[0].platform} />
-
+                      
+            <PlatformBadge hasBadge={matchGames[0].platform} esrbrating={matchGames[0].ESRBRating}/>
+   
+           
           </Card.ImgOverlay>
           </Card>
 </div>
@@ -2143,17 +2167,15 @@ return (
             >
               {matchGames[0].Title.toUpperCase().replace(/ *\([^)]*\) */g, "")}
               <HasOpenCritic props={matchGames[0].SCORE} />
-              <span
-                className="pb-1"
-                style={{
-                  fontSize: 12,
-                  paddingRight: 20,
-                  padding: "0 0.75rem ",
-                }}
-              >
+             
+             
                 <br />
-                SALE ENDS: {DateConvert(matchGames[0].SaleEnds).toUpperCase()}
-              </span>
+             
+                <Box style={{width: "10rem", borderRadius: 5, backgroundColor: "#e60012", marginBottom: 10, marginTop: 10, padding: 2, fontSize: 12, textAlign: 'center', color: 'white'}}>
+                Sale Ends: {DateConvert(matchGames[0].SaleEnds)}
+              </Box>
+        
+           
             </Card.Header>
             <PricesTable psorsw={matchGames[0].platform} />
             <div style={{ fontSize: 14 }}>

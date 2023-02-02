@@ -7,6 +7,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import noimage from "./noimage.jpg";
 import axios from "axios";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import { Box } from "@mui/material";
 import 'react-circular-progressbar/dist/styles.css';
 
 // import download from "./download.gif";
@@ -136,6 +137,8 @@ today = yyyy + "-" + mm + "-" + dd;
       return null;
     }
     return (
+<>
+
 
       <div className="d-flex justify-content-left float-end opencritic-container2">
     
@@ -148,16 +151,15 @@ today = yyyy + "-" + mm + "-" + dd;
         styles={buildStyles({
           backgroundColor: "rgba(0%, 0%, 0%, 0.5)",
           textColor: "#fff",
-          pathColor: "#fc3e04",
+          pathColor: Score <= 49 ? "#ff0000" : (Score <= 74 ? "#ffcc33" : "#66cc33"),
           textSize: "35px",
-          trailColor: "#600000",
+          trailColor: Score <= 49 ? "#ff000060" : (Score <= 74 ? "#ffcc3360" : "#66cc3360"),
         })}
       />
-
-       
-        {/*<span className="opencritic-logo" />*/}
-        {/*<span className="opencritic-logo score-text">{Score}</span>*/}
       </div>
+
+
+</>
     );
   }
 
@@ -466,11 +468,31 @@ else if (PlusPrice === 202020) {
   }
 
   function PlatformBadge(props) {
+    console.log(ESRBRating)
     const platform = props.hasBadge;
     if (platform === "Switch") {
+
+      if (props.esrbrating === "Individual") {
       return (
-        <span className="img-responsive nbadges nintendo"></span>
+        <>
+        <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>
+      <div className="d-flex justify-content float-start opencritic-container2">
+        <Box style={{fontWeight: 'bold', borderRadius: 5, backgroundColor: "#fc3e04", marginTop: 3, marginLeft: 5, paddingTop: 1, paddingBottom: 1, paddingLeft: 5, paddingRight: 5, fontSize: '0.65rem', textAlign: 'center', color: 'white'}}>
+        DLC</Box>
+      </div>
+</>
       );
+
+
+      }
+
+      else {
+        return (
+        <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>
+        )
+      }
+
+
     }
     if (platform === "Playstation") {
       return (
@@ -500,8 +522,7 @@ else if (PlusPrice === 202020) {
           />
 
           <Card.ImgOverlay className="card-img-overlay">
-            <PlatformBadge hasBadge={Platform} />
-            {/*<span className="img-responsive float-end nbadges nintendo"></span>*/}
+            <PlatformBadge hasBadge={Platform} esrbrating={ESRBRating}/>
             <OpenScore hasScore={Score} />
           </Card.ImgOverlay>
           <Card.Body>
