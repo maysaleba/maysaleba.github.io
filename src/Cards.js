@@ -472,7 +472,7 @@ else if (PlusPrice === 202020) {
     const platform = props.hasBadge;
     if (platform === "Switch") {
 
-      if (props.esrbrating === "Individual") {
+      if (props.esrbrating === "Individual" || props.esrbrating === "Bundle") {
       return (
         <>
         <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>

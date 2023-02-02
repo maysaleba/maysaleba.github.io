@@ -648,7 +648,7 @@ function SgShopeeCard(){
     const platform = props.hasBadge;
     const esrbrating = props.esrbrating;
     if (platform === "Switch") {
-        if (props.esrbrating === "Individual") {
+        if (props.esrbrating === "Individual" || props.esrbrating === "Bundle") {
       return (
         <>
         <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>
