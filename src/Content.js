@@ -1099,9 +1099,15 @@ return (
 
       // console.log(pricesobj);
       const entries = Object.entries(pricesobj).sort(([, a], [, b]) => a - b);
-
+      var artag = 0;
       function InfoTax () {
-    if (entries[0][0] == "Argentina" || entries[1][0] == "Argentina" || entries[2][0] == "Argentina")
+        entries.forEach(element => {
+          if (entries == "Argentina"){
+            artag = 1;
+          }
+
+        });
+    if (artag = 1)
 //     {
       return (                     
      <>  <Box style={{borderRadius: 5, backgroundColor: "#ffc4c4", marginBottom: 10, padding: 8, fontSize: 12, textAlign: 'center'}}>
