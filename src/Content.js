@@ -2171,9 +2171,9 @@ return (
              
                 <br />
              
-                <Box style={{width: "10rem", borderRadius: 5, backgroundColor: "#e60012", marginBottom: 10, marginTop: 10, padding: 2, fontSize: 12, textAlign: 'center', color: 'white'}}>
+                <span style={{fontSize: '0.75rem'}}>
                 Sale Ends: {DateConvert(matchGames[0].SaleEnds)}
-              </Box>
+              </span>
         
            
             </Card.Header>
