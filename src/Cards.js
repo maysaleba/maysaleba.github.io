@@ -387,6 +387,13 @@ today = yyyy + "-" + mm + "-" + dd;
           </span>
         );
 }
+else if (PlusPrice === 202020) {
+        return (
+          <span className="eabadge" style={{ fontWeight: "bold" }}>
+            INCLUDED
+          </span>
+        );
+}
       else {
         return (
           <span className="psplusbadge" style={{ fontWeight: "bold" }}>
@@ -406,6 +413,13 @@ today = yyyy + "-" + mm + "-" + dd;
         return (
           <span className="psplusbadge" style={{ fontWeight: "bold" }}>
             TRIAL
+          </span>
+        );
+}
+else if (PlusPrice === 202020) {
+        return (
+          <span className="eabadge" style={{ fontWeight: "bold" }}>
+            INCLUDED
           </span>
         );
 }
@@ -430,6 +444,13 @@ today = yyyy + "-" + mm + "-" + dd;
         return (
           <span className="psplusbadge" style={{ fontWeight: "bold" }}>
             TRIAL
+          </span>
+        );
+}
+else if (PlusPrice === 202020) {
+        return (
+          <span className="eabadge" style={{ fontWeight: "bold" }}>
+            INCLUDED
           </span>
         );
 }

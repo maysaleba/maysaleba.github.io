@@ -159,6 +159,14 @@ return "₱" + Math.round(props.props * usdExchange);
           </>
         );
       }
+            else if (matchGames[0].PlusPrice == 202020) {
+       return (
+          <>
+            <span className="eabadge">INCLUDED</span>
+            <br />
+          </>
+        );
+      }
       else {
         return (
           <>
@@ -193,6 +201,14 @@ return "₱" + Math.round(props.props * usdExchange);
           </>
         );
       }
+        else if (matchGames[0].PlusPrice == 202020) {
+       return (
+          <>
+            <span className="eabadge">INCLUDED</span>
+            <br />
+          </>
+        );
+      }
       else {
         return (
           <>
@@ -223,6 +239,14 @@ return "₱" + Math.round(props.props * usdExchange);
        return (
           <>
             <span className="psplusbadge">TRIAL</span>
+            <br />
+          </>
+        );
+      }
+        else if (matchGames[0].PlusPrice == 202020) {
+       return (
+          <>
+            <span className="eabadge">INCLUDED</span>
             <br />
           </>
         );

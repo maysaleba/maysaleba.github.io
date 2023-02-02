@@ -403,6 +403,17 @@ padding-left: 20px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
+.eabadge
+{
+background-size:  15px;
+background-position:  left center;
+background-image: url('EA.svg');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
 .pagination {
   display: flex;
   justify-content: center;
