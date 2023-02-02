@@ -2172,7 +2172,7 @@ return (
                 <br />
              
                 <span style={{fontSize: '0.75rem'}}>
-                Sale Ends: {DateConvert(matchGames[0].SaleEnds)}
+                SALE ENDS: {DateConvert(matchGames[0].SaleEnds).toUpperCase()}
               </span>
         
            
