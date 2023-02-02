@@ -1102,12 +1102,13 @@ return (
       var artag = 0;
       function InfoTax () {
         entries.forEach(element => {
-          if (entries == "Argentina"){
+          if (element[0] === "Argentina"){
             artag = 1;
           }
 
         });
-    if (artag = 1)
+
+    if (artag == 1)
 //     {
       return (                     
      <>  <Box style={{borderRadius: 5, backgroundColor: "#ffc4c4", marginBottom: 10, padding: 8, fontSize: 12, textAlign: 'center'}}>
