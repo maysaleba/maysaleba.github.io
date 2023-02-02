@@ -151,9 +151,9 @@ today = yyyy + "-" + mm + "-" + dd;
         styles={buildStyles({
           backgroundColor: "rgba(0%, 0%, 0%, 0.5)",
           textColor: "#fff",
-          pathColor: Score <= 49 ? "#ff0000" : (Score <= 74 ? "#ffcc33" : "#66cc33"),
+          pathColor: Score <= 49 ? "#80b06a" : (Score <= 74 ? "#ffcc33" : "#fc430a"),
           textSize: "35px",
-          trailColor: Score <= 49 ? "#ff000060" : (Score <= 74 ? "#ffcc3360" : "#66cc3360"),
+          trailColor: Score <= 49 ? "#80b06a60" : (Score <= 74 ? "#ffcc3360" : "#fc430a60"),
         })}
       />
       </div>

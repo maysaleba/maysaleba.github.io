@@ -569,9 +569,9 @@ function SgShopeeCard(){
         styles={buildStyles({
           backgroundColor: "rgba(0%, 0%, 0%, 0.15)",
           textColor: 'black',
-          pathColor: matchGames[0].SCORE <= 49 ? "#ff0000" : (matchGames[0].SCORE <= 74 ? "#ffcc33" : "#66cc33"),
+          pathColor: matchGames[0].SCORE <= 49 ? "#80b06a" : (matchGames[0].SCORE <= 74 ? "#ffcc33" : "#fc430a"),
           textSize: "2.6rem",
-          trailColor: matchGames[0].SCORE <= 49 ? "#ff000060" : (matchGames[0].SCORE <= 74 ? "#ffcc3360" : "#66cc3360"),
+          trailColor: matchGames[0].SCORE <= 49 ? "#80b06a60" : (matchGames[0].SCORE <= 74 ? "#ffcc3360" : "#fc430a60"),
         })}
       />
    
