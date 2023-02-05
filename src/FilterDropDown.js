@@ -110,6 +110,19 @@ const FilterDropDown = props => {
         >
           Playstation - HK
         </Dropdown.Item>
+        <Dropdown.Item
+          href="#"
+          onClick={() => {
+            history.push('/playstation-tr');
+            // clearSearchChange();
+            clearPriceRange();
+            onPriceRangeDrop("All Price Range")
+            onPlatformChange("Playstation");
+            onPlatformDrop("Playstation - TR");
+          }}
+        >
+          Playstation - TR
+        </Dropdown.Item>
 
       </Dropdown.Menu>
     </Dropdown>

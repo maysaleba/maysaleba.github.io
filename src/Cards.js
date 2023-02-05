@@ -91,6 +91,7 @@ today = yyyy + "-" + mm + "-" + dd;
     var zarExchange = 1 / JSON.stringify(datam.ZAR);
     var sgdExchange = 1 / JSON.stringify(datam.SGD);
     var hkdExchange = 1 / JSON.stringify(datam.HKD);
+    var trdExchange = 1 / JSON.stringify(datam.TRY);
   } else {
     var usdExchange = 1 / JSON.stringify(datam.usd);
     var arsExchange = 1 / JSON.stringify(datam.ars);
@@ -106,6 +107,7 @@ today = yyyy + "-" + mm + "-" + dd;
     var zarExchange = 1 / JSON.stringify(datam.zar);
     var sgdExchange = 1 / JSON.stringify(datam.sgd);
     var hkdExchange = 1 / JSON.stringify(datam.hkd);
+    var trdExchange = 1 / JSON.stringify(datam.try);
   }
 
   const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
@@ -331,7 +333,17 @@ today = yyyy + "-" + mm + "-" + dd;
         </span>
       );
 
-        } else {
+        } else if (props.esrbrating === "TRD") {
+                   return (
+        <span className="trregion-logo" style={{ fontWeight: "light" }}>
+          {"₱" + Math.round(props.saleprice * trdExchange)}
+        </span>
+      );
+
+        }
+
+
+        else {
           return (
         <span className="usregion-logo" style={{ fontWeight: "light" }}>
           {"₱" + Math.round(props.saleprice * usdExchange)}
@@ -359,7 +371,18 @@ today = yyyy + "-" + mm + "-" + dd;
         </span>
       );
 
-        } else {
+        } else    
+        if (props.esrbrating === "TRD"){
+                      return (
+        <span style={{ fontWeight: "light" }}>
+          {"₱" + Math.round(props.saleprice * trdExchange)}
+        </span>
+      );
+
+        } 
+
+
+        else {
             return (
         <span style={{ fontWeight: "light" }}>
           {"₱" + Math.round(props.saleprice * usdExchange)}
@@ -429,6 +452,35 @@ else if (PlusPrice === 202020) {
         return (
           <span className="psplusbadge" style={{ fontWeight: "bold" }}>
             {"₱" + Math.round(PlusPrice * hkdExchange)}
+          </span>
+        );
+      }
+
+      } else       if (props.esrbrating === "TRD") {
+                    if (PlusPrice === 0) {
+        return (
+          <span className="psplusbadge" style={{ fontWeight: "bold" }}>
+            FREE
+          </span>
+        );
+      } else if (PlusPrice === 999999) {
+        return (
+          <span className="psplusbadge" style={{ fontWeight: "bold" }}>
+            TRIAL
+          </span>
+        );
+}
+else if (PlusPrice === 202020) {
+        return (
+          <span className="eabadge" style={{ fontWeight: "bold" }}>
+            INCLUDED
+          </span>
+        );
+}
+      else {
+        return (
+          <span className="psplusbadge" style={{ fontWeight: "bold" }}>
+            {"₱" + Math.round(PlusPrice * trdExchange)}
           </span>
         );
       }

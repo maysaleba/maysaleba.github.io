@@ -5,6 +5,7 @@ import reviewspsx from "./csvjsonus.json";
 import exreviewspsx from "./csvjsonusex.json";
 import sgreviewspsx from "./csvjsonsg.json";
 import hkreviewspsx from "./csvjsonhk.json";
+import trreviewspsx from "./csvjsontr.json";
 import reviewspsxu from "./csvjsonusu.json";
 import CardGroup from "./CardGroup";
 import "./App.css";
@@ -36,6 +37,7 @@ let reviewsps0 = reviewspsx.concat(exreviewspsx).concat(reviewspsxu);
 let reviewsps = reviewsps0.filter((review) => review.SaleEnds > today);
 let sgreviewsps = sgreviewspsx.filter((review) => review.SaleEnds > today);
 let hkreviewsps = hkreviewspsx.filter((review) => review.SaleEnds > today);
+let trreviewsps = trreviewspsx.filter((review) => review.SaleEnds > today);
 
 
 export default function Main() {
@@ -138,7 +140,7 @@ export default function Main() {
   const [latestDropDown, setLatestDropDown] = useState("Top Rated");
 
   useEffect(() => {
-    const reviews = reviewssw.concat(reviewsps).concat(sgreviewsps).concat(hkreviewsps);
+    const reviews = reviewssw.concat(reviewsps).concat(sgreviewsps).concat(hkreviewsps).concat(trreviewsps);
     sortJson(reviews, "SCORE", "string", false);
     setLatestField(reviews);
   }, []);
@@ -699,6 +701,64 @@ export default function Main() {
             <Helmet>
               <meta charset="utf-8" />
               <title>Sony Playstation - HK - May Sale Ba?</title>
+              <meta
+                name="description"
+                content={
+                  "Get to know about " +
+                  reviewsps.length +
+                  " Sony Playstation deals in Philippine Peso!"
+                }
+              />
+            </Helmet>
+          </div>
+        )}
+      />
+
+                  <Route
+        path="/playstation-tr"
+        render={(props) => (
+          <div>
+            {setPlatformField("Playstation")}
+            {setPlatformDropDown("Playstation - TR")}
+            {setRegionFilter("TRD")}
+            <Search
+              onPlatformChange={onPlatformChange}
+              onPlatformDrop={onPlatformDrop}
+              clearPriceRange={clearPriceRange}
+              onPriceRangeDrop={onPriceRangeDrop}
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+              clearGenre={clearGenre}
+              onDropDownChange={onDropDownChange}
+            />
+            <CardGroup
+              clearPriceRange={clearPriceRange}
+              priceRangeDropDown={priceRangeDropDown}
+              onPriceRangeDrop={onPriceRangeDrop}
+              onPriceRangeChange={onPriceRangeChange}
+              clearGenre={clearGenre}
+              onPlatformDrop={onPlatformDrop}
+              onPlatformChange={onPlatformChange}
+              platformDropDown={platformDropDown}
+              onLatestDrop={onLatestDrop}
+              onLatestChange={onLatestChange}
+              latestDropDown={latestDropDown}
+              clearFilter={clearFilter}
+              genreDropDown={genreDropDown}
+              onDropDownChange={onDropDownChange}
+              onFilterChange={onFilterChange}
+              clearSearchChange={clearSearchChange}
+              searchQuery={searchQuery}
+              page={page}
+              setSearchQuery={setSearchQuery}
+              jumpPage={jumpPage}
+              filteredReviews={filteredReviews}
+              pageData={pageData}
+              maxPage={maxPage}
+            />
+            <Helmet>
+              <meta charset="utf-8" />
+              <title>Sony Playstation - US - May Sale Ba?</title>
               <meta
                 name="description"
                 content={

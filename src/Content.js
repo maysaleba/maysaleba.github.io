@@ -5,6 +5,7 @@ import exgamesps from "./csvjsonusex.json"
 import sggamesps from "./csvjsonsg.json";
 import gamespsu from "./csvjsonusu.json";
 import hkgamesps from "./csvjsonhk.json";
+import trgamesps from "./csvjsontr.json";
 import { Card, Row, Col } from "react-bootstrap";
 import NaviBar from "./NaviBar";
 import { Box, Paper, Link, Container } from "@mui/material";
@@ -44,7 +45,8 @@ let games3 = sggamesps.filter((review) => review.SaleEnds > today);
 let games4 = hkgamesps.filter((review) => review.SaleEnds > today);
 let games5 = exgamesps.filter((review) => review.SaleEnds > today);
 let games6 = gamespsu.filter((review) => review.SaleEnds > today);
-let games = games1.concat(games2).concat(games3).concat(games4).concat(games5).concat(games6);
+let games7 = trgamesps.filter((review) => review.SaleEnds > today);
+let games = games1.concat(games2).concat(games3).concat(games4).concat(games5).concat(games6).concat(games7);
 
 const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   if (makeswitch === null) {
@@ -62,6 +64,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     var zarExchange = 1 / JSON.stringify(datam.ZAR);
     var sgdExchange = 1 / JSON.stringify(datam.SGD);
     var hkdExchange = 1 / JSON.stringify(datam.HKD);
+    var trdExchange = 1 / JSON.stringify(datam.TRY);
   } else {
     var usdExchange = 1 / JSON.stringify(datam.usd);
     var arsExchange = 1 / JSON.stringify(datam.ars);
@@ -77,6 +80,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     var zarExchange = 1 / JSON.stringify(datam.zar);
     var sgdExchange = 1 / JSON.stringify(datam.sgd);
     var hkdExchange = 1 / JSON.stringify(datam.hkd);
+    var trdExchange = 1 / JSON.stringify(datam.try);
   }
   // {100*JSON.stringify(datam.usd)}
 
@@ -91,7 +95,10 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         return "₱" + Math.round(props.props * sgdExchange);  
     } else if (matchGames[0].ESRBRating === "HKD"){
     return "₱" + Math.round(props.props * hkdExchange);
-  } else {
+  } else if (matchGames[0].ESRBRating === "TRD"){
+    return "₱" + Math.round(props.props * trdExchange);
+  }
+  else {
 return "₱" + Math.round(props.props * usdExchange);
   }
 }
@@ -256,6 +263,49 @@ return "₱" + Math.round(props.props * usdExchange);
           <>
             <span className="psplusbadge">
               {"₱" + Math.round(matchGames[0].PlusPrice * sgdExchange)}
+            </span>
+            <br />
+          </>
+        );
+      }
+    }
+  }
+
+
+  function TrPlusPrice() {
+    if (matchGames[0].platform === "Switch") {
+      return null;
+    }
+    if (matchGames[0].platform === "Playstation") {
+      if (matchGames[0].PlusPrice == 0) {
+        return (
+          <>
+            <span className="psplusbadge">FREE</span>
+            <br />
+          </>
+        );
+      } 
+      else if (matchGames[0].PlusPrice == 999999) {
+       return (
+          <>
+            <span className="psplusbadge">TRIAL</span>
+            <br />
+          </>
+        );
+      }
+        else if (matchGames[0].PlusPrice == 202020) {
+       return (
+          <>
+            <span className="eabadge">INCLUDED</span>
+            <br />
+          </>
+        );
+      }
+      else {
+        return (
+          <>
+            <span className="psplusbadge">
+              {"₱" + Math.round(matchGames[0].PlusPrice * trdExchange)}
             </span>
             <br />
           </>
@@ -947,8 +997,37 @@ return (
                 </td>
               </tr></>
   )
-}
+} else  if (matchGames[0].ESRBRating == "TRD"){
+return (
+              <>
 
+        <tr className="item-table-best">
+                <td className="version">
+                  <span>
+                             <div style={{ marginLeft: "1rem" }} className="trregion-logo">
+            Turkey
+          </div>
+                  </span>
+                </td>
+                <td className="version"></td>
+                <td className="version">
+                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                    <div className="btn btn-block btn-secondary">
+                      <TrPlusPrice />
+                      {"₱" + Math.round(matchGames[0].SalePrice * trdExchange)}
+                      <span className="ml-2 badge badge-danger">
+                        <strike>
+                          <PesoPrice props={matchGames[0].Price} />
+                        </strike>
+                      </span>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+             </>
+  )
+}
+ 
 
 
      else {
@@ -1955,12 +2034,21 @@ return (
       );
     } else {
       return (
+
+<>
+
+
         <div
           className="price-container"
           style={{ margin: "auto", paddingTop: 10 }}
         >
+        <Box style={{borderRadius: 5, backgroundColor: "#ffc4c4", marginBottom: 10, padding: 8, fontSize: 12, textAlign: 'center'}}>
+     Sign up with <a  className="infotax" href="https://wise.com/invite/ath/markandrewm11">Wise</a> to buy from Turkey PSN region. <a  className="infotax" href="https://www.reddit.com/r/playstation/comments/ypfh5m/tutorial_how_to_buy_games_from_turkey_psn/">How to buy guide</a>. 
+                    </Box>
+
                   <table className="table table-align-middle item-price-table">
             <tbody>
+
               <PsPrices />
             </tbody>
           </table>
@@ -2028,6 +2116,7 @@ return (
             </tbody>
           </table>*/}
         </div>
+        </>
       );
     }
   }

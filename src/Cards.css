@@ -527,6 +527,16 @@ padding-left: 20px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
+.trregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/TR.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
 
 .arregion-logo {
 background-size:  15px;
