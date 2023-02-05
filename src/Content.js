@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import games1 from "./csvjson.json";
 import gamesps from "./csvjsonus.json";
-import exgamesps from "./csvjsonusex.json"
+import exgamesps from "./csvjsonusex.json";
 import sggamesps from "./csvjsonsg.json";
 import gamespsu from "./csvjsonusu.json";
 import hkgamesps from "./csvjsonhk.json";
@@ -15,8 +15,8 @@ import { Helmet } from "react-helmet";
 import { Redirect } from "react-router-dom";
 import GoogleAds from "./AdSense";
 import axios from "axios";
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
 const YoutubeEmbed = ({ embedId }) => (
   <div className="video-responsive">
@@ -46,7 +46,13 @@ let games4 = hkgamesps.filter((review) => review.SaleEnds > today);
 let games5 = exgamesps.filter((review) => review.SaleEnds > today);
 let games6 = gamespsu.filter((review) => review.SaleEnds > today);
 let games7 = trgamesps.filter((review) => review.SaleEnds > today);
-let games = games1.concat(games2).concat(games3).concat(games4).concat(games5).concat(games6).concat(games7);
+let games = games1
+  .concat(games2)
+  .concat(games3)
+  .concat(games4)
+  .concat(games5)
+  .concat(games6)
+  .concat(games7);
 
 const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   if (makeswitch === null) {
@@ -91,17 +97,16 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   // console.log("HELLO"+matchGames)
 
   function PesoPrice(props) {
-    if (matchGames[0].ESRBRating === "SGD"){
-        return "₱" + Math.round(props.props * sgdExchange);  
-    } else if (matchGames[0].ESRBRating === "HKD"){
-    return "₱" + Math.round(props.props * hkdExchange);
-  } else if (matchGames[0].ESRBRating === "TRD"){
-    return "₱" + Math.round(props.props * trdExchange);
+    if (matchGames[0].ESRBRating === "SGD") {
+      return "₱" + Math.round(props.props * sgdExchange);
+    } else if (matchGames[0].ESRBRating === "HKD") {
+      return "₱" + Math.round(props.props * hkdExchange);
+    } else if (matchGames[0].ESRBRating === "TRD") {
+      return "₱" + Math.round(props.props * trdExchange);
+    } else {
+      return "₱" + Math.round(props.props * usdExchange);
+    }
   }
-  else {
-return "₱" + Math.round(props.props * usdExchange);
-  }
-}
 
   function ReverseDesc(props) {
     if (matchGames[0].platform === "Playstation") {
@@ -157,24 +162,21 @@ return "₱" + Math.round(props.props * usdExchange);
             <br />
           </>
         );
-      } 
-      else if (matchGames[0].PlusPrice == 999999) {
-       return (
+      } else if (matchGames[0].PlusPrice == 999999) {
+        return (
           <>
             <span className="psplusbadge">TRIAL</span>
             <br />
           </>
         );
-      }
-            else if (matchGames[0].PlusPrice == 202020) {
-       return (
+      } else if (matchGames[0].PlusPrice == 202020) {
+        return (
           <>
             <span className="eabadge">INCLUDED</span>
             <br />
           </>
         );
-      }
-      else {
+      } else {
         return (
           <>
             <span className="psplusbadge">
@@ -187,7 +189,7 @@ return "₱" + Math.round(props.props * usdExchange);
     }
   }
 
-    function HkPlusPrice() {
+  function HkPlusPrice() {
     if (matchGames[0].platform === "Switch") {
       return null;
     }
@@ -199,24 +201,21 @@ return "₱" + Math.round(props.props * usdExchange);
             <br />
           </>
         );
-      } 
-      else if (matchGames[0].PlusPrice == 999999) {
-       return (
+      } else if (matchGames[0].PlusPrice == 999999) {
+        return (
           <>
             <span className="psplusbadge">TRIAL</span>
             <br />
           </>
         );
-      }
-        else if (matchGames[0].PlusPrice == 202020) {
-       return (
+      } else if (matchGames[0].PlusPrice == 202020) {
+        return (
           <>
             <span className="eabadge">INCLUDED</span>
             <br />
           </>
         );
-      }
-      else {
+      } else {
         return (
           <>
             <span className="psplusbadge">
@@ -229,7 +228,7 @@ return "₱" + Math.round(props.props * usdExchange);
     }
   }
 
-    function SgPlusPrice() {
+  function SgPlusPrice() {
     if (matchGames[0].platform === "Switch") {
       return null;
     }
@@ -241,24 +240,21 @@ return "₱" + Math.round(props.props * usdExchange);
             <br />
           </>
         );
-      } 
-      else if (matchGames[0].PlusPrice == 999999) {
-       return (
+      } else if (matchGames[0].PlusPrice == 999999) {
+        return (
           <>
             <span className="psplusbadge">TRIAL</span>
             <br />
           </>
         );
-      }
-        else if (matchGames[0].PlusPrice == 202020) {
-       return (
+      } else if (matchGames[0].PlusPrice == 202020) {
+        return (
           <>
             <span className="eabadge">INCLUDED</span>
             <br />
           </>
         );
-      }
-      else {
+      } else {
         return (
           <>
             <span className="psplusbadge">
@@ -270,7 +266,6 @@ return "₱" + Math.round(props.props * usdExchange);
       }
     }
   }
-
 
   function TrPlusPrice() {
     if (matchGames[0].platform === "Switch") {
@@ -284,24 +279,21 @@ return "₱" + Math.round(props.props * usdExchange);
             <br />
           </>
         );
-      } 
-      else if (matchGames[0].PlusPrice == 999999) {
-       return (
+      } else if (matchGames[0].PlusPrice == 999999) {
+        return (
           <>
             <span className="psplusbadge">TRIAL</span>
             <br />
           </>
         );
-      }
-        else if (matchGames[0].PlusPrice == 202020) {
-       return (
+      } else if (matchGames[0].PlusPrice == 202020) {
+        return (
           <>
             <span className="eabadge">INCLUDED</span>
             <br />
           </>
         );
-      }
-      else {
+      } else {
         return (
           <>
             <span className="psplusbadge">
@@ -342,31 +334,29 @@ return "₱" + Math.round(props.props * usdExchange);
     }
   }
 
+  function HkShopeeCard() {
+    if (parseFloat(matchGames[0].HongKongPrice) <= 80) {
+      return <span>HK$80</span>;
+    } else if (parseFloat(matchGames[0].SalePrice) <= 200) {
+      return <span>HK$200</span>;
+    } else if (parseFloat(matchGames[0].SalePrice) <= 300) {
+      return <span>HK$300</span>;
+    } else {
+      return <span>HK$500</span>;
+    }
+  }
 
-function HkShopeeCard(){
-       if (parseFloat(matchGames[0].HongKongPrice) <= 80) {
-        return <span>HK$80</span>;
-      } else if (parseFloat(matchGames[0].SalePrice) <= 200) {
-        return <span>HK$200</span>;
-      } else if (parseFloat(matchGames[0].SalePrice) <= 300) {
-        return <span>HK$300</span>;
-      } else {
-        return <span>HK$500</span>;
-      }
-}
-
-function SgShopeeCard(){
-       if (parseFloat(matchGames[0].SingaporePrice) <= 20) {
-        return <span>SG$20</span>;
-      } else if (parseFloat(matchGames[0].SalePrice) <= 30) {
-        return <span>SG$30</span>;
-      } else if (parseFloat(matchGames[0].SalePrice) <= 50) {
-        return <span>SG$50</span>;
-      } else {
-        return <span>SG$80</span>;
-      }
-}
-
+  function SgShopeeCard() {
+    if (parseFloat(matchGames[0].SingaporePrice) <= 20) {
+      return <span>SG$20</span>;
+    } else if (parseFloat(matchGames[0].SalePrice) <= 30) {
+      return <span>SG$30</span>;
+    } else if (parseFloat(matchGames[0].SalePrice) <= 50) {
+      return <span>SG$50</span>;
+    } else {
+      return <span>SG$80</span>;
+    }
+  }
 
   function ShopeeURL() {
     if (matchGames[0].platform === "Switch") {
@@ -395,7 +385,11 @@ function SgShopeeCard(){
             </a>
           </td>
           <td className="version">
-            <a href="https://shope.ee/1L1Rd1cdsH" target="_blank" rel="noreferrer">
+            <a
+              href="https://shope.ee/1L1Rd1cdsH"
+              target="_blank"
+              rel="noreferrer"
+            >
               <GiftCardVar />
             </a>
           </td>
@@ -427,7 +421,11 @@ function SgShopeeCard(){
             </a>
           </td>
           <td className="version">
-            <a href="https://shope.ee/4zujzcSWci" target="_blank" rel="noreferrer">
+            <a
+              href="https://shope.ee/4zujzcSWci"
+              target="_blank"
+              rel="noreferrer"
+            >
               <GiftCardVar />
             </a>
           </td>
@@ -587,10 +585,7 @@ function SgShopeeCard(){
     }
   }
 
-
-
   function HasOpenCritic(props) {
-
     if (props.props === "" || props.props === "-1" || props.props === "0") {
       return null;
     } else {
@@ -606,27 +601,34 @@ function SgShopeeCard(){
           <span style={{ color: "black" }}>
             {" "}
             <span className="opencritic-logo2">
-            <div className="opencritic-container3" style={{width: 30, height: 30 }}>
-            
-        <CircularProgressbar
-
-
-
-        value={matchGames[0].SCORE}
-        text={matchGames[0].SCORE}
-        // background
-        backgroundPadding={0}
-        styles={buildStyles({
-          backgroundColor: "rgba(0%, 0%, 0%, 0.15)",
-          textColor: 'black',
-          pathColor: matchGames[0].SCORE <= 49 ? "#80b06a" : (matchGames[0].SCORE <= 74 ? "#ffcc33" : "#fc430a"),
-          textSize: "2.6rem",
-          trailColor: matchGames[0].SCORE <= 49 ? "#80b06a60" : (matchGames[0].SCORE <= 74 ? "#ffcc3360" : "#fc430a60"),
-        })}
-      />
-   
-      </div>
-
+              <div
+                className="opencritic-container3"
+                style={{ width: 30, height: 30 }}
+              >
+                <CircularProgressbar
+                  value={matchGames[0].SCORE}
+                  text={matchGames[0].SCORE}
+                  // background
+                  backgroundPadding={0}
+                  styles={buildStyles({
+                    backgroundColor: "rgba(0%, 0%, 0%, 0.15)",
+                    textColor: "black",
+                    pathColor:
+                      matchGames[0].SCORE <= 49
+                        ? "#80b06a"
+                        : matchGames[0].SCORE <= 74
+                        ? "#ffcc33"
+                        : "#fc430a",
+                    textSize: "2.6rem",
+                    trailColor:
+                      matchGames[0].SCORE <= 49
+                        ? "#80b06a60"
+                        : matchGames[0].SCORE <= 74
+                        ? "#ffcc3360"
+                        : "#fc430a60",
+                  })}
+                />
+              </div>
             </span>
           </span>
         </Link>
@@ -635,14 +637,14 @@ function SgShopeeCard(){
   }
 
   function HasHLTB(props) {
-  {
+    {
       return (
         <>
           <Link
             underline="none"
             hover="none"
             color="black"
-            href={"https://howlongtobeat.com"+matchGames[0].LowestPrice}
+            href={"https://howlongtobeat.com" + matchGames[0].LowestPrice}
             target="_blank"
             rel="noreferrer"
           >
@@ -650,19 +652,20 @@ function SgShopeeCard(){
               style={{ backgroundColor: "white", fontWeight: "bold" }}
             >
               HOW LONG TO BEAT
-               <img style={{paddingRight: '5px'}} src={download} /><AccessTimeIcon/>
-{/*              <span className="hltb-logo">
+              <img style={{ paddingRight: "5px" }} src={download} />
+              <AccessTimeIcon />
+              {/*              <span className="hltb-logo">
                 <img src={download} />
               </span>*/}
             </Card.Header>
           </Link>
-          <Card.Body style={{ fontSize: 14, margin: 'auto'}}>
-            <div style={{columnRule: '4px double #ff00ff'}}>
-            <Row xs={3} sm={3} >
-              <MainStory />
-              <MainExtra />
-              <Completionist />
-            </Row>
+          <Card.Body style={{ fontSize: 14, margin: "auto" }}>
+            <div style={{ columnRule: "4px double #ff00ff" }}>
+              <Row xs={3} sm={3}>
+                <MainStory />
+                <MainExtra />
+                <Completionist />
+              </Row>
             </div>
           </Card.Body>
         </>
@@ -672,78 +675,157 @@ function SgShopeeCard(){
 
   function MainStory() {
     if (matchGames[0].MainStory == 0 || matchGames[0].MainStory == null) {
-      return ( 
-        <Col className="hltb-container" style={{borderTopLeftRadius:5, backgroundColor: '#3a6db5', paddingBottom: 10, textAlign: 'center' }}>
-        <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{borderBottom: "1px solid #fff", fontSize: 12}} >MAIN STORY</span>{" "}
-          <span style={{ fontWeight: "bold", fontSize: 22 }}>
-          -</span>
+      return (
+        <Col
+          className="hltb-container"
+          style={{
+            borderTopLeftRadius: 5,
+            backgroundColor: "#3a6db5",
+            paddingBottom: 10,
+            textAlign: "center",
+          }}
+        >
+          <div
+            style={{
+              textAlign: "center",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <span style={{ borderBottom: "1px solid #fff", fontSize: 12 }}>
+              MAIN STORY
+            </span>{" "}
+            <span style={{ fontWeight: "bold", fontSize: 22 }}>-</span>
           </div>
         </Col>
-        )
+      );
     } else {
       return (
-        <Col className="hltb-container" style={{borderTopLeftRadius:5, backgroundColor: '#3a6db5', paddingBottom: 10, textAlign: 'center' }}>
-        <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{borderBottom: "1px solid #fff", fontSize: 12}} >MAIN STORY</span>{" "}
-          <span style={{ fontWeight: "bold", fontSize: 22 }}>
-          {matchGames[0].MainStory + "h"}</span>
+        <Col
+          className="hltb-container"
+          style={{
+            borderTopLeftRadius: 5,
+            backgroundColor: "#3a6db5",
+            paddingBottom: 10,
+            textAlign: "center",
+          }}
+        >
+          <div
+            style={{
+              textAlign: "center",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <span style={{ borderBottom: "1px solid #fff", fontSize: 12 }}>
+              MAIN STORY
+            </span>{" "}
+            <span style={{ fontWeight: "bold", fontSize: 22 }}>
+              {matchGames[0].MainStory + "h"}
+            </span>
           </div>
         </Col>
       );
     }
   }
 
-    function PlatformBadge(props) {
+  function PlatformBadge(props) {
     const platform = props.hasBadge;
     const esrbrating = props.esrbrating;
     if (platform === "Switch") {
-        if (props.esrbrating === "Individual" || props.esrbrating === "Bundle") {
-      return (
-        <>
-        <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>
-      <div className="d-flex justify-content float-start opencritic-container2">
-        <Box style={{fontWeight: 'bold', borderRadius: 5, backgroundColor: "#fc3e04", marginTop: 3, marginLeft: 5, paddingTop: 1, paddingBottom: 1, paddingLeft: 5, paddingRight: 5, fontSize: '0.65rem', textAlign: 'center', color: 'white'}}>
-        DLC</Box>
-      </div>
-</>
-      );
-
-
-      }
-
-      else {
+      if (props.esrbrating === "Individual" || props.esrbrating === "Bundle") {
         return (
-        <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>
-        )
+          <>
+            <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>
+            <div className="d-flex justify-content float-start opencritic-container2">
+              <Box
+                style={{
+                  fontWeight: "bold",
+                  borderRadius: 5,
+                  backgroundColor: "#fc3e04",
+                  marginTop: 3,
+                  marginLeft: 5,
+                  paddingTop: 1,
+                  paddingBottom: 1,
+                  paddingLeft: 5,
+                  paddingRight: 5,
+                  fontSize: "0.65rem",
+                  textAlign: "center",
+                  color: "white",
+                }}
+              >
+                DLC
+              </Box>
+            </div>
+          </>
+        );
+      } else {
+        return (
+          <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>
+        );
       }
     }
     if (platform === "Playstation") {
-      return (
-        <span className="img-responsive pbadges playstation"></span>
-      );
+      return <span className="img-responsive pbadges playstation"></span>;
     }
   }
-
 
   function MainExtra() {
     if (matchGames[0].MainExtra == 0 || matchGames[0].MainExtra == null) {
       return (
-       <Col className="hltb-container" style={{backgroundColor: '#5650a1', paddingBottom: 10, textAlign: 'center' }}>
-       <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{borderBottom: "1px solid #fff", fontSize: 12}}  >MS+EXTRA</span>{" "}
-            <span style={{ fontWeight: "bold", fontSize: 22 }}>
-          -</span>
+        <Col
+          className="hltb-container"
+          style={{
+            backgroundColor: "#5650a1",
+            paddingBottom: 10,
+            textAlign: "center",
+          }}
+        >
+          <div
+            style={{
+              textAlign: "center",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <span style={{ borderBottom: "1px solid #fff", fontSize: 12 }}>
+              MS+EXTRA
+            </span>{" "}
+            <span style={{ fontWeight: "bold", fontSize: 22 }}>-</span>
           </div>
         </Col>
-        )
+      );
     } else {
       return (
-       <Col className="hltb-container" style={{backgroundColor: '#5650a1', paddingBottom: 10, textAlign: 'center' }}>
-       <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{borderBottom: "1px solid #fff", fontSize: 12}}  >MS+EXTRA</span>{" "}
+        <Col
+          className="hltb-container"
+          style={{
+            backgroundColor: "#5650a1",
+            paddingBottom: 10,
+            textAlign: "center",
+          }}
+        >
+          <div
+            style={{
+              textAlign: "center",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <span style={{ borderBottom: "1px solid #fff", fontSize: 12 }}>
+              MS+EXTRA
+            </span>{" "}
             <span style={{ fontWeight: "bold", fontSize: 22 }}>
-          {matchGames[0].MainExtra + "h"}</span>
+              {matchGames[0].MainExtra + "h"}
+            </span>
           </div>
         </Col>
       );
@@ -756,21 +838,57 @@ function SgShopeeCard(){
       matchGames[0].Completionist == null
     ) {
       return (
-         <Col className="hltb-container" style={{borderTopRightRadius:5, backgroundColor: '#824985', paddingBottom: 10, textAlign: 'center' }}>
-        <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{borderBottom: "1px solid #fff", fontSize: 12}} >COMPLETE</span>{" "}
-           <span style={{ fontWeight: "bold", fontSize: 22 }}>
-          -</span>
+        <Col
+          className="hltb-container"
+          style={{
+            borderTopRightRadius: 5,
+            backgroundColor: "#824985",
+            paddingBottom: 10,
+            textAlign: "center",
+          }}
+        >
+          <div
+            style={{
+              textAlign: "center",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <span style={{ borderBottom: "1px solid #fff", fontSize: 12 }}>
+              COMPLETE
+            </span>{" "}
+            <span style={{ fontWeight: "bold", fontSize: 22 }}>-</span>
           </div>
         </Col>
-        );
+      );
     } else {
       return (
-         <Col className="hltb-container" style={{borderTopRightRadius:5, backgroundColor: '#824985', paddingBottom: 10, textAlign: 'center' }}>
-        <div style={{ textAlign: 'center',  display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{borderBottom: "1px solid #fff", fontSize: 12}} >COMPLETE</span>{" "}
-           <span style={{ fontWeight: "bold", fontSize: 22 }}>
-          {matchGames[0].Completionist + "h"}</span>
+        <Col
+          className="hltb-container"
+          style={{
+            borderTopRightRadius: 5,
+            backgroundColor: "#824985",
+            paddingBottom: 10,
+            textAlign: "center",
+          }}
+        >
+          <div
+            style={{
+              textAlign: "center",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <span style={{ borderBottom: "1px solid #fff", fontSize: 12 }}>
+              COMPLETE
+            </span>{" "}
+            <span style={{ fontWeight: "bold", fontSize: 22 }}>
+              {matchGames[0].Completionist + "h"}
+            </span>
           </div>
         </Col>
       );
@@ -798,365 +916,425 @@ function SgShopeeCard(){
   }
 
   function PsPrices() {
-    if (matchGames[0].ESRBRating == "SGD"){
-return (
-              <>
-        <tr className="item-table-best">
-                <td className="version">
-                  <span>
-                             <div style={{ marginLeft: "1rem" }} className="sgregion-logo">
-            Singapore
-          </div>
+    if (matchGames[0].ESRBRating == "SGD") {
+      return (
+        <>
+                  <div
+            className="price-container"
+            style={{ margin: "auto", paddingTop: 10 }}
+          >
+            <table className="table table-align-middle item-price-table">
+              <tbody>
+          <tr className="item-table-best">
+            <td className="version">
+              <span>
+                <div style={{ marginLeft: "1rem" }} className="sgregion-logo">
+                  Singapore
+                </div>
+              </span>
+            </td>
+            <td className="version"></td>
+            <td className="version">
+              <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                <div className="btn btn-block btn-secondary">
+                  <SgPlusPrice />
+                  {"₱" + Math.round(matchGames[0].SalePrice * sgdExchange)}
+                  <span className="ml-2 badge badge-danger">
+                    <strike>
+                      <PesoPrice props={matchGames[0].Price} />
+                    </strike>
                   </span>
-                </td>
-                <td className="version"></td>
-                <td className="version">
-                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
-                    <div className="btn btn-block btn-secondary">
-                      <SgPlusPrice />
-                      {"₱" + Math.round(matchGames[0].SalePrice * sgdExchange)}
-                      <span className="ml-2 badge badge-danger">
-                        <strike>
-                          <PesoPrice props={matchGames[0].Price} />
-                        </strike>
-                      </span>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-              <tr className="item-table-best">
-                <td className="item-note text-left">
-                  <div
-                    className="vendors"
-                    style={{
-                      display: "flex",
-                      justifyContent: "left",
-                      flexWrap: "wrap",
-                      fontSize: 14,
-                    }}
-                  >
-                    <span className="nopaddingA">
-                      {" "}
-                      <div className="ml-2 badge badge-info">
-                        {" "}
-                        Suggested Gift Card: <SgShopeeCard />
-                      </div>
-                    </span>{" "}
+                </div>
+              </a>
+            </td>
+          </tr>
+          <tr className="item-table-best">
+            <td className="item-note text-left">
+              <div
+                className="vendors"
+                style={{
+                  display: "flex",
+                  justifyContent: "left",
+                  flexWrap: "wrap",
+                  fontSize: 14,
+                }}
+              >
+                <span className="nopaddingA">
+                  {" "}
+                  <div className="ml-2 badge badge-info">
+                    {" "}
+                    Suggested Gift Card: <SgShopeeCard />
                   </div>
-                </td>
-                <td></td>
-                <td className="item-note text-right">
-                  <div
-                    className="vendors"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <a
-                      className="nopaddingA"
-                      href="https://shope.ee/6ziEPIJLma"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="shopee-logo">
-                          <span className="suggest-text">SHOPEE</span>
-                        </span>
-                      </div>
-                    </a>
-                    <a
-                      className="nopaddingA"
-                      href="https://bit.ly/3TzZMjd"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="lazada-logo">
-                          <span className="suggest-text">LAZADA</span>
-                        </span>
-                      </div>
-                    </a>
-                    <a
-                      className="nopaddingA"
-                      href="https://bit.ly/3KPfOSq"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="coda-logo">
-                          <span className="suggest-text">CODASHOP</span>
-                        </span>
-                      </div>
-                    </a>
+                </span>{" "}
+              </div>
+            </td>
+            <td></td>
+            <td className="item-note text-right">
+              <div
+                className="vendors"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  flexWrap: "wrap",
+                }}
+              >
+                <a
+                  className="nopaddingA"
+                  href="https://shope.ee/6ziEPIJLma"
+                  target="_blank"
+                  rel="noreferrer"
+                  // style={{ padding: 10 }}
+                >
+                  <div className="ml-2 badge badge-danger">
+                    <span style={{ fontSize: 13 }} className="shopee-logo">
+                      <span className="suggest-text">SHOPEE</span>
+                    </span>
                   </div>
-                </td>
-              </tr></>
-  )
-
-    } else  if (matchGames[0].ESRBRating == "HKD"){
-return (
-              <>
-        <tr className="item-table-best">
-                <td className="version">
-                  <span>
-                             <div style={{ marginLeft: "1rem" }} className="hkregion-logo">
-            Hong Kong
+                </a>
+                <a
+                  className="nopaddingA"
+                  href="https://bit.ly/3TzZMjd"
+                  target="_blank"
+                  rel="noreferrer"
+                  // style={{ padding: 10 }}
+                >
+                  <div className="ml-2 badge badge-danger">
+                    <span style={{ fontSize: 13 }} className="lazada-logo">
+                      <span className="suggest-text">LAZADA</span>
+                    </span>
+                  </div>
+                </a>
+                <a
+                  className="nopaddingA"
+                  href="https://bit.ly/3KPfOSq"
+                  target="_blank"
+                  rel="noreferrer"
+                  // style={{ padding: 10 }}
+                >
+                  <div className="ml-2 badge badge-danger">
+                    <span style={{ fontSize: 13 }} className="coda-logo">
+                      <span className="suggest-text">CODASHOP</span>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </td>
+          </tr>
+                        </tbody>
+            </table>
           </div>
+        </>
+      );
+    } else if (matchGames[0].ESRBRating == "HKD") {
+      return (
+        <>
+                          <div
+            className="price-container"
+            style={{ margin: "auto", paddingTop: 10 }}
+          >
+            <table className="table table-align-middle item-price-table">
+              <tbody>
+          <tr className="item-table-best">
+            <td className="version">
+              <span>
+                <div style={{ marginLeft: "1rem" }} className="hkregion-logo">
+                  Hong Kong
+                </div>
+              </span>
+            </td>
+            <td className="version"></td>
+            <td className="version">
+              <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                <div className="btn btn-block btn-secondary">
+                  <HkPlusPrice />
+                  {"₱" + Math.round(matchGames[0].SalePrice * hkdExchange)}
+                  <span className="ml-2 badge badge-danger">
+                    <strike>
+                      <PesoPrice props={matchGames[0].Price} />
+                    </strike>
                   </span>
-                </td>
-                <td className="version"></td>
-                <td className="version">
-                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
-                    <div className="btn btn-block btn-secondary">
-                      <HkPlusPrice />
-                      {"₱" + Math.round(matchGames[0].SalePrice * hkdExchange)}
-                      <span className="ml-2 badge badge-danger">
-                        <strike>
-                          <PesoPrice props={matchGames[0].Price} />
-                        </strike>
-                      </span>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-              <tr className="item-table-best">
-                <td className="item-note text-left">
-                  <div
-                    className="vendors"
-                    style={{
-                      display: "flex",
-                      justifyContent: "left",
-                      flexWrap: "wrap",
-                      fontSize: 14,
-                    }}
-                  >
-                    <span className="nopaddingA">
-                      {" "}
-                      <div className="ml-2 badge badge-info">
-                        {" "}
-                        Suggested Gift Card: <HkShopeeCard />
-                      </div>
-                    </span>{" "}
+                </div>
+              </a>
+            </td>
+          </tr>
+          <tr className="item-table-best">
+            <td className="item-note text-left">
+              <div
+                className="vendors"
+                style={{
+                  display: "flex",
+                  justifyContent: "left",
+                  flexWrap: "wrap",
+                  fontSize: 14,
+                }}
+              >
+                <span className="nopaddingA">
+                  {" "}
+                  <div className="ml-2 badge badge-info">
+                    {" "}
+                    Suggested Gift Card: <HkShopeeCard />
                   </div>
-                </td>
-                <td></td>
-                <td className="item-note text-right">
-                  <div
-                    className="vendors"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <a
-                      className="nopaddingA"
-                      href="https://shope.ee/6ziEPIJLma"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="shopee-logo">
-                          <span className="suggest-text">SHOPEE</span>
-                        </span>
-                      </div>
-                    </a>
-                    <a
-                      className="nopaddingA"
-                      href="https://bit.ly/3TzZMjd"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="lazada-logo">
-                          <span className="suggest-text">LAZADA</span>
-                        </span>
-                      </div>
-                    </a>
-                    <a
-                      className="nopaddingA"
-                      href="https://bit.ly/3KPfOSq"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="coda-logo">
-                          <span className="suggest-text">CODASHOP</span>
-                        </span>
-                      </div>
-                    </a>
+                </span>{" "}
+              </div>
+            </td>
+            <td></td>
+            <td className="item-note text-right">
+              <div
+                className="vendors"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  flexWrap: "wrap",
+                }}
+              >
+                <a
+                  className="nopaddingA"
+                  href="https://shope.ee/6ziEPIJLma"
+                  target="_blank"
+                  rel="noreferrer"
+                  // style={{ padding: 10 }}
+                >
+                  <div className="ml-2 badge badge-danger">
+                    <span style={{ fontSize: 13 }} className="shopee-logo">
+                      <span className="suggest-text">SHOPEE</span>
+                    </span>
                   </div>
-                </td>
-              </tr></>
-  )
-} else  if (matchGames[0].ESRBRating == "TRD"){
-return (
-              <>
-
-        <tr className="item-table-best">
-                <td className="version">
-                  <span>
-                             <div style={{ marginLeft: "1rem" }} className="trregion-logo">
-            Turkey
+                </a>
+                <a
+                  className="nopaddingA"
+                  href="https://bit.ly/3TzZMjd"
+                  target="_blank"
+                  rel="noreferrer"
+                  // style={{ padding: 10 }}
+                >
+                  <div className="ml-2 badge badge-danger">
+                    <span style={{ fontSize: 13 }} className="lazada-logo">
+                      <span className="suggest-text">LAZADA</span>
+                    </span>
+                  </div>
+                </a>
+                <a
+                  className="nopaddingA"
+                  href="https://bit.ly/3KPfOSq"
+                  target="_blank"
+                  rel="noreferrer"
+                  // style={{ padding: 10 }}
+                >
+                  <div className="ml-2 badge badge-danger">
+                    <span style={{ fontSize: 13 }} className="coda-logo">
+                      <span className="suggest-text">CODASHOP</span>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </td>
+          </tr>
+                                  </tbody>
+            </table>
           </div>
+        </>
+      );
+    } else if (matchGames[0].ESRBRating == "TRD") {
+      return (
+        <>
+          <div
+            className="price-container"
+            style={{ margin: "auto", paddingTop: 10 }}
+          >
+
+<>
+              {" "}
+              <Box
+                style={{
+                  borderRadius: 5,
+                  backgroundColor: "#ffc4c4",
+                  marginBottom: 10,
+                  padding: 8,
+                  fontSize: 12,
+                  textAlign: "center",
+                }}
+              >
+                Sign up with {" "}
+                <a
+                  className="infotax"
+                  href="https://wise.com/invite/ath/markandrewm11"
+                >
+                  Wise
+                </a>{" "}
+                to buy from Turkey PSN region.  <a
+                  className="infotax"
+                  href="https://www.reddit.com/r/playstation/comments/ypfh5m/tutorial_how_to_buy_games_from_turkey_psn/"
+                >
+                How to buy guide.
+                </a>
+              </Box>
+            </>
+
+            <table className="table table-align-middle item-price-table">
+              <tbody>
+          <tr className="item-table-best">
+            <td className="version">
+              <span>
+                <div style={{ marginLeft: "1rem" }} className="trregion-logo">
+                  Turkey
+                </div>
+              </span>
+            </td>
+            <td className="version"></td>
+            <td className="version">
+              <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                <div className="btn btn-block btn-secondary">
+                  <TrPlusPrice />
+                  {"₱" + Math.round(matchGames[0].SalePrice * trdExchange)}
+                  <span className="ml-2 badge badge-danger">
+                    <strike>
+                      <PesoPrice props={matchGames[0].Price} />
+                    </strike>
                   </span>
-                </td>
-                <td className="version"></td>
-                <td className="version">
-                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
-                    <div className="btn btn-block btn-secondary">
-                      <TrPlusPrice />
-                      {"₱" + Math.round(matchGames[0].SalePrice * trdExchange)}
-                      <span className="ml-2 badge badge-danger">
-                        <strike>
-                          <PesoPrice props={matchGames[0].Price} />
-                        </strike>
-                      </span>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-             </>
-  )
-}
- 
-
-
-     else {
-
-    return(
-      <>
-        <tr className="item-table-best">
-                <td className="version">
-                  <span>
-                             <div style={{ marginLeft: "1rem" }} className="usregion-logo">
-            United States
+                </div>
+              </a>
+            </td>
+          </tr>
+                                  </tbody>
+            </table>
           </div>
-                  </span>
-                </td>
-                <td className="version"></td>
-                <td className="version">
-                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
-                    <div className="btn btn-block btn-secondary">
-                      <PesoPlusPrice />
-                      {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
-                      <span className="ml-2 badge badge-danger">
-                        <strike>
-                          <PesoPrice props={matchGames[0].Price} />
-                        </strike>
-                      </span>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-              <tr className="item-table-best">
-                <td className="item-note text-left">
-                  <div
-                    className="vendors"
-                    style={{
-                      display: "flex",
-                      justifyContent: "left",
-                      flexWrap: "wrap",
-                      fontSize: 14,
-                    }}
-                  >
-                    <span className="nopaddingA">
-                      {" "}
-                      <div className="ml-2 badge badge-info">
-                        {" "}
-                        Suggested Gift Card: <ShopeeCard />
-                      </div>
-                    </span>{" "}
-                  </div>
-                </td>
-                <td></td>
-                <td className="item-note text-right">
-                  <div
-                    className="vendors"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <a
-                      className="nopaddingA"
-                      href="https://shope.ee/6ziEPIJLma"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="shopee-logo">
-                          <span className="suggest-text">SHOPEE</span>
-                        </span>
-                      </div>
-                    </a>
-                    <a
-                      className="nopaddingA"
-                      href="https://bit.ly/3TzZMjd"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="lazada-logo">
-                          <span className="suggest-text">LAZADA</span>
-                        </span>
-                      </div>
-                    </a>
-                    <a
-                      className="nopaddingA"
-                      href="https://bit.ly/3KPfOSq"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="coda-logo">
-                          <span className="suggest-text">CODASHOP</span>
-                        </span>
-                      </div>
-                    </a>
-                  </div>
-                </td>
-              </tr></>)
+        </>
 
+      );
+    } else {
+      return (
+        <>
+          <div
+            className="price-container"
+            style={{ margin: "auto", paddingTop: 10 }}
+          >
+            <table className="table table-align-middle item-price-table">
+              <tbody>
+          <tr className="item-table-best">
+            <td className="version">
+              <span>
+                <div style={{ marginLeft: "1rem" }} className="usregion-logo">
+                  United States
+                </div>
+              </span>
+            </td>
+            <td className="version"></td>
+            <td className="version">
+              <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
+                <div className="btn btn-block btn-secondary">
+                  <PesoPlusPrice />
+                  {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
+                  <span className="ml-2 badge badge-danger">
+                    <strike>
+                      <PesoPrice props={matchGames[0].Price} />
+                    </strike>
+                  </span>
+                </div>
+              </a>
+            </td>
+          </tr>
+          <tr className="item-table-best">
+            <td className="item-note text-left">
+              <div
+                className="vendors"
+                style={{
+                  display: "flex",
+                  justifyContent: "left",
+                  flexWrap: "wrap",
+                  fontSize: 14,
+                }}
+              >
+                <span className="nopaddingA">
+                  {" "}
+                  <div className="ml-2 badge badge-info">
+                    {" "}
+                    Suggested Gift Card: <ShopeeCard />
+                  </div>
+                </span>{" "}
+              </div>
+            </td>
+            <td></td>
+            <td className="item-note text-right">
+              <div
+                className="vendors"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  flexWrap: "wrap",
+                }}
+              >
+                <a
+                  className="nopaddingA"
+                  href="https://shope.ee/6ziEPIJLma"
+                  target="_blank"
+                  rel="noreferrer"
+                  // style={{ padding: 10 }}
+                >
+                  <div className="ml-2 badge badge-danger">
+                    <span style={{ fontSize: 13 }} className="shopee-logo">
+                      <span className="suggest-text">SHOPEE</span>
+                    </span>
+                  </div>
+                </a>
+                <a
+                  className="nopaddingA"
+                  href="https://bit.ly/3TzZMjd"
+                  target="_blank"
+                  rel="noreferrer"
+                  // style={{ padding: 10 }}
+                >
+                  <div className="ml-2 badge badge-danger">
+                    <span style={{ fontSize: 13 }} className="lazada-logo">
+                      <span className="suggest-text">LAZADA</span>
+                    </span>
+                  </div>
+                </a>
+                <a
+                  className="nopaddingA"
+                  href="https://bit.ly/3KPfOSq"
+                  target="_blank"
+                  rel="noreferrer"
+                  // style={{ padding: 10 }}
+                >
+                  <div className="ml-2 badge badge-danger">
+                    <span style={{ fontSize: 13 }} className="coda-logo">
+                      <span className="suggest-text">CODASHOP</span>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+            </table>
+          </div>
+        </>
+                      
+      );
     }
-
-
-      }
+  }
 
   function PricesTable(props) {
-
-
- 
     if (props.psorsw === "Switch") {
-
-    var testBoolean;
-    // console.log(props);
-    if (matchGames[0].ArgentinaPrice != 0){
-     if ((matchGames[0].ArgentinaPrice * arsExchange) / usdExchange <= 10){
-       // console.log((matchGames[0].ArgentinaPrice * arsExchange) / usdExchange)
-        //console.log("less than 10")
-        testBoolean = true;
-             }
-             else {
-        //console.log((matchGames[0].ArgentinaPrice * arsExchange) / usdExchange)
-        //more than 10
-        testBoolean = false;
-             }
-
-    }
-      var argentinaTax = Math.round((testBoolean ? matchGames[0].ArgentinaPrice * arsExchange * 1.74 : matchGames[0].ArgentinaPrice * arsExchange * 1.53) - matchGames[0].ArgentinaPrice * arsExchange)
+      var testBoolean;
+      // console.log(props);
+      if (matchGames[0].ArgentinaPrice != 0) {
+        if ((matchGames[0].ArgentinaPrice * arsExchange) / usdExchange <= 10) {
+          // console.log((matchGames[0].ArgentinaPrice * arsExchange) / usdExchange)
+          //console.log("less than 10")
+          testBoolean = true;
+        } else {
+          //console.log((matchGames[0].ArgentinaPrice * arsExchange) / usdExchange)
+          //more than 10
+          testBoolean = false;
+        }
+      }
+      var argentinaTax = Math.round(
+        (testBoolean
+          ? matchGames[0].ArgentinaPrice * arsExchange * 1.74
+          : matchGames[0].ArgentinaPrice * arsExchange * 1.53) -
+          matchGames[0].ArgentinaPrice * arsExchange
+      );
       var pricesobj = {
         Canada: matchGames[0].CanadaPrice * cadExchange,
         Peru: matchGames[0].PeruPrice * penExchange,
@@ -1179,29 +1357,45 @@ return (
       // console.log(pricesobj);
       const entries = Object.entries(pricesobj).sort(([, a], [, b]) => a - b);
       var artag = 0;
-      function InfoTax () {
-        entries.forEach(element => {
-          if (element[0] === "Argentina"){
+      function InfoTax() {
+        entries.forEach((element) => {
+          if (element[0] === "Argentina") {
             artag = 1;
           }
-
         });
 
-    if (artag == 1)
-//     {
-      return (                     
-     <>  <Box style={{borderRadius: 5, backgroundColor: "#ffc4c4", marginBottom: 10, padding: 8, fontSize: 12, textAlign: 'center'}}>
-     Note: +Tax may be charged if buying from Argentina. Use <a  className="infotax" href="https://www.maya.ph/app/registration?invite=JX6YO2XL4781">MAYA Virtual Card</a>  for tax-free purchase.
-                    </Box>
-</>
-        );
-      else {
-        return null;
+        if (artag == 1)
+          //     {
+          return (
+            <>
+              {" "}
+              <Box
+                style={{
+                  borderRadius: 5,
+                  backgroundColor: "#ffc4c4",
+                  marginBottom: 10,
+                  padding: 8,
+                  fontSize: 12,
+                  textAlign: "center",
+                }}
+              >
+                Note: +Tax may be charged if buying from Argentina. Use{" "}
+                <a
+                  className="infotax"
+                  href="https://www.maya.ph/app/registration?invite=JX6YO2XL4781"
+                >
+                  MAYA Virtual Card
+                </a>{" "}
+                for tax-free purchase.
+              </Box>
+            </>
+          );
+        else {
+          return null;
+        }
+
+        // }
       }
-      
-    // }
-      
-}
 
       function USRank() {
         return (
@@ -1234,10 +1428,12 @@ return (
           return (
             <div style={{ marginLeft: "10px" }} className="arregion-logo">
               Argentina
-                            <br/>
-              <div style={{fontSize: 11, fontWeight: 'Bold', color: 'red'}}> + ₱{argentinaTax} TAX</div>
+              <br />
+              <div style={{ fontSize: 11, fontWeight: "Bold", color: "red" }}>
+                {" "}
+                + ₱{argentinaTax} TAX
+              </div>
             </div>
-
           );
         } else if (props.rank1country === "Colombia") {
           return (
@@ -1313,8 +1509,11 @@ return (
           return (
             <div style={{ marginLeft: "10px" }} className="arregion-logo">
               Argentina
-              <br/>
-               <div style={{fontSize: 11, fontWeight: 'Bold', color: 'red'}}> + ₱{argentinaTax} TAX</div>
+              <br />
+              <div style={{ fontSize: 11, fontWeight: "Bold", color: "red" }}>
+                {" "}
+                + ₱{argentinaTax} TAX
+              </div>
             </div>
           );
         } else if (props.rank2country === "Colombia") {
@@ -1391,8 +1590,11 @@ return (
           return (
             <div style={{ marginLeft: "10px" }} className="arregion-logo">
               Argentina
-                            <br/>
-               <div style={{fontSize: 11, fontWeight: 'Bold', color: 'red'}}> + ₱{argentinaTax} TAX</div>
+              <br />
+              <div style={{ fontSize: 11, fontWeight: "Bold", color: "red" }}>
+                {" "}
+                + ₱{argentinaTax} TAX
+              </div>
             </div>
           );
         } else if (props.rank3country === "Colombia") {
@@ -1452,10 +1654,6 @@ return (
       // var rank2price = entries[1][1]
       // var rank3country = entries[2][0]
       // var rank3price = entries[2][1]
-
-
-      
-
 
       function RankRows() {
         if (entries.length === 1) {
@@ -1657,7 +1855,7 @@ return (
               <tr className="item-table-best">
                 <td className="version">
                   <span className="gold-medal-logo">
-                    <Rank1 rank1country={rank1country}/>
+                    <Rank1 rank1country={rank1country} />
                   </span>
                 </td>
                 <td></td>
@@ -2015,15 +2213,12 @@ return (
         }
       }
 
-
-
-
       return (
         <div
           className="price-container"
           style={{ margin: "auto", paddingTop: 10 }}
         >
-        <InfoTax/>
+          <InfoTax />
 
           <table className="table table-align-middle item-price-table">
             <tbody>
@@ -2035,88 +2230,10 @@ return (
     } else {
       return (
 
-<>
+
+                <PsPrices />
 
 
-        <div
-          className="price-container"
-          style={{ margin: "auto", paddingTop: 10 }}
-        >
-        <Box style={{borderRadius: 5, backgroundColor: "#ffc4c4", marginBottom: 10, padding: 8, fontSize: 12, textAlign: 'center'}}>
-     Sign up with <a  className="infotax" href="https://wise.com/invite/ath/markandrewm11">Wise</a> to buy from Turkey PSN region. <a  className="infotax" href="https://www.reddit.com/r/playstation/comments/ypfh5m/tutorial_how_to_buy_games_from_turkey_psn/">How to buy guide</a>. 
-                    </Box>
-
-                  <table className="table table-align-middle item-price-table">
-            <tbody>
-
-              <PsPrices />
-            </tbody>
-          </table>
-      
-
-
-
-
-        {/*  <table className="table table-align-middle item-price-table">
-            <tbody>
-              <tr className="item-table-best has-notes">
-                <td>
-                  <a
-                    href={matchGames[0].URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ padding: 0 }}
-                  >
-                    <WhichStore />
-                  </a>
-                </td>
-                <td className="version">
-                  <a
-                    href={matchGames[0].URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ padding: 10 }}
-                  >
-                    <span className="usregion-logo">Digital Game</span>
-                  </a>
-                </td>
-                <td className="version">
-                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
-                    <div className="btn btn-block btn-secondary">
-                      <PesoPlusPrice />
-                      <PesoPrice props={matchGames[0].SalePrice} />
-                      <span className="ml-2 badge badge-danger">
-                        -{matchGames[0].PercentOff}
-                      </span>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-              <tr className="item-table-best">
-                <td className="item-note text-right" colSpan="3">
-                  <a
-                    className="pb-1"
-                    href={matchGames[0].URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{
-                      fontSize: 12,
-                      paddingRight: 20,
-                      padding: "0 0.75rem ",
-                    }}
-                  >
-                    Retail Price{" "}
-                    <strike>
-                      <PesoPrice props={matchGames[0].Price} />
-                    </strike>
-                  </a>
-                </td>
-              </tr>
-              <ShopeeURL />
-            </tbody>
-          </table>*/}
-        </div>
-        </>
       );
     }
   }
@@ -2228,29 +2345,27 @@ return (
           </BackgroundContainer>
           {/*    <NaviBar />*/}
 
-
           <div className="m-3 p-auto" style={{ paddingBottom: 15 }}>
-
-            <Card className="border-0" style={{ borderRadius: '7px', maxWidth: '236px', width: '50%',
-               marginLeft: 'auto', marginRight: 'auto'}}>
-            <Card.Img
-              alt=""
+            <Card
+              className="border-0"
               style={{
-
+                borderRadius: "7px",
+                maxWidth: "236px",
+                width: "50%",
+                marginLeft: "auto",
+                marginRight: "auto",
               }}
-              src={matchGames[0].Image}
-            />
+            >
+              <Card.Img alt="" style={{}} src={matchGames[0].Image} />
 
-
-
-                      <Card.ImgOverlay className="card-img-overlay">
-                      
-            <PlatformBadge hasBadge={matchGames[0].platform} esrbrating={matchGames[0].ESRBRating}/>
-   
-           
-          </Card.ImgOverlay>
-          </Card>
-</div>
+              <Card.ImgOverlay className="card-img-overlay">
+                <PlatformBadge
+                  hasBadge={matchGames[0].platform}
+                  esrbrating={matchGames[0].ESRBRating}
+                />
+              </Card.ImgOverlay>
+            </Card>
+          </div>
 
           <Paper elevation={2} className="content-container">
             {/*<Card className="content-container-gameinfo">*/}
@@ -2263,15 +2378,12 @@ return (
             >
               {matchGames[0].Title.toUpperCase().replace(/ *\([^)]*\) */g, "")}
               <HasOpenCritic props={matchGames[0].SCORE} />
-             
-             
-                <br />
-             
-                <span style={{fontSize: '0.75rem'}}>
+
+              <br />
+
+              <span style={{ fontSize: "0.75rem" }}>
                 SALE ENDS: {DateConvert(matchGames[0].SaleEnds).toUpperCase()}
               </span>
-        
-           
             </Card.Header>
             <PricesTable psorsw={matchGames[0].platform} />
             <div style={{ fontSize: 14 }}>
@@ -2315,7 +2427,7 @@ return (
                 <Row xs={1} sm={2}>
                   <Col style={{ paddingBottom: 10 }}>
                     <span style={{ fontWeight: "bold" }}>Genre:</span>{" "}
-                  {matchGames[0].genre.replaceAll(',', ', ')}
+                    {matchGames[0].genre.replaceAll(",", ", ")}
                   </Col>
                   <Col style={{ paddingBottom: 10 }}></Col>
                 </Row>
@@ -2326,7 +2438,7 @@ return (
 
             <div style={{ fontSize: 14 }}>
               <Card.Header
-                style={{backgroundColor: "white", fontWeight: "bold" }}
+                style={{ backgroundColor: "white", fontWeight: "bold" }}
               >
                 DESCRIPTION
               </Card.Header>
