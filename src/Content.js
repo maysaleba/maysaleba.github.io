@@ -1157,13 +1157,13 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                 Sign up with {" "}
                 <a
                   className="infotax"
-                  href="https://wise.com/invite/ath/markandrewm11"
+                  href="https://www.cimbbank.com.ph/"
                 >
-                  Wise
+                  CIMB PH
                 </a>{" "}
                 to buy from Turkey PSN region.  <a
                   className="infotax"
-                  href="https://www.reddit.com/r/playstation/comments/ypfh5m/tutorial_how_to_buy_games_from_turkey_psn/"
+                  href="bit.ly/3HutrVI"
                 >
                 How to buy guide.
                 </a>
