@@ -1163,7 +1163,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                 </a>{" "}
                 to buy from Turkey PSN region.  <a
                   className="infotax"
-                  href="bit.ly/3HutrVI"
+                  href="https://bit.ly/3HutrVI"
                 >
                 How to buy guide.
                 </a>
