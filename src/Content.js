@@ -172,7 +172,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       } else if (matchGames[0].PlusPrice == 202020) {
         return (
           <>
-            <span className="eabadge">INCLUDED</span>
+            <span className="eabadge">FREE</span>
             <br />
           </>
         );
@@ -211,7 +211,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       } else if (matchGames[0].PlusPrice == 202020) {
         return (
           <>
-            <span className="eabadge">INCLUDED</span>
+            <span className="eabadge">FREE</span>
             <br />
           </>
         );
@@ -250,7 +250,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       } else if (matchGames[0].PlusPrice == 202020) {
         return (
           <>
-            <span className="eabadge">INCLUDED</span>
+            <span className="eabadge">FREE</span>
             <br />
           </>
         );
@@ -289,7 +289,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       } else if (matchGames[0].PlusPrice == 202020) {
         return (
           <>
-            <span className="eabadge">INCLUDED</span>
+            <span className="eabadge">FREE</span>
             <br />
           </>
         );

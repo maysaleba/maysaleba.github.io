@@ -415,7 +415,7 @@ today = yyyy + "-" + mm + "-" + dd;
 else if (PlusPrice === 202020) {
         return (
           <span className="eabadge" style={{ fontWeight: "bold" }}>
-            INCLUDED
+            FREE
           </span>
         );
 }
@@ -444,7 +444,7 @@ else if (PlusPrice === 202020) {
 else if (PlusPrice === 202020) {
         return (
           <span className="eabadge" style={{ fontWeight: "bold" }}>
-            INCLUDED
+            FREE
           </span>
         );
 }
@@ -473,7 +473,7 @@ else if (PlusPrice === 202020) {
 else if (PlusPrice === 202020) {
         return (
           <span className="eabadge" style={{ fontWeight: "bold" }}>
-            INCLUDED
+            FREE
           </span>
         );
 }
@@ -504,7 +504,7 @@ else if (PlusPrice === 202020) {
 else if (PlusPrice === 202020) {
         return (
           <span className="eabadge" style={{ fontWeight: "bold" }}>
-            INCLUDED
+            FREE
           </span>
         );
 }
