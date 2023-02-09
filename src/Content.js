@@ -763,7 +763,36 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
             </div>
           </>
         );
-      } else {
+      }  else  if (props.esrbrating === "ROM Bundle") {
+        return (
+          <>
+            <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>
+            <div className="d-flex justify-content float-start opencritic-container2">
+              <Box
+                style={{
+                  fontWeight: "bold",
+                  borderRadius: 5,
+                  backgroundColor: "#6f00cb",
+                  marginTop: 3,
+                  marginLeft: 5,
+                  paddingTop: 1,
+                  paddingBottom: 1,
+                  paddingLeft: 5,
+                  paddingRight: 5,
+                  fontSize: "0.65rem",
+                  textAlign: "center",
+                  color: "white",
+                }}
+              >
+                BUNDLE
+              </Box>
+            </div>
+          </>
+        );
+      }
+
+
+      else {
         return (
           <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>
         );
