@@ -40,12 +40,12 @@ var yyyy = today.getFullYear();
 
 today = yyyy + "-" + mm + "-" + dd;
 
-let games2 = gamesps.filter((review) => review.SaleEnds > today);
-let games3 = sggamesps.filter((review) => review.SaleEnds > today);
-let games4 = hkgamesps.filter((review) => review.SaleEnds > today);
-let games5 = exgamesps.filter((review) => review.SaleEnds > today);
-let games6 = gamespsu.filter((review) => review.SaleEnds > today);
-let games7 = trgamesps.filter((review) => review.SaleEnds > today);
+let games2 = gamesps.filter((review) => review.SaleEnds >= today);
+let games3 = sggamesps.filter((review) => review.SaleEnds >= today);
+let games4 = hkgamesps.filter((review) => review.SaleEnds >= today);
+let games5 = exgamesps.filter((review) => review.SaleEnds >= today);
+let games6 = gamespsu.filter((review) => review.SaleEnds >= today);
+let games7 = trgamesps.filter((review) => review.SaleEnds >= today);
 let games = games1
   .concat(games2)
   .concat(games3)

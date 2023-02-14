@@ -34,10 +34,10 @@ today = yyyy + "-" + mm + "-" + dd;
 
 
 let reviewsps0 = reviewspsx.concat(exreviewspsx).concat(reviewspsxu);
-let reviewsps = reviewsps0.filter((review) => review.SaleEnds > today);
-let sgreviewsps = sgreviewspsx.filter((review) => review.SaleEnds > today);
-let hkreviewsps = hkreviewspsx.filter((review) => review.SaleEnds > today);
-let trreviewsps = trreviewspsx.filter((review) => review.SaleEnds > today);
+let reviewsps = reviewsps0.filter((review) => review.SaleEnds >= today);
+let sgreviewsps = sgreviewspsx.filter((review) => review.SaleEnds >= today);
+let hkreviewsps = hkreviewspsx.filter((review) => review.SaleEnds >= today);
+let trreviewsps = trreviewspsx.filter((review) => review.SaleEnds >= today);
 
 
 export default function Main() {
