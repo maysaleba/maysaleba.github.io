@@ -189,6 +189,7 @@ console.log(daysago)
                 Platform={review.platform}
                 PlusPrice={review.PlusPrice}
                 Price={review.Price}
+                ESRBRating={review.ESRBRating}
               />
             </div>
           ))}
@@ -218,6 +219,7 @@ console.log(daysago)
                 Platform={review.platform}
                 PlusPrice={review.PlusPrice}
                 Price={review.Price}
+                ESRBRating={review.ESRBRating}
               />
             </div>
           ))}
