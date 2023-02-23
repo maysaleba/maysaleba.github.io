@@ -1383,7 +1383,9 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         if (v === 0) delete pricesobj[k];
       });
 
-      // console.log(pricesobj);
+      console.log(pricesobj);
+      console.log(zarExchange)
+      console.log(plnExchange)
       const entries = Object.entries(pricesobj).sort(([, a], [, b]) => a - b);
       var artag = 0;
       function InfoTax() {
@@ -1413,7 +1415,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                   className="infotax"
                   href="https://www.maya.ph/app/registration?invite=JX6YO2XL4781"
                 >
-                  MAYA Virtual Card
+                  MAYA VISA Virtual Card
                 </a>{" "}
                 for tax-free purchase.
               </Box>
