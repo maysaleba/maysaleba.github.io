@@ -128,12 +128,12 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   function OrigPrice(){
     if (matchGames[0].NumberofPlayers !== "" ) {
        return (
-        <div   style={{marginTop: -10, marginBottom: 15, textAlign: "center", fontSize: "0.7rem"}}>
+        <div   style={{marginTop: -10, marginBottom: 15, textAlign: "center", fontSize: "0.8rem"}}>
        <InfoIcon sx={{color:"white"}} fontSize="small"/> <a className="origprice" href={matchGames[0].NumberofPlayers}>CHECK RETAIL PRICE</a></div>
         )
     } else if (matchGames[0].NumberofPlayers == "" ){
       return (
-        <div   style={{marginTop: -10, marginBottom: 15, textAlign: "center", fontSize: "0.7rem"}}>
+        <div   style={{marginTop: -10, marginBottom: 15, textAlign: "center", fontSize: "0.8rem"}}>
        <InfoIcon sx={{color:"white"}} fontSize="small"/> <a className="origprice" href="https://shope.ee/5ALD8alAHo">CHECK RETAIL PRICE</a></div>
         )
               
