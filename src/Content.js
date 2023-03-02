@@ -126,19 +126,18 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function OrigPrice(){
-    if (matchGames[0].NumberofPlayers !== "" ) {
+    if (matchGames[0].NumberofPlayers !== undefined ) {
+       console.log("SHOPEE!!"+matchGames[0].NumberofPlayers)
        return (
+
         <div   style={{marginTop: -10, marginBottom: 15, textAlign: "center", fontSize: "0.8rem"}}>
        <InfoIcon sx={{color:"white"}} fontSize="small"/> <a className="origprice" href={matchGames[0].NumberofPlayers} target="_blank" rel="noreferrer">CHECK RETAIL PRICE</a></div>
         )
-    } else if (matchGames[0].NumberofPlayers == "" ){
+    } else {
       return (
         <div   style={{marginTop: -10, marginBottom: 15, textAlign: "center", fontSize: "0.8rem"}}>
        <InfoIcon sx={{color:"white"}} fontSize="small"/> <a className="origprice" href="https://shope.ee/5ALD8alAHo" target="_blank" rel="noreferrer">CHECK RETAIL PRICE</a></div>
         )
-              
-    } else {
-      return null
     }
     }
   
