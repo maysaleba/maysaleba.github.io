@@ -17,6 +17,7 @@ import GoogleAds from "./AdSense";
 import axios from "axios";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import InfoIcon from '@mui/icons-material/Info';
 
 const YoutubeEmbed = ({ embedId }) => (
   <div className="video-responsive">
@@ -123,6 +124,24 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       return newText;
     }
   }
+
+  function OrigPrice(){
+    if (matchGames[0].NumberofPlayers !== "" ) {
+       return (
+        <div   style={{marginTop: -10, marginBottom: 15, textAlign: "center", fontSize: "0.7rem"}}>
+       <InfoIcon sx={{color:"white"}} fontSize="small"/> <a className="origprice" href={matchGames[0].NumberofPlayers}>CHECK RETAIL PRICE</a></div>
+        )
+    } else if (matchGames[0].NumberofPlayers == "" ){
+      return (
+        <div   style={{marginTop: -10, marginBottom: 15, textAlign: "center", fontSize: "0.7rem"}}>
+       <InfoIcon sx={{color:"white"}} fontSize="small"/> <a className="origprice" href="https://shope.ee/5ALD8alAHo">CHECK RETAIL PRICE</a></div>
+        )
+              
+    } else {
+      return null
+    }
+    }
+  
 
   function WhichStore() {
     if (matchGames[0].platform === "Playstation") {
@@ -2385,6 +2404,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                 width: "50%",
                 marginLeft: "auto",
                 marginRight: "auto",
+                // marginBottom: -10,
               }}
             >
               <Card.Img alt="" style={{}} src={matchGames[0].Image} />
@@ -2397,9 +2417,10 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
               </Card.ImgOverlay>
             </Card>
           </div>
-
+         <OrigPrice />
           <Paper elevation={2} className="content-container">
             {/*<Card className="content-container-gameinfo">*/}
+             
             <Card.Header
               style={{
                 fontSize: 18,
@@ -2407,9 +2428,9 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                 fontWeight: "bold",
               }}
             >
+
               {matchGames[0].Title.toUpperCase().replace(/ *\([^)]*\) */g, "")}
               <HasOpenCritic props={matchGames[0].SCORE} />
-
               <br />
 
               <span style={{ fontSize: "0.75rem" }}>

@@ -209,6 +209,12 @@ a.giftcardlink {
     color: #9c27b0 !important;
 }
 
+a.origprice {
+    color: #ffffff !important;
+    font-weight:  bold;
+    text-decoration: underline !important;
+}
+
 a.infotax {
     color: #0000EE !important;
     white-space: nowrap !important;
@@ -688,15 +694,16 @@ padding-left: 20px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
-/*.shopee-logo {
-background-size:  90px;
+.shopee-svg {
+background-size:  15px;
 background-position:  left center;
 background-image: url('ShopeeIcon.svg');
 background-repeat: no-repeat;
-margin-left: 10px;
-padding-left: 30px;  
+margin-left: 0;
+padding-left: 20px;  
 display: inline-block;  
-}*/
+}
+
 
 
 .coda-logo {
