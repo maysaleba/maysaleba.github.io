@@ -5,6 +5,7 @@
 <url> <loc>https://www.maysaleba.com?/allgames</loc> </url>
 <url> <loc>https://www.maysaleba.com?/switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/playstation</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/a-monsters-expedition-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/little-noah-scion-of-paradise-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/teenage-mutant-ninja-turtles-shredders-revenge-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/tinykin-switch</loc> </url>
@@ -94,7 +95,6 @@
 <url> <loc>https://www.maysaleba.com?/games/fury-unleashed-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/hero-u-rogue-to-redemption-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/hob-the-definitive-edition-switch</loc> </url>
-<url> <loc>https://www.maysaleba.com?/games/megs-monster-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/star-wars-knights-of-the-old-republic-ii-the-sith-lords-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/syberia-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/amnesia-collection-switch</loc> </url>
@@ -108,12 +108,14 @@
 <url> <loc>https://www.maysaleba.com?/games/figment-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/toejam-and-earl-back-in-the-groove-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/bleed-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/megs-monster-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/road-96-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/streets-of-rogue-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/trigger-witch-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/party-hard-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/serial-cleaner-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/clustertruck-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/cyber-hook-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/giana-sisters-twisted-dreams-owltimate-edition-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/one-line-coloring-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/hotshot-racing-switch</loc> </url>
@@ -194,6 +196,7 @@
 <url> <loc>https://www.maysaleba.com?/games/world-war-z-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/crash-drive-3-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/degrees-of-separation-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/ink-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/here-be-dragons-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/red-wings-aces-of-the-sky-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/911-operator-switch</loc> </url>
@@ -274,6 +277,7 @@
 <url> <loc>https://www.maysaleba.com?/games/punch-club-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/the-coma-recut-switch-7100033058</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/american-fugitive-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/gal-gun-2-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/senran-kagura-peach-ball-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/catan-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/skully-switch</loc> </url>
@@ -431,6 +435,7 @@
 <url> <loc>https://www.maysaleba.com?/games/birthday-of-midnight-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/bit-trip-collection-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/biz-builder-delux-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/black-paradox-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/blastful-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/blastoid-breakout-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/bleep-bloop-switch</loc> </url>
@@ -528,6 +533,7 @@
 <url> <loc>https://www.maysaleba.com?/games/crowdy-farm-rush-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/cube-blast-match-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/cubic-figures-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/cubic-parking-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/cubicban-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/cuccchi-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/cue-sports-switch</loc> </url>
@@ -1346,7 +1352,6 @@
 <url> <loc>https://www.maysaleba.com?/games/anti-hero-bundle-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/aquadine-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/archery-blast-switch</loc> </url>
-<url> <loc>https://www.maysaleba.com?/games/ashen-nightstorm-isle-70050000018490-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/asobu-tights-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/ayakashi-romance-reborn-dawn-chapter-and-twilight-chapter-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/banners-of-ruin-switch</loc> </url>
@@ -1757,12 +1762,14 @@
 <url> <loc>https://www.maysaleba.com?/games/marble-maid-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/metal-tales-overkill-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/miyabi-kyoga-and-samon-dlc-pack-70070000009881-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/mortal-kombat-11-kombat-pack-1-70070000005704-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/mortal-kombat-11-kombat-pack-2-70070000011197-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/mortal-kombat-11-ultimate-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/mortal-kombat-11-aftermath-expansion-70070000010581-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/murder-diaries-3-santas-trail-of-blood-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/my-forged-wedding-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/my-last-first-kiss-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/neonlore-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/omega-labyrinth-life-deluxe-edition-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/one-eyed-lee-and-the-dinner-party-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/otoko-cross-pretty-boys-klondike-solitaire-switch</loc> </url>
