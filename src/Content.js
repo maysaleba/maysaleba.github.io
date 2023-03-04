@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import games1 from "./csvjson.json";
 import gamesps from "./csvjsonus.json";
-import exgamesps from "./csvjsonusex.json";
 import sggamesps from "./csvjsonsg.json";
-import gamespsu from "./csvjsonusu.json";
 import hkgamesps from "./csvjsonhk.json";
-import trgamesps from "./csvjsontr.json";
+import trreviewspsx1 from "./csvjsontr.json";
+import trreviewspsx2 from "./csvjsontr2.json";
+import trreviewspsx3 from "./csvjsontr3.json";
 import { Card, Row, Col } from "react-bootstrap";
 import NaviBar from "./NaviBar";
 import { Box, Paper, Link, Container } from "@mui/material";
@@ -44,9 +44,9 @@ today = yyyy + "-" + mm + "-" + dd;
 let games2 = gamesps.filter((review) => review.SaleEnds >= today);
 let games3 = sggamesps.filter((review) => review.SaleEnds >= today);
 let games4 = hkgamesps.filter((review) => review.SaleEnds >= today);
-let games5 = exgamesps.filter((review) => review.SaleEnds >= today);
-let games6 = gamespsu.filter((review) => review.SaleEnds >= today);
-let games7 = trgamesps.filter((review) => review.SaleEnds >= today);
+let games5 = trreviewspsx2.filter((review) => review.SaleEnds >= today);
+let games6 = trreviewspsx3.filter((review) => review.SaleEnds >= today);
+let games7 = trreviewspsx1.filter((review) => review.SaleEnds >= today);
 let games = games1
   .concat(games2)
   .concat(games3)

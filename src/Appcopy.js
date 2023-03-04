@@ -2,11 +2,11 @@ import React, { useEffect, useMemo, useState } from "react";
 import usePagination from "./usePagination.js";
 import reviewssw from "./csvjson.json";
 import reviewspsx from "./csvjsonus.json";
-import exreviewspsx from "./csvjsonusex.json";
 import sgreviewspsx from "./csvjsonsg.json";
 import hkreviewspsx from "./csvjsonhk.json";
-import trreviewspsx from "./csvjsontr.json";
-import reviewspsxu from "./csvjsonusu.json";
+import trreviewspsx1 from "./csvjsontr.json";
+import trreviewspsx2 from "./csvjsontr2.json";
+import trreviewspsx3 from "./csvjsontr3.json";
 import CardGroup from "./CardGroup";
 import "./App.css";
 import { BrowserRouter as Router, Route, useLocation } from "react-router-dom";
@@ -33,11 +33,11 @@ today = yyyy + "-" + mm + "-" + dd;
 
 
 
-let reviewsps0 = reviewspsx.concat(exreviewspsx).concat(reviewspsxu);
-let reviewsps = reviewsps0.filter((review) => review.SaleEnds >= today);
+let reviewsps = reviewspsx.filter((review) => review.SaleEnds >= today);
 let sgreviewsps = sgreviewspsx.filter((review) => review.SaleEnds >= today);
 let hkreviewsps = hkreviewspsx.filter((review) => review.SaleEnds >= today);
-let trreviewsps = trreviewspsx.filter((review) => review.SaleEnds >= today);
+let trreviewspsx0 = trreviewspsx1.concat(trreviewspsx2).concat(trreviewspsx3)
+let trreviewsps = trreviewspsx0.filter((review) => review.SaleEnds >= today);
 
 
 export default function Main() {
