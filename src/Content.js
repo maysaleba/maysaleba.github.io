@@ -1774,7 +1774,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                     </a>
                     <a
                       className="nopaddingA"
-                      href="https://bit.ly/3NyTZGp"
+                      href="https://bit.ly/3L2qm2e"
                       target="_blank"
                       rel="noreferrer"
                       // style={{ padding: 10 }}
@@ -1874,7 +1874,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                     </a>
                     <a
                       className="nopaddingA"
-                      href="https://bit.ly/3NyTZGp"
+                      href="https://bit.ly/3L2qm2e"
                       target="_blank"
                       rel="noreferrer"
                       // style={{ padding: 10 }}
@@ -2001,7 +2001,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                     </a>
                     <a
                       className="nopaddingA"
-                      href="https://bit.ly/3NyTZGp"
+                      href="https://bit.ly/3L2qm2e"
                       target="_blank"
                       rel="noreferrer"
                       // style={{ padding: 10 }}
@@ -2155,7 +2155,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                     </a>
                     <a
                       className="nopaddingA"
-                      href="https://bit.ly/3NyTZGp"
+                      href="https://bit.ly/3L2qm2e"
                       target="_blank"
                       rel="noreferrer"
                       // style={{ padding: 10 }}
