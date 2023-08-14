@@ -676,7 +676,6 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                 <img src={download} />
               </span>*/}
             </Card.Header>
-          </Link>
           <Card.Body style={{ fontSize: 14, margin: "auto" }}>
             <div style={{ columnRule: "4px double #ff00ff" }}>
               <Row xs={3} sm={3}>
@@ -686,6 +685,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
               </Row>
             </div>
           </Card.Body>
+          </Link>
         </>
       );
     }
