@@ -58,7 +58,7 @@ let games = games1
 const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   if (makeswitch === null) {
     var usdExchange = 1 / JSON.stringify(datam.USD);
-    var arsExchange = 1 / JSON.stringify(datam.ARS);
+    var arsExchange = 1 / JSON.stringify(datam.ARS)*999999;
     var audExchange = 1 / JSON.stringify(datam.AUD);
     var brlExchange = 1 / JSON.stringify(datam.BRL);
     var cadExchange = 1 / JSON.stringify(datam.CAD);
@@ -74,7 +74,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     var trdExchange = 1 / JSON.stringify(datam.TRY);
   } else {
     var usdExchange = 1 / JSON.stringify(datam.usd);
-    var arsExchange = 1 / JSON.stringify(datam.ars);
+    var arsExchange = 1 / JSON.stringify(datam.ars)*999999;
     var audExchange = 1 / JSON.stringify(datam.aud);
     var brlExchange = 1 / JSON.stringify(datam.brl);
     var cadExchange = 1 / JSON.stringify(datam.cad);
@@ -653,6 +653,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       );
     }
   }
+
 
   function HasHLTB(props) {
     {
