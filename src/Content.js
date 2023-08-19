@@ -1407,8 +1407,10 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       console.log(plnExchange)
       const entries = Object.entries(pricesobj).sort(([, a], [, b]) => a - b);
       var artag = 0;
+
       function InfoTax() {
-        entries.forEach((element) => {
+        entries.slice(0,3).forEach((element) => {
+
           if (element[0] === "Argentina") {
             artag = 1;
           }
