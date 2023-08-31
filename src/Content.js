@@ -6,6 +6,8 @@ import hkgamesps from "./csvjsonhk.json";
 import trreviewspsx1 from "./csvjsontr.json";
 import trreviewspsx2 from "./csvjsontr2.json";
 import trreviewspsx3 from "./csvjsontr3.json";
+import trreviewspsx4 from "./csvjsontr4.json";
+import trreviewspsx5 from "./csvjsontr5.json";
 import { Card, Row, Col } from "react-bootstrap";
 import NaviBar from "./NaviBar";
 import { Box, Paper, Link, Container } from "@mui/material";
@@ -47,13 +49,17 @@ let games4 = hkgamesps.filter((review) => review.SaleEnds >= today);
 let games5 = trreviewspsx2.filter((review) => review.SaleEnds >= today);
 let games6 = trreviewspsx3.filter((review) => review.SaleEnds >= today);
 let games7 = trreviewspsx1.filter((review) => review.SaleEnds >= today);
+let games8 = trreviewspsx4.filter((review) => review.SaleEnds >= today);
+let games9 = trreviewspsx5.filter((review) => review.SaleEnds >= today);
 let games = games1
   .concat(games2)
   .concat(games3)
   .concat(games4)
   .concat(games5)
   .concat(games6)
-  .concat(games7);
+  .concat(games7)
+  .concat(games8)
+  .concat(games9);
 
 const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   if (makeswitch === null) {

@@ -7,6 +7,8 @@ import hkreviewspsx from "./csvjsonhk.json";
 import trreviewspsx1 from "./csvjsontr.json";
 import trreviewspsx2 from "./csvjsontr2.json";
 import trreviewspsx3 from "./csvjsontr3.json";
+import trreviewspsx4 from "./csvjsontr4.json";
+import trreviewspsx5 from "./csvjsontr5.json";
 import CardGroup from "./CardGroup";
 import "./App.css";
 import { BrowserRouter as Router, Route, useLocation } from "react-router-dom";
@@ -36,7 +38,7 @@ today = yyyy + "-" + mm + "-" + dd;
 let reviewsps = reviewspsx.filter((review) => review.SaleEnds >= today);
 let sgreviewsps = sgreviewspsx.filter((review) => review.SaleEnds >= today);
 let hkreviewsps = hkreviewspsx.filter((review) => review.SaleEnds >= today);
-let trreviewspsx0 = trreviewspsx1.concat(trreviewspsx2).concat(trreviewspsx3)
+let trreviewspsx0 = trreviewspsx1.concat(trreviewspsx2).concat(trreviewspsx3).concat(trreviewspsx4).concat(trreviewspsx5)
 let trreviewsps = trreviewspsx0.filter((review) => review.SaleEnds >= today);
 
 
@@ -129,6 +131,7 @@ export default function Main() {
   }, [theURL]);
 
   const [priceRangeField, setPriceRangeField] = useState(99999);
+  const [priceRangeLow, setPriceRangeLow] = useState(0);
   const [priceRangeDropDown, setPriceRangeDropDown] =
     useState("All Price Range");
   const [platformField, setPlatformField] = useState("");
@@ -174,21 +177,27 @@ export default function Main() {
   const onPriceRangeChange = (filterPriceRange) => {
     if (filterPriceRange === "All Price Range") {
       setPriceRangeField(99999);
+      setPriceRangeLow(0);
     }
     if (filterPriceRange === "< P2500") {
       setPriceRangeField(50);
+      setPriceRangeLow(35.1);
     }
     if (filterPriceRange === "< P1750") {
       setPriceRangeField(35);
+      setPriceRangeLow(20.1);
     }
     if (filterPriceRange === "< P1000") {
       setPriceRangeField(20);
+      setPriceRangeLow(10.1);
     }
     if (filterPriceRange === "< P500") {
       setPriceRangeField(10);
+      setPriceRangeLow(5.1);
     }
     if (filterPriceRange === "< P250") {
       setPriceRangeField(5);
+      setPriceRangeLow(0);
     }
   };
 
@@ -242,15 +251,19 @@ export default function Main() {
         review.genre.toLowerCase().includes(filterField.toLowerCase()) &&
         review.platform.toLowerCase().includes(platformField.toLowerCase()) && 
         review.ESRBRating.toLowerCase().includes(regionFilter.toLowerCase()) &&
-        review.SalePrice < priceRangeField
+        (review.SalePrice < priceRangeField && review.SalePrice > priceRangeLow)
       );
     })
   );
+
+
 
   let { pageData, page, maxPage, jumpPage } = usePagination(
     filteredReviews,
     40
   );
+
+
 
   useEffect(() => {
     if (
