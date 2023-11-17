@@ -378,7 +378,7 @@ export default function Main() {
             <MainPage
               filteredReviews={filteredReviews}
               pageData={pageData}
-              reviewsps={trreviewsps}
+              reviewsps={reviewsps}
             />
             <Helmet>
               <meta charset="utf-8" />
