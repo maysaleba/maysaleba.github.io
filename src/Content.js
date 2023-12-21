@@ -64,7 +64,7 @@ let games = games1
 const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   if (makeswitch === null) {
     var usdExchange = 1 / JSON.stringify(datam.USD);
-    var arsExchange = 1 / JSON.stringify(datam.ARS)*999999;
+    var arsExchange = 1 / JSON.stringify(datam.ARS);
     var audExchange = 1 / JSON.stringify(datam.AUD);
     var brlExchange = 1 / JSON.stringify(datam.BRL);
     var cadExchange = 1 / JSON.stringify(datam.CAD);
@@ -80,7 +80,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     var trdExchange = 1 / JSON.stringify(datam.TRY);
   } else {
     var usdExchange = 1 / JSON.stringify(datam.usd);
-    var arsExchange = 1 / JSON.stringify(datam.ars)*999999;
+    var arsExchange = 1 / JSON.stringify(datam.ars);
     var audExchange = 1 / JSON.stringify(datam.aud);
     var brlExchange = 1 / JSON.stringify(datam.brl);
     var cadExchange = 1 / JSON.stringify(datam.cad);
@@ -1389,9 +1389,18 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
           : matchGames[0].ArgentinaPrice * arsExchange * 1.53) -
           matchGames[0].ArgentinaPrice * arsExchange
       );
+
+      var argentinaTaxAR = Math.round(
+        (testBoolean
+          ? matchGames[0].ArgentinaPrice * 1.74
+          : matchGames[0].ArgentinaPrice * 1.53) -
+          matchGames[0].ArgentinaPrice
+      );
+
       var pricesobj = {
         Canada: matchGames[0].CanadaPrice * cadExchange,
         Peru: matchGames[0].PeruPrice * penExchange,
+        // Argentina: argentinaTax + matchGames[0].ArgentinaPrice * arsExchange,
         Argentina: matchGames[0].ArgentinaPrice * arsExchange,
         Australia: matchGames[0].AustraliaPrice * audExchange,
         Colombia: matchGames[0].ColombiaPrice * copExchange,
@@ -1437,14 +1446,13 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                   textAlign: "center",
                 }}
               >
-                Note: +Tax may be charged if buying from Argentina. Use{" "}
+                Note: Argentina eShop only accepts payment from Argentina issued cards. Use {" "}
                 <a
                   className="infotax"
-                  href="https://www.maya.ph/app/registration?invite=JX6YO2XL4781"
+                  href="https://my.nintendo.com/about_gold_point?lang=en-AR"
                 >
-                  MAYA VISA Virtual Card
-                </a>{" "}
-                for tax-free purchase.
+                  Gold Points
+                </a> to buy{" "}
               </Box>
             </>
           );
@@ -1487,9 +1495,10 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
             <div style={{ marginLeft: "10px" }} className="arregion-logo">
               Argentina
               <br />
-              <div style={{ fontSize: 11, fontWeight: "Bold", color: "red" }}>
+              <div style={{ fontSize: 11, fontWeight: "Bold", color: "#fc430a" }}>
                 {" "}
-                + ₱{argentinaTax} TAX
+                {/*+ ₱{argentinaTax} TAX*/}
+                {Math.round(matchGames[0].ArgentinaPrice*2).toString().replace(".",",")} GP
               </div>
             </div>
           );
@@ -1570,7 +1579,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
               <br />
               <div style={{ fontSize: 11, fontWeight: "Bold", color: "red" }}>
                 {" "}
-                + ₱{argentinaTax} TAX
+                {/*+ ₱{argentinaTax} TAX*/}
+                ARS {(parseFloat(matchGames[0].ArgentinaPrice)).toString().replace(".",",")}
               </div>
             </div>
           );
@@ -1651,7 +1661,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
               <br />
               <div style={{ fontSize: 11, fontWeight: "Bold", color: "red" }}>
                 {" "}
-                + ₱{argentinaTax} TAX
+                {/*+ ₱{argentinaTax} TAX*/}
+                ARS {(parseFloat(matchGames[0].ArgentinaPrice)).toString().replace(".",",")}
               </div>
             </div>
           );
