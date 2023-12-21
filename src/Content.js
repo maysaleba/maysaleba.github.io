@@ -1580,7 +1580,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
               <div style={{ fontSize: 11, fontWeight: "Bold", color: "red" }}>
                 {" "}
                 {/*+ ₱{argentinaTax} TAX*/}
-                ARS {(parseFloat(matchGames[0].ArgentinaPrice)).toString().replace(".",",")}
+                 {Math.round(matchGames[0].ArgentinaPrice*2).toString().replace(".",",")} GP
               </div>
             </div>
           );
@@ -1662,7 +1662,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
               <div style={{ fontSize: 11, fontWeight: "Bold", color: "red" }}>
                 {" "}
                 {/*+ ₱{argentinaTax} TAX*/}
-                ARS {(parseFloat(matchGames[0].ArgentinaPrice)).toString().replace(".",",")}
+                 {Math.round(matchGames[0].ArgentinaPrice*2).toString().replace(".",",")} GP
               </div>
             </div>
           );
@@ -1745,7 +1745,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
               <div style={{ fontSize: 11, fontWeight: "Bold", color: "red" }}>
                 {" "}
                 {/*+ ₱{argentinaTax} TAX*/}
-                ARS {(parseFloat(matchGames[0].ArgentinaPrice)).toString().replace(".",",")}
+                 {Math.round(matchGames[0].ArgentinaPrice*2).toString().replace(".",",")} GP
               </div>
             </div>
           );
