@@ -1717,6 +1717,89 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         }
       }
 
+
+      function Rank4(props) {
+        if (props.rank4country === "US") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="usregion-logo">
+              United States
+            </div>
+          );
+        } else if (props.rank4country === "Canada") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="caregion-logo">
+              Canada
+            </div>
+          );
+        } else if (props.rank4country === "Peru") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="peregion-logo">
+              Peru
+            </div>
+          );
+        } else if (props.rank4country === "Argentina") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="arregion-logo">
+              Argentina
+              <br />
+              <div style={{ fontSize: 11, fontWeight: "Bold", color: "red" }}>
+                {" "}
+                {/*+ ₱{argentinaTax} TAX*/}
+                ARS {(parseFloat(matchGames[0].ArgentinaPrice)).toString().replace(".",",")}
+              </div>
+            </div>
+          );
+        } else if (props.rank4country === "Colombia") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="coregion-logo">
+              Colombia
+            </div>
+          );
+        } else if (props.rank4country === "Southafrica") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="zaregion-logo">
+              South Africa
+            </div>
+          );
+        } else if (props.rank4country === "Brazil") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="brregion-logo">
+              Brazil
+            </div>
+          );
+        } else if (props.rank4country === "Russia") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="ruregion-logo">
+              Russia
+            </div>
+          );
+        } else if (props.rank4country === "Poland") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="plregion-logo">
+              Poland
+            </div>
+          );
+        } else if (props.rank4country === "Chile") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="clregion-logo">
+              Chile
+            </div>
+          );
+        } else if (props.rank4country === "Mexico") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="mxregion-logo">
+              Mexico
+            </div>
+          );
+        } else if (props.rank4country === "Australia") {
+          return (
+            <div style={{ marginLeft: "10px" }} className="auregion-logo">
+              Australia
+            </div>
+          );
+        }
+      }
+
       // var rank1country = entries[0][0]
       // var rank1price = entries[0][1]
       // var rank2country = entries[1][0]
@@ -2107,6 +2190,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
           var rank2price = entries[1][1];
           var rank3country = entries[2][0];
           var rank3price = entries[2][1];
+          var rank4country = entries[3][0];
+          var rank4price = entries[3][1];
           return (
             <>
               <tr className="item-table-best">
@@ -2268,6 +2353,31 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                     <div className="btn btn-block btn-secondary">
                       <PesoPlusPrice />
                       {"₱" + Math.round(rank3price)}
+                      <span className="ml-2 badge badge-danger">
+                        <strike>
+                          <PesoPrice props={matchGames[0].Price} />
+                        </strike>
+                      </span>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+               <tr className="item-table-best">
+                <td className="version">
+                  <span className="blank-medal-logo">
+                    <Rank4 rank4country={rank4country} />
+                  </span>
+                </td>
+                <td></td>
+                <td className="version">
+                  <a
+                    href="https://www.youtube.com/watch?v=iIHNfDa8-1o"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="btn btn-block btn-secondary">
+                      <PesoPlusPrice />
+                      {"₱" + Math.round(rank4price)}
                       <span className="ml-2 badge badge-danger">
                         <strike>
                           <PesoPrice props={matchGames[0].Price} />

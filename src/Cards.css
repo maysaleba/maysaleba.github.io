@@ -493,6 +493,17 @@ padding-left: 0px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
+.rcorners2 {
+  border-radius: 0.5rem;
+  border: 2px solid;
+  border-color: rgb(63 205 13);
+  
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .hltb-logo {
 background-size:  15px;
 background-position:  left center;
@@ -688,6 +699,16 @@ display: inline-block;  /* may not need this, but I've found I do */
 background-size:  20px;
 background-position:  left center;
 background-image: url('medals/bronze-medal.png');
+background-repeat: no-repeat;
+margin-left: 10px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.blank-medal-logo {
+background-size:  20px;
+background-position:  left center;
+background-image: url('medals/blank-medal.png');
 background-repeat: no-repeat;
 margin-left: 10px;
 padding-left: 20px;  /* width of the image plus a little extra padding */
