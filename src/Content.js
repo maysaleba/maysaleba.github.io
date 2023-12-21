@@ -1400,8 +1400,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       var pricesobj = {
         Canada: matchGames[0].CanadaPrice * cadExchange,
         Peru: matchGames[0].PeruPrice * penExchange,
-        // Argentina: argentinaTax + matchGames[0].ArgentinaPrice * arsExchange,
-        Argentina: matchGames[0].ArgentinaPrice * arsExchange,
+        Argentina: argentinaTax + matchGames[0].ArgentinaPrice * arsExchange,
+        // Argentina: matchGames[0].ArgentinaPrice * arsExchange,
         Australia: matchGames[0].AustraliaPrice * audExchange,
         Colombia: matchGames[0].ColombiaPrice * copExchange,
         Southafrica: matchGames[0].SouthafricaPrice * zarExchange,
