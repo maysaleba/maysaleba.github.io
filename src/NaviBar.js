@@ -58,11 +58,11 @@ const NaviBar = (props) => {
       },
     },
     {
-      text: "Playstation",
-      icon: <Icon icon="bi:playstation" width="24" />,
+      text: "Steam",
+      icon: <Icon icon="bi:steam" width="24" />,
       onClick: () => {
         setOpen(false);
-        window.location.href = "http://maysaleba.com/playstation";
+        window.location.href = "http://maysaleba.com/steam";
       },
     },
     {
@@ -145,7 +145,7 @@ const NaviBar = (props) => {
                 Switch
               </Box>
             </a>
-            <a className="logocolortext" href="https://maysaleba.com/playstation">
+            <a className="logocolortext" href="https://maysaleba.com/steam">
             <Box
               sx={{
                 marginRight: 2,
@@ -154,7 +154,7 @@ const NaviBar = (props) => {
                 fontSize: 16,
               }}
             >
-              Playstation
+              Steam
             </Box>
             </a>
             <a className="logocolortext" href="https://maysaleba.com/giftcards">

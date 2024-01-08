@@ -61,67 +61,15 @@ const FilterDropDown = props => {
          <Dropdown.Item
           href="#"
           onClick={() => {
-            history.push('/playstation');
+            history.push('/steam');
             // clearSearchChange();
             clearPriceRange();
             onPriceRangeDrop("All Price Range")
-            onPlatformChange("Playstation");
-            onPlatformDrop("Playstation");
+            onPlatformChange("Steam");
+            onPlatformDrop("Steam");
           }}
         >
-          Playstation
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            history.push('/playstation-us');
-            // clearSearchChange();
-            clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onPlatformChange("Playstation");
-            onPlatformDrop("Playstation - US");
-          }}
-        >
-          Playstation - US
-        </Dropdown.Item>
-         <Dropdown.Item
-          href="#"
-          onClick={() => {
-            history.push('/playstation-sg');
-            // clearSearchChange();
-            clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onPlatformChange("Playstation");
-            onPlatformDrop("Playstation - SG");
-          }}
-        >
-          Playstation - SG
-        </Dropdown.Item>
-         <Dropdown.Item
-          href="#"
-          onClick={() => {
-            history.push('/playstation-hk');
-            // clearSearchChange();
-            clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onPlatformChange("Playstation");
-            onPlatformDrop("Playstation - HK");
-          }}
-        >
-          Playstation - HK
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            history.push('/playstation-tr');
-            // clearSearchChange();
-            clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onPlatformChange("Playstation");
-            onPlatformDrop("Playstation - TR");
-          }}
-        >
-          Playstation - TR
+          Steam
         </Dropdown.Item>
 
       </Dropdown.Menu>
@@ -344,11 +292,11 @@ const FilterDropDown = props => {
             clearSearchChange();
                         clearPriceRange();
             onPriceRangeDrop("All Price Range")
-            onFilterChange("Role-Playing");
-            onDropDownChange("Role-Playing");
+            onFilterChange("Role-Playing, RPG");
+            onDropDownChange("Role-Playing, RPG");
           }}
         >
-          Role-Playing
+          Role-Playing, RPG
         </Dropdown.Item>
         <Dropdown.Item
           href="#"

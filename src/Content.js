@@ -1,13 +1,6 @@
 import React, { useEffect } from "react";
 import games1 from "./csvjson.json";
-import gamesps from "./csvjsonus.json";
-import sggamesps from "./csvjsonsg.json";
-import hkgamesps from "./csvjsonhk.json";
-import trreviewspsx1 from "./csvjsontr.json";
-import trreviewspsx2 from "./csvjsontr2.json";
-import trreviewspsx3 from "./csvjsontr3.json";
-import trreviewspsx4 from "./csvjsontr4.json";
-import trreviewspsx5 from "./csvjsontr5.json";
+import games2 from "./all_games.json";
 import { Card, Row, Col } from "react-bootstrap";
 import NaviBar from "./NaviBar";
 import { Box, Paper, Link, Container } from "@mui/material";
@@ -21,19 +14,43 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import InfoIcon from '@mui/icons-material/Info';
 
-const YoutubeEmbed = ({ embedId }) => (
+const YoutubeEmbed = ({ embedId, platform }) => {
+
+if (platform == "Steam") {
+  return (
   <div className="video-responsive">
     <iframe
       width="853"
       height="480"
-      src={`https://www.youtube.com/embed/${embedId}`}
+      src={`${embedId}`}
       frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
       title="Embedded youtube"
     />
   </div>
-);
+    )
+} else {
+  embedId = embedId.split("=", 2);
+  console.log(embedId)
+  return (
+  <div className="video-responsive">
+    <iframe
+      width="853"
+      height="480"
+      src={`https://www.youtube.com/embed/${embedId[1]}`}
+      frameBorder="0"
+      allow="accelerometer; clipboard-write; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      title="Embedded youtube"
+    />
+  </div>
+    )
+}
+
+}
+
+
 
 var today = new Date();
 // var lastd = new Date(today.setDate(today.getDate()+1));
@@ -43,23 +60,10 @@ var yyyy = today.getFullYear();
 
 today = yyyy + "-" + mm + "-" + dd;
 
-let games2 = gamesps.filter((review) => review.SaleEnds >= today);
-let games3 = sggamesps.filter((review) => review.SaleEnds >= today);
-let games4 = hkgamesps.filter((review) => review.SaleEnds >= today);
-let games5 = trreviewspsx2.filter((review) => review.SaleEnds >= today);
-let games6 = trreviewspsx3.filter((review) => review.SaleEnds >= today);
-let games7 = trreviewspsx1.filter((review) => review.SaleEnds >= today);
-let games8 = trreviewspsx4.filter((review) => review.SaleEnds >= today);
-let games9 = trreviewspsx5.filter((review) => review.SaleEnds >= today);
+
 let games = games1
   .concat(games2)
-  .concat(games3)
-  .concat(games4)
-  .concat(games5)
-  .concat(games6)
-  .concat(games7)
-  .concat(games8)
-  .concat(games9);
+
 
 const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   if (makeswitch === null) {
@@ -104,19 +108,15 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   // console.log("HELLO"+matchGames)
 
   function PesoPrice(props) {
-    if (matchGames[0].ESRBRating === "SGD") {
-      return "₱" + Math.round(props.props * sgdExchange);
-    } else if (matchGames[0].ESRBRating === "HKD") {
-      return "₱" + Math.round(props.props * hkdExchange);
-    } else if (matchGames[0].ESRBRating === "TRD") {
-      return "₱" + Math.round(props.props * trdExchange);
+    if (matchGames[0].platform === "Steam") {
+      return "₱" + Math.round(props.props);
     } else {
       return "₱" + Math.round(props.props * usdExchange);
     }
   }
 
   function ReverseDesc(props) {
-    if (matchGames[0].platform === "Playstation") {
+    if (matchGames[0].platform === "Steam") {
       let input = props.props;
       let newText = input
         .split("<br />")
@@ -149,7 +149,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   
 
   function WhichStore() {
-    if (matchGames[0].platform === "Playstation") {
+    if (matchGames[0].platform === "Steam") {
       return (
         <div style={{ marginLeft: "10px" }} className="logonin psstore">
           <img src={download} />
@@ -160,6 +160,19 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         <div style={{ marginLeft: "10px" }} className="logonin eshop">
           <img src={download} />
         </div>
+      );
+    }
+  }
+
+
+function SaleEnds() {
+    if (matchGames[0].platform === "Steam") {
+      return null
+    } else {
+      return (
+        <span style={{ fontSize: "0.75rem" }}>
+         SALE ENDS: {DateConvert(matchGames[0].SaleEnds).toUpperCase()}
+         </span>
       );
     }
   }
@@ -344,16 +357,16 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         return <span>$50</span>;
       }
     } else {
-      if (parseFloat(matchGames[0].SalePrice) <= 10) {
-        return <span>$10</span>;
-      } else if (parseFloat(matchGames[0].SalePrice) <= 20) {
-        return <span>$20</span>;
-      } else if (parseFloat(matchGames[0].SalePrice) <= 25) {
-        return <span>$25</span>;
-      } else if (parseFloat(matchGames[0].SalePrice) <= 50) {
-        return <span>$50</span>;
+      if (parseFloat(matchGames[0].SalePrice) <= 100) {
+        return <span>P100</span>;
+      } else if (parseFloat(matchGames[0].SalePrice) <= 250) {
+        return <span>P250</span>;
+      } else if (parseFloat(matchGames[0].SalePrice) <= 500) {
+        return <span>P500</span>;
+      } else if (parseFloat(matchGames[0].SalePrice) <= 1000) {
+        return <span>P1000</span>;
       } else {
-        return <span>$50</span>;
+        return <span>P2200</span>;
       }
     }
   }
@@ -663,7 +676,9 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
 
   function HasHLTB(props) {
     {
-      return (
+
+      if (matchGames[0].LowestPrice !== undefined){
+                return (
         <>
           <Link
             underline="none"
@@ -695,6 +710,43 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
           </Link>
         </>
       );
+
+      } else {
+                        return (
+        <>
+          <Link
+            underline="none"
+            hover="none"
+            color="black"
+            href={"https://howlongtobeat.com"}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Card.Header
+              style={{ backgroundColor: "white", fontWeight: "bold" }}
+            >
+              HOW LONG TO BEAT
+              <img style={{ paddingRight: "5px" }} src={download} />
+              <AccessTimeIcon />
+              {/*              <span className="hltb-logo">
+                <img src={download} />
+              </span>*/}
+            </Card.Header>
+          <Card.Body style={{ fontSize: 14, margin: "auto" }}>
+            <div style={{ columnRule: "4px double #ff00ff" }}>
+              <Row xs={3} sm={3}>
+                <MainStory />
+                <MainExtra />
+                <Completionist />
+              </Row>
+            </div>
+          </Card.Body>
+          </Link>
+        </>
+      );
+      }
+
+
     }
   }
 
@@ -823,7 +875,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         );
       }
     }
-    if (platform === "Playstation") {
+    if (platform === "Steam") {
       return <span className="img-responsive pbadges playstation"></span>;
     }
   }
@@ -955,15 +1007,16 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     if (matchGames[0].Trailer === "" || matchGames[0].Trailer === undefined) {
       return null;
     } else {
-      var youtubeid = matchGames[0].Trailer.split("=", 2);
 
+      var youtubeid = matchGames[0].Trailer;
+      console.log(youtubeid);
       return (
         <div style={{ paddingBottom: 10, fontSize: 14 }}>
           {/* <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
             TRAILER
           </Card.Header>*/}
 
-          <YoutubeEmbed embedId={youtubeid[1]} />
+          <YoutubeEmbed embedId={youtubeid} platform={matchGames[0].platform}/>
         </div>
       );
     }
@@ -1267,8 +1320,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
           <tr className="item-table-best">
             <td className="version">
               <span>
-                <div style={{ marginLeft: "1rem" }} className="usregion-logo">
-                  United States
+                <div style={{ marginLeft: "1rem" }} className="phregion-logo">
+                  Philippines
                 </div>
               </span>
             </td>
@@ -1276,8 +1329,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
             <td className="version">
               <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                 <div className="btn btn-block btn-secondary">
-                  <PesoPlusPrice />
-                  {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
+
+                  {"₱" + Math.round(matchGames[0].SalePrice)}
                   <span className="ml-2 badge badge-danger">
                     <strike>
                       <PesoPrice props={matchGames[0].Price} />
@@ -1821,7 +1874,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
-                      <PesoPlusPrice />
+
                       {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
                       <span className="ml-2 badge badge-danger">
                         <strike>
@@ -1921,7 +1974,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
-                      <PesoPlusPrice />
+
                       {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
                       <span className="ml-2 badge badge-danger">
                         <strike>
@@ -2018,7 +2071,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                     rel="noreferrer"
                   >
                     <div className="btn btn-block btn-secondary">
-                      <PesoPlusPrice />
+
                       {"₱" + Math.round(rank1price)}
                       <span className="ml-2 badge badge-danger">
                         <strike>
@@ -2048,7 +2101,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
-                      <PesoPlusPrice />
+
                       {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
                       <span className="ml-2 badge badge-danger">
                         <strike>
@@ -2145,7 +2198,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                     rel="noreferrer"
                   >
                     <div className="btn btn-block btn-secondary">
-                      <PesoPlusPrice />
+
                       {"₱" + Math.round(rank1price)}
                       <span className="ml-2 badge badge-danger">
                         <strike>
@@ -2170,7 +2223,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                     rel="noreferrer"
                   >
                     <div className="btn btn-block btn-secondary">
-                      <PesoPlusPrice />
+
                       {"₱" + Math.round(rank2price)}
                       <span className="ml-2 badge badge-danger">
                         <strike>
@@ -2204,7 +2257,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                 <td className="version">
                   <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
                     <div className="btn btn-block btn-secondary">
-                      <PesoPlusPrice />
+
                       {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
                       <span className="ml-2 badge badge-danger">
                         <strike>
@@ -2301,7 +2354,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                     rel="noreferrer"
                   >
                     <div className="btn btn-block btn-secondary">
-                      <PesoPlusPrice />
+
                       {"₱" + Math.round(rank1price)}
                       <span className="ml-2 badge badge-danger">
                         <strike>
@@ -2326,7 +2379,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                     rel="noreferrer"
                   >
                     <div className="btn btn-block btn-secondary">
-                      <PesoPlusPrice />
+
                       {"₱" + Math.round(rank2price)}
                       <span className="ml-2 badge badge-danger">
                         <strike>
@@ -2351,7 +2404,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                     rel="noreferrer"
                   >
                     <div className="btn btn-block btn-secondary">
-                      <PesoPlusPrice />
+
                       {"₱" + Math.round(rank3price)}
                       <span className="ml-2 badge badge-danger">
                         <strike>
@@ -2376,7 +2429,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                     rel="noreferrer"
                   >
                     <div className="btn btn-block btn-secondary">
-                      <PesoPlusPrice />
+
                       {"₱" + Math.round(rank4price)}
                       <span className="ml-2 badge badge-danger">
                         <strike>
@@ -2562,9 +2615,9 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
               <HasOpenCritic props={matchGames[0].SCORE} />
               <br />
 
-              <span style={{ fontSize: "0.75rem" }}>
-                SALE ENDS: {DateConvert(matchGames[0].SaleEnds).toUpperCase()}
-              </span>
+              
+                <SaleEnds/>
+             
             </Card.Header>
             <PricesTable psorsw={matchGames[0].platform} />
             <div style={{ fontSize: 14 }}>
@@ -2624,7 +2677,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                 DESCRIPTION
               </Card.Header>
               <Card.Body>
-                <ReverseDesc props={matchGames[0].description} />
+                {matchGames[0].description}
               </Card.Body>
             </div>
           </Paper>

@@ -635,6 +635,16 @@ padding-left: 20px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
+.phregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/PH.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
 .plregion-logo {
 background-size:  15px;
 background-position:  left center;
@@ -940,13 +950,13 @@ label:focus,
 
 
 .pbadges.playstation {
-    background-color: #004eff;
-    background-position: -3px -298px;
+    background-color: black;
+    background-position: -7px -5px;
 }
 
 .pbadges.playstation1 {
     background-color: black;
-    background-position: -3px -298px;
+    background-position: -7px -5px;
 }
 
 .nbadges.nintendo1 {

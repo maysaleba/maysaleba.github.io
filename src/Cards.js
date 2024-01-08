@@ -116,7 +116,13 @@ today = yyyy + "-" + mm + "-" + dd;
   // const diffDays = Math.round((secondDate - firstDate) / oneDay);
 
   function DaysLeft(props) {
-    // const isExpired = props.isExpired;
+
+    console.log(props.platform);
+
+    if (props.platform == "Steam"){
+      return null;
+    }
+    const isExpired = props.isExpired;
     const diffDays = Math.round((secondDate - firstDate) / oneDay);
 
     if (diffDays >= 0) {
@@ -318,64 +324,23 @@ today = yyyy + "-" + mm + "-" + dd;
         </>
       );
     }
-    if (props.psorsw === "Playstation") {
-        if (props.esrbrating === "SGD") {
-                   return (
-        <span className="sgregion-logo" style={{ fontWeight: "light" }}>
-          {"₱" + Math.round(props.saleprice * sgdExchange)}
-        </span>
-      );
-
-        } else if (props.esrbrating === "HKD") {
-                   return (
-        <span className="hkregion-logo" style={{ fontWeight: "light" }}>
-          {"₱" + Math.round(props.saleprice * hkdExchange)}
-        </span>
-      );
-
-        } else if (props.esrbrating === "TRD") {
-                   return (
-        <span className="trregion-logo" style={{ fontWeight: "light" }}>
-          {"₱" + Math.round(props.saleprice * trdExchange)}
-        </span>
-      );
-
-        }
-
-
-        else {
+    if (props.psorsw === "Steam") {
           return (
-        <span className="usregion-logo" style={{ fontWeight: "light" }}>
-          {"₱" + Math.round(props.saleprice * usdExchange)}
+        <span className="phregion-logo" style={{ fontWeight: "light" }}>
+          {"₱" + Math.round(props.saleprice)}
         </span>
       );
-        }
+        
 
     }
 
 
     if (props.psorsw === "ogprice") {
 
-        if (props.esrbrating === "SGD"){
+        if (props.platform === "Steam"){
                       return (
         <span style={{ fontWeight: "light" }}>
-          {"₱" + Math.round(props.saleprice * sgdExchange)}
-        </span>
-      );
-
-        }   else    
-        if (props.esrbrating === "HKD"){
-                      return (
-        <span style={{ fontWeight: "light" }}>
-          {"₱" + Math.round(props.saleprice * hkdExchange)}
-        </span>
-      );
-
-        } else    
-        if (props.esrbrating === "TRD"){
-                      return (
-        <span style={{ fontWeight: "light" }}>
-          {"₱" + Math.round(props.saleprice * trdExchange)}
+          {"₱" + Math.round(props.saleprice)}
         </span>
       );
 
@@ -558,9 +523,9 @@ else if (PlusPrice === 202020) {
 
 
     }
-    if (platform === "Playstation") {
+    if (platform === "Steam") {
       return (
-        <span className="img-responsive pbadges playstation"></span>
+        <span className="img-responsive pbadges playstation1"></span>
       );
     }
   }
@@ -594,7 +559,7 @@ else if (PlusPrice === 202020) {
             <Card.Text className="card-text">
               <PercentOff />{" "}
               <strike>
-                <PesoPrice psorsw="ogprice" saleprice={Price} esrbrating={ESRBRating}/>
+                <PesoPrice psorsw="ogprice" saleprice={Price} esrbrating={ESRBRating} platform={Platform}/>
               </strike>{" "}
               <PesoPrice
                 psorsw={Platform}
@@ -612,8 +577,8 @@ else if (PlusPrice === 202020) {
                 chileprice={ChilePrice}
                 mexicoprice={MexicoPrice}
               />{" "}
-              <PesoPlusPrice psorsw={Platform} pesoplus={PlusPrice}  esrbrating={ESRBRating}/>{" "}
-              <DaysLeft isExpired={SaleEnds} />
+              
+              <DaysLeft isExpired={SaleEnds} platform={Platform} />
               {/*<PesoPrice />
             {" "+Genre}
 */}{" "}

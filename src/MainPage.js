@@ -7,7 +7,7 @@ import reviewssw from "./csvjson.json";
 
 const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
   var d = new Date();
-  var lastd = new Date(d.setDate(d.getDate() - 14));
+  var lastd = new Date(d.setDate(d.getDate() - 7));
   var da = String(lastd.getDate()).padStart(2, "0");
   var mo = String(lastd.getMonth() + 1).padStart(2, "0"); //January is 0!
   var year = lastd.getFullYear();
@@ -67,7 +67,7 @@ console.log(daysago)
 
   
   sortJson(reviewsps, "SCORE", "string", false);
-  const newPSDiscounts = reviewsps.filter((x) => x.SCORE > 70 && x.ReleaseDate > moago );
+  const newPSDiscounts = reviewsps.filter((x) => x.SaleStarted > daysago );
   const topPSDiscounts = reviewsps;
 
   return (
@@ -169,7 +169,7 @@ console.log(daysago)
       </Paper>
       <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
-          <b>NEW PLAYSTATION DISCOUNTS</b>
+          <b>NEW STEAM DISCOUNTS</b>
           
         </div>
 <hr className="linedividet"/>
@@ -195,11 +195,11 @@ console.log(daysago)
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/playstation"><b><u>VIEW ALL PLAYSTATION GAMES</u></b></a></div>
+        <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/steam"><b><u>VIEW ALL STEAM GAMES</u></b></a></div>
       </Paper>
         <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
-          <b>TOP RATED PLAYSTATION GAMES</b>
+          <b>TOP RATED STEAM GAMES</b>
           
         </div>
 <hr className="linedividet"/>
@@ -225,7 +225,7 @@ console.log(daysago)
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div className="card-footer-custom" align="center"><a href="https://maysaleba.com/playstation"><b><u>VIEW ALL PLAYSTATION GAMES</u></b></a></div>
+        <div className="card-footer-custom" align="center"><a href="https://maysaleba.com/steam"><b><u>VIEW ALL STEAM GAMES</u></b></a></div>
       </Paper>
     </div>
   );
