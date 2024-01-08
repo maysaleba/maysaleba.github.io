@@ -15,7 +15,7 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import InfoIcon from '@mui/icons-material/Info';
 
 const YoutubeEmbed = ({ embedId, platform }) => {
-
+embedId = embedId.replace("http","https");
 if (platform == "Steam") {
   return (
   <div className="video-responsive">
@@ -32,7 +32,6 @@ if (platform == "Steam") {
     )
 } else {
   embedId = embedId.split("=", 2);
-  console.log(embedId)
   return (
   <div className="video-responsive">
     <iframe
@@ -1009,7 +1008,7 @@ function SaleEnds() {
     } else {
 
       var youtubeid = matchGames[0].Trailer;
-      console.log(youtubeid);
+      // console.log(youtubeid);
       return (
         <div style={{ paddingBottom: 10, fontSize: 14 }}>
           {/* <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
@@ -1470,9 +1469,9 @@ function SaleEnds() {
         if (v === 0) delete pricesobj[k];
       });
 
-      console.log(pricesobj);
-      console.log(zarExchange)
-      console.log(plnExchange)
+      // console.log(pricesobj);
+      // console.log(zarExchange)
+      // console.log(plnExchange)
       const entries = Object.entries(pricesobj).sort(([, a], [, b]) => a - b);
       var artag = 0;
 
