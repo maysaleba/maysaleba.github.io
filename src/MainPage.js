@@ -7,6 +7,15 @@ import reviewssw from "./csvjson.json";
 
 const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
   var d = new Date();
+  var lastt = new Date(d.setDate(d.getDate() - 1));
+  var dato = String(lastt.getDate()).padStart(2, "0");
+  var moto = String(lastt.getMonth() + 1).padStart(2, "0"); //January is 0!
+  var yearto = lastt.getFullYear();
+  
+
+
+
+
   var lastd = new Date(d.setDate(d.getDate() - 7));
   var da = String(lastd.getDate()).padStart(2, "0");
   var mo = String(lastd.getMonth() + 1).padStart(2, "0"); //January is 0!
@@ -17,11 +26,12 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
   var momo = String(lastmo.getMonth() + 1).padStart(2, "0"); //January is 0!
   var yearmo = lastmo.getFullYear();
 
+  let todayd = yearto + "-" + moto + "-" + dato;
   let daysago = year + "-" + mo + "-" + da;
   let moago = yearmo + "-" + momo + "-" + damo;
 
 
-console.log(daysago)
+console.log(todayd)
 
   const newSwitchDiscounts = reviewssw.filter((x) => x.SaleStarted > daysago);
   const topSwitchDiscounts = reviewssw.filter((x) => x.SCORE > 70);
@@ -67,7 +77,7 @@ console.log(daysago)
 
   
   sortJson(reviewsps, "SCORE", "string", false);
-  const newPSDiscounts = reviewsps.filter((x) => x.SaleStarted > daysago );
+  const newPSDiscounts = reviewsps.filter((x) => x.SaleStarted > todayd );
   const topPSDiscounts = reviewsps;
 
   return (
