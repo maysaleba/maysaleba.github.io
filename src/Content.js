@@ -400,7 +400,7 @@ function SaleEnds() {
         <tr className="item-table-best">
           <td>
             <a
-              href="https://shope.ee/1L1Rd1cdsH"
+              href="https://shope.ee/LNhVslxzC"
               target="_blank"
               rel="noreferrer"
               style={{ padding: 0 }}
@@ -412,7 +412,7 @@ function SaleEnds() {
           </td>
           <td className="version">
             <a
-              href="https://shope.ee/1L1Rd1cdsH"
+              href="https://shope.ee/LNhVslxzC"
               target="_blank"
               rel="noreferrer"
               style={{ padding: 10 }}
@@ -422,7 +422,7 @@ function SaleEnds() {
           </td>
           <td className="version">
             <a
-              href="https://shope.ee/1L1Rd1cdsH"
+              href="https://shope.ee/LNhVslxzC"
               target="_blank"
               rel="noreferrer"
             >
@@ -1086,7 +1086,7 @@ function SaleEnds() {
               >
                 <a
                   className="nopaddingA"
-                  href="https://shope.ee/6ziEPIJLma"
+                  href="https://shope.ee/9UcGiCZ13R"
                   target="_blank"
                   rel="noreferrer"
                   // style={{ padding: 10 }}
@@ -1099,7 +1099,7 @@ function SaleEnds() {
                 </a>
                 <a
                   className="nopaddingA"
-                  href="https://bit.ly/3TzZMjd"
+                  href="https://invol.co/clkjvxw"
                   target="_blank"
                   rel="noreferrer"
                   // style={{ padding: 10 }}
@@ -1112,7 +1112,7 @@ function SaleEnds() {
                 </a>
                 <a
                   className="nopaddingA"
-                  href="https://bit.ly/3KPfOSq"
+                  href="https://invl.io/clkjvy4"
                   target="_blank"
                   rel="noreferrer"
                   // style={{ padding: 10 }}
@@ -1195,7 +1195,7 @@ function SaleEnds() {
               >
                 <a
                   className="nopaddingA"
-                  href="https://shope.ee/6ziEPIJLma"
+                  href="https://shope.ee/9UcGiCZ13R"
                   target="_blank"
                   rel="noreferrer"
                   // style={{ padding: 10 }}
@@ -1208,7 +1208,7 @@ function SaleEnds() {
                 </a>
                 <a
                   className="nopaddingA"
-                  href="https://bit.ly/3TzZMjd"
+                  href="https://invol.co/clkjvxw"
                   target="_blank"
                   rel="noreferrer"
                   // style={{ padding: 10 }}
@@ -1221,7 +1221,7 @@ function SaleEnds() {
                 </a>
                 <a
                   className="nopaddingA"
-                  href="https://bit.ly/3KPfOSq"
+                  href="https://invl.io/clkjvy4"
                   target="_blank"
                   rel="noreferrer"
                   // style={{ padding: 10 }}
@@ -1371,7 +1371,7 @@ function SaleEnds() {
               >
                 <a
                   className="nopaddingA"
-                  href="https://shope.ee/6ziEPIJLma"
+                  href="https://shope.ee/9UcGiCZ13R"
                   target="_blank"
                   rel="noreferrer"
                   // style={{ padding: 10 }}
@@ -1384,7 +1384,7 @@ function SaleEnds() {
                 </a>
                 <a
                   className="nopaddingA"
-                  href="https://bit.ly/3TzZMjd"
+                  href="https://invol.co/clkjvxw"
                   target="_blank"
                   rel="noreferrer"
                   // style={{ padding: 10 }}
@@ -1397,7 +1397,7 @@ function SaleEnds() {
                 </a>
                 <a
                   className="nopaddingA"
-                  href="https://bit.ly/3KPfOSq"
+                  href="https://invl.io/clkjvy4"
                   target="_blank"
                   rel="noreferrer"
                   // style={{ padding: 10 }}
@@ -1916,7 +1916,7 @@ function SaleEnds() {
                   >
                     <a
                       className="nopaddingA"
-                      href="https://shope.ee/1L1Rd1cdsH"
+                      href="https://shope.ee/LNhVslxzC"
                       target="_blank"
                       rel="noreferrer"
                       // style={{ padding: 10 }}
@@ -2016,7 +2016,7 @@ function SaleEnds() {
                   >
                     <a
                       className="nopaddingA"
-                      href="https://shope.ee/1L1Rd1cdsH"
+                      href="https://shope.ee/LNhVslxzC"
                       target="_blank"
                       rel="noreferrer"
                       // style={{ padding: 10 }}
@@ -2143,7 +2143,7 @@ function SaleEnds() {
                   >
                     <a
                       className="nopaddingA"
-                      href="https://shope.ee/1L1Rd1cdsH"
+                      href="https://shope.ee/LNhVslxzC"
                       target="_blank"
                       rel="noreferrer"
                       // style={{ padding: 10 }}
@@ -2299,7 +2299,7 @@ function SaleEnds() {
                   >
                     <a
                       className="nopaddingA"
-                      href="https://shope.ee/1L1Rd1cdsH"
+                      href="https://shope.ee/LNhVslxzC"
                       target="_blank"
                       rel="noreferrer"
                       // style={{ padding: 10 }}
