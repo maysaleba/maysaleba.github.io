@@ -77,7 +77,7 @@ console.log(todayd)
 
   
   sortJson(reviewsps, "SCORE", "string", false);
-  const newPSDiscounts = reviewsps.filter((x) => x.SaleStarted > todayd );
+  const newPSDiscounts = reviewsps.filter((x) => x.SaleStarted >= todayd );
   const topPSDiscounts = reviewsps;
 
   return (
