@@ -78,7 +78,7 @@ today = yyyy + "-" + mm + "-" + dd;
 
   if (makeswitch === null) {
     var usdExchange = 1 / JSON.stringify(datam.USD);
-    var arsExchange = 1 / JSON.stringify(datam.ARS)*999999;
+    var arsExchange = 1 / JSON.stringify(datam.ARS);
     var audExchange = 1 / JSON.stringify(datam.AUD);
     var brlExchange = 1 / JSON.stringify(datam.BRL);
     var cadExchange = 1 / JSON.stringify(datam.CAD);
@@ -94,7 +94,7 @@ today = yyyy + "-" + mm + "-" + dd;
     var trdExchange = 1 / JSON.stringify(datam.TRY);
   } else {
     var usdExchange = 1 / JSON.stringify(datam.usd);
-    var arsExchange = 1 / JSON.stringify(datam.ars)*999999;
+    var arsExchange = 1 / JSON.stringify(datam.ars);
     var audExchange = 1 / JSON.stringify(datam.aud);
     var brlExchange = 1 / JSON.stringify(datam.brl);
     var cadExchange = 1 / JSON.stringify(datam.cad);
@@ -181,26 +181,37 @@ today = yyyy + "-" + mm + "-" + dd;
 
   function PesoPrice(props) {
     if (props.psorsw === "Switch") {
+      var testBoolean;
+      // console.log(props);
+      if (ArgentinaPrice != 0) {
+        if ((ArgentinaPrice * arsExchange) / usdExchange <= 10) {
+          // console.log((matchGames[0].ArgentinaPrice * arsExchange) / usdExchange)
+          //console.log("less than 10")
+          testBoolean = true;
+        } else {
+          //console.log((matchGames[0].ArgentinaPrice * arsExchange) / usdExchange)
+          //more than 10
+          testBoolean = false;
+        }
+      }
+      var argentinaTax = Math.round(
+        (testBoolean
+          ? ArgentinaPrice * arsExchange * 1.74
+          : ArgentinaPrice * arsExchange * 1.53) -
+          ArgentinaPrice * arsExchange
+      );
 
-          var testBoolean;
-    // console.log(props);
-    if (ArgentinaPrice != 0){
-     if ((ArgentinaPrice * arsExchange) / usdExchange <= 10){
-       // console.log((matchGames[0].ArgentinaPrice * arsExchange) / usdExchange)
-        //console.log("less than 10")
-        testBoolean = true;
-             }
-             else {
-        //console.log((matchGames[0].ArgentinaPrice * arsExchange) / usdExchange)
-        //more than 10
-        testBoolean = false;
-             }
+      var argentinaTaxAR = Math.round(
+        (testBoolean
+          ? ArgentinaPrice * 1.74
+          : ArgentinaPrice * 1.53) -
+          ArgentinaPrice
+      );
 
-    }
       var pricesobj = {
         Canada: CanadaPrice * cadExchange,
         Peru: PeruPrice * penExchange,
-        Argentina: ArgentinaPrice * arsExchange,
+        Argentina: argentinaTax + ArgentinaPrice * arsExchange,
         //Argentina: ArgentinaPrice * arsExchange * 1.64,
         Australia: AustraliaPrice * audExchange,
         Colombia: ColombiaPrice * copExchange,
