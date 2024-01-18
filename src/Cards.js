@@ -78,7 +78,7 @@ today = yyyy + "-" + mm + "-" + dd;
 
   if (makeswitch === null) {
     var usdExchange = 1 / JSON.stringify(datam.USD);
-    var arsExchange = 1 / JSON.stringify(datam.ARS);
+    var arsExchange = 1 / JSON.stringify(datam.ARS)*1;
     var audExchange = 1 / JSON.stringify(datam.AUD);
     var brlExchange = 1 / JSON.stringify(datam.BRL);
     var cadExchange = 1 / JSON.stringify(datam.CAD);
