@@ -1501,9 +1501,9 @@ function SaleEnds() {
                 Note: Argentina eShop only accepts payment from Argentina issued cards. Use {" "}
                 <a
                   className="infotax"
-                  href="https://my.nintendo.com/about_gold_point?lang=en-AR"
+                  href="https://latin-pay.com/en/"
                 >
-                  Gold Points
+                  Latin Pay
                 </a> to buy{" "}
               </Box>
             </>
