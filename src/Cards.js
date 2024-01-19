@@ -196,15 +196,15 @@ today = yyyy + "-" + mm + "-" + dd;
       }
       var argentinaTax = Math.round(
         (testBoolean
-          ? ArgentinaPrice * arsExchange * 1.74
-          : ArgentinaPrice * arsExchange * 1.53) -
+          ? ArgentinaPrice * arsExchange * 1.63
+          : ArgentinaPrice * arsExchange * 1.59) -
           ArgentinaPrice * arsExchange
       );
 
       var argentinaTaxAR = Math.round(
         (testBoolean
-          ? ArgentinaPrice * 1.74
-          : ArgentinaPrice * 1.53) -
+          ? ArgentinaPrice * 1.63
+          : ArgentinaPrice * 1.59) -
           ArgentinaPrice
       );
 

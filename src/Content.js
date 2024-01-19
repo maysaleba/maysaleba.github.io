@@ -1437,17 +1437,28 @@ function SaleEnds() {
       }
       var argentinaTax = Math.round(
         (testBoolean
-          ? matchGames[0].ArgentinaPrice * arsExchange * 1.74
-          : matchGames[0].ArgentinaPrice * arsExchange * 1.53) -
+          ? matchGames[0].ArgentinaPrice * arsExchange * 1.63
+          : matchGames[0].ArgentinaPrice * arsExchange * 1.59) -
           matchGames[0].ArgentinaPrice * arsExchange
       );
 
       var argentinaTaxAR = Math.round(
         (testBoolean
-          ? matchGames[0].ArgentinaPrice * 1.74
-          : matchGames[0].ArgentinaPrice * 1.53) -
+          ? matchGames[0].ArgentinaPrice * 1.63
+          : matchGames[0].ArgentinaPrice * 1.59) -
           matchGames[0].ArgentinaPrice
       );
+
+
+      //       var argentinaTaxAR = Math.round(
+      //   (testBoolean
+      //     ? matchGames[0].ArgentinaPrice * 1.74
+      //     : matchGames[0].ArgentinaPrice * 1.53) -
+      //     matchGames[0].ArgentinaPrice
+      // );
+
+      //1.63 if equal to or less than 10 USD
+      //1.59 if greater than 10 USD
 
       var pricesobj = {
         Canada: matchGames[0].CanadaPrice * cadExchange,
