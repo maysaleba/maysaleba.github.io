@@ -31,61 +31,92 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
   let moago = yearmo + "-" + momo + "-" + damo;
 
 
-console.log(todayd)
 
+
+const sortedReviews = sortJson([...reviewssw], "Popularity", "int", false);
+  
+  const topSwitchDiscounts = sortedReviews;
   const newSwitchDiscounts = reviewssw.filter((x) => x.SaleStarted > daysago);
-  const topSwitchDiscounts = reviewssw.filter((x) => x.SCORE > 70);
+  
 
 
-    function sortJson(element, prop, propType, asc) {
-    switch (propType) {
-      case "int":
-        element = element.sort(function (a, b) {
-          if (asc) {
-            return parseInt(a[prop]) > parseInt(b[prop])
-              ? 1
-              : parseInt(a[prop]) < parseInt(b[prop])
-              ? -1
-              : 0;
-          } else {
-            return parseInt(b[prop]) > parseInt(a[prop])
-              ? 1
-              : parseInt(b[prop]) < parseInt(a[prop])
-              ? -1
-              : 0;
-          }
-        });
-        break;
-      default:
-        element = element.sort(function (a, b) {
-          if (asc) {
-            return a[prop].toLowerCase() > b[prop].toLowerCase()
-              ? 1
-              : a[prop].toLowerCase() < b[prop].toLowerCase()
-              ? -1
-              : 0;
-          } else {
-            return b[prop].toLowerCase() > a[prop].toLowerCase()
-              ? 1
-              : b[prop].toLowerCase() < a[prop].toLowerCase()
-              ? -1
-              : 0;
-          }
-        });
-    }
+function sortJson(element, prop, propType, asc) {
+  switch (propType) {
+    case "int":
+      element = element.sort(function (a, b) {
+        const aValue = parseInt(a[prop]) || Number.MIN_SAFE_INTEGER;
+        const bValue = parseInt(b[prop]) || Number.MIN_SAFE_INTEGER;
+
+        return asc ? aValue - bValue : bValue - aValue;
+      });
+      break;
+    default:
+      element = element.sort(function (a, b) {
+        const aValue = a[prop].toLowerCase();
+        const bValue = b[prop].toLowerCase();
+
+        return asc ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
+      });
   }
 
+  // Return the sorted element
+  return element;
+}
+
+
   
-  sortJson(reviewsps, "SCORE", "string", false);
+  sortJson(reviewsps, "SCORE", "int", false);
   const newPSDiscounts = reviewsps.filter((x) => x.SaleStarted >= todayd );
   const topPSDiscounts = reviewsps;
 
   return (
     <div>
       {/*     <SearchBox search={search} setSearch={setSearch}/>*/}
+    <Paper elevation={2} className="custom-container">
+        <div className="card-header-custom">
+          <b>POPULAR SWITCH GAMES ON SALE</b>
+          
+        </div>
+<hr className="linedividet"/>
+        <Row xs={2} md={4} className="g-3">
+          {topSwitchDiscounts.slice(0, 12).map((review, key) => (
+            <div key={key}>
+             <Cards  
+                                          Score={review.SCORE}
+                                          Title={review.Title}
+                                          SaleEnds={review.SaleEnds}
+                                          Genre={review.genre}
+                                          Slug={review.Slug}
+                                          Image={review.Image}
+                                          SalePrice={review.SalePrice}
+                                          CanadaPrice={review.CanadaPrice}
+                                          PeruPrice={review.PeruPrice}
+                                          ArgentinaPrice={review.ArgentinaPrice}
+                                          AustraliaPrice={review.AustraliaPrice}
+                                          ColombiaPrice={review.ColombiaPrice}
+                                          SouthafricaPrice={review.SouthafricaPrice}
+                                          BrazilPrice={review.BrazilPrice}
+                                          RussiaPrice={review.RussiaPrice}
+                                          PolandPrice={review.PolandPrice}
+                                          ChilePrice={review.ChilePrice}
+                                          MexicoPrice={review.MexicoPrice}
+                                          Discount={review.PercentOff}
+                                          URL={review.URL}
+                                          Platform={review.platform}
+                                          PlusPrice={review.PlusPrice}
+                                          Price={review.Price}
+                                          ESRBRating={review.ESRBRating}
+                                  />
+
+            </div>
+          ))}
+        </Row>
+             <hr className="linedivideb"/>
+        <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/switch"><b><u>VIEW ALL SWITCH GAMES</u></b></a></div>
+      </Paper>
       <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
-          <b>NEW SWITCH DISCOUNTS</b>
+          <b>NEW SWITCH GAMES ON SALE</b>
 
         </div>
          <hr className="linedividet"/>
@@ -137,49 +168,7 @@ console.log(todayd)
 </div>*/}
       <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
-          <b>TOP RATED SWITCH GAMES</b>
-          
-        </div>
-<hr className="linedividet"/>
-        <Row xs={2} md={4} className="g-3">
-          {topSwitchDiscounts.slice(0, 12).map((review, key) => (
-            <div key={key}>
-             <Cards  
-                                          Score={review.SCORE}
-                                          Title={review.Title}
-                                          SaleEnds={review.SaleEnds}
-                                          Genre={review.genre}
-                                          Slug={review.Slug}
-                                          Image={review.Image}
-                                          SalePrice={review.SalePrice}
-                                          CanadaPrice={review.CanadaPrice}
-                                          PeruPrice={review.PeruPrice}
-                                          ArgentinaPrice={review.ArgentinaPrice}
-                                          AustraliaPrice={review.AustraliaPrice}
-                                          ColombiaPrice={review.ColombiaPrice}
-                                          SouthafricaPrice={review.SouthafricaPrice}
-                                          BrazilPrice={review.BrazilPrice}
-                                          RussiaPrice={review.RussiaPrice}
-                                          PolandPrice={review.PolandPrice}
-                                          ChilePrice={review.ChilePrice}
-                                          MexicoPrice={review.MexicoPrice}
-                                          Discount={review.PercentOff}
-                                          URL={review.URL}
-                                          Platform={review.platform}
-                                          PlusPrice={review.PlusPrice}
-                                          Price={review.Price}
-                                          ESRBRating={review.ESRBRating}
-                                  />
-
-            </div>
-          ))}
-        </Row>
-             <hr className="linedivideb"/>
-        <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/switch"><b><u>VIEW ALL SWITCH GAMES</u></b></a></div>
-      </Paper>
-      <Paper elevation={2} className="custom-container">
-        <div className="card-header-custom">
-          <b>NEW STEAM DISCOUNTS</b>
+          <b>NEW STEAM GAMES ON SALE</b>
           
         </div>
 <hr className="linedividet"/>
@@ -209,7 +198,7 @@ console.log(todayd)
       </Paper>
         <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
-          <b>TOP RATED STEAM GAMES</b>
+          <b>TOP RATED STEAM GAMES ON SALE</b>
           
         </div>
 <hr className="linedividet"/>

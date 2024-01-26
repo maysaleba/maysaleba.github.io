@@ -30,43 +30,28 @@ today = yyyy + "-" + mm + "-" + dd;
 
 
 export default function Main() {
-  function sortJson(element, prop, propType, asc) {
-    switch (propType) {
-      case "int":
-        element = element.sort(function (a, b) {
-          if (asc) {
-            return parseInt(a[prop]) > parseInt(b[prop])
-              ? 1
-              : parseInt(a[prop]) < parseInt(b[prop])
-              ? -1
-              : 0;
-          } else {
-            return parseInt(b[prop]) > parseInt(a[prop])
-              ? 1
-              : parseInt(b[prop]) < parseInt(a[prop])
-              ? -1
-              : 0;
-          }
-        });
-        break;
-      default:
-        element = element.sort(function (a, b) {
-          if (asc) {
-            return a[prop].toLowerCase() > b[prop].toLowerCase()
-              ? 1
-              : a[prop].toLowerCase() < b[prop].toLowerCase()
-              ? -1
-              : 0;
-          } else {
-            return b[prop].toLowerCase() > a[prop].toLowerCase()
-              ? 1
-              : b[prop].toLowerCase() < a[prop].toLowerCase()
-              ? -1
-              : 0;
-          }
-        });
-    }
+function sortJson(element, prop, propType, asc) {
+  switch (propType) {
+    case "int":
+      element = element.sort(function (a, b) {
+        const aValue = parseInt(a[prop]) || Number.MIN_SAFE_INTEGER;
+        const bValue = parseInt(b[prop]) || Number.MIN_SAFE_INTEGER;
+
+        return asc ? aValue - bValue : bValue - aValue;
+      });
+      break;
+    default:
+      element = element.sort(function (a, b) {
+        const aValue = a[prop].toLowerCase();
+        const bValue = b[prop].toLowerCase();
+
+        return asc ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
+      });
   }
+
+  // Return the sorted element
+  return element;
+}
 
   const { search } = window.location;
   const query = new URLSearchParams(search).get("s");
@@ -132,7 +117,7 @@ export default function Main() {
   useEffect(() => {
     const reviews = reviewssw.concat(reviewsst);
     
-    sortJson(reviews, "SCORE", "string", false);
+    sortJson(reviews, "SCORE", "int", false);
     setLatestField(reviews);
   }, []);
 
@@ -190,23 +175,26 @@ export default function Main() {
   };
 
   const onLatestChange = (filterLatest) => {
+    if (filterLatest === "Popular") {
+      sortJson(latestField, "Popularity", "int", false);
+    }
     if (filterLatest === "Top Rated") {
-      sortJson(latestField, "SCORE", "string", false);
+      sortJson(latestField, "SCORE", "int", false);
     }
     if (filterLatest === "New Discounts") {
-      sortJson(latestField, "SCORE", "string", false);
+      sortJson(latestField, "SCORE", "int", false);
       sortJson(latestField, "SaleStarted", "string", false);
     }
     if (filterLatest === "Latest Release") {
-      sortJson(latestField, "SCORE", "string", false);
+      sortJson(latestField, "SCORE", "int", false);
       sortJson(latestField, "ReleaseDate", "string", false);
     }
     if (filterLatest === "Price ↓") {
-      sortJson(latestField, "SCORE", "string", false);
+      sortJson(latestField, "SCORE", "int", false);
       sortJson(latestField, "SalePrice", "int", false);
     }
     if (filterLatest === "Price ↑") {
-      sortJson(latestField, "SCORE", "string", false);
+      sortJson(latestField, "SCORE", "int", false);
       sortJson(latestField, "SalePrice", "int", true);
     } else {
     }
