@@ -82,18 +82,7 @@ const FilterDropDown = props => {
       </Dropdown.Toggle>
 
       <Dropdown.Menu className="w-100 dropdown-style">
-            <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-            clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onLatestChange("Top Rated");
-            onLatestDrop("Top Rated");
-          }}
-        >
-          Top Rated
-        </Dropdown.Item>
+
       <Dropdown.Item
           href="#"
           onClick={() => {
@@ -105,6 +94,18 @@ const FilterDropDown = props => {
           }}
         >
           Popular
+        </Dropdown.Item>
+                    <Dropdown.Item
+          href="#"
+          onClick={() => {
+            clearSearchChange();
+            clearPriceRange();
+            onPriceRangeDrop("All Price Range")
+            onLatestChange("Top Rated");
+            onLatestDrop("Top Rated");
+          }}
+        >
+          Top Rated
         </Dropdown.Item>
                      <Dropdown.Item
           href="#"

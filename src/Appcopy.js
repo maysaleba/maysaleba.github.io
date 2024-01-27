@@ -112,12 +112,14 @@ function sortJson(element, prop, propType, asc) {
   const [genreDropDown, setGenreDropDown] = useState("All Genres");
   const [platformDropDown, setPlatformDropDown] = useState("All Platforms");
   const [latestField, setLatestField] = useState([]);
-  const [latestDropDown, setLatestDropDown] = useState("Top Rated");
+  const [latestDropDown, setLatestDropDown] = useState("Popular");
 
   useEffect(() => {
-    const reviews = reviewssw.concat(reviewsst);
-    
-    sortJson(reviews, "SCORE", "int", false);
+    const sortedswitch =  sortJson(reviewssw, "Popularity", "int", false);
+    const sortedsteam = sortJson(reviewsst, "SCORE", "int", false);
+    const reviews = sortedswitch.concat(sortedsteam)
+    // /.concat(reviewsst);
+   
     setLatestField(reviews);
   }, []);
 
@@ -139,8 +141,8 @@ function sortJson(element, prop, propType, asc) {
     onPlatformChange("");
     onPlatformDrop("All Platforms");
     onFilterChange("");
-    onLatestChange("Top Rated");
-    onLatestDrop("Top Rated");
+    onLatestChange("Popular");
+    onLatestDrop("Popular");
   };
 
   const clearGenre = (event) => {
