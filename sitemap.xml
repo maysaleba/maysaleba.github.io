@@ -22,13 +22,13 @@
 <url> <loc>https://www.maysaleba.com?/games/steamworld-dig-2-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/downwell-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/13-sentinels-aegis-rim-switch</loc> </url>
-<url> <loc>https://www.maysaleba.com?/games/monster-hunter-rise-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/neon-white-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/unsighted-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/what-remains-of-edith-finch-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/dusk-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/gone-home-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/far-lone-sails-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/monster-hunter-rise-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/tinykin-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/jack-move-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/katamari-damacy-reroll-switch</loc> </url>
@@ -356,13 +356,13 @@
 <url> <loc>https://www.maysaleba.com?/games/star-wars-knights-of-the-old-republic-ii-the-sith-lords-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/the-jackbox-party-pack-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/doom-64-switch</loc> </url>
-<url> <loc>https://www.maysaleba.com?/games/terror-of-hemasaurus-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/young-souls-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/a-hat-in-time-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/hayfever-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/the-long-dark-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/unforeseen-incidents-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/astroneer-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/terror-of-hemasaurus-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/streets-of-rogue-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/party-hard-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/super-punch-patrol-switch</loc> </url>
@@ -545,7 +545,6 @@
 <url> <loc>https://www.maysaleba.com?/games/risk-system-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/greak-memories-of-azur-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/hyper-sentinel-switch</loc> </url>
-<url> <loc>https://www.maysaleba.com?/games/elderand-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/holy-potatoes-a-weapon-shop-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/rico-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/skyhill-switch</loc> </url>
@@ -570,6 +569,7 @@
 <url> <loc>https://www.maysaleba.com?/games/the-survivalists-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/super-volley-blast-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/megadimension-neptunia-vii-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/elderand-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/south-of-the-circle-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/gordian-quest-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/infliction-extended-cut-switch</loc> </url>
@@ -3044,6 +3044,7 @@
 <url> <loc>https://www.maysaleba.com?/games/jessika-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/leisure-suit-larry-wet-dreams-dont-dry-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/leisure-suit-larry-wet-dreams-dry-twice-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/clone-drone-in-the-danger-zone-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/giftcards</loc> </url>
 <url> <loc>https://www.maysaleba.com?/faq</loc> </url>
 </urlset>
