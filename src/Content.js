@@ -1437,14 +1437,14 @@ function SaleEnds() {
       }
       var argentinaTax = Math.round(
         (testBoolean
-          ? matchGames[0].ArgentinaPrice * arsExchange * 1.63
+          ? matchGames[0].ArgentinaPrice * arsExchange * 1.59
           : matchGames[0].ArgentinaPrice * arsExchange * 1.59) -
           matchGames[0].ArgentinaPrice * arsExchange
       );
 
       var argentinaTaxAR = Math.round(
         (testBoolean
-          ? matchGames[0].ArgentinaPrice * 1.63
+          ? matchGames[0].ArgentinaPrice * 1.59
           : matchGames[0].ArgentinaPrice * 1.59) -
           matchGames[0].ArgentinaPrice
       );
@@ -1512,9 +1512,9 @@ function SaleEnds() {
                 Note: Argentina eShop only accepts payment from Argentina issued cards. Use {" "}
                 <a
                   className="infotax"
-                  href="https://latin-pay.com/en/"
+                  href="https://my.nintendo.com/about_gold_point?lang=en-AR"
                 >
-                  Latin Pay
+                  Gold Points
                 </a> to buy{" "}
               </Box>
             </>
