@@ -16,7 +16,7 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
 
 
 
-  var lastd = new Date(d.setDate(d.getDate() - 2));
+  var lastd = new Date(d.setDate(d.getDate()));
   var da = String(lastd.getDate()).padStart(2, "0");
   var mo = String(lastd.getMonth() + 1).padStart(2, "0"); //January is 0!
   var year = lastd.getFullYear();
