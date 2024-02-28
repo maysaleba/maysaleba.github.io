@@ -69,8 +69,12 @@ function sortJson(element, prop, propType, asc) {
   // var theURL = "https://www.npmjs.com/package/adasddasdas";
   // var theURL = "https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
   var theURL = "x";
+
   var theURLa =
-    "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json";
+    "https://v6.exchangerate-api.com/v6/b6c1f73f1fc27b6d23d93453/latest/php";
+
+  // var theURLa =
+  //   "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json";
 
   const [datam, setDatam] = React.useState({});
   const [makeswitch, setMakeswitch] = React.useState(null);
@@ -95,12 +99,16 @@ function sortJson(element, prop, propType, asc) {
         axios.get(theURLa).then((response) => {
           setDatam(response);
           setMakeswitch("2");
-          setDatam(response.data.php);
+          setDatam(response.data.conversion_rates);
           // if using exchangerate.host
           // setDatam(response.data.php) // if using currency-api
         });
       });
   }, [theURL]);
+
+console.log("HELLO")
+ console.log(datam)
+
 
   const [priceRangeField, setPriceRangeField] = useState(99999);
   const [priceRangeLow, setPriceRangeLow] = useState(0);
