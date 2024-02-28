@@ -57,7 +57,7 @@ today = yyyy + "-" + mm + "-" + dd;
 
 
   var theURLa =
-    "https://v6.exchangerate-api.com/v6/b6c1f73f1fc27b6d23d93453/latest/php";
+    "https://api.fxratesapi.com/latest?base=PHP&format=json";
 
   const [datam, setDatam] = React.useState({});
   const [makeswitch, setMakeswitch] = React.useState(null);
@@ -72,7 +72,7 @@ today = yyyy + "-" + mm + "-" + dd;
       .catch((error) => {
         console.log(error);
         axios.get(theURLa).then((response) => {
-          setDatam(response.data.conversion_rates);
+          setDatam(response.data.rates);
           setMakeswitch("2");
           // if using exchangerate.host
           // setDatam(response.data.php) // if using currency-api
@@ -81,21 +81,21 @@ today = yyyy + "-" + mm + "-" + dd;
   }, [theURL]);
 
   if (makeswitch === null) {
-    var usdExchange = 1 / JSON.stringify(datam.USD);
-    var arsExchange = 1 / JSON.stringify(datam.ARS)*999999;
-    var audExchange = 1 / JSON.stringify(datam.AUD);
-    var brlExchange = 1 / JSON.stringify(datam.BRL);
-    var cadExchange = 1 / JSON.stringify(datam.CAD);
-    var clpExchange = 1 / JSON.stringify(datam.CLP);
-    var copExchange = 1 / JSON.stringify(datam.COP);
-    var mxnExchange = 1 / JSON.stringify(datam.MXN);
-    var penExchange = 1 / JSON.stringify(datam.PEN);
-    var plnExchange = 1 / JSON.stringify(datam.PLN);
-    var rubExchange = 1 / JSON.stringify(datam.RUB);
-    var zarExchange = 1 / JSON.stringify(datam.ZAR);
-    var sgdExchange = 1 / JSON.stringify(datam.SGD);
-    var hkdExchange = 1 / JSON.stringify(datam.HKD);
-    var trdExchange = 1 / JSON.stringify(datam.TRY);
+    var usdExchange = 1 / JSON.stringify(datam.usd);
+    var arsExchange = 1 / JSON.stringify(datam.ars)*999999;
+    var audExchange = 1 / JSON.stringify(datam.aud);
+    var brlExchange = 1 / JSON.stringify(datam.brl);
+    var cadExchange = 1 / JSON.stringify(datam.cad);
+    var clpExchange = 1 / JSON.stringify(datam.clp);
+    var copExchange = 1 / JSON.stringify(datam.cop);
+    var mxnExchange = 1 / JSON.stringify(datam.mxn);
+    var penExchange = 1 / JSON.stringify(datam.pen);
+    var plnExchange = 1 / JSON.stringify(datam.pln);
+    var rubExchange = 1 / JSON.stringify(datam.rub);
+    var zarExchange = 1 / JSON.stringify(datam.zar);
+    var sgdExchange = 1 / JSON.stringify(datam.sgd);
+    var hkdExchange = 1 / JSON.stringify(datam.hkd);
+    var trdExchange = 1 / JSON.stringify(datam.try);
   } else {
     var usdExchange = 1 / JSON.stringify(datam.USD);
     var arsExchange = 1 / JSON.stringify(datam.ARS)*999999;

@@ -71,7 +71,7 @@ function sortJson(element, prop, propType, asc) {
   var theURL = "x";
 
   var theURLa =
-    "https://v6.exchangerate-api.com/v6/b6c1f73f1fc27b6d23d93453/latest/php";
+    "https://api.fxratesapi.com/latest?base=PHP&format=json";
 
   // var theURLa =
   //   "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json";
@@ -99,15 +99,15 @@ function sortJson(element, prop, propType, asc) {
         axios.get(theURLa).then((response) => {
           setDatam(response);
           setMakeswitch("2");
-          setDatam(response.data.conversion_rates);
+          setDatam(response.data.rates);
           // if using exchangerate.host
           // setDatam(response.data.php) // if using currency-api
         });
       });
   }, [theURL]);
 
-console.log("HELLO")
- console.log(datam)
+// console.log("HELLO")
+//  console.log(datam)
 
 
   const [priceRangeField, setPriceRangeField] = useState(99999);
