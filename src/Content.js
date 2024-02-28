@@ -82,21 +82,21 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     var hkdExchange = 1 / JSON.stringify(datam.hkd);
     var trdExchange = 1 / JSON.stringify(datam.try);
   } else {
-    var usdExchange = 1 / JSON.stringify(datam.USD);
-    var arsExchange = 1 / JSON.stringify(datam.ARS);
-    var audExchange = 1 / JSON.stringify(datam.AUD);
-    var brlExchange = 1 / JSON.stringify(datam.BRL);
-    var cadExchange = 1 / JSON.stringify(datam.CAD);
-    var clpExchange = 1 / JSON.stringify(datam.CLP);
-    var copExchange = 1 / JSON.stringify(datam.COP);
-    var mxnExchange = 1 / JSON.stringify(datam.MXN);
-    var penExchange = 1 / JSON.stringify(datam.PEN);
-    var plnExchange = 1 / JSON.stringify(datam.PLN);
-    var rubExchange = 1 / JSON.stringify(datam.RUB);
-    var zarExchange = 1 / JSON.stringify(datam.ZAR);
-    var sgdExchange = 1 / JSON.stringify(datam.SGD);
-    var hkdExchange = 1 / JSON.stringify(datam.HKD);
-    var trdExchange = 1 / JSON.stringify(datam.TRY);
+    var usdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.USD);
+    var arsExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.ARS);
+    var audExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.AUD);
+    var brlExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.BRL);
+    var cadExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.CAD);
+    var clpExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.CLP);
+    var copExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.COP);
+    var mxnExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.MXN);
+    var penExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.PEN);
+    var plnExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.PLN);
+    var rubExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.RUB);
+    var zarExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.ZAR);
+    var sgdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.SGD);
+    var hkdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.HKD);
+    var trdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.TRY);
   }
   // {100*JSON.stringify(datam.usd)}
 

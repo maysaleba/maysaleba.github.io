@@ -71,7 +71,7 @@ function sortJson(element, prop, propType, asc) {
   var theURL = "x";
 
   var theURLa =
-    "https://api.fxratesapi.com/latest?base=PHP&format=json";
+    "https://cdn.jsdelivr.net/gh/ismartcoding/currency-api@main/latest/data.json";
 
   // var theURLa =
   //   "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json";
@@ -97,17 +97,16 @@ function sortJson(element, prop, propType, asc) {
       .catch((error) => {
         console.log(error);
         axios.get(theURLa).then((response) => {
-          setDatam(response);
+          setDatam(response.data.quotes);
           setMakeswitch("2");
-          setDatam(response.data.rates);
           // if using exchangerate.host
           // setDatam(response.data.php) // if using currency-api
         });
       });
   }, [theURL]);
 
-// console.log("HELLO")
-//  console.log(datam)
+console.log("HELLO")
+ console.log(datam)
 
 
   const [priceRangeField, setPriceRangeField] = useState(99999);
