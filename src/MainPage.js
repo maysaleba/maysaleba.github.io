@@ -16,10 +16,10 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
 
 
 
-  var lastd = new Date(d.setDate(d.getDate() - 1));
-  var da = String(lastd.getDate()).padStart(2, "0");
-  var mo = String(lastd.getMonth() + 1).padStart(2, "0"); //January is 0!
-  var year = lastd.getFullYear();
+  // var lastd = new Date(d.setDate(d.getDate() ));
+  // var da = String(lastd.getDate()).padStart(2, "0");
+  // var mo = String(lastd.getMonth() + 1).padStart(2, "0"); //January is 0!
+  // var year = lastd.getFullYear();
 
   var lastmo = new Date(d.setDate(d.getDate() - 320));
   var damo = String(lastmo.getDate()).padStart(2, "0");
@@ -27,16 +27,18 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
   var yearmo = lastmo.getFullYear();
 
   let todayd = yearto + "-" + moto + "-" + dato;
-  let daysago = year + "-" + mo + "-" + da;
+  // let daysago = year + "-" + mo + "-" + da;
   let moago = yearmo + "-" + momo + "-" + damo;
 
 
 
 
 const sortedReviews = sortJson([...reviewssw], "Popularity", "int", false);
+const dsortedReviews = sortJson([...reviewssw], "SaleStarted", "date", false);
   
   const topSwitchDiscounts = sortedReviews;
-  const newSwitchDiscounts = reviewssw.filter((x) => x.SaleStarted > daysago);
+  const newSwitchDiscounts = dsortedReviews;
+  // const newSwitchDiscounts = reviewssw.filter((x) => x.SaleStarted > daysago);
   
 
 
@@ -46,6 +48,14 @@ function sortJson(element, prop, propType, asc) {
       element = element.sort(function (a, b) {
         const aValue = parseInt(a[prop]) || Number.MIN_SAFE_INTEGER;
         const bValue = parseInt(b[prop]) || Number.MIN_SAFE_INTEGER;
+
+        return asc ? aValue - bValue : bValue - aValue;
+      });
+      break;
+    case "date":
+      element = element.sort(function (a, b) {
+        const aValue = new Date(a[prop]);
+        const bValue = new Date(b[prop]);
 
         return asc ? aValue - bValue : bValue - aValue;
       });
@@ -62,7 +72,6 @@ function sortJson(element, prop, propType, asc) {
   // Return the sorted element
   return element;
 }
-
 
   
   sortJson(reviewsps, "SCORE", "int", false);
