@@ -21,14 +21,14 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
   // var mo = String(lastd.getMonth() + 1).padStart(2, "0"); //January is 0!
   // var year = lastd.getFullYear();
 
-  var lastmo = new Date(d.setDate(d.getDate() - 320));
-  var damo = String(lastmo.getDate()).padStart(2, "0");
-  var momo = String(lastmo.getMonth() + 1).padStart(2, "0"); //January is 0!
-  var yearmo = lastmo.getFullYear();
+  // var lastmo = new Date(d.setDate(d.getDate() - 320));
+  // var damo = String(lastmo.getDate()).padStart(2, "0");
+  // var momo = String(lastmo.getMonth() + 1).padStart(2, "0"); //January is 0!
+  // var yearmo = lastmo.getFullYear();
 
-  let todayd = yearto + "-" + moto + "-" + dato;
-  // let daysago = year + "-" + mo + "-" + da;
-  let moago = yearmo + "-" + momo + "-" + damo;
+  // let todayd = yearto + "-" + moto + "-" + dato;
+  // // let daysago = year + "-" + mo + "-" + da;
+  // let moago = yearmo + "-" + momo + "-" + damo;
 
 
 
@@ -74,9 +74,10 @@ function sortJson(element, prop, propType, asc) {
 }
 
   
-  sortJson(reviewsps, "SCORE", "int", false);
-  const newPSDiscounts = reviewsps.filter((x) => x.SaleStarted >= todayd );
-  const topPSDiscounts = reviewsps;
+  const sortedSteamr = sortJson([...reviewsps], "SCORE", "int", false);
+  const sortedSteamd = sortJson([...reviewsps], "SaleStarted", "date", false);
+  const newPSDiscounts = sortedSteamd;
+  const topPSDiscounts = sortedSteamr;
 
   return (
     <div>
