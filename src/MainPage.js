@@ -53,6 +53,10 @@ function sortJson(element, prop, propType, asc) {
       });
       break;
     case "date":
+      // Filter entries where SCORE is not empty or 0
+      element = element.filter(item => item.SCORE !== "" && item.SCORE !== 0);
+
+      // Sort by SaleStarted
       element = element.sort(function (a, b) {
         const aValue = new Date(a[prop]);
         const bValue = new Date(b[prop]);
@@ -69,9 +73,10 @@ function sortJson(element, prop, propType, asc) {
       });
   }
 
-  // Return the sorted element
+  // Return the sorted and (if applicable) filtered element
   return element;
 }
+
 
   
   const sortedSteamr = sortJson([...reviewsps], "SCORE", "int", false);
