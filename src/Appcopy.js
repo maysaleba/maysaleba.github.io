@@ -192,11 +192,11 @@ console.log("HELLO")
     }
     if (filterLatest === "New Discounts") {
       sortJson(latestField, "SCORE", "int", false);
-      sortJson(latestField, "SaleStarted", "string", false);
+      sortJson(latestField, "SaleStarted", "date", false);
     }
     if (filterLatest === "Latest Release") {
       sortJson(latestField, "SCORE", "int", false);
-      sortJson(latestField, "ReleaseDate", "string", false);
+      sortJson(latestField, "ReleaseDate", "date", false);
     }
     if (filterLatest === "Price ↓") {
       sortJson(latestField, "SCORE", "int", false);
