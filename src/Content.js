@@ -1526,7 +1526,7 @@ function SaleEnds() {
                 Note: Buy Argentina Funds with  {" "}
                 <a
                   className="infotax"
-                  href="https://bit.ly/3Q6pbRo"
+                  href="https://discord.gg/regionality"
                 >
                   Regionality
                 </a>
