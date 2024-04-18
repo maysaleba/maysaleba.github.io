@@ -1435,17 +1435,31 @@ function SaleEnds() {
           testBoolean = false;
         }
       }
-      var argentinaTax = Math.round(
+      // var argentinaTax = Math.round(
+      //   (testBoolean
+      //     ? matchGames[0].ArgentinaPrice * arsExchange * 1.59
+      //     : matchGames[0].ArgentinaPrice * arsExchange * 1.59) -
+      //     matchGames[0].ArgentinaPrice * arsExchange
+      // );
+
+      // var argentinaTaxAR = Math.round(
+      //   (testBoolean
+      //     ? matchGames[0].ArgentinaPrice * 1.59
+      //     : matchGames[0].ArgentinaPrice * 1.59) -
+      //     matchGames[0].ArgentinaPrice
+      // );
+
+            var argentinaTax = Math.round(
         (testBoolean
-          ? matchGames[0].ArgentinaPrice * arsExchange * 1.59
-          : matchGames[0].ArgentinaPrice * arsExchange * 1.59) -
+          ? matchGames[0].ArgentinaPrice * arsExchange
+          : matchGames[0].ArgentinaPrice * arsExchange) -
           matchGames[0].ArgentinaPrice * arsExchange
       );
 
       var argentinaTaxAR = Math.round(
         (testBoolean
-          ? matchGames[0].ArgentinaPrice * 1.59
-          : matchGames[0].ArgentinaPrice * 1.59) -
+          ? matchGames[0].ArgentinaPrice
+          : matchGames[0].ArgentinaPrice) -
           matchGames[0].ArgentinaPrice
       );
 

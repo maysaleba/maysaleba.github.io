@@ -198,19 +198,34 @@ today = yyyy + "-" + mm + "-" + dd;
           testBoolean = false;
         }
       }
-      var argentinaTax = Math.round(
+      // var argentinaTax = Math.round(
+      //   (testBoolean
+      //     ? ArgentinaPrice * arsExchange * 1.59
+      //     : ArgentinaPrice * arsExchange * 1.59) -
+      //     ArgentinaPrice * arsExchange
+      // );
+
+      // var argentinaTaxAR = Math.round(
+      //   (testBoolean
+      //     ? ArgentinaPrice * 1.59
+      //     : ArgentinaPrice * 1.59) -
+      //     ArgentinaPrice
+      // );
+
+            var argentinaTax = Math.round(
         (testBoolean
-          ? ArgentinaPrice * arsExchange * 1.59
-          : ArgentinaPrice * arsExchange * 1.59) -
+          ? ArgentinaPrice * arsExchange
+          : ArgentinaPrice * arsExchange) -
           ArgentinaPrice * arsExchange
       );
 
       var argentinaTaxAR = Math.round(
         (testBoolean
-          ? ArgentinaPrice * 1.59
-          : ArgentinaPrice * 1.59) -
+          ? ArgentinaPrice
+          : ArgentinaPrice) -
           ArgentinaPrice
       );
+
 
       var pricesobj = {
         Canada: CanadaPrice * cadExchange,
