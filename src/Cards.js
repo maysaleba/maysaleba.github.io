@@ -82,7 +82,7 @@ today = yyyy + "-" + mm + "-" + dd;
 
   if (makeswitch === null) {
     var usdExchange = 1 / JSON.stringify(datam.usd);
-    var arsExchange = 1 / JSON.stringify(datam.ars)*999999;
+    var arsExchange = 1 / JSON.stringify(datam.ars);
     var audExchange = 1 / JSON.stringify(datam.aud);
     var brlExchange = 1 / JSON.stringify(datam.brl);
     var cadExchange = 1 / JSON.stringify(datam.cad);
@@ -98,7 +98,7 @@ today = yyyy + "-" + mm + "-" + dd;
     var trdExchange = 1 / JSON.stringify(datam.try);
   } else {
     var usdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.USD);
-    var arsExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.ARS)*999999;
+    var arsExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.ARS);
     var audExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.AUD);
     var brlExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.BRL);
     var cadExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.CAD);

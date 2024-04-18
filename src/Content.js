@@ -1509,13 +1509,22 @@ function SaleEnds() {
                   textAlign: "center",
                 }}
               >
-                Note: Argentina eShop only accepts payment from Argentina issued cards. Use {" "}
+                Note: Buy Argentina Funds with  {" "}
+                <a
+                  className="infotax"
+                  href="https://bit.ly/3Q6pbRo"
+                >
+                  Regionality
+                </a>
+{/*
+ Note: Argentina eShop only accepts payment from Argentina issued cards. Use {" "}
                 <a
                   className="infotax"
                   href="https://my.nintendo.com/about_gold_point?lang=en-AR"
                 >
                   Gold Points
-                </a> to buy{" "}
+                </a> to buy{" "}*/}
+
               </Box>
             </>
           );
