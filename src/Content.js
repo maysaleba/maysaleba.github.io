@@ -1584,7 +1584,7 @@ function SaleEnds() {
               <div style={{ fontSize: 11, fontWeight: "Bold", color: "#fc430a" }}>
                 {" "}
                 {/*+ ₱{argentinaTax} TAX*/}
-                {Math.round(matchGames[0].ArgentinaPrice*2).toString().replace(".",",")} GP
+                {Math.round(matchGames[0].ArgentinaPrice).toString().replace(".",",")} ARS
               </div>
             </div>
           );
@@ -1666,7 +1666,7 @@ function SaleEnds() {
               <div style={{ fontSize: 11, fontWeight: "Bold", color: "red" }}>
                 {" "}
                 {/*+ ₱{argentinaTax} TAX*/}
-                 {Math.round(matchGames[0].ArgentinaPrice*2).toString().replace(".",",")} GP
+                 {Math.round(matchGames[0].ArgentinaPrice).toString().replace(".",",")} ARS
               </div>
             </div>
           );
@@ -1748,7 +1748,7 @@ function SaleEnds() {
               <div style={{ fontSize: 11, fontWeight: "Bold", color: "red" }}>
                 {" "}
                 {/*+ ₱{argentinaTax} TAX*/}
-                 {Math.round(matchGames[0].ArgentinaPrice*2).toString().replace(".",",")} GP
+                 {Math.round(matchGames[0].ArgentinaPrice).toString().replace(".",",")} ARS
               </div>
             </div>
           );
@@ -1831,7 +1831,7 @@ function SaleEnds() {
               <div style={{ fontSize: 11, fontWeight: "Bold", color: "red" }}>
                 {" "}
                 {/*+ ₱{argentinaTax} TAX*/}
-                 {Math.round(matchGames[0].ArgentinaPrice*2).toString().replace(".",",")} GP
+                 {Math.round(matchGames[0].ArgentinaPrice).toString().replace(".",",")} ARS
               </div>
             </div>
           );
