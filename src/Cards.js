@@ -212,25 +212,21 @@ today = yyyy + "-" + mm + "-" + dd;
       //     ArgentinaPrice
       // );
 
-            var argentinaTax = Math.round(
-        (testBoolean
-          ? ArgentinaPrice * arsExchange
-          : ArgentinaPrice * arsExchange) -
-          ArgentinaPrice * arsExchange
-      );
+      var regionalityTax = ArgentinaPrice * arsExchange * ((1650 - (15900 * arsExchange))/ (15900 * arsExchange))
+      console.log("regionality" + regionalityTax)
 
-      var argentinaTaxAR = Math.round(
+      var argentinaTax = Math.round(
         (testBoolean
-          ? ArgentinaPrice
-          : ArgentinaPrice) -
-          ArgentinaPrice
+          ? ArgentinaPrice * arsExchange * 1.59
+          : ArgentinaPrice * arsExchange * 1.59) -
+          ArgentinaPrice * arsExchange
       );
 
 
       var pricesobj = {
         Canada: CanadaPrice * cadExchange,
         Peru: PeruPrice * penExchange,
-        Argentina: argentinaTax + ArgentinaPrice * arsExchange,
+        Argentina: argentinaTax + regionalityTax + ArgentinaPrice * arsExchange,
         //Argentina: ArgentinaPrice * arsExchange * 1.64,
         Australia: AustraliaPrice * audExchange,
         Colombia: ColombiaPrice * copExchange,

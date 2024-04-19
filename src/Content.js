@@ -1449,19 +1449,18 @@ function SaleEnds() {
       //     matchGames[0].ArgentinaPrice
       // );
 
-            var argentinaTax = Math.round(
+
+
+      var regionalityTax = matchGames[0].ArgentinaPrice * arsExchange * ((1650 - (15900 * arsExchange))/ (15900 * arsExchange))
+      console.log("regionality" + regionalityTax)
+
+      var argentinaTax = Math.round(
         (testBoolean
-          ? matchGames[0].ArgentinaPrice * arsExchange
-          : matchGames[0].ArgentinaPrice * arsExchange) -
+          ? matchGames[0].ArgentinaPrice * arsExchange * 1.59
+          : matchGames[0].ArgentinaPrice * arsExchange * 1.59) -
           matchGames[0].ArgentinaPrice * arsExchange
       );
 
-      var argentinaTaxAR = Math.round(
-        (testBoolean
-          ? matchGames[0].ArgentinaPrice
-          : matchGames[0].ArgentinaPrice) -
-          matchGames[0].ArgentinaPrice
-      );
 
 
       //       var argentinaTaxAR = Math.round(
@@ -1477,7 +1476,7 @@ function SaleEnds() {
       var pricesobj = {
         Canada: matchGames[0].CanadaPrice * cadExchange,
         Peru: matchGames[0].PeruPrice * penExchange,
-        Argentina: argentinaTax + matchGames[0].ArgentinaPrice * arsExchange,
+        Argentina: argentinaTax + regionalityTax + matchGames[0].ArgentinaPrice * arsExchange,
         // Argentina: matchGames[0].ArgentinaPrice * arsExchange,
         Australia: matchGames[0].AustraliaPrice * audExchange,
         Colombia: matchGames[0].ColombiaPrice * copExchange,
@@ -1523,7 +1522,7 @@ function SaleEnds() {
                   textAlign: "center",
                 }}
               >
-                Note: Buy Argentina Funds with  {" "}
+                Note: Argentina Price is inclusive of 59% tax and service fee. Buy Argentina Funds with  {" "}
                 <a
                   className="infotax"
                   href="https://discord.gg/regionality"
