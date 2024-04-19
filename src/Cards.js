@@ -212,7 +212,7 @@ today = yyyy + "-" + mm + "-" + dd;
       //     ArgentinaPrice
       // );
 
-      var regionalityTax = ArgentinaPrice * arsExchange * ((1650 - (15900 * arsExchange))/ (15900 * arsExchange))
+      var regionalityTax = ArgentinaPrice * arsExchange * 1.59 * ((1650 - (15900 * arsExchange))/ (15900 * arsExchange))
       console.log("regionality" + regionalityTax)
 
       var argentinaTax = Math.round(
