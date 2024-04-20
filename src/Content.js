@@ -1522,13 +1522,13 @@ function SaleEnds() {
                   textAlign: "center",
                 }}
               >
-                Note: Argentina Price is inclusive of 59% tax and service fee. Buy Argentina Funds with  {" "}
+               Buy Argentina Funds with  {" "}
                 <a
                   className="infotax"
                   href="https://discord.gg/regionality"
                 >
-                  Regionality
-                </a>
+                  Regionality</a>.  Note: Argentina Price is inclusive of 59% tax and service fee. 
+                
 {/*
  Note: Argentina eShop only accepts payment from Argentina issued cards. Use {" "}
                 <a
