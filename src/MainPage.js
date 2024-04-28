@@ -183,7 +183,7 @@ function sortJson(element, prop, propType, asc) {
 </div>*/}
       <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
-          <b>NEW STEAM GAMES ON SALE</b>
+          <b>NEW PLAYSTATION GAMES ON SALE</b>
           
         </div>
 <hr className="linedividet"/>
@@ -204,16 +204,18 @@ function sortJson(element, prop, propType, asc) {
                 PlusPrice={review.PlusPrice}
                 Price={review.Price}
                 ESRBRating={review.ESRBRating}
+                IsPS4={review.IsPS4}
+                IsPS5={review.IsPS5}
               />
             </div>
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/steam"><b><u>VIEW ALL STEAM GAMES</u></b></a></div>
+        <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/playstation"><b><u>VIEW ALL PLAYSTATION GAMES</u></b></a></div>
       </Paper>
         <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
-          <b>TOP RATED STEAM GAMES ON SALE</b>
+          <b>TOP RATED PLAYSTATION GAMES ON SALE</b>
           
         </div>
 <hr className="linedividet"/>
@@ -234,12 +236,14 @@ function sortJson(element, prop, propType, asc) {
                 PlusPrice={review.PlusPrice}
                 Price={review.Price}
                 ESRBRating={review.ESRBRating}
+                IsPS4={review.IsPS4}
+                IsPS5={review.IsPS5}
               />
             </div>
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div className="card-footer-custom" align="center"><a href="https://maysaleba.com/steam"><b><u>VIEW ALL STEAM GAMES</u></b></a></div>
+        <div className="card-footer-custom" align="center"><a href="https://maysaleba.com/playstation"><b><u>VIEW ALL PLAYSTATION GAMES</u></b></a></div>
       </Paper>
     </div>
   );

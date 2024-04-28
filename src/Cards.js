@@ -39,6 +39,8 @@ const Cards = ({
   ChilePrice,
   MexicoPrice,
   ESRBRating,
+  IsPS4,
+  IsPS5
 }) => {
 
 var today = new Date();
@@ -46,8 +48,8 @@ var dd = String(today.getDate()).padStart(2, "0");
 var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
 var yyyy = today.getFullYear();
 
-let hour = today.getHours();
 
+let hour = today.getHours();
 today = yyyy + "-" + mm + "-" + dd;
 
   var theURL = "https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
@@ -123,9 +125,7 @@ today = yyyy + "-" + mm + "-" + dd;
 
     console.log(props.platform);
 
-    if (props.platform == "Steam"){
-      return null;
-    }
+
     const isExpired = props.isExpired;
     const diffDays = Math.round((secondDate - firstDate) / oneDay);
 
@@ -350,10 +350,10 @@ today = yyyy + "-" + mm + "-" + dd;
         </>
       );
     }
-    if (props.psorsw === "Steam") {
+    if (props.psorsw === "Playstation") {
           return (
-        <span className="phregion-logo" style={{ fontWeight: "light" }}>
-          {"₱" + Math.round(props.saleprice)}
+        <span className="trregion-logo" style={{ fontWeight: "light" }}>
+          {"₱" + Math.round(props.saleprice * trdExchange)}
         </span>
       );
         
@@ -363,10 +363,10 @@ today = yyyy + "-" + mm + "-" + dd;
 
     if (props.psorsw === "ogprice") {
 
-        if (props.platform === "Steam"){
+        if (props.platform === "Playstation"){
                       return (
         <span style={{ fontWeight: "light" }}>
-          {"₱" + Math.round(props.saleprice)}
+          {"₱" + Math.round(props.saleprice * trdExchange)}
         </span>
       );
 
@@ -511,7 +511,6 @@ else if (PlusPrice === 202020) {
   }
 
   function PlatformBadge(props) {
-    console.log(ESRBRating)
     const platform = props.hasBadge;
     if (platform === "Switch") {
 
@@ -519,42 +518,88 @@ else if (PlusPrice === 202020) {
       return (
         <>
         <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>
-      <div className="d-flex justify-content float-start opencritic-container2">
-        <Box style={{fontWeight: 'bold', borderRadius: 5, backgroundColor: "#fc3e04", marginTop: 3, marginLeft: 5, paddingTop: 1, paddingBottom: 1, paddingLeft: 5, paddingRight: 5, fontSize: '0.65rem', textAlign: 'center', color: 'white'}}>
+        <div className="d-flex justify-content float-start opencritic-container2">
+        <Box style={{fontWeight: 'bold', borderRadius: 5, backgroundColor: "#fc3e04", marginTop: 3, marginLeft: 5, paddingTop: 1, paddingBottom: 1, paddingLeft: 5, paddingRight: 5, fontSize: '0.7rem', textAlign: 'center', color: 'white'}}>
         DLC</Box>
       </div>
-</>
+        </>
       );
 
 
-      } else       if (props.esrbrating === "ROM Bundle") {
+      } else if (props.esrbrating === "ROM Bundle") {
       return (
         <>
         <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>
-      <div className="d-flex justify-content float-start opencritic-container2">
-        <Box style={{fontWeight: 'bold', borderRadius: 5, backgroundColor: "#6f00cb", marginTop: 3, marginLeft: 5, paddingTop: 1, paddingBottom: 1, paddingLeft: 5, paddingRight: 5, fontSize: '0.65rem', textAlign: 'center', color: 'white'}}>
+        <div className="d-flex justify-content float-start opencritic-container2">
+        <Box style={{fontWeight: 'bold', borderRadius: 5, backgroundColor: "#6f00cb", marginTop: 3, marginLeft: 5, paddingTop: 1, paddingBottom: 1, paddingLeft: 5, paddingRight: 5, fontSize: '0.7rem', textAlign: 'center', color: 'white'}}>
         BUNDLE</Box>
       </div>
-</>
+      </>
       );
-
-
       }
-
       else {
         return (
         <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>
         )
       }
-
-
     }
-    if (platform === "Steam") {
-      return (
+    if (platform === "Playstation") {
+        return (
         <span className="img-responsive pbadges playstation1"></span>
-      );
+        )
+
     }
   }
+
+
+  function PlatformOverlay(props) {
+    const slug = props.slug;
+    const isps4 = props.isps4
+    const isps5 = props.isps5
+    if (slug.includes("switch")) {
+      return (
+        <>
+          <div className="additional-overlay">NSW</div>
+        </>
+      );
+
+
+      } else if (isps4 === 1 && isps5 === 1) {
+      return (
+        <>
+          <div className="additional-overlay">PS5</div>
+          <div className="additional-overlay-right">PS4</div>
+      </>
+      );
+      } else if (isps4 === 1 && isps5 === 0) {
+
+              return (
+        <>
+          <div className="additional-overlay">PS4</div>
+         
+      </>
+      );
+      } else if (isps4 === 0 && isps5 === 1) {
+
+              return (
+        <>
+          <div className="additional-overlay">PS5</div>
+         
+      </>
+      );
+      }
+
+
+
+      else {
+        return (
+        <div className="additional-overlay">NONE</div>
+        )
+      }
+    
+
+  }
+
 
   return (
     <Col>
@@ -563,31 +608,34 @@ else if (PlusPrice === 202020) {
         className="linkto"
         style={{ color: "black", textDecoration: "none" }}
       >
-        <Card className="border-0">
-          <LazyLoadImage
+<Card className="border-0">
+    <div className="card-img-wrapper">
+        <LazyLoadImage
             effect="opacity"
             key={Image}
             className="card-img"
             src={Image}
             onError={(event) => {
-              event.target.src = noimage;
-              event.onerror = null;
+                event.target.src = noimage;
+                event.onerror = null;
             }}
             visibleByDefault={Image}
-          />
-
-          <Card.ImgOverlay className="card-img-overlay">
-            <PlatformBadge hasBadge={Platform} esrbrating={ESRBRating}/>
+        />
+        <Card.ImgOverlay className="card-img-overlay">
+            <PlatformBadge hasBadge={Platform} esrbrating={ESRBRating} slug={Slug}/>
             <OpenScore hasScore={Score} />
-          </Card.ImgOverlay>
-          <Card.Body>
-            <Card.Title className="card-title">{Title.replace(/ *\([^)]*\) */g, "")}</Card.Title>
-            <Card.Text className="card-text">
-              <PercentOff />{" "}
-              <strike>
+        </Card.ImgOverlay>
+            <PlatformOverlay slug={Slug} isps4={IsPS4} isps5={IsPS5}/>
+        
+    </div>
+    <Card.Body>
+        <Card.Title className="card-title">{Title.replace(/ *\([^)]*\) */g, "").replaceAll("Ã¢„Â™","™").replace("â„¢","™")}</Card.Title>
+        <Card.Text className="card-text">
+            <PercentOff />{" "}
+            <strike>
                 <PesoPrice psorsw="ogprice" saleprice={Price} esrbrating={ESRBRating} platform={Platform}/>
-              </strike>{" "}
-              <PesoPrice
+            </strike>{" "}
+            <PesoPrice
                 psorsw={Platform}
                 esrbrating={ESRBRating}
                 saleprice={SalePrice}
@@ -602,15 +650,12 @@ else if (PlusPrice === 202020) {
                 polandprice={PolandPrice}
                 chileprice={ChilePrice}
                 mexicoprice={MexicoPrice}
-              />{" "}
-              
-              <DaysLeft isExpired={SaleEnds} platform={Platform} />
-              {/*<PesoPrice />
-            {" "+Genre}
-*/}{" "}
-            </Card.Text>
-          </Card.Body>
-        </Card>
+            />{" "}
+            <PesoPlusPrice psorsw={Platform} pesoplus={PlusPrice}  esrbrating={ESRBRating}/>{" "}
+            <DaysLeft isExpired={SaleEnds} platform={Platform} />
+        </Card.Text>
+    </Card.Body>
+</Card>
       </Link>
     </Col>
   );

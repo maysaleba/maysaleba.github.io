@@ -61,15 +61,15 @@ const FilterDropDown = props => {
          <Dropdown.Item
           href="#"
           onClick={() => {
-            history.push('/steam');
+            history.push('/playstation');
             // clearSearchChange();
             clearPriceRange();
             onPriceRangeDrop("All Price Range")
-            onPlatformChange("Steam");
-            onPlatformDrop("Steam");
+            onPlatformChange("Playstation");
+            onPlatformDrop("Playstation");
           }}
         >
-          Steam
+          Playstation
         </Dropdown.Item>
 
       </Dropdown.Menu>

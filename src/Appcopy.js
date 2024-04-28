@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import usePagination from "./usePagination.js";
 import reviewssw from "./csvjson.json";
-import reviewsst from "./all_games.json";
+import reviewsst from "./csvjsontr.json";
 
 import CardGroup from "./CardGroup";
 import "./App.css";
@@ -123,10 +123,9 @@ console.log("HELLO")
 
   useEffect(() => {
     const sortedswitch =  sortJson(reviewssw, "Popularity", "int", false);
-    const sortedsteam = sortJson(reviewsst, "SCORE", "int", false);
-    const reviews = sortedswitch.concat(sortedsteam)
+    const sortedPlaystation = sortJson(reviewsst, "SCORE", "int", false);
+    const reviews = sortedPlaystation.concat(sortedswitch)
     // /.concat(reviewsst);
-   
     setLatestField(reviews);
   }, []);
 
@@ -235,7 +234,7 @@ const cleanFilterField = filterField.replace(/[^a-zA-Z0-9é, -]/g, "").replace("
 
       const filterGenres = cleanFilterField.split(',').map(genre => genre.trim());
 
-      if (review.platform === "Steam") {
+      if (review.platform === "Playstation") {
 
       return (
         review.Title.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e").replace(/\s/g, '').toLowerCase().includes(searchQuery.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e").replace(/\s/g, '').toLowerCase()) &&
@@ -381,11 +380,11 @@ const cleanFilterField = filterField.replace(/[^a-zA-Z0-9é, -]/g, "").replace("
             <Helmet>
               <meta charset="utf-8" />
               <title>
-                May Sale Ba? - Get the latest prices on Nintendo Switch and Steam deals in Philippine Peso!
+                May Sale Ba? - Get the latest prices on Nintendo Switch and Playstation deals in Philippine Peso!
               </title>
               <meta
                 name="description"
-                content="Get to know about the latest Nintendo and Steam deals from digital platforms in Philippine Peso!"
+                content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
               />
             </Helmet>
           </div>
@@ -496,11 +495,11 @@ const cleanFilterField = filterField.replace(/[^a-zA-Z0-9é, -]/g, "").replace("
       />
     
                   <Route
-        path="/steam"
+        path="/Playstation"
         render={(props) => (
           <div>
-            {setPlatformField("Steam")}
-            {setPlatformDropDown("Steam")}
+            {setPlatformField("Playstation")}
+            {setPlatformDropDown("Playstation")}
             {setRegionFilter("")}
             <Search
               onPlatformChange={onPlatformChange}
@@ -539,13 +538,13 @@ const cleanFilterField = filterField.replace(/[^a-zA-Z0-9é, -]/g, "").replace("
             />
             <Helmet>
               <meta charset="utf-8" />
-              <title>Steam - PH - May Sale Ba?</title>
+              <title>Playstation - PH - May Sale Ba?</title>
               <meta
                 name="description"
                 content={
                   "Get to know about " +
                   reviewsst.length +
-                  " Steam deals in Philippine Peso!"
+                  " Playstation deals in Philippine Peso!"
                 }
               />
             </Helmet>
@@ -579,7 +578,7 @@ const cleanFilterField = filterField.replace(/[^a-zA-Z0-9é, -]/g, "").replace("
               <title>Gift Cards - May Sale Ba?</title>
               <meta
                 name="description"
-                content="Get to know about the latest Nintendo and Steam deals from digital platforms in Philippine Peso!"
+                content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
               />
             </Helmet>
           </div>
@@ -595,7 +594,7 @@ const cleanFilterField = filterField.replace(/[^a-zA-Z0-9é, -]/g, "").replace("
               <title>FAQ - May Sale Ba?</title>
               <meta
                 name="description"
-                content="Get to know about the latest Nintendo and Steam deals from digital platforms in Philippine Peso!"
+                content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
               />
             </Helmet>
           </div>

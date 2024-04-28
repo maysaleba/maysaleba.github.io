@@ -32,7 +32,6 @@ const CardGroup = ({
   genreDropDown,
   onDropDownChange,
 }) => {
-
   return (
     <div>
 
@@ -87,11 +86,19 @@ const CardGroup = ({
                                           MexicoPrice={review.MexicoPrice}
                                           Discount={review.PercentOff}
                                           URL={review.URL}
-                                          Platform={review.platform}
+                                          Platform={review.platform}                                  
                                           PlusPrice={review.PlusPrice}
                                           Price={review.Price}
                                           ESRBRating={review.ESRBRating}
+                                          IsPS4={review.IsPS4}
+                                          IsPS5={review.IsPS5}
+
+
+
                                   />
+
+
+
 
 
                     </div>

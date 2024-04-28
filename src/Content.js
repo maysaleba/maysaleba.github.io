@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import games1 from "./csvjson.json";
-import games2 from "./all_games.json";
+import games2 from "./csvjsontr.json";
 import { Card, Row, Col } from "react-bootstrap";
 import NaviBar from "./NaviBar";
 import { Box, Paper, Link, Container } from "@mui/material";
@@ -16,7 +16,7 @@ import InfoIcon from '@mui/icons-material/Info';
 
 const YoutubeEmbed = ({ embedId, platform }) => {
 embedId = embedId.replace("http","https");
-if (platform == "Steam") {
+if (platform == "Playstation") {
   return (
   <div className="video-responsive">
     <iframe
@@ -107,7 +107,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   // console.log("HELLO"+matchGames)
 
   function PesoPrice(props) {
-    if (matchGames[0].platform === "Steam") {
+    if (matchGames[0].platform === "Playstation") {
       return "₱" + Math.round(props.props);
     } else {
       return "₱" + Math.round(props.props * usdExchange);
@@ -115,7 +115,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function ReverseDesc(props) {
-    if (matchGames[0].platform === "Steam") {
+    if (matchGames[0].platform === "Playstation") {
       let input = props.props;
       let newText = input
         .split("<br />")
@@ -148,7 +148,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   
 
   function WhichStore() {
-    if (matchGames[0].platform === "Steam") {
+    if (matchGames[0].platform === "Playstation") {
       return (
         <div style={{ marginLeft: "10px" }} className="logonin psstore">
           <img src={download} />
@@ -165,15 +165,11 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
 
 
 function SaleEnds() {
-    if (matchGames[0].platform === "Steam") {
-      return null
-    } else {
       return (
         <span style={{ fontSize: "0.75rem" }}>
          SALE ENDS: {DateConvert(matchGames[0].SaleEnds).toUpperCase()}
          </span>
       );
-    }
   }
 
   function DateConvert(s) {
@@ -561,7 +557,7 @@ function SaleEnds() {
               paddingRight: "10px",
             }}
           >
-            PS4
+            PS5
           </span>{" "}
           <span
             style={{
@@ -572,7 +568,7 @@ function SaleEnds() {
               paddingRight: "10px",
             }}
           >
-            PS5
+            PS4
           </span>
         </>
       );
@@ -671,6 +667,55 @@ function SaleEnds() {
       );
     }
   }
+
+   function PlatformOverlay(props) {
+    const slug = props.slug;
+    const isps4 = props.isps4
+    const isps5 = props.isps5
+    if (slug.includes("switch")) {
+      return (
+        <>
+          <div className="additional-overlay">NSW</div>
+        </>
+      );
+
+
+      } else if (isps4 === 1 && isps5 === 1) {
+      return (
+        <>
+          <div className="additional-overlay">PS5</div>
+          <div className="additional-overlay-right">PS4</div>
+      </>
+      );
+      } else if (isps4 === 1 && isps5 === 0) {
+
+              return (
+        <>
+          <div className="additional-overlay">PS4</div>
+         
+      </>
+      );
+      } else if (isps4 === 0 && isps5 === 1) {
+
+              return (
+        <>
+          <div className="additional-overlay">PS5</div>
+         
+      </>
+      );
+      }
+
+
+
+      else {
+        return (
+        <div className="additional-overlay">NONE</div>
+        )
+      }
+    
+
+  }
+
 
 
   function HasHLTB(props) {
@@ -874,8 +919,8 @@ function SaleEnds() {
         );
       }
     }
-    if (platform === "Steam") {
-      return <span className="img-responsive pbadges playstation"></span>;
+    if (platform === "Playstation") {
+      return <span className="img-responsive pbadges playstation1"></span>;
     }
   }
 
@@ -1260,19 +1305,15 @@ function SaleEnds() {
                   textAlign: "center",
                 }}
               >
-                Sign up with {" "}
+                Buy Turkey Funds with {" "}
                 <a
                   className="infotax"
-                  href="https://www.cimbbank.com.ph/"
+                  href="https://discord.gg/regionality"
                 >
-                  CIMB PH
+                  Regionality
                 </a>{" "}
-                to buy from Turkey PSN region.  <a
-                  className="infotax"
-                  href="https://bit.ly/3HutrVI"
-                >
-                How to buy guide.
-                </a>
+                
+                
               </Box>
             </>
 
@@ -1294,7 +1335,7 @@ function SaleEnds() {
                   {"₱" + Math.round(matchGames[0].SalePrice * trdExchange)}
                   <span className="ml-2 badge badge-danger">
                     <strike>
-                      <PesoPrice props={matchGames[0].Price} />
+                      <PesoPrice props={matchGames[0].Price * trdExchange} />
                     </strike>
                   </span>
                 </div>
@@ -2629,6 +2670,7 @@ function SaleEnds() {
                   esrbrating={matchGames[0].ESRBRating}
                 />
               </Card.ImgOverlay>
+              <PlatformOverlay slug={matchGames[0].Slug} isps4={matchGames[0].IsPS4} isps5={matchGames[0].IsPS5}/>
             </Card>
           </div>
          <OrigPrice />
@@ -2643,7 +2685,7 @@ function SaleEnds() {
               }}
             >
 
-              {matchGames[0].Title.toUpperCase().replace(/ *\([^)]*\) */g, "")}
+              {matchGames[0].Title.toUpperCase().replace(/ *\([^)]*\) */g, "").replace("Ã¢„Â¢","™").replace("Â„¢","™")}
               <HasOpenCritic props={matchGames[0].SCORE} />
               <br />
 
@@ -2709,7 +2751,7 @@ function SaleEnds() {
                 DESCRIPTION
               </Card.Header>
               <Card.Body>
-                {matchGames[0].description}
+                {matchGames[0].description.replaceAll("Ã¢„Â¢","™").replace("Â„¢","™")}
               </Card.Body>
             </div>
           </Paper>
