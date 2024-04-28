@@ -786,55 +786,11 @@ display: inline-block;  /* may not need this, but I've found I do */
 }
 
 .card-img-overlay {
-  position: relative ;
+  position: absolute ;
   top: -10px !important;
   left: -10px !important;
   right: -10px !important;
   z-index: 1 !important;
-}
-
-.card-img-wrapper {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    height: 100%;
-}
-
-.additional-overlay {
-    position: absolute;
-    bottom: 5px; /* Adjust as needed */
-    left: 5px; /* Adjust as needed */
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 3px;
-    padding-left: 5px;
-    padding-right: 5px;
-    z-index: 1; /* Ensure the overlay is above the image */
-    font-size: 0.7rem; /* Set the font size here */
-    border: 1px solid white; /* Set the border width and style */
-    border-radius: 5px; /* Set the border radius to make it rounded */
-    border:1;
-}
-
-.additional-overlay-right {
-    position: absolute;
-    bottom: 5px;
-    left: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 3px;
-    padding-left: 5px;
-    padding-right: 5px;
-    z-index: 1;
-    font-size: 0.7rem; /* Set the font size here */
-    border: 1px solid white; /* Set the border width and style */
-    border-radius: 5px; /* Set the border radius to make it rounded */
-    border:1;
-}
-
-.card-img-overlay {
-    z-index: 0; /* Ensure the image is behind the overlay */
 }
 
 .opencritic-container{
@@ -992,15 +948,15 @@ label:focus,
     flex: none;
 }
 
-/*steam position*/
-.pbadges.steam {
+
+.pbadges.playstation {
     background-color: black;
     background-position: -7px -5px;
 }
 
 .pbadges.playstation1 {
-    background-color: blue;
-    background-position: -3px -298px;
+    background-color: black;
+    background-position: -7px -5px;
 }
 
 .nbadges.nintendo1 {

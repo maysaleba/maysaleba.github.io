@@ -2670,7 +2670,7 @@ function SaleEnds() {
                   esrbrating={matchGames[0].ESRBRating}
                 />
               </Card.ImgOverlay>
-              <PlatformOverlay slug={matchGames[0].Slug} isps4={matchGames[0].IsPS4} isps5={matchGames[0].IsPS5}/>
+              {/*<PlatformOverlay slug={matchGames[0].Slug} isps4={matchGames[0].IsPS4} isps5={matchGames[0].IsPS5}/>*/}
             </Card>
           </div>
          <OrigPrice />
