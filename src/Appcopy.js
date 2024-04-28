@@ -95,7 +95,7 @@ function sortJson(element, prop, propType, asc) {
         // setDatam(response.data.php) // if using currency-api
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         axios.get(theURLa).then((response) => {
           setDatam(response.data.quotes);
           setMakeswitch("2");
@@ -105,8 +105,8 @@ function sortJson(element, prop, propType, asc) {
       });
   }, [theURL]);
 
-console.log("HELLO")
- console.log(datam)
+// console.log("HELLO")
+ // console.log(datam)
 
 
   const [priceRangeField, setPriceRangeField] = useState(99999);

@@ -72,7 +72,7 @@ today = yyyy + "-" + mm + "-" + dd;
         // setDatam(response.data.php) // if using currency-api
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         axios.get(theURLa).then((response) => {
           setDatam(response.data.quotes);
           setMakeswitch("2");
@@ -123,7 +123,7 @@ today = yyyy + "-" + mm + "-" + dd;
 
   function DaysLeft(props) {
 
-    console.log(props.platform);
+    // console.log(props.platform);
 
 
     const isExpired = props.isExpired;
@@ -213,7 +213,6 @@ today = yyyy + "-" + mm + "-" + dd;
       // );
 
       var regionalityTax = ArgentinaPrice * arsExchange * 1.59 * ((1650 - (15900 * arsExchange))/ (15900 * arsExchange))
-      console.log("regionality" + regionalityTax)
 
       var argentinaTax = Math.round(
         (testBoolean

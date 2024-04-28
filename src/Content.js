@@ -132,7 +132,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
 
   function OrigPrice(){
     if (matchGames[0].NumberofPlayers !== undefined ) {
-       console.log("SHOPEE!!"+matchGames[0].NumberofPlayers)
+       // console.log("SHOPEE!!"+matchGames[0].NumberofPlayers)
        return (
 
         <div   style={{marginTop: -10, marginBottom: 15, textAlign: "center", fontSize: "0.8rem"}}>
@@ -1493,7 +1493,7 @@ function SaleEnds() {
 
 
       var regionalityTax = matchGames[0].ArgentinaPrice * arsExchange * 1.59 * ((1650 - (15900 * arsExchange))/ (15900 * arsExchange))
-      console.log("regionality" + regionalityTax)
+      // console.log("regionality" + regionalityTax)
 
       var argentinaTax = Math.round(
         (testBoolean
