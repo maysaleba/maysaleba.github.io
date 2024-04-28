@@ -609,7 +609,7 @@ else if (PlusPrice === 202020) {
         style={{ color: "black", textDecoration: "none" }}
       >
 <Card className="border-0">
-    <div className="card-img-wrapper">
+   
         <LazyLoadImage
             effect="opacity"
             key={Image}
@@ -625,6 +625,7 @@ else if (PlusPrice === 202020) {
             <PlatformBadge hasBadge={Platform} esrbrating={ESRBRating} slug={Slug}/>
             <OpenScore hasScore={Score} />
         </Card.ImgOverlay>
+         <div className="card-img-wrapper">
             <PlatformOverlay slug={Slug} isps4={IsPS4} isps5={IsPS5}/>
         
     </div>
