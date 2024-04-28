@@ -609,7 +609,7 @@ else if (PlusPrice === 202020) {
         style={{ color: "black", textDecoration: "none" }}
       >
 <Card className="border-0">
-   
+   <div className="card-img-wrapper">
         <LazyLoadImage
             effect="opacity"
             key={Image}
@@ -625,7 +625,8 @@ else if (PlusPrice === 202020) {
             <PlatformBadge hasBadge={Platform} esrbrating={ESRBRating} slug={Slug}/>
             <OpenScore hasScore={Score} />
         </Card.ImgOverlay>
-
+<PlatformOverlay slug={Slug} isps4={IsPS4} isps5={IsPS5}/>
+</div>
     <Card.Body>
         <Card.Title className="card-title">{Title.replace(/ *\([^)]*\) */g, "").replaceAll("Ã¢„Â™","™").replace("â„¢","™")}</Card.Title>
         <Card.Text className="card-text">
