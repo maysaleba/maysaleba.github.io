@@ -621,7 +621,7 @@ else if (PlusPrice === 202020) {
             }}
             visibleByDefault={Image}
         />
-        <Card.ImgOverlay className="card-img-overlay">
+        <Card.ImgOverlay>
             <PlatformBadge hasBadge={Platform} esrbrating={ESRBRating} slug={Slug}/>
             <OpenScore hasScore={Score} />
         </Card.ImgOverlay>

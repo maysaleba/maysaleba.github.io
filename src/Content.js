@@ -2664,7 +2664,7 @@ function SaleEnds() {
             >
               <Card.Img alt="" style={{}} src={matchGames[0].Image} />
 
-              <Card.ImgOverlay className="card-img-overlay">
+              <Card.ImgOverlay>
                 <PlatformBadge
                   hasBadge={matchGames[0].platform}
                   esrbrating={matchGames[0].ESRBRating}
