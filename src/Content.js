@@ -1295,7 +1295,7 @@ function SaleEnds() {
 
 <>
               {" "}
-              <Box
+             {/* <Box
                 style={{
                   borderRadius: 5,
                   backgroundColor: "#ffc4c4",
@@ -1314,7 +1314,7 @@ function SaleEnds() {
                 </a>{" "}
                 
                 
-              </Box>
+              </Box>*/}
             </>
 
             <table className="table table-align-middle item-price-table">
