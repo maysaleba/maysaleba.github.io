@@ -12,7 +12,6 @@ import styled from "styled-components";
 import Search from "./Search";
 import GiftCards from "./GiftCards";
 import FAQ from "./FAQ";
-import Pasabuy from "./Pasabuy"
 import MainPage from "./MainPage";
 import { Helmet } from "react-helmet";
 import axios from "axios";
