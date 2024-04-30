@@ -12,6 +12,7 @@ import styled from "styled-components";
 import Search from "./Search";
 import GiftCards from "./GiftCards";
 import FAQ from "./FAQ";
+import Pasabuy from "./Pasabuy"
 import MainPage from "./MainPage";
 import { Helmet } from "react-helmet";
 import axios from "axios";
@@ -123,7 +124,7 @@ function sortJson(element, prop, propType, asc) {
 
   useEffect(() => {
     const sortedswitch =  sortJson(reviewssw, "Popularity", "int", false);
-    const sortedPlaystation = sortJson(reviewsst, "SCORE", "int", false);
+    const sortedPlaystation = sortJson(reviewsst, "Popularity", "int", false);
     const reviews = sortedPlaystation.concat(sortedswitch)
     // /.concat(reviewsst);
     setLatestField(reviews);
@@ -592,6 +593,22 @@ const cleanFilterField = filterField.replace(/[^a-zA-Z0-9é, -]/g, "").replace("
             <Helmet>
               <meta charset="utf-8" />
               <title>FAQ - May Sale Ba?</title>
+              <meta
+                name="description"
+                content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
+              />
+            </Helmet>
+          </div>
+        )}
+      />
+            <Route
+        path="/pasabuy"
+        render={(props) => (
+          <div>
+            <Pasabuy />
+            <Helmet>
+              <meta charset="utf-8" />
+              <title>Pasabuy - May Sale Ba?</title>
               <meta
                 name="description"
                 content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"

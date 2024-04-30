@@ -79,17 +79,18 @@ function sortJson(element, prop, propType, asc) {
 
 
   
-  const sortedSteamr = sortJson([...reviewsps], "SCORE", "int", false);
+  const sortedSteamr = sortJson([...reviewsps], "Popularity", "int", false);
   const sortedSteamd = sortJson([...reviewsps], "SaleStarted", "date", false);
-  const newPSDiscounts = sortedSteamd;
   const topPSDiscounts = sortedSteamr;
+  const newPSDiscounts = sortedSteamd;
+  
 
   return (
     <div>
       {/*     <SearchBox search={search} setSearch={setSearch}/>*/}
     <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
-          <b>POPULAR SWITCH GAMES ON SALE</b>
+          <b>TRENDING SWITCH GAMES ON SALE</b>
           
         </div>
 <hr className="linedividet"/>
@@ -183,12 +184,12 @@ function sortJson(element, prop, propType, asc) {
 </div>*/}
       <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
-          <b>NEW PLAYSTATION GAMES ON SALE</b>
+          <b>TRENDING PLAYSTATION GAMES ON SALE</b>
           
         </div>
 <hr className="linedividet"/>
         <Row xs={2} md={4} className="g-3">
-          {newPSDiscounts.slice(0, 12).map((review, key) => (
+          {topPSDiscounts.slice(0, 12).map((review, key) => (
             <div key={key}>
               <Cards
                 Score={review.SCORE}
@@ -215,12 +216,12 @@ function sortJson(element, prop, propType, asc) {
       </Paper>
         <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
-          <b>TOP RATED PLAYSTATION GAMES ON SALE</b>
+          <b>NEW PLAYSTATION GAMES ON SALE</b>
           
         </div>
 <hr className="linedividet"/>
         <Row xs={2} md={4} className="g-3">
-          {topPSDiscounts.slice(0, 12).map((review, key) => (
+          {newPSDiscounts.slice(0, 12).map((review, key) => (
             <div key={key}>
               <Cards
                 Score={review.SCORE}
