@@ -600,22 +600,6 @@ const cleanFilterField = filterField.replace(/[^a-zA-Z0-9é, -]/g, "").replace("
           </div>
         )}
       />
-            <Route
-        path="/pasabuy"
-        render={(props) => (
-          <div>
-            <Pasabuy />
-            <Helmet>
-              <meta charset="utf-8" />
-              <title>Pasabuy - May Sale Ba?</title>
-              <meta
-                name="description"
-                content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
-              />
-            </Helmet>
-          </div>
-        )}
-      />
     </Router>
   );
 }
