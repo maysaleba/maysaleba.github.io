@@ -31,7 +31,6 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 
-
 function createData(name, calories) {
   return {name, calories};
 }
@@ -246,66 +245,10 @@ const style = {
 };
 
 
-const About = () => {
+const About = ({filteredReviews, pageData, reviewsps}) => {
 
 
-  const BackgroundContainer = styled.div`
-    -blur-radius: 20px;
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    height: 60vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    background: #6767ab;
-    z-index: -1;
 
-    &:after {
-      --color-background--rgb: 103, 103, 171;
-      content: "";
-      position: absolute;
-      height: 50%;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: transparent;
-      background: linear-gradient(
-        0deg,
-        rgba(var(--color-background--rgb), 1) 0,
-        rgba(var(--color-background--rgb), 0.987) 8.1%,
-        rgba(var(--color-background--rgb), 0.951) 15.5%,
-        rgba(var(--color-background--rgb), 0.896) 22.5%,
-        rgba(var(--color-background--rgb), 0.825) 29%,
-        rgba(var(--color-background--rgb), 0.741) 35.3%,
-        rgba(var(--color-background--rgb), 0.648) 41.2%,
-        rgba(var(--color-background--rgb), 0.55) 47.1%,
-        rgba(var(--color-background--rgb), 0.45) 52.9%,
-        rgba(var(--color-background--rgb), 0.352) 58.8%,
-        rgba(var(--color-background--rgb), 0.259) 64.7%,
-        rgba(var(--color-background--rgb), 0.175) 71%,
-        rgba(var(--color-background--rgb), 0.104) 77.5%,
-        rgba(var(--color-background--rgb), 0.049) 84.5%,
-        rgba(var(--color-background--rgb), 0.013) 91.9%,
-        rgba(var(--color-background--rgb), 0)
-      );
-    }
-  `;
-
-  const Background = styled.div`
-    --blur-radius: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: calc(var(--blur-radius) * -1) calc(var(--blur-radius) * -1);
-    background-size: cover;
-    background-position: 50%;
-    mix-blend-mode: overlay;
-    filter: blur(var(--blur-radius));
-  `;
 
   // console.log(matchGames[0].description.split('\n'));
 
@@ -322,9 +265,7 @@ const About = () => {
 
   return (
     <div>
-      <BackgroundContainer>
-        <Background />
-      </BackgroundContainer>
+
       <NaviBar />
       <Paper elevation={2} className="content-container">
         <div style={{ fontSize: 14 }}>

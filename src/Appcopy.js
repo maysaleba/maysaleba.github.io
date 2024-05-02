@@ -604,7 +604,11 @@ const cleanFilterField = filterField.replace(/[^a-zA-Z0-9é, -]/g, "").replace("
         path="/pasabuy"
         render={(props) => (
           <div>
-            <Pasabuy />
+            <Pasabuy
+              filteredReviews={filteredReviews}
+              pageData={pageData}
+              reviewsps={reviewsst}
+             />
             <Helmet>
               <meta charset="utf-8" />
               <title>Pasabuy - May Sale Ba?</title>
