@@ -50,12 +50,12 @@ const formattedDate = currentDate.toLocaleDateString('en-US', { month: 'short', 
 
 
 const rows = [
-  createData('10,000 ARS', '₱1650'),
-  createData('20,000 ARS', '₱3150'),
-  createData('30,000 ARS', '₱4800'),
-  createData('40,000 ARS', '₱6300'),
-  createData('50,000 ARS', '₱7500'),
-  createData('100,000 ARS', '₱14000'),
+  createData('10,000 ARS', '₱1,650'),
+  createData('20,000 ARS', '₱3,150'),
+  createData('30,000 ARS', '₱4,800'),
+  createData('40,000 ARS', '₱6,300'),
+  createData('50,000 ARS', '₱7,500'),
+  createData('100,000 ARS', '₱14,000'),
 ];
 
 
