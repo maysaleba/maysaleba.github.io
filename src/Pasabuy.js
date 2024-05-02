@@ -327,12 +327,9 @@ const About = ({filteredReviews, pageData, reviewsps}) => {
     </ul>
   </Grid>
   </Grid>
-
+  <p/>
   <Grid container spacing={2}>
-
- 
     <Grid item xs={4}>
-
    <RegionalityModal />
   </Grid>
     <Grid item xs={8}>
@@ -343,7 +340,7 @@ const About = ({filteredReviews, pageData, reviewsps}) => {
            </ul>
   </Grid>
   </Grid>
-
+<p/>
    <Grid container spacing={2}>
 
  
@@ -362,7 +359,7 @@ const About = ({filteredReviews, pageData, reviewsps}) => {
            <strong><p id="order"/>Placing an Order</strong>
            </Card.Header>
            <Card.Body>
-           
+   <p/>        
             <Grid container spacing={2}>
     <Grid item xs={4}>
    <PurchaseModal />
@@ -371,9 +368,8 @@ const About = ({filteredReviews, pageData, reviewsps}) => {
     Steps below may differ slightly based on the server you choose but concept should be similar across servers.
     <p/>1. To place an order, look into the server's channel list and select <b>PURCHASE-NINTENDO</b>
   </Grid>
-
   </Grid>
-
+<p/>
     <Grid container spacing={2}>
     <Grid item xs={4}>
    <CreateTicketModal />
@@ -383,7 +379,7 @@ const About = ({filteredReviews, pageData, reviewsps}) => {
   </Grid>
 
   </Grid>
-
+<p/>
       <Grid container spacing={2}>
     <Grid item xs={4}>
    <FormModal />
@@ -396,8 +392,8 @@ const About = ({filteredReviews, pageData, reviewsps}) => {
            <li>Payment Method: <i>(Maya, Gcash, PayPal, Binance)</i></li>
            </ul>
   </Grid>
-
   </Grid>
+  <p/>
      <Grid container spacing={2}>
     <Grid item xs={4}>
    <TicketModal />
