@@ -207,6 +207,7 @@ a {
 
 a.giftcardlink {
     color: #9c27b0 !important;
+    text-decoration: underline !important;
 }
 
 a.origprice {
