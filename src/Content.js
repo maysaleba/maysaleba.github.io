@@ -1568,7 +1568,7 @@ function SaleEnds() {
                   className="infotax"
                   href="https://maysaleba.com/pasabuy"
                 >
-                  PASABUY</a>.  Note: Argentina Price is inclusive of 59% tax and service fee. 
+                  Pasabuy</a>.  Note: Argentina Price is inclusive of 59% tax and service fee. 
                 
 {/*
  Note: Argentina eShop only accepts payment from Argentina issued cards. Use {" "}
