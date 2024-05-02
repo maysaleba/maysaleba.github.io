@@ -336,7 +336,7 @@ const About = () => {
            </Card.Header>
           <Card.Body>
           <ul>
-           <li>As of August 2023, the Argentina eShop region has stopped accepting debit or credit cards that have not been issued in their country.</li>
+           <li>As of August 2023, <span className="arregion-logo">Argentina</span> eShop region has stopped accepting debit or credit cards that have not been issued in their country.</li>
            <li>"Pasabuy" is a service that will allow you to continue buying from Argentina eShop by asking a provider with a valid Argentina issued credit card to top up your eShop account in exchange for a fee.</li>
            <li><b>A credit card number will be provided. NO DETAILS ARE REQUIRED FROM YOU.</b></li>
             <li>For proper queuing of orders, a "Pasabuy" is done through Discord servers. You can check our affiliate Pasabuy servers below.</li>
@@ -378,7 +378,7 @@ const About = () => {
   <DiscordModal />
   </Grid>
     <Grid item xs={8}>
-    Make sure you have Discord downloaded and installed. You can get Discord from the links below:
+    1. Download and install Discord on your selected platform. You can get Discord from the links below:
     <ul>
     <li>Windows/PC: <a className="giftcardlink" href="https://discord.com/download">Download Discord to Talk, Chat, and Hang Out</a></li>
     <li>Android: <a className="giftcardlink" href="https://play.google.com/store/apps/details?id=com.discord&hl=en&gl=US">Discord: Talk, Chat & Hang Out - Apps on Google Play</a></li>
@@ -395,7 +395,7 @@ const About = () => {
    <RegionalityModal />
   </Grid>
     <Grid item xs={8}>
-    Once you have Discord installed, choose a server below and select <b>Accept Invite</b> on the next screen.
+    2. Once you have Discord installed, choose a server and select <b>Accept Invite</b> on the next screen.
            <ul>
            <li><a className="giftcardlink" href="https://discord.gg/regionality">Regionality</a></li>
            <li><a className="giftcardlink" href="https://discord.gg/vwUnW82an9">Cheap Gamers Association</a></li>
@@ -411,7 +411,7 @@ const About = () => {
    <LanguageModal />
   </Grid>
     <Grid item xs={8}>
-    If you are joining Regionality Discord Server, make sure you select your preferred language to continue.
+    3. If you are joining Regionality Discord Server, make sure you select your preferred language to continue.
   </Grid>
   </Grid>
 
@@ -427,8 +427,8 @@ const About = () => {
    <PurchaseModal />
   </Grid>
     <Grid item xs={8}>
-    The steps below may differ slightly based on the server you choose but the concept should be similar across servers.
-    <p/>To place an order, look into the server's channel list and select <b>PURCHASE-NINTENDO</b>
+    Steps below may differ slightly based on the server you choose but concept should be similar across servers.
+    <p/>1. To place an order, look into the server's channel list and select <b>PURCHASE-NINTENDO</b>
   </Grid>
 
   </Grid>
@@ -438,7 +438,7 @@ const About = () => {
    <CreateTicketModal />
   </Grid>
     <Grid item xs={8}>
-    On the PURCHASE-NINTENDO screen, select <b>Create Ticket</b>
+    2. On the PURCHASE-NINTENDO screen, select <b>Create Ticket</b>
   </Grid>
 
   </Grid>
@@ -448,14 +448,12 @@ const About = () => {
    <FormModal />
   </Grid>
     <Grid item xs={8}>
-   Fill out the form
+   3. Fill out the form and  select <b>Submit</b>
               <ul>
            <li>Service: Nintendo Top Up</li>
-           <li>Amount: <i>Desired Amount.</i> See Denomination and Rates</li>
-           <li>Payment Method: <i>Desired Payment Method (Maya, Gcash, PayPal, Binance)</i></li>
+           <li>Amount: See <a className="giftcardlink" href='#rates'>Denomination and Rates</a></li>
+           <li>Payment Method: <i>(Maya, Gcash, PayPal, Binance)</i></li>
            </ul>
-
-           Select <b>Submit</b>
   </Grid>
 
   </Grid>
@@ -464,8 +462,9 @@ const About = () => {
    <TicketModal />
   </Grid>
     <Grid item xs={8}>
-   A ticket will be created and added into the server's channel list. Wait for someone to message and guide you through the process.
-   <p/><b>Topping up in Argentina is a trial and error process, It might work on your existing account or if not, they may offer a new account with the funds as an alternative. <p/>Please be patient and communicate.</b>
+   4. A ticket will be created and added into the server's channel list. Wait for someone to message and guide you through the process.
+   <p/><b>Topping up in Argentina is a trial and error process, It might work on your existing account or not. Providers may offer a new account with funds as an alternative. <p/>Please be patient. </b> 
+    If all goes well, you will have your selected denomination in your account, ready for spending!
   </Grid>
 
   </Grid>
@@ -475,7 +474,25 @@ const About = () => {
            <strong><p id="rates"/>Denomination and Rates</strong>
            </Card.Header>
            <Card.Body>
-           Prices as of <b>{formattedDate}</b>
+
+<>
+              {" "}
+              <Box
+                style={{
+                  borderRadius: 5,
+                  backgroundColor: "#ffc4c4",
+                  marginBottom: 10,
+                  padding: 8,
+                
+                  textAlign: "center",
+                }}
+              >
+               Prices as of <b>{formattedDate}</b>
+              </Box>
+            </>
+
+          
+
            <p/>
            
              <TableContainer component={Paper}>
@@ -513,7 +530,8 @@ const About = () => {
       </Table>
     </TableContainer>
 
-           </Card.Body>
+
+ </Card.Body>
         </div>
       </Paper>
     </div>
