@@ -1563,12 +1563,12 @@ function SaleEnds() {
                   textAlign: "center",
                 }}
               >
-               Buy Argentina Funds with  {" "}
+               Top-up Argentina Funds with  {" "}
                 <a
                   className="infotax"
-                  href="https://discord.gg/regionality"
+                  href="https://maysaleba.com/pasabuy"
                 >
-                  Regionality</a>.  Note: Argentina Price is inclusive of 59% tax and service fee. 
+                  PASABUY</a>.  Note: Argentina Price is inclusive of 59% tax and service fee. 
                 
 {/*
  Note: Argentina eShop only accepts payment from Argentina issued cards. Use {" "}

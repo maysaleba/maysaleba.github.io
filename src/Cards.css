@@ -206,7 +206,7 @@ a {
 }
 
 a.giftcardlink {
-    color: #9c27b0 !important;
+    color: #59009b !important;
     text-decoration: underline !important;
 }
 
@@ -907,6 +907,8 @@ label:focus,
 	font-family: 'Font Awesome 5 Free', 'Cairo';
 	color: #55597d ;
 }
+
+
 
 .dropdown-style{
     font-family: 'Cairo';
