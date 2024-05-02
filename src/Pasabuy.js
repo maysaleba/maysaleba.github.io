@@ -366,10 +366,10 @@ const About = ({filteredReviews, pageData, reviewsps}) => {
   </Grid>
     <Grid item xs={8}>
     Steps below may differ slightly based on the server you choose but concept should be similar across servers.
-    <p/>1. To place an order, look into the server's channel list and select <b>PURCHASE-NINTENDO</b>
+    <br/>1. To place an order, look into the server's channel list and select <b>PURCHASE-NINTENDO</b>
   </Grid>
   </Grid>
-<p/>
+<p/>{" "}
     <Grid container spacing={2}>
     <Grid item xs={4}>
    <CreateTicketModal />
