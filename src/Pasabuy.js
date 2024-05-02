@@ -339,7 +339,7 @@ const About = () => {
            <li>As of August 2023, the Argentina eShop region has stopped accepting debit or credit cards that have not been issued in their country.</li>
            <li>"Pasabuy" is a service that will allow you to continue buying from Argentina eShop by asking a provider with a valid Argentina issued credit card to top up your eShop account in exchange for a fee.</li>
            <li><b>A credit card number will be provided. NO DETAILS ARE REQUIRED FROM YOU.</b></li>
-            <li>For proper queuing of orders, a "Pasabuy" is done through Discord. You can check our affiliate Pasabuy servers below.</li>
+            <li>For proper queuing of orders, a "Pasabuy" is done through Discord servers. You can check our affiliate Pasabuy servers below.</li>
           </ul>
           </Card.Body>
 
