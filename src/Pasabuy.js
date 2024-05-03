@@ -479,7 +479,7 @@ const About = ({filteredReviews, pageData, reviewsps}) => {
 <br/>Total Price buying from Argentina:  526 PHP
 <br/>Price in Chile when on sale (next cheapest region): 815 PHP</li>
 </ul>
-<li>This means that if you choose to buy 1,650 PHP for 10,000 ARS and you get Sea of Stars, you are effectively buying Sea of Stars for 526 PHP as of this writing's foreign exchange rate. <b>Still cheaper than the next cheapest region.</b></li>
+<li>This means that if you choose to buy 1,650 PHP for 10,000 ARS and you get Sea of Stars, you are effectively buying Sea of Stars for 526 PHP as of this writing's foreign exchange rate. <b>Still cheaper than the next cheapest region!</b></li>
 <li><b>Argentina prices reflected on the website already accounts for the 59% tax and 57% service fee, so you would know if it is still the cheapest region to buy all things considered!</b></li>
 </ul>
  </Card.Body>
