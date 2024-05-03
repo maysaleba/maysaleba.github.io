@@ -477,7 +477,7 @@ const About = ({filteredReviews, pageData, reviewsps}) => {
 <br/>Price in Argentina when on sale:  3199 ARS = 211 PHP * 1.59 (Tax) = 335 PHP
 <br/>Pasabuy Service Fee:  335 PHP * 0.57 (Service Fee) = 191 PHP
 <br/>Total Price buying from Argentina:  526 PHP
-<br/>Price in Chile: 815 PHP</li>
+<br/>Price in Chile when on sale (next cheapest region): 815 PHP</li>
 </ul>
 <li>This means that if you choose to buy 1,650 PHP for 10,000 ARS and you get Sea of Stars, you are effectively buying Sea of Stars for 526 PHP as of this writing's foreign exchange rate. <b>Still cheaper than the next cheapest region.</b></li>
 </ul>
