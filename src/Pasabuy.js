@@ -466,8 +466,21 @@ const About = ({filteredReviews, pageData, reviewsps}) => {
 
       </Table>
     </TableContainer>
-
-
+    <p/>
+<ul>
+<li>Minimum top-up of 1,650 PHP for 10,000 ARS.</li>
+<li>Please note that because there is a +59% tax on top of every digital purchase in Argentina, you are actually paying 1,650 PHP for 15,900 ARS or 1,050 PHP (as of this writing's foreign exchange rate).</li>
+<li>A pasabuy service's actual mark-up would be: (1,650 - 1,050) / 1,650 = 57% </li>
+<li><b>Is it worth paying 57% more for a game in Argentina?</b></li>
+<ul>
+<li>It depends on the game, Sea of Stars for example:
+<br/>Price in Argentina when on sale:  3199 ARS = 211 PHP * 1.59 (Tax) = 335 PHP
+<br/>Pasabuy Service Fee:  335 PHP * 0.57 (Service Fee) = 191 PHP
+<br/>Total Price buying from Argentina:  526 PHP
+<br/>Price in Chile: 815 PHP</li>
+</ul>
+<li>This means that if you choose to buy 1,650 PHP for 10,000 ARS and you get Sea of Stars, you are effectively buying Sea of Stars for 526 PHP as of this writing's foreign exchange rate. <b>Still cheaper than the next cheapest region.</b></li>
+</ul>
  </Card.Body>
         </div>
       </Paper>
