@@ -127,7 +127,16 @@ today = yyyy + "-" + mm + "-" + dd;
 
 
     const isExpired = props.isExpired;
-    const diffDays = Math.round((secondDate - firstDate) / oneDay);
+    var diffDays = 0;
+
+    if (props.platform === "Playstation"){
+diffDays = Math.round((secondDate - firstDate) / oneDay) + 1;
+    } else {
+
+      diffDays = Math.round((secondDate - firstDate) / oneDay);
+    }
+
+    
 
     if (diffDays >= 0) {
       return (
