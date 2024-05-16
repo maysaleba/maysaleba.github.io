@@ -80,7 +80,8 @@ function sortJson(element, prop, propType, asc) {
 
   
   const sortedSteamr = sortJson([...reviewsps], "Popularity", "int", false);
-  const sortedSteamd = sortJson([...reviewsps], "SCORE", "int", false);
+  const sortedSteamds = sortJson([...reviewsps], "SCORE", "int", false);
+  const sortedSteamd = sortJson([...sortedSteamds], "SaleStarted", "date", false);
   const topPSDiscounts = sortedSteamr;
   const newPSDiscounts = sortedSteamd;
   
