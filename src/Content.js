@@ -1295,7 +1295,7 @@ function SaleEnds() {
 
 <>
               {" "}
-             {/* <Box
+             <Box
                 style={{
                   borderRadius: 5,
                   backgroundColor: "#ffc4c4",
@@ -1305,16 +1305,16 @@ function SaleEnds() {
                   textAlign: "center",
                 }}
               >
-                Buy Turkey Funds with {" "}
+                Buy from Tukey PSN with {" "}
                 <a
                   className="infotax"
                   href="https://discord.gg/regionality"
                 >
                   Regionality
-                </a>{" "}
+                </a>.{" "}Note: Price reflected is exclusive of service fee
                 
                 
-              </Box>*/}
+              </Box>
             </>
 
             <table className="table table-align-middle item-price-table">
