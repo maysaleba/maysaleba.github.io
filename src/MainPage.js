@@ -41,11 +41,12 @@ const dsortedReviews = sortJson([...reviewssw], "SaleStarted", "date", false);
   // const newSwitchDiscounts = reviewssw.filter((x) => x.SaleStarted > daysago);
   
 
-
 function sortJson(element, prop, propType, asc) {
+  let sortedElement = [...element]; // Create a copy of the element array to avoid mutating the original
+
   switch (propType) {
     case "int":
-      element = element.sort(function (a, b) {
+      sortedElement.sort(function (a, b) {
         const aValue = parseInt(a[prop]) || Number.MIN_SAFE_INTEGER;
         const bValue = parseInt(b[prop]) || Number.MIN_SAFE_INTEGER;
 
@@ -53,29 +54,34 @@ function sortJson(element, prop, propType, asc) {
       });
       break;
     case "date":
-      // Filter entries where SCORE is not empty or 0
-      element = element.filter(item => item.SCORE !== "" && item.SCORE !== 0);
+      // Filter entries where SCORE is not empty or 0 and date is not '0000-00-00'
+      sortedElement = sortedElement.filter(item => item.SCORE !== "" && item.SCORE !== 0 && item[prop] !== '0000-00-00');
 
-      // Sort by SaleStarted
-      element = element.sort(function (a, b) {
-        const aValue = new Date(a[prop]);
-        const bValue = new Date(b[prop]);
+      // Sort by the date property
+      sortedElement.sort(function (a, b) {
+        let aValue = new Date(a[prop]);
+        let bValue = new Date(b[prop]);
+
+        // Handle invalid dates
+        if (isNaN(aValue)) aValue = asc ? new Date(0) : new Date(8640000000000000);
+        if (isNaN(bValue)) bValue = asc ? new Date(0) : new Date(8640000000000000);
 
         return asc ? aValue - bValue : bValue - aValue;
       });
       break;
     default:
-      element = element.sort(function (a, b) {
-        const aValue = a[prop].toLowerCase();
-        const bValue = b[prop].toLowerCase();
+      sortedElement.sort(function (a, b) {
+        const aValue = a[prop] ? a[prop].toLowerCase() : "";
+        const bValue = b[prop] ? b[prop].toLowerCase() : "";
 
         return asc ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
       });
   }
 
   // Return the sorted and (if applicable) filtered element
-  return element;
+  return sortedElement;
 }
+
 
 
   
