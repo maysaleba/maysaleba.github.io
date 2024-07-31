@@ -291,7 +291,7 @@ const About = ({filteredReviews, pageData, reviewsps}) => {
           <Card.Body>
            <ul>
            <li><a className="giftcardlink" href="https://discord.gg/regionality">Regionality</a></li>
-           <li><a className="giftcardlink" href="https://discord.gg/vwUnW82an9">Cheap Gamers Association</a></li>
+           <li><a className="giftcardlink" href="https://discord.gg/hvD8JGXurA">Localized</a></li>
            </ul>
 
           </Card.Body>
