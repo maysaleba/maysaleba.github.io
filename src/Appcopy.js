@@ -123,8 +123,9 @@ function sortJson(element, prop, propType, asc) {
 
   useEffect(() => {
     const sortedswitch =  sortJson(reviewssw, "Popularity", "int", false);
+    const sortedswitchf = sortedswitch.filter(review => review.SaleStarted !== '0000-00-00');
     const sortedPlaystation = sortJson(reviewsst, "Popularity", "int", false);
-    const reviews = sortedPlaystation.concat(sortedswitch)
+    const reviews = sortedPlaystation.concat(sortedswitchf)
     // /.concat(reviewsst);
     setLatestField(reviews);
   }, []);

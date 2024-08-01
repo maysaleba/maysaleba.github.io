@@ -36,8 +36,8 @@ const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
 const sortedReviews = sortJson([...reviewssw], "Popularity", "int", false);
 const dsortedReviews = sortJson([...reviewssw], "SaleStarted", "date", false);
   
-  const topSwitchDiscounts = sortedReviews;
-  const newSwitchDiscounts = dsortedReviews;
+  const topSwitchDiscounts = sortedReviews.filter(review => review.SaleStarted !== '0000-00-00');;
+  const newSwitchDiscounts = dsortedReviews.filter(review => review.SaleStarted !== '0000-00-00');;
   // const newSwitchDiscounts = reviewssw.filter((x) => x.SaleStarted > daysago);
   
 
