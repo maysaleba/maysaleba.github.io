@@ -53,6 +53,8 @@ function sortJson(element, prop, propType, asc) {
   return element;
 }
 
+
+  const reviewsswf = reviewssw.filter(review => review.SaleStarted !== '0000-00-00');
   const { search } = window.location;
   const query = new URLSearchParams(search).get("s");
 
@@ -122,10 +124,9 @@ function sortJson(element, prop, propType, asc) {
   const [latestDropDown, setLatestDropDown] = useState("Popular");
 
   useEffect(() => {
-    const sortedswitch =  sortJson(reviewssw, "Popularity", "int", false);
-    const sortedswitchf = sortedswitch.filter(review => review.SaleStarted !== '0000-00-00');
+    const sortedswitch =  sortJson(reviewsswf, "Popularity", "int", false);  
     const sortedPlaystation = sortJson(reviewsst, "Popularity", "int", false);
-    const reviews = sortedPlaystation.concat(sortedswitchf)
+    const reviews = sortedPlaystation.concat(sortedswitch)
     // /.concat(reviewsst);
     setLatestField(reviews);
   }, []);
