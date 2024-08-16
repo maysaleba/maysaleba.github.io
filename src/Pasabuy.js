@@ -291,7 +291,7 @@ const About = ({filteredReviews, pageData, reviewsps}) => {
           <Card.Body>
            <ul>
            <li><a className="giftcardlink" href="https://discord.gg/regionality">Regionality</a></li>
-           <li><a className="giftcardlink" href="https://discord.gg/hvD8JGXurA">Localized</a></li>
+           <li><a className="giftcardlink" href="https://discord.gg/localized">Localized</a></li>
            </ul>
 
           </Card.Body>
@@ -336,7 +336,7 @@ const About = ({filteredReviews, pageData, reviewsps}) => {
     2. Once you have Discord installed, choose a server and select <b>Accept Invite</b> on the next screen.
            <ul>
            <li><a className="giftcardlink" href="https://discord.gg/regionality">Regionality</a></li>
-           <li><a className="giftcardlink" href="https://discord.gg/hvD8JGXurA">Localized</a></li>
+           <li><a className="giftcardlink" href="https://discord.gg/localized">Localized</a></li>
            </ul>
   </Grid>
   </Grid>
