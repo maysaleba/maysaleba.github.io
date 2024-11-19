@@ -1525,7 +1525,7 @@ function SaleEnds() {
         Brazil: matchGames[0].BrazilPrice * brlExchange,
         Russia: matchGames[0].RussiaPrice * rubExchange,
         Poland: matchGames[0].PolandPrice * plnExchange,
-        Chile: matchGames[0].ChilePrice * clpExchange,
+        Chile: matchGames[0].ChilePrice * clpExchange * 99999,
         Mexico: matchGames[0].MexicoPrice * mxnExchange,
         US: matchGames[0].SalePrice * usdExchange,
       };
@@ -2368,9 +2368,10 @@ function SaleEnds() {
                     style={{
                       display: "flex",
                       justifyContent: "center",
-                      flexWrap: "wrap",
+                      flexWrap: "wrap", 
                     }}
                   >
+
                     <a
                       className="nopaddingA"
                       href="https://shope.ee/LNhVslxzC"

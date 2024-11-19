@@ -242,7 +242,7 @@ diffDays = Math.round((secondDate - firstDate) / oneDay) + 1;
         Brazil: BrazilPrice * brlExchange,
         Russia: RussiaPrice * rubExchange,
         Poland: PolandPrice * plnExchange,
-        Chile: ChilePrice * clpExchange,
+        Chile: ChilePrice * clpExchange * 99999,
         Mexico: MexicoPrice * mxnExchange,
         US: SalePrice * usdExchange,
       };
