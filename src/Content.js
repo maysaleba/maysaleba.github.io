@@ -1644,6 +1644,12 @@ function SaleEnds() {
           return (
             <div style={{ marginLeft: "10px" }} className="brregion-logo">
               Brazil
+               <br />
+              <div style={{ fontSize: 11, fontWeight: "Bold", color: "#fc430a" }}>
+                {" "}
+                {/*+ ₱{argentinaTax} TAX*/}
+                {Math.round(matchGames[0].BrazilPrice).toString().replace(".",",")} BRL
+              </div>
             </div>
           );
         } else if (props.rank1country === "Russia") {
