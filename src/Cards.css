@@ -247,6 +247,11 @@ a.infotax {
     display: block;
 }
 
+.priceRows {
+    padding: 0.75rem;
+    display: block;
+}
+
 /* Specific styles for the link inside .no-style-link */
 .item-price-table td a.no-style-link {
   padding: 0;  /* Remove the padding for this specific link */
@@ -278,22 +283,22 @@ a.infotax {
 
 table tr:first-child td:first-child {
     border-top-left-radius: 10px;
-    border-color: #f0e9f8;
+    border-color: white;
     /*border-bottom-left-radius: 10px;*/
     /*border:  none;*/
 }
 
 table tr:first-child td:nth-child(2) {
     /*border-top-right-radius: 10px;*/
-    border-color: #f0e9f8;
+    border-color: white;
     /*border-bottom-right-radius: 10px;*/
     /*border: none;*/
 }
 
 table tr:first-child td:last-child {
     border-top-right-radius: 10px;
-    border-color: #f0e9f8;
-    /*border-bottom-right-radius: 10px;*/
+    border-color: white;
+    /*border-bottom-right-radius: 10px; #f0e9f8*/
     /*border: none;*/
 }
 
