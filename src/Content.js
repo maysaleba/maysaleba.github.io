@@ -1598,10 +1598,10 @@ function SaleEnds() {
    
             United States
              <br />
-              <div style={{ fontSize: 11, fontWeight: "bold", color: "#fc430a" }}>
+              <div style={{ fontSize: 11, fontWeight: "", color: "#000000" }}>
                 {" "}
-                {/*+ ₱{argentinaTax} TAX*/}
-                {Math.round(matchGames[0].SalePrice).toString() + " USD"} 
+                {/*+ ₱{argentinaTax} TAX fc430a*/ }
+                {"$" + Math.round(matchGames[0].SalePrice).toString()} 
               </div>
 
           </div>
@@ -1610,14 +1610,17 @@ function SaleEnds() {
       }
 
 function CountryInfo({ name, price, currency, className, style }) {
+  // Convert the price to a number and format it with thousands separator
+  const formattedPrice = price ? Number(price).toLocaleString() : null;
+
   return (
     <div style={{ marginLeft: "10px" }} className={className}>
       {name}
-      {price && currency && (
+      {formattedPrice && currency && (
         <>
           <br />
           <div style={style}>
-          {price} {currency}
+            {currency} {formattedPrice}
           </div>
         </>
       )}
@@ -1629,65 +1632,65 @@ const countryData = {
   US: {
     name: "United States",
     price: Math.round(matchGames[0].SalePrice).toString(),
-    currency: "USD",
+    currency: "$",
     className: "usregion-logo",
-    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }
+    style: { fontSize: 11, fontWeight: "", color: "#000000" }
   },
   Canada: {
     name: "Canada",
     price: Math.round(matchGames[0].CanadaPrice).toString(),
-    currency: "CAD",
+    currency: "C$",
     className: "caregion-logo",
-    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }
+    style: { fontSize: 11, fontWeight: "", color: "#000000" }
   },
   Peru: {
     name: "Peru",
     price: Math.round(matchGames[0].PeruPrice).toString(),
-    currency: "PEN",
+    currency: "S/",
     className: "peregion-logo",
-    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }
+    style: { fontSize: 11, fontWeight: "", color: "#000000" }
   },
   Argentina: {
     name: "Argentina",
     price: Math.round(matchGames[0].ArgentinaPrice).toString().replace(".", ","),
-    currency: "ARS",
+    currency: "AR$",
     className: "arregion-logo",
-    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }
+    style: { fontSize: 11, fontWeight: "", color: "#000000" }
   },
   Colombia: {
     name: "Colombia",
     price: Math.round(matchGames[0].ColombiaPrice).toString(),
-    currency: "COP",
+    currency: "Col$",
     className: "coregion-logo",
-    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }
+    style: { fontSize: 11, fontWeight: "", color: "#000000" }
   },
   Southafrica: {
     name: "South Africa",
     price: Math.round(matchGames[0].SouthafricaPrice).toString(),
-    currency: "ZAR",
+    currency: "R",
     className: "zaregion-logo",
-    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }
+    style: { fontSize: 11, fontWeight: "", color: "#000000" }
   },
   Brazil: {
     name: "Brazil",
     price: Math.round(matchGames[0].BrazilPrice).toString().replace(".", ","),
-    currency: "BRL",
+    currency: "R$",
     className: "brregion-logo",
-    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }    
+    style: { fontSize: 11, fontWeight: "", color: "#000000" }    
   },
   Russia: {
     name: "Russia",
     price: Math.round(matchGames[0].RussiaPrice).toString().replace(".", ","),
     currency: "RUB",
     className: "ruregion-logo",
-    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" } 
+    style: { fontSize: 11, fontWeight: "", color: "#000000" } 
   },
   Poland: {
     name: "Poland",
     price: Math.round(matchGames[0].PolandPrice).toString(),
-    currency: "PLN",
+    currency: "zł",
     className: "plregion-logo",
-    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }   
+    style: { fontSize: 11, fontWeight: "", color: "#000000" }   
   },
   Chile: {
     name: "Chile",
@@ -1696,16 +1699,16 @@ const countryData = {
   Mexico: {
     name: "Mexico",
     price: Math.round(matchGames[0].MexicoPrice).toString(),
-    currency: "MXN",
+    currency: "MX$",
     className: "mxregion-logo",
-    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }    
+    style: { fontSize: 11, fontWeight: "", color: "#000000" }    
   },
   Australia: {
     name: "Australia",
     price: Math.round(matchGames[0].AustraliaPrice).toString(),
-    currency: "AUD",    
+    currency: "A$",    
     className: "auregion-logo",
-    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }    
+    style: { fontSize: 11, fontWeight: "", color: "#000000" }    
   }
 };
 
