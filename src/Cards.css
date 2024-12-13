@@ -199,7 +199,7 @@ table {
 }
 
 a {
-    color: #000000 !important;
+/*    color: #000000 !important;*/
     text-decoration: none !important;
     background-color: transparent;
     -webkit-text-decoration-skip: objects !important;
@@ -778,7 +778,10 @@ display: inline-block;
   display: block; /* Make the image a block element */
 }
 
-
+.modal-link {
+  color: red;
+  font-weight: bold;
+}
 
 .coda-logo {
 background-size:  12px;
