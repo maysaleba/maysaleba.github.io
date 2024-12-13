@@ -23,7 +23,7 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: { xs: '100%', sm: '600px', md: '600px'},
   bgcolor: 'background.paper',
   border: 'none',
   outline: 'none',
@@ -1859,7 +1859,7 @@ const handleClose = () => setOpen(false);
   }}
 >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
+          <Typography id="modal-modal-title" variant="h6" component="h2" >
             Text in a modal
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
