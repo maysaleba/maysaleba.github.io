@@ -1912,10 +1912,14 @@ const getModalTextForCountry = (country) => {
       </ol>
     `,
        "Argentina": `
+      <ol>
+      <li> Set up an account in the <b>${country}</b> eShop
       <ul>
-        <li>Special offers available in European countries</li>
-        <li>Convenient payment methods for EU residents</li>
+        <li><a href="https://accounts.nintendo.com/profile/edit" target="_blank" style="color: #fc430a; font-weight: bold;">Change your eshop account country</a> to <b>${country}</b></li>
+        <li>You can also <a href="https://accounts.nintendo.com/register" target="_blank" style="color: #fc430a; font-weight: bold;">create a new Nintendo account</a></li>
       </ul>
+      <li> Top-up Argentina funds or purchase a single game via <a href="https://maysaleba.com/pasabuy" target="_blank" style="color: #fc430a; font-weight: bold;">Pasabuy</a></li>
+      </ol>
     `,
         "US": `
       <ol>
