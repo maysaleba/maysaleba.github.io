@@ -1601,7 +1601,7 @@ function SaleEnds() {
               <div style={{ fontSize: 11, fontWeight: "", color: "#000000" }}>
                 {" "}
                 {/*+ ₱{argentinaTax} TAX fc430a*/ }
-                {"$" + Math.round(matchGames[0].SalePrice).toString()} 
+                {"$ " + Math.round(matchGames[0].SalePrice).toString()} 
               </div>
 
           </div>
