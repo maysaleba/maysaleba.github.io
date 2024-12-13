@@ -771,8 +771,8 @@ display: inline-block;
 
 .seagm-logo {
   border: 0;
-  width: 17px;  /* Adjust width */
-  height: 20px; /* Adjust height */
+  width: 14px;  /* Adjust width */
+  height: 17px; /* Adjust height */
   margin-left: 10px;    /* Remove any default margin */
   padding: 0;   /* Remove any default padding */
   display: block; /* Make the image a block element */
