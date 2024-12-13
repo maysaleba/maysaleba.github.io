@@ -6,6 +6,7 @@ import NaviBar from "./NaviBar";
 import { Box, Paper, Link, Container } from "@mui/material";
 import styled from "styled-components";
 import download from "./download.gif";
+import seagmlogo from "./seagm.png"
 import { Helmet } from "react-helmet";
 import { Redirect } from "react-router-dom";
 import GoogleAds from "./AdSense";
@@ -1553,6 +1554,7 @@ function SaleEnds() {
           return (
             <>
               {" "}
+           
               <Box
                 style={{
                   borderRadius: 5,
@@ -1568,7 +1570,7 @@ function SaleEnds() {
                   className="infotax"
                   href="https://maysaleba.com/pasabuy"
                 >
-                  Pasabuy</a>.  Note: Argentina Price is inclusive of 59% tax and service fee. 
+                  Pasabuy</a>. Argentina Price is inclusive of 59% tax and service fee. 
                 
 {/*
  Note: Argentina eShop only accepts payment from Argentina issued cards. Use {" "}
@@ -1591,939 +1593,304 @@ function SaleEnds() {
 
       function USRank() {
         return (
+                
           <div style={{ marginLeft: "10px" }} className="usregion-logo">
+   
             United States
+             <br />
+              <div style={{ fontSize: 11, fontWeight: "bold", color: "#fc430a" }}>
+                {" "}
+                {/*+ ₱{argentinaTax} TAX*/}
+                {Math.round(matchGames[0].SalePrice).toString() + " USD"} 
+              </div>
+
           </div>
+         
         );
       }
 
-      function Rank1(props) {
-        if (props.rank1country === "US") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="usregion-logo">
-              United States
-            </div>
-          );
-        } else if (props.rank1country === "Canada") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="caregion-logo">
-              Canada
-            </div>
-          );
-        } else if (props.rank1country === "Peru") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="peregion-logo">
-              Peru
-            </div>
-          );
-        } else if (props.rank1country === "Argentina") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="arregion-logo">
-              Argentina
-              <br />
-              <div style={{ fontSize: 11, fontWeight: "Bold", color: "#fc430a" }}>
-                {" "}
-                {/*+ ₱{argentinaTax} TAX*/}
-                {Math.round(matchGames[0].ArgentinaPrice).toString().replace(".",",")} ARS
+function CountryInfo({ name, price, currency, className, style }) {
+  return (
+    <div style={{ marginLeft: "10px" }} className={className}>
+      {name}
+      {price && currency && (
+        <>
+          <br />
+          <div style={style}>
+          {price} {currency}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+const countryData = {
+  US: {
+    name: "United States",
+    price: Math.round(matchGames[0].SalePrice).toString(),
+    currency: "USD",
+    className: "usregion-logo",
+    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }
+  },
+  Canada: {
+    name: "Canada",
+    price: Math.round(matchGames[0].CanadaPrice).toString(),
+    currency: "CAD",
+    className: "caregion-logo",
+    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }
+  },
+  Peru: {
+    name: "Peru",
+    price: Math.round(matchGames[0].PeruPrice).toString(),
+    currency: "PEN",
+    className: "peregion-logo",
+    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }
+  },
+  Argentina: {
+    name: "Argentina",
+    price: Math.round(matchGames[0].ArgentinaPrice).toString().replace(".", ","),
+    currency: "ARS",
+    className: "arregion-logo",
+    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }
+  },
+  Colombia: {
+    name: "Colombia",
+    price: Math.round(matchGames[0].ColombiaPrice).toString(),
+    currency: "COP",
+    className: "coregion-logo",
+    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }
+  },
+  Southafrica: {
+    name: "South Africa",
+    price: Math.round(matchGames[0].SouthafricaPrice).toString(),
+    currency: "ZAR",
+    className: "zaregion-logo",
+    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }
+  },
+  Brazil: {
+    name: "Brazil",
+    price: Math.round(matchGames[0].BrazilPrice).toString().replace(".", ","),
+    currency: "BRL",
+    className: "brregion-logo",
+    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }    
+  },
+  Russia: {
+    name: "Russia",
+    price: Math.round(matchGames[0].RussiaPrice).toString().replace(".", ","),
+    currency: "RUB",
+    className: "ruregion-logo",
+    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" } 
+  },
+  Poland: {
+    name: "Poland",
+    price: Math.round(matchGames[0].PolandPrice).toString(),
+    currency: "PLN",
+    className: "plregion-logo",
+    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }   
+  },
+  Chile: {
+    name: "Chile",
+    className: "clregion-logo"
+  },
+  Mexico: {
+    name: "Mexico",
+    price: Math.round(matchGames[0].MexicoPrice).toString(),
+    currency: "MXN",
+    className: "mxregion-logo",
+    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }    
+  },
+  Australia: {
+    name: "Australia",
+    price: Math.round(matchGames[0].AustraliaPrice).toString(),
+    currency: "AUD",    
+    className: "auregion-logo",
+    style: { fontSize: 11, fontWeight: "bold", color: "#fc430a" }    
+  }
+};
+
+
+function Rank1(props) {
+  const countryInfo = countryData[props.rank1country];
+
+  if (countryInfo) {
+    return <CountryInfo {...countryInfo} />;
+  }
+
+  return null; // Default case if no country matches
+}
+
+
+function Rank2(props) {
+  const countryInfo = countryData[props.rank2country];
+
+  if (countryInfo) {
+    return <CountryInfo {...countryInfo} />;
+  }
+
+  return null; // Default case if no country matches
+}
+
+function Rank3(props) {
+  const countryInfo = countryData[props.rank3country];
+
+  if (countryInfo) {
+    return <CountryInfo {...countryInfo} />;
+  }
+
+  return null; // Default case if no country matches
+}
+
+function Rank4(props) {
+  const countryInfo = countryData[props.rank4country];
+
+  if (countryInfo) {
+    return <CountryInfo {...countryInfo} />;
+  }
+
+  return null; // Default case if no country matches
+}
+
+
+const countryURLs = {
+  US: "https://invl.io/clm3kbo",
+  Canada: "https://invl.io/clm3kbh",
+  Peru: "",
+  Argentina: "",
+  Colombia: "",
+  Southafrica: "",
+  Brazil: "https://invl.io/clm3kb7",
+  Russia: "",
+  Poland: "https://invl.io/clm3kb3",
+  Chile: "",
+  Mexico: "https://invl.io/clm3kbl",
+  Australia: "https://invl.io/clm3kbd",
+};
+
+
+function RankRows() {
+  const renderRow = (logo, price, country, isStrikeThrough = false, badgeText = "") => {
+    const countryUrl = countryURLs[country];
+    return (
+      <tr className="item-table-best">
+        <td className="version">
+          <span className={logo.className}>{logo.component}</span>
+        </td>
+        <td className="version"></td>
+        <td className="version">
+          <a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer">  
+            <div className="btn btn-block btn-secondary"> 
+              <div className="price-container-in">
+                <span className="price">
+                  {"₱" + Math.round(price)}
+
+                  {isStrikeThrough && (
+                    <span className="ml-2 badge badge-danger">
+                      <strike>
+                        <PesoPrice props={matchGames[0].Price} />
+                      </strike>
+                    </span>
+                  )}
+                </span>
+              {/* Render country logo or placeholder */}
+              {countryUrl ? (
+                <a href={countryUrl} target="_blank" rel="noreferrer" className="no-style-link">
+                  <img src={seagmlogo} className="seagm-logo" />
+                </a>
+              ) : (
+                <div className="placeholder-logo" style={{ width: "27px", height: "20px" }}></div>
+              )}
               </div>
             </div>
-          );
-        } else if (props.rank1country === "Colombia") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="coregion-logo">
-              Colombia
-            </div>
-          );
-        } else if (props.rank1country === "Southafrica") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="zaregion-logo">
-              South Africa
-            </div>
-          );
-        } else if (props.rank1country === "Brazil") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="brregion-logo">
-              Brazil
-               <br />
-              <div style={{ fontSize: 11, fontWeight: "Bold", color: "#fc430a" }}>
-                {" "}
-                {/*+ ₱{argentinaTax} TAX*/}
-                {Math.round(matchGames[0].BrazilPrice).toString().replace(".",",")} BRL
+          </a>
+        </td>
+      </tr>
+    );
+  };
+
+  const renderVendorLinks = () => (
+    <tr className="item-table-best">
+      <td className="item-note text-left">
+        <div className="vendors" style={{ display: "flex", justifyContent: "left", flexWrap: "wrap", fontSize: 14 }}>
+          <span className="nopaddingA">
+            <div className="ml-2 badge badge-info">Suggested Gift Card: <ShopeeCard /></div>
+          </span>
+        </div>
+      </td>
+      <td></td>
+      <td className="item-note text-right">
+        <div className="vendors" style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
+          {[
+            { href: "https://shope.ee/LNhVslxzC", className: "shopee-logo", text: "SHOPEE" },
+            { href: "https://bit.ly/3L2qm2e", className: "lazada-logo", text: "LAZADA" },
+            { href: "https://bit.ly/3pxXLXT", className: "coda-logo", text: "CODASHOP" },
+          ].map((vendor, index) => (
+            <a key={index} className="nopaddingA" href={vendor.href} target="_blank" rel="noreferrer">
+              <div className="ml-2 badge badge-danger">
+                <span style={{ fontSize: 13 }} className={vendor.className}>
+                  <span className="suggest-text">{vendor.text}</span>
+                </span>
               </div>
-            </div>
-          );
-        } else if (props.rank1country === "Russia") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="ruregion-logo">
-              Russia
-            </div>
-          );
-        } else if (props.rank1country === "Poland") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="plregion-logo">
-              Poland
-            </div>
-          );
-        } else if (props.rank1country === "Chile") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="clregion-logo">
-              Chile
-            </div>
-          );
-        } else if (props.rank1country === "Mexico") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="mxregion-logo">
-              Mexico
-            </div>
-          );
-        } else if (props.rank1country === "Australia") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="auregion-logo">
-              Australia
-            </div>
-          );
-        }
-      }
-
-      function Rank2(props) {
-        if (props.rank2country === "US") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="usregion-logo">
-              United States
-            </div>
-          );
-        } else if (props.rank2country === "Canada") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="caregion-logo">
-              Canada
-            </div>
-          );
-        } else if (props.rank2country === "Peru") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="peregion-logo">
-              Peru
-            </div>
-          );
-        } else if (props.rank2country === "Argentina") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="arregion-logo">
-              Argentina
-              <br />
-              <div style={{ fontSize: 11, fontWeight: "Bold", color: "red" }}>
-                {" "}
-                {/*+ ₱{argentinaTax} TAX*/}
-                 {Math.round(matchGames[0].ArgentinaPrice).toString().replace(".",",")} ARS
-              </div>
-            </div>
-          );
-        } else if (props.rank2country === "Colombia") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="coregion-logo">
-              Colombia
-            </div>
-          );
-        } else if (props.rank2country === "Southafrica") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="zaregion-logo">
-              South Africa
-            </div>
-          );
-        } else if (props.rank2country === "Brazil") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="brregion-logo">
-              Brazil
-            </div>
-          );
-        } else if (props.rank2country === "Russia") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="ruregion-logo">
-              Russia
-            </div>
-          );
-        } else if (props.rank2country === "Poland") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="plregion-logo">
-              Poland
-            </div>
-          );
-        } else if (props.rank2country === "Chile") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="clregion-logo">
-              Chile
-            </div>
-          );
-        } else if (props.rank2country === "Mexico") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="mxregion-logo">
-              Mexico
-            </div>
-          );
-        } else if (props.rank2country === "Australia") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="auregion-logo">
-              Australia
-            </div>
-          );
-        }
-      }
-
-      function Rank3(props) {
-        if (props.rank3country === "US") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="usregion-logo">
-              United States
-            </div>
-          );
-        } else if (props.rank3country === "Canada") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="caregion-logo">
-              Canada
-            </div>
-          );
-        } else if (props.rank3country === "Peru") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="peregion-logo">
-              Peru
-            </div>
-          );
-        } else if (props.rank3country === "Argentina") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="arregion-logo">
-              Argentina
-              <br />
-              <div style={{ fontSize: 11, fontWeight: "Bold", color: "red" }}>
-                {" "}
-                {/*+ ₱{argentinaTax} TAX*/}
-                 {Math.round(matchGames[0].ArgentinaPrice).toString().replace(".",",")} ARS
-              </div>
-            </div>
-          );
-        } else if (props.rank3country === "Colombia") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="coregion-logo">
-              Colombia
-            </div>
-          );
-        } else if (props.rank3country === "Southafrica") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="zaregion-logo">
-              South Africa
-            </div>
-          );
-        } else if (props.rank3country === "Brazil") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="brregion-logo">
-              Brazil
-            </div>
-          );
-        } else if (props.rank3country === "Russia") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="ruregion-logo">
-              Russia
-            </div>
-          );
-        } else if (props.rank3country === "Poland") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="plregion-logo">
-              Poland
-            </div>
-          );
-        } else if (props.rank3country === "Chile") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="clregion-logo">
-              Chile
-            </div>
-          );
-        } else if (props.rank3country === "Mexico") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="mxregion-logo">
-              Mexico
-            </div>
-          );
-        } else if (props.rank3country === "Australia") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="auregion-logo">
-              Australia
-            </div>
-          );
-        }
-      }
+            </a>
+          ))}
+        </div>
+      </td>
+    </tr>
+  );
 
 
-      function Rank4(props) {
-        if (props.rank4country === "US") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="usregion-logo">
-              United States
-            </div>
-          );
-        } else if (props.rank4country === "Canada") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="caregion-logo">
-              Canada
-            </div>
-          );
-        } else if (props.rank4country === "Peru") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="peregion-logo">
-              Peru
-            </div>
-          );
-        } else if (props.rank4country === "Argentina") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="arregion-logo">
-              Argentina
-              <br />
-              <div style={{ fontSize: 11, fontWeight: "Bold", color: "red" }}>
-                {" "}
-                {/*+ ₱{argentinaTax} TAX*/}
-                 {Math.round(matchGames[0].ArgentinaPrice).toString().replace(".",",")} ARS
-              </div>
-            </div>
-          );
-        } else if (props.rank4country === "Colombia") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="coregion-logo">
-              Colombia
-            </div>
-          );
-        } else if (props.rank4country === "Southafrica") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="zaregion-logo">
-              South Africa
-            </div>
-          );
-        } else if (props.rank4country === "Brazil") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="brregion-logo">
-              Brazil
-            </div>
-          );
-        } else if (props.rank4country === "Russia") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="ruregion-logo">
-              Russia
-            </div>
-          );
-        } else if (props.rank4country === "Poland") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="plregion-logo">
-              Poland
-            </div>
-          );
-        } else if (props.rank4country === "Chile") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="clregion-logo">
-              Chile
-            </div>
-          );
-        } else if (props.rank4country === "Mexico") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="mxregion-logo">
-              Mexico
-            </div>
-          );
-        } else if (props.rank4country === "Australia") {
-          return (
-            <div style={{ marginLeft: "10px" }} className="auregion-logo">
-              Australia
-            </div>
-          );
-        }
-      }
-
-      // var rank1country = entries[0][0]
-      // var rank1price = entries[0][1]
-      // var rank2country = entries[1][0]
-      // var rank2price = entries[1][1]
-      // var rank3country = entries[2][0]
-      // var rank3price = entries[2][1]
-
-      function RankRows() {
-        if (entries.length === 1) {
-          return (
-            <>
-              <tr className="item-table-best">
-                <td className="version">
-                  <span className="fire-logo">
-                    <USRank />
-                  </span>
-                </td>
-                <td className="version"></td>
-                <td className="version">
-                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
-                    <div className="btn btn-block btn-secondary">
-
-                      {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
-                      <span className="ml-2 badge badge-danger">
-                        <strike>
-                          <PesoPrice props={matchGames[0].Price} />
-                        </strike>
-                      </span>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-              <tr className="item-table-best">
-                <td className="item-note text-left">
-                  <div
-                    className="vendors"
-                    style={{
-                      display: "flex",
-                      justifyContent: "left",
-                      flexWrap: "wrap",
-                      fontSize: 14,
-                    }}
-                  >
-                    <span className="nopaddingA">
-                      {" "}
-                      <div className="ml-2 badge badge-info">
-                        {" "}
-                        Suggested Gift Card: <ShopeeCard />
-                      </div>
-                    </span>{" "}
-                  </div>
-                </td>
-                <td></td>
-                <td className="item-note text-right">
-                  <div
-                    className="vendors"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <a
-                      className="nopaddingA"
-                      href="https://shope.ee/LNhVslxzC"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="shopee-logo">
-                          <span className="suggest-text">SHOPEE</span>
-                        </span>
-                      </div>
-                    </a>
-                    <a
-                      className="nopaddingA"
-                      href="https://bit.ly/3L2qm2e"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="lazada-logo">
-                          <span className="suggest-text">LAZADA</span>
-                        </span>
-                      </div>
-                    </a>
-                    <a
-                      className="nopaddingA"
-                      href="https://bit.ly/3pxXLXT"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="coda-logo">
-                          <span className="suggest-text">CODASHOP</span>
-                        </span>
-                      </div>
-                    </a>
-                  </div>
-                </td>
-              </tr>
-            </>
-          );
-        } else if (entries.length === 2) {
-          var rank1country = entries[0][0];
-          var rank1price = entries[0][1];
-          return (
-            <>
-              <tr className="item-table-best">
-                <td className="version">
-                  <span className="fire-logo">
-                    <USRank />
-                  </span>
-                </td>
-                <td className="version"></td>
-                <td className="version">
-                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
-                    <div className="btn btn-block btn-secondary">
-
-                      {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
-                      <span className="ml-2 badge badge-danger">
-                        <strike>
-                          <PesoPrice props={matchGames[0].Price} />
-                        </strike>
-                      </span>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-              <tr className="item-table-best">
-                <td className="item-note text-left">
-                  <div
-                    className="vendors"
-                    style={{
-                      display: "flex",
-                      justifyContent: "left",
-                      flexWrap: "wrap",
-                      fontSize: 14,
-                    }}
-                  >
-                    <span className="nopaddingA">
-                      {" "}
-                      <div className="ml-2 badge badge-info">
-                        {" "}
-                        Suggested Gift Card: <ShopeeCard />
-                      </div>
-                    </span>{" "}
-                  </div>
-                </td>
-                <td></td>
-                <td className="item-note text-right">
-                  <div
-                    className="vendors"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <a
-                      className="nopaddingA"
-                      href="https://shope.ee/LNhVslxzC"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="shopee-logo">
-                          <span className="suggest-text">SHOPEE</span>
-                        </span>
-                      </div>
-                    </a>
-                    <a
-                      className="nopaddingA"
-                      href="https://bit.ly/3L2qm2e"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="lazada-logo">
-                          <span className="suggest-text">LAZADA</span>
-                        </span>
-                      </div>
-                    </a>
-                    <a
-                      className="nopaddingA"
-                      href="https://bit.ly/3pxXLXT"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="coda-logo">
-                          <span className="suggest-text">CODASHOP</span>
-                        </span>
-                      </div>
-                    </a>
-                  </div>
-                </td>
-              </tr>
-              <tr className="item-table-best">
-                <td className="version">
-                  <span className="gold-medal-logo">
-                    <Rank1 rank1country={rank1country} />
-                  </span>
-                </td>
-                <td></td>
-                <td className="version">
-                  <a
-                    href="https://www.youtube.com/watch?v=iIHNfDa8-1o"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="btn btn-block btn-secondary">
-
-                      {"₱" + Math.round(rank1price)}
-                      <span className="ml-2 badge badge-danger">
-                        <strike>
-                          <PesoPrice props={matchGames[0].Price} />
-                        </strike>
-                      </span>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-            </>
-          );
-        } else if (entries.length === 3) {
-          var rank1country = entries[0][0];
-          var rank1price = entries[0][1];
-          var rank2country = entries[1][0];
-          var rank2price = entries[1][1];
-          return (
-            <>
-              <tr className="item-table-best">
-                <td className="version">
-                  <span className="fire-logo">
-                    <USRank />
-                  </span>
-                </td>
-                <td className="version"></td>
-                <td className="version">
-                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
-                    <div className="btn btn-block btn-secondary">
-
-                      {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
-                      <span className="ml-2 badge badge-danger">
-                        <strike>
-                          <PesoPrice props={matchGames[0].Price} />
-                        </strike>
-                      </span>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-              <tr className="item-table-best">
-                <td className="item-note text-left">
-                  <div
-                    className="vendors"
-                    style={{
-                      display: "flex",
-                      justifyContent: "left",
-                      flexWrap: "wrap",
-                      fontSize: 14,
-                    }}
-                  >
-                    <span className="nopaddingA">
-                      {" "}
-                      <div className="ml-2 badge badge-info">
-                        {" "}
-                        Suggested Gift Card: <ShopeeCard />
-                      </div>
-                    </span>{" "}
-                  </div>
-                </td>
-                <td></td>
-                <td className="item-note text-right">
-                  <div
-                    className="vendors"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <a
-                      className="nopaddingA"
-                      href="https://shope.ee/LNhVslxzC"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="shopee-logo">
-                          <span className="suggest-text">SHOPEE</span>
-                        </span>
-                      </div>
-                    </a>
-                    <a
-                      className="nopaddingA"
-                      href="https://bit.ly/3L2qm2e"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="lazada-logo">
-                          <span className="suggest-text">LAZADA</span>
-                        </span>
-                      </div>
-                    </a>
-                    <a
-                      className="nopaddingA"
-                      href="https://bit.ly/3pxXLXT"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="coda-logo">
-                          <span className="suggest-text">CODASHOP</span>
-                        </span>
-                      </div>
-                    </a>
-                  </div>
-                </td>
-              </tr>
-              <tr className="item-table-best">
-                <td className="version">
-                  <span className="gold-medal-logo">
-                    <Rank1 rank1country={rank1country} />
-                  </span>
-                </td>
-                <td></td>
-                <td className="version">
-                  <a
-                    href="https://www.youtube.com/watch?v=iIHNfDa8-1o"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="btn btn-block btn-secondary">
-
-                      {"₱" + Math.round(rank1price)}
-                      <span className="ml-2 badge badge-danger">
-                        <strike>
-                          <PesoPrice props={matchGames[0].Price} />
-                        </strike>
-                      </span>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-              <tr className="item-table-best">
-                <td className="version">
-                  <span className="silver-medal-logo">
-                    <Rank2 rank2country={rank2country} />
-                  </span>
-                </td>
-                <td></td>
-                <td className="version">
-                  <a
-                    href="https://www.youtube.com/watch?v=iIHNfDa8-1o"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="btn btn-block btn-secondary">
-
-                      {"₱" + Math.round(rank2price)}
-                      <span className="ml-2 badge badge-danger">
-                        <strike>
-                          <PesoPrice props={matchGames[0].Price} />
-                        </strike>
-                      </span>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-            </>
-          );
-        } else if (entries.length > 3) {
-          var rank1country = entries[0][0];
-          var rank1price = entries[0][1];
-          var rank2country = entries[1][0];
-          var rank2price = entries[1][1];
-          var rank3country = entries[2][0];
-          var rank3price = entries[2][1];
-          var rank4country = entries[3][0];
-          var rank4price = entries[3][1];
-          return (
-            <>
-              <tr className="item-table-best">
-                <td className="version">
-                  <span className="fire-logo">
-                    <USRank />
-                  </span>
-                </td>
-                <td className="version"></td>
-                <td className="version">
-                  <a href={matchGames[0].URL} target="_blank" rel="noreferrer">
-                    <div className="btn btn-block btn-secondary">
-
-                      {"₱" + Math.round(matchGames[0].SalePrice * usdExchange)}
-                      <span className="ml-2 badge badge-danger">
-                        <strike>
-                          <PesoPrice props={matchGames[0].Price} />
-                        </strike>
-                      </span>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-              <tr className="item-table-best">
-                <td className="item-note text-left">
-                  <div
-                    className="vendors"
-                    style={{
-                      display: "flex",
-                      justifyContent: "left",
-                      flexWrap: "wrap",
-                      fontSize: 14,
-                    }}
-                  >
-                    <span className="nopaddingA">
-                      {" "}
-                      <div className="ml-2 badge badge-info">
-                        {" "}
-                        Suggested Gift Card: <ShopeeCard />
-                      </div>
-                    </span>{" "}
-                  </div>
-                </td>
-                <td></td>
-                <td className="item-note text-right">
-                  <div
-                    className="vendors"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexWrap: "wrap", 
-                    }}
-                  >
-
-                    <a
-                      className="nopaddingA"
-                      href="https://shope.ee/LNhVslxzC"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="shopee-logo">
-                          <span className="suggest-text">SHOPEE</span>
-                        </span>
-                      </div>
-                    </a>
-                    <a
-                      className="nopaddingA"
-                      href="https://bit.ly/3L2qm2e"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="lazada-logo">
-                          <span className="suggest-text">LAZADA</span>
-                        </span>
-                      </div>
-                    </a>
-                    <a
-                      className="nopaddingA"
-                      href="https://bit.ly/3pxXLXT"
-                      target="_blank"
-                      rel="noreferrer"
-                      // style={{ padding: 10 }}
-                    >
-                      <div className="ml-2 badge badge-danger">
-                        <span style={{ fontSize: 13 }} className="coda-logo">
-                          <span className="suggest-text">CODASHOP</span>
-                        </span>
-                      </div>
-                    </a>
-                  </div>
-                </td>
-              </tr>
-              <tr className="item-table-best">
-                <td className="version">
-                  <span className="gold-medal-logo">
-                    <Rank1 rank1country={rank1country} />
-                  </span>
-                </td>
-                <td></td>
-                <td className="version">
-                  <a
-                    href="https://www.youtube.com/watch?v=iIHNfDa8-1o"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="btn btn-block btn-secondary">
-
-                      {"₱" + Math.round(rank1price)}
-                      <span className="ml-2 badge badge-danger">
-                        <strike>
-                          <PesoPrice props={matchGames[0].Price} />
-                        </strike>
-                      </span>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-              <tr className="item-table-best">
-                <td className="version">
-                  <span className="silver-medal-logo">
-                    <Rank2 rank2country={rank2country} />
-                  </span>
-                </td>
-                <td></td>
-                <td className="version">
-                  <a
-                    href="https://www.youtube.com/watch?v=iIHNfDa8-1o"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="btn btn-block btn-secondary">
-
-                      {"₱" + Math.round(rank2price)}
-                      <span className="ml-2 badge badge-danger">
-                        <strike>
-                          <PesoPrice props={matchGames[0].Price} />
-                        </strike>
-                      </span>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-              <tr className="item-table-best">
-                <td className="version">
-                  <span className="bronze-medal-logo">
-                    <Rank3 rank3country={rank3country} />
-                  </span>
-                </td>
-                <td></td>
-                <td className="version">
-                  <a
-                    href="https://www.youtube.com/watch?v=iIHNfDa8-1o"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="btn btn-block btn-secondary">
-
-                      {"₱" + Math.round(rank3price)}
-                      <span className="ml-2 badge badge-danger">
-                        <strike>
-                          <PesoPrice props={matchGames[0].Price} />
-                        </strike>
-                      </span>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-               <tr className="item-table-best">
-                <td className="version">
-                  <span className="blank-medal-logo">
-                    <Rank4 rank4country={rank4country} />
-                  </span>
-                </td>
-                <td></td>
-                <td className="version">
-                  <a
-                    href="https://www.youtube.com/watch?v=iIHNfDa8-1o"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="btn btn-block btn-secondary">
-
-                      {"₱" + Math.round(rank4price)}
-                      <span className="ml-2 badge badge-danger">
-                        <strike>
-                          <PesoPrice props={matchGames[0].Price} />
-                        </strike>
-                      </span>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-            </>
-          );
-        }
-      }
+  if (entries.length === 1) {
+    return (
+      <>
+        {renderRow({ className: "fire-logo", component: <USRank /> }, matchGames[0].SalePrice * usdExchange, matchGames[0].URL, true)}
+        {renderVendorLinks()}
+      </>
+    );
+  } else if (entries.length === 2) {
+    const rank1country = entries[0][0];
+    const rank1price = entries [0][1];
+    return (
+      <>
+        {renderRow({ className: "fire-logo", component: <USRank /> }, matchGames[0].SalePrice * usdExchange, "matchGames[0].URL", true)}
+        {renderVendorLinks()}
+        {renderRow({ className: "gold-medal-logo", component: <Rank1 rank1country={rank1country} /> }, rank1price, rank1country, true)}
+      </>
+    );
+  } else if (entries.length === 3) {
+    const rank1country = entries[0][0];
+    const rank1price = entries [0][1];
+    const rank2country = entries[1][0];
+    const rank2price = entries[1][1];
+    return (
+      <>
+        {renderRow({ className: "fire-logo", component: <USRank /> }, matchGames[0].SalePrice * usdExchange, matchGames[0].URL, true)}
+        {renderVendorLinks()}
+        {renderRow({ className: "gold-medal-logo", component: <Rank1 rank1country={rank1country} /> }, rank1price, rank1country, true)}
+        {renderRow({ className: "silver-medal-logo", component: <Rank2 rank2country={rank2country} /> }, rank2price, rank2country, true)}
+      </>
+    );
+  } 
+  else if (entries.length > 3) {
+          const rank1country = entries[0][0];
+          const rank1price = entries[0][1];
+          const rank2country = entries[1][0];
+          const rank2price = entries[1][1];
+          const rank3country = entries[2][0];
+          const rank3price = entries[2][1];
+          const rank4country = entries[3][0];
+          const rank4price = entries[3][1];
+    return (
+      <>
+        {renderRow({ className: "fire-logo", component: <USRank /> }, matchGames[0].SalePrice * usdExchange, "US", true)}
+        {renderVendorLinks()}
+        {renderRow({ className: "gold-medal-logo", component: <Rank1 rank1country={rank1country} /> }, rank1price, rank1country, true)}
+        {renderRow({ className: "silver-medal-logo", component: <Rank2 rank2country={rank2country} /> }, rank2price, rank2country, true)}
+        {renderRow({ className: "bronze-medal-logo", component: <Rank3 rank3country={rank3country} /> }, rank3price, rank3country, true)}
+        {renderRow({ className: "blank-medal-logo", component: <Rank4 rank4country={rank4country} /> }, rank4price, rank4country, true)}
+      </>
+    );
+  } 
+}
 
       return (
         <div
@@ -2534,7 +1901,7 @@ function SaleEnds() {
 
           <table className="table table-align-middle item-price-table">
             <tbody>
-              <RankRows />
+             <RankRows />
             </tbody>
           </table>
         </div>
@@ -2658,6 +2025,7 @@ function SaleEnds() {
           {/*    <NaviBar />*/}
 
           <div className="m-3 p-auto" style={{ paddingBottom: 15 }}>
+           <a href={matchGames[0].URL} target="_blank" rel="noopener noreferrer">
             <Card
               className="border-0"
               style={{
@@ -2669,7 +2037,7 @@ function SaleEnds() {
                 // marginBottom: -10,
               }}
             >
-              <Card.Img alt="" style={{}} src={matchGames[0].Image} />
+             <Card.Img alt="" style={{}} src={matchGames[0].Image} />
 
               <Card.ImgOverlay>
                 <PlatformBadge
@@ -2679,6 +2047,7 @@ function SaleEnds() {
               </Card.ImgOverlay>
               <PlatformOverlay slug={matchGames[0].Slug} isps4={matchGames[0].IsPS4} isps5={matchGames[0].IsPS5}/>
             </Card>
+            </a>
           </div>
          <OrigPrice />
           <Paper elevation={2} className="content-container">

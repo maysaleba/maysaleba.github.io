@@ -247,6 +247,13 @@ a.infotax {
     display: block;
 }
 
+/* Specific styles for the link inside .no-style-link */
+.item-price-table td a.no-style-link {
+  padding: 0;  /* Remove the padding for this specific link */
+  display: inline-flex;  /* Use inline-flex for layout */
+  line-height: 0;         /* Prevent vertical space */
+}
+
 .nopaddingA {
      padding-left: 0 !important;
     padding-right:  0 !important;
@@ -746,6 +753,26 @@ padding-left: 20px;
 display: inline-block;  
 }
 
+.price-container-in {
+  display: flex;
+  align-items: center; /* Vertically center the items */
+  width: 100%; /* Full width of the cell */
+}
+
+.price {
+  flex-grow: 1; /* This ensures that the price will take up as much space as possible, centering it */
+  text-align: center; /* Centers the price */
+}
+
+.seagm-logo {
+  border: 0;
+  width: 17px;  /* Adjust width */
+  height: 20px; /* Adjust height */
+  margin-left: 10px;    /* Remove any default margin */
+  padding: 0;   /* Remove any default padding */
+  display: block; /* Make the image a block element */
+}
+
 
 
 .coda-logo {
@@ -1066,6 +1093,7 @@ label:focus,
 .vendors {
     flex-wrap: nowrap !important;
 }
+
 
 .nopaddingA {
     padding-left:  0.1rem !important;
