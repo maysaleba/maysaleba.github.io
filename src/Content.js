@@ -25,6 +25,8 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: 400,
   bgcolor: 'background.paper',
+  border: 'none',
+  outline: 'none',
   p: 4,
   borderRadius: '8px', // Optional: Make the modal corners rounded
 };
@@ -1837,7 +1839,8 @@ const handleClose = () => setOpen(false);
                 </span>
               {/* Render country logo or placeholder */}
               {countryUrl ? (
-                <a href={countryUrl} target="_blank" rel="noreferrer" className="no-style-link">
+                <a href={countryUrl} target="_blank" rel="noreferrer" className="no-style-link"                 onClick={(event) => event.stopPropagation()} // Prevent modal from opening
+              >
                   <img src={seagmlogo} className="seagm-logo" />
                 </a>
               ) : (
