@@ -1587,7 +1587,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         // Argentina: matchGames[0].ArgentinaPrice * arsExchange,
         Australia: matchGames[0].AustraliaPrice * audExchange,
         Colombia: matchGames[0].ColombiaPrice * copExchange,
-        Southafrica: matchGames[0].SouthafricaPrice * zarExchange,
+        "South Africa": matchGames[0].SouthafricaPrice * zarExchange,
         Brazil: matchGames[0].BrazilPrice * brlExchange,
         Russia: matchGames[0].RussiaPrice * rubExchange,
         Poland: matchGames[0].PolandPrice * plnExchange,
@@ -1722,7 +1722,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
           className: "coregion-logo",
           style: { fontSize: 11, fontWeight: "", color: "#000000" },
         },
-        Southafrica: {
+        "South Africa": {
           name: "South Africa",
           price: Math.round(matchGames[0].SouthafricaPrice).toString(),
           currency: "R",
@@ -1830,7 +1830,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         Peru: "",
         Argentina: "",
         Colombia: "",
-        Southafrica: "",
+        "South Africa": "",
         Brazil: "https://invl.io/clm3kb7",
         Russia: "",
         Poland: "https://invl.io/clm3kb3",
@@ -1877,7 +1877,7 @@ const getModalTextForCountry = (country) => {
       </ul>
       </ol>
     `,
-    "Peru & Colombia & Southafrica & Russia & Chile": `
+    "Peru & Colombia & South Africa & Russia & Chile": `
       <ol>
       <li> Set up an account in the <b>${country}</b> eShop
       <ul>
@@ -1959,8 +1959,8 @@ const getModalTextForCountry = (country) => {
   // Check if the country belongs to a group, if so, return the group's description
   if (["Canada", "Poland", "Mexico", "Australia"].includes(country)) {
     return countryGroups["Canada & Poland & Mexico & Australia"];
-  } else if (["Peru", "Colombia", "Southafrica", "Russia", "Chile"].includes(country)) {
-    return countryGroups["Peru & Colombia & Southafrica & Russia & Chile"];
+  } else if (["Peru", "Colombia", "South Africa", "Russia", "Chile"].includes(country)) {
+    return countryGroups["Peru & Colombia & South Africa & Russia & Chile"];
   } else if (country === "US") {
     return countryGroups["US"];
   } else if (country === "Brazil") {
