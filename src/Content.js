@@ -4,6 +4,8 @@ import games2 from "./csvjsontr.json";
 import { Card, Row, Col } from "react-bootstrap";
 import NaviBar from "./NaviBar";
 import { Box, Paper, Link, Container } from "@mui/material";
+import Modal from '@mui/material/Modal';
+import Typography from '@mui/material/Typography';
 import styled from "styled-components";
 import download from "./download.gif";
 import seagmlogo from "./seagm.png"
@@ -14,6 +16,23 @@ import axios from "axios";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import InfoIcon from '@mui/icons-material/Info';
+
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  p: 4,
+  borderRadius: '8px', // Optional: Make the modal corners rounded
+};
+
+const modalBackdropStyle = {
+  backdropFilter: 'blur(8px)', // Apply a blur effect
+  backgroundColor: 'rgba(0, 0, 0, 0.1)', // Optional: Add a semi-transparent black overlay
+};
 
 const YoutubeEmbed = ({ embedId, platform }) => {
 embedId = embedId.replace("http","https");
@@ -1754,6 +1773,16 @@ function Rank4(props) {
   return null; // Default case if no country matches
 }
 
+function Rank5(props) {
+  const countryInfo = countryData[props.rank5country];
+
+  if (countryInfo) {
+    return <CountryInfo {...countryInfo} />;
+  }
+
+  return null; // Default case if no country matches
+}
+
 
 const countryURLs = {
   US: "https://invl.io/clm3kbo",
@@ -1772,6 +1801,16 @@ const countryURLs = {
 
 
 function RankRows() {
+const [open, setOpen] = React.useState(false);
+
+const handleOpen = (event) => {
+  event.preventDefault(); // Prevent the default behavior of the <a> tag
+  setOpen(true);
+};
+
+const handleClose = () => setOpen(false);
+
+
   const renderRow = (logo, price, country, isStrikeThrough = false, badgeText = "") => {
     const countryUrl = countryURLs[country];
     return (
@@ -1781,7 +1820,8 @@ function RankRows() {
         </td>
         <td className="version"></td>
         <td className="version">
-          <a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer">  
+          <a onClick={handleOpen} target="_blank" rel="noreferrer">  
+           
             <div className="btn btn-block btn-secondary"> 
               <div className="price-container-in">
                 <span className="price">
@@ -1806,6 +1846,24 @@ function RankRows() {
               </div>
             </div>
           </a>
+  <Modal
+  open={open}
+  onClose={handleClose}
+  aria-labelledby="modal-modal-title"
+  aria-describedby="modal-modal-description"
+  BackdropProps={{
+    style: modalBackdropStyle, // Use the custom backdrop style
+  }}
+>
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            Text in a modal
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          </Typography>
+        </Box>
+      </Modal>
         </td>
       </tr>
     );
@@ -1884,8 +1942,7 @@ function RankRows() {
           const rank4price = entries[3][1];
     return (
       <>
-        {renderRow({ className: "fire-logo", component: <USRank /> }, matchGames[0].SalePrice * usdExchange, "US", true)}
-        {renderVendorLinks()}
+      {renderRow({ className: "fire-logo", component: <USRank /> }, matchGames[0].SalePrice * usdExchange, "US", true)}
         {renderRow({ className: "gold-medal-logo", component: <Rank1 rank1country={rank1country} /> }, rank1price, rank1country, true)}
         {renderRow({ className: "silver-medal-logo", component: <Rank2 rank2country={rank2country} /> }, rank2price, rank2country, true)}
         {renderRow({ className: "bronze-medal-logo", component: <Rank3 rank3country={rank3country} /> }, rank3price, rank3country, true)}
