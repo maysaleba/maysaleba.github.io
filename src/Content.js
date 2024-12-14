@@ -1825,18 +1825,27 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       }
 
       const countryURLs = {
-        US: "https://invl.io/clm3kbo",
-        Canada: "https://invl.io/clm3kbh",
+        "United Kingdom": "https://invl.io/clm3oku",
+        Australia: "https://invl.io/clm3okz",
+        Europe: "https://invl.io/clm3ol2",
+        "Hong Kong": "https://invl.io/clm3ol6",
+        Canada: "https://invl.io/clm3ol8",
+        Mexico: "https://invl.io/clm3ola",
+        Switzerland: "https://invl.io/clm3olb",
+        Poland: "https://invl.io/clm3old",
+        "South Korea": "https://invl.io/clm3ole",
+        US: "https://invl.io/clm3oli",
+        Japan: "https://invl.io/clm3olj",
+        Denmark: "https://invl.io/clm3oll",
+        Sweden: "https://invl.io/clm3olo",
+        Brazil: "https://invl.io/clm3olp",
+        Norway: "https://invl.io/clm3olq",
         Peru: "",
         Argentina: "",
         Colombia: "",
-        "South Africa": "",
-        Brazil: "https://invl.io/clm3kb7",
         Russia: "",
-        Poland: "https://invl.io/clm3kb3",
+        "South Africa": "",
         Chile: "",
-        Mexico: "https://invl.io/clm3kbl",
-        Australia: "https://invl.io/clm3kbd",
       };
 
       function RankRows() {

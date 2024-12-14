@@ -638,10 +638,50 @@ padding-left: 20px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
+.deregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/DE.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.euregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/EU.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.jpregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/JP.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
 .mxregion-logo {
 background-size:  15px;
 background-position:  left center;
 background-image: url('flags/MX.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.noregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/NO.png');
 background-repeat: no-repeat;
 margin-left: 5px;
 padding-left: 20px;  /* width of the image plus a little extra padding */
@@ -692,6 +732,46 @@ display: inline-block;  /* may not need this, but I've found I do */
 background-size:  15px;
 background-position:  left center;
 background-image: url('flags/ZA.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.krregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/KR.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.seregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/SE.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.chregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/CH.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.gbregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/GB.png');
 background-repeat: no-repeat;
 margin-left: 5px;
 padding-left: 20px;  /* width of the image plus a little extra padding */
@@ -784,35 +864,48 @@ display: inline-block;
 }
 
 .coda-logo {
-background-size:  12px;
+background-size:  15px;
 background-position:  left center;
 background-image: url('flags/coda.png');
 background-repeat: no-repeat;
 /*margin-left: 10px;*/
-padding-left: 20px;  /* width of the image plus a little extra padding */
+/*padding-left: 20px;  /* width of the image plus a little extra padding */
+
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
 .shopee-logo {
-background-size:  12px;
+background-size:  15px;
 background-position:  left center;
 background-image: url('flags/shopee.png');
 background-repeat: no-repeat;
 /*margin-left: 10px;*/
-padding-left: 20px;  /* width of the image plus a little extra padding */
+/*padding-left: 20px;  /* width of the image plus a little extra padding */
+
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
 .lazada-logo {
-background-size:  12px;
+background-size:  15px;
 background-position:  left center;
 background-image: url('flags/lazada.png');
 background-repeat: no-repeat;
 /*margin-left: 10px;*/
-padding-left: 20px;  /* width of the image plus a little extra padding */
+/*padding-left: 15px;  /* width of the image plus a little extra padding */
+
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
+.seagmsm-logo {
+background-size: 15px;
+background-position:  left center;
+background-image: url('flags/seagm.png');
+background-repeat: no-repeat;
+/*margin-left: 10px;*/
+/*padding-left: 20px;  /* width of the image plus a little extra padding */
+
+display: inline-block;  /* may not need this, but I've found I do */
+}
 
 .vendors {
     padding-bottom: 0.5rem;
@@ -1114,19 +1207,25 @@ label:focus,
 .coda-logo {
     background-position: center;
     background-size:  15px;
-    padding: 10px;
+    padding: 2px;
 }
 
 .shopee-logo {
     background-position: center;
     background-size:  15px;
-    padding: 10px;
+    padding: 2px;
 }
 
 .lazada-logo {
     background-position: center;
     background-size:  15px;
-    padding: 10px;
+    padding: 2px;
+}
+
+.seagmsm-logo {
+    background-position: center;
+    background-size:  15px;
+    padding: 2px;
 }
 
 
@@ -1154,7 +1253,6 @@ label:focus,
 
 
 }
-
 
 
 
