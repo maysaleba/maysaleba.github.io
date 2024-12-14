@@ -16,6 +16,7 @@ import axios from "axios";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import InfoIcon from "@mui/icons-material/Info";
+import CloseIcon from "@mui/icons-material/Close";
 
 const style = {
   position: "absolute",
@@ -2043,6 +2044,15 @@ const getModalTextForCountry = (country) => {
                   }}
                 >
                   <Box sx={style}>
+                  <CloseIcon
+            onClick={handleClose}
+            style={{
+              position: "absolute",
+              top: "10px",
+              right: "10px",
+              cursor: "pointer",
+            }}
+          />
                     <Typography
                       id="modal-modal-title"
                       variant="h6"
@@ -2308,11 +2318,7 @@ const getModalTextForCountry = (country) => {
           {/*    <NaviBar />*/}
 
           <div className="m-3 p-auto" style={{ paddingBottom: 15 }}>
-            <a
-              href={matchGames[0].URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+
               <Card
                 className="border-0"
                 style={{
@@ -2324,21 +2330,26 @@ const getModalTextForCountry = (country) => {
                   // marginBottom: -10,
                 }}
               >
-                <Card.Img alt="" style={{}} src={matchGames[0].Image} />
 
+                <Card.Img alt="" style={{}} src={matchGames[0].Image} />
+                            <a
+              href={matchGames[0].URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
                 <Card.ImgOverlay>
                   <PlatformBadge
                     hasBadge={matchGames[0].platform}
                     esrbrating={matchGames[0].ESRBRating}
                   />
-                </Card.ImgOverlay>
+                </Card.ImgOverlay></a>
                 <PlatformOverlay
                   slug={matchGames[0].Slug}
                   isps4={matchGames[0].IsPS4}
                   isps5={matchGames[0].IsPS5}
                 />
               </Card>
-            </a>
+          
           </div>
           <OrigPrice />
           <Paper elevation={2} className="content-container">
