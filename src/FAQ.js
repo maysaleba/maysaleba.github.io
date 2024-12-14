@@ -11,6 +11,9 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import download from "./download.gif";
+import mark from "./flags/mark.png"
+import xmark from "./flags/xmark.png"
+import seagmlogo from "./flags/seagm.png"
 
 const About = () => {
   function createData(region, logoClass, dcvcard, seagmlogo, pasabuy) {
@@ -45,25 +48,25 @@ const regionLinks = {
 
 
   const rows = [
-    createData("Argentina", "arregion-logo", "❌", "","✔️"),
-    createData("Australia", "auregion-logo", "✔️","seagmsm-logo", "❌"),
-    createData("Brazil", "brregion-logo", "❌", "seagmsm-logo", "❌"),
-    createData("Canada", "caregion-logo", "✔️", "seagmsm-logo","❌"),
-    createData("Colombia", "coregion-logo", "✔️", "","❌"),
-    createData("Denmark", "deregion-logo", "✔️","seagmsm-logo","❌"),
-    createData("Europe", "euregion-logo", "✔️","seagmsm-logo", "❌"),
-    createData("Hong Kong", "hkregion-logo", "✔️","seagmsm-logo","❌"),
-    createData("Japan", "jpregion-logo", "✔️","seagmsm-logo","❌"), 
-    createData("Mexico", "mxregion-logo", "✔️","seagmsm-logo","❌"),
-    createData("Norway", "noregion-logo", "✔️","seagmsm-logo","❌"), 
-    createData("Peru", "peregion-logo", "✔️", "", "❌"),
-    createData("Poland", "plregion-logo", "✔️","seagmsm-logo", "❌"),
-    createData("South Africa", "zaregion-logo", "✔️", "", "❌"),
-    createData("South Korea", "krregion-logo", "✔️","seagmsm-logo","❌"), 
-    createData("Sweden", "seregion-logo", "✔️","seagmsm-logo", "❌"),  
-    createData("Switzerland", "chregion-logo", "✔️","seagmsm-logo", "❌"),   
-    createData("United Kingdom", "gbregion-logo", "✔️","seagmsm-logo", "❌"),    
-    createData("United States", "usregion-logo", "✔️", "seagmsm-logo", "❌"),
+    createData("Argentina", "arregion-logo", <img src={xmark}/>, <img src={xmark}/>,<img src={mark}/>),
+    createData("Australia", "auregion-logo", <img src={mark}/>,<img src={seagmlogo} style={{width: "17px"}} />, <img src={xmark}/>),
+    createData("Brazil", "brregion-logo", <img src={xmark}/>, <img src={seagmlogo} style={{width: "17px"}} />, <img src={xmark}/>),
+    createData("Canada", "caregion-logo", <img src={mark}/>, <img src={seagmlogo} style={{width: "17px"}} />,<img src={xmark}/>),
+    createData("Colombia", "coregion-logo", <img src={mark}/>, <img src={xmark}/>,<img src={xmark}/>),
+    createData("Denmark", "deregion-logo", <img src={mark}/>,<img src={seagmlogo} style={{width: "17px"}} />,<img src={xmark}/>),
+    createData("Europe", "euregion-logo", <img src={mark}/>,<img src={seagmlogo} style={{width: "17px"}} />, <img src={xmark}/>),
+    createData("Hong Kong", "hkregion-logo", <img src={mark}/>,<img src={seagmlogo} style={{width: "17px"}} />,<img src={xmark}/>),
+    createData("Japan", "jpregion-logo", <img src={mark}/>,<img src={seagmlogo} style={{width: "17px"}} />,<img src={xmark}/>), 
+    createData("Mexico", "mxregion-logo", <img src={mark}/>,<img src={seagmlogo} style={{width: "17px"}} />,<img src={xmark}/>),
+    createData("Norway", "noregion-logo", <img src={mark}/>,<img src={seagmlogo} style={{width: "17px"}} />,<img src={xmark}/>), 
+    createData("Peru", "peregion-logo", <img src={mark}/>, <img src={xmark}/>, <img src={xmark}/>),
+    createData("Poland", "plregion-logo", <img src={mark}/>,<img src={seagmlogo} style={{width: "17px"}} />, <img src={xmark}/>),
+    createData("South Africa", "zaregion-logo", <img src={mark}/>, <img src={xmark}/>, <img src={xmark}/>),
+    createData("South Korea", "krregion-logo", <img src={mark}/>,<img src={seagmlogo} style={{width: "17px"}} />,<img src={xmark}/>), 
+    createData("Sweden", "seregion-logo", <img src={mark}/>,<img src={seagmlogo} style={{width: "17px"}} />, <img src={xmark}/>),  
+    createData("Switzerland", "chregion-logo", <img src={mark}/>,<img src={seagmlogo} style={{width: "17px"}} />, <img src={xmark}/>),   
+    createData("United Kingdom", "gbregion-logo", <img src={mark}/>,<img src={seagmlogo} style={{width: "17px"}} />, <img src={xmark}/>),    
+    createData("United States", "usregion-logo", <img src={mark}/>, <img src={seagmlogo} style={{width: "17px"}} />, <img src={xmark}/>),
   ];
 
   // console.log(matchGames[0].description.split('\n'));
@@ -295,11 +298,12 @@ const regionLinks = {
     borderRight: "1px solid rgba(224, 224, 224, 1)",
   }}
 >
-                          {/* Flag Icon */}
-                        <span className={row.seagmlogo}>
-                          <img src={download} style = {{width: "20px", height: "20px"}}/>
-                        </span>
-                    
+  {/* Check if regionLinks[row.region] is not an empty string */}
+  {regionLinks[row.region] ? (
+    <a href={regionLinks[row.region]}>{row.seagmlogo}</a>
+  ) : (
+    row.seagmlogo // Just show the logo without the link
+  )}
 </TableCell>
 
 
