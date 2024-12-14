@@ -19,13 +19,6 @@ import seagmstep5 from "./images/seagm_img5.jpeg";
 import seagmstep6 from "./images/seagm_img6.jpeg";
 
 
-import form from "./images/form.jpg";
-import ticket from "./images/ticket.jpg";
-import regionality from "./images/regionality_invite.jpg";
-import language from "./images/language.jpg";
-import purchase from "./images/purchase.jpg";
-
-
 const SeaGMstep1 = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);

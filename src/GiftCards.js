@@ -1,149 +1,341 @@
 import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
+import { List, Paper, Grid, Box, TableHead, TableRow, Table, TableBody, TableCell, TableContainer, Button, Modal } from "@mui/material";
 import NaviBar from "./NaviBar";
-import {
-  List,
-  Paper
-} from "@mui/material";
 import styled from "styled-components";
 import download from "./download.gif";
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
+import mark from "./flags/mark.png";
+import xmark from "./flags/xmark.png";
+import seagmlogo from "./flags/seagm.png";
 
 
 
 const GiftCards = ({searchQuery, setSearchQuery}) => {
-  const BackgroundContainer = styled.div`
-    -blur-radius: 20px;
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    height: 60vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    background: #6767ab;
-    z-index: -1;
+ function createData(region, logoClass, seagmlogo) {
+    return { region, logoClass, seagmlogo };
+  }
 
-    &:after {
-      --color-background--rgb: 103, 103, 171;
-      content: "";
-      position: absolute;
-      height: 50%;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: transparent;
-      background: linear-gradient(
-        0deg,
-        rgba(var(--color-background--rgb), 1) 0,
-        rgba(var(--color-background--rgb), 0.987) 8.1%,
-        rgba(var(--color-background--rgb), 0.951) 15.5%,
-        rgba(var(--color-background--rgb), 0.896) 22.5%,
-        rgba(var(--color-background--rgb), 0.825) 29%,
-        rgba(var(--color-background--rgb), 0.741) 35.3%,
-        rgba(var(--color-background--rgb), 0.648) 41.2%,
-        rgba(var(--color-background--rgb), 0.55) 47.1%,
-        rgba(var(--color-background--rgb), 0.45) 52.9%,
-        rgba(var(--color-background--rgb), 0.352) 58.8%,
-        rgba(var(--color-background--rgb), 0.259) 64.7%,
-        rgba(var(--color-background--rgb), 0.175) 71%,
-        rgba(var(--color-background--rgb), 0.104) 77.5%,
-        rgba(var(--color-background--rgb), 0.049) 84.5%,
-        rgba(var(--color-background--rgb), 0.013) 91.9%,
-        rgba(var(--color-background--rgb), 0)
-      );
-    }
-  `;
 
-  const Background = styled.div`
-    --blur-radius: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: calc(var(--blur-radius) * -1) calc(var(--blur-radius) * -1);
-    background-size: cover;
-    background-position: 50%;
-    mix-blend-mode: overlay;
-    filter: blur(var(--blur-radius));
-  `;
+  const regionLinks = {
+    "United States": {
+      seagmlogo: "https://invl.io/clm3oli", // Seagm logo link
+    },
+    "United Kingdom": "https://invl.io/clm3oku", // One link for the whole region
+    Australia: "https://invl.io/clm3okz", // One link for the whole region
+    Europe: "https://invl.io/clm3ol2", // One link for the whole region
+    "Hong Kong": "https://invl.io/clm3ol6", // One link for the whole region
+    Canada: "https://invl.io/clm3ol8", // One link for the whole region
+    Mexico: "https://invl.io/clm3ola", // One link for the whole region
+    Switzerland: "https://invl.io/clm3olb", // One link for the whole region
+    Poland: "https://invl.io/clm3old", // One link for the whole region
+    "South Korea": "https://invl.io/clm3ole", // One link for the whole region
+    Japan: "https://invl.io/clm3olj", // One link for the whole region
+    Denmark: "https://invl.io/clm3oll", // One link for the whole region
+    Sweden: "https://invl.io/clm3olo", // One link for the whole region
+    Brazil: "https://invl.io/clm3olp", // One link for the whole region
+    Norway: "https://invl.io/clm3olq", // One link for the whole region
+    Peru: "",
+    Argentina: "",
+    Colombia: "",
+    "South Africa": "",
+    Chile: "",
+  };
 
+  const rows = [
+    createData(
+      "Argentina",
+      "arregion-logo",
+      
+      <img src={xmark} />,
+    
+    ),
+    createData(
+      "Australia",
+      "auregion-logo",
+ 
+      <img src={seagmlogo} style={{ width: "17px" }} />,
+
+    ),
+    createData(
+      "Brazil",
+      "brregion-logo",
+ 
+      <img src={seagmlogo} style={{ width: "17px" }} />,
+    
+    ),
+    createData(
+      "Canada",
+      "caregion-logo",
+    
+      <img src={seagmlogo} style={{ width: "17px" }} />,
+    
+    ),
+    createData(
+      "Chile",
+      "clregion-logo",
+      
+      <img src={xmark} />,
+      
+    ),
+    createData(
+      "Colombia",
+      "coregion-logo",
+      
+      <img src={xmark} />,
+     
+    ),
+    createData(
+      "Denmark",
+      "deregion-logo",
+    
+      <img src={seagmlogo} style={{ width: "17px" }} />,
+      
+    ),
+    createData(
+      "Europe",
+      "euregion-logo",
+     
+      <img src={seagmlogo} style={{ width: "17px" }} />,
+     
+    ),
+    createData(
+      "Hong Kong",
+      "hkregion-logo",
+      
+      <img src={seagmlogo} style={{ width: "17px" }} />,
+     
+    ),
+    createData(
+      "Japan",
+      "jpregion-logo",
+      
+      <img src={seagmlogo} style={{ width: "17px" }} />,
+     
+    ),
+    createData(
+      "Mexico",
+      "mxregion-logo",
+     
+      <img src={seagmlogo} style={{ width: "17px" }} />,
+      
+    ),
+    createData(
+      "Norway",
+      "noregion-logo",
+     
+      <img src={seagmlogo} style={{ width: "17px" }} />,
+      
+    ),
+    createData(
+      "Peru",
+      "peregion-logo",
+    
+      <img src={xmark} />,
+   
+    ),
+    createData(
+      "Poland",
+      "plregion-logo",
+     
+      <img src={seagmlogo} style={{ width: "17px" }} />,
+     
+    ),
+    createData(
+      "South Africa",
+      "zaregion-logo",
+    
+      <img src={xmark} />,
+     
+    ),
+    createData(
+      "South Korea",
+      "krregion-logo",
+     
+      <img src={seagmlogo} style={{ width: "17px" }} />,
+    
+    ),
+    createData(
+      "Sweden",
+      "seregion-logo",
+     
+      <img src={seagmlogo} style={{ width: "17px" }} />,
+     
+    ),
+    createData(
+      "Switzerland",
+      "chregion-logo",
+    
+      <img src={seagmlogo} style={{ width: "17px" }} />,
+    
+    ),
+    createData(
+      "United Kingdom",
+      "gbregion-logo",
+      
+      <img src={seagmlogo} style={{ width: "17px" }} />,
+      
+    ),
+    createData(
+      "United States",
+      "usregion-logo",
+      
+      <img src={seagmlogo} style={{ width: "17px" }} />,
+      
+    ),
+  ];
   // console.log(matchGames[0].description.split('\n'));
   return (
     <div>
-      <BackgroundContainer>
-        <Background />
-      </BackgroundContainer>
       <NaviBar />
       <Paper elevation={2} className="content-container">
         <div style={{ fontSize: 14 }}>
+
           <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
             <CardGiftcardIcon/> Gift Cards
           </Card.Header>
-          
-          <Card.Header style={{ backgroundColor: "white"}}>
-            <div className="logonen shopee">
-              <img src={download} />
-            </div>
+          <Card.Header style={{ backgroundColor: "white" }}>
+            <strong><p id="eshop-gift-cards"/>Pay using Nintendo eShop Gift Card </strong>
           </Card.Header>
-            <Card.Body>
-            Support our website by buying Gift Cards from our Shopee.ph affiliate links! 
-            <br />These are
-            available in denominations of:
-            <br />
-            <List>
-              <Row xs={2} sm={2}>
-                <Col>
-                 <span className="usregion-logo" style={{paddingRight:5}}>US</span>
-                  Nintendo eShop
-                </Col>
-                <Col>
-                <span className="usregion-logo" style={{paddingRight:5}}>US</span>
-                  Playstation Store
-                  
-                </Col>
-              </Row>
-              <Row>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/1L1Rd1cdsH">$10 - ₱520</a></Col>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/4zujzcSWci">$10 - ₱500</a></Col>
-              </Row>
-              <Row>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/1L1Rd1cdsH">$20 - ₱1,040</a></Col>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/4zujzcSWci">$20 - ₱1,000</a></Col>
-              </Row>
-              <Row>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/1L1Rd1cdsH">$35 - ₱1,820</a></Col>
-                 <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/4zujzcSWci">$25 - ₱1,250</a></Col>
-              </Row>
-              <Row>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/1L1Rd1cdsH">$50 - ₱2,450</a></Col>
-                <Col style={{marginLeft: 25}}><a className="giftcardlink" href="https://shope.ee/4zujzcSWci">$50 - ₱2,500</a></Col>
-              </Row>
-            </List>
-            <br />
-            Please be advised that prices indicated here might change without notice.
-            <br /> Click and visit the Shopee store to get the most accurate price.
-          </Card.Body>
-            <Card.Header style={{ backgroundColor: "white" }}>
-           <strong>What is the process of buying Gift Cards from your Shopee.ph affiliate?</strong>
-           </Card.Header>
-           <Card.Body>
+          <Card.Body>
+            Use Nintendo eShop Gift Cards (Prepaid Cards) to add funds into your
+            Nintendo account and purchase your game
             <ol>
-              <li>Select Gift Card denomination</li>
-<li>Click 'Add to Cart' or 'Buy now'</li>
-<li>Proceed with Checkout</li>
-<li>Select any of the available Payment methods</li>
-      <ul>
-        <li>Linked Bank Account (BPI Online)</li>
-        <li>Payment Center / e-Wallet (e.g. Bayad Center, 7-eleven CLiQQ, GCash, Coins.ph Wallet etc...)</li>
-        <li>Over-the-counter</li>
-        <li>Online Payment</li>
-        </ul>
-      <li>Once payment is confirmed, send a chat message to the Shop. <strong>Code will be replied through chat, usually within a few minutes</strong></li>
+              <li>
+                On the eShop checkout screen, choose <b>Nintendo eShop Card</b>{" "}
+                as your payment method
+              </li>
+              <li>
+                Enter your <b>16-digit Nintendo eShop Prepaid Code</b>
+              </li>
+              <li>
+                Select <b>Purchase</b> to complete the transaction
+              </li>
             </ol>
-           </Card.Body>
+            You can buy Nintendo eShop Gift Cards from our affiliates below:
+            <ul>
+              <li>
+                <a
+                  href="https://invl.io/clm3oie"
+                  target="_blank"
+                  style={{ color: "#fc430a", fontWeight: "bold" }}
+                >
+                  SEAGM
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://s.shopee.ph/6V6xDmuabY"
+                  target="_blank"
+                  style={{ color: "#fc430a", fontWeight: "bold" }}
+                >
+                  Shopee (US only)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://bit.ly/3L2qm2e"
+                  target="_blank"
+                  style={{ color: "#fc430a", fontWeight: "bold" }}
+                >
+                  Lazada (US only)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://bit.ly/3pxXLXT"
+                  target="_blank"
+                  style={{ color: "#fc430a", fontWeight: "bold" }}
+                >
+                  Codashop (US only)
+                </a>
+              </li>
+            </ul>
+        
+         
+            <b>Click on the SEAGM icon to purchase a eShop Gift Card for that region</b>
+              <p/>
+             <TableContainer component={Paper}>
+              <Table
+                sx={{ width: "100%" }}
+                size="small"
+                aria-label="a dense table"
+              >
+                <TableHead>
+                  <TableRow>
+                    <TableCell
+                      style={{
+                        fontFamily: "system-ui",
+                        borderRight: "1px solid rgba(224, 224, 224, 1)",
+                      }}
+                    >
+                      <b>Region</b>
+                    </TableCell>
+             
+                    <TableCell
+                      style={{
+                        fontFamily: "system-ui",
+                        borderRight: "1px solid rgba(224, 224, 224, 1)",
+                        // padding: "0px",
+                        // paddingLeft: "20px"
+                      }}
+                      align="center"
+                    >
+                      <b>eShop Gift Cards</b>
+                    </TableCell>
+
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {rows.map((row, index) => (
+                    <TableRow
+                      key={index}
+                      sx={{
+                        "& > *": {
+                          borderBottom: "1px solid rgba(224, 224, 224, 1)",
+                          borderRight: "1px solid rgba(224, 224, 224, 1)",
+                        },
+                        "& > *:last-child": {
+                          borderRight: "none",
+                        },
+                      }}
+                    >
+                      <TableCell
+                        component="th"
+                        scope="row"
+                        style={{
+                          fontFamily: "system-ui",
+                          borderBottom: "1px solid rgba(224, 224, 224, 1)",
+                          borderRight: "1px solid rgba(224, 224, 224, 1)",
+                          alignItems: "center",
+                        }}
+                      >
+                        {/* Flag Icon */}
+                        <span className={row.logoClass}>{row.region}</span>
+                      </TableCell>
+
+                      <TableCell
+                        align="center"
+                        style={{
+                          fontFamily: "system-ui",
+                          borderBottom: "1px solid rgba(224, 224, 224, 1)",
+                          borderRight: "1px solid rgba(224, 224, 224, 1)",
+                        }}
+                      >
+                        {/* Check if regionLinks[row.region] is not an empty string */}
+                        {regionLinks[row.region] ? (
+                          <a href={regionLinks[row.region]}>{row.seagmlogo}</a>
+                        ) : (
+                          row.seagmlogo // Just show the logo without the link
+                        )}
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </Card.Body>
+          
         </div>
       </Paper>
     </div>
