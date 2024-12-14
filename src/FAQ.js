@@ -21,9 +21,6 @@ const About = () => {
 const regionLinks = {
   "United States": {
     seagmlogo: "https://invl.io/clm3oli", // Seagm logo link
-    shpelogo: "https://s.shopee.ph/6V6xDmuabY", // Shopee logo link
-    lazlogo: "https://bit.ly/3L2qm2e", // Lazada logo link
-    codalogo: "https://bit.ly/3pxXLXT", // Coda logo link
   },
   "United Kingdom": "https://invl.io/clm3oku", // One link for the whole region
   Australia: "https://invl.io/clm3okz", // One link for the whole region
@@ -219,6 +216,7 @@ const regionLinks = {
                       style={{
                         fontFamily: "system-ui",
                         borderRight: "1px solid rgba(224, 224, 224, 1)",
+
                       }}
                     >
                       <b>Region</b>
@@ -228,7 +226,7 @@ const regionLinks = {
                         fontFamily: "system-ui",
                         borderRight: "1px solid rgba(224, 224, 224, 1)",
                       }}
-                      align="left"
+                      align="center"
                     >
                       <b>D/C/V Cards</b>
                     </TableCell>
@@ -236,14 +234,14 @@ const regionLinks = {
                       style={{
                         fontFamily: "system-ui",
                         borderRight: "1px solid rgba(224, 224, 224, 1)",
-                         padding: "0px",
-                         paddingLeft: "20px"
+                         // padding: "0px",
+                         // paddingLeft: "20px"
                       }}
-                      align="left"
+                      align="center"
                     >
                       <b>eShop Gift Cards</b>
                     </TableCell>
-                    <TableCell style={{ fontFamily: "system-ui" }} align="left">
+                    <TableCell style={{ fontFamily: "system-ui" }} align="center">
                       <b>Pasabuy</b>
                     </TableCell>
                   </TableRow>
@@ -281,7 +279,7 @@ const regionLinks = {
                         <span>{row.region}</span>
                       </TableCell>
                       <TableCell
-                        align="left"
+                        align="center"
                         style={{
                           fontFamily: "system-ui",
                           borderBottom: "1px solid rgba(224, 224, 224, 1)",
@@ -296,9 +294,6 @@ const regionLinks = {
     fontFamily: "system-ui",
     borderBottom: "1px solid rgba(224, 224, 224, 1)",
     borderRight: "1px solid rgba(224, 224, 224, 1)",
-    padding: "0px",
-    paddingLeft: "20px",
-    paddingRight: "20px"
   }}
 >
   <div
@@ -381,7 +376,7 @@ const regionLinks = {
 
 
                       <TableCell
-                        align="left"
+                        align="center"
                         style={{
                           fontFamily: "system-ui",
                           borderBottom: "1px solid rgba(224, 224, 224, 1)",
