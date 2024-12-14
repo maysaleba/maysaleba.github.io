@@ -236,6 +236,8 @@ const regionLinks = {
                       style={{
                         fontFamily: "system-ui",
                         borderRight: "1px solid rgba(224, 224, 224, 1)",
+                         padding: "0px",
+                         paddingLeft: "20px"
                       }}
                       align="left"
                     >
@@ -269,6 +271,7 @@ const regionLinks = {
                           borderRight: "1px solid rgba(224, 224, 224, 1)",
                           alignItems: "center",
                           display: "flex"
+
                         }}
                       >
                         {/* Flag Icon */}
@@ -293,6 +296,9 @@ const regionLinks = {
     fontFamily: "system-ui",
     borderBottom: "1px solid rgba(224, 224, 224, 1)",
     borderRight: "1px solid rgba(224, 224, 224, 1)",
+    padding: "0px",
+    paddingLeft: "20px",
+    paddingRight: "20px"
   }}
 >
   <div
@@ -311,8 +317,8 @@ const regionLinks = {
           <img
             src={download}
             style={{
-              width: "20px",
-              height: "20px",
+              width: "15px",
+              height: "15px",
               objectFit: "contain",
             }}
           />
@@ -327,8 +333,8 @@ const regionLinks = {
           <img
             src={download}
             style={{
-              width: "20px",
-              height: "20px",
+              width: "15px",
+              height: "15px",
               objectFit: "contain",
             }}
           />
@@ -343,8 +349,8 @@ const regionLinks = {
           <img
             src={download}
             style={{
-              width: "20px",
-              height: "20px",
+              width: "15px",
+              height: "15px",
               objectFit: "contain",
             }}
           />
@@ -359,8 +365,8 @@ const regionLinks = {
           <img
             src={download}
             style={{
-              width: "20px",
-              height: "20px",
+              width: "15px",
+              height: "15px",
               objectFit: "contain",
             }}
           />
