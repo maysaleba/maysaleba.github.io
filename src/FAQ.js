@@ -13,8 +13,8 @@ import TableRow from "@mui/material/TableRow";
 import download from "./download.gif";
 
 const About = () => {
-  function createData(region, logoClass, dcvcard, seagmlogo, shpelogo, lazlogo, codalogo, pasabuy) {
-    return { region, logoClass, dcvcard, seagmlogo, shpelogo, lazlogo, codalogo, pasabuy };
+  function createData(region, logoClass, dcvcard, seagmlogo, pasabuy) {
+    return { region, logoClass, dcvcard, seagmlogo, pasabuy };
   }
 
 
@@ -45,25 +45,25 @@ const regionLinks = {
 
 
   const rows = [
-    createData("Argentina", "arregion-logo", "❌", "", "", "", "", "✔️"),
-    createData("Australia", "auregion-logo", "✔️","seagmsm-logo", "", "", "",  "❌"),
-    createData("Brazil", "brregion-logo", "❌", "seagmsm-logo", "", "", "", "❌"),
-    createData("Canada", "caregion-logo", "✔️", "seagmsm-logo", "", "", "", "❌"),
-    createData("Colombia", "coregion-logo", "✔️", "", "", "", "", "❌"),
-    createData("Denmark", "deregion-logo", "✔️","seagmsm-logo", "", "", "", "❌"),
-    createData("Europe", "euregion-logo", "✔️","seagmsm-logo", "", "", "", "❌"),
-    createData("Hong Kong", "hkregion-logo", "✔️","seagmsm-logo", "", "", "", "❌"),
-    createData("Japan", "jpregion-logo", "✔️","seagmsm-logo", "", "", "", "❌"), 
-    createData("Mexico", "mxregion-logo", "✔️","seagmsm-logo", "", "", "", "❌"),
-    createData("Norway", "noregion-logo", "✔️","seagmsm-logo", "", "", "", "❌"), 
-    createData("Peru", "peregion-logo", "✔️", "", "", "", "", "❌"),
-    createData("Poland", "plregion-logo", "✔️","seagmsm-logo", "", "", "", "❌"),
-    createData("South Africa", "zaregion-logo", "✔️", "", "", "", "", "❌"),
-    createData("South Korea", "krregion-logo", "✔️","seagmsm-logo", "", "", "", "❌"), 
-    createData("Sweden", "seregion-logo", "✔️","seagmsm-logo", "", "", "", "❌"),  
-    createData("Switzerland", "chregion-logo", "✔️","seagmsm-logo", "", "", "", "❌"),   
-    createData("United Kingdom", "gbregion-logo", "✔️","seagmsm-logo", "", "", "", "❌"),    
-    createData("United States", "usregion-logo", "✔️", "seagmsm-logo", "shopee-logo", "lazada-logo", "coda-logo", "❌"),
+    createData("Argentina", "arregion-logo", "❌", "","✔️"),
+    createData("Australia", "auregion-logo", "✔️","seagmsm-logo", "❌"),
+    createData("Brazil", "brregion-logo", "❌", "seagmsm-logo", "❌"),
+    createData("Canada", "caregion-logo", "✔️", "seagmsm-logo","❌"),
+    createData("Colombia", "coregion-logo", "✔️", "","❌"),
+    createData("Denmark", "deregion-logo", "✔️","seagmsm-logo","❌"),
+    createData("Europe", "euregion-logo", "✔️","seagmsm-logo", "❌"),
+    createData("Hong Kong", "hkregion-logo", "✔️","seagmsm-logo","❌"),
+    createData("Japan", "jpregion-logo", "✔️","seagmsm-logo","❌"), 
+    createData("Mexico", "mxregion-logo", "✔️","seagmsm-logo","❌"),
+    createData("Norway", "noregion-logo", "✔️","seagmsm-logo","❌"), 
+    createData("Peru", "peregion-logo", "✔️", "", "❌"),
+    createData("Poland", "plregion-logo", "✔️","seagmsm-logo", "❌"),
+    createData("South Africa", "zaregion-logo", "✔️", "", "❌"),
+    createData("South Korea", "krregion-logo", "✔️","seagmsm-logo","❌"), 
+    createData("Sweden", "seregion-logo", "✔️","seagmsm-logo", "❌"),  
+    createData("Switzerland", "chregion-logo", "✔️","seagmsm-logo", "❌"),   
+    createData("United Kingdom", "gbregion-logo", "✔️","seagmsm-logo", "❌"),    
+    createData("United States", "usregion-logo", "✔️", "seagmsm-logo", "❌"),
   ];
 
   // console.log(matchGames[0].description.split('\n'));
@@ -268,15 +268,14 @@ const regionLinks = {
                           borderBottom: "1px solid rgba(224, 224, 224, 1)",
                           borderRight: "1px solid rgba(224, 224, 224, 1)",
                           alignItems: "center",
-                          display: "flex"
 
                         }}
                       >
                         {/* Flag Icon */}
                         <span className={row.logoClass}>
-                          <img src={download} />
+                         {row.region}
                         </span>
-                        <span>{row.region}</span>
+                      
                       </TableCell>
                       <TableCell
                         align="center"
@@ -296,82 +295,11 @@ const regionLinks = {
     borderRight: "1px solid rgba(224, 224, 224, 1)",
   }}
 >
-  <div
-    style={{
-      display: "flex",
-      flexWrap: "nowrap",  // Prevent wrapping, keep the images in a row
-       justifyContent: row.shpelogo || row.lazlogo || row.seagmlogo || row.codalogo ? "center" : "center", // If any logo exists, align left, otherwise center
-      gap: "20px",  // Space between images
-      overflow: "hidden",  // Prevent overflow on small screens
-    }}
-  >
-    {/* SEAGM logo */}
-    {row.seagmlogo && (row.region === "United States" ? regionLinks["United States"]?.seagmlogo : regionLinks[row.region]) && (
-      <a href={row.region === "United States" ? regionLinks["United States"]?.seagmlogo : regionLinks[row.region]}>
-        <span className={row.seagmlogo}>
-          <img
-            src={download}
-            style={{
-              width: "15px",
-              height: "15px",
-              objectFit: "contain",
-            }}
-          />
-        </span>
-      </a>
-    )}
-
-    {/* Shopee logo */}
-    {row.shpelogo && (row.region === "United States" ? regionLinks["United States"]?.shpelogo : regionLinks[row.region]) && (
-      <a href={row.region === "United States" ? regionLinks["United States"]?.shpelogo : regionLinks[row.region]}>
-        <span className={row.shpelogo}>
-          <img
-            src={download}
-            style={{
-              width: "15px",
-              height: "15px",
-              objectFit: "contain",
-            }}
-          />
-        </span>
-      </a>
-    )}
-
-    {/* Lazada logo */}
-    {row.lazlogo && (row.region === "United States" ? regionLinks["United States"]?.lazlogo : regionLinks[row.region]) && (
-      <a href={row.region === "United States" ? regionLinks["United States"]?.lazlogo : regionLinks[row.region]}>
-        <span className={row.lazlogo}>
-          <img
-            src={download}
-            style={{
-              width: "15px",
-              height: "15px",
-              objectFit: "contain",
-            }}
-          />
-        </span>
-      </a>
-    )}
-
-    {/* Codashop logo */}
-    {row.codalogo && (row.region === "United States" ? regionLinks["United States"]?.codalogo : regionLinks[row.region]) && (
-      <a href={row.region === "United States" ? regionLinks["United States"]?.codalogo : regionLinks[row.region]}>
-        <span className={row.codalogo}>
-          <img
-            src={download}
-            style={{
-              width: "15px",
-              height: "15px",
-              objectFit: "contain",
-            }}
-          />
-        </span>
-      </a>
-    )}
-
-    {/* Show ❌ if all logos are empty */}
-    {!(row.seagmlogo || row.shpelogo || row.lazlogo || row.codalogo) && "❌"}
-  </div>
+                          {/* Flag Icon */}
+                        <span className={row.seagmlogo}>
+                          <img src={download} style = {{width: "20px", height: "20px"}}/>
+                        </span>
+                    
 </TableCell>
 
 
