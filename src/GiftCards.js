@@ -253,7 +253,7 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
             </ul>
         
          
-            <b>Click on the SEAGM icon to purchase a eShop Gift Card for that region</b>
+            <b>Click on the SEAGM icon to purchase an eShop Gift Card for that region</b>
               <p/>
              <TableContainer component={Paper}>
               <Table
