@@ -423,7 +423,7 @@ const About = () => {
     createData(
       "South Korea",
       "krregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={seagmlogo} style={{ width: "17px" }} />,
       <img src={xmark} />
     ),
@@ -625,7 +625,7 @@ const About = () => {
                       }}
                       align="center"
                     >
-                      <b>D/C/V Cards</b>
+                      <b>Debit/Credit/Virtual Cards</b>
                     </TableCell>
                     <TableCell
                       style={{
