@@ -18,9 +18,7 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
 
 
   const regionLinks = {
-    "United States": {
-      seagmlogo: "https://invl.io/clm3oli", // Seagm logo link
-    },
+    "United States":  "https://invl.io/clm3oli", // Seagm logo link
     "United Kingdom": "https://invl.io/clm3oku", // One link for the whole region
     Australia: "https://invl.io/clm3okz", // One link for the whole region
     Europe: "https://invl.io/clm3ol2", // One link for the whole region
