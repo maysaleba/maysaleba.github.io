@@ -808,7 +808,7 @@ const About = () => {
             </strong>
           </Card.Header>
           <Card.Body>
-          <b>SEAGM (SEA Gamer Mall)</b> is a popular online platform where you can purchase eShop codes for various Nintendo services. Follow these steps to buy eShop codes easily and securely:
+          <b>SEAGM (SEA Gamer Mall)</b> is a popular online platform where you can purchase eShop Gift Card for various Nintendo eShop regions. Follow these steps to buy eShop codes easily and securely:
                       <Card.Body>
             <Box sx={{ flexGrow: 1 }}>
               <Grid container spacing={2}>
