@@ -1629,11 +1629,11 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                   textAlign: "center",
                 }}
               >
-                Top-up Argentina Funds with{" "}
+                You can only buy from Argentina via{" "}
                 <a className="infotax" href="https://maysaleba.com/pasabuy">
                   Pasabuy
                 </a>
-                . Argentina Price is inclusive of 59% tax and service fee.
+                . Argentina Price is based on 10K ARS top up, inclusive of 59% tax and service fee.
                 {/*
  Note: Argentina eShop only accepts payment from Argentina issued cards. Use {" "}
                 <a
