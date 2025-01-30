@@ -18,6 +18,8 @@ import { Helmet } from "react-helmet";
 import axios from "axios";
 // import MessengerCustomerChat from 'react-messenger-customer-chat';
 
+
+
 var today = new Date();
 // var lastd = new Date(today.setDate(today.getDate()+1));
 var dd = String(today.getDate()).padStart(2, "0");
@@ -53,8 +55,18 @@ function sortJson(element, prop, propType, asc) {
   return element;
 }
 
-
+  
   const reviewsswf = reviewssw.filter(review => review.SaleStarted !== '0000-00-00');
+  const reviewsstf = reviewsst.filter(review => 
+  review.PlusPrice !== undefined &&
+  review.ReleaseDate !== undefined &&
+  review.SaleEnds !== undefined &&
+  review.SaleStarted !== undefined &&
+  review.Publisher !== undefined &&
+  review.genre !== undefined &&
+  review.description !== undefined
+);
+
   const { search } = window.location;
   const query = new URLSearchParams(search).get("s");
 
@@ -125,7 +137,7 @@ function sortJson(element, prop, propType, asc) {
 
   useEffect(() => {
     const sortedswitch =  sortJson(reviewsswf, "Popularity", "int", false);  
-    const sortedPlaystation = sortJson(reviewsst, "Popularity", "int", false);
+    const sortedPlaystation = sortJson(reviewsstf, "Popularity", "int", false);
     const reviews = sortedPlaystation.concat(sortedswitch)
     // /.concat(reviewsst);
     setLatestField(reviews);
@@ -377,7 +389,7 @@ const cleanFilterField = filterField.replace(/[^a-zA-Z0-9é, -]/g, "").replace("
             <MainPage
               filteredReviews={filteredReviews}
               pageData={pageData}
-              reviewsps={reviewsst}
+              reviewsps={reviewsstf}
             />
             <Helmet>
               <meta charset="utf-8" />
@@ -545,7 +557,7 @@ const cleanFilterField = filterField.replace(/[^a-zA-Z0-9é, -]/g, "").replace("
                 name="description"
                 content={
                   "Get to know about " +
-                  reviewsst.length +
+                  reviewsstf.length +
                   " Playstation deals in Philippine Peso!"
                 }
               />
@@ -609,7 +621,7 @@ const cleanFilterField = filterField.replace(/[^a-zA-Z0-9é, -]/g, "").replace("
             <Pasabuy
               filteredReviews={filteredReviews}
               pageData={pageData}
-              reviewsps={reviewsst}
+              reviewsps={reviewsstf}
              />
             <Helmet>
               <meta charset="utf-8" />
