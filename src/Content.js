@@ -1557,14 +1557,14 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       var regionalityTax =
         matchGames[0].ArgentinaPrice *
         arsExchange *
-        1.59 *
-        ((1650 - 15900 * arsExchange) / (15900 * arsExchange));
+        1.21 *
+        ((1500 - 12100 * arsExchange) / (12100 * arsExchange));
       // console.log("regionality" + regionalityTax)
 
       var argentinaTax = Math.round(
         (testBoolean
-          ? matchGames[0].ArgentinaPrice * arsExchange * 1.59
-          : matchGames[0].ArgentinaPrice * arsExchange * 1.59) -
+          ? matchGames[0].ArgentinaPrice * arsExchange * 1.21
+          : matchGames[0].ArgentinaPrice * arsExchange * 1.21) -
           matchGames[0].ArgentinaPrice * arsExchange
       );
 
@@ -1629,11 +1629,11 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
                   textAlign: "center",
                 }}
               >
-                You can only buy from Argentina via{" "}
+                You can only buy from Argentina via {" "}
                 <a className="infotax" href="https://maysaleba.com/pasabuy">
                   Pasabuy
                 </a>
-                . Argentina Price is based on 10K ARS top up, inclusive of 59% tax and service fee.
+                . Argentina Price is based on 10K ARS top up, inclusive of 21% tax and service fee.
                 {/*
  Note: Argentina eShop only accepts payment from Argentina issued cards. Use {" "}
                 <a

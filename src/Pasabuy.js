@@ -47,12 +47,12 @@ const formattedDate = currentDate.toLocaleDateString("en-US", {
 });
 
 const rows = [
-  createData("10,000 ARS", "₱1,650"),
-  createData("20,000 ARS", "₱3,150"),
-  createData("30,000 ARS", "₱4,800"),
-  createData("40,000 ARS", "₱6,300"),
-  createData("50,000 ARS", "₱7,500"),
-  createData("100,000 ARS", "₱14,000"),
+  createData("10,000 ARS", "P1,500"),
+  createData("20,000 ARS", "P2,900"),
+  createData("30,000 ARS", "P4,400"),
+  createData("40,000 ARS", "P5,800"),
+  createData("50,000 ARS", "P6,750"),
+  createData("100,000 ARS", "P12,500"),
 ];
 
 const DiscordModal = () => {
@@ -703,44 +703,44 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
             </TableContainer>
             <p />
             <ul>
-              <li>Minimum top-up of 1,650 PHP for 10,000 ARS.</li>
+              <li>Minimum top-up of 1,500 PHP for 10,000 ARS.</li>
               <li>
-                Please note that because there is a +59% tax on top of every
-                digital purchase in Argentina, you are actually paying 1,650 PHP
-                for 15,900 ARS or 1,050 PHP (as of this writing's foreign
+                Please note that because there is a +21% tax on top of every
+                digital purchase in Argentina, you are actually paying 1,500 PHP
+                for 12,100 ARS or 620 PHP (as of this writing's foreign
                 exchange rate).
               </li>
               <li>
-                A pasabuy service's actual mark-up would be: (1,650 - 1,050) /
-                1,650 = 57%{" "}
+                A pasabuy service's actual mark-up would be: (1,500 - 620) /
+                1,500 = 59%{" "}
               </li>
               <li>
-                <b>Is it worth paying 57% more for a game in Argentina?</b>
+                <b>Is it worth paying 59% more for a game in Argentina?</b>
               </li>
               <ul>
                 <li>
                   It depends on the game, Sea of Stars for example:
                   <br />
-                  Price in Argentina when on sale: 3199 ARS = 211 PHP * 1.59
-                  (Tax) = 335 PHP
+                  Price in Argentina when on sale: 3199 ARS = 211 PHP * 1.21
+                  (Tax) = 255 PHP
                   <br />
-                  Pasabuy Service Fee: 335 PHP * 0.57 (Service Fee) = 191 PHP
+                  Pasabuy Service Fee: 255 PHP * 0.59 (Service Fee) = 150 PHP
                   <br />
-                  Total Price buying from Argentina: 526 PHP
+                  Total Price buying from Argentina: 405 PHP
                   <br />
-                  Price in Chile when on sale (next cheapest region): 815 PHP
+                  Price in Brazil when on sale (next cheapest region): 690 PHP
                 </li>
               </ul>
               <li>
-                This means that if you choose to buy 1,650 PHP for 10,000 ARS
+                This means that if you choose to buy 1,500 PHP for 10,000 ARS
                 and you get Sea of Stars, you are effectively buying Sea of
-                Stars for 526 PHP as of this writing's foreign exchange rate.{" "}
+                Stars for 405 PHP as of this writing's foreign exchange rate.{" "}
                 <b>Still cheaper than the next cheapest region!</b>
               </li>
               <li>
                 <b>
                   Argentina prices reflected on the website already accounts for
-                  the 59% tax and 57% service fee, so you would know if it is
+                  the 21% tax and 59% service fee, so you would know if it is
                   still the cheapest region to buy all things considered!
                 </b>
               </li>

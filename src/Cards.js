@@ -221,12 +221,12 @@ diffDays = Math.round((secondDate - firstDate) / oneDay) + 1;
       //     ArgentinaPrice
       // );
 
-      var regionalityTax = ArgentinaPrice * arsExchange * 1.59 * ((1650 - (15900 * arsExchange))/ (15900 * arsExchange))
+      var regionalityTax = ArgentinaPrice * arsExchange * 1.21 * ((1500 - (12100 * arsExchange))/ (12100 * arsExchange))
 
       var argentinaTax = Math.round(
         (testBoolean
-          ? ArgentinaPrice * arsExchange * 1.59
-          : ArgentinaPrice * arsExchange * 1.59) -
+          ? ArgentinaPrice * arsExchange * 1.21
+          : ArgentinaPrice * arsExchange * 1.21) -
           ArgentinaPrice * arsExchange
       );
 
@@ -561,9 +561,21 @@ else if (PlusPrice === 202020) {
 
 
   function PlatformOverlay(props) {
+    const title = props.title;
     const slug = props.slug;
     const isps4 = props.isps4
     const isps5 = props.isps5
+
+if (!slug) {
+  console.error("Undefined slug found in record:", title);
+} else if (slug.includes("switch")) {
+  return (
+    <>
+      <div className="additional-overlay">NSW</div>
+    </>
+  );
+}
+
     if (slug.includes("switch")) {
       return (
         <>
@@ -633,7 +645,7 @@ else if (PlusPrice === 202020) {
             <PlatformBadge hasBadge={Platform} esrbrating={ESRBRating} slug={Slug}/>
             <OpenScore hasScore={Score} />
         </Card.ImgOverlay>
-<PlatformOverlay slug={Slug} isps4={IsPS4} isps5={IsPS5}/>
+<PlatformOverlay slug={Slug} isps4={IsPS4} isps5={IsPS5} title={Title}/>
 </div>
     <Card.Body>
         <Card.Title className="card-title">{Title.replace(/ *\([^)]*\) */g, "").replaceAll("Ã¢„Â™","™").replace("â„¢","™")}</Card.Title>
