@@ -114,6 +114,7 @@
 <url> <loc>https://www.maysaleba.com?/games/lego-marvel-super-heroes-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/kingdom-hearts-melody-of-memory-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/roundguard-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/steamworld-heist-ii-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/atelier-lulua-the-scion-of-arland-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/super-impossible-road-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/pic-a-pix-deluxe-switch</loc> </url>
@@ -229,7 +230,6 @@
 <url> <loc>https://www.maysaleba.com?/games/harvestella-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/sd-gundam-battle-alliance-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/old-mans-journey-switch</loc> </url>
-<url> <loc>https://www.maysaleba.com?/games/virgo-versus-the-zodiac-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/the-takeover-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/monster-prom-xxl-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/bridge-constructor-ultimate-edition-switch</loc> </url>
@@ -245,6 +245,7 @@
 <url> <loc>https://www.maysaleba.com?/games/kowloon-high-school-chronicle-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/layers-of-fear-2-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/battle-axe-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/rhythm-fighter-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/blue-fire-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/bridge-constructor-portal-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/the-smurfs-dreams-switch</loc> </url>
@@ -280,7 +281,6 @@
 <url> <loc>https://www.maysaleba.com?/games/romancing-saga-2-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/hyper-sentinel-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/naruto-shippuden-ultimate-ninja-storm-trilogy-switch</loc> </url>
-<url> <loc>https://www.maysaleba.com?/games/ty-the-tasmanian-tiger-hd-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/inversus-deluxe-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/keylocker-turn-based-cyberpunk-action-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/star-wars-republic-commando-switch</loc> </url>
@@ -355,8 +355,6 @@
 <url> <loc>https://www.maysaleba.com?/games/adore-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/mazm-the-phantom-of-the-opera-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/dragon-ball-the-breakers-switch</loc> </url>
-<url> <loc>https://www.maysaleba.com?/games/almost-there-the-platformer-switch</loc> </url>
-<url> <loc>https://www.maysaleba.com?/games/nightmare-reaper-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/all-star-fruit-racing-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/brief-battles-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/dr-fetus-mean-meat-machine-switch</loc> </url>
@@ -380,6 +378,8 @@
 <url> <loc>https://www.maysaleba.com?/games/subaracity-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/tools-up-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/clea-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/trailblazers-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/jurassic-world-aftermath-collection-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/bite-the-bullet-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/phantom-trigger-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/hell-pie-switch</loc> </url>
@@ -2957,11 +2957,9 @@
 <url> <loc>https://www.maysaleba.com?/games/gakuen-club-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/garden-buddies-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/garten-of-banban-2-switch</loc> </url>
-<url> <loc>https://www.maysaleba.com?/games/garten-of-banban-3-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/garten-of-banban-4-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/garten-of-banban-6-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/garten-of-banban-7-switch</loc> </url>
-<url> <loc>https://www.maysaleba.com?/games/gearshifters-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/giant-wishes-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/glorious-savior-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/yeah-you-want-those-games-right-so-here-you-go-now-lets-see-you-clear-them-2-switch</loc> </url>
@@ -3156,6 +3154,17 @@
 <url> <loc>https://www.maysaleba.com?/games/new-joe-and-mac-caveman-ninja-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/omen-of-sorrow-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/games/first-time-in-rome-collectors-edition-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/flashback-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/to-leave-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/sudoku-casual-board-game-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/spirit-hunters-infinite-horde-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/space-raiders-in-space-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/pnevmo-capsula-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/kumamon-run-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/mahjong-woods-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/otoko-cross-pretty-boys-mahjong-solitaire-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/haiku-the-robot-switch</loc> </url>
+<url> <loc>https://www.maysaleba.com?/games/hashihime-of-the-old-book-town-append-fullscreen-switch</loc> </url>
 <url> <loc>https://www.maysaleba.com?/giftcards</loc> </url>
 <url> <loc>https://www.maysaleba.com?/faq</loc> </url>
 </urlset>
