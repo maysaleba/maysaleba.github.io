@@ -17,6 +17,7 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import InfoIcon from "@mui/icons-material/Info";
 import CloseIcon from "@mui/icons-material/Close";
+import noimage from "./noimage.jpg";
 
 const style = {
   position: "absolute",
@@ -2319,36 +2320,54 @@ const getModalTextForCountry = (country) => {
 
           <div className="m-3 p-auto" style={{ paddingBottom: 15 }}>
 
-              <Card
-                className="border-0"
-                style={{
-                  borderRadius: "7px",
-                  maxWidth: "236px",
-                  width: "50%",
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  // marginBottom: -10,
-                }}
-              >
+<Card
+  className="border-0"
+  style={{
+    borderRadius: "7px",
+    maxWidth: "236px",
+    width: "50%",
+    marginLeft: "auto",
+    marginRight: "auto",
+    overflow: "hidden", // Important to clip rounded corners
+  }}
+>
+  <div className="card-img-wrapper">
+    <img
+      src={matchGames[0].Image}
+      alt=""
+      className="card-img-background"
+      onError={(e) => {
+        e.target.src = noimage;
+        e.onerror = null;
+      }}
+    />
+    <img
+      src={matchGames[0].Image}
+      alt=""
+      className="card-img-foreground"
+      onError={(e) => {
+        e.target.src = noimage;
+        e.onerror = null;
+      }}
+    />
+  </div>
 
-                <Card.Img alt="" style={{}} src={matchGames[0].Image} />
-                            <a
-              href={matchGames[0].URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-                <Card.ImgOverlay>
-                  <PlatformBadge
-                    hasBadge={matchGames[0].platform}
-                    esrbrating={matchGames[0].ESRBRating}
-                  />
-                </Card.ImgOverlay></a>
-                <PlatformOverlay
-                  slug={matchGames[0].Slug}
-                  isps4={matchGames[0].IsPS4}
-                  isps5={matchGames[0].IsPS5}
-                />
-              </Card>
+  <a href={matchGames[0].URL} target="_blank" rel="noopener noreferrer">
+    <Card.ImgOverlay>
+      <PlatformBadge
+        hasBadge={matchGames[0].platform}
+        esrbrating={matchGames[0].ESRBRating}
+      />
+    </Card.ImgOverlay>
+  </a>
+
+  <PlatformOverlay
+    slug={matchGames[0].Slug}
+    isps4={matchGames[0].IsPS4}
+    isps5={matchGames[0].IsPS5}
+  />
+</Card>
+
           
           </div>
           <OrigPrice />

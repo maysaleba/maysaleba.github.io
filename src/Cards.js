@@ -629,24 +629,35 @@ if (!slug) {
         style={{ color: "black", textDecoration: "none" }}
       >
 <Card className="border-0">
-   <div className="card-img-wrapper">
-        <LazyLoadImage
-            effect="opacity"
-            key={Image}
-            className="card-img"
-            src={Image}
-            onError={(event) => {
-                event.target.src = noimage;
-                event.onerror = null;
-            }}
-            visibleByDefault={Image}
-        />
-        <Card.ImgOverlay>
-            <PlatformBadge hasBadge={Platform} esrbrating={ESRBRating} slug={Slug}/>
-            <OpenScore hasScore={Score} />
-        </Card.ImgOverlay>
-<PlatformOverlay slug={Slug} isps4={IsPS4} isps5={IsPS5} title={Title}/>
-</div>
+  <div className="card-img-wrapper">
+    {/* Blurred background */}
+    <img
+      src={Image}
+      alt=""
+      className="card-img-background"
+      onError={(event) => {
+        event.target.src = noimage;
+        event.onerror = null;
+      }}
+    />
+    {/* Foreground image */}
+    <LazyLoadImage
+      effect="opacity"
+      key={Image}
+      className="card-img-foreground"
+      src={Image}
+      onError={(event) => {
+        event.target.src = noimage;
+        event.onerror = null;
+      }}
+      visibleByDefault={Image}
+    />
+    <Card.ImgOverlay>
+      <PlatformBadge hasBadge={Platform} esrbrating={ESRBRating} slug={Slug}/>
+      <OpenScore hasScore={Score} />
+    </Card.ImgOverlay>
+    <PlatformOverlay slug={Slug} isps4={IsPS4} isps5={IsPS5} title={Title}/>
+  </div>
     <Card.Body>
         <Card.Title className="card-title">{Title.replace(/ *\([^)]*\) */g, "").replaceAll("Ã¢„Â™","™").replace("â„¢","™")}</Card.Title>
         <Card.Text className="card-text">

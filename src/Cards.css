@@ -946,11 +946,43 @@ display: inline-block;  /* may not need this, but I've found I do */
 
 
 .card-img-wrapper {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Square aspect ratio */
+  overflow: hidden;
+  background: #ffffff; /* Fallback background */
+    border-radius: 5px;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);
 }
+
+/* Blurred background image */
+.card-img-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(8px);
+  transform: scale(1.05); /* Slight zoom to reduce edge artifacts */
+  z-index: 1;
+  opacity: 0.6;
+    border-radius: 5px;
+}
+
+/* Foreground image */
+.card-img-foreground {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  max-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: contain; /* Keeps original aspect ratio */
+  z-index: 2;
+  border-radius: 5px;
+}
+
 
 .additional-overlay {
     position: absolute;
@@ -1098,8 +1130,14 @@ label:focus,
 
 }
 
-.card-img{
-  border-radius: 5px !important;
+.card-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the image */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes sure the image covers the area without distortion */
 }
 
 .card-title{
