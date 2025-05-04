@@ -993,7 +993,7 @@ display: inline-block;  /* may not need this, but I've found I do */
     padding: 3px;
     padding-left: 5px;
     padding-right: 5px;
-    z-index: 1; /* Ensure the overlay is above the image */
+    z-index: 2; /* Ensure the overlay is above the image */
     font-size: 0.7rem; /* Set the font size here */
     border: 1px solid white; /* Set the border width and style */
     border-radius: 5px; /* Set the border radius to make it rounded */
@@ -1009,7 +1009,7 @@ display: inline-block;  /* may not need this, but I've found I do */
     padding: 3px;
     padding-left: 5px;
     padding-right: 5px;
-    z-index: 1;
+    z-index: 2;
     font-size: 0.7rem; /* Set the font size here */
     border: 1px solid white; /* Set the border width and style */
     border-radius: 5px; /* Set the border radius to make it rounded */
