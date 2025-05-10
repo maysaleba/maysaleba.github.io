@@ -88,12 +88,12 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     var audExchange = 1 / JSON.stringify(datam.aud);
     var brlExchange = 1 / JSON.stringify(datam.brl);
     var cadExchange = 1 / JSON.stringify(datam.cad);
-    var clpExchange = 1 / JSON.stringify(datam.clp);
+    var nzdExchange = 1 / JSON.stringify(datam.nzd);
     var copExchange = 1 / JSON.stringify(datam.cop);
     var mxnExchange = 1 / JSON.stringify(datam.mxn);
     var penExchange = 1 / JSON.stringify(datam.pen);
     var plnExchange = 1 / JSON.stringify(datam.pln);
-    var rubExchange = 1 / JSON.stringify(datam.rub);
+    var nokExchange = 1 / JSON.stringify(datam.nok);
     var zarExchange = 1 / JSON.stringify(datam.zar);
     var sgdExchange = 1 / JSON.stringify(datam.sgd);
     var hkdExchange = 1 / JSON.stringify(datam.hkd);
@@ -104,12 +104,12 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     var audExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.AUD);
     var brlExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.BRL);
     var cadExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.CAD);
-    var clpExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.CLP);
+    var nzdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.NZD);
     var copExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.COP);
     var mxnExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.MXN);
     var penExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.PEN);
     var plnExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.PLN);
-    var rubExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.RUB);
+    var nokExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.NOK);
     var zarExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.ZAR);
     var sgdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.SGD);
     var hkdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.HKD);
@@ -229,7 +229,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function PesoPlusPrice() {
-    if (matchGames[0].platform === "Switch") {
+    if (matchGames[0].platform === "Nintendo Switch") {
       return null;
     }
     if (matchGames[0].platform === "Playstation") {
@@ -268,7 +268,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function HkPlusPrice() {
-    if (matchGames[0].platform === "Switch") {
+    if (matchGames[0].platform === "Nintendo Switch") {
       return null;
     }
     if (matchGames[0].platform === "Playstation") {
@@ -307,7 +307,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function SgPlusPrice() {
-    if (matchGames[0].platform === "Switch") {
+    if (matchGames[0].platform === "Nintendo Switch") {
       return null;
     }
     if (matchGames[0].platform === "Playstation") {
@@ -346,7 +346,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function TrPlusPrice() {
-    if (matchGames[0].platform === "Switch") {
+    if (matchGames[0].platform === "Nintendo Switch") {
       return null;
     }
     if (matchGames[0].platform === "Playstation") {
@@ -385,7 +385,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function ShopeeCard() {
-    if (matchGames[0].platform === "Switch") {
+    if (matchGames[0].platform === "Nintendo Switch") {
       if (parseFloat(matchGames[0].SalePrice) <= 10) {
         return <span>$10</span>;
       } else if (parseFloat(matchGames[0].SalePrice) <= 20) {
@@ -437,7 +437,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function ShopeeURL() {
-    if (matchGames[0].platform === "Switch") {
+    if (matchGames[0].platform === "Nintendo Switch") {
       return (
         <tr className="item-table-best">
           <td>
@@ -513,7 +513,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function GiftCardVar() {
-    if (matchGames[0].platform === "Switch") {
+    if (matchGames[0].platform === "Nintendo Switch") {
       if (parseFloat(matchGames[0].SalePrice) <= 10) {
         return (
           <div className="btn btn-block btn-secondary">
@@ -883,7 +883,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   function PlatformBadge(props) {
     const platform = props.hasBadge;
     const esrbrating = props.esrbrating;
-    if (platform === "Switch") {
+    if (platform === "Nintendo Switch") {
       if (props.esrbrating === "Individual" || props.esrbrating === "Bundle") {
         return (
           <>
@@ -1068,7 +1068,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     }
   }
 
-  // matchGames[0].platform === "Switch" && (
+  // matchGames[0].platform === "Nintendo Switch" && (
 
   function YoutubeTrailer() {
     if (matchGames[0].Trailer === "" || matchGames[0].Trailer === undefined) {
@@ -1527,7 +1527,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function PricesTable(props) {
-    if (props.psorsw === "Switch") {
+    if (props.psorsw === "Nintendo Switch") {
       var testBoolean;
       // console.log(props);
       if (matchGames[0].ArgentinaPrice != 0) {
@@ -1591,9 +1591,9 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         Colombia: matchGames[0].ColombiaPrice * copExchange,
         "South Africa": matchGames[0].SouthafricaPrice * zarExchange,
         Brazil: matchGames[0].BrazilPrice * brlExchange,
-        Russia: matchGames[0].RussiaPrice * rubExchange,
+        Norway: matchGames[0].NorwayPrice * nokExchange,
         Poland: matchGames[0].PolandPrice * plnExchange,
-        Chile: matchGames[0].ChilePrice * clpExchange * 99999,
+        "New Zealand": matchGames[0].NewZealandPrice * nzdExchange,
         Mexico: matchGames[0].MexicoPrice * mxnExchange,
         US: matchGames[0].SalePrice * usdExchange,
       };
@@ -1740,13 +1740,13 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
           className: "brregion-logo",
           style: { fontSize: 11, fontWeight: "", color: "#000000" },
         },
-        Russia: {
-          name: "Russia",
-          price: Math.round(matchGames[0].RussiaPrice)
+        Norway: {
+          name: "Norway",
+          price: Math.round(matchGames[0].NorwayPrice)
             .toString()
             .replace(".", ","),
-          currency: "RUB",
-          className: "ruregion-logo",
+          currency: "kr",
+          className: "noregion-logo",
           style: { fontSize: 11, fontWeight: "", color: "#000000" },
         },
         Poland: {
@@ -1756,9 +1756,12 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
           className: "plregion-logo",
           style: { fontSize: 11, fontWeight: "", color: "#000000" },
         },
-        Chile: {
-          name: "Chile",
-          className: "clregion-logo",
+        "New Zealand": {
+          name: "New Zealand",
+          price: Math.round(matchGames[0].NewZealandPrice).toString(),
+          currency: "NZ$",
+          className: "nzregion-logo",
+          style: { fontSize: 11, fontWeight: "", color: "#000000" },
         },
         Mexico: {
           name: "Mexico",
@@ -1845,9 +1848,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         Peru: "",
         Argentina: "",
         Colombia: "",
-        Russia: "",
         "South Africa": "",
-        Chile: "",
+        "New Zealand": "",
       };
 
       function RankRows() {
@@ -1888,7 +1890,7 @@ const getModalTextForCountry = (country) => {
       </ul>
       </ol>
     `,
-    "Peru & Colombia & South Africa & Russia & Chile": `
+    "Peru & Colombia & South Africa & Norway & New Zealand": `
       <ol>
       <li> Set up an account in the <b>${country}</b> eShop
       <ul>
@@ -1970,8 +1972,8 @@ const getModalTextForCountry = (country) => {
   // Check if the country belongs to a group, if so, return the group's description
   if (["Canada", "Poland", "Mexico", "Australia"].includes(country)) {
     return countryGroups["Canada & Poland & Mexico & Australia"];
-  } else if (["Peru", "Colombia", "South Africa", "Russia", "Chile"].includes(country)) {
-    return countryGroups["Peru & Colombia & South Africa & Russia & Chile"];
+  } else if (["Peru", "Colombia", "South Africa", "Norway", "New Zealand"].includes(country)) {
+    return countryGroups["Peru & Colombia & South Africa & Norway & New Zealand"];
   } else if (country === "US") {
     return countryGroups["US"];
   } else if (country === "Brazil") {

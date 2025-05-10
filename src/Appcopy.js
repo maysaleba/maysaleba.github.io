@@ -38,22 +38,29 @@ function sortJson(element, prop, propType, asc) {
       element = element.sort(function (a, b) {
         const aValue = parseInt(a[prop]) || Number.MIN_SAFE_INTEGER;
         const bValue = parseInt(b[prop]) || Number.MIN_SAFE_INTEGER;
-
         return asc ? aValue - bValue : bValue - aValue;
       });
       break;
+
+    case "date":
+      element = element.sort(function (a, b) {
+        const aDate = new Date(a[prop]);
+        const bDate = new Date(b[prop]);
+        return asc ? aDate - bDate : bDate - aDate;
+      });
+      break;
+
     default:
       element = element.sort(function (a, b) {
-        const aValue = a[prop].toLowerCase();
-        const bValue = b[prop].toLowerCase();
-
+        const aValue = (a[prop] || '').toString().toLowerCase();
+        const bValue = (b[prop] || '').toString().toLowerCase();
         return asc ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
       });
   }
 
-  // Return the sorted element
   return element;
 }
+
 
   
   const reviewsswf = reviewssw.filter(review => review.SaleStarted !== '0000-00-00');
@@ -257,12 +264,12 @@ const cleanFilterField = filterField.replace(/[^a-zA-Z0-9é, -]/g, "").replace("
         (review.SalePrice / 50 < priceRangeField && review.SalePrice / 50 > priceRangeLow)
       );
     } else {
-            return (
-        review.Title.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e").replace(/\s/g, '').toLowerCase().includes(searchQuery.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e").replace(/\s/g, '').toLowerCase()) &&
-        filterGenres.some(filterGenre => review.genre.toLowerCase().includes(filterGenre)) &&
-        review.platform.toLowerCase().includes(platformField.toLowerCase()) && 
-        (review.SalePrice < priceRangeField && review.SalePrice > priceRangeLow)
-      );
+return (
+  review.Title.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e").replace(/\s/g, '').toLowerCase().includes(searchQuery.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e").replace(/\s/g, '').toLowerCase()) &&
+  filterGenres.some(filterGenre => review.genre.toLowerCase().includes(filterGenre)) &&
+  review.platform.toLowerCase().includes(platformField.toLowerCase()) && 
+  ((review.SalePrice || review.Price) < priceRangeField && (review.SalePrice || review.Price) > priceRangeLow)
+);
     }
 
     }));

@@ -34,9 +34,9 @@ const Cards = ({
   ColombiaPrice,
   SouthafricaPrice,
   BrazilPrice,
-  RussiaPrice,
+  NorwayPrice,
   PolandPrice,
-  ChilePrice,
+  NewZealandPrice,
   MexicoPrice,
   ESRBRating,
   IsPS4,
@@ -88,12 +88,12 @@ today = yyyy + "-" + mm + "-" + dd;
     var audExchange = 1 / JSON.stringify(datam.aud);
     var brlExchange = 1 / JSON.stringify(datam.brl);
     var cadExchange = 1 / JSON.stringify(datam.cad);
-    var clpExchange = 1 / JSON.stringify(datam.clp);
+    var nzdExchange = 1 / JSON.stringify(datam.nzd);
     var copExchange = 1 / JSON.stringify(datam.cop);
     var mxnExchange = 1 / JSON.stringify(datam.mxn);
     var penExchange = 1 / JSON.stringify(datam.pen);
     var plnExchange = 1 / JSON.stringify(datam.pln);
-    var rubExchange = 1 / JSON.stringify(datam.rub);
+    var nokExchange = 1 / JSON.stringify(datam.nok);
     var zarExchange = 1 / JSON.stringify(datam.zar);
     var sgdExchange = 1 / JSON.stringify(datam.sgd);
     var hkdExchange = 1 / JSON.stringify(datam.hkd);
@@ -104,12 +104,12 @@ today = yyyy + "-" + mm + "-" + dd;
     var audExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.AUD);
     var brlExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.BRL);
     var cadExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.CAD);
-    var clpExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.CLP);
+    var nzdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.NZD);
     var copExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.COP);
     var mxnExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.MXN);
     var penExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.PEN);
     var plnExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.PLN);
-    var rubExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.RUB);
+    var nokExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.NOK);
     var zarExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.ZAR);
     var sgdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.SGD);
     var hkdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.HKD);
@@ -193,7 +193,7 @@ diffDays = Math.round((secondDate - firstDate) / oneDay) + 1;
   }
 
   function PesoPrice(props) {
-    if (props.psorsw === "Switch") {
+    if (props.psorsw === "Nintendo Switch") {
       var testBoolean;
       // console.log(props);
       if (ArgentinaPrice != 0) {
@@ -240,9 +240,9 @@ diffDays = Math.round((secondDate - firstDate) / oneDay) + 1;
         Colombia: ColombiaPrice * copExchange,
         Southafrica: SouthafricaPrice * zarExchange,
         Brazil: BrazilPrice * brlExchange,
-        Russia: RussiaPrice * rubExchange,
+        Norway: NorwayPrice * nokExchange,
         Poland: PolandPrice * plnExchange,
-        Chile: ChilePrice * clpExchange * 99999,
+        NewZealand: NewZealandPrice * nzdExchange,
         Mexico: MexicoPrice * mxnExchange,
         US: SalePrice * usdExchange,
       };
@@ -305,9 +305,9 @@ diffDays = Math.round((secondDate - firstDate) / oneDay) + 1;
               {"₱" + Math.round(smallestprice)}
             </span>
           );
-        } else if (smallest === "Chile") {
+        } else if (smallest === "NewZealand") {
           return (
-            <span className="clregion-logo" style={{ fontWeight: "bold" }}>
+            <span className="nzregion-logo" style={{ fontWeight: "bold" }}>
               {"₱" + Math.round(smallestprice)}
             </span>
           );
@@ -335,9 +335,9 @@ diffDays = Math.round((secondDate - firstDate) / oneDay) + 1;
               {"₱" + Math.round(smallestprice)}
             </span>
           );
-        } else if (smallest === "Russia") {
+        } else if (smallest === "Norway") {
           return (
-            <span className="ruregion-logo" style={{ fontWeight: "bold" }}>
+            <span className="noregion-logo" style={{ fontWeight: "bold" }}>
               {"₱" + Math.round(smallestprice)}
             </span>
           );
@@ -393,7 +393,7 @@ diffDays = Math.round((secondDate - firstDate) / oneDay) + 1;
   }
 
   function PesoPlusPrice(props) {
-    if (props.psorsw === "Switch") {
+    if (props.psorsw === "Nintendo Switch") {
       return null;
     }
     if (props.psorsw === "Playstation") {
@@ -520,11 +520,11 @@ else if (PlusPrice === 202020) {
 
   function PlatformBadge(props) {
     const platform = props.hasBadge;
-    if (platform === "Switch") {
+    if (platform === "Nintendo Switch") {
 
       if (props.esrbrating === "Individual" || props.esrbrating === "Bundle") {
       return (
-        <>
+        <> 
         <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>
         <div className="d-flex justify-content float-start opencritic-container2">
         <Box style={{fontWeight: 'bold', borderRadius: 5, backgroundColor: "#fc3e04", marginTop: 3, marginLeft: 5, paddingTop: 1, paddingBottom: 1, paddingLeft: 5, paddingRight: 5, fontSize: '0.7rem', textAlign: 'center', color: 'white'}}>
@@ -676,9 +676,9 @@ if (!slug) {
                 colombiaprice={ColombiaPrice}
                 southafricaprice={SouthafricaPrice}
                 brazilprice={BrazilPrice}
-                russiaprice={RussiaPrice}
+                norwayprice={NorwayPrice}
                 polandprice={PolandPrice}
-                chileprice={ChilePrice}
+                newzealandprice={NewZealandPrice}
                 mexicoprice={MexicoPrice}
             />{" "}
             <PesoPlusPrice psorsw={Platform} pesoplus={PlusPrice}  esrbrating={ESRBRating}/>{" "}

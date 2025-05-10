@@ -119,9 +119,9 @@ function sortJson(element, prop, propType, asc) {
                                           ColombiaPrice={review.ColombiaPrice}
                                           SouthafricaPrice={review.SouthafricaPrice}
                                           BrazilPrice={review.BrazilPrice}
-                                          RussiaPrice={review.RussiaPrice}
+                                          NorwayPrice={review.NorwayPrice}
                                           PolandPrice={review.PolandPrice}
-                                          ChilePrice={review.ChilePrice}
+                                          NewZealandPrice={review.NewZealandPrice}
                                           MexicoPrice={review.MexicoPrice}
                                           Discount={review.PercentOff}
                                           URL={review.URL}
@@ -162,9 +162,9 @@ function sortJson(element, prop, propType, asc) {
                                           ColombiaPrice={review.ColombiaPrice}
                                           SouthafricaPrice={review.SouthafricaPrice}
                                           BrazilPrice={review.BrazilPrice}
-                                          RussiaPrice={review.RussiaPrice}
+                                          NorwayPrice={review.NorwayPrice}
                                           PolandPrice={review.PolandPrice}
-                                          ChilePrice={review.ChilePrice}
+                                          NewZealandPrice={review.NewZealandPrice}
                                           MexicoPrice={review.MexicoPrice}
                                           Discount={review.PercentOff}
                                           URL={review.URL}
