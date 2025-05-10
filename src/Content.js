@@ -1871,7 +1871,7 @@ const getModalTextForCountry = (country) => {
 
   const countryUrl = countryURLs[country] || ""; // Get the URL or fallback to an empty string
   const countryGroups = {
-    "Canada & Poland & Mexico & Australia": `
+    "Canada & Poland & Mexico & Australia & Norway": `
       <ol>
       <li> Set up an account in the <b>${country}</b> eShop
       <ul>
@@ -1890,7 +1890,7 @@ const getModalTextForCountry = (country) => {
       </ul>
       </ol>
     `,
-    "Peru & Colombia & South Africa & Norway & New Zealand": `
+    "Peru & Colombia & South Africa & New Zealand": `
       <ol>
       <li> Set up an account in the <b>${country}</b> eShop
       <ul>
@@ -1970,10 +1970,10 @@ const getModalTextForCountry = (country) => {
   };
 
   // Check if the country belongs to a group, if so, return the group's description
-  if (["Canada", "Poland", "Mexico", "Australia"].includes(country)) {
-    return countryGroups["Canada & Poland & Mexico & Australia"];
-  } else if (["Peru", "Colombia", "South Africa", "Norway", "New Zealand"].includes(country)) {
-    return countryGroups["Peru & Colombia & South Africa & Norway & New Zealand"];
+  if (["Canada", "Poland", "Mexico", "Australia", "Norway"].includes(country)) {
+    return countryGroups["Canada & Poland & Mexico & Australia & Norway"];
+  } else if (["Peru", "Colombia", "South Africa", "New Zealand"].includes(country)) {
+    return countryGroups["Peru & Colombia & South Africa & New Zealand"];
   } else if (country === "US") {
     return countryGroups["US"];
   } else if (country === "Brazil") {
