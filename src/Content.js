@@ -696,7 +696,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
   }
 
   if (slug.includes("-switch-2")) {
-    return <div className="additional-overlay-switch2">NSW2</div>;
+    return <div className="additional-overlay">NSW2</div>;
   }
 
   if (slug.includes("-switch")) {
@@ -2298,18 +2298,42 @@ const getModalTextForCountry = (country) => {
 
           <div className="m-3 p-auto" style={{ paddingBottom: 15 }}>
 
+<Col>
 <Card
-  className="border-0"
+  className="border-0" 
   style={{
-    borderRadius: "7px",
     maxWidth: "236px",
     width: "50%",
     marginLeft: "auto",
     marginRight: "auto",
-    overflow: "hidden", // Important to clip rounded corners
-  }}
->
-  <div className="card-img-wrapper">
+
+    // overflow: "hidden", // Important to clip rounded corners
+  }}>
+ 
+    {matchGames[0].Slug.includes("switch-2") && (
+              <div className="platform-top-badge-outside-in">
+  <svg
+    width="34"
+    height="24"
+    viewBox="0 0 30 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    role="presentation"
+    alt=""
+    data-testid="NintendoSwitch2LogoOnlyIcon"
+    size="34"
+    color="currentColor"
+  >
+    <path
+      d="M9.66879 4.54634H7.24725C5.67883 4.54634 4.40649 5.81867 4.40649 7.3871V12.7842C4.40649 14.3527 5.67883 15.625 7.24725 15.625H9.66879C9.71276 15.625 9.75087 15.5898 9.75087 15.5429V4.62842C9.75087 4.58445 9.71569 4.54634 9.66879 4.54634ZM8.85672 14.7309H7.24725C6.72835 14.7309 6.23877 14.5286 5.86938 14.1621C5.50293 13.7957 5.29771 13.3061 5.29771 12.7842V7.3871C5.29771 6.86526 5.5 6.37861 5.86645 6.00923C6.23291 5.64277 6.72249 5.43756 7.24432 5.43756H8.85379V14.7279L8.85672 14.7309ZM7.17396 6.83008C7.74856 6.83008 8.21469 7.29621 8.21469 7.87082C8.21469 8.44542 7.74856 8.91155 7.17396 8.91155C6.59936 8.91155 6.13323 8.44542 6.13323 7.87082C6.13323 7.29621 6.59936 6.83008 7.17396 6.83008ZM12.6444 4.54634H10.9294C10.8883 4.54634 10.8561 4.57859 10.8561 4.61963V15.5429C10.8561 15.5869 10.8913 15.625 10.9382 15.625H12.6415C14.2099 15.625 15.4822 14.3527 15.4822 12.7842V7.3871C15.4822 5.81867 14.2099 4.54634 12.6415 4.54634H12.6444ZM13.049 11.7582C12.4304 11.7582 11.9291 11.2569 11.9291 10.6383C11.9291 10.0197 12.4304 9.5184 13.049 9.5184C13.6675 9.5184 14.1689 10.0197 14.1689 10.6383C14.1689 11.2569 13.6675 11.7582 13.049 11.7582ZM17.3497 15.625V13.7224C17.5461 13.5611 18.2907 12.922 19.0764 12.2448C19.7829 11.635 20.4895 11.0253 21.2106 10.4331C21.753 9.98746 22.7849 9.1666 22.8172 8.36333C22.8553 7.41934 22.1869 6.80663 21.1843 6.80663C20.5891 6.80663 19.8885 7.13791 19.4634 7.4985C19.0383 7.85909 18.4959 8.32522 18.4959 8.32522L16.9275 6.62487C18.2585 5.13267 19.6891 4.3763 21.1813 4.3763C24.3592 4.29715 26.7573 7.8415 24.3387 10.6178C23.4621 11.5852 22.4654 12.4911 21.4422 13.2943H25.5934V15.625H17.3467H17.3497Z"
+      fill="currentColor"
+    />
+  </svg>
+</div>
+    )}
+
+<div className={`${matchGames[0].Slug.includes("switch-2") ? "card-img-wrapper-og no-border-radius" : "card-img-wrapper-in"}`}>
+
     <img
       src={matchGames[0].Image}
       alt=""
@@ -2344,9 +2368,8 @@ const getModalTextForCountry = (country) => {
     isps4={matchGames[0].IsPS4}
     isps5={matchGames[0].IsPS5}
   />
-</Card>
-
-          
+</Card>  
+</Col>
           </div>
           <OrigPrice />
           <Paper elevation={2} className="content-container">

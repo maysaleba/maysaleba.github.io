@@ -952,10 +952,76 @@ display: inline-block;  /* may not need this, but I've found I do */
   left: -10px !important;
   right: -10px !important;
   z-index: 3 !important;
+
 }
 
 
+
+.platform-top-badge-outside {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 20px;
+  background-color: #E60012;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.7rem;
+  padding-top: 0px;
+  z-index: 10;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  pointer-events: none;
+  display: flex;                /* ✅ Add flexbox */
+  justify-content: center;     /* ✅ Center horizontally */
+  align-items: center;         /* ✅ Center vertically */
+}
+
+.platform-top-badge-outside-in {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 20px;
+  background-color: #E60012;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.7rem;
+  padding-top: 2px;
+  z-index: 10;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  pointer-events: none;
+    display: flex;                /* ✅ Add flexbox */
+  justify-content: center;     /* ✅ Center horizontally */
+  align-items: center;         /* ✅ Center vertically */
+}
+
+.no-border-radius {
+    border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 5px; /* or your desired value */
+  border-bottom-right-radius: 5px;
+}
+
+
+
 .card-img-wrapper {
+  position: relative;
+   margin-top: 15px; /* adjust as needed */
+  width: 100%;
+  padding-top: 100%; /* Square aspect ratio */
+  overflow: hidden !important;
+  background: #ffffff; /* Fallback background */
+    border-radius: 5px;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);   
+}
+
+.card-img-wrapper-og {
   position: relative;
   width: 100%;
   padding-top: 100%; /* Square aspect ratio */
@@ -963,6 +1029,18 @@ display: inline-block;  /* may not need this, but I've found I do */
   background: #ffffff; /* Fallback background */
     border-radius: 5px;
     box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+
+.card-img-wrapper-in {
+  position: relative;
+   margin-top: 0px; /* adjust as needed */
+  width: 100%;
+  padding-top: 100%; /* Square aspect ratio */
+  overflow: hidden !important;
+  background: #ffffff; /* Fallback background */
+    border-radius: 5px;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);   
 }
 
 /* Blurred background image */
@@ -990,7 +1068,7 @@ display: inline-block;  /* may not need this, but I've found I do */
   transform: translate(-50%, -50%);
   object-fit: contain; /* Keeps original aspect ratio */
   z-index: 2;
-  border-radius: 5px;
+  
 }
 
 
@@ -1008,19 +1086,6 @@ display: inline-block;  /* may not need this, but I've found I do */
     border: 1px solid white; /* Set the border width and style */
     border-radius: 5px; /* Set the border radius to make it rounded */
     border:1;
-}
-
-.additional-overlay-switch2 {
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
-    background-color: rgba(230, 0, 18, 0.8); /* 50% transparent Nintendo red */
-    color: white;
-    padding: 3px 5px;
-    z-index: 2;
-    font-size: 0.7rem;
-    border: 1px solid white;
-    border-radius: 5px;
 }
 
 
