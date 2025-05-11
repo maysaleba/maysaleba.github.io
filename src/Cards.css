@@ -1010,6 +1010,21 @@ display: inline-block;  /* may not need this, but I've found I do */
     border:1;
 }
 
+.additional-overlay-switch2 {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background-color: rgba(230, 0, 18, 0.8); /* 50% transparent Nintendo red */
+    color: white;
+    padding: 3px 5px;
+    z-index: 2;
+    font-size: 0.7rem;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+
+
 .additional-overlay-right {
     position: absolute;
     bottom: 5px;
@@ -1178,7 +1193,7 @@ label:focus,
 }
 
 .nbadges.nintendo {
-  background-color: #e70009;
+  background-color: #E60012;
   background-position: 0px -510px;
 }
 

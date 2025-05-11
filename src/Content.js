@@ -229,7 +229,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function PesoPlusPrice() {
-    if (matchGames[0].platform === "Nintendo Switch") {
+    if (matchGames[0].platform === "Nintendo Switch" || matchGames[0].platform === "Nintendo Switch 2") {
       return null;
     }
     if (matchGames[0].platform === "Playstation") {
@@ -268,7 +268,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function HkPlusPrice() {
-    if (matchGames[0].platform === "Nintendo Switch") {
+    if (matchGames[0].platform === "Nintendo Switch" ||
+  matchGames[0].platform === "Nintendo Switch 2") {
       return null;
     }
     if (matchGames[0].platform === "Playstation") {
@@ -307,7 +308,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function SgPlusPrice() {
-    if (matchGames[0].platform === "Nintendo Switch") {
+    if (matchGames[0].platform === "Nintendo Switch" ||
+  matchGames[0].platform === "Nintendo Switch 2") {
       return null;
     }
     if (matchGames[0].platform === "Playstation") {
@@ -346,7 +348,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function TrPlusPrice() {
-    if (matchGames[0].platform === "Nintendo Switch") {
+    if (matchGames[0].platform === "Nintendo Switch" ||
+  matchGames[0].platform === "Nintendo Switch 2") {
       return null;
     }
     if (matchGames[0].platform === "Playstation") {
@@ -385,7 +388,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function ShopeeCard() {
-    if (matchGames[0].platform === "Nintendo Switch") {
+    if (matchGames[0].platform === "Nintendo Switch" ||
+  matchGames[0].platform === "Nintendo Switch 2") {
       if (parseFloat(matchGames[0].SalePrice) <= 10) {
         return <span>$10</span>;
       } else if (parseFloat(matchGames[0].SalePrice) <= 20) {
@@ -437,7 +441,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function ShopeeURL() {
-    if (matchGames[0].platform === "Nintendo Switch") {
+    if (matchGames[0].platform === "Nintendo Switch" ||
+  matchGames[0].platform === "Nintendo Switch 2") {
       return (
         <tr className="item-table-best">
           <td>
@@ -513,7 +518,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function GiftCardVar() {
-    if (matchGames[0].platform === "Nintendo Switch") {
+    if (matchGames[0].platform === "Nintendo Switch" ||
+  matchGames[0].platform === "Nintendo Switch 2") {
       if (parseFloat(matchGames[0].SalePrice) <= 10) {
         return (
           <div className="btn btn-block btn-secondary">
@@ -590,78 +596,47 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     }
   }
 
-  function WhichPlatform() {
-    if (matchGames[0].IsPS4 === 1 && matchGames[0].IsPS5 === 1) {
-      return (
-        <>
-          <span
-            style={{
-              fontSize: 12,
-              borderRadius: 30,
-              border: "1px solid black",
-              paddingLeft: "10px",
-              paddingRight: "10px",
-            }}
-          >
-            PS5
-          </span>{" "}
-          <span
-            style={{
-              fontSize: 12,
-              borderRadius: 30,
-              border: "1px solid black",
-              paddingLeft: "10px",
-              paddingRight: "10px",
-            }}
-          >
-            PS4
-          </span>
-        </>
-      );
-    } else if (matchGames[0].IsPS4 === 1 && matchGames[0].IsPS5 === 0) {
-      return (
-        <span
-          style={{
-            fontSize: 12,
-            borderRadius: 30,
-            border: "1px solid black",
-            paddingLeft: "10px",
-            paddingRight: "10px",
-          }}
-        >
-          PS4
-        </span>
-      );
-    } else if (matchGames[0].IsPS4 === 0 && matchGames[0].IsPS5 === 1) {
-      return (
-        <span
-          style={{
-            fontSize: 12,
-            borderRadius: 30,
-            border: "1px solid black",
-            paddingLeft: "10px",
-            paddingRight: "10px",
-          }}
-        >
-          PS5
-        </span>
-      );
-    } else {
-      return (
-        <span
-          style={{
-            fontSize: 12,
-            borderRadius: 30,
-            border: "1px solid black",
-            paddingLeft: "10px",
-            paddingRight: "10px",
-          }}
-        >
-          NSW
-        </span>
-      );
-    }
+function WhichPlatform() {
+  const game = matchGames[0];
+  const slug = game.Slug;
+
+  const badgeStyle = {
+    fontSize: 12,
+    borderRadius: 30,
+    border: "1px solid black",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+  };
+
+
+  if (slug?.includes("-switch-2")) {
+    return <span style={badgeStyle}>Nintendo Switch 2</span>;
   }
+
+  if (slug?.includes("-switch")) {
+    return <span style={badgeStyle}>Nintendo Switch</span>;
+  }
+
+  if (game.IsPS4 === 1 && game.IsPS5 === 1) {
+    return (
+      <>
+        <span style={badgeStyle}>Playstation 5</span>{" "}
+        <span style={badgeStyle}>Playstation 4</span>
+      </>
+    );
+  }
+
+  if (game.IsPS4 === 1) {
+    return <span style={badgeStyle}>PS4</span>;
+  }
+
+  if (game.IsPS5 === 1) {
+    return <span style={badgeStyle}>PS5</span>;
+  }
+
+  return <span style={badgeStyle}>UNKNOWN</span>;
+}
+
 
   function HasOpenCritic(props) {
     if (props.props === "" || props.props === "-1" || props.props === "0") {
@@ -714,39 +689,39 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     }
   }
 
-  function PlatformOverlay(props) {
-    const slug = props.slug;
-    const isps4 = props.isps4;
-    const isps5 = props.isps5;
-    if (slug.includes("switch")) {
-      return (
-        <>
-          <div className="additional-overlay">NSW</div>
-        </>
-      );
-    } else if (isps4 === 1 && isps5 === 1) {
-      return (
-        <>
-          <div className="additional-overlay">PS5</div>
-          <div className="additional-overlay-right">PS4</div>
-        </>
-      );
-    } else if (isps4 === 1 && isps5 === 0) {
-      return (
-        <>
-          <div className="additional-overlay">PS4</div>
-        </>
-      );
-    } else if (isps4 === 0 && isps5 === 1) {
-      return (
-        <>
-          <div className="additional-overlay">PS5</div>
-        </>
-      );
-    } else {
-      return <div className="additional-overlay">NONE</div>;
-    }
+function PlatformOverlay({ title, slug, isps4, isps5 }) {
+  if (!slug) {
+    console.error("Undefined slug found in record:", title);
+    return null;
   }
+
+  if (slug.includes("-switch-2")) {
+    return <div className="additional-overlay-switch2">NSW2</div>;
+  }
+
+  if (slug.includes("-switch")) {
+    return <div className="additional-overlay">NSW</div>;
+  }
+
+  if (isps4 === 1 && isps5 === 1) {
+    return (
+      <>
+        <div className="additional-overlay">PS5</div>
+        <div className="additional-overlay-right">PS4</div>
+      </>
+    );
+  }
+
+  if (isps4 === 1) {
+    return <div className="additional-overlay">PS4</div>;
+  }
+
+  if (isps5 === 1) {
+    return <div className="additional-overlay">PS5</div>;
+  }
+
+  return <div className="additional-overlay">NONE</div>;
+}
 
   function HasHLTB(props) {
     {
@@ -883,7 +858,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   function PlatformBadge(props) {
     const platform = props.hasBadge;
     const esrbrating = props.esrbrating;
-    if (platform === "Nintendo Switch") {
+    if (platform === "Nintendo Switch" || platform === "Nintendo Switch 2") {
       if (props.esrbrating === "Individual" || props.esrbrating === "Bundle") {
         return (
           <>
@@ -1527,7 +1502,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   }
 
   function PricesTable(props) {
-    if (props.psorsw === "Nintendo Switch") {
+    if (props.psorsw === "Nintendo Switch" ||
+  props.psorsw === "Nintendo Switch 2") {
       var testBoolean;
       // console.log(props);
       if (matchGames[0].ArgentinaPrice != 0) {
@@ -2417,7 +2393,7 @@ const getModalTextForCountry = (country) => {
                     {matchGames[0].Publisher}
                   </Col>
                   <Col style={{ paddingBottom: 10 }}>
-                    <span style={{ fontWeight: "bold" }}>Date Added:</span>{" "}
+                    <span style={{ fontWeight: "bold" }}>Release Date:</span>{" "}
                     {DateConvert(matchGames[0].ReleaseDate)}
                   </Col>
                 </Row>

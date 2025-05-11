@@ -193,7 +193,7 @@ diffDays = Math.round((secondDate - firstDate) / oneDay) + 1;
   }
 
   function PesoPrice(props) {
-    if (props.psorsw === "Nintendo Switch") {
+    if (props.psorsw === "Nintendo Switch" || props.psorsw === "Nintendo Switch 2") {
       var testBoolean;
       // console.log(props);
       if (ArgentinaPrice != 0) {
@@ -393,7 +393,7 @@ diffDays = Math.round((secondDate - firstDate) / oneDay) + 1;
   }
 
   function PesoPlusPrice(props) {
-    if (props.psorsw === "Nintendo Switch") {
+    if (props.psorsw === "Nintendo Switch" || props.psorsw === "Nintendo Switch 2") {
       return null;
     }
     if (props.psorsw === "Playstation") {
@@ -520,7 +520,7 @@ else if (PlusPrice === 202020) {
 
   function PlatformBadge(props) {
     const platform = props.hasBadge;
-    if (platform === "Nintendo Switch") {
+    if (platform === "Nintendo Switch" || platform === "Nintendo Switch 2") {
 
       if (props.esrbrating === "Individual" || props.esrbrating === "Bundle") {
       return (
@@ -560,65 +560,41 @@ else if (PlusPrice === 202020) {
   }
 
 
-  function PlatformOverlay(props) {
-    const title = props.title;
-    const slug = props.slug;
-    const isps4 = props.isps4
-    const isps5 = props.isps5
+function PlatformOverlay({ title, slug, isps4, isps5 }) {
+  if (!slug) {
+    console.error("Undefined slug found in record:", title);
+    return null;
+  }
 
-if (!slug) {
-  console.error("Undefined slug found in record:", title);
-} else if (slug.includes("switch")) {
-  return (
-    <>
-      <div className="additional-overlay">NSW</div>
-    </>
-  );
+  if (slug.includes("-switch-2")) {
+    return <div className="additional-overlay-switch2">NSW2</div>;
+  }
+
+  if (slug.includes("-switch")) {
+    return <div className="additional-overlay">NSW</div>;
+  }
+
+  if (isps4 === 1 && isps5 === 1) {
+    return (
+      <>
+        <div className="additional-overlay">PS5</div>
+        <div className="additional-overlay-right">PS4</div>
+      </>
+    );
+  }
+
+  if (isps4 === 1) {
+    return <div className="additional-overlay">PS4</div>;
+  }
+
+  if (isps5 === 1) {
+    return <div className="additional-overlay">PS5</div>;
+  }
+
+  return <div className="additional-overlay">NONE</div>;
 }
 
-    if (slug.includes("switch")) {
-      return (
-        <>
-          <div className="additional-overlay">NSW</div>
-        </>
-      );
 
-
-      } else if (isps4 === 1 && isps5 === 1) {
-      return (
-        <>
-          <div className="additional-overlay">PS5</div>
-          <div className="additional-overlay-right">PS4</div>
-      </>
-      );
-      } else if (isps4 === 1 && isps5 === 0) {
-
-              return (
-        <>
-          <div className="additional-overlay">PS4</div>
-         
-      </>
-      );
-      } else if (isps4 === 0 && isps5 === 1) {
-
-              return (
-        <>
-          <div className="additional-overlay">PS5</div>
-         
-      </>
-      );
-      }
-
-
-
-      else {
-        return (
-        <div className="additional-overlay">NONE</div>
-        )
-      }
-    
-
-  }
 
 
   return (
