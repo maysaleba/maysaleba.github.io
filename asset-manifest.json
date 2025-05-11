@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/maysaleba.github.io/static/css/main.4ecaf2df.chunk.css",
-    "main.js": "/maysaleba.github.io/static/js/main.82ebf231.chunk.js",
-    "main.js.map": "/maysaleba.github.io/static/js/main.82ebf231.chunk.js.map",
+    "main.css": "/maysaleba.github.io/static/css/main.a726d688.chunk.css",
+    "main.js": "/maysaleba.github.io/static/js/main.4509164d.chunk.js",
+    "main.js.map": "/maysaleba.github.io/static/js/main.4509164d.chunk.js.map",
     "runtime-main.js": "/maysaleba.github.io/static/js/runtime-main.5d44c084.js",
     "runtime-main.js.map": "/maysaleba.github.io/static/js/runtime-main.5d44c084.js.map",
     "static/css/2.a07948fa.chunk.css": "/maysaleba.github.io/static/css/2.a07948fa.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.cc6a3088.chunk.js.map": "/maysaleba.github.io/static/js/3.cc6a3088.chunk.js.map",
     "index.html": "/maysaleba.github.io/index.html",
     "static/css/2.a07948fa.chunk.css.map": "/maysaleba.github.io/static/css/2.a07948fa.chunk.css.map",
-    "static/css/main.4ecaf2df.chunk.css.map": "/maysaleba.github.io/static/css/main.4ecaf2df.chunk.css.map",
+    "static/css/main.a726d688.chunk.css.map": "/maysaleba.github.io/static/css/main.a726d688.chunk.css.map",
     "static/js/2.670a242a.chunk.js.LICENSE.txt": "/maysaleba.github.io/static/js/2.670a242a.chunk.js.LICENSE.txt",
     "static/media/Cards.css": "/maysaleba.github.io/static/media/silver-medal.26c1865a.png",
     "static/media/create_ticket.69263705.jpg": "/maysaleba.github.io/static/media/create_ticket.69263705.jpg",
@@ -36,7 +36,7 @@
     "static/js/runtime-main.5d44c084.js",
     "static/css/2.a07948fa.chunk.css",
     "static/js/2.670a242a.chunk.js",
-    "static/css/main.4ecaf2df.chunk.css",
-    "static/js/main.82ebf231.chunk.js"
+    "static/css/main.a726d688.chunk.css",
+    "static/js/main.4509164d.chunk.js"
   ]
 }
