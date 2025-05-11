@@ -58,6 +58,19 @@ const FilterDropDown = props => {
         >
           Switch
         </Dropdown.Item>
+                         <Dropdown.Item
+          href="#"
+          onClick={() => {
+            history.push('/switch-2');
+            // clearSearchChange();
+            clearPriceRange();
+            onPriceRangeDrop("All Price Range")
+            onPlatformChange("Switch 2");
+            onPlatformDrop("Switch 2");
+          }}
+        >
+          Switch 2
+        </Dropdown.Item>
          <Dropdown.Item
           href="#"
           onClick={() => {
@@ -71,6 +84,7 @@ const FilterDropDown = props => {
         >
           Playstation
         </Dropdown.Item>
+
 
       </Dropdown.Menu>
     </Dropdown>
@@ -356,6 +370,18 @@ const FilterDropDown = props => {
           }}
         >
           Strategy
+        </Dropdown.Item>
+                <Dropdown.Item
+          href="#"
+          onClick={() => {
+            clearSearchChange();
+                        clearPriceRange();
+            onPriceRangeDrop("All Price Range")
+            onFilterChange("Unique");
+            onDropDownChange("Unique");
+          }}
+        >
+          Unique
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>

@@ -514,6 +514,64 @@ return (
           </div>
         )}
       />
+
+            <Route
+        path="/switch-2"
+        render={(props) => (
+          <div>
+            {setPlatformField("Switch 2")}
+            {setPlatformDropDown("Switch 2")}
+            {setRegionFilter("")}
+            <Search
+              onPlatformChange={onPlatformChange}
+              onPlatformDrop={onPlatformDrop}
+              clearPriceRange={clearPriceRange}
+              onPriceRangeDrop={onPriceRangeDrop}
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+              clearGenre={clearGenre}
+              onDropDownChange={onDropDownChange}
+            />
+            <CardGroup
+              clearPriceRange={clearPriceRange}
+              priceRangeDropDown={priceRangeDropDown}
+              onPriceRangeDrop={onPriceRangeDrop}
+              onPriceRangeChange={onPriceRangeChange}
+              clearGenre={clearGenre}
+              onPlatformDrop={onPlatformDrop}
+              onPlatformChange={onPlatformChange}
+              platformDropDown={platformDropDown}
+              onLatestDrop={onLatestDrop}
+              onLatestChange={onLatestChange}
+              latestDropDown={latestDropDown}
+              clearFilter={clearFilter}
+              genreDropDown={genreDropDown}
+              onDropDownChange={onDropDownChange}
+              onFilterChange={onFilterChange}
+              clearSearchChange={clearSearchChange}
+              searchQuery={searchQuery}
+              page={page}
+              setSearchQuery={setSearchQuery}
+              jumpPage={jumpPage}
+              filteredReviews={filteredReviews}
+              pageData={pageData}
+              maxPage={maxPage}
+            />
+            <Helmet>
+              <meta charset="utf-8" />
+              <title>Nintendo Switch - May Sale Ba?</title>
+              <meta
+                name="description"
+                content={
+                  "Get to know about " +
+                  reviewssw.length +
+                  " Nintendo Switch deals in Philippine Peso!"
+                }
+              />
+            </Helmet>
+          </div>
+        )}
+      />
     
                   <Route
         path="/Playstation"
