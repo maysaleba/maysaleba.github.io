@@ -1021,11 +1021,11 @@ display: inline-block;  /* may not need this, but I've found I do */
     box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);   
 }
 
-.card-img-wrapper-og {
+.card-img-wrapper-sw2 {
   position: relative;
   width: 100%;
   padding-top: 100%; /* Square aspect ratio */
-  overflow: hidden;
+/*  overflow: hidden;*/
   background: #ffffff; /* Fallback background */
     border-radius: 5px;
     box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);
@@ -1034,7 +1034,7 @@ display: inline-block;  /* may not need this, but I've found I do */
 
 .card-img-wrapper-in {
   position: relative;
-   margin-top: 0px; /* adjust as needed */
+  margin-top: 0px; /* adjust as needed */
   width: 100%;
   padding-top: 100%; /* Square aspect ratio */
   overflow: hidden !important;

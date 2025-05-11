@@ -2306,7 +2306,7 @@ const getModalTextForCountry = (country) => {
     width: "50%",
     marginLeft: "auto",
     marginRight: "auto",
-
+    borderRadius: "7px"
     // overflow: "hidden", // Important to clip rounded corners
   }}>
  
@@ -2332,7 +2332,7 @@ const getModalTextForCountry = (country) => {
 </div>
     )}
 
-<div className={`${matchGames[0].Slug.includes("switch-2") ? "card-img-wrapper-og no-border-radius" : "card-img-wrapper-in"}`}>
+<div className={`${matchGames[0].Slug.includes("switch-2") ? "card-img-wrapper-sw2 no-border-radius" : "card-img-wrapper-in "}`}>
 
     <img
       src={matchGames[0].Image}
