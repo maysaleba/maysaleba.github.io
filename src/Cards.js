@@ -457,11 +457,12 @@ else if (PlusPrice === 202020) {
 
       } else       if (props.esrbrating === "TRD") {
                     if (PlusPrice === 0) {
-        return (
-          <span className="psplusbadge" style={{ fontWeight: "bold" }}>
-            FREE
-          </span>
-        );
+                      return null;
+        // return (
+        //   <span className="psplusbadge" style={{ fontWeight: "bold" }}>
+        //     FREE
+        //   </span>
+        // );
       } else if (PlusPrice === 999999) {
         return (
           <span className="psplusbadge" style={{ fontWeight: "bold" }}>
@@ -477,11 +478,12 @@ else if (PlusPrice === 202020) {
         );
 }
       else {
-        return (
-          <span className="psplusbadge" style={{ fontWeight: "bold" }}>
-            {"₱" + Math.round(PlusPrice * trdExchange)}
-          </span>
-        );
+        return null;
+        // return (
+        //   <span className="psplusbadge" style={{ fontWeight: "bold" }}>
+        //     {"₱" + Math.round(PlusPrice * trdExchange)}
+        //   </span>
+        // );
       }
 
       } 

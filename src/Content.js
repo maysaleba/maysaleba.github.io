@@ -234,12 +234,13 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     }
     if (matchGames[0].platform === "Playstation") {
       if (matchGames[0].PlusPrice == 0) {
-        return (
-          <>
-            <span className="psplusbadge">FREE</span>
-            <br />
-          </>
-        );
+        return null;
+        // return (
+        //   <>
+        //     <span className="psplusbadge">FREE</span>
+        //     <br />
+        //   </>
+        // );
       } else if (matchGames[0].PlusPrice == 999999) {
         return (
           <>
@@ -248,12 +249,13 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
           </>
         );
       } else if (matchGames[0].PlusPrice == 202020) {
-        return (
-          <>
-            <span className="eabadge">FREE</span>
-            <br />
-          </>
-        );
+        return null;
+        // return (
+        //   <>
+        //     <span className="eabadge">FREE</span>
+        //     <br />
+        //   </>
+        // );
       } else {
         return (
           <>
@@ -354,12 +356,13 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     }
     if (matchGames[0].platform === "Playstation") {
       if (matchGames[0].PlusPrice == 0) {
-        return (
-          <>
-            <span className="psplusbadge">FREE</span>
-            <br />
-          </>
-        );
+        return null;
+        // return (
+        //   <>
+        //     <span className="psplusbadge">FREE</span>
+        //     <br />
+        //   </>
+        // );
       } else if (matchGames[0].PlusPrice == 999999) {
         return (
           <>
@@ -368,12 +371,13 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
           </>
         );
       } else if (matchGames[0].PlusPrice == 202020) {
-        return (
-          <>
-            <span className="eabadge">FREE</span>
-            <br />
-          </>
-        );
+        return null;
+        // return (
+        //   <>
+        //     <span className="eabadge">FREE</span>
+        //     <br />
+        //   </>
+        // );
       } else {
         return (
           <>
@@ -1329,11 +1333,9 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
                   textAlign: "center",
                 }}
               >
-                Buy from Tukey PSN with{" "}
-                <a className="infotax" href="https://discord.gg/regionality">
+                Top Up PSN credits with  <a className="infotax" href="https://invl.me/clmq49s">SEAGM</a> or buy from <a className="infotax" href="https://discord.gg/regionality">
                   Regionality
                 </a>
-                . Note: Price reflected is exclusive of service fee
               </Box>
             </>
 
@@ -1347,8 +1349,11 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
                         className="trregion-logo"
                       >
                         Turkey
-                      </div>
+                        <div>₺ {matchGames[0].SalePrice}</div>
+                      </div> 
+
                     </span>
+
                   </td>
                   <td className="version"></td>
                   <td className="version">
@@ -1358,6 +1363,8 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
                       rel="noreferrer"
                     >
                       <div className="btn btn-block btn-secondary">
+                       <div className="price-container-in">
+                        <span className="price">
                         <TrPlusPrice />
                         {"₱" +
                           Math.round(matchGames[0].SalePrice * trdExchange)}
@@ -1368,6 +1375,17 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
                             />
                           </strike>
                         </span>
+                        </span>
+                         <a
+                          href="https://invl.me/clmq49s"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="no-style-link"
+                          onClick={(event) => event.stopPropagation()} // Prevent modal from opening
+                        >
+                          <img src={seagmlogo} className="seagm-logo" />
+                        </a>
+                        </div>
                       </div>
                     </a>
                   </td>
@@ -2411,14 +2429,24 @@ const getModalTextForCountry = (country) => {
               </Card.Header>
               <Card.Body style={{ fontSize: 14 }}>
                 <Row xs={1} sm={2}>
-                  <Col style={{ paddingBottom: 10 }}>
-                    <span style={{ fontWeight: "bold" }}>Publisher:</span>{" "}
-                    {matchGames[0].Publisher}
-                  </Col>
-                  <Col style={{ paddingBottom: 10 }}>
-                    <span style={{ fontWeight: "bold" }}>Release Date:</span>{" "}
-                    {DateConvert(matchGames[0].ReleaseDate)}
-                  </Col>
+{matchGames[0].Publisher &&
+ matchGames[0].Publisher.trim() !== "" &&
+ matchGames[0].Publisher !== "Unknown" && (
+  <Col style={{ paddingBottom: 10 }}>
+    <span style={{ fontWeight: "bold" }}>Publisher:</span>{" "}
+    {matchGames[0].Publisher}
+  </Col>
+)}
+
+{matchGames[0].ReleaseDate !== "0000-00-00" &&
+  DateConvert(matchGames[0].ReleaseDate) !== "Nov 30, 1899" && (
+    <Col style={{ paddingBottom: 10 }}>
+      <span style={{ fontWeight: "bold" }}>Release Date:</span>{" "}
+      {DateConvert(matchGames[0].ReleaseDate)}
+    </Col>
+)}
+
+
                 </Row>
                 <Row xs={1} sm={2}>
                   <Col style={{ paddingBottom: 10 }}>
