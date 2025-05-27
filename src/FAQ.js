@@ -381,7 +381,7 @@ const About = () => {
     createData(
       "Japan",
       "jpregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={seagmlogo} style={{ width: "17px" }} />,
       <img src={xmark} />
     ),
