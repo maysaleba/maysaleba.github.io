@@ -631,11 +631,11 @@ function WhichPlatform() {
   }
 
   if (game.IsPS4 === 1) {
-    return <span style={badgeStyle}>PS4</span>;
+    return <span style={badgeStyle}>Playstation 4</span>;
   }
 
   if (game.IsPS5 === 1) {
-    return <span style={badgeStyle}>PS5</span>;
+    return <span style={badgeStyle}>Playstation 5</span>;
   }
 
   return <span style={badgeStyle}>UNKNOWN</span>;
@@ -1333,7 +1333,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
                   textAlign: "center",
                 }}
               >
-                Top Up PSN credits with  <a className="infotax" href="https://invl.me/clmq49s">SEAGM</a> or buy from <a className="infotax" href="https://discord.gg/regionality">
+                Top Up Turkey PSN credits with  <a className="infotax" href="https://invl.me/clmq49s">SEAGM</a> or buy from <a className="infotax" href="https://discord.gg/regionality">
                   Regionality
                 </a>
               </Box>
