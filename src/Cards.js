@@ -130,7 +130,7 @@ today = yyyy + "-" + mm + "-" + dd;
     var diffDays = 0;
 
     if (props.platform === "Playstation"){
-diffDays = Math.round((secondDate - firstDate) / oneDay) + 1;
+diffDays = Math.round((secondDate - firstDate) / oneDay);
     } else {
 
       diffDays = Math.round((secondDate - firstDate) / oneDay);
