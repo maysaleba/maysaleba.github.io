@@ -1333,8 +1333,8 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
                   textAlign: "center",
                 }}
               >
-                Top Up Turkey PSN credits with  <a className="infotax" href="https://invl.me/clmq49s">SEAGM</a> or buy from <a className="infotax" href="https://discord.gg/regionality">
-                  Regionality
+                Top Up Turkey PSN credits via  <a className="infotax" href="https://invl.me/clmq49s">SEAGM</a> or purchase from <a className="infotax" href="https://discord.gg/regionality">
+                  Regionality with a service fee
                 </a>
               </Box>
             </>
