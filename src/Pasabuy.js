@@ -563,7 +563,7 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
                 but concept should be similar across servers.
                 <br />
                 1. To place an order, look into the server's channel list and
-                select <b>PURCHASE-NINTENDO</b>
+                select <br/><b>Create-a-Ticket</b>
               </Grid>
             </Grid>
             <p />{" "}
@@ -572,7 +572,7 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
                 <CreateTicketModal />
               </Grid>
               <Grid item xs={8}>
-                2. On the PURCHASE-NINTENDO screen, select <b>Create Ticket</b>
+                2. On the Create-a-Ticket screen, navigate to the section you want to do top-up/pasabuy (Nintendo, PS4, PS5, Xbox). <br/>Tap on the amount dropdown.
               </Grid>
             </Grid>
             <p />
@@ -581,18 +581,19 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
                 <FormModal />
               </Grid>
               <Grid item xs={8}>
-                3. Fill out the form and select <b>Submit</b>
+                3. Select the service or denomination. You can choose a fixed top-up amount, <b>or if you only want to purchase a single game, choose Pasabuy Argentina</b>
                 <ul>
-                  <li>Service: Nintendo Top Up</li>
                   <li>
-                    Amount: See{" "}
+                    Note: The price for using Pasabuy for a single game will be slightly higher than using a fixed top-up. Please check with your support person for the exact amount.
+                  </li>
+                  <li> For top-ups, 
+                     See{" "}
                     <a className="giftcardlink" href="#rates">
-                      Denomination and Rates
+                      Top-up Rates
                     </a>
+
                   </li>
-                  <li>
-                    Payment Method: <i>(Maya, Gcash, PayPal, Binance)</i>
-                  </li>
+
                 </ul>
               </Grid>
             </Grid>
@@ -602,7 +603,7 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
                 <TicketModal />
               </Grid>
               <Grid item xs={8}>
-                4. A ticket will be created and added into the server's channel
+                4. Enter your preferred payment method and select <b>Submit</b> <br/>A ticket will be created and added into the server's channel
                 list. Wait for someone to message and guide you through the
                 process.
                 <p />
