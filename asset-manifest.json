@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/maysaleba.github.io/static/css/main.5e9ae25e.chunk.css",
-    "main.js": "/maysaleba.github.io/static/js/main.fbbbcfbd.chunk.js",
-    "main.js.map": "/maysaleba.github.io/static/js/main.fbbbcfbd.chunk.js.map",
+    "main.js": "/maysaleba.github.io/static/js/main.f1f14cb7.chunk.js",
+    "main.js.map": "/maysaleba.github.io/static/js/main.f1f14cb7.chunk.js.map",
     "runtime-main.js": "/maysaleba.github.io/static/js/runtime-main.5d44c084.js",
     "runtime-main.js.map": "/maysaleba.github.io/static/js/runtime-main.5d44c084.js.map",
     "static/css/2.a07948fa.chunk.css": "/maysaleba.github.io/static/css/2.a07948fa.chunk.css",
@@ -15,13 +15,13 @@
     "static/css/main.5e9ae25e.chunk.css.map": "/maysaleba.github.io/static/css/main.5e9ae25e.chunk.css.map",
     "static/js/2.996068b5.chunk.js.LICENSE.txt": "/maysaleba.github.io/static/js/2.996068b5.chunk.js.LICENSE.txt",
     "static/media/Cards.css": "/maysaleba.github.io/static/media/silver-medal.26c1865a.png",
-    "static/media/create_ticket.69263705.jpg": "/maysaleba.github.io/static/media/create_ticket.69263705.jpg",
+    "static/media/create_ticket.37e82424.jpg": "/maysaleba.github.io/static/media/create_ticket.37e82424.jpg",
     "static/media/discord.da2cc576.jpg": "/maysaleba.github.io/static/media/discord.da2cc576.jpg",
-    "static/media/form.90f2c59e.jpg": "/maysaleba.github.io/static/media/form.90f2c59e.jpg",
+    "static/media/form.9f219672.jpg": "/maysaleba.github.io/static/media/form.9f219672.jpg",
     "static/media/language.56f6f635.jpg": "/maysaleba.github.io/static/media/language.56f6f635.jpg",
     "static/media/logo.55b508d1.svg": "/maysaleba.github.io/static/media/logo.55b508d1.svg",
     "static/media/noimage.52e869e4.jpg": "/maysaleba.github.io/static/media/noimage.52e869e4.jpg",
-    "static/media/purchase.9e14366a.jpg": "/maysaleba.github.io/static/media/purchase.9e14366a.jpg",
+    "static/media/purchase.a9ccbefc.jpg": "/maysaleba.github.io/static/media/purchase.a9ccbefc.jpg",
     "static/media/regionality_invite.637c1227.jpg": "/maysaleba.github.io/static/media/regionality_invite.637c1227.jpg",
     "static/media/seagm_img1.c4628aed.jpeg": "/maysaleba.github.io/static/media/seagm_img1.c4628aed.jpeg",
     "static/media/seagm_img2.6721e5e3.jpeg": "/maysaleba.github.io/static/media/seagm_img2.6721e5e3.jpeg",
@@ -29,7 +29,7 @@
     "static/media/seagm_img4.b6957a3d.jpeg": "/maysaleba.github.io/static/media/seagm_img4.b6957a3d.jpeg",
     "static/media/seagm_img5.166f160a.jpeg": "/maysaleba.github.io/static/media/seagm_img5.166f160a.jpeg",
     "static/media/seagm_img6.166ecf7b.jpeg": "/maysaleba.github.io/static/media/seagm_img6.166ecf7b.jpeg",
-    "static/media/ticket.cb500979.jpg": "/maysaleba.github.io/static/media/ticket.cb500979.jpg",
+    "static/media/ticket.dd8ce943.jpg": "/maysaleba.github.io/static/media/ticket.dd8ce943.jpg",
     "static/media/App.css": "/maysaleba.github.io/static/media/woojooaidp-webfont.3fa0e295.woff"
   },
   "entrypoints": [
@@ -37,6 +37,6 @@
     "static/css/2.a07948fa.chunk.css",
     "static/js/2.996068b5.chunk.js",
     "static/css/main.5e9ae25e.chunk.css",
-    "static/js/main.fbbbcfbd.chunk.js"
+    "static/js/main.f1f14cb7.chunk.js"
   ]
 }
