@@ -8,6 +8,8 @@ on:
     paths:
       - "src/csvjson.json"
       - "src/csvjson.csv"
+      - "src/csvjsontr.json"
+      - "src/csvjsontr.csv"
 
 jobs:
   deploy:
