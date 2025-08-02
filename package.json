@@ -41,7 +41,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build && cp 404.html build/",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build --repo=https://x-access-token:$GH_TOKEN@github.com/maysaleba/maysaleba.github.io.git",
     "sitemap": "babel-node ./src/sitemap-generator.js"
   },
   "eslintConfig": {
