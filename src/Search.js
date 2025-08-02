@@ -32,8 +32,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   // pointerEvents: 'none',
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'flex-end',
-  padding: 5,
+  justifyContent: 'flex-end'
   // backgroundColor: 'black',
   // width: '100%',
 }));
