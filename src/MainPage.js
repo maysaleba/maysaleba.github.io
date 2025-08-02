@@ -6,8 +6,6 @@ import Paper from "@mui/material/Paper";
 import reviewssw from "./csvjson.json";
 
 const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
-  var d = new Date();
-
 const sortedReviews = sortJson([...reviewssw], "Popularity", "int", false);
 const dsortedReviews = sortJson([...reviewssw], "SaleStarted", "date", false);
   
