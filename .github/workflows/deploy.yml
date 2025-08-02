@@ -25,6 +25,11 @@ jobs:
       - name: Install dependencies (with legacy peer deps)
         run: npm install --legacy-peer-deps
 
+      - name: Configure Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Deploy with npm
         env:
           NODE_OPTIONS: --openssl-legacy-provider
