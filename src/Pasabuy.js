@@ -10,7 +10,6 @@ import form from "./images/form.jpg";
 import ticket from "./images/ticket.jpg";
 import Grid from "@mui/material/Grid";
 import { Paper } from "@mui/material";
-import styled from "styled-components";
 import InfoIcon from "@mui/icons-material/Info";
 import CloseIcon from "@mui/icons-material/Close";
 
