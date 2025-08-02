@@ -25,7 +25,6 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 
 function createData(name, calories) {
   return { name, calories };
@@ -33,11 +32,6 @@ function createData(name, calories) {
 
 // Create a new Date object
 const currentDate = new Date();
-
-// Get the current day, month, and year
-const day = currentDate.getDate();
-const month = currentDate.getMonth() + 1; // Note: Months are zero-based (0 = January)
-const year = currentDate.getFullYear();
 
 // Create a string representation of the current date
 const formattedDate = currentDate.toLocaleDateString("en-US", {
@@ -369,14 +363,6 @@ const style = {
 
 const About = ({ filteredReviews, pageData, reviewsps }) => {
   // console.log(matchGames[0].description.split('\n'));
-
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  }));
 
   return (
     <div>
