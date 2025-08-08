@@ -142,13 +142,16 @@ function sortJson(element, prop, propType, asc) {
   const [latestField, setLatestField] = useState([]);
   const [latestDropDown, setLatestDropDown] = useState("Popular");
 
-  useEffect(() => {
-    const sortedswitch =  sortJson(reviewsswf, "Popularity", "int", false);  
-    const sortedPlaystation = sortJson(reviewsstf, "Popularity", "int", false);
-    const reviews = sortedPlaystation.concat(sortedswitch)
-    // /.concat(reviewsst);
-    setLatestField(reviews);
-  }, []);
+const [originalData, setOriginalData] = useState([]);
+
+useEffect(() => {
+  const sortedSwitch = sortJson(reviewsswf, "Popularity", "int", false);  
+  const sortedPlaystation = sortJson(reviewsstf, "Popularity", "int", false);
+  const reviews = sortedPlaystation.concat(sortedSwitch);
+
+  setOriginalData(reviews);     // keep pristine copy
+  setLatestField(reviews);      // default shown list
+}, []);
 
   const onPriceRangeDrop = (dropDownValue) =>
     setPriceRangeDropDown(dropDownValue);
@@ -203,31 +206,26 @@ function sortJson(element, prop, propType, asc) {
     }
   };
 
-  const onLatestChange = (filterLatest) => {
-    if (filterLatest === "Popular") {
-      sortJson(latestField, "Popularity", "int", false);
-    }
-    if (filterLatest === "Top Rated") {
-      sortJson(latestField, "SCORE", "int", false);
-    }
-    if (filterLatest === "New Discounts") {
-      sortJson(latestField, "SCORE", "int", false);
-      sortJson(latestField, "SaleStarted", "date", false);
-    }
-    if (filterLatest === "Latest Release") {
-      sortJson(latestField, "SCORE", "int", false);
-      sortJson(latestField, "ReleaseDate", "date", false);
-    }
-    if (filterLatest === "Price ↓") {
-      sortJson(latestField, "SCORE", "int", false);
-      sortJson(latestField, "SalePrice", "int", false);
-    }
-    if (filterLatest === "Price ↑") {
-      sortJson(latestField, "SCORE", "int", false);
-      sortJson(latestField, "SalePrice", "int", true);
-    } else {
-    }
-  };
+const onLatestChange = (filterLatest) => {
+  let sorted = [...originalData];  // always sort from clean copy
+
+  if (filterLatest === "Popular") {
+    sorted = sortJson(sorted, "Popularity", "int", false);
+  } else if (filterLatest === "Top Rated") {
+    sorted = sortJson(sorted, "SCORE", "int", false);
+  } else if (filterLatest === "New Discounts") {
+    sorted = sortJson(sorted, "SCORE", "int", false);
+    sorted = sortJson(sorted, "SaleStarted", "date", false);
+  } else if (filterLatest === "Latest Release") {
+    sorted = sortJson(sorted, "ReleaseDate", "date", false);
+  } else if (filterLatest === "Price ↓") {
+    sorted = sortJson(sorted, "SalePrice", "int", false);
+  } else if (filterLatest === "Price ↑") {
+    sorted = sortJson(sorted, "SalePrice", "int", true);
+  }
+
+  setLatestField(sorted);
+};
 
   const onPlatformChange = (filterPlatform) => {
     setPlatformField(filterPlatform);
