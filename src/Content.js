@@ -98,6 +98,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     var sgdExchange = 1 / JSON.stringify(datam.sgd);
     var hkdExchange = 1 / JSON.stringify(datam.hkd);
     var trdExchange = 1 / JSON.stringify(datam.try);
+    var jpyExchange = 1 / JSON.stringify(datam.jpy);
+    var krwExchange = 1 / JSON.stringify(datam.krw);
   } else {
     var usdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.USD);
     var arsExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.ARS);
@@ -114,6 +116,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     var sgdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.SGD);
     var hkdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.HKD);
     var trdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.TRY);
+    var jpyExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.JPY);
+    var krwExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.KRW);
   }
   // {100*JSON.stringify(datam.usd)}
 
@@ -1590,6 +1594,9 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
         "New Zealand": matchGames[0].NewZealandPrice * nzdExchange,
         Mexico: matchGames[0].MexicoPrice * mxnExchange,
         US: matchGames[0].SalePrice * usdExchange,
+        "Hong Kong": matchGames[0].HongKongPrice * hkdExchange,
+        Korea: matchGames[0].KoreaPrice * krwExchange,
+        Japan: matchGames[0].JapanPrice * jpyExchange,
       };
 
       Object.entries(pricesobj).forEach(([k, v]) => {
@@ -1771,6 +1778,27 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
           className: "auregion-logo",
           style: { fontSize: 11, fontWeight: "", color: "#000000" },
         },
+        "Hong Kong": {
+          name: "Hong Kong",
+          price: Math.round(matchGames[0].HongKongPrice).toString(),
+          currency: "HK$",
+          className: "hkregion-logo",
+          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+        },
+        "Korea": {
+          name: "Korea",
+          price: Math.round(matchGames[0].KoreaPrice).toString(),
+          currency: "₩",
+          className: "krregion-logo",
+          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+        },
+        "Japan": {
+          name: "Japan",
+          price: Math.round(matchGames[0].JapanPrice).toString(),
+          currency: "¥",
+          className: "jpregion-logo",
+          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+        },
       };
 
       function Rank1(props) {
@@ -1832,7 +1860,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
         Mexico: "https://invl.io/clm3ola",
         Switzerland: "https://invl.io/clm3olb",
         Poland: "https://invl.io/clm3old",
-        "South Korea": "https://invl.io/clm3ole",
+        "Korea": "https://invl.io/clm3ole",
         US: "https://invl.io/clm3oli",
         Japan: "https://invl.io/clm3olj",
         Denmark: "https://invl.io/clm3oll",

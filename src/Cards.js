@@ -37,6 +37,9 @@ const Cards = ({
   NorwayPrice,
   PolandPrice,
   NewZealandPrice,
+  KoreaPrice,
+  HongKongPrice,
+  JapanPrice,
   MexicoPrice,
   ESRBRating,
   IsPS4,
@@ -98,6 +101,8 @@ today = yyyy + "-" + mm + "-" + dd;
     var sgdExchange = 1 / JSON.stringify(datam.sgd);
     var hkdExchange = 1 / JSON.stringify(datam.hkd);
     var trdExchange = 1 / JSON.stringify(datam.try);
+    var jpyExchange = 1 / JSON.stringify(datam.jpy);
+    var krwExchange = 1 / JSON.stringify(datam.krw);
   } else {
     var usdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.USD);
     var arsExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.ARS);
@@ -114,6 +119,8 @@ today = yyyy + "-" + mm + "-" + dd;
     var sgdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.SGD);
     var hkdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.HKD);
     var trdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.TRY);
+    var jpyExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.JPY);
+    var krwExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.KRW);
   }
 
   const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
@@ -245,6 +252,9 @@ diffDays = Math.round((secondDate - firstDate) / oneDay);
         NewZealand: NewZealandPrice * nzdExchange,
         Mexico: MexicoPrice * mxnExchange,
         US: SalePrice * usdExchange,
+        HongKong: HongKongPrice * hkdExchange,
+        Japan: JapanPrice * jpyExchange,
+        Korea: KoreaPrice * krwExchange
       };
 
       Object.entries(pricesobj).forEach(([k, v]) => {
@@ -274,83 +284,35 @@ diffDays = Math.round((secondDate - firstDate) / oneDay);
       }
       // console.log("smallest---", smallest + "\n" + smallestprice);
 
-      function SmallestFlag() {
-        if (smallest === "US") {
-          return (
-            <span className="usregion-logo" style={{ fontWeight: "bold" }}>
-              {"₱" + Math.round(smallestprice)}
-            </span>
-          );
-        } else if (smallest === "Argentina") {
-          return (
-            <span className="arregion-logo" style={{ fontWeight: "bold" }}>
-              {"₱" + Math.round(smallestprice)}
-            </span>
-          );
-        } else if (smallest === "Australia") {
-          return (
-            <span className="auregion-logo" style={{ fontWeight: "bold" }}>
-              {"₱" + Math.round(smallestprice)}
-            </span>
-          );
-        } else if (smallest === "Brazil") {
-          return (
-            <span className="brregion-logo" style={{ fontWeight: "bold" }}>
-              {"₱" + Math.round(smallestprice)}
-            </span>
-          );
-        } else if (smallest === "Canada") {
-          return (
-            <span className="caregion-logo" style={{ fontWeight: "bold" }}>
-              {"₱" + Math.round(smallestprice)}
-            </span>
-          );
-        } else if (smallest === "NewZealand") {
-          return (
-            <span className="nzregion-logo" style={{ fontWeight: "bold" }}>
-              {"₱" + Math.round(smallestprice)}
-            </span>
-          );
-        } else if (smallest === "Colombia") {
-          return (
-            <span className="coregion-logo" style={{ fontWeight: "bold" }}>
-              {"₱" + Math.round(smallestprice)}
-            </span>
-          );
-        } else if (smallest === "Mexico") {
-          return (
-            <span className="mxregion-logo" style={{ fontWeight: "bold" }}>
-              {"₱" + Math.round(smallestprice)}
-            </span>
-          );
-        } else if (smallest === "Peru") {
-          return (
-            <span className="peregion-logo" style={{ fontWeight: "bold" }}>
-              {"₱" + Math.round(smallestprice)}
-            </span>
-          );
-        } else if (smallest === "Poland") {
-          return (
-            <span className="plregion-logo" style={{ fontWeight: "bold" }}>
-              {"₱" + Math.round(smallestprice)}
-            </span>
-          );
-        } else if (smallest === "Norway") {
-          return (
-            <span className="noregion-logo" style={{ fontWeight: "bold" }}>
-              {"₱" + Math.round(smallestprice)}
-            </span>
-          );
-        } else if (smallest === "Southafrica") {
-          return (
-            <span className="zaregion-logo" style={{ fontWeight: "bold" }}>
-              {"₱" + Math.round(smallestprice)}
-            </span>
-          );
-        } else {
-          return null;
-        }
-      }
+function SmallestFlag() {
+  const regionClassMap = {
+    US: "usregion-logo",
+    Argentina: "arregion-logo",
+    Australia: "auregion-logo",
+    Brazil: "brregion-logo",
+    Canada: "caregion-logo",
+    NewZealand: "nzregion-logo",
+    Colombia: "coregion-logo",
+    Mexico: "mxregion-logo",
+    Peru: "peregion-logo",
+    Poland: "plregion-logo",
+    Norway: "noregion-logo",
+    Southafrica: "zaregion-logo",
+    HongKong: "hkregion-logo",
+    Korea: "krregion-logo",
+    Japan: "jpregion-logo",
+  };
+
+  const className = regionClassMap[smallest];
+  if (!className) return null;
+
+  return (
+    <span className={className} style={{ fontWeight: "bold" }}>
+      {"₱" + Math.round(smallestprice)}
+    </span>
+  );
+}
+
 
       return (
         <>
@@ -685,6 +647,9 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
                 polandprice={PolandPrice}
                 newzealandprice={NewZealandPrice}
                 mexicoprice={MexicoPrice}
+                hongkongprice={HongKongPrice}
+                koreaprice={KoreaPrice}
+                japanprice={JapanPrice}
             />{" "}
             <PesoPlusPrice psorsw={Platform} pesoplus={PlusPrice}  esrbrating={ESRBRating}/>{" "}
             <DaysLeft isExpired={SaleEnds} platform={Platform} />

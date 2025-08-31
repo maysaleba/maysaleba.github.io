@@ -92,15 +92,10 @@ const CardGroup = ({
                                           ESRBRating={review.ESRBRating}
                                           IsPS4={review.IsPS4}
                                           IsPS5={review.IsPS5}
-
-
-
+                                          HongKongPrice={review.HongKongPrice}
+                                          KoreaPrice={review.KoreaPrice}
+                                          JapanPrice={review.JapanPrice}
                                   />
-
-
-
-
-
                     </div>
                 ))}
                 </Row>

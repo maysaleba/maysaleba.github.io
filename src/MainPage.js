@@ -6,6 +6,33 @@ import Paper from "@mui/material/Paper";
 import reviewssw from "./csvjson.json";
 
 const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
+  var d = new Date();
+  var lastt = new Date(d.setDate(d.getDate() - 2));
+  var dato = String(lastt.getDate()).padStart(2, "0");
+  var moto = String(lastt.getMonth() + 1).padStart(2, "0"); //January is 0!
+  var yearto = lastt.getFullYear();
+  
+
+
+
+
+  // var lastd = new Date(d.setDate(d.getDate() ));
+  // var da = String(lastd.getDate()).padStart(2, "0");
+  // var mo = String(lastd.getMonth() + 1).padStart(2, "0"); //January is 0!
+  // var year = lastd.getFullYear();
+
+  // var lastmo = new Date(d.setDate(d.getDate() - 320));
+  // var damo = String(lastmo.getDate()).padStart(2, "0");
+  // var momo = String(lastmo.getMonth() + 1).padStart(2, "0"); //January is 0!
+  // var yearmo = lastmo.getFullYear();
+
+  // let todayd = yearto + "-" + moto + "-" + dato;
+  // // let daysago = year + "-" + mo + "-" + da;
+  // let moago = yearmo + "-" + momo + "-" + damo;
+
+
+
+
 const sortedReviews = sortJson([...reviewssw], "Popularity", "int", false);
 const dsortedReviews = sortJson([...reviewssw], "SaleStarted", "date", false);
   
@@ -102,6 +129,9 @@ function sortJson(element, prop, propType, asc) {
                                           PlusPrice={review.PlusPrice}
                                           Price={review.Price}
                                           ESRBRating={review.ESRBRating}
+                                          HongKongPrice={review.HongKongPrice}
+                                          KoreaPrice={review.KoreaPrice}
+                                          JapanPrice={review.JapanPrice}
                                   />
 
             </div>
@@ -145,6 +175,9 @@ function sortJson(element, prop, propType, asc) {
                                           PlusPrice={review.PlusPrice}
                                           Price={review.Price}
                                           ESRBRating={review.ESRBRating}
+                                          HongKongPrice={review.HongKongPrice}
+                                          KoreaPrice={review.KoreaPrice}
+                                          JapanPrice={review.JapanPrice}
                                   />
 
             </div>
