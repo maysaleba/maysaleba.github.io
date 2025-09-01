@@ -1599,9 +1599,11 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
         Japan: matchGames[0].JapanPrice * jpyExchange,
       };
 
-      Object.entries(pricesobj).forEach(([k, v]) => {
-        if (v === 0) delete pricesobj[k];
-      });
+      for (const [k, v] of Object.entries(pricesobj)) {
+        if (!Number.isFinite(v) || v <= 0) {
+          delete pricesobj[k]; // drops 0, NaN, undefined, "" (=> NaN), negatives
+        }
+      }
 
       // console.log(pricesobj);
       // console.log(zarExchange)
@@ -1878,6 +1880,12 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
         const [open, setOpen] = React.useState(false);
         const [modalText, setModalText] = React.useState(""); // State to hold the modal text
         const [modalCountry, setModalCountry] = React.useState(""); // State to hold the country
+
+                // NEW:
+        const [expanded, setExpanded] = React.useState(false);
+        const hasToggle = entries.length > 3;
+        const visibleEntries = expanded || !hasToggle ? entries : entries.slice(0, 3);
+        const top3 = entries.slice(0, 3).map(([c]) => c);
 
         const handleOpen = (event, country) => {
           event.preventDefault(); // Prevent the default behavior of the <a> tag
@@ -2177,41 +2185,45 @@ const getModalTextForCountry = (country) => {
           </tr>
         );
 
-        const ranks = entries.slice(0, 5).map((entry, index) => {
-          const rankCountry = entry[0];
-          const rankPrice = entry[1];
+        const ranks = visibleEntries.map(([rankCountry, rankPrice]) => {
+          // default look for non-medal rows
           let logoClass = "blank-medal-logo";
           let component = <Rank4 rank4country={rankCountry} />;
 
-          if (index === 0) {
+          // medals are based on the absolute ranking (entries), not the sliced list
+          if (rankCountry === top3[0]) {
             logoClass = "gold-medal-logo";
             component = <Rank1 rank1country={rankCountry} />;
-          } else if (index === 1) {
+          } else if (rankCountry === top3[1]) {
             logoClass = "silver-medal-logo";
             component = <Rank2 rank2country={rankCountry} />;
-          } else if (index === 2) {
+          } else if (rankCountry === top3[2]) {
             logoClass = "bronze-medal-logo";
             component = <Rank3 rank3country={rankCountry} />;
-          } else if (index === 3) {
-            logoClass = "blank-medal-logo";
-            component = <Rank4 rank4country={rankCountry} />;
-          } else if (index === 4) {
-            logoClass = "blank-medal-logo";
-            component = <Rank5 rank5country={rankCountry} />;
           }
 
-          return renderRow(
-            { className: logoClass, component },
-            rankPrice,
-            rankCountry,
-            true
-          );
+          return renderRow({ className: logoClass, component }, rankPrice, rankCountry, true);
         });
 
         return (
           <>
             {ranks}
-            {entries.length > 0}
+
+            {/* Only show the toggle if there are more than 3 rows */}
+            {hasToggle && (
+              <tr className="item-table-best">
+                <td colSpan={3} className="text-center" style={{ paddingTop: 6 }}>
+                  <a
+                    href="#"
+                    onClick={(e) => { e.preventDefault(); setExpanded(v => !v); }}
+                    aria-expanded={expanded}
+                    style={{ fontSize: "0.8rem", textDecoration: "underline", cursor: "pointer", color: "#555" }}
+                  >
+                    {expanded ? "Show top 3" : `Show all ${entries.length}`}
+                  </a>
+                </td>
+              </tr>
+            )}
           </>
         );
       }

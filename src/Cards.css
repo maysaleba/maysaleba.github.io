@@ -1,3 +1,66 @@
+/* --- Desktop/tablet: stabilize columns so the price column never reflows --- */
+@media (min-width: 576px) {
+  .item-price-table {
+    table-layout: fixed;         /* freeze column widths once measured */
+    width: 100%;
+  }
+
+  /* Let col 1 breathe, keep col 2 narrow, and fix the price column footprint */
+  .item-price-table tr > td.version:nth-child(1) { width: auto; }
+  .item-price-table tr > td.version:nth-child(2) { width: 14%; }
+  .item-price-table tr > td.version:nth-child(3) { width: 55%; }
+
+  /* Long labels shouldn’t push columns wider */
+  .item-price-table td.version {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+/* --- Phones: keep fully responsive/auto like before --- */
+@media (max-width: 575.98px) {
+  .item-price-table { table-layout: auto; }   /* back to default fluid table */
+  .item-price-table td.version {
+    overflow: visible;
+    white-space: normal;       /* allow wrapping on tiny screens */
+  }
+}
+
+/* Make the button internals stable everywhere (prevents micro-nudges) */
+.item-price-table .btn.btn-block {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  min-height: 38px;
+  width: 100%;
+}
+
+/* TR row: lock the inline price+logo layout */
+.price-container-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Fix the tiny SEAGM footprint so it can’t shift line metrics on load */
+.seagm-logo {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+}
+
+/* Optional: reserve some width for the number so badges/icons don’t compress it */
+.item-price-table .btn.btn-block .price {
+  min-width: 9ch;
+  text-align: center;
+}
+
+
 @media  only screen and (min-width : 120px) {
   .custom-container {
     width: 50vw !important;
@@ -281,136 +344,37 @@ a.infotax {
     /*border:  none;*/
 }
 
-table tr:first-child td:first-child {
-    border-top-left-radius: 10px;
-    border-color: white;
-    /*border-bottom-left-radius: 10px;*/
-    /*border:  none;*/
+/* 1) Base borders */
+.item-price-table {
+  border-collapse: separate;   /* important for rounded corners */
+  border-spacing: 0;           /* keep grid tight */
 }
 
-table tr:first-child td:nth-child(2) {
-    /*border-top-right-radius: 10px;*/
-    border-color: white;
-    /*border-bottom-right-radius: 10px;*/
-    /*border: none;*/
+.item-price-table td {
+  border: 0px solid white;     /* your original border-color intent */
 }
 
-table tr:first-child td:last-child {
-    border-top-right-radius: 10px;
-    border-color: white;
-    /*border-bottom-right-radius: 10px; #f0e9f8*/
-    /*border: none;*/
+/* 2) Round just the 4 outer corners */
+.item-price-table tr:first-child td:first-child {
+  border-top-left-radius: 10px;
 }
 
-
-table tr:nth-child(2) td:first-child {
-    
-    border-color: white;
-    /*border-bottom-width: thick;*/
-    /*border-bottom-left-radius: 10px;*/
-    /*border:  10;*/
+.item-price-table tr:first-child td:last-child {
+  border-top-right-radius: 10px;
 }
 
-table tr:nth-child(2) td:nth-child(2) {
-    
-    border-color: white;
-
-    /*border-bottom-right-radius: 10px;*/
-    /*border: none;*/
+.item-price-table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
 }
 
-table tr:nth-child(2) td:last-child {
-    
-    border-color: white;
-      /*border-bottom-width: thick;*/
-    /*border-bottom-right-radius: 10px;*/
-    /*border: none;*/
+.item-price-table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
 }
 
-table tr:nth-child(3) td:first-child {
-    
-    border-color: white;
-    /*border-bottom-left-radius: 10px;*/
-    /*border:  none;*/
+/* (Optional) If you really want the LAST ROW to have no borders at all: */
+.item-price-table tr:last-child td {
+  border: none;
 }
-
-table tr:nth-child(3) td:nth-child(2) {
-    
-    border-color: white;
-    /*border-bottom-right-radius: 10px;*/
-    /*border: none;*/
-}
-
-table tr:nth-child(3) td:last-child {
-    
-    border-color: white;
-    /*border-bottom-width: 10px;*/
-    /*border-bottom-right-radius: 10px;*/
-    /*border: none;*/
-}
-
-table tr:nth-child(4) td:first-child {
-    
-    border-color: white;
-    /*border-bottom-left-radius: 10px;*/
-    /*border:  none;*/
-}
-
-table tr:nth-child(4) td:nth-child(2) {
-    
-    border-color: white;
-    /*border-bottom-right-radius: 10px;*/
-    /*border: none;*/
-}
-
-table tr:nth-child(4) td:last-child {
-    
-    border-color: white;
-    /*border-bottom-right-radius: 10px;*/
-    /*border: none;*/
-}
-
-table tr:nth-child(5) td:first-child {
-    
-    border-color: white;
-    /*border-bottom-left-radius: 10px;*/
-    /*border:  none;*/
-}
-
-table tr:nth-child(5) td:nth-child(2) {
-    
-    border-color: white;
-    /*border-bottom-right-radius: 10px;*/
-    /*border: none;*/
-}
-
-table tr:nth-child(5) td:last-child {
-    
-    border-color: white;
-    /*border-bottom-right-radius: 10px;*/
-    /*border: none;*/
-}
-
-
-
-table tr:last-child td:first-child {
-    /*border-top-left-radius: 10px;*/
-    border-bottom-left-radius: 10px;
-    border:  none;
-}
-
-table tr:last-child td:nth-child(2) {
-    /*border-top-right-radius: 10px;*/
-    /*border-bottom-right-radius: 10px;*/
-    border: none;
-}
-
-table tr:last-child td:last-child {
-    /*border-top-right-radius: 10px;*/
-    border-bottom-right-radius: 10px;
-    border: none;
-}
-
 
 .ads {
    height: 90px;
