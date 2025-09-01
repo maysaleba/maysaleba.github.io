@@ -344,37 +344,37 @@ a.infotax {
     /*border:  none;*/
 }
 
-/* 1) Base borders */
+/* 1) Base table setup */
 .item-price-table {
-  border-collapse: separate;   /* important for rounded corners */
-  border-spacing: 0;           /* keep grid tight */
+  border-collapse: separate;   /* needed for corner radius */
+  border-spacing: 0;
 }
 
 .item-price-table td {
-  border: 0px solid white;     /* your original border-color intent */
+  border-bottom: 1px solid white;  /* white line between rows */
+  border-right: none;              /* optional: no vertical lines */
+  padding: 8px;
 }
 
 /* 2) Round just the 4 outer corners */
 .item-price-table tr:first-child td:first-child {
   border-top-left-radius: 10px;
 }
-
 .item-price-table tr:first-child td:last-child {
   border-top-right-radius: 10px;
 }
-
 .item-price-table tr:last-child td:first-child {
   border-bottom-left-radius: 10px;
 }
-
 .item-price-table tr:last-child td:last-child {
   border-bottom-right-radius: 10px;
 }
 
-/* (Optional) If you really want the LAST ROW to have no borders at all: */
+/* 3) Don’t draw a line under the last row */
 .item-price-table tr:last-child td {
-  border: none;
+  border-bottom: none;
 }
+
 
 .ads {
    height: 90px;
