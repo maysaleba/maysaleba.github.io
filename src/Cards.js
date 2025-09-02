@@ -295,14 +295,6 @@ diffDays = Math.round((secondDate - firstDate) / oneDay);
       // console.log("smallest---", smallest + "\n" + smallestprice);
 
 function SmallestFlag() {
-  if (!ratesReady || !smallest) {
-    return (
-      <span style={{ fontWeight: "bold" }}>
-        ₱—   {/* placeholder, no flag until ready */}
-      </span>
-    );
-  }
-
   const regionClassMap = {
     US: "usregion-logo",
     Argentina: "arregion-logo",
@@ -321,16 +313,25 @@ function SmallestFlag() {
     Japan: "jpregion-logo",
   };
 
+  if (!ratesReady || !smallest) {
+    // render a blank flag container + placeholder price
+    return (
+      <span className="blank-flag-logo" style={{ fontWeight: "bold" }}>
+        {safePhp(smallestprice, 1)}
+      </span>
+    );
+  }
+
   const className = regionClassMap[smallest];
   if (!className) return null;
 
   return (
     <span className={className} style={{ fontWeight: "bold" }}>
-      {"₱" + Math.round(smallestprice)}
-     {/*{safePhp(smallestprice, 1)} */}
+      {safePhp(smallestprice, 1)}
     </span>
   );
 }
+
 
 
 
