@@ -123,14 +123,15 @@ today = yyyy + "-" + mm + "-" + dd;
     var krwExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.KRW);
   }
 
-    // Is rate data loaded?
+  // Is rate data loaded?
   const ratesReady = makeswitch === null ? !!datam?.usd : !!datam?.USD;
 
-  // Safe PHP formatter (returns "" until rates are ready)
-  const safePhp = (amt, rate) =>
-    ratesReady && Number.isFinite(Number(amt)) && Number.isFinite(Number(rate))
-      ? "₱" + Math.round(Number(amt) * Number(rate))
-      : "";
+const safePhp = (amt, rate, placeholder = "₱--") =>
+  Number.isFinite(Number(amt)) && Number.isFinite(Number(rate))
+    ? "₱" + Math.round(Number(amt) * Number(rate))
+    : placeholder;
+
+
 
   const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
   const firstDate = new Date();
@@ -209,7 +210,6 @@ diffDays = Math.round((secondDate - firstDate) / oneDay);
   }
 
   function PesoPrice(props) {
-    if (!ratesReady) return null; // add this line
     if (props.psorsw === "Nintendo Switch" || props.psorsw === "Nintendo Switch 2") {
       var testBoolean;
       // console.log(props);
@@ -271,6 +271,16 @@ diffDays = Math.round((secondDate - firstDate) / oneDay);
         if (v === 0) delete pricesobj[k];
       });
 
+      // console.log(pricesobj)
+
+      //                 const entries = Object.entries(pricesobj).sort(([, a], [, b]) => a - b);
+
+      // var rank1 = entries[0][0] + ": " + entries[0][1]
+      // var rank2 = entries[1][0] + ": " + entries[1][1]
+      // var rank3 = entries[2][0] + ": " + entries[2][1]
+
+      //  console.log(rank1 + "\n" + rank2 + "\n" + rank3);
+
       var smallest = "";
       var smallestprice;
       for (var key in pricesobj) {
@@ -285,7 +295,14 @@ diffDays = Math.round((secondDate - firstDate) / oneDay);
       // console.log("smallest---", smallest + "\n" + smallestprice);
 
 function SmallestFlag() {
-  if (!ratesReady) return null; // add this line
+  if (!ratesReady || !smallest) {
+    return (
+      <span style={{ fontWeight: "bold" }}>
+        ₱—   {/* placeholder, no flag until ready */}
+      </span>
+    );
+  }
+
   const regionClassMap = {
     US: "usregion-logo",
     Argentina: "arregion-logo",
@@ -310,9 +327,11 @@ function SmallestFlag() {
   return (
     <span className={className} style={{ fontWeight: "bold" }}>
       {"₱" + Math.round(smallestprice)}
+     {/*{safePhp(smallestprice, 1)} */}
     </span>
   );
 }
+
 
 
       return (
@@ -324,7 +343,7 @@ function SmallestFlag() {
     if (props.psorsw === "Playstation") {
           return (
         <span className="trregion-logo" style={{ fontWeight: "light" }}>
-          {"₱" + Math.round(props.saleprice * trdExchange)}
+          {safePhp(props.saleprice, trdExchange)}
         </span>
       );
         
@@ -337,7 +356,7 @@ function SmallestFlag() {
         if (props.platform === "Playstation"){
                       return (
         <span style={{ fontWeight: "light" }}>
-          {"₱" + Math.round(props.saleprice * trdExchange)}
+          {safePhp(props.saleprice, trdExchange)}
         </span>
       );
 
@@ -347,7 +366,7 @@ function SmallestFlag() {
         else {
             return (
         <span style={{ fontWeight: "light" }}>
-          {"₱" + Math.round(props.saleprice * usdExchange)}
+          {safePhp(props.saleprice, usdExchange)}
         </span>
       );
         }
@@ -384,7 +403,7 @@ else if (PlusPrice === 202020) {
       else {
         return (
           <span className="psplusbadge" style={{ fontWeight: "bold" }}>
-            {"₱" + Math.round(PlusPrice * sgdExchange)}
+            {safePhp(PlusPrice, sgdExchange)}
           </span>
         );
       }
@@ -413,7 +432,7 @@ else if (PlusPrice === 202020) {
       else {
         return (
           <span className="psplusbadge" style={{ fontWeight: "bold" }}>
-            {"₱" + Math.round(PlusPrice * hkdExchange)}
+            {safePhp(PlusPrice, hkdExchange)}
           </span>
         );
       }
@@ -475,7 +494,7 @@ else if (PlusPrice === 202020) {
       else {
         return (
           <span className="psplusbadge" style={{ fontWeight: "bold" }}>
-            {"₱" + Math.round(PlusPrice * usdExchange)}
+            {safePhp(PlusPrice, usdExchange)}
           </span>
         );
       }
