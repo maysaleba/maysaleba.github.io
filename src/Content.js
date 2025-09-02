@@ -2219,7 +2219,7 @@ const getModalTextForCountry = (country) => {
                     aria-expanded={expanded}
                     style={{ fontSize: "0.8rem", textDecoration: "underline", cursor: "pointer", color: "#555" }}
                   >
-                    <u>{expanded ? "Show Top 3" : `Show All ${entries.length}`}</u>
+                    <u>{expanded ? "Show Top 3" : `Show All ${entries.length}`} Regions</u>
                   </a>
                 </td>
               </tr>

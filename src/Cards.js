@@ -123,6 +123,15 @@ today = yyyy + "-" + mm + "-" + dd;
     var krwExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.KRW);
   }
 
+    // Is rate data loaded?
+  const ratesReady = makeswitch === null ? !!datam?.usd : !!datam?.USD;
+
+  // Safe PHP formatter (returns "" until rates are ready)
+  const safePhp = (amt, rate) =>
+    ratesReady && Number.isFinite(Number(amt)) && Number.isFinite(Number(rate))
+      ? "₱" + Math.round(Number(amt) * Number(rate))
+      : "";
+
   const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
   const firstDate = new Date();
   const secondDate = new Date(SaleEnds);
@@ -200,6 +209,7 @@ diffDays = Math.round((secondDate - firstDate) / oneDay);
   }
 
   function PesoPrice(props) {
+    if (!ratesReady) return null; // add this line
     if (props.psorsw === "Nintendo Switch" || props.psorsw === "Nintendo Switch 2") {
       var testBoolean;
       // console.log(props);
@@ -261,16 +271,6 @@ diffDays = Math.round((secondDate - firstDate) / oneDay);
         if (v === 0) delete pricesobj[k];
       });
 
-      // console.log(pricesobj)
-
-      //                 const entries = Object.entries(pricesobj).sort(([, a], [, b]) => a - b);
-
-      // var rank1 = entries[0][0] + ": " + entries[0][1]
-      // var rank2 = entries[1][0] + ": " + entries[1][1]
-      // var rank3 = entries[2][0] + ": " + entries[2][1]
-
-      //  console.log(rank1 + "\n" + rank2 + "\n" + rank3);
-
       var smallest = "";
       var smallestprice;
       for (var key in pricesobj) {
@@ -285,6 +285,7 @@ diffDays = Math.round((secondDate - firstDate) / oneDay);
       // console.log("smallest---", smallest + "\n" + smallestprice);
 
 function SmallestFlag() {
+  if (!ratesReady) return null; // add this line
   const regionClassMap = {
     US: "usregion-logo",
     Argentina: "arregion-logo",
