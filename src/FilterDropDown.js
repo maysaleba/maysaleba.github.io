@@ -148,7 +148,7 @@ const selectCheapest = (code) => () => {
 
   return (
     <Container fluid="md">
-      <Row className="g-1 justify-content-md-center">
+      <Row className="g-100 justify-content-md-center">
 {/* Cheapest region */}
 {!isPS && (
   <Col xs={12} className="col-style">
