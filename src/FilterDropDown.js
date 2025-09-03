@@ -147,113 +147,140 @@ const selectCheapest = (code) => () => {
 };
 
   return (
-    <Container fluid="md">
-      <Row className="g-100 justify-content-md-center">
-{/* Cheapest region */}
-{!isPS && (
-  <Col xs={12} className="col-style">
-    <Dropdown className="m-1">
-      <Dropdown.Toggle size="sm" id="dd-cheapest" className="dropdown-style w-100">
-        {regionFilter ? (
-          <span
-            className={`${regionIconClass(regionFilter)} me-2 align-middle`}
-            style={{ display: "inline-block", width: 15, height: 15 }}
-            aria-hidden
-          />
-        ) : (
-          <AnyIcon />
-        )}
-        {`Region: ${REGION_LABEL[regionFilter] ?? "Any"}`}
-      </Dropdown.Toggle>
+<Container fluid="md">
+  <Row className="g-100 justify-content-md-center">
+    {/* Platform */}
+    <Col xs={isPS ? 6 : 4} md={isPS ? 6 : 4} className="col-style">
+      <Dropdown className="m-1">
+<Dropdown.Toggle size="sm" id="dd-platform" className="dropdown-style w-100">
+  <span
+    className="d-inline-block text-truncate align-middle"
+    style={{ maxWidth: 'calc(100% - 1.5rem)' }}
+    title={platformDropDown}
+  >
+    {platformDropDown}
+  </span>
+</Dropdown.Toggle>
+        <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>
+          {PLATFORM_OPTIONS.map((opt) => (
+            <Dropdown.Item as="button" key={opt.label} onClick={selectPlatform(opt)}>
+              {opt.label}
+            </Dropdown.Item>
+          ))}
+        </Dropdown.Menu>
+      </Dropdown>
+    </Col>
 
-      <Dropdown.Menu className="w-100 dropdown-style">
-        {["", "AR","AU","BR","CA","CO","HK","JP","KR","MX","NO","NZ","PE","PL","ZA","US"].map((code) => (
-          <Dropdown.Item key={code || "any"} onClick={() => onRegionChange(code)}>
-            {code ? (
-              <span
-                className={`${regionIconClass(code)} me-2 align-middle`}
-                style={{ display: "inline-block", width: 15, height: 15 }}
-                aria-hidden
-              />
-            ) : (
-              <AnyIcon />
-            )}
-            <span className="align-middle">{REGION_LABEL[code] ?? "Any"}</span>
-          </Dropdown.Item>
-        ))}
-      </Dropdown.Menu>
-    </Dropdown>
-  </Col>
-)}
+    {/* Latest */}
+    <Col xs={isPS ? 6 : 4} md={isPS ? 6 : 4} className="col-style">
+      <Dropdown className="m-1">
+<Dropdown.Toggle size="sm" id="dd-latest" className="dropdown-style w-100">
+  <span
+    className="d-inline-block text-truncate align-middle"
+    style={{ maxWidth: 'calc(100% - 1.5rem)' }}
+    title={latestDropDown}
+  >
+    {latestDropDown}
+  </span>
+</Dropdown.Toggle>
+        <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>
+          {LATEST_OPTIONS.map((label) => (
+            <Dropdown.Item as="button" key={label} onClick={selectLatest(label)}>
+              {label}
+            </Dropdown.Item>
+          ))}
+        </Dropdown.Menu>
+      </Dropdown>
+    </Col>
 
+    {/* Genre */}
+    <Col xs={isPS ? 6 : 4} md={isPS ? 6 : 4} className="col-style">
+      <Dropdown className="m-1">
+<Dropdown.Toggle size="sm" id="dd-genre" className="dropdown-style w-100">
+  <span
+    className="d-inline-block text-truncate align-middle"
+    style={{ maxWidth: 'calc(100% - 1.5rem)' }}
+    title={genreDropDown}
+  >
+    {genreDropDown}
+  </span>
+</Dropdown.Toggle>
+        <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>
+          {GENRE_OPTIONS.map((label) => (
+            <Dropdown.Item as="button" key={label} onClick={selectGenre(label)}>
+              {label}
+            </Dropdown.Item>
+          ))}
+        </Dropdown.Menu>
+      </Dropdown>
+    </Col>
 
+    {/* Price */}
+    <Col xs={6} md={6} className="col-style">
+      <Dropdown className="m-1">
+<Dropdown.Toggle size="sm" id="dd-price" className="dropdown-style w-100">
+  <span
+    className="d-inline-block text-truncate align-middle"
+    style={{ maxWidth: 'calc(100% - 1.5rem)' }}
+    title={priceRangeDropDown}
+  >
+    {priceRangeDropDown}
+  </span>
+</Dropdown.Toggle>
+        <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>
+          {PRICE_OPTIONS.map((label) => (
+            <Dropdown.Item as="button" key={label} onClick={selectPrice(label)}>
+              {label}
+            </Dropdown.Item>
+          ))}
+        </Dropdown.Menu>
+      </Dropdown>
+    </Col>
 
-        {/* Platforms */}
-        <Col xs={6} className="col-style">
-          <Dropdown className="m-1">
-            <Dropdown.Toggle size="sm" id="dd-platform" className="dropdown-style">
-              {platformDropDown}
-            </Dropdown.Toggle>
-            <Dropdown.Menu className="w-100 dropdown-style">
-              {PLATFORM_OPTIONS.map((opt) => (
-                <Dropdown.Item key={opt.label} href="#" onClick={selectPlatform(opt)}>
-                  {opt.label}
-                </Dropdown.Item>
-              ))}
-            </Dropdown.Menu>
-          </Dropdown>
-        </Col>
+    {/* Cheapest Region — LAST; hidden on PS */}
+    {!isPS && (
+      <Col xs={6} md={6} className="col-style">
+        <Dropdown className="m-1">
+<Dropdown.Toggle size="sm" id="dd-cheapest" className="dropdown-style w-100">
+  {regionFilter ? (
+    <span
+      className={`${regionIconClass(regionFilter)} align-middle me-2`}
+      style={{ display: "inline-block", width: 15, height: 15 }}
+      aria-hidden
+    />
+  ) : (
+    <AnyIcon />
+  )}
+  <span
+    className="d-inline-block text-truncate align-middle"
+    style={{ maxWidth: 'calc(100% - 1.5rem)' }}  // leave room for caret
+    title={`Region: ${REGION_LABEL[regionFilter] ?? "Any"}`}
+  >
+    {`Region: ${REGION_LABEL[regionFilter] ?? "Any"}`}
+  </span>
+</Dropdown.Toggle>
+          <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>
+            {["", "AR","AU","BR","CA","CO","HK","JP","KR","MX","NO","NZ","PE","PL","ZA","US"].map((code) => (
+              <Dropdown.Item as="button" key={code || "any"} onClick={() => onRegionChange(code)}>
+                {code ? (
+                  <span
+                    className={`${regionIconClass(code)} align-middle me-2`}
+                    style={{ display: "inline-block", width: 15, height: 15 }}
+                    aria-hidden
+                  />
+                ) : (
+                  <AnyIcon />
+                )}
+                <span className="align-middle">{REGION_LABEL[code] ?? "Any"}</span>
+              </Dropdown.Item>
+            ))}
+          </Dropdown.Menu>
+        </Dropdown>
+      </Col>
+    )}
+  </Row>
+</Container>
 
-        {/* Latest */}
-       <Col xs={6} className="col-style">
-          <Dropdown className="m-1">
-            <Dropdown.Toggle size="sm" id="dd-latest" className="dropdown-style w-100">
-              {latestDropDown}
-            </Dropdown.Toggle>
-            <Dropdown.Menu className="w-100 dropdown-style">
-              {LATEST_OPTIONS.map((label) => (
-                <Dropdown.Item key={label} href="#" onClick={selectLatest(label)}>
-                  {label}
-                </Dropdown.Item>
-              ))}
-            </Dropdown.Menu>
-          </Dropdown>
-        </Col>
-
-        {/* Genres */}
-        <Col xs={6} className="col-style">
-          <Dropdown className="m-1">
-            <Dropdown.Toggle size="sm" id="dd-genre" className="dropdown-style">
-              {genreDropDown}
-            </Dropdown.Toggle>
-            <Dropdown.Menu className="w-100 dropdown-menu dropdown-style">
-              {GENRE_OPTIONS.map((label) => (
-                <Dropdown.Item key={label} href="#" onClick={selectGenre(label)}>
-                  {label}
-                </Dropdown.Item>
-              ))}
-            </Dropdown.Menu>
-          </Dropdown>
-        </Col>
-
-        {/* Price ranges */}
-        <Col xs={6} className="col-style">
-          <Dropdown className="m-1">
-            <Dropdown.Toggle size="sm" id="dd-price" className="dropdown-style">
-              {priceRangeDropDown}
-            </Dropdown.Toggle>
-            <Dropdown.Menu className="w-100 dropdown-style">
-              {PRICE_OPTIONS.map((label) => (
-                <Dropdown.Item key={label} href="#" onClick={selectPrice(label)}>
-                  {/* render the < and spacing exactly like before */}
-                      {label}
-                </Dropdown.Item>
-              ))}
-            </Dropdown.Menu>
-          </Dropdown>
-        </Col>
-      </Row>
-    </Container>
   );
 };
 

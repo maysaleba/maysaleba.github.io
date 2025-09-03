@@ -1466,3 +1466,13 @@ margin-left: 5px;
 padding-left: 20px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
+
+
+/* Only the button turns yellow, never the menu */
+.dropdown-toggle.dropdown-style:hover,
+.dropdown-toggle.dropdown-style:focus,
+.dropdown.show > .dropdown-toggle.dropdown-style {
+  background-color: #ffba20 !important;
+  color: #000 !important;
+  border-color: #ffba20 !important;
+}
