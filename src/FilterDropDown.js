@@ -148,11 +148,11 @@ const selectCheapest = (code) => () => {
 
   return (
     <Container fluid="md">
-      <Row className="g-2 justify-content-md-center">
+      <Row className="g-1 justify-content-md-center">
 {/* Cheapest region */}
 {!isPS && (
   <Col xs={12} className="col-style">
-    <Dropdown className="m-2">
+    <Dropdown className="m-1">
       <Dropdown.Toggle size="sm" id="dd-cheapest" className="dropdown-style w-100">
         {regionFilter ? (
           <span
@@ -190,7 +190,7 @@ const selectCheapest = (code) => () => {
 
         {/* Platforms */}
         <Col xs={6} className="col-style">
-          <Dropdown className="m-2">
+          <Dropdown className="m-1">
             <Dropdown.Toggle size="sm" id="dd-platform" className="dropdown-style">
               {platformDropDown}
             </Dropdown.Toggle>
@@ -206,7 +206,7 @@ const selectCheapest = (code) => () => {
 
         {/* Latest */}
        <Col xs={6} className="col-style">
-          <Dropdown className="m-2">
+          <Dropdown className="m-1">
             <Dropdown.Toggle size="sm" id="dd-latest" className="dropdown-style w-100">
               {latestDropDown}
             </Dropdown.Toggle>
@@ -222,7 +222,7 @@ const selectCheapest = (code) => () => {
 
         {/* Genres */}
         <Col xs={6} className="col-style">
-          <Dropdown className="m-2">
+          <Dropdown className="m-1">
             <Dropdown.Toggle size="sm" id="dd-genre" className="dropdown-style">
               {genreDropDown}
             </Dropdown.Toggle>
@@ -238,7 +238,7 @@ const selectCheapest = (code) => () => {
 
         {/* Price ranges */}
         <Col xs={6} className="col-style">
-          <Dropdown className="m-2">
+          <Dropdown className="m-1">
             <Dropdown.Toggle size="sm" id="dd-price" className="dropdown-style">
               {priceRangeDropDown}
             </Dropdown.Toggle>
