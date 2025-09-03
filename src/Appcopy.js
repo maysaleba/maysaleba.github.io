@@ -246,76 +246,79 @@ const onLatestChange = (label) => {
   };
 
 
-// --- Lowest PHP price across regions (mirrors Content.js) ---
+// Map the ESRB tag you use as region code → ISO currency
+function ccyFromEsrb(review) {
+  const tag = String(review.ESRBRating || "").toUpperCase();
+  if (tag === "TRD") return "TRY";   // your data uses TRD for Turkey
+  const known = new Set([
+    "PHP","USD","HKD","SGD","JPY","KRW","AUD","NZD","CAD",
+    "MXN","BRL","PLN","NOK","ZAR","PEN","ARS","TRY"
+  ]);
+  return known.has(tag) ? tag : "PHP"; // default to PHP when unknown
+}
+
+function addPhpCandidate(bucket, key, amt, ccy, rates) {
+  const n = +amt;
+  if (!Number.isFinite(n) || n <= 0) return;
+  const base = Number(rates[ccy]);
+  const php = Number(rates.PHP);
+  if (!base || !php) return;
+  bucket[key] = n * (php / base);
+}
+
+// --- Lowest PHP price across regions (fixed for PlayStation) ---
 function lowestPhpFor(review) {
-  if (!datam || !datam.PHP) return Infinity; // until FX loads, keep it out of “cheap” buckets
+  if (!datam || !datam.PHP) return Infinity;
 
-  // Exchange factors (PHP per 1 unit of currency)
-  const usd = Number(datam.PHP) / Number(datam.USD);
-  const ars = Number(datam.PHP) / Number(datam.ARS);
-  const aud = Number(datam.PHP) / Number(datam.AUD);
-  const brl = Number(datam.PHP) / Number(datam.BRL);
-  const cad = Number(datam.PHP) / Number(datam.CAD);
-  const nzd = Number(datam.PHP) / Number(datam.NZD);
-  const cop = Number(datam.PHP) / Number(datam.COP);
-  const mxn = Number(datam.PHP) / Number(datam.MXN);
-  const pen = Number(datam.PHP) / Number(datam.PEN);
-  const pln = Number(datam.PHP) / Number(datam.PLN);
-  const nok = Number(datam.PHP) / Number(datam.NOK);
-  const zar = Number(datam.PHP) / Number(datam.ZAR);
-  const sgd = Number(datam.PHP) / Number(datam.SGD);
-  const hkd = Number(datam.PHP) / Number(datam.HKD);
-  const trd = Number(datam.PHP) / Number(datam.TRY);
-  const jpy = Number(datam.PHP) / Number(datam.JPY);
-  const krw = Number(datam.PHP) / Number(datam.KRW);
-
-  // Build region→PHP map using available fields
   const prices = {};
 
-  // Switch uses USD "SalePrice" as base; PS uses Peso “SalePrice”
-  // We still include both in the candidate list (converted to PHP if needed).
-  if (Number.isFinite(+review.SalePrice)) {
-    prices.US = +review.SalePrice * (review.platform === "Playstation" ? 1 : usd);
-  }
-  if (Number.isFinite(+review.Price)) {
-    // full/original price as fallback candidate
-    prices._FULL = +review.Price * (review.platform === "Playstation" ? 1 : usd);
+  if (review.platform === "Playstation") {
+    const ccy = ccyFromEsrb(review);
+    // Sale / Full
+    addPhpCandidate(prices, "PS_Sale", review.SalePrice, ccy, datam);
+    addPhpCandidate(prices, "PS_Full", review.Price, ccy, datam);
+    // PS Plus (ignore sentinel values)
+    const plus = +review.PlusPrice;
+    if (plus && plus !== 999999 && plus !== 202020) {
+      addPhpCandidate(prices, "PS_Plus", plus, ccy, datam);
+    }
+  } else {
+    // Switch uses USD for Sale/Price
+    addPhpCandidate(prices, "US_Sale", review.SalePrice, "USD", datam);
+    addPhpCandidate(prices, "US_Full", review.Price, "USD", datam);
   }
 
-  // Other regions (if present on the record), all converted to PHP
-  if (Number.isFinite(+review.CanadaPrice))       prices.Canada        = +review.CanadaPrice * cad;
-  if (Number.isFinite(+review.PeruPrice))         prices.Peru          = +review.PeruPrice * pen;
-  if (Number.isFinite(+review.AustraliaPrice))    prices.Australia     = +review.AustraliaPrice * aud;
-  if (Number.isFinite(+review.ColombiaPrice))     prices.Colombia      = +review.ColombiaPrice * cop;
-  if (Number.isFinite(+review.SouthafricaPrice))  prices["South Africa"]= +review.SouthafricaPrice * zar;
-  if (Number.isFinite(+review.BrazilPrice))       prices.Brazil        = +review.BrazilPrice * brl;
-  if (Number.isFinite(+review.NorwayPrice))       prices.Norway        = +review.NorwayPrice * nok;
-  if (Number.isFinite(+review.PolandPrice))       prices.Poland        = +review.PolandPrice * pln;
-  if (Number.isFinite(+review.NewZealandPrice))   prices["New Zealand"]= +review.NewZealandPrice * nzd;
-  if (Number.isFinite(+review.MexicoPrice))       prices.Mexico        = +review.MexicoPrice * mxn;
-  if (Number.isFinite(+review.HongKongPrice))     prices["Hong Kong"]  = +review.HongKongPrice * hkd;
-  if (Number.isFinite(+review.KoreaPrice))        prices.Korea         = +review.KoreaPrice * krw;
-  if (Number.isFinite(+review.JapanPrice))        prices.Japan         = +review.JapanPrice * jpy;
-  if (Number.isFinite(+review.SingaporePrice))    prices.Singapore     = +review.SingaporePrice * sgd;
-  if (Number.isFinite(+review.TurkeyPrice))       prices.Turkey        = +review.TurkeyPrice * trd;
+  // Other region fields (already in native currency → convert)
+  addPhpCandidate(prices, "Canada",        review.CanadaPrice,       "CAD", datam);
+  addPhpCandidate(prices, "Peru",          review.PeruPrice,         "PEN", datam);
+  addPhpCandidate(prices, "Australia",     review.AustraliaPrice,    "AUD", datam);
+  addPhpCandidate(prices, "Colombia",      review.ColombiaPrice,     "COP", datam);
+  addPhpCandidate(prices, "South Africa",  review.SouthafricaPrice,  "ZAR", datam);
+  addPhpCandidate(prices, "Brazil",        review.BrazilPrice,       "BRL", datam);
+  addPhpCandidate(prices, "Norway",        review.NorwayPrice,       "NOK", datam);
+  addPhpCandidate(prices, "Poland",        review.PolandPrice,       "PLN", datam);
+  addPhpCandidate(prices, "New Zealand",   review.NewZealandPrice,   "NZD", datam);
+  addPhpCandidate(prices, "Mexico",        review.MexicoPrice,       "MXN", datam);
+  addPhpCandidate(prices, "Hong Kong",     review.HongKongPrice,     "HKD", datam);
+  addPhpCandidate(prices, "Korea",         review.KoreaPrice,        "KRW", datam);
+  addPhpCandidate(prices, "Japan",         review.JapanPrice,        "JPY", datam);
+  addPhpCandidate(prices, "Singapore",     review.SingaporePrice,    "SGD", datam);
+  addPhpCandidate(prices, "Turkey",        review.TurkeyPrice,       "TRY", datam);
 
-  // Argentina special handling (same shape as Content.js: ARS + 21% VAT + service/fee component)
-  if (Number.isFinite(+review.ArgentinaPrice)) {
-    const basePhp = +review.ArgentinaPrice * ars;
-    // In Content.js you sort, then flag Argentina and show notes; for list filtering we just
-    // fold taxes/fees into the effective PHP so it compares apples to apples.
-    // Keeping it aligned with Content.js math pattern:
-    const usdPerPhp = usd; // already PHP per USD
-    const regionalityTax =
-      +review.ArgentinaPrice * ars * 1.21 * ((1500 - 12100 * ars) / (12100 * ars));
-    const argentinaVat = (basePhp * 1.21) - basePhp;
+  // Argentina (same model you use in Content.js)
+  const ars = +review.ArgentinaPrice;
+  if (Number.isFinite(ars) && ars > 0 && datam.ARS) {
+    const phpPerARS = Number(datam.PHP) / Number(datam.ARS);
+    const basePhp = ars * phpPerARS;
+    const regionalityTax = ars * phpPerARS * 1.21 * ((1500 - 12100 * phpPerARS) / (12100 * phpPerARS));
+    const argentinaVat = basePhp * 0.21;
     prices.Argentina = basePhp + argentinaVat + regionalityTax;
   }
 
-  // Strip non-finite/<=0, then return the minimum
   const vals = Object.values(prices).filter(v => Number.isFinite(v) && v > 0);
   return vals.length ? Math.min(...vals) : Infinity;
 }
+
 
 
 let filteredReviews = useMemo(() =>
