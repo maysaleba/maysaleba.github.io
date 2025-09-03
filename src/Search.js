@@ -32,7 +32,8 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   // pointerEvents: 'none',
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'flex-end'
+  justifyContent: 'flex-end',
+  padding: 5,
   // backgroundColor: 'black',
   // width: '100%',
 }));
@@ -50,7 +51,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const SearchAppBar = props => {
-const {history, onPlatformDrop, onPlatformChange, onPriceRangeDrop, clearPriceRange, searchQuery, setSearchQuery, clearGenre, onDropDownChange} = props;
+const {history, onPlatformDrop, onPlatformChange, onPriceRangeDrop, clearPriceRange, searchQuery, setSearchQuery, clearGenre, onDropDownChange, onRegionChange} = props;
 return (
 	 <Box sx={{ flexGrow: 1 }}>
 	 	<Search sx={{width: {xs: '92vw', md: '50vw', lg: '30vw'}, margin: 'auto', marginBottom: '20px'}}>
@@ -68,6 +69,7 @@ return (
                 onDropDownChange("All Genres");
                 setSearchQuery(e.target.s.value);
                 e.preventDefault();
+                onRegionChange?.("");            // reset Cheapest Region to "Any"
             }}
 
 

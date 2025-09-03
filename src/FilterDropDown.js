@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { Container, Dropdown, Row, Col } from "react-bootstrap";
 import { withRouter } from "react-router-dom";
+import "./Cards.css";
 
 const FilterDropDown = (props) => {
   const {
@@ -20,7 +21,12 @@ const FilterDropDown = (props) => {
     onFilterChange,
     genreDropDown,
     onDropDownChange,
+    onRegionChange,      // <-- add
+    regionFilter,        // <-- add
   } = props;
+
+
+  const isPS = (platformDropDown || "").toLowerCase() === "playstation";
 
   // ---------- helpers ----------
   const resetSearchAndPrice = () => {
@@ -29,9 +35,14 @@ const FilterDropDown = (props) => {
     onPriceRangeDrop?.("All Price Range");
   };
 
+  const resetPriceOnly = () => {
+    clearPriceRange?.();
+    onPriceRangeDrop?.("All Price Range");
+  };
+
   const selectPlatform = ({ route, label, value }) => () => {
     if (route) history.push(route);
-    resetSearchAndPrice();
+    resetPriceOnly(); 
     onPlatformChange?.(value);
     onPlatformDrop?.(label);
   };
@@ -53,7 +64,7 @@ const FilterDropDown = (props) => {
   };
 
   const selectPrice = (label) => () => {
-    clearSearchChange?.();
+    // clearSearchChange?.();
     onPriceRangeDrop?.(label);
     onPriceRangeChange?.(label);
   };
@@ -102,11 +113,83 @@ const FilterDropDown = (props) => {
     []
   );
 
+  const REGION_LABEL = {
+  "": "Any",
+  AR:"Argentina", AU: "Australia", BR: "Brazil", CA:"Canada",
+  CO:"Colombia", HK:"Hong Kong", JP:"Japan", KR:"Korea", 
+  MX:"Mexico", NO:"Norway", NZ:"New Zealand", PE:"Peru", 
+  PL:"Poland", ZA:"South Africa", US:"United States",  
+};
+
+const CHEAPEST_OPTIONS = useMemo(
+  () => ["", "AR","TR","HK","SG","JP","KR","US","CA","MX","BR","PL","NO","ZA","PE","AU","NZ","CO","PH"],
+  []
+);
+
+// "HK" -> "hkregion-logo"
+const regionIconClass = (code) =>
+  code ? `${String(code).toLowerCase()}region-logo` : "";
+
+// small globe icon with same box as flags (so it lines up nicely)
+const AnyIcon = () => (
+  <span
+    aria-hidden
+    className="me-2 align-middle"
+    style={{ display: "inline-block", width: 15, height: 15, lineHeight: "15px", textAlign: "center" }}
+  >
+    🌐
+  </span>
+);
+
+
+const selectCheapest = (code) => () => {
+  onRegionChange?.(code);
+};
+
   return (
     <Container fluid="md">
-      <Row xs={2} lg={2} sm={2} md={2} xl={2} className="justify-content-md-center">
+      <Row className="g-2 justify-content-md-center">
+{/* Cheapest region */}
+{!isPS && (
+  <Col xs={12} className="col-style">
+    <Dropdown className="m-2">
+      <Dropdown.Toggle size="sm" id="dd-cheapest" className="dropdown-style w-100">
+        {regionFilter ? (
+          <span
+            className={`${regionIconClass(regionFilter)} me-2 align-middle`}
+            style={{ display: "inline-block", width: 15, height: 15 }}
+            aria-hidden
+          />
+        ) : (
+          <AnyIcon />
+        )}
+        {`Region: ${REGION_LABEL[regionFilter] ?? "Any"}`}
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu className="w-100 dropdown-style">
+        {["", "AR","AU","BR","CA","CO","HK","JP","KR","MX","NO","NZ","PE","PL","ZA","US"].map((code) => (
+          <Dropdown.Item key={code || "any"} onClick={() => onRegionChange(code)}>
+            {code ? (
+              <span
+                className={`${regionIconClass(code)} me-2 align-middle`}
+                style={{ display: "inline-block", width: 15, height: 15 }}
+                aria-hidden
+              />
+            ) : (
+              <AnyIcon />
+            )}
+            <span className="align-middle">{REGION_LABEL[code] ?? "Any"}</span>
+          </Dropdown.Item>
+        ))}
+      </Dropdown.Menu>
+    </Dropdown>
+  </Col>
+)}
+
+
+
         {/* Platforms */}
-        <Col className="col-style">
+        <Col xs={6} className="col-style">
           <Dropdown className="m-2">
             <Dropdown.Toggle size="sm" id="dd-platform" className="dropdown-style">
               {platformDropDown}
@@ -122,7 +205,7 @@ const FilterDropDown = (props) => {
         </Col>
 
         {/* Latest */}
-        <Col className="col-style">
+       <Col xs={6} className="col-style">
           <Dropdown className="m-2">
             <Dropdown.Toggle size="sm" id="dd-latest" className="dropdown-style w-100">
               {latestDropDown}
@@ -138,7 +221,7 @@ const FilterDropDown = (props) => {
         </Col>
 
         {/* Genres */}
-        <Col className="col-style">
+        <Col xs={6} className="col-style">
           <Dropdown className="m-2">
             <Dropdown.Toggle size="sm" id="dd-genre" className="dropdown-style">
               {genreDropDown}
@@ -154,7 +237,7 @@ const FilterDropDown = (props) => {
         </Col>
 
         {/* Price ranges */}
-        <Col className="col-style">
+        <Col xs={6} className="col-style">
           <Dropdown className="m-2">
             <Dropdown.Toggle size="sm" id="dd-price" className="dropdown-style">
               {priceRangeDropDown}

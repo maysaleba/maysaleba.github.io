@@ -246,6 +246,75 @@ const onLatestChange = (label) => {
   };
 
 
+  // Map currency code to region code for display/filtering
+const CCY_TO_REGION = {
+  USD:'US', CAD:'CA', PEN:'PE', AUD:'AU', COP:'CO', ZAR:'ZA', BRL:'BR',
+  NOK:'NO', PLN:'PL', NZD:'NZ', MXN:'MX', HKD:'HK', KRW:'KR', JPY:'JP',
+  SGD:'SG', TRY:'TR', PHP:'PH', ARS:'AR'
+};
+
+// Return the region code (e.g., "AR", "TR", "US") that is cheapest for a review
+function cheapestRegionCode(review) {
+  if (!datam || !datam.PHP) return null;
+
+  const regionToPhp = {};
+  const toPHP = (amt, ccy) => +amt * (Number(datam.PHP) / Number(datam[ccy] || 1));
+  const putMin = (code, value) => {
+    if (!Number.isFinite(value) || value <= 0) return;
+    if (regionToPhp[code] === undefined || value < regionToPhp[code]) {
+      regionToPhp[code] = value;
+    }
+  };
+
+  if (review.platform === "Playstation") {
+    const ccy = ccyFromEsrb(review);             // HKD/SGD/TRD→TRY etc.
+    const region = CCY_TO_REGION[ccy] || "PH";
+    putMin(region, toPHP(review.SalePrice, ccy));
+    putMin(region, toPHP(review.Price, ccy));
+    const plus = +review.PlusPrice;
+    if (plus && plus !== 999999 && plus !== 202020) putMin(region, toPHP(plus, ccy));
+  } else {
+    // Switch base uses USD
+    putMin("US", toPHP(review.SalePrice, "USD"));
+    putMin("US", toPHP(review.Price, "USD"));
+  }
+
+  // Other region fields
+  putMin("CA", toPHP(review.CanadaPrice,      "CAD"));
+  putMin("PE", toPHP(review.PeruPrice,        "PEN"));
+  putMin("AU", toPHP(review.AustraliaPrice,   "AUD"));
+  putMin("CO", toPHP(review.ColombiaPrice,    "COP"));
+  putMin("ZA", toPHP(review.SouthafricaPrice, "ZAR"));
+  putMin("BR", toPHP(review.BrazilPrice,      "BRL"));
+  putMin("NO", toPHP(review.NorwayPrice,      "NOK"));
+  putMin("PL", toPHP(review.PolandPrice,      "PLN"));
+  putMin("NZ", toPHP(review.NewZealandPrice,  "NZD"));
+  putMin("MX", toPHP(review.MexicoPrice,      "MXN"));
+  putMin("HK", toPHP(review.HongKongPrice,    "HKD"));
+  putMin("KR", toPHP(review.KoreaPrice,       "KRW"));
+  putMin("JP", toPHP(review.JapanPrice,       "JPY"));
+  putMin("SG", toPHP(review.SingaporePrice,   "SGD"));
+  putMin("TR", toPHP(review.TurkeyPrice,      "TRY"));
+
+  // Argentina with VAT + regionality (same as your Content.js math)
+  const ars = +review.ArgentinaPrice;
+  if (Number.isFinite(ars) && ars > 0 && datam.ARS) {
+    const phpPerARS = Number(datam.PHP) / Number(datam.ARS);
+    const basePhp = ars * phpPerARS;
+    const vat = basePhp * 0.21;
+    const regionality = basePhp * 1.21 * ((1500 - 12100 * phpPerARS) / (12100 * phpPerARS));
+    putMin("AR", basePhp + vat + regionality);
+  }
+
+  let best = null, bestVal = Infinity;
+  for (const [code, val] of Object.entries(regionToPhp)) {
+    if (val < bestVal) { bestVal = val; best = code; }
+  }
+  return best;
+}
+
+
+
 // Map the ESRB tag you use as region code → ISO currency
 function ccyFromEsrb(review) {
   const tag = String(review.ESRBRating || "").toUpperCase();
@@ -337,6 +406,10 @@ let filteredReviews = useMemo(() =>
       ? (lowPhp <= priceRangeField && lowPhp >= priceRangeLow)
       : true;
 
+    // NEW: region check — only show games where this region is the global cheapest
+    const minRegion = cheapestRegionCode(review);
+    const regionPass = !regionFilter || (minRegion === regionFilter);
+
     return (
       review.Title.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e")
         .replace(/\s/g, '').toLowerCase()
@@ -346,9 +419,10 @@ let filteredReviews = useMemo(() =>
         ) &&
       filterGenres.some(filterGenre => review.genre.toLowerCase().includes(filterGenre)) &&
       review.platform.toLowerCase().includes(platformField.toLowerCase()) &&
-      pricePass
+      pricePass &&
+      regionPass           // <— add this
     );
-  }), [latestField, filterField, searchQuery, platformField, priceRangeField, priceRangeLow, datam]
+  }), [latestField, filterField, searchQuery, platformField, priceRangeField, priceRangeLow, datam, regionFilter]
 );
 
 
@@ -451,6 +525,7 @@ const SearchCmpProps = {
   setSearchQuery,
   clearGenre,
   onDropDownChange,
+  onRegionChange,
 };
 
 const CardGroupProps = {
@@ -471,6 +546,7 @@ const CardGroupProps = {
   onFilterChange,
   clearSearchChange,
   onRegionChange,
+  regionFilter, 
   searchQuery,
   page,
   setSearchQuery,
