@@ -34,17 +34,17 @@ today = yyyy + "-" + mm + "-" + dd;
 function ListPage({ defaults, SearchCmpProps, CardGroupProps, HelmetProps }) {
   const { setPlatformField, setPlatformDropDown, setRegionFilter } = CardGroupProps;
 
-  React.useEffect(() => {
-    if (defaults?.platform !== undefined) {
-      setPlatformField(defaults.platform);
-      setPlatformDropDown(defaults.platformLabel ?? (defaults.platform || "All Platforms"));
-    }
-    if (defaults?.region !== undefined) {
-      setRegionFilter(defaults.region);
-    }
-    // run once on mount
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+React.useEffect(() => {
+  if (defaults?.platform !== undefined) {
+    setPlatformField(defaults.platform);
+    setPlatformDropDown(defaults.platformLabel ?? (defaults.platform || "All Platforms"));
+  }
+  if (defaults?.region !== undefined) {
+    // only apply default if nothing is set yet
+    setRegionFilter(prev => (prev ? prev : defaults.region));
+  }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, []);
 
   return (
     <>
