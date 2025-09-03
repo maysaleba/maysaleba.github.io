@@ -30,6 +30,38 @@ let hour = today.getHours();
 
 today = yyyy + "-" + mm + "-" + dd;
 
+// Minimal route wrapper: sets defaults once, renders Search + CardGroup + Helmet
+function ListPage({ defaults, SearchCmpProps, CardGroupProps, HelmetProps }) {
+  const { setPlatformField, setPlatformDropDown, setRegionFilter } = CardGroupProps;
+
+  React.useEffect(() => {
+    if (defaults?.platform !== undefined) {
+      setPlatformField(defaults.platform);
+      setPlatformDropDown(defaults.platformLabel ?? (defaults.platform || "All Platforms"));
+    }
+    if (defaults?.region !== undefined) {
+      setRegionFilter(defaults.region);
+    }
+    // run once on mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  return (
+    <>
+      <Search {...SearchCmpProps} />
+      <CardGroup {...CardGroupProps} />
+      {HelmetProps && (
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>{HelmetProps.title}</title>
+          <meta name="description" content={HelmetProps.description} />
+        </Helmet>
+      )}
+    </>
+  );
+}
+
+
 
 export default function Main() {
 function sortJson(element, prop, propType, asc) {
@@ -87,47 +119,25 @@ function sortJson(element, prop, propType, asc) {
     return null;
   }
 
-  // var theURL = "https://www.npmjs.com/package/adasddasdas";
-  // var theURL = "https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
-  var theURL = "x";
-
-  var theURLa =
+ const theURLa =
     "https://cdn.jsdelivr.net/gh/ismartcoding/currency-api@main/latest/data.json";
-
-  // var theURLa =
-  //   "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json";
 
   const [datam, setDatam] = React.useState({});
   const [makeswitch, setMakeswitch] = React.useState(null);
 
-  // useEffect(async () => {
-  //   const response = await fetch (theURL);
-  //   const data = await response.json();
-  //   // setDatam(data.rates);
-  //   setDatam(data.php);
-  // }, []);
-
   useEffect(() => {
     axios
-      .get(theURL)
+      .get(theURLa)
       .then((response) => {
-        setDatam(response);
-        setDatam(response.data.rates); // if using exchangerate.host
-        // setDatam(response.data.php) // if using currency-api
+        // Uncomment one depending on the API structure you want:
+        // setDatam(response.data.rates);   // if API has "rates"
+        setDatam(response.data.quotes);        // if API has "php"
+        setMakeswitch("1");
       })
       .catch((error) => {
-        // console.log(error);
-        axios.get(theURLa).then((response) => {
-          setDatam(response.data.quotes);
-          setMakeswitch("2");
-          // if using exchangerate.host
-          // setDatam(response.data.php) // if using currency-api
-        });
+        console.error("Error fetching currency data:", error);
       });
-  }, [theURL]);
-
-// console.log("HELLO")
- // console.log(datam)
+  }, []);
 
 
   const [priceRangeField, setPriceRangeField] = useState(99999);
@@ -179,53 +189,43 @@ useEffect(() => {
     setFilterField("");
   };
 
-  const onPriceRangeChange = (filterPriceRange) => {
-    if (filterPriceRange === "All Price Range") {
-      setPriceRangeField(99999);
-      setPriceRangeLow(0);
-    }
-    if (filterPriceRange === "< P2500") {
-      setPriceRangeField(50);
-      setPriceRangeLow(35.1);
-    }
-    if (filterPriceRange === "< P1750") {
-      setPriceRangeField(35);
-      setPriceRangeLow(20.1);
-    }
-    if (filterPriceRange === "< P1000") {
-      setPriceRangeField(20);
-      setPriceRangeLow(10.1);
-    }
-    if (filterPriceRange === "< P500") {
-      setPriceRangeField(10);
-      setPriceRangeLow(5.1);
-    }
-    if (filterPriceRange === "< P250") {
-      setPriceRangeField(5);
-      setPriceRangeLow(0);
-    }
-  };
-
-const onLatestChange = (filterLatest) => {
-  let sorted = [...originalData];  // always sort from clean copy
-
-  if (filterLatest === "Popular") {
-    sorted = sortJson(sorted, "Popularity", "int", false);
-  } else if (filterLatest === "Top Rated") {
-    sorted = sortJson(sorted, "SCORE", "int", false);
-  } else if (filterLatest === "New Discounts") {
-    sorted = sortJson(sorted, "SCORE", "int", false);
-    sorted = sortJson(sorted, "SaleStarted", "date", false);
-  } else if (filterLatest === "Latest Release") {
-    sorted = sortJson(sorted, "ReleaseDate", "date", false);
-  } else if (filterLatest === "Price ↓") {
-    sorted = sortJson(sorted, "SalePrice", "int", false);
-  } else if (filterLatest === "Price ↑") {
-    sorted = sortJson(sorted, "SalePrice", "int", true);
-  }
-
-  setLatestField(sorted);
+// Put this near your other constants
+const PRICE_MAP = {
+  "All Price Range": [0, Number.POSITIVE_INFINITY],
+  "≤ P100":          [0, 100],
+  "≤ P250":          [101, 250],
+  "≤ P500":          [251, 500],
+  "≤ P750":          [501, 750],
+  "≤ P1,000":        [751, 1000],
+  "≤ P1,500":        [1001, 1500],
+  "≤ P2,000":        [1501, 2000],
+  "≤ P2,500":        [2001, 2500],
+  "≤ P3,500+":       [2501, Number.POSITIVE_INFINITY],
 };
+
+const onPriceRangeChange = (label) => {
+  const [min, max] = PRICE_MAP[label] ?? PRICE_MAP["All Price Range"];
+  setPriceRangeLow(min);
+  setPriceRangeField(max);
+};
+
+
+const SORTERS = {
+  "Popular":        (a, b) => b.Popularity - a.Popularity,
+  "Top Rated":      (a, b) => b.SCORE - a.SCORE,
+  "New Discounts":  (a, b) => new Date(b.SaleStarted) - new Date(a.SaleStarted) || (b.SCORE - a.SCORE),
+  "Latest Release": (a, b) => new Date(b.ReleaseDate) - new Date(a.ReleaseDate),
+  "Price ↓":        (a, b) => (a._lowestPHP - b._lowestPHP),
+  "Price ↑":        (a, b) => (b._lowestPHP - a._lowestPHP),
+};
+
+const onLatestChange = (label) => {
+  const withLowest = originalData.map(r => ({ ...r, _lowestPHP: lowestPhpFor(r) }));
+  const sortFn = SORTERS[label] || SORTERS["Popular"];
+  setLatestField([...withLowest].sort(sortFn));
+  setLatestDropDown(label);
+};
+
 
   const onPlatformChange = (filterPlatform) => {
     setPlatformField(filterPlatform);
@@ -246,31 +246,108 @@ const onLatestChange = (filterLatest) => {
   };
 
 
+// --- Lowest PHP price across regions (mirrors Content.js) ---
+function lowestPhpFor(review) {
+  if (!datam || !datam.PHP) return Infinity; // until FX loads, keep it out of “cheap” buckets
 
-  let filteredReviews = useMemo(() =>
-    latestField.filter((review) => {
-const cleanFilterField = filterField.replace(/[^a-zA-Z0-9é, -]/g, "").replace("é", "e").replace(/\s/g, '').toLowerCase();
+  // Exchange factors (PHP per 1 unit of currency)
+  const usd = Number(datam.PHP) / Number(datam.USD);
+  const ars = Number(datam.PHP) / Number(datam.ARS);
+  const aud = Number(datam.PHP) / Number(datam.AUD);
+  const brl = Number(datam.PHP) / Number(datam.BRL);
+  const cad = Number(datam.PHP) / Number(datam.CAD);
+  const nzd = Number(datam.PHP) / Number(datam.NZD);
+  const cop = Number(datam.PHP) / Number(datam.COP);
+  const mxn = Number(datam.PHP) / Number(datam.MXN);
+  const pen = Number(datam.PHP) / Number(datam.PEN);
+  const pln = Number(datam.PHP) / Number(datam.PLN);
+  const nok = Number(datam.PHP) / Number(datam.NOK);
+  const zar = Number(datam.PHP) / Number(datam.ZAR);
+  const sgd = Number(datam.PHP) / Number(datam.SGD);
+  const hkd = Number(datam.PHP) / Number(datam.HKD);
+  const trd = Number(datam.PHP) / Number(datam.TRY);
+  const jpy = Number(datam.PHP) / Number(datam.JPY);
+  const krw = Number(datam.PHP) / Number(datam.KRW);
 
-      const filterGenres = cleanFilterField.split(',').map(genre => genre.trim());
+  // Build region→PHP map using available fields
+  const prices = {};
 
-      if (review.platform === "Playstation") {
+  // Switch uses USD "SalePrice" as base; PS uses Peso “SalePrice”
+  // We still include both in the candidate list (converted to PHP if needed).
+  if (Number.isFinite(+review.SalePrice)) {
+    prices.US = +review.SalePrice * (review.platform === "Playstation" ? 1 : usd);
+  }
+  if (Number.isFinite(+review.Price)) {
+    // full/original price as fallback candidate
+    prices._FULL = +review.Price * (review.platform === "Playstation" ? 1 : usd);
+  }
 
-      return (
-        review.Title.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e").replace(/\s/g, '').toLowerCase().includes(searchQuery.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e").replace(/\s/g, '').toLowerCase()) &&
-        filterGenres.some(filterGenre => review.genre.toLowerCase().includes(filterGenre)) &&
-        review.platform.toLowerCase().includes(platformField.toLowerCase()) && 
-        (review.SalePrice / 50 < priceRangeField && review.SalePrice / 50 > priceRangeLow)
-      );
-    } else {
-return (
-  review.Title.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e").replace(/\s/g, '').toLowerCase().includes(searchQuery.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e").replace(/\s/g, '').toLowerCase()) &&
-  filterGenres.some(filterGenre => review.genre.toLowerCase().includes(filterGenre)) &&
-  review.platform.toLowerCase().includes(platformField.toLowerCase()) && 
-  ((review.SalePrice || review.Price) < priceRangeField && (review.SalePrice || review.Price) > priceRangeLow)
+  // Other regions (if present on the record), all converted to PHP
+  if (Number.isFinite(+review.CanadaPrice))       prices.Canada        = +review.CanadaPrice * cad;
+  if (Number.isFinite(+review.PeruPrice))         prices.Peru          = +review.PeruPrice * pen;
+  if (Number.isFinite(+review.AustraliaPrice))    prices.Australia     = +review.AustraliaPrice * aud;
+  if (Number.isFinite(+review.ColombiaPrice))     prices.Colombia      = +review.ColombiaPrice * cop;
+  if (Number.isFinite(+review.SouthafricaPrice))  prices["South Africa"]= +review.SouthafricaPrice * zar;
+  if (Number.isFinite(+review.BrazilPrice))       prices.Brazil        = +review.BrazilPrice * brl;
+  if (Number.isFinite(+review.NorwayPrice))       prices.Norway        = +review.NorwayPrice * nok;
+  if (Number.isFinite(+review.PolandPrice))       prices.Poland        = +review.PolandPrice * pln;
+  if (Number.isFinite(+review.NewZealandPrice))   prices["New Zealand"]= +review.NewZealandPrice * nzd;
+  if (Number.isFinite(+review.MexicoPrice))       prices.Mexico        = +review.MexicoPrice * mxn;
+  if (Number.isFinite(+review.HongKongPrice))     prices["Hong Kong"]  = +review.HongKongPrice * hkd;
+  if (Number.isFinite(+review.KoreaPrice))        prices.Korea         = +review.KoreaPrice * krw;
+  if (Number.isFinite(+review.JapanPrice))        prices.Japan         = +review.JapanPrice * jpy;
+  if (Number.isFinite(+review.SingaporePrice))    prices.Singapore     = +review.SingaporePrice * sgd;
+  if (Number.isFinite(+review.TurkeyPrice))       prices.Turkey        = +review.TurkeyPrice * trd;
+
+  // Argentina special handling (same shape as Content.js: ARS + 21% VAT + service/fee component)
+  if (Number.isFinite(+review.ArgentinaPrice)) {
+    const basePhp = +review.ArgentinaPrice * ars;
+    // In Content.js you sort, then flag Argentina and show notes; for list filtering we just
+    // fold taxes/fees into the effective PHP so it compares apples to apples.
+    // Keeping it aligned with Content.js math pattern:
+    const usdPerPhp = usd; // already PHP per USD
+    const regionalityTax =
+      +review.ArgentinaPrice * ars * 1.21 * ((1500 - 12100 * ars) / (12100 * ars));
+    const argentinaVat = (basePhp * 1.21) - basePhp;
+    prices.Argentina = basePhp + argentinaVat + regionalityTax;
+  }
+
+  // Strip non-finite/<=0, then return the minimum
+  const vals = Object.values(prices).filter(v => Number.isFinite(v) && v > 0);
+  return vals.length ? Math.min(...vals) : Infinity;
+}
+
+
+let filteredReviews = useMemo(() =>
+  latestField.filter((review) => {
+    const cleanFilterField = filterField
+      .replace(/[^a-zA-Z0-9é, -]/g, "")
+      .replace("é", "e").replace(/\s/g, '').toLowerCase();
+
+    const filterGenres = cleanFilterField.split(',').map(g => g.trim());
+
+    const lowPhp = lowestPhpFor(review);
+    const fxReady = Number.isFinite(lowPhp) && lowPhp !== Infinity;
+
+    // If FX not ready yet, don't fail the price filter
+    const pricePass = fxReady
+      ? (lowPhp <= priceRangeField && lowPhp >= priceRangeLow)
+      : true;
+
+    return (
+      review.Title.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e")
+        .replace(/\s/g, '').toLowerCase()
+        .includes(
+          searchQuery.replace(/[^a-zA-Z0-9é ]/g, "").replace("é","e")
+          .replace(/\s/g, '').toLowerCase()
+        ) &&
+      filterGenres.some(filterGenre => review.genre.toLowerCase().includes(filterGenre)) &&
+      review.platform.toLowerCase().includes(platformField.toLowerCase()) &&
+      pricePass
+    );
+  }), [latestField, filterField, searchQuery, platformField, priceRangeField, priceRangeLow, datam]
 );
-    }
 
-    }));
 
 
 
@@ -361,342 +438,209 @@ return (
     filter: blur(var(--blur-radius));
   `;
 
-  return (
-    <Router>
-      <ScrollToTop />
-      <BackgroundContainer>
-        <Background />
-      </BackgroundContainer>
+// ---- props for child components (Search + CardGroup) ----
+const SearchCmpProps = {
+  onPlatformChange,
+  onPlatformDrop,
+  clearPriceRange,
+  onPriceRangeDrop,
+  searchQuery,
+  setSearchQuery,
+  clearGenre,
+  onDropDownChange,
+};
 
-      <NaviBar
-        onPlatformChange={onPlatformChange}
-        onPlatformDrop={onPlatformDrop}
-        clearFilter={clearFilter}
-        clearSearchChange={clearSearchChange}
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-      />
+const CardGroupProps = {
+  clearPriceRange,
+  priceRangeDropDown,
+  onPriceRangeDrop,
+  onPriceRangeChange,
+  clearGenre,
+  onPlatformDrop,
+  onPlatformChange,
+  platformDropDown,
+  onLatestDrop,
+  onLatestChange,
+  latestDropDown,
+  clearFilter,
+  genreDropDown,
+  onDropDownChange,
+  onFilterChange,
+  clearSearchChange,
+  onRegionChange,
+  searchQuery,
+  page,
+  setSearchQuery,
+  jumpPage,
+  filteredReviews,
+  pageData,
+  maxPage,
+  // for ListPage init defaults
+  setPlatformField,
+  setPlatformDropDown,
+  setRegionFilter,
+};
+
+// ---- route table (defaults + Helmet text per route) ----
+const ROUTES = [
+  {
+    path: "/allgames",
+    defaults: { platform: "", platformLabel: "All Platforms", region: "" },
+    helmet: {
+      title: "All Games - May Sale Ba?",
+      description: "Get the latest Nintendo and Playstation deals in Philippine Peso!",
+    },
+  },
+  {
+    path: "/switch",
+    defaults: { platform: "Switch", platformLabel: "Switch", region: "" },
+    helmet: {
+      title: "Nintendo Switch - May Sale Ba?",
+      description: `Get to know about ${reviewssw.length} Nintendo Switch deals in Philippine Peso!`,
+    },
+  },
+  {
+    path: "/switch-2",
+    defaults: { platform: "Switch 2", platformLabel: "Switch 2", region: "" },
+    helmet: {
+      title: "Nintendo Switch 2 - May Sale Ba?",
+      description: `Get to know about ${reviewssw.length} Nintendo Switch deals in Philippine Peso!`,
+    },
+  },
+  {
+    path: "/Playstation",
+    defaults: { platform: "Playstation", platformLabel: "Playstation", region: "" },
+    helmet: {
+      title: "Playstation - PH - May Sale Ba?",
+      description: `Get to know about ${reviewsstf.length} Playstation deals in Philippine Peso!`,
+    },
+  },
+];
+
+
+return (
+  <Router>
+    <ScrollToTop />
+    <NaviBar
+      onPlatformDrop={onPlatformDrop}
+      clearFilter={clearFilter}
+      clearSearchChange={clearSearchChange}
+      searchQuery={searchQuery}
+      setSearchQuery={setSearchQuery}
+    />
+
+    <BackgroundContainer>
+      <Background />
+    </BackgroundContainer>
+
+    {/* Home */}
+    <Route
+      path="/"
+      exact
+      render={() => (
+        <div>
+          <Search {...SearchCmpProps} />
+          <MainPage
+            filteredReviews={filteredReviews}
+            pageData={pageData}
+            reviewsps={reviewsstf}
+          />
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>
+              {`May Sale Ba? - Get the latest prices on Nintendo Switch and Playstation deals in Philippine Peso!`}
+            </title>
+            <meta
+              name="description"
+              content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
+            />
+          </Helmet>
+        </div>
+      )}
+    />
+
+    {/* List routes (no setters in JSX!) */}
+    {ROUTES.map((r) => (
       <Route
-        path="/"
+        key={r.path}
+        path={r.path}
         exact
-        render={(props) => (
-          <div>
-            <Search
-              onPlatformChange={onPlatformChange}
-              onPlatformDrop={onPlatformDrop}
-              clearPriceRange={clearPriceRange}
-              onPriceRangeDrop={onPriceRangeDrop}
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
-              clearGenre={clearGenre}
-              onDropDownChange={onDropDownChange}
-            />
-            <MainPage
-              filteredReviews={filteredReviews}
-              pageData={pageData}
-              reviewsps={reviewsstf}
-            />
-            <Helmet>
-              <meta charset="utf-8" />
-              <title>
-                May Sale Ba? - Get the latest prices on Nintendo Switch and Playstation deals in Philippine Peso!
-              </title>
-              <meta
-                name="description"
-                content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
-              />
-            </Helmet>
-          </div>
+        render={() => (
+          <ListPage
+            defaults={r.defaults}            // e.g. { platform: "Switch", platformLabel: "Switch", region: "" }
+            SearchCmpProps={SearchCmpProps}  // Search props you already build above
+            CardGroupProps={CardGroupProps}  // CardGroup props you already build above
+            HelmetProps={r.helmet}           // title/description per route
+          />
         )}
       />
+    ))}
 
-      <Route
-        path="/allgames"
-        exact
-        render={(props) => (
-          <div>
-          {setRegionFilter("")}
-            <Search
-              onPlatformChange={onPlatformChange}
-              onPlatformDrop={onPlatformDrop}
-              clearPriceRange={clearPriceRange}
-              onPriceRangeDrop={onPriceRangeDrop}
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
-              clearGenre={clearGenre}
-              onDropDownChange={onDropDownChange}
-            />
-            <CardGroup
-              clearPriceRange={clearPriceRange}
-              priceRangeDropDown={priceRangeDropDown}
-              onPriceRangeDrop={onPriceRangeDrop}
-              onPriceRangeChange={onPriceRangeChange}
-              clearGenre={clearGenre}
-              onPlatformDrop={onPlatformDrop}
-              onPlatformChange={onPlatformChange}
-              platformDropDown={platformDropDown}
-              onLatestDrop={onLatestDrop}
-              onLatestChange={onLatestChange}
-              latestDropDown={latestDropDown}
-              clearFilter={clearFilter}
-              genreDropDown={genreDropDown}
-              onDropDownChange={onDropDownChange}
-              onFilterChange={onFilterChange}
-              clearSearchChange={clearSearchChange}
-              searchQuery={searchQuery}
-              page={page}
-              setSearchQuery={setSearchQuery}
-              jumpPage={jumpPage}
-              filteredReviews={filteredReviews}
-              pageData={pageData}
-              maxPage={maxPage}
-            />
-          </div>
-        )}
-      />
+    {/* Detail page */}
+    <Route
+      path="/games/:games"
+      exact
+      render={({ match }) => (
+        <div>
+          <Content makeswitch={makeswitch} datam={datam} match={match} />
+        </div>
+      )}
+    />
 
-      <Route
-        path="/switch"
-        render={(props) => (
-          <div>
-            {setPlatformField("Switch")}
-            {setPlatformDropDown("Switch")}
-            {setRegionFilter("")}
-            <Search
-              onPlatformChange={onPlatformChange}
-              onPlatformDrop={onPlatformDrop}
-              clearPriceRange={clearPriceRange}
-              onPriceRangeDrop={onPriceRangeDrop}
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
-              clearGenre={clearGenre}
-              onDropDownChange={onDropDownChange}
+    {/* Gift Cards */}
+    <Route
+      path="/giftcards"
+      render={() => (
+        <div>
+          <GiftCards searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>Gift Cards - May Sale Ba?</title>
+            <meta
+              name="description"
+              content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
             />
-            <CardGroup
-              clearPriceRange={clearPriceRange}
-              priceRangeDropDown={priceRangeDropDown}
-              onPriceRangeDrop={onPriceRangeDrop}
-              onPriceRangeChange={onPriceRangeChange}
-              clearGenre={clearGenre}
-              onPlatformDrop={onPlatformDrop}
-              onPlatformChange={onPlatformChange}
-              platformDropDown={platformDropDown}
-              onLatestDrop={onLatestDrop}
-              onLatestChange={onLatestChange}
-              latestDropDown={latestDropDown}
-              clearFilter={clearFilter}
-              genreDropDown={genreDropDown}
-              onDropDownChange={onDropDownChange}
-              onFilterChange={onFilterChange}
-              clearSearchChange={clearSearchChange}
-              searchQuery={searchQuery}
-              page={page}
-              setSearchQuery={setSearchQuery}
-              jumpPage={jumpPage}
-              filteredReviews={filteredReviews}
-              pageData={pageData}
-              maxPage={maxPage}
-            />
-            <Helmet>
-              <meta charset="utf-8" />
-              <title>Nintendo Switch - May Sale Ba?</title>
-              <meta
-                name="description"
-                content={
-                  "Get to know about " +
-                  reviewssw.length +
-                  " Nintendo Switch deals in Philippine Peso!"
-                }
-              />
-            </Helmet>
-          </div>
-        )}
-      />
+          </Helmet>
+        </div>
+      )}
+    />
 
-            <Route
-        path="/switch-2"
-        render={(props) => (
-          <div>
-            {setPlatformField("Switch 2")}
-            {setPlatformDropDown("Switch 2")}
-            {setRegionFilter("")}
-            <Search
-              onPlatformChange={onPlatformChange}
-              onPlatformDrop={onPlatformDrop}
-              clearPriceRange={clearPriceRange}
-              onPriceRangeDrop={onPriceRangeDrop}
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
-              clearGenre={clearGenre}
-              onDropDownChange={onDropDownChange}
+    {/* FAQ */}
+    <Route
+      path="/faq"
+      render={() => (
+        <div>
+          <FAQ searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>FAQ - May Sale Ba?</title>
+            <meta
+              name="description"
+              content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
             />
-            <CardGroup
-              clearPriceRange={clearPriceRange}
-              priceRangeDropDown={priceRangeDropDown}
-              onPriceRangeDrop={onPriceRangeDrop}
-              onPriceRangeChange={onPriceRangeChange}
-              clearGenre={clearGenre}
-              onPlatformDrop={onPlatformDrop}
-              onPlatformChange={onPlatformChange}
-              platformDropDown={platformDropDown}
-              onLatestDrop={onLatestDrop}
-              onLatestChange={onLatestChange}
-              latestDropDown={latestDropDown}
-              clearFilter={clearFilter}
-              genreDropDown={genreDropDown}
-              onDropDownChange={onDropDownChange}
-              onFilterChange={onFilterChange}
-              clearSearchChange={clearSearchChange}
-              searchQuery={searchQuery}
-              page={page}
-              setSearchQuery={setSearchQuery}
-              jumpPage={jumpPage}
-              filteredReviews={filteredReviews}
-              pageData={pageData}
-              maxPage={maxPage}
-            />
-            <Helmet>
-              <meta charset="utf-8" />
-              <title>Nintendo Switch - May Sale Ba?</title>
-              <meta
-                name="description"
-                content={
-                  "Get to know about " +
-                  reviewssw.length +
-                  " Nintendo Switch deals in Philippine Peso!"
-                }
-              />
-            </Helmet>
-          </div>
-        )}
-      />
-    
-                  <Route
-        path="/Playstation"
-        render={(props) => (
-          <div>
-            {setPlatformField("Playstation")}
-            {setPlatformDropDown("Playstation")}
-            {setRegionFilter("")}
-            <Search
-              onPlatformChange={onPlatformChange}
-              onPlatformDrop={onPlatformDrop}
-              clearPriceRange={clearPriceRange}
-              onPriceRangeDrop={onPriceRangeDrop}
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
-              clearGenre={clearGenre}
-              onDropDownChange={onDropDownChange}
-            />
-            <CardGroup
-              clearPriceRange={clearPriceRange}
-              priceRangeDropDown={priceRangeDropDown}
-              onPriceRangeDrop={onPriceRangeDrop}
-              onPriceRangeChange={onPriceRangeChange}
-              clearGenre={clearGenre}
-              onPlatformDrop={onPlatformDrop}
-              onPlatformChange={onPlatformChange}
-              platformDropDown={platformDropDown}
-              onLatestDrop={onLatestDrop}
-              onLatestChange={onLatestChange}
-              latestDropDown={latestDropDown}
-              clearFilter={clearFilter}
-              genreDropDown={genreDropDown}
-              onDropDownChange={onDropDownChange}
-              onFilterChange={onFilterChange}
-              clearSearchChange={clearSearchChange}
-              searchQuery={searchQuery}
-              page={page}
-              setSearchQuery={setSearchQuery}
-              jumpPage={jumpPage}
-              filteredReviews={filteredReviews}
-              pageData={pageData}
-              maxPage={maxPage}
-            />
-            <Helmet>
-              <meta charset="utf-8" />
-              <title>Playstation - PH - May Sale Ba?</title>
-              <meta
-                name="description"
-                content={
-                  "Get to know about " +
-                  reviewsstf.length +
-                  " Playstation deals in Philippine Peso!"
-                }
-              />
-            </Helmet>
-          </div>
-        )}
-      />
-            
-     
-           
+          </Helmet>
+        </div>
+      )}
+    />
 
-                  
-      <Route
-        path="/games/:games"
-        exact
-        render={({ match }) => (
-          <div>
-            <Content makeswitch={makeswitch} datam={datam} match={match} />
-          </div>
-        )}
-      />
-      <Route
-        path="/giftcards"
-        render={(props) => (
-          <div>
-            <GiftCards
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
+    {/* Pasabuy */}
+    <Route
+      path="/pasabuy"
+      render={() => (
+        <div>
+          <Pasabuy searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>Pasabuy - May Sale Ba?</title>
+            <meta
+              name="description"
+              content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
             />
-            <Helmet>
-              <meta charset="utf-8" />
-              <title>Gift Cards - May Sale Ba?</title>
-              <meta
-                name="description"
-                content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
-              />
-            </Helmet>
-          </div>
-        )}
-      />
-      <Route
-        path="/faq"
-        render={(props) => (
-          <div>
-            <FAQ />
-            <Helmet>
-              <meta charset="utf-8" />
-              <title>FAQ - May Sale Ba?</title>
-              <meta
-                name="description"
-                content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
-              />
-            </Helmet>
-          </div>
-        )}
-      />
-       <Route
-        path="/pasabuy"
-        render={(props) => (
-          <div>
-            <Pasabuy
-              filteredReviews={filteredReviews}
-              pageData={pageData}
-              reviewsps={reviewsstf}
-             />
-            <Helmet>
-              <meta charset="utf-8" />
-              <title>Pasabuy - May Sale Ba?</title>
-              <meta
-                name="description"
-                content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
-              />
-            </Helmet>
-          </div>
-        )}
-      />
-    </Router>
-  );
+          </Helmet>
+        </div>
+      )}
+    />
+  </Router>
+);
+
 }

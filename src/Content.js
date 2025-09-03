@@ -82,25 +82,7 @@ today = yyyy + "-" + mm + "-" + dd;
 let games = games1.concat(games2);
 
 const Content = ({ makeswitch, datam, search, setSearch, match }) => {
-  if (makeswitch === null) {
-    var usdExchange = 1 / JSON.stringify(datam.usd);
-    var arsExchange = 1 / JSON.stringify(datam.ars);
-    var audExchange = 1 / JSON.stringify(datam.aud);
-    var brlExchange = 1 / JSON.stringify(datam.brl);
-    var cadExchange = 1 / JSON.stringify(datam.cad);
-    var nzdExchange = 1 / JSON.stringify(datam.nzd);
-    var copExchange = 1 / JSON.stringify(datam.cop);
-    var mxnExchange = 1 / JSON.stringify(datam.mxn);
-    var penExchange = 1 / JSON.stringify(datam.pen);
-    var plnExchange = 1 / JSON.stringify(datam.pln);
-    var nokExchange = 1 / JSON.stringify(datam.nok);
-    var zarExchange = 1 / JSON.stringify(datam.zar);
-    var sgdExchange = 1 / JSON.stringify(datam.sgd);
-    var hkdExchange = 1 / JSON.stringify(datam.hkd);
-    var trdExchange = 1 / JSON.stringify(datam.try);
-    var jpyExchange = 1 / JSON.stringify(datam.jpy);
-    var krwExchange = 1 / JSON.stringify(datam.krw);
-  } else {
+
     var usdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.USD);
     var arsExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.ARS);
     var audExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.AUD);
@@ -118,7 +100,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     var trdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.TRY);
     var jpyExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.JPY);
     var krwExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.KRW);
-  }
+  
   // {100*JSON.stringify(datam.usd)}
 
   const matchGames = games.filter((game) => {

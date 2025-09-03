@@ -55,13 +55,7 @@ var yyyy = today.getFullYear();
 let hour = today.getHours();
 today = yyyy + "-" + mm + "-" + dd;
 
-  var theURL = "https://api.exchangerate.host/latest?base=PHP&v=" + today + "T" + hour;
-  var theURL = "x";
-  // var theURLa =
-  //   "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/php.json";
-
-
-  var theURLa =
+ const theURLa =
     "https://cdn.jsdelivr.net/gh/ismartcoding/currency-api@main/latest/data.json";
 
   const [datam, setDatam] = React.useState({});
@@ -69,41 +63,19 @@ today = yyyy + "-" + mm + "-" + dd;
 
   useEffect(() => {
     axios
-      .get(theURL)
+      .get(theURLa)
       .then((response) => {
-        setDatam(response.data.rates); // if using exchangerate.host
-        // setDatam(response.data.php) // if using currency-api
+        // Uncomment one depending on the API structure you want:
+        // setDatam(response.data.rates);   // if API has "rates"
+        setDatam(response.data.quotes);        // if API has "php"
+        setMakeswitch("1");
       })
       .catch((error) => {
-        // console.log(error);
-        axios.get(theURLa).then((response) => {
-          setDatam(response.data.quotes);
-          setMakeswitch("2");
-          // if using exchangerate.host
-          // setDatam(response.data.php) // if using currency-api
-        });
+        console.error("Error fetching currency data:", error);
       });
-  }, [theURL]);
+  }, []);
 
-  if (makeswitch === null) {
-    var usdExchange = 1 / JSON.stringify(datam.usd);
-    var arsExchange = 1 / JSON.stringify(datam.ars);
-    var audExchange = 1 / JSON.stringify(datam.aud);
-    var brlExchange = 1 / JSON.stringify(datam.brl);
-    var cadExchange = 1 / JSON.stringify(datam.cad);
-    var nzdExchange = 1 / JSON.stringify(datam.nzd);
-    var copExchange = 1 / JSON.stringify(datam.cop);
-    var mxnExchange = 1 / JSON.stringify(datam.mxn);
-    var penExchange = 1 / JSON.stringify(datam.pen);
-    var plnExchange = 1 / JSON.stringify(datam.pln);
-    var nokExchange = 1 / JSON.stringify(datam.nok);
-    var zarExchange = 1 / JSON.stringify(datam.zar);
-    var sgdExchange = 1 / JSON.stringify(datam.sgd);
-    var hkdExchange = 1 / JSON.stringify(datam.hkd);
-    var trdExchange = 1 / JSON.stringify(datam.try);
-    var jpyExchange = 1 / JSON.stringify(datam.jpy);
-    var krwExchange = 1 / JSON.stringify(datam.krw);
-  } else {
+
     var usdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.USD);
     var arsExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.ARS);
     var audExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.AUD);
@@ -121,7 +93,7 @@ today = yyyy + "-" + mm + "-" + dd;
     var trdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.TRY);
     var jpyExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.JPY);
     var krwExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.KRW);
-  }
+  
 
   // Is rate data loaded?
   const ratesReady = makeswitch === null ? !!datam?.usd : !!datam?.USD;

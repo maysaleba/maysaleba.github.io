@@ -1,464 +1,177 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Container, Dropdown, Row, Col } from "react-bootstrap";
 import { withRouter } from "react-router-dom";
 
-const FilterDropDown = props => {
-  const  {
- history,
- clearPriceRange,
- priceRangeDropDown, 
- onPriceRangeDrop, 
- onPriceRangeChange, 
- clearGenre, onPlatformDrop, 
- onPlatformChange, 
- platformDropDown, 
- onLatestDrop, 
- onLatestChange, 
- latestDropDown, 
- clearSearchChange, 
- onFilterChange, 
- genreDropDown, 
- onDropDownChange} = props;
+const FilterDropDown = (props) => {
+  const {
+    history,
+    clearPriceRange,
+    priceRangeDropDown,
+    onPriceRangeDrop,
+    onPriceRangeChange,
+    clearGenre,
+    onPlatformDrop,
+    onPlatformChange,
+    platformDropDown,
+    onLatestDrop,
+    onLatestChange,
+    latestDropDown,
+    clearSearchChange,
+    onFilterChange,
+    genreDropDown,
+    onDropDownChange,
+  } = props;
+
+  // ---------- helpers ----------
+  const resetSearchAndPrice = () => {
+    clearSearchChange?.();
+    clearPriceRange?.();
+    onPriceRangeDrop?.("All Price Range");
+  };
+
+  const selectPlatform = ({ route, label, value }) => () => {
+    if (route) history.push(route);
+    resetSearchAndPrice();
+    onPlatformChange?.(value);
+    onPlatformDrop?.(label);
+  };
+
+  const selectLatest = (label) => () => {
+    resetSearchAndPrice();
+    onLatestChange?.(label);
+    onLatestDrop?.(label);
+  };
+
+  const selectGenre = (label) => () => {
+    resetSearchAndPrice();
+    if (label === "All Genres") {
+      clearGenre?.();
+    } else {
+      onFilterChange?.(label);
+    }
+    onDropDownChange?.(label);
+  };
+
+  const selectPrice = (label) => () => {
+    clearSearchChange?.();
+    onPriceRangeDrop?.(label);
+    onPriceRangeChange?.(label);
+  };
+
+  // ---------- data sources (easy to extend) ----------
+  const PLATFORM_OPTIONS = useMemo(
+    () => [
+      { label: "All Platforms", value: "", route: "/allgames" },
+      { label: "Switch", value: "Switch", route: "/switch" },
+      { label: "Switch 2", value: "Switch 2", route: "/switch-2" },
+      { label: "Playstation", value: "Playstation", route: "/playstation" },
+    ],
+    []
+  );
+
+  const LATEST_OPTIONS = useMemo(
+    () => ["Popular", "Top Rated", "New Discounts", "Latest Release", "Price ↑", "Price ↓"],
+    []
+  );
+
+  const GENRE_OPTIONS = useMemo(
+    () => [
+      "All Genres",
+      "Action",
+      "Adventure",
+      "Arcade",
+      "Fighting",
+      "First-Person",
+      "Multiplayer",
+      "Music",
+      "Platformer",
+      "Puzzle",
+      "Racing",
+      "Role-Playing, RPG",
+      "Shooter",
+      "Simulation",
+      "Sports",
+      "Strategy",
+      "Unique",
+    ],
+    []
+  );
+
+  const PRICE_OPTIONS = useMemo(
+    () => ["All Price Range", "≤ P100", "≤ P250", "≤ P500", "≤ P750", "≤ P1,000", "≤ P1,500", "≤ P2,000", "≤ P2,500", "≤ P3,500+"],
+    []
+  );
+
   return (
+    <Container fluid="md">
+      <Row xs={2} lg={2} sm={2} md={2} xl={2} className="justify-content-md-center">
+        {/* Platforms */}
+        <Col className="col-style">
+          <Dropdown className="m-2">
+            <Dropdown.Toggle size="sm" id="dd-platform" className="dropdown-style">
+              {platformDropDown}
+            </Dropdown.Toggle>
+            <Dropdown.Menu className="w-100 dropdown-style">
+              {PLATFORM_OPTIONS.map((opt) => (
+                <Dropdown.Item key={opt.label} href="#" onClick={selectPlatform(opt)}>
+                  {opt.label}
+                </Dropdown.Item>
+              ))}
+            </Dropdown.Menu>
+          </Dropdown>
+        </Col>
 
+        {/* Latest */}
+        <Col className="col-style">
+          <Dropdown className="m-2">
+            <Dropdown.Toggle size="sm" id="dd-latest" className="dropdown-style w-100">
+              {latestDropDown}
+            </Dropdown.Toggle>
+            <Dropdown.Menu className="w-100 dropdown-style">
+              {LATEST_OPTIONS.map((label) => (
+                <Dropdown.Item key={label} href="#" onClick={selectLatest(label)}>
+                  {label}
+                </Dropdown.Item>
+              ))}
+            </Dropdown.Menu>
+          </Dropdown>
+        </Col>
 
-<Container fluid="md">
-<Row xs={2} lg={2} sm={2} md={2} xl={2} className="justify-content-md-center">
-       <Col className="col-style">
-     <Dropdown className="m-2">
-      <Dropdown.Toggle size="sm" id="dropdown-basic" className="dropdown-style">
-        {platformDropDown}
-      </Dropdown.Toggle>
+        {/* Genres */}
+        <Col className="col-style">
+          <Dropdown className="m-2">
+            <Dropdown.Toggle size="sm" id="dd-genre" className="dropdown-style">
+              {genreDropDown}
+            </Dropdown.Toggle>
+            <Dropdown.Menu className="w-100 dropdown-menu dropdown-style">
+              {GENRE_OPTIONS.map((label) => (
+                <Dropdown.Item key={label} href="#" onClick={selectGenre(label)}>
+                  {label}
+                </Dropdown.Item>
+              ))}
+            </Dropdown.Menu>
+          </Dropdown>
+        </Col>
 
-      <Dropdown.Menu className="w-100 dropdown-style">
-               <Dropdown.Item
-
-          href="#"
-          onClick={() => {
-          history.push('/allgames');  
-          clearSearchChange();
-            clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onPlatformChange("");
-            onPlatformDrop("All Platforms");
-          }}
-        >
-          All Platforms
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            history.push('/switch');
-            // clearSearchChange();
-            clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onPlatformChange("Switch");
-            onPlatformDrop("Switch");
-          }}
-        >
-          Switch
-        </Dropdown.Item>
-                         <Dropdown.Item
-          href="#"
-          onClick={() => {
-            history.push('/switch-2');
-            // clearSearchChange();
-            clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onPlatformChange("Switch 2");
-            onPlatformDrop("Switch 2");
-          }}
-        >
-          Switch 2
-        </Dropdown.Item>
-         <Dropdown.Item
-          href="#"
-          onClick={() => {
-            history.push('/playstation');
-            // clearSearchChange();
-            clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onPlatformChange("Playstation");
-            onPlatformDrop("Playstation");
-          }}
-        >
-          Playstation
-        </Dropdown.Item>
-
-
-      </Dropdown.Menu>
-    </Dropdown>
-    </Col>
-     <Col className="col-style">
-     <Dropdown className="m-2">
-      <Dropdown.Toggle size="sm" id="dropdown-basic" className="dropdown-style w-100">
-        {latestDropDown}
-      </Dropdown.Toggle>
-
-      <Dropdown.Menu className="w-100 dropdown-style">
-
-      <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-            clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onLatestChange("Popular");
-            onLatestDrop("Popular");
-          }}
-        >
-          Popular
-        </Dropdown.Item>
-                    <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-            clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onLatestChange("Top Rated");
-            onLatestDrop("Top Rated");
-          }}
-        >
-          Top Rated
-        </Dropdown.Item>
-                     <Dropdown.Item
-          href="#"
-          onClick={() => {
-          clearSearchChange();
-                      clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onLatestChange("New Discounts");
-            onLatestDrop("New Discounts");
-          }}
-        >
-          New Discounts
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-          clearSearchChange();
-                      clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onLatestChange("Latest Release");
-            onLatestDrop("Latest Release");
-          }}
-        >
-          Latest Release
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-                        clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onLatestChange("Price ↑");
-            onLatestDrop("Price ↑");
-          }}
-        >
-          Price ↑
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-                        clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onLatestChange("Price ↓");
-            onLatestDrop("Price ↓");
-          }}
-        >
-          Price ↓
-        </Dropdown.Item>
-      </Dropdown.Menu >
-    </Dropdown>
-    </Col>
-    <Col className="col-style">
-    <Dropdown className="m-2">
-      <Dropdown.Toggle fluid="sm" size="sm" id="dropdown-basic" className="dropdown-style">
-        {genreDropDown}
-      </Dropdown.Toggle>
-
-      <Dropdown.Menu className="w-100 dropdown-menu dropdown-style">
-       <Dropdown.Item 
-          href="#"
-          onClick={() => {
-			      clearSearchChange();
-            clearGenre();
-                        clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onDropDownChange("All Genres");
-          }}
-        >
-          All Genres
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
- 			      clearSearchChange();
-                        clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onFilterChange("Action");
-            onDropDownChange("Action");
-          }}
-        >
-          Action
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-          	clearSearchChange();
-                        clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onFilterChange("Adventure");
-            onDropDownChange("Adventure");
-          }}
-        >
-          Adventure
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-          	clearSearchChange();
-                        clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onFilterChange("Arcade");
-            onDropDownChange("Arcade");
-          }}
-        >
-          Arcade
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-                        clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onFilterChange("Fighting");
-            onDropDownChange("Fighting");
-          }}
-        >
-          Fighting
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-                        clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onFilterChange("First-Person");
-            onDropDownChange("First-Person");
-          }}
-        >
-          First-Person
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-                        clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onFilterChange("Multiplayer");
-            onDropDownChange("Multiplayer");
-          }}
-        >
-          Multiplayer
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-                        clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onFilterChange("Music");
-            onDropDownChange("Music");
-          }}
-        >
-          Music
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-                        clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onFilterChange("Platformer");
-            onDropDownChange("Platformer");
-          }}
-        >
-          Platformer
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-                        clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onFilterChange("Puzzle");
-            onDropDownChange("Puzzle");
-          }}
-        >
-          Puzzle
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-                        clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onFilterChange("Racing");
-            onDropDownChange("Racing");
-          }}
-        >
-          Racing
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-                        clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onFilterChange("Role-Playing, RPG");
-            onDropDownChange("Role-Playing, RPG");
-          }}
-        >
-          Role-Playing, RPG
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-                        clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onFilterChange("Shooter");
-            onDropDownChange("Shooter");
-          }}
-        >
-          Shooter
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-            clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onFilterChange("Simulation");
-            onDropDownChange("Simulation");
-          }}
-        >
-          Simulation
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-            clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onFilterChange("Sports");
-            onDropDownChange("Sports");
-          }}
-        >
-          Sports
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-                        clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onFilterChange("Strategy");
-            onDropDownChange("Strategy");
-          }}
-        >
-          Strategy
-        </Dropdown.Item>
-                <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-                        clearPriceRange();
-            onPriceRangeDrop("All Price Range")
-            onFilterChange("Unique");
-            onDropDownChange("Unique");
-          }}
-        >
-          Unique
-        </Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
-    </Col>
-     <Col className="col-style">
-     <Dropdown className="m-2">
-      <Dropdown.Toggle size="sm" id="dropdown-basic" className="dropdown-style">
-        {priceRangeDropDown}
-      </Dropdown.Toggle>
-
-      <Dropdown.Menu className="w-100 dropdown-style">
-       <Dropdown.Item
-          href="#"
-          onClick={() => {
-          clearSearchChange();
-          onPriceRangeDrop("All Price Range")
-          onPriceRangeChange("All Price Range");
-          }}
-        >
-          All Price Range
-        </Dropdown.Item>
-       <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange(); 
-          onPriceRangeDrop("< P2500")
-          onPriceRangeChange("< P2500");
-          }}
-        >
-          &lt; P2500
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-            clearSearchChange();
-          onPriceRangeDrop("< P1750")
-          onPriceRangeChange("< P1750");
-          }}
-        >
-          &lt; P1750
-        </Dropdown.Item>
-         <Dropdown.Item
-          href="#"
-          onClick={() => {
-          clearSearchChange();
-          onPriceRangeDrop("< P1000")
-          onPriceRangeChange("< P1000");
-          }}
-        >
-          &lt; P1000
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-          clearSearchChange();
-          onPriceRangeDrop("< P500")
-          onPriceRangeChange("< P500");
-          }}
-        >
-           &lt; P500
-        </Dropdown.Item>
-        <Dropdown.Item
-          href="#"
-          onClick={() => {
-          clearSearchChange();
-          onPriceRangeDrop("< P250")
-          onPriceRangeChange("< P250");
-          }}
-        >
-          &lt; P250
-        </Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
-    </Col>
-</Row>
+        {/* Price ranges */}
+        <Col className="col-style">
+          <Dropdown className="m-2">
+            <Dropdown.Toggle size="sm" id="dd-price" className="dropdown-style">
+              {priceRangeDropDown}
+            </Dropdown.Toggle>
+            <Dropdown.Menu className="w-100 dropdown-style">
+              {PRICE_OPTIONS.map((label) => (
+                <Dropdown.Item key={label} href="#" onClick={selectPrice(label)}>
+                  {/* render the < and spacing exactly like before */}
+                      {label}
+                </Dropdown.Item>
+              ))}
+            </Dropdown.Menu>
+          </Dropdown>
+        </Col>
+      </Row>
     </Container>
   );
-}
+};
 
 export default withRouter(FilterDropDown);
