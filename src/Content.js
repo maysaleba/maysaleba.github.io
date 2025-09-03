@@ -1979,6 +1979,24 @@ const getModalTextForCountry = (country) => {
       </ul>
       </ol>
     `,
+        "Korea & Japan & Hong Kong": `
+      <ol>
+      <li> Set up an account in the <b>${country}</b> eShop
+      <ul>
+        <li><a href="https://accounts.nintendo.com/profile/edit" target="_blank" style="color: #fc430a; font-weight: bold;">Change your eshop account country</a> to <b>${country}</b></li>
+        <li>You can also <a href="https://accounts.nintendo.com/register" target="_blank" style="color: #fc430a; font-weight: bold;">create a new Nintendo account</a></li>
+        <li><a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" style="color: #fc430a; font-weight: bold;">Watch video guide</a></li>
+      </ul>
+      <li> Open the eShop on your Nintendo Switch and search for your game</li>
+      <li> Proceed to Purchase</li>
+      <ul>
+      <li>Purchase a <b>Nintendo eShop gift card</b> valid in <b>${country}</b> from the link(s) below: </li>
+      <ul>
+      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">SEAGM</a></li>
+      </ul>
+      </ul>
+      </ol>
+    `,
   };
 
   // Check if the country belongs to a group, if so, return the group's description
@@ -1986,6 +2004,8 @@ const getModalTextForCountry = (country) => {
     return countryGroups["Canada & Poland & Mexico & Australia & Norway"];
   } else if (["Peru", "Colombia", "South Africa", "New Zealand"].includes(country)) {
     return countryGroups["Peru & Colombia & South Africa & New Zealand"];
+  } else if (["Korea", "Japan", "Hong Kong"].includes(country)) {
+    return countryGroups["Korea & Japan & Hong Kong"];
   } else if (country === "US") {
     return countryGroups["US"];
   } else if (country === "Brazil") {
