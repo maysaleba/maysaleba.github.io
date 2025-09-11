@@ -189,14 +189,14 @@ export default function Main() {
   const PRICE_MAP = {
     "All Price Range": [0, Number.POSITIVE_INFINITY],
     "≤ P100": [0, 100],
-    "≤ P250": [101, 250],
-    "≤ P500": [251, 500],
-    "≤ P750": [501, 750],
-    "≤ P1,000": [751, 1000],
-    "≤ P1,500": [1001, 1500],
-    "≤ P2,000": [1501, 2000],
-    "≤ P2,500": [2001, 2500],
-    "≤ P3,500+": [2501, Number.POSITIVE_INFINITY],
+    "≤ P250": [0, 250],
+    "≤ P500": [0, 500],
+    "≤ P750": [0, 750],
+    "≤ P1,000": [0, 1000],
+    "≤ P1,500": [0, 1500],
+    "≤ P2,000": [0, 2000],
+    "≤ P2,500": [0, 2500],
+    "≤ P2,500+": [0, Number.POSITIVE_INFINITY],
   };
 
   const onPriceRangeChange = (label) => {
@@ -555,7 +555,8 @@ export default function Main() {
 
       const qs = params.toString();
       const newUrl = `${pathname}${qs ? `?${qs}` : ""}`;
-      window.history.replaceState({}, "", newUrl);
+      // After initial hydration, write changes as NEW history entries
+      window.history.pushState({}, "", newUrl);
     }
   }, [
     hydrated,
@@ -566,6 +567,32 @@ export default function Main() {
     regionFilter,
     page,
   ]);
+
+  // 3) Respond to browser Back/Forward by re-reading the URL (popstate)
+   useEffect(() => {
+     const onPop = () => {
+       const params = new URLSearchParams(window.location.search);
+       const s = readQP(params, "s", "");
+       const genre = readQP(params, "genre", "All Genres");
+       const sort = readQP(params, "sort", "Popular");
+       const price = readQP(params, "price", "All Price Range");
+       const region = params.get("region") || "";
+       const p = parseInt(params.get("page") || "1", 10);
+ 
+       setSearchQuery(s);
+       setGenreDropDown(genre);
+       setFilterField(genre === "All Genres" ? "" : genre);
+       setPriceRangeDropDown(price);
+       onPriceRangeChange(price);
+       setRegionFilter(region);
+       setLatestDropDown(sort);
+       onLatestChange(sort);
+       jumpPage(Number.isFinite(p) ? p : 1);
+     };
+     window.addEventListener("popstate", onPop);
+     return () => window.removeEventListener("popstate", onPop);
+   }, [jumpPage]);
+
 
   // ---------- BACKGROUND ----------
   const BackgroundContainer = styled.div`

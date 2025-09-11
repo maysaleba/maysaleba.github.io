@@ -109,16 +109,16 @@ const FilterDropDown = (props) => {
   );
 
   const PRICE_OPTIONS = useMemo(
-    () => ["All Price Range", "≤ P100", "≤ P250", "≤ P500", "≤ P750", "≤ P1,000", "≤ P1,500", "≤ P2,000", "≤ P2,500", "≤ P3,500+"],
+    () => ["All Price Range", "≤ P100", "≤ P250", "≤ P500", "≤ P750", "≤ P1,000", "≤ P1,500", "≤ P2,000", "≤ P2,500", "≤ P2,500+"],
     []
   );
 
   const REGION_LABEL = {
   "": "Any",
   AR:"Argentina", AU: "Australia", BR: "Brazil", CA:"Canada",
-  CO:"Colombia", HK:"Hong Kong", JP:"Japan", 
-  MX:"Mexico", NO:"Norway", NZ:"New Zealand", PE:"Peru", 
-  PL:"Poland", ZA:"South Africa", US:"United States",  
+  CO:"Colombia", HK:"Hong Kong", JP:"Japan", MX:"Mexico", 
+  NO:"Norway", NZ:"New Zealand", PE:"Peru", PL:"Poland", 
+  ZA:"South Africa", US:"United States",  
 };
 
 const CHEAPEST_OPTIONS = useMemo(
@@ -285,4 +285,3 @@ const selectCheapest = (code) => () => {
 };
 
 export default withRouter(FilterDropDown);
-
