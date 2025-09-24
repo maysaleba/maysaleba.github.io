@@ -7,36 +7,37 @@ import download from "./download.gif";
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import mark from "./flags/mark.png";
 import xmark from "./flags/xmark.png";
-import seagmlogo from "./flags/seagm.png";
+import enebalogo from "./flags/eneba.png";
 
 
 
 const GiftCards = ({searchQuery, setSearchQuery}) => {
- function createData(region, logoClass, seagmlogo) {
-    return { region, logoClass, seagmlogo };
+ function createData(region, logoClass, enebalogo) {
+    return { region, logoClass, enebalogo };
   }
 
 
   const regionLinks = {
-    "United States":  "https://invl.io/clm3oli", // Seagm logo link
-    "United Kingdom": "https://invl.io/clm3oku", // One link for the whole region
-    Australia: "https://invl.io/clm3okz", // One link for the whole region
-    Europe: "https://invl.io/clm3ol2", // One link for the whole region
-    "Hong Kong": "https://invl.io/clm3ol6", // One link for the whole region
-    Canada: "https://invl.io/clm3ol8", // One link for the whole region
-    Mexico: "https://invl.io/clm3ola", // One link for the whole region
-    Switzerland: "https://invl.io/clm3olb", // One link for the whole region
-    Poland: "https://invl.io/clm3old", // One link for the whole region
-    "South Korea": "https://invl.io/clm3ole", // One link for the whole region
-    Japan: "https://invl.io/clm3olj", // One link for the whole region
-    Denmark: "https://invl.io/clm3oll", // One link for the whole region
-    Sweden: "https://invl.io/clm3olo", // One link for the whole region
-    Brazil: "https://invl.io/clm3olp", // One link for the whole region
-    Norway: "https://invl.io/clm3olq", // One link for the whole region
-    Peru: "",
-    Argentina: "",
-    Colombia: "",
-    "South Africa": "",
+        "United Kingdom": "https://invl.app/clmzdr0",
+        Australia: "https://invl.app/clmzdr3",
+        Europe: "https://invl.app/clmzdr6",
+        "Hong Kong": "https://invl.app/clmzdre",
+        Canada: "https://invl.app/clmzdrj",
+        Mexico: "https://invl.app/clmzdrl",
+        Switzerland: "https://invl.app/clmzdrp",
+        Poland: "https://invl.app/clmzdrs",
+        "Korea": "",
+        US: "https://invl.app/clmzdrv",
+        Japan: "https://invl.app/clmzdry",
+        Denmark: "https://invl.app/clmzds0",
+        Sweden: "https://invl.app/clmzds1",
+        Brazil: "https://invl.app/clmzds3",
+        Norway: "https://invl.app/clmzds5",
+        Peru: "",
+        Argentina: "",
+        Colombia: "",
+        "South Africa": "",
+        "New Zealand": "",
     Chile: "",
   };
 
@@ -52,21 +53,21 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
       "Australia",
       "auregion-logo",
  
-      <img src={seagmlogo} style={{ width: "17px" }} />,
+      <img src={enebalogo} style={{ width: "17px" }} />,
 
     ),
     createData(
       "Brazil",
       "brregion-logo",
  
-      <img src={seagmlogo} style={{ width: "17px" }} />,
+      <img src={enebalogo} style={{ width: "17px" }} />,
     
     ),
     createData(
       "Canada",
       "caregion-logo",
     
-      <img src={seagmlogo} style={{ width: "17px" }} />,
+      <img src={enebalogo} style={{ width: "17px" }} />,
     
     ),
     createData(
@@ -87,42 +88,42 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
       "Denmark",
       "deregion-logo",
     
-      <img src={seagmlogo} style={{ width: "17px" }} />,
+      <img src={enebalogo} style={{ width: "17px" }} />,
       
     ),
     createData(
       "Europe",
       "euregion-logo",
      
-      <img src={seagmlogo} style={{ width: "17px" }} />,
+      <img src={enebalogo} style={{ width: "17px" }} />,
      
     ),
     createData(
       "Hong Kong",
       "hkregion-logo",
       
-      <img src={seagmlogo} style={{ width: "17px" }} />,
+      <img src={enebalogo} style={{ width: "17px" }} />,
      
     ),
     createData(
       "Japan",
       "jpregion-logo",
       
-      <img src={seagmlogo} style={{ width: "17px" }} />,
+      <img src={enebalogo} style={{ width: "17px" }} />,
      
     ),
     createData(
       "Mexico",
       "mxregion-logo",
      
-      <img src={seagmlogo} style={{ width: "17px" }} />,
+      <img src={enebalogo} style={{ width: "17px" }} />,
       
     ),
     createData(
       "Norway",
       "noregion-logo",
      
-      <img src={seagmlogo} style={{ width: "17px" }} />,
+      <img src={enebalogo} style={{ width: "17px" }} />,
       
     ),
     createData(
@@ -136,7 +137,7 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
       "Poland",
       "plregion-logo",
      
-      <img src={seagmlogo} style={{ width: "17px" }} />,
+      <img src={enebalogo} style={{ width: "17px" }} />,
      
     ),
     createData(
@@ -150,35 +151,35 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
       "South Korea",
       "krregion-logo",
      
-      <img src={seagmlogo} style={{ width: "17px" }} />,
+      <img src={enebalogo} style={{ width: "17px" }} />,
     
     ),
     createData(
       "Sweden",
       "seregion-logo",
      
-      <img src={seagmlogo} style={{ width: "17px" }} />,
+      <img src={enebalogo} style={{ width: "17px" }} />,
      
     ),
     createData(
       "Switzerland",
       "chregion-logo",
     
-      <img src={seagmlogo} style={{ width: "17px" }} />,
+      <img src={enebalogo} style={{ width: "17px" }} />,
     
     ),
     createData(
       "United Kingdom",
       "gbregion-logo",
       
-      <img src={seagmlogo} style={{ width: "17px" }} />,
+      <img src={enebalogo} style={{ width: "17px" }} />,
       
     ),
     createData(
       "United States",
       "usregion-logo",
       
-      <img src={seagmlogo} style={{ width: "17px" }} />,
+      <img src={enebalogo} style={{ width: "17px" }} />,
       
     ),
   ];
@@ -214,11 +215,11 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
             <ul>
               <li>
                 <a
-                  href="https://invl.io/clm3oie"
+                  href="https://invl.app/clmzdvj"
                   target="_blank"
                   style={{ color: "#fc430a", fontWeight: "bold" }}
                 >
-                  SEAGM
+                  Eneba
                 </a>
               </li>
               <li>
@@ -251,7 +252,7 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
             </ul>
         
          
-            <b>Click on the SEAGM icon to purchase an eShop Gift Card for that region</b>
+            <b>Click on the Eneba icon to purchase an eShop Gift Card for that region</b>
               <p/>
              <TableContainer component={Paper}>
               <Table
@@ -322,9 +323,9 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
                       >
                         {/* Check if regionLinks[row.region] is not an empty string */}
                         {regionLinks[row.region] ? (
-                          <a href={regionLinks[row.region]}>{row.seagmlogo}</a>
+                          <a href={regionLinks[row.region]}>{row.enebalogo}</a>
                         ) : (
-                          row.seagmlogo // Just show the logo without the link
+                          row.enebalogo // Just show the logo without the link
                         )}
                       </TableCell>
                     </TableRow>

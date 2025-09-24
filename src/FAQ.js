@@ -291,7 +291,7 @@ const About = () => {
 
   const regionLinks = {
     "United States": {
-      enebalogo: "https://invl.io/clm3oli", // Seagm logo link
+      enebalogo: "https://invl.app/clmzdrv", // Seagm logo link
     },
         "United Kingdom": "https://invl.app/clmzdr0",
         Australia: "https://invl.app/clmzdr3",
@@ -768,11 +768,11 @@ const About = () => {
             <ul>
               <li>
                 <a
-                  href="https://invl.io/clm3oie"
+                  href="https://invl.app/clmzdvj"
                   target="_blank"
                   style={{ color: "#fc430a", fontWeight: "bold" }}
                 >
-                  SEAGM
+                  Eneba
                 </a>
               </li>
               <li>

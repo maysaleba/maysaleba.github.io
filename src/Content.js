@@ -1320,7 +1320,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
                   textAlign: "center",
                 }}
               >
-                Top Up Turkey PSN credits via  <a className="infotax" href="https://invl.app/clmzds9">eneba</a> or purchase from <a className="infotax" href="https://discord.gg/regionality">
+                Top Up Turkey PSN credits via  <a className="infotax" href="https://invl.app/clmzds9">Eneba</a> or purchase from <a className="infotax" href="https://discord.gg/regionality">
                   Regionality with a service fee
                 </a>
               </Box>
@@ -1885,7 +1885,7 @@ const getModalTextForCountry = (country) => {
 
   const countryUrl = countryURLs[country] || ""; // Get the URL or fallback to an empty string
   const countryGroups = {
-    "Canada & Poland & Mexico & Australia & Norway": `
+    "Canada & Poland & Mexico & Australia & Norway  & Hong Kong": `
       <ol>
       <li> Set up an account in the <b>${country}</b> eShop
       <ul>
@@ -1899,7 +1899,7 @@ const getModalTextForCountry = (country) => {
       <li>Use a compatible debit or credit card (Visa/Mastercard) or virtual cards from Maya, GoTyme, and GrabPay.</li>
       <li>You can also purchase a <b>Nintendo eShop gift card</b> valid in <b>${country}</b> from the link(s) below: </li>
       <ul>
-      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">eneba</a></li>
+      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">Eneba</a></li>
       </ul>
       </ul>
       </ol>
@@ -1932,7 +1932,7 @@ const getModalTextForCountry = (country) => {
       <ul>
       <li>Purchase a <b>Nintendo eShop gift card</b> valid in <b>${country}</b> from the link(s) below: </li>
       <ul>
-      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">eneba</a></li>
+      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">Eneba</a></li>
       </ul>
       <li >Using local debit or credit cards in Brazil is highly discouraged as it requires a CPF, a personal ID for tax purposes, which non-residents or foreign nationals are generally not eligible. <b>Using a gift card is the safer option, as it does not require a CPF.</b></li>
       </ul>
@@ -1962,7 +1962,7 @@ const getModalTextForCountry = (country) => {
       <li>Use a compatible debit or credit card (Visa/Mastercard) or virtual cards from Maya, GoTyme, and GrabPay.</li>
       <li>You can also purchase a <b>Nintendo eShop gift card</b> valid in <b>${country}</b> from the link(s) below: </li>
       <ul>
-      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">eneba</a></li>
+      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">Eneba</a></li>
       <li><a href="https://s.shopee.ph/6V6xDmuabY" target="_blank" style="color: #fc430a; font-weight: bold;">Shopee</a></li>
       <li><a href="bit.ly/3L2qm2e" target="_blank" style="color: #fc430a; font-weight: bold;">Lazada</a></li>
       <li><a href="bit.ly/3pxXLXT" target="_blank" style="color: #fc430a; font-weight: bold;">Codashop</a></li>
@@ -1981,7 +1981,7 @@ const getModalTextForCountry = (country) => {
       </ul>
       </ol>
     `,
-        "Korea & Japan & Hong Kong": `
+        "Korea & Japan": `
       <ol>
       <li> Set up an account in the <b>${country}</b> eShop
       <ul>
@@ -1994,7 +1994,7 @@ const getModalTextForCountry = (country) => {
       <ul>
       <li>Purchase a <b>Nintendo eShop gift card</b> valid in <b>${country}</b> from the link(s) below: </li>
       <ul>
-      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">eneba</a></li>
+      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">Eneba</a></li>
       </ul>
       </ul>
       </ol>
@@ -2002,12 +2002,12 @@ const getModalTextForCountry = (country) => {
   };
 
   // Check if the country belongs to a group, if so, return the group's description
-  if (["Canada", "Poland", "Mexico", "Australia", "Norway"].includes(country)) {
-    return countryGroups["Canada & Poland & Mexico & Australia & Norway"];
+  if (["Canada", "Poland", "Mexico", "Australia", "Norway", "Hong Kong"].includes(country)) {
+    return countryGroups["Canada & Poland & Mexico & Australia & Norway  & Hong Kong"];
   } else if (["Peru", "Colombia", "South Africa", "New Zealand"].includes(country)) {
     return countryGroups["Peru & Colombia & South Africa & New Zealand"];
-  } else if (["Korea", "Japan", "Hong Kong"].includes(country)) {
-    return countryGroups["Korea & Japan & Hong Kong"];
+  } else if (["Korea", "Japan"].includes(country)) {
+    return countryGroups["Korea & Japan"];
   } else if (country === "US") {
     return countryGroups["US"];
   } else if (country === "Brazil") {
