@@ -8,7 +8,7 @@ import Modal from "@mui/material/Modal";
 import Typography from "@mui/material/Typography";
 import styled from "styled-components";
 import download from "./download.gif";
-import seagmlogo from "./seagm.png";
+import enebalogo from "./flags/eneba.png";
 import { Helmet } from "react-helmet";
 import { Redirect } from "react-router-dom";
 import GoogleAds from "./AdSense";
@@ -201,6 +201,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       <span style={{ fontSize: "0.75rem" }}>
         SALE ENDS: {DateConvert(matchGames[0].SaleEnds).toUpperCase()}
       </span>
+
     );
   }
 
@@ -1319,7 +1320,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
                   textAlign: "center",
                 }}
               >
-                Top Up Turkey PSN credits via  <a className="infotax" href="https://invl.me/clmq49s">SEAGM</a> or purchase from <a className="infotax" href="https://discord.gg/regionality">
+                Top Up Turkey PSN credits via  <a className="infotax" href="https://invl.app/clmzds9">eneba</a> or purchase from <a className="infotax" href="https://discord.gg/regionality">
                   Regionality with a service fee
                 </a>
               </Box>
@@ -1363,13 +1364,14 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
                         </span>
                         </span>
                          <a
-                          href="https://invl.me/clmq49s"
+                          href="https://invl.app/clmzds9"
                           target="_blank"
                           rel="noreferrer"
                           className="no-style-link"
                           onClick={(event) => event.stopPropagation()} // Prevent modal from opening
                         >
-                          <img src={seagmlogo} className="seagm-logo" />
+                          <img src={enebalogo} className="seagm-logo" 
+                          style={{ width: "17px", height: "17px" }}/>
                         </a>
                         </div>
                       </div>
@@ -1836,21 +1838,21 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
       }
 
       const countryURLs = {
-        "United Kingdom": "https://invl.io/clm3oku",
-        Australia: "https://invl.io/clm3okz",
-        Europe: "https://invl.io/clm3ol2",
-        "Hong Kong": "https://invl.io/clm3ol6",
-        Canada: "https://invl.io/clm3ol8",
-        Mexico: "https://invl.io/clm3ola",
-        Switzerland: "https://invl.io/clm3olb",
-        Poland: "https://invl.io/clm3old",
+        "United Kingdom": "https://invl.app/clmzdr0",
+        Australia: "https://invl.app/clmzdr3",
+        Europe: "https://invl.app/clmzdr6",
+        "Hong Kong": "https://invl.app/clmzdre",
+        Canada: "https://invl.app/clmzdrj",
+        Mexico: "https://invl.app/clmzdrl",
+        Switzerland: "https://invl.app/clmzdrp",
+        Poland: "https://invl.app/clmzdrs",
         "Korea": "https://invl.io/clm3ole",
-        US: "https://invl.io/clm3oli",
-        Japan: "https://invl.io/clm3olj",
-        Denmark: "https://invl.io/clm3oll",
-        Sweden: "https://invl.io/clm3olo",
-        Brazil: "https://invl.io/clm3olp",
-        Norway: "https://invl.io/clm3olq",
+        US: "https://invl.app/clmzdrv",
+        Japan: "https://invl.app/clmzdry",
+        Denmark: "https://invl.app/clmzds0",
+        Sweden: "https://invl.app/clmzds1",
+        Brazil: "https://invl.app/clmzds3",
+        Norway: "https://invl.app/clmzds5",
         Peru: "",
         Argentina: "",
         Colombia: "",
@@ -1897,7 +1899,7 @@ const getModalTextForCountry = (country) => {
       <li>Use a compatible debit or credit card (Visa/Mastercard) or virtual cards from Maya, GoTyme, and GrabPay.</li>
       <li>You can also purchase a <b>Nintendo eShop gift card</b> valid in <b>${country}</b> from the link(s) below: </li>
       <ul>
-      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">SEAGM</a></li>
+      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">eneba</a></li>
       </ul>
       </ul>
       </ol>
@@ -1930,7 +1932,7 @@ const getModalTextForCountry = (country) => {
       <ul>
       <li>Purchase a <b>Nintendo eShop gift card</b> valid in <b>${country}</b> from the link(s) below: </li>
       <ul>
-      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">SEAGM</a></li>
+      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">eneba</a></li>
       </ul>
       <li >Using local debit or credit cards in Brazil is highly discouraged as it requires a CPF, a personal ID for tax purposes, which non-residents or foreign nationals are generally not eligible. <b>Using a gift card is the safer option, as it does not require a CPF.</b></li>
       </ul>
@@ -1960,7 +1962,7 @@ const getModalTextForCountry = (country) => {
       <li>Use a compatible debit or credit card (Visa/Mastercard) or virtual cards from Maya, GoTyme, and GrabPay.</li>
       <li>You can also purchase a <b>Nintendo eShop gift card</b> valid in <b>${country}</b> from the link(s) below: </li>
       <ul>
-      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">SEAGM</a></li>
+      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">eneba</a></li>
       <li><a href="https://s.shopee.ph/6V6xDmuabY" target="_blank" style="color: #fc430a; font-weight: bold;">Shopee</a></li>
       <li><a href="bit.ly/3L2qm2e" target="_blank" style="color: #fc430a; font-weight: bold;">Lazada</a></li>
       <li><a href="bit.ly/3pxXLXT" target="_blank" style="color: #fc430a; font-weight: bold;">Codashop</a></li>
@@ -1992,7 +1994,7 @@ const getModalTextForCountry = (country) => {
       <ul>
       <li>Purchase a <b>Nintendo eShop gift card</b> valid in <b>${country}</b> from the link(s) below: </li>
       <ul>
-      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">SEAGM</a></li>
+      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">eneba</a></li>
       </ul>
       </ul>
       </ol>
@@ -2058,7 +2060,10 @@ const getModalTextForCountry = (country) => {
                           className="no-style-link"
                           onClick={(event) => event.stopPropagation()} // Prevent modal from opening
                         >
-                          <img src={seagmlogo} className="seagm-logo" />
+                          <img src={enebalogo} className="seagm-logo"
+                            style={{ width: "17px", height: "17px" }}
+
+                           />
                         </a>
                       ) : (
                         <div
