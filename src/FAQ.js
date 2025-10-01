@@ -604,117 +604,89 @@ const About = () => {
             The table below shows which payment methods you can use in the eShop
             for each region:
             <p />
-            <TableContainer component={Paper}>
-              <Table
-                sx={{ width: "100%" }}
-                size="small"
-                aria-label="a dense table"
-              >
-                <TableHead>
-                  <TableRow>
-                    <TableCell
-                      style={{
-                        fontFamily: "system-ui",
-                        borderRight: "1px solid rgba(224, 224, 224, 1)",
-                      }}
-                    >
-                      <b>Region</b>
-                    </TableCell>
-                    <TableCell
-                      style={{
-                        fontFamily: "system-ui",
-                        borderRight: "1px solid rgba(224, 224, 224, 1)",
-                      }}
-                      align="center"
-                    >
-                      <b>Debit/Credit/Virtual Cards</b>
-                    </TableCell>
-                    <TableCell
-                      style={{
-                        fontFamily: "system-ui",
-                        borderRight: "1px solid rgba(224, 224, 224, 1)",
-                        // padding: "0px",
-                        // paddingLeft: "20px"
-                      }}
-                      align="center"
-                    >
-                      <b>eShop Gift Cards</b>
-                    </TableCell>
-                    <TableCell
-                      style={{ fontFamily: "system-ui" }}
-                      align="center"
-                    >
-                      <b>Pasabuy</b>
-                    </TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {rows.map((row, index) => (
-                    <TableRow
-                      key={index}
-                      sx={{
-                        "& > *": {
-                          borderBottom: "1px solid rgba(224, 224, 224, 1)",
-                          borderRight: "1px solid rgba(224, 224, 224, 1)",
-                        },
-                        "& > *:last-child": {
-                          borderRight: "none",
-                        },
-                      }}
-                    >
-                      <TableCell
-                        component="th"
-                        scope="row"
-                        style={{
-                          fontFamily: "system-ui",
-                          borderBottom: "1px solid rgba(224, 224, 224, 1)",
-                          borderRight: "1px solid rgba(224, 224, 224, 1)",
-                          alignItems: "center",
-                        }}
-                      >
-                        {/* Flag Icon */}
-                        <span className={row.logoClass}>{row.region}</span>
-                      </TableCell>
-                      <TableCell
-                        align="center"
-                        style={{
-                          fontFamily: "system-ui",
-                          borderBottom: "1px solid rgba(224, 224, 224, 1)",
-                          borderRight: "1px solid rgba(224, 224, 224, 1)",
-                        }}
-                      >
-                        {row.dcvcard}
-                      </TableCell>
-                      <TableCell
-                        align="center"
-                        style={{
-                          fontFamily: "system-ui",
-                          borderBottom: "1px solid rgba(224, 224, 224, 1)",
-                          borderRight: "1px solid rgba(224, 224, 224, 1)",
-                        }}
-                      >
-                        {/* Check if regionLinks[row.region] is not an empty string */}
-                        {regionLinks[row.region] ? (
-                          <a href={regionLinks[row.region]}>{row.enebalogo}</a>
-                        ) : (
-                          row.enebalogo // Just show the logo without the link
-                        )}
-                      </TableCell>
+<TableContainer component={Paper}>
+  <Table
+    className="faq-table"
+    size="small"
+    aria-label="a dense table"
+    sx={{
+      width: "100%",
+      tableLayout: "fixed",              // ← keeps all columns on screen
+      "& thead th:nth-of-type(1)": {     // column widths (tweak as you like)
+        width: { xs: "40%", sm: "40%" },
+      },
+      "& thead th:nth-of-type(2)": { width: { xs: "20%", sm: "24%" } },
+      "& thead th:nth-of-type(3)": { width: { xs: "20%", sm: "18%" } },
+      "& thead th:nth-of-type(4)": { width: { xs: "20%", sm: "18%" } },
+      "& th, & td": {
+        whiteSpace: "normal",            // allow wrapping
+        wordBreak: "break-word",
+        p: { xs: 0.5, sm: 1 },           // tighter padding on small screens
+        fontSize: { xs: 12, sm: 14 },    // smaller font on small screens
+      },
+    }}
+  >
+    <TableHead>
+      <TableRow>
+        <TableCell style={{ borderRight: "1px solid rgba(224,224,224,1)" }}>
+          <b>Region</b>
+        </TableCell>
+        <TableCell
+          align="center"
+          style={{ borderRight: "1px solid rgba(224,224,224,1)" }}
+        >
+          {/* shorter label → wraps to 2 lines nicely */}
+          <b>Debit/Credit/Virtual</b>
+        </TableCell>
+        <TableCell
+          align="center"
+          style={{ borderRight: "1px solid rgba(224,224,224,1)" }}
+        >
+          <b>eShop Gift Cards</b>
+        </TableCell>
+        <TableCell align="center">
+          <b>Pasabuy</b>
+        </TableCell>
+      </TableRow>
+    </TableHead>
 
-                      <TableCell
-                        align="center"
-                        style={{
-                          fontFamily: "system-ui",
-                          borderBottom: "1px solid rgba(224, 224, 224, 1)",
-                        }}
-                      >
-                        {row.pasabuy}
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
+    <TableBody>
+      {rows.map((row, index) => (
+        <TableRow
+          key={index}
+          sx={{
+            "& > *": {
+              borderBottom: "1px solid rgba(224,224,224,1)",
+              borderRight: "1px solid rgba(224,224,224,1)",
+            },
+            "& > *:last-child": { borderRight: "none" },
+          }}
+        >
+          <TableCell>
+            <span className={row.logoClass}>{row.region}</span>
+          </TableCell>
+          <TableCell align="center">
+            {/* keep icons tiny so columns stay narrow */}
+            {React.cloneElement(row.dcvcard, { style: { width: 16, height: "auto" } })}
+          </TableCell>
+          <TableCell align="center">
+            {regionLinks[row.region] ? (
+              <a href={regionLinks[row.region]}>
+                {React.cloneElement(row.enebalogo, { style: { width: 16, height: "auto" } })}
+              </a>
+            ) : (
+              React.cloneElement(row.enebalogo, { style: { width: 16, height: "auto" } })
+            )}
+          </TableCell>
+          <TableCell align="center">
+            {React.cloneElement(row.pasabuy, { style: { width: 16, height: "auto" } })}
+          </TableCell>
+        </TableRow>
+      ))}
+    </TableBody>
+  </Table>
+</TableContainer>
+
           </Card.Body>
 
           <Card.Header style={{ backgroundColor: "white" }}>
