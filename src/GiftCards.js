@@ -27,7 +27,7 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
         Switzerland: "https://www.eneba.com/nintendo-nintendo-eshop-card-20-chf-key-switzerland?af_id=maysaleba&currency=PHP&region=global",
         Poland: "https://www.eneba.com/nintendo-nintendo-eshop-card-70-pln-key-poland?af_id=maysaleba&currency=PHP&region=global",
         "Korea": "",
-        US: "https://www.eneba.com/nintendo-nintendo-eshop-card-5-usd-key-united-states?af_id=maysaleba&currency=PHP&region=global",
+        "United States": "https://www.eneba.com/nintendo-nintendo-eshop-card-5-usd-key-united-states?af_id=maysaleba&currency=PHP&region=global",
         Japan: "https://www.eneba.com/nintendo-nintendo-eshop-card-500-jpy-key-japan?af_id=maysaleba&currency=PHP&region=global",
         Denmark: "https://www.eneba.com/nintendo-nintendo-eshop-card-150-dkk-key-denmark?af_id=maysaleba&currency=PHP&region=global",
         Sweden: "https://www.eneba.com/nintendo-nintendo-eshop-card-150-sek-key-sweden?af_id=maysaleba&currency=PHP&region=global",
@@ -151,7 +151,7 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
       "South Korea",
       "krregion-logo",
      
-      <img src={enebalogo} style={{ width: "17px" }} />,
+      <img src={xmark} />,
     
     ),
     createData(
