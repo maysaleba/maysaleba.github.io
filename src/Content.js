@@ -1320,7 +1320,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
                   textAlign: "center",
                 }}
               >
-                Top Up Turkey PSN credits via  <a className="infotax" href="https://invl.app/clmzds9">Eneba</a> or purchase from <a className="infotax" href="https://discord.gg/regionality">
+                Top Up Turkey PSN credits via  <a className="infotax" href="https://www.eneba.com/psn-playstation-network-card-200-try-tr-psn-key-turkey?af_id=maysaleba&currency=PHP&region=global">Eneba</a> or purchase from <a className="infotax" href="https://discord.gg/regionality">
                   Regionality with a service fee
                 </a>
               </Box>
@@ -1364,7 +1364,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
                         </span>
                         </span>
                          <a
-                          href="https://invl.app/clmzds9"
+                          href="https://www.eneba.com/psn-playstation-network-card-200-try-tr-psn-key-turkey?af_id=maysaleba&currency=PHP&region=global"
                           target="_blank"
                           rel="noreferrer"
                           className="no-style-link"
@@ -1838,21 +1838,21 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
       }
 
       const countryURLs = {
-        "United Kingdom": "https://invl.app/clmzdr0",
-        Australia: "https://invl.app/clmzdr3",
-        Europe: "https://invl.app/clmzdr6",
-        "Hong Kong": "https://invl.app/clmzdre",
-        Canada: "https://invl.app/clmzdrj",
-        Mexico: "https://invl.app/clmzdrl",
-        Switzerland: "https://invl.app/clmzdrp",
-        Poland: "https://invl.app/clmzdrs",
-        "Korea": "https://invl.io/clm3ole",
-        US: "https://invl.app/clmzdrv",
-        Japan: "https://invl.app/clmzdry",
-        Denmark: "https://invl.app/clmzds0",
-        Sweden: "https://invl.app/clmzds1",
-        Brazil: "https://invl.app/clmzds3",
-        Norway: "https://invl.app/clmzds5",
+        "United Kingdom": "https://www.eneba.com/nintendo-nintendo-eshop-card-15-gbp-key-united-kingdom?af_id=maysaleba&currency=PHP&region=global",
+        Australia: "https://www.eneba.com/nintendo-nintendo-eshop-card-15-aud-key-australia?af_id=maysaleba&currency=PHP&region=global",
+        Europe: "https://www.eneba.com/other-nintendo-eshop-card-15-eur-nintendo-key-europe?af_id=maysaleba&currency=PHP&region=global",
+        "Hong Kong": "https://www.eneba.com/nintendo-nintendo-eshop-card-100-hkd-key-hong-kong?af_id=maysaleba&currency=PHP&region=global",
+        Canada: "https://www.eneba.com/nintendo-nintendo-eshop-card-5-cad-key-canada?af_id=maysaleba&currency=PHP&region=global",
+        Mexico: "https://www.eneba.com/nintendo-nintendo-eshop-card-100-mxn-key-mexico?af_id=maysaleba&currency=PHP&region=global",
+        Switzerland: "https://www.eneba.com/nintendo-nintendo-eshop-card-20-chf-key-switzerland?af_id=maysaleba&currency=PHP&region=global",
+        Poland: "https://www.eneba.com/nintendo-nintendo-eshop-card-70-pln-key-poland?af_id=maysaleba&currency=PHP&region=global",
+        "Korea": "",
+        US: "https://www.eneba.com/nintendo-nintendo-eshop-card-5-usd-key-united-states?af_id=maysaleba&currency=PHP&region=global",
+        Japan: "https://www.eneba.com/nintendo-nintendo-eshop-card-500-jpy-key-japan?af_id=maysaleba&currency=PHP&region=global",
+        Denmark: "https://www.eneba.com/nintendo-nintendo-eshop-card-150-dkk-key-denmark?af_id=maysaleba&currency=PHP&region=global",
+        Sweden: "https://www.eneba.com/nintendo-nintendo-eshop-card-150-sek-key-sweden?af_id=maysaleba&currency=PHP&region=global",
+        Brazil: "https://www.eneba.com/nintendo-nintendo-eshop-card-30-brl-key-brazil?af_id=maysaleba&currency=PHP&region=global",
+        Norway: "https://www.eneba.com/nintendo-nintendo-eshop-card-150-nok-key-norway?af_id=maysaleba&currency=PHP&region=global",
         Peru: "",
         Argentina: "",
         Colombia: "",
