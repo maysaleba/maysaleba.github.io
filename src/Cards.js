@@ -56,24 +56,31 @@ let hour = today.getHours();
 today = yyyy + "-" + mm + "-" + dd;
 
  const theURLa =
-    "https://cdn.jsdelivr.net/gh/ismartcoding/currency-api@main/latest/data.json";
+    "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json";
 
   const [datam, setDatam] = React.useState({});
   const [makeswitch, setMakeswitch] = React.useState(null);
 
-  useEffect(() => {
-    axios
-      .get(theURLa)
-      .then((response) => {
-        // Uncomment one depending on the API structure you want:
-        // setDatam(response.data.rates);   // if API has "rates"
-        setDatam(response.data.quotes);        // if API has "php"
-        setMakeswitch("1");
-      })
-      .catch((error) => {
-        console.error("Error fetching currency data:", error);
-      });
-  }, []);
+useEffect(() => {
+  axios
+    .get(theURLa)
+    .then((response) => {
+      const rates = response.data.usd; // always USD base
+
+      // Convert keys to UPPERCASE
+      const uppercased = Object.fromEntries(
+        Object.entries(rates).map(([k, v]) => [k.toUpperCase(), v])
+      );
+
+      setDatam(uppercased);
+      setMakeswitch("1");
+    })
+    .catch((error) => {
+      console.error("Error fetching currency data:", error);
+    });
+}, []);
+
+
 
 
     var usdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.USD);

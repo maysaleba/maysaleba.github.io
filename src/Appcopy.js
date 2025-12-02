@@ -118,22 +118,29 @@ export default function Main() {
     return null;
   }
 
-  const theURLa = "https://cdn.jsdelivr.net/gh/ismartcoding/currency-api@main/latest/data.json";
+  const theURLa = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json";
 
   const [datam, setDatam] = React.useState({});
   const [makeswitch, setMakeswitch] = React.useState(null);
 
-  useEffect(() => {
-    axios
-      .get(theURLa)
-      .then((response) => {
-        setDatam(response.data.quotes);
-        setMakeswitch("1");
-      })
-      .catch((error) => {
-        console.error("Error fetching currency data:", error);
-      });
-  }, []);
+useEffect(() => {
+  axios
+    .get(theURLa)
+    .then((response) => {
+      const rates = response.data.usd; // always USD base
+
+      // Convert keys to UPPERCASE
+      const uppercased = Object.fromEntries(
+        Object.entries(rates).map(([k, v]) => [k.toUpperCase(), v])
+      );
+
+      setDatam(uppercased);
+      setMakeswitch("1");
+    })
+    .catch((error) => {
+      console.error("Error fetching currency data:", error);
+    });
+}, []);
 
   const [priceRangeField, setPriceRangeField] = useState(99999);
   const [priceRangeLow, setPriceRangeLow] = useState(0);

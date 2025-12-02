@@ -1843,7 +1843,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
         Europe: "https://www.eneba.com/other-nintendo-eshop-card-15-eur-nintendo-key-europe?af_id=maysaleba&currency=PHP&region=global",
         "Hong Kong": "https://www.eneba.com/nintendo-nintendo-eshop-card-100-hkd-key-hong-kong?af_id=maysaleba&currency=PHP&region=global",
         Canada: "https://www.eneba.com/nintendo-nintendo-eshop-card-5-cad-key-canada?af_id=maysaleba&currency=PHP&region=global",
-        Mexico: "https://www.eneba.com/nintendo-nintendo-eshop-card-100-mxn-key-mexico?af_id=maysaleba&currency=PHP&region=global",
+        Mexico: " &region=global",
         Switzerland: "https://www.eneba.com/nintendo-nintendo-eshop-card-20-chf-key-switzerland?af_id=maysaleba&currency=PHP&region=global",
         Poland: "https://www.eneba.com/nintendo-nintendo-eshop-card-70-pln-key-poland?af_id=maysaleba&currency=PHP&region=global",
         "Korea": "",
