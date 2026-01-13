@@ -120,6 +120,13 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
       
     ),
     createData(
+      "New Zealand",
+      "nzregion-logo",
+     
+      <img src={xmark} />,
+      
+    ),
+    createData(
       "Norway",
       "noregion-logo",
      

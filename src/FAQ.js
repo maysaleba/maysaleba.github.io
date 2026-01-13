@@ -395,6 +395,13 @@ const About = () => {
       <img src={xmark} />
     ),
     createData(
+      "New Zealand",
+      "nzregion-logo",
+      <img src={mark} />,
+      <img src={xmark} />,
+      <img src={xmark} />
+    ),
+    createData(
       "Norway",
       "noregion-logo",
       <img src={mark} />,
