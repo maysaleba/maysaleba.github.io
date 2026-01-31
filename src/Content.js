@@ -100,6 +100,8 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     var trdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.TRY);
     var jpyExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.JPY);
     var krwExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.KRW);
+    var myrExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.MYR);
+    var thbExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.THB);
   
   // {100*JSON.stringify(datam.usd)}
 
@@ -1581,6 +1583,9 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
         "Hong Kong": matchGames[0].HongKongPrice * hkdExchange,
         Korea: matchGames[0].KoreaPrice * krwExchange,
         Japan: matchGames[0].JapanPrice * jpyExchange,
+        Singapore: matchGames[0].SingaporePrice * sgdExchange,
+        Malaysia: matchGames[0].MalaysiaPrice * myrExchange,
+        Thailand: matchGames[0].ThailandPrice * thbExchange
       };
 
       for (const [k, v] of Object.entries(pricesobj)) {
@@ -1785,6 +1790,27 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
           className: "jpregion-logo",
           style: { fontSize: 11, fontWeight: "", color: "#000000" },
         },
+        "Singapore": {
+          name: "Singapore",
+          price: Math.round(matchGames[0].SingaporePrice).toString(),
+          currency: "¥",
+          className: "sgregion-logo",
+          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+        },
+        "Malaysia": {
+          name: "Malaysia",
+          price: Math.round(matchGames[0].MalaysiaPrice).toString(),
+          currency: "¥",
+          className: "myregion-logo",
+          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+        },
+        "Thailand": {
+          name: "Thailand",
+          price: Math.round(matchGames[0].ThailandPrice).toString(),
+          currency: "¥",
+          className: "thregion-logo",
+          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+        },
       };
 
       function Rank1(props) {
@@ -1858,6 +1884,9 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
         Colombia: "",
         "South Africa": "",
         "New Zealand": "",
+        "Singapore": "",
+        "Malaysia": "",
+        "Thailand": ""
       };
 
       function RankRows() {
@@ -1885,7 +1914,7 @@ const getModalTextForCountry = (country) => {
 
   const countryUrl = countryURLs[country] || ""; // Get the URL or fallback to an empty string
   const countryGroups = {
-    "Canada & Poland & Mexico & Australia & Norway  & Hong Kong": `
+    "Canada & Poland & Mexico & Australia & Norway & Hong Kong": `
       <ol>
       <li> Set up an account in the <b>${country}</b> eShop
       <ul>
@@ -1904,7 +1933,7 @@ const getModalTextForCountry = (country) => {
       </ul>
       </ol>
     `,
-    "Peru & Colombia & South Africa & New Zealand": `
+    "Peru & Colombia & South Africa & New Zealand & Singapore & Malaysia & Thailand": `
       <ol>
       <li> Set up an account in the <b>${country}</b> eShop
       <ul>
@@ -2003,9 +2032,9 @@ const getModalTextForCountry = (country) => {
 
   // Check if the country belongs to a group, if so, return the group's description
   if (["Canada", "Poland", "Mexico", "Australia", "Norway", "Hong Kong"].includes(country)) {
-    return countryGroups["Canada & Poland & Mexico & Australia & Norway  & Hong Kong"];
-  } else if (["Peru", "Colombia", "South Africa", "New Zealand"].includes(country)) {
-    return countryGroups["Peru & Colombia & South Africa & New Zealand"];
+    return countryGroups["Canada & Poland & Mexico & Australia & Norway & Hong Kong"];
+  } else if (["Peru", "Colombia", "South Africa", "New Zealand", "Singapore", "Malaysia", "Thailand"].includes(country)) {
+    return countryGroups["Peru & Colombia & South Africa & New Zealand & Singapore & Malaysia & Thailand"];
   } else if (["Korea", "Japan"].includes(country)) {
     return countryGroups["Korea & Japan"];
   } else if (country === "US") {

@@ -388,6 +388,13 @@ const About = () => {
       <img src={xmark} />
     ),
     createData(
+      "Malaysia",
+      "myregion-logo",
+      <img src={mark} />,
+      <img src={xmark} />,
+      <img src={xmark} />
+    ),
+    createData(
       "Mexico",
       "mxregion-logo",
       <img src={mark} />,
@@ -422,6 +429,13 @@ const About = () => {
       <img src={enebalogo} style={{ width: "17px" }} />,
       <img src={xmark} />
     ),
+     createData(
+      "Singapore",
+      "sgregion-logo",
+      <img src={mark} />,
+      <img src={xmark} />,
+      <img src={xmark} />
+    ),
     createData(
       "South Africa",
       "zaregion-logo",
@@ -448,6 +462,13 @@ const About = () => {
       "chregion-logo",
       <img src={mark} />,
       <img src={enebalogo} style={{ width: "17px" }} />,
+      <img src={xmark} />
+    ),
+    createData(
+      "Thailand",
+      "thregion-logo",
+      <img src={mark} />,
+      <img src={xmark} />,
       <img src={xmark} />
     ),
     createData(

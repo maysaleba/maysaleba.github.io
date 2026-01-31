@@ -742,6 +742,28 @@ padding-left: 20px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
+.thregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/TH.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+.myregion-logo {
+background-size:  15px;
+background-position:  left center;
+background-image: url('flags/MY.png');
+background-repeat: no-repeat;
+margin-left: 5px;
+padding-left: 20px;  /* width of the image plus a little extra padding */
+display: inline-block;  /* may not need this, but I've found I do */
+}
+
+
+
 .gbregion-logo {
 background-size:  15px;
 background-position:  left center;

@@ -116,13 +116,13 @@ const FilterDropDown = (props) => {
   const REGION_LABEL = {
   "": "Any",
   AR:"Argentina", AU: "Australia", BR: "Brazil", CA:"Canada",
-  CO:"Colombia", HK:"Hong Kong", JP:"Japan", MX:"Mexico", 
-  NO:"Norway", NZ:"New Zealand", PE:"Peru", PL:"Poland", 
-  ZA:"South Africa", US:"United States",  
+  CO:"Colombia", HK:"Hong Kong", JP:"Japan", MY:"Malaysia", MX:"Mexico", 
+  NO:"Norway", NZ:"New Zealand", PE:"Peru", PL:"Poland", SG: "Singapore", 
+  TH:"Thailand", ZA:"South Africa", US:"United States",  
 };
 
 const CHEAPEST_OPTIONS = useMemo(
-  () => ["", "AR","TR","HK","SG","JP","US","CA","MX","BR","PL","NO","ZA","PE","AU","NZ","CO","PH"],
+  () => ["", "AR","TR","HK","SG","JP","US","CA","MX","BR","PL","NO","ZA","PE","AU","NZ","CO","MY","TH","PH"],
   []
 );
 
@@ -260,7 +260,7 @@ const selectCheapest = (code) => () => {
   </span>
 </Dropdown.Toggle>
           <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>
-            {["", "AR","AU","BR","CA","CO","HK","JP","MX","NO","NZ","PE","PL","ZA","US"].map((code) => (
+            {["", "AR","AU","BR","CA","CO","HK","JP","MX","MY","NO","NZ","PE","PL","SG","TH","ZA","US"].map((code) => (
               <Dropdown.Item as="button" key={code || "any"} onClick={() => onRegionChange(code)}>
                 {code ? (
                   <span

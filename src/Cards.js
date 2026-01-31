@@ -41,6 +41,9 @@ const Cards = ({
   HongKongPrice,
   JapanPrice,
   MexicoPrice,
+  SingaporePrice,
+  ThailandPrice,
+  MalaysiaPrice,
   ESRBRating,
   IsPS4,
   IsPS5
@@ -100,6 +103,8 @@ useEffect(() => {
     var trdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.TRY);
     var jpyExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.JPY);
     var krwExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.KRW);
+    var myrExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.MYR);
+    var thbExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.THB);
   
 
   // Is rate data loaded?
@@ -243,7 +248,11 @@ diffDays = Math.round((secondDate - firstDate) / oneDay);
         US: SalePrice * usdExchange,
         HongKong: HongKongPrice * hkdExchange,
         Japan: JapanPrice * jpyExchange,
-        Korea: KoreaPrice * krwExchange
+        Korea: KoreaPrice * krwExchange,
+        Singapore: SingaporePrice * sgdExchange,
+        Malaysia: MalaysiaPrice * myrExchange,
+        Thailand: ThailandPrice * thbExchange
+
       };
 
       Object.entries(pricesobj).forEach(([k, v]) => {
@@ -290,6 +299,9 @@ function SmallestFlag() {
     HongKong: "hkregion-logo",
     Korea: "krregion-logo",
     Japan: "jpregion-logo",
+    Singapore: 'sgregion-logo',
+    Malaysia: 'myregion-logo',
+    Thailand: 'thregion-logo'
   };
 
   if (!ratesReady || !smallest) {
@@ -650,6 +662,9 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
                 hongkongprice={HongKongPrice}
                 koreaprice={KoreaPrice}
                 japanprice={JapanPrice}
+                singaporeprice={SingaporePrice}
+                malaysiaprice={MalaysiaPrice}
+                thailandprice={ThailandPrice}
             />{" "}
             <PesoPlusPrice psorsw={Platform} pesoplus={PlusPrice}  esrbrating={ESRBRating}/>{" "}
             <DaysLeft isExpired={SaleEnds} platform={Platform} />

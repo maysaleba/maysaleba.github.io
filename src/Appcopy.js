@@ -296,6 +296,8 @@ useEffect(() => {
     addPhpCandidate(prices, "Korea", review.KoreaPrice, "KRW", datam);
     addPhpCandidate(prices, "Japan", review.JapanPrice, "JPY", datam);
     addPhpCandidate(prices, "Singapore", review.SingaporePrice, "SGD", datam);
+    addPhpCandidate(prices, "Malaysia", review.MalaysiaPrice, "MYR", datam);
+    addPhpCandidate(prices, "Thailand", review.ThailandPrice, "THB", datam);
     addPhpCandidate(prices, "Turkey", review.TurkeyPrice, "TRY", datam);
 
     // Argentina math
@@ -357,6 +359,8 @@ useEffect(() => {
     putMin("KR", toPHP(review.KoreaPrice, "KRW"));
     putMin("JP", toPHP(review.JapanPrice, "JPY"));
     putMin("SG", toPHP(review.SingaporePrice, "SGD"));
+    putMin("MY", toPHP(review.MalaysiaPrice, "MYR"));
+    putMin("TH", toPHP(review.ThailandPrice, "THB"));
     putMin("TR", toPHP(review.TurkeyPrice, "TRY"));
 
     // Argentina VAT + regionality
