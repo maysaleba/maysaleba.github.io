@@ -589,7 +589,7 @@ const About = () => {
                   </a>{" "}
                   each time you want to buy from a different eShop. You will
                   need to use any remaining funds before you will be able to
-                  change the country.
+                  change the country. <b>OR</b>
                 </li>
                 <li>
                   <a
