@@ -132,6 +132,9 @@ function sortJson(element, prop, propType, asc) {
                                           HongKongPrice={review.HongKongPrice}
                                           KoreaPrice={review.KoreaPrice}
                                           JapanPrice={review.JapanPrice}
+                                          SingaporePrice={review.SingaporePrice}
+                                          MalaysiaPrice={review.MalaysiaPrice}
+                                          ThailandPrice={review.ThailandPrice}
                                   />
 
             </div>
@@ -178,6 +181,9 @@ function sortJson(element, prop, propType, asc) {
                                           HongKongPrice={review.HongKongPrice}
                                           KoreaPrice={review.KoreaPrice}
                                           JapanPrice={review.JapanPrice}
+                                          SingaporePrice={review.SingaporePrice}
+                                          MalaysiaPrice={review.MalaysiaPrice}
+                                          ThailandPrice={review.ThailandPrice}
                                   />
 
             </div>
