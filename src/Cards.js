@@ -607,7 +607,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
  <div className={`card-img-wrapper ${Slug.includes("switch-2") ? "no-border-radius" : ""}`}>
     {/* Blurred background */}
     <img
-      src={Image?.replace("image300w", "image500w")}
+      src={Image}
       alt=""
       className="card-img-background"
       onError={(event) => {
@@ -619,14 +619,14 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
     {/* Foreground image */}
     <LazyLoadImage
       effect="opacity"
-      src={Image?.replace("image300w", "image500w")}
+      key={Image}
       className="card-img-foreground"
-      src={Image?.replace("image300w", "image500w")}
+      src={Image}
       onError={(event) => {
         event.target.src = noimage;
         event.onerror = null;
       }}
-      visibleByDefault={Image?.replace("image300w", "image500w")}
+      visibleByDefault={Image}
     />
 
     <Card.ImgOverlay>

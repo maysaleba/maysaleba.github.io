@@ -2333,7 +2333,7 @@ const getModalTextForCountry = (country) => {
     if (matchGames[0] !== undefined) {
       const Background = styled.div`
         --blur-radius: 20px;
-        background-image: url(${matchGames[0]?.Image?.replace("image300w", "image500w")});
+        background-image: url(${matchGames[0].Image});
         position: absolute;
         top: 0;
         left: 0;
@@ -2362,7 +2362,7 @@ const getModalTextForCountry = (country) => {
                 " in Philippine Peso"
               }
             />
-            <meta property="og:image" content={matchGames[0]?.Image?.replace("image300w", "image500w")} />
+            <meta property="og:image" content={matchGames[0].Image} />
             <meta property="og:type" content="website" />
             <meta property="og:url" content={matchGames[0].URL} />
             <meta
@@ -2429,7 +2429,7 @@ const getModalTextForCountry = (country) => {
 <div className={`${matchGames[0].Slug.includes("switch-2") ? "card-img-wrapper-sw2 no-border-radius" : "card-img-wrapper-in "}`}>
 
     <img
-      src={matchGames[0]?.Image?.replace("image300w", "image500w")}
+      src={matchGames[0].Image}
       alt=""
       className="card-img-background"
       onError={(e) => {
@@ -2438,7 +2438,7 @@ const getModalTextForCountry = (country) => {
       }}
     />
     <img
-      src={matchGames[0]?.Image?.replace("image300w", "image500w")}
+      src={matchGames[0].Image}
       alt=""
       className="card-img-foreground"
       onError={(e) => {

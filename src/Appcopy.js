@@ -652,7 +652,7 @@ useEffect(() => {
 
   const Background = styled.div`
     --blur-radius: 20px;
-    background-image: url(${reviewssw[0]?.Image?.replace("image300w", "image500w")});
+    background-image: url(${reviewssw[0].Image});
     position: absolute;
     top: 0;
     left: 0;
