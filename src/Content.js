@@ -610,7 +610,7 @@ function WhichPlatform() {
     return <span style={badgeStyle}>Nintendo Switch</span>;
   }
 
-  if (game.IsPS4 === 1 && game.IsPS5 === 1) {
+  if (game.IsPS4 === "1" && game.IsPS5 === "1") {
     return (
       <>
         <span style={badgeStyle}>Playstation 5</span>{" "}
@@ -619,11 +619,11 @@ function WhichPlatform() {
     );
   }
 
-  if (game.IsPS4 === 1) {
+  if (game.IsPS4 === "1") {
     return <span style={badgeStyle}>Playstation 4</span>;
   }
 
-  if (game.IsPS5 === 1) {
+  if (game.IsPS5 === "1") {
     return <span style={badgeStyle}>Playstation 5</span>;
   }
 
@@ -1056,458 +1056,299 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
     }
   }
 
-  function PsPrices() {
-    if (matchGames[0].ESRBRating == "SGD") {
-      return (
-        <>
-          <div
-            className="price-container"
-            style={{ margin: "auto", paddingTop: 10 }}
-          >
-            <table className="table table-align-middle item-price-table">
-              <tbody>
-                <tr className="item-table-best">
-                  <td className="version">
-                    <span>
-                      <div
-                        style={{ marginLeft: "1rem" }}
-                        className="sgregion-logo"
-                      >
-                        Singapore
-                      </div>
-                    </span>
-                  </td>
-                  <td className="version"></td>
-                  <td className="version">
-                    <a
-                      href={matchGames[0].URL}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <div className="btn btn-block btn-secondary">
-                        <SgPlusPrice />
-                        {"₱" +
-                          Math.round(matchGames[0].SalePrice * sgdExchange)}
-                        <span className="ml-2 badge badge-danger">
-                          <strike>
-                            <PesoPrice props={matchGames[0].Price} />
-                          </strike>
-                        </span>
-                      </div>
-                    </a>
-                  </td>
-                </tr>
-                <tr className="item-table-best">
-                  <td className="item-note text-left">
-                    <div
-                      className="vendors"
-                      style={{
-                        display: "flex",
-                        justifyContent: "left",
-                        flexWrap: "wrap",
-                        fontSize: 14,
-                      }}
-                    >
-                      <span className="nopaddingA">
-                        {" "}
-                        <div className="ml-2 badge badge-info">
-                          {" "}
-                          Suggested Gift Card: <SgShopeeCard />
-                        </div>
-                      </span>{" "}
-                    </div>
-                  </td>
-                  <td></td>
-                  <td className="item-note text-right">
-                    <div
-                      className="vendors"
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        flexWrap: "wrap",
-                      }}
-                    >
-                      <a
-                        className="nopaddingA"
-                        href="https://shope.ee/9UcGiCZ13R"
-                        target="_blank"
-                        rel="noreferrer"
-                        // style={{ padding: 10 }}
-                      >
-                        <div className="ml-2 badge badge-danger">
-                          <span
-                            style={{ fontSize: 13 }}
-                            className="shopee-logo"
-                          >
-                            <span className="suggest-text">SHOPEE</span>
-                          </span>
-                        </div>
-                      </a>
-                      <a
-                        className="nopaddingA"
-                        href="https://invol.co/clkjvxw"
-                        target="_blank"
-                        rel="noreferrer"
-                        // style={{ padding: 10 }}
-                      >
-                        <div className="ml-2 badge badge-danger">
-                          <span
-                            style={{ fontSize: 13 }}
-                            className="lazada-logo"
-                          >
-                            <span className="suggest-text">LAZADA</span>
-                          </span>
-                        </div>
-                      </a>
-                      <a
-                        className="nopaddingA"
-                        href="https://invl.io/clkjvy4"
-                        target="_blank"
-                        rel="noreferrer"
-                        // style={{ padding: 10 }}
-                      >
-                        <div className="ml-2 badge badge-danger">
-                          <span style={{ fontSize: 13 }} className="coda-logo">
-                            <span className="suggest-text">CODASHOP</span>
-                          </span>
-                        </div>
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </>
-      );
-    } else if (matchGames[0].ESRBRating == "HKD") {
-      return (
-        <>
-          <div
-            className="price-container"
-            style={{ margin: "auto", paddingTop: 10 }}
-          >
-            <table className="table table-align-middle item-price-table">
-              <tbody>
-                <tr className="item-table-best">
-                  <td className="version">
-                    <span>
-                      <div
-                        style={{ marginLeft: "1rem" }}
-                        className="hkregion-logo"
-                      >
-                        Hong Kong
-                      </div>
-                    </span>
-                  </td>
-                  <td className="version"></td>
-                  <td className="version">
-                    <a
-                      href={matchGames[0].URL}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <div className="btn btn-block btn-secondary">
-                        <HkPlusPrice />
-                        {"₱" +
-                          Math.round(matchGames[0].SalePrice * hkdExchange)}
-                        <span className="ml-2 badge badge-danger">
-                          <strike>
-                            <PesoPrice props={matchGames[0].Price} />
-                          </strike>
-                        </span>
-                      </div>
-                    </a>
-                  </td>
-                </tr>
-                <tr className="item-table-best">
-                  <td className="item-note text-left">
-                    <div
-                      className="vendors"
-                      style={{
-                        display: "flex",
-                        justifyContent: "left",
-                        flexWrap: "wrap",
-                        fontSize: 14,
-                      }}
-                    >
-                      <span className="nopaddingA">
-                        {" "}
-                        <div className="ml-2 badge badge-info">
-                          {" "}
-                          Suggested Gift Card: <HkShopeeCard />
-                        </div>
-                      </span>{" "}
-                    </div>
-                  </td>
-                  <td></td>
-                  <td className="item-note text-right">
-                    <div
-                      className="vendors"
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        flexWrap: "wrap",
-                      }}
-                    >
-                      <a
-                        className="nopaddingA"
-                        href="https://shope.ee/9UcGiCZ13R"
-                        target="_blank"
-                        rel="noreferrer"
-                        // style={{ padding: 10 }}
-                      >
-                        <div className="ml-2 badge badge-danger">
-                          <span
-                            style={{ fontSize: 13 }}
-                            className="shopee-logo"
-                          >
-                            <span className="suggest-text">SHOPEE</span>
-                          </span>
-                        </div>
-                      </a>
-                      <a
-                        className="nopaddingA"
-                        href="https://invol.co/clkjvxw"
-                        target="_blank"
-                        rel="noreferrer"
-                        // style={{ padding: 10 }}
-                      >
-                        <div className="ml-2 badge badge-danger">
-                          <span
-                            style={{ fontSize: 13 }}
-                            className="lazada-logo"
-                          >
-                            <span className="suggest-text">LAZADA</span>
-                          </span>
-                        </div>
-                      </a>
-                      <a
-                        className="nopaddingA"
-                        href="https://invl.io/clkjvy4"
-                        target="_blank"
-                        rel="noreferrer"
-                        // style={{ padding: 10 }}
-                      >
-                        <div className="ml-2 badge badge-danger">
-                          <span style={{ fontSize: 13 }} className="coda-logo">
-                            <span className="suggest-text">CODASHOP</span>
-                          </span>
-                        </div>
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </>
-      );
-    } else if (matchGames[0].ESRBRating == "TRD") {
-      return (
-        <>
-          <div
-            className="price-container"
-            style={{ margin: "auto", paddingTop: 10 }}
-          >
-            <>
-              {" "}
-              <Box
-                style={{
-                  borderRadius: 5,
-                  backgroundColor: "#ffc4c4",
-                  marginBottom: 10,
-                  padding: 8,
-                  fontSize: 12,
-                  textAlign: "center",
-                }}
-              >
-                Top Up Turkey PSN credits via  <a className="infotax" href="https://www.eneba.com/psn-playstation-network-card-200-try-tr-psn-key-turkey?af_id=maysaleba&currency=PHP&region=global">Eneba</a> or purchase from <a className="infotax" href="https://discord.gg/regionality">
-                  Regionality with a service fee
-                </a>
-              </Box>
-            </>
+function parseTurkeyPrice(value) {
+  if (value === undefined || value === null || value === "" || value === "null") return null;
+  return Number(String(value).replace(".", "")) / 100;
+}
 
-            <table className="table table-align-middle item-price-table">
-              <tbody>
-                <tr className="item-table-best">
-                  <td className="version">
-                    <span>
-                      <div
-                        style={{ marginLeft: "1rem" }}
-                        className="trregion-logo"
-                      >
-                        Turkey
-                        <div>₺ {matchGames[0].SalePrice}</div>
-                      </div> 
+const psGiftCardUrls = {
+  ID: "https://www.eneba.com/psn-playstation-network-card-100000-idr-id-psn-key-indonesia?af_id=maysaleba&currency=PHP&region=global",
+  IN: "https://www.eneba.com/psn-playstation-network-card-rs-1000-in-psn-key-india?af_id=maysaleba&currency=PHP&region=global",
+  SG: "https://www.eneba.com/psn-playstation-network-card-15-sgd-sgp-psn-key-singapore?af_id=maysaleba&currency=PHP&region=global",
+  TR: "https://www.eneba.com/psn-playstation-network-card-200-try-tr-psn-key-turkey?af_id=maysaleba&currency=PHP&region=global",
+  US: "https://www.eneba.com/psn-playstation-network-card-1-usd-usa-psn-key-united-states?af_id=maysaleba&currency=PHP&region=global",
+};
 
-                    </span>
+function getPsRows() {
+  const game = matchGames[0];
 
-                  </td>
-                  <td className="version"></td>
-                  <td className="version">
-                    <a
-                      href={matchGames[0].URL}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <div className="btn btn-block btn-secondary">
-                       <div className="price-container-in">
-                        <span className="price">
-                        <TrPlusPrice />
-                        {"₱" +
-                          Math.round(matchGames[0].SalePrice * trdExchange)}
-                        <span className="ml-2 badge badge-danger">
-                          <strike>
-                            <PesoPrice
-                              props={matchGames[0].Price * trdExchange}
-                            />
-                          </strike>
-                        </span>
-                        </span>
-                         <a
-                          href="https://www.eneba.com/psn-playstation-network-card-200-try-tr-psn-key-turkey?af_id=maysaleba&currency=PHP&region=global"
+  const rows = [
+    {
+      code: "ID",
+      name: "Indonesia",
+      className: "idregion-logo",
+      currency: "Rp",
+      saleRaw: game.idSalePrice,
+      priceRaw: game.idPrice,
+      rate: Number(datam.PHP) / Number(datam.IDR),
+      urlRegion: "en-id",
+    },
+    {
+      code: "IN",
+      name: "India",
+      className: "inregion-logo",
+      currency: "₹",
+      saleRaw: game.inSalePrice,
+      priceRaw: game.inPrice,
+      rate: Number(datam.PHP) / Number(datam.INR),
+      urlRegion: "en-in",
+    },
+    {
+      code: "SG",
+      name: "Singapore",
+      className: "sgregion-logo",
+      currency: "SG$",
+      saleRaw: game.sgSalePrice,
+      priceRaw: game.sgPrice,
+      rate: Number(datam.PHP) / Number(datam.SGD),
+      urlRegion: "en-sg",
+    },
+    {
+      code: "TR",
+      name: "Turkey",
+      className: "trregion-logo",
+      currency: "₺",
+      saleRaw: parseTurkeyPrice(game.trSalePrice),
+      priceRaw: parseTurkeyPrice(game.trPrice),
+      rate: Number(datam.PHP) / Number(datam.TRY),
+      urlRegion: "en-tr",
+    },
+    {
+      code: "US",
+      name: "United States",
+      className: "usregion-logo",
+      currency: "$",
+      saleRaw: game.usSalePrice,
+      priceRaw: game.usPrice,
+      rate: Number(datam.PHP) / Number(datam.USD),
+      urlRegion: "en-us",
+    },
+  ];
+
+  return rows
+    .map((r) => {
+      const sale = Number(r.saleRaw || r.priceRaw);
+      const original = Number(r.priceRaw);
+      const salePhp = sale * r.rate;
+      const originalPhp = original * r.rate;
+
+      return {
+        ...r,
+        sale,
+        original,
+        salePhp,
+        originalPhp,
+        url: game.url?.replace(/\/en-[a-z]{2}\//, `/${r.urlRegion}/`) || game.URL,
+        giftCardUrl: psGiftCardUrls[r.code] || "",
+      };
+    })
+    .filter((r) => Number.isFinite(r.salePhp) && r.salePhp > 0)
+    .sort((a, b) => a.salePhp - b.salePhp);
+}
+
+function PsPrices() {
+  const psRows = getPsRows();
+  const visibleRows = psRows;
+
+  function getPsModalText(row) {
+    const giftCardUrl = row.giftCardUrl || "";
+
+    return `
+      <ol>
+        <li>
+  Open the
+  <a href="${row.url}" target="_blank" style="color: #fc430a; font-weight: bold;">
+    ${row.name} PlayStation Store page
+  </a>
+  for this game.
+</li>
+        <li>You can create or switch to a PlayStation account set to <b>${row.name}</b>.</li>
+        <li>Add funds using a <b>PlayStation Network gift card</b> for <b>${row.name}</b>.</li>
+        ${
+          giftCardUrl
+            ? `<ul><li><a href="${giftCardUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">Buy ${row.name} PSN card on Eneba</a></li></ul>`
+            : ""
+        }
+        <li>Once funds are added, purchase the game from the PlayStation Store.</li>
+      </ol>
+    `;
+  }
+
+  function PsRankRows() {
+    const [expanded, setExpanded] = React.useState(false);
+    const [open, setOpen] = React.useState(false);
+    const [modalText, setModalText] = React.useState("");
+    const [modalRegion, setModalRegion] = React.useState("");
+
+    const hasToggle = visibleRows.length > 3;
+    const rowsToShow = expanded || !hasToggle ? visibleRows : visibleRows.slice(0, 3);
+
+    const handleOpen = (event, row) => {
+      event.preventDefault();
+      setModalRegion(row.name);
+      setModalText(getPsModalText(row));
+      setOpen(true);
+    };
+
+    const handleClose = () => setOpen(false);
+
+    return (
+      <>
+        {rowsToShow.map((row, index) => {
+          const medalClass =
+            index === 0
+              ? "gold-medal-logo"
+              : index === 1
+              ? "silver-medal-logo"
+              : index === 2
+              ? "bronze-medal-logo"
+              : "blank-medal-logo";
+
+          return (
+            <tr className="item-table-best" key={row.code}>
+              <td className="version">
+                <span className={medalClass}>
+                  <div style={{ marginLeft: "10px" }} className={row.className}>
+                    {row.name}
+                    <br />
+                    <div style={{ fontSize: 11, color: "#000000" }}>
+                      {row.currency} {Number(row.sale).toLocaleString()}
+                    </div>
+                  </div>
+                </span>
+              </td>
+
+              <td className="version"></td>
+
+              <td className="version">
+                <a
+                  href="#"
+                  onClick={(event) => handleOpen(event, row)}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="btn btn-block btn-secondary">
+                    <div className="price-container-in">
+                      <span className="price">
+                        {"₱" + Math.round(row.salePhp)}
+                        {Number.isFinite(row.originalPhp) && row.originalPhp > 0 && (
+                          <span className="ml-2 badge badge-danger">
+                            <strike>{"₱" + Math.round(row.originalPhp)}</strike>
+                          </span>
+                        )}
+                      </span>
+
+                      {row.giftCardUrl ? (
+                        <a
+                          href={row.giftCardUrl}
                           target="_blank"
                           rel="noreferrer"
                           className="no-style-link"
-                          onClick={(event) => event.stopPropagation()} // Prevent modal from opening
+                          onClick={(event) => event.stopPropagation()}
                         >
-                          <img src={enebalogo} className="seagm-logo" 
-                          style={{ width: "17px", height: "17px" }}/>
+                          <img
+                            src={enebalogo}
+                            className="seagm-logo"
+                            style={{ width: "17px", height: "17px" }}
+                          />
                         </a>
-                        </div>
-                      </div>
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </>
-      );
-    } else {
-      return (
-        <>
-          <div
-            className="price-container"
-            style={{ margin: "auto", paddingTop: 10 }}
-          >
-            <table className="table table-align-middle item-price-table">
-              <tbody>
-                <tr className="item-table-best">
-                  <td className="version">
-                    <span>
-                      <div
-                        style={{ marginLeft: "1rem" }}
-                        className="phregion-logo"
-                      >
-                        Philippines
-                      </div>
-                    </span>
-                  </td>
-                  <td className="version"></td>
-                  <td className="version">
-                    <a
-                      href={matchGames[0].URL}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <div className="btn btn-block btn-secondary">
-                        {"₱" + Math.round(matchGames[0].SalePrice)}
-                        <span className="ml-2 badge badge-danger">
-                          <strike>
-                            <PesoPrice props={matchGames[0].Price} />
-                          </strike>
-                        </span>
-                      </div>
-                    </a>
-                  </td>
-                </tr>
-                <tr className="item-table-best">
-                  <td className="item-note text-left">
-                    <div
-                      className="vendors"
+                      ) : (
+                        <div
+                          className="placeholder-logo"
+                          style={{ width: "27px", height: "20px" }}
+                        ></div>
+                      )}
+                    </div>
+                  </div>
+                </a>
+
+                <Modal
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="ps-modal-title"
+                  aria-describedby="ps-modal-description"
+                  BackdropProps={{
+                    style: modalBackdropStyle,
+                  }}
+                >
+                  <Box sx={style}>
+                    <CloseIcon
+                      onClick={handleClose}
                       style={{
-                        display: "flex",
-                        justifyContent: "left",
-                        flexWrap: "wrap",
-                        fontSize: 14,
+                        position: "absolute",
+                        top: "10px",
+                        right: "10px",
+                        cursor: "pointer",
+                      }}
+                    />
+
+                    <Typography
+                      id="ps-modal-title"
+                      variant="h6"
+                      component="h2"
+                      sx={{
+                        fontSize: {
+                          xs: "1rem",
+                          sm: "1.4rem",
+                        },
                       }}
                     >
-                      <span className="nopaddingA">
-                        {" "}
-                        <div className="ml-2 badge badge-info">
-                          {" "}
-                          Suggested Gift Card: <ShopeeCard />
-                        </div>
-                      </span>{" "}
-                    </div>
-                  </td>
-                  <td></td>
-                  <td className="item-note text-right">
-                    <div
-                      className="vendors"
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        flexWrap: "wrap",
+                      How to buy {matchGames[0].Title} in {modalRegion}
+                    </Typography>
+
+                    <Typography
+                      id="ps-modal-description"
+                      sx={{
+                        mt: 2,
+                        fontSize: {
+                          xs: "0.8rem",
+                          sm: "1rem",
+                        },
                       }}
-                    >
-                      <a
-                        className="nopaddingA"
-                        href="https://shope.ee/9UcGiCZ13R"
-                        target="_blank"
-                        rel="noreferrer"
-                        // style={{ padding: 10 }}
-                      >
-                        <div className="ml-2 badge badge-danger">
-                          <span
-                            style={{ fontSize: 13 }}
-                            className="shopee-logo"
-                          >
-                            <span className="suggest-text">SHOPEE</span>
-                          </span>
-                        </div>
-                      </a>
-                      <a
-                        className="nopaddingA"
-                        href="https://invol.co/clkjvxw"
-                        target="_blank"
-                        rel="noreferrer"
-                        // style={{ padding: 10 }}
-                      >
-                        <div className="ml-2 badge badge-danger">
-                          <span
-                            style={{ fontSize: 13 }}
-                            className="lazada-logo"
-                          >
-                            <span className="suggest-text">LAZADA</span>
-                          </span>
-                        </div>
-                      </a>
-                      <a
-                        className="nopaddingA"
-                        href="https://invl.io/clkjvy4"
-                        target="_blank"
-                        rel="noreferrer"
-                        // style={{ padding: 10 }}
-                      >
-                        <div className="ml-2 badge badge-danger">
-                          <span style={{ fontSize: 13 }} className="coda-logo">
-                            <span className="suggest-text">CODASHOP</span>
-                          </span>
-                        </div>
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </>
-      );
-    }
+                      dangerouslySetInnerHTML={{ __html: modalText }}
+                    />
+                  </Box>
+                </Modal>
+              </td>
+            </tr>
+          );
+        })}
+
+        {hasToggle && (
+          <tr className="item-table-best">
+            <td colSpan={3} className="text-center" style={{ paddingTop: 6 }}>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setExpanded((v) => !v);
+                }}
+                style={{
+                  fontSize: "0.8rem",
+                  textDecoration: "underline",
+                  cursor: "pointer",
+                  color: "#555",
+                }}
+              >
+                <u>{expanded ? "Show Top 3" : `Show All ${visibleRows.length}`} Regions</u>
+              </a>
+            </td>
+          </tr>
+        )}
+      </>
+    );
   }
+
+  return (
+    <div className="price-container" style={{ margin: "auto", paddingTop: 10 }}>
+      <table className="table table-align-middle item-price-table">
+        <tbody>
+          <PsRankRows />
+        </tbody>
+      </table>
+    </div>
+  );
+}
 
   function PricesTable(props) {
     if (props.psorsw === "Nintendo Switch" ||
@@ -2459,8 +2300,8 @@ const getModalTextForCountry = (country) => {
 
   <PlatformOverlay
     slug={matchGames[0].Slug}
-    isps4={matchGames[0].IsPS4}
-    isps5={matchGames[0].IsPS5}
+    isps4={Number(matchGames[0].IsPS4)}
+    isps5={Number(matchGames[0].IsPS5)}
   />
 </Card>  
 </Col>
@@ -2537,7 +2378,7 @@ const getModalTextForCountry = (country) => {
                 <Row xs={1} sm={2}>
                   <Col style={{ paddingBottom: 10 }}>
                     <span style={{ fontWeight: "bold" }}>Genre:</span>{" "}
-                    {matchGames[0].genre.replaceAll(",", ", ")}
+                    {(matchGames[0].genre || matchGames[0].Genre || "").replaceAll(",", ", ")}
                   </Col>
                   <Col style={{ paddingBottom: 10 }}></Col>
                 </Row>
@@ -2553,9 +2394,7 @@ const getModalTextForCountry = (country) => {
                 DESCRIPTION
               </Card.Header>
               <Card.Body>
-                {matchGames[0].description
-                  .replaceAll("Ã¢„Â¢", "™")
-                  .replace("Â„¢", "™")}
+                {(matchGames[0].description || "No description available.")}
               </Card.Body>
             </div>
           </Paper>

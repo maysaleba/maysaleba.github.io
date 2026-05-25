@@ -84,16 +84,36 @@ export default function Main() {
   }
 
   const reviewsswf = reviewssw.filter((review) => review.SaleStarted !== "0000-00-00");
-  const reviewsstf = reviewsst.filter(
-    (review) =>
-      review.PlusPrice !== undefined &&
-      review.ReleaseDate !== undefined &&
-      review.SaleEnds !== undefined &&
-      review.SaleStarted !== undefined &&
-      review.Publisher !== undefined &&
-      review.genre !== undefined &&
-      review.description !== undefined
-  );
+  const reviewsstf = reviewsst
+    .map((review) => ({
+      ...review,
+
+      platform: "Playstation",
+
+      IsPS4: Number(review.IsPS4),
+      IsPS5: Number(review.IsPS5),
+
+      platforms: [
+        Number(review.IsPS4) === 1 ? "PS4" : null,
+        Number(review.IsPS5) === 1 ? "PS5" : null,
+      ].filter(Boolean),
+
+      Image: review.Image || review.img,
+      URL: review.URL || review.url,
+      genre: review.genre || review.Genre,
+      description: review.description || "",
+
+      Price: review.trPrice || review.usPrice || "",
+      SalePrice: review.trSalePrice || review.usSalePrice || "",
+    }))
+    .filter(
+      (review) =>
+        review.ReleaseDate !== undefined &&
+        review.SaleEnds !== undefined &&
+        review.SaleStarted !== undefined &&
+        review.Publisher !== undefined &&
+        review.genre !== undefined
+    );
 
   // ---------------- helper to decode '+' → space ----------------
   const readQP = (params, key, def = "") => {
@@ -166,7 +186,12 @@ useEffect(() => {
   // Re-apply current sort when data or FX rates are ready.
   useEffect(() => {
     if (!originalData.length) return;
-    const withLowest = originalData.map((r) => ({ ...r, _lowestPHP: lowestPhpFor(r) }));
+    const withLowest = originalData.map((r) => ((() => {
+return {
+  ...r,
+  _lowestPHP: lowestPhpFor(r),
+};
+})()));
     const sortFn = SORTERS[latestDropDown] || SORTERS["Popular"];
     setLatestField([...withLowest].sort(sortFn));
   }, [originalData, latestDropDown, datam]);
@@ -224,7 +249,12 @@ useEffect(() => {
   };
 
   const onLatestChange = (label) => {
-    const withLowest = originalData.map((r) => ({ ...r, _lowestPHP: lowestPhpFor(r) }));
+    const withLowest = originalData.map((r) => ((() => {
+return {
+  ...r,
+  _lowestPHP: lowestPhpFor(r),
+};
+})()));
     const sortFn = SORTERS[label] || SORTERS["Popular"];
     setLatestField([...withLowest].sort(sortFn));
     setLatestDropDown(label);
@@ -245,6 +275,7 @@ useEffect(() => {
     USD: "US", CAD: "CA", PEN: "PE", AUD: "AU", COP: "CO", ZAR: "ZA",
     BRL: "BR", NOK: "NO", PLN: "PL", NZD: "NZ", MXN: "MX", HKD: "HK",
     KRW: "KR", JPY: "JP", SGD: "SG", TRY: "TR", PHP: "PH", ARS: "AR",
+    IDR: "ID", INR: "IN",
   };
 
   function ccyFromEsrb(review) {
@@ -265,18 +296,32 @@ useEffect(() => {
     bucket[key] = n * (php / base);
   }
 
+  function parseTurkeyPrice(value) {
+    if (value === undefined || value === null || value === "" || value === "null") return "";
+    return Number(String(value).replace(".", "")) / 100;
+  }
+
+  function getPsRegionalPrices(review) {
+    const prices = {};
+
+    addPhpCandidate(prices, "ID", review.idSalePrice || review.idPrice, "IDR", datam);
+    addPhpCandidate(prices, "IN", review.inSalePrice || review.inPrice, "INR", datam);
+    addPhpCandidate(prices, "SG", review.sgSalePrice || review.sgPrice, "SGD", datam);
+
+    const trPrice = parseTurkeyPrice(review.trSalePrice || review.trPrice);
+    addPhpCandidate(prices, "TR", trPrice, "TRY", datam);
+
+    addPhpCandidate(prices, "US", review.usSalePrice || review.usPrice, "USD", datam);
+
+    return prices;
+  }
+
   function lowestPhpFor(review) {
     if (!datam || !datam.PHP) return Infinity;
     const prices = {};
 
     if (review.platform === "Playstation") {
-      const ccy = ccyFromEsrb(review);
-      addPhpCandidate(prices, "PS_Sale", review.SalePrice, ccy, datam);
-      addPhpCandidate(prices, "PS_Full", review.Price, ccy, datam);
-      const plus = +review.PlusPrice;
-      if (plus && plus !== 999999 && plus !== 202020) {
-        addPhpCandidate(prices, "PS_Plus", plus, ccy, datam);
-      }
+      Object.assign(prices, getPsRegionalPrices(review));
     } else {
       addPhpCandidate(prices, "US_Sale", review.SalePrice, "USD", datam);
       addPhpCandidate(prices, "US_Full", review.Price, "USD", datam);
@@ -310,75 +355,102 @@ useEffect(() => {
       const argentinaVat = basePhp * 0.21;
       prices.Argentina = basePhp + argentinaVat + regionalityTax;
     }
-
+    
     const vals = Object.values(prices).filter((v) => Number.isFinite(v) && v > 0);
     return vals.length ? Math.min(...vals) : Infinity;
   }
 
-  function cheapestRegionCode(review) {
-    if (!datam || !datam.PHP) return null;
 
-    const regionToPhp = {};
-    const toPHP = (amt, ccy) => +amt * (Number(datam.PHP) / Number(datam[ccy] || 1));
-    const putMin = (code, value) => {
-      if (!Number.isFinite(value) || value <= 0) return;
-      if (regionToPhp[code] === undefined || value < regionToPhp[code]) {
-        regionToPhp[code] = value;
+function cheapestRegionCode(review) {
+  if (!datam || !datam.PHP) return null;
+
+  // PlayStation: use new csvjsontr regional fields
+  if (review.platform === "Playstation") {
+    const prices = getPsRegionalPrices(review);
+
+    let bestRegion = "";
+    let bestPrice = Infinity;
+
+    Object.entries(prices).forEach(([region, phpPrice]) => {
+      if (Number.isFinite(phpPrice) && phpPrice > 0 && phpPrice < bestPrice) {
+        bestRegion = region;
+        bestPrice = phpPrice;
       }
-    };
+    });
 
-    if (review.platform === "Playstation") {
-      const ccy = ccyFromEsrb(review);
-      const CCY_TO_REGION = {
-        USD: "US", CAD: "CA", PEN: "PE", AUD: "AU", COP: "CO", ZAR: "ZA", BRL: "BR", NOK: "NO",
-        PLN: "PL", NZD: "NZ", MXN: "MX", HKD: "HK", KRW: "KR", JPY: "JP", SGD: "SG", TRY: "TR",
-        PHP: "PH", ARS: "AR",
-      };
-      const region = CCY_TO_REGION[ccy] || "PH";
-      putMin(region, toPHP(review.SalePrice, ccy));
-      putMin(region, toPHP(review.Price, ccy));
-      const plus = +review.PlusPrice;
-      if (plus && plus !== 999999 && plus !== 202020) putMin(region, toPHP(plus, ccy));
-    } else {
-      putMin("US", toPHP(review.SalePrice, "USD"));
-      putMin("US", toPHP(review.Price, "USD"));
-    }
-
-    // Other regions
-    putMin("CA", toPHP(review.CanadaPrice, "CAD"));
-    putMin("PE", toPHP(review.PeruPrice, "PEN"));
-    putMin("AU", toPHP(review.AustraliaPrice, "AUD"));
-    putMin("CO", toPHP(review.ColombiaPrice, "COP"));
-    putMin("ZA", toPHP(review.SouthafricaPrice, "ZAR"));
-    putMin("BR", toPHP(review.BrazilPrice, "BRL"));
-    putMin("NO", toPHP(review.NorwayPrice, "NOK"));
-    putMin("PL", toPHP(review.PolandPrice, "PLN"));
-    putMin("NZ", toPHP(review.NewZealandPrice, "NZD"));
-    putMin("MX", toPHP(review.MexicoPrice, "MXN"));
-    putMin("HK", toPHP(review.HongKongPrice, "HKD"));
-    putMin("KR", toPHP(review.KoreaPrice, "KRW"));
-    putMin("JP", toPHP(review.JapanPrice, "JPY"));
-    putMin("SG", toPHP(review.SingaporePrice, "SGD"));
-    putMin("MY", toPHP(review.MalaysiaPrice, "MYR"));
-    putMin("TH", toPHP(review.ThailandPrice, "THB"));
-    putMin("TR", toPHP(review.TurkeyPrice, "TRY"));
-
-    // Argentina VAT + regionality
-    const ars = +review.ArgentinaPrice;
-    if (Number.isFinite(ars) && ars > 0 && datam.ARS) {
-      const phpPerARS = Number(datam.PHP) / Number(datam.ARS);
-      const basePhp = ars * phpPerARS;
-      const vat = basePhp * 0.21;
-      const regionality = basePhp * 1.21 * ((1500 - 12100 * phpPerARS) / (12100 * phpPerARS));
-      putMin("AR", basePhp + vat + regionality);
-    }
-
-    let best = null, bestVal = Infinity;
-    for (const [code, val] of Object.entries(regionToPhp)) {
-      if (val < bestVal) { bestVal = val; best = code; }
-    }
-    return best;
+    return bestRegion;
   }
+
+  // Nintendo: keep old logic
+  const regionToPhp = {};
+  const toPHP = (amt, ccy) =>
+    +amt * (Number(datam.PHP) / Number(datam[ccy] || 1));
+
+  const putMin = (code, value) => {
+    if (!Number.isFinite(value) || value <= 0) return;
+    if (regionToPhp[code] === undefined || value < regionToPhp[code]) {
+      regionToPhp[code] = value;
+    }
+  };
+
+  putMin("US", toPHP(review.SalePrice, "USD"));
+  putMin("US", toPHP(review.Price, "USD"));
+  putMin("CA", toPHP(review.CanadaPrice, "CAD"));
+  putMin("PE", toPHP(review.PeruPrice, "PEN"));
+  putMin("AU", toPHP(review.AustraliaPrice, "AUD"));
+  putMin("CO", toPHP(review.ColombiaPrice, "COP"));
+  putMin("ZA", toPHP(review.SouthafricaPrice, "ZAR"));
+  putMin("BR", toPHP(review.BrazilPrice, "BRL"));
+  putMin("NO", toPHP(review.NorwayPrice, "NOK"));
+  putMin("PL", toPHP(review.PolandPrice, "PLN"));
+  putMin("NZ", toPHP(review.NewZealandPrice, "NZD"));
+  putMin("MX", toPHP(review.MexicoPrice, "MXN"));
+  putMin("HK", toPHP(review.HongKongPrice, "HKD"));
+  putMin("KR", toPHP(review.KoreaPrice, "KRW"));
+  putMin("JP", toPHP(review.JapanPrice, "JPY"));
+  putMin("SG", toPHP(review.SingaporePrice, "SGD"));
+  putMin("MY", toPHP(review.MalaysiaPrice, "MYR"));
+  putMin("TH", toPHP(review.ThailandPrice, "THB"));
+  putMin("TR", toPHP(review.TurkeyPrice, "TRY"));
+
+  const ars = +review.ArgentinaPrice;
+  if (Number.isFinite(ars) && ars > 0 && datam.ARS) {
+    const phpPerARS = Number(datam.PHP) / Number(datam.ARS);
+    const basePhp = ars * phpPerARS;
+    const vat = basePhp * 0.21;
+    const regionality =
+      basePhp * 1.21 * ((1500 - 12100 * phpPerARS) / (12100 * phpPerARS));
+
+    putMin("AR", basePhp + vat + regionality);
+  }
+
+  let best = null;
+  let bestVal = Infinity;
+
+  for (const [code, val] of Object.entries(regionToPhp)) {
+    if (val < bestVal) {
+      bestVal = val;
+      best = code;
+    }
+  }
+
+  return best;
+}
+
+function normalizeGenre(genre = "") {
+  return genre
+    .toLowerCase()
+    .replaceAll("role playing games", "role-playing, rpg")
+    .replaceAll("driving/racing", "racing")
+    .replaceAll("sport", "sports")
+    .replaceAll("music/rhythm", "music")
+    .replaceAll("simulator", "simulation")
+    .replaceAll("brain training", "puzzle")
+    .replaceAll("board game", "strategy")
+    .replaceAll("party", "multiplayer")
+    .replaceAll("family", "unique")
+    .replaceAll("casual", "unique");
+}
 
   // ---------- FILTERING + PAGINATION ----------
   let filteredReviews = useMemo(
@@ -414,9 +486,9 @@ useEffect(() => {
                 .replace(/\s/g, "")
                 .toLowerCase()
             ) &&
-          filterGenres.some((filterGenre) =>
-            (review.genre || "").toLowerCase().includes(filterGenre)
-          ) &&
+            filterGenres.some((filterGenre) =>
+              normalizeGenre(review.genre || "").includes(filterGenre)
+            ) &&
           review.platform.toLowerCase().includes(platformField.toLowerCase()) &&
           pricePass &&
           regionPass
@@ -768,7 +840,11 @@ useEffect(() => {
         render={() => (
           <div>
             <Search {...SearchCmpProps} />
-            <MainPage filteredReviews={filteredReviews} pageData={pageData} reviewsps={reviewsstf} />
+            <MainPage
+  filteredReviews={filteredReviews}
+  pageData={pageData}
+  reviewsps={latestField.filter((review) => review.platform === "Playstation")}
+/>
             <Helmet>
               <meta charSet="utf-8" />
               <title>{`May Sale Ba? - Get the latest prices on Nintendo Switch and Playstation deals in Philippine Peso!`}</title>

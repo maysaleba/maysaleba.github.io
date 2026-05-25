@@ -22,11 +22,23 @@ const Cards = ({
   Genre,
   Slug,
   SalePrice,
+  SalePricePHP,
+  CheapestRegion,
   Discount,
   URL,
   Platform,
   PlusPrice,
   Price,
+  idPrice,
+  idSalePrice,
+  inPrice,
+  inSalePrice,
+  sgPrice,
+  sgSalePrice,
+  trPrice,
+  trSalePrice,
+  usPrice,
+  usSalePrice,
   CanadaPrice,
   PeruPrice,
   ArgentinaPrice,
@@ -48,15 +60,6 @@ const Cards = ({
   IsPS4,
   IsPS5
 }) => {
-
-var today = new Date();
-var dd = String(today.getDate()).padStart(2, "0");
-var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
-var yyyy = today.getFullYear();
-
-
-let hour = today.getHours();
-today = yyyy + "-" + mm + "-" + dd;
 
  const theURLa =
     "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json";
@@ -192,6 +195,44 @@ diffDays = Math.round((secondDate - firstDate) / oneDay);
       </Badge>
     );
   }
+
+  function parseTurkeyPrice(value) {
+  if (value === undefined || value === null || value === "" || value === "null") return null;
+  return Number(String(value).replace(".", "")) / 100;
+}
+
+function getPsCheapest() {
+  if (!datam?.PHP) return null;
+
+  const rows = [
+    { code: "ID", className: "idregion-logo", sale: idSalePrice || idPrice, original: idPrice, ccy: "IDR" },
+    { code: "IN", className: "inregion-logo", sale: inSalePrice || inPrice, original: inPrice, ccy: "INR" },
+    { code: "SG", className: "sgregion-logo", sale: sgSalePrice || sgPrice, original: sgPrice, ccy: "SGD" },
+    {
+      code: "TR",
+      className: "trregion-logo",
+      sale: parseTurkeyPrice(trSalePrice || trPrice),
+      original: parseTurkeyPrice(trPrice),
+      ccy: "TRY",
+    },
+    { code: "US", className: "usregion-logo", sale: usSalePrice || usPrice, original: usPrice, ccy: "USD" },
+  ];
+
+  return rows
+    .map((r) => {
+      const rate = Number(datam.PHP) / Number(datam[r.ccy]);
+      const salePhp = Number(r.sale) * rate;
+      const originalPhp = Number(r.original) * rate;
+
+      return {
+        ...r,
+        salePhp,
+        originalPhp,
+      };
+    })
+    .filter((r) => Number.isFinite(r.salePhp) && r.salePhp > 0)
+    .sort((a, b) => a.salePhp - b.salePhp)[0];
+}
 
   function PesoPrice(props) {
     if (props.psorsw === "Nintendo Switch" || props.psorsw === "Nintendo Switch 2") {
@@ -332,37 +373,38 @@ function SmallestFlag() {
         </>
       );
     }
-    if (props.psorsw === "Playstation") {
-          return (
-        <span className="trregion-logo" style={{ fontWeight: "light" }}>
-          {safePhp(props.saleprice, trdExchange)}
-        </span>
-      );
-        
+if (props.psorsw === "Playstation") {
+  const cheapest = getPsCheapest();
 
-    }
+  return (
+    <span
+      className={cheapest?.className || "psregion-logo"}
+      style={{ fontWeight: "bold" }}
+    >
+      {cheapest ? "₱" + Math.round(cheapest.salePhp) : "₱--"}
+    </span>
+  );
+}
 
 
     if (props.psorsw === "ogprice") {
+      if (props.platform === "Playstation") {
+        const cheapest = getPsCheapest();
 
-        if (props.platform === "Playstation"){
-                      return (
-        <span style={{ fontWeight: "light" }}>
-          {safePhp(props.saleprice, trdExchange)}
-        </span>
-      );
-
-        } 
-
-
-        else {
-            return (
-        <span style={{ fontWeight: "light" }}>
-          {safePhp(props.saleprice, usdExchange)}
-        </span>
-      );
-        }
-
+        return (
+          <span style={{ fontWeight: "light" }}>
+            {cheapest && Number.isFinite(cheapest.originalPhp)
+              ? "₱" + Math.round(cheapest.originalPhp)
+              : "₱--"}
+          </span>
+        );
+      } else {
+        return (
+          <span style={{ fontWeight: "light" }}>
+            {safePhp(props.saleprice, usdExchange)}
+          </span>
+        );
+      }
     }
   }
 

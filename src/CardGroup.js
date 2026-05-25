@@ -93,6 +93,16 @@
                                             Platform={review.platform}                                  
                                             PlusPrice={review.PlusPrice}
                                             Price={review.Price}
+                                            idPrice={review.idPrice}
+                                            idSalePrice={review.idSalePrice}
+                                            inPrice={review.inPrice}
+                                            inSalePrice={review.inSalePrice}
+                                            sgPrice={review.sgPrice}
+                                            sgSalePrice={review.sgSalePrice}
+                                            trPrice={review.trPrice}
+                                            trSalePrice={review.trSalePrice}
+                                            usPrice={review.usPrice}
+                                            usSalePrice={review.usSalePrice}
                                             ESRBRating={review.ESRBRating}
                                             IsPS4={review.IsPS4}
                                             IsPS5={review.IsPS5}

@@ -113,12 +113,28 @@ const FilterDropDown = (props) => {
     []
   );
 
-  const REGION_LABEL = {
+const REGION_LABEL = {
   "": "Any",
-  AR:"Argentina", AU: "Australia", BR: "Brazil", CA:"Canada",
-  CO:"Colombia", HK:"Hong Kong", JP:"Japan", MY:"Malaysia", MX:"Mexico", 
-  NO:"Norway", NZ:"New Zealand", PE:"Peru", PL:"Poland", SG: "Singapore", 
-  TH:"Thailand", ZA:"South Africa", US:"United States",  
+  ID: "Indonesia",
+  IN: "India",
+  TR: "Turkey",
+  AR: "Argentina",
+  AU: "Australia",
+  BR: "Brazil",
+  CA: "Canada",
+  CO: "Colombia",
+  HK: "Hong Kong",
+  JP: "Japan",
+  MY: "Malaysia",
+  MX: "Mexico",
+  NO: "Norway",
+  NZ: "New Zealand",
+  PE: "Peru",
+  PL: "Poland",
+  SG: "Singapore",
+  TH: "Thailand",
+  ZA: "South Africa",
+  US: "United States",
 };
 
 const CHEAPEST_OPTIONS = useMemo(
@@ -150,7 +166,7 @@ const selectCheapest = (code) => () => {
 <Container fluid="md">
   <Row className="g-100 justify-content-md-center">
     {/* Platform */}
-    <Col xs={isPS ? 6 : 4} md={isPS ? 6 : 4} className="col-style">
+    <Col xs={4} md={4} className="col-style">
       <Dropdown className="m-1">
 <Dropdown.Toggle size="sm" id="dd-platform" className="dropdown-style w-100">
   <span
@@ -172,7 +188,7 @@ const selectCheapest = (code) => () => {
     </Col>
 
     {/* Latest */}
-    <Col xs={isPS ? 6 : 4} md={isPS ? 6 : 4} className="col-style">
+    <Col xs={4} md={4} className="col-style">
       <Dropdown className="m-1">
 <Dropdown.Toggle size="sm" id="dd-latest" className="dropdown-style w-100">
   <span
@@ -194,7 +210,7 @@ const selectCheapest = (code) => () => {
     </Col>
 
     {/* Genre */}
-    <Col xs={isPS ? 6 : 4} md={isPS ? 6 : 4} className="col-style">
+    <Col xs={4} md={4} className="col-style">
       <Dropdown className="m-1">
 <Dropdown.Toggle size="sm" id="dd-genre" className="dropdown-style w-100">
   <span
@@ -237,47 +253,57 @@ const selectCheapest = (code) => () => {
       </Dropdown>
     </Col>
 
-    {/* Cheapest Region — LAST; hidden on PS */}
-    {!isPS && (
-      <Col xs={6} md={6} className="col-style">
-        <Dropdown className="m-1">
-<Dropdown.Toggle size="sm" id="dd-cheapest" className="dropdown-style w-100">
-  {regionFilter ? (
-    <span
-      className={`${regionIconClass(regionFilter)} align-middle me-2`}
-      style={{ display: "inline-block", width: 15, height: 15 }}
-      aria-hidden
-    />
-  ) : (
-    <AnyIcon />
-  )}
-  <span
-    className="d-inline-block text-truncate align-middle"
-    style={{ maxWidth: 'calc(100% - 1.5rem)' }}  // leave room for caret
-    title={`Region: ${REGION_LABEL[regionFilter] ?? "Any"}`}
-  >
-    {`Region: ${REGION_LABEL[regionFilter] ?? "Any"}`}
-  </span>
-</Dropdown.Toggle>
-          <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>
-            {["", "AR","AU","BR","CA","CO","HK","JP","MX","MY","NO","NZ","PE","PL","SG","TH","ZA","US"].map((code) => (
-              <Dropdown.Item as="button" key={code || "any"} onClick={() => onRegionChange(code)}>
-                {code ? (
-                  <span
-                    className={`${regionIconClass(code)} align-middle me-2`}
-                    style={{ display: "inline-block", width: 15, height: 15 }}
-                    aria-hidden
-                  />
-                ) : (
-                  <AnyIcon />
-                )}
-                <span className="align-middle">{REGION_LABEL[code] ?? "Any"}</span>
-              </Dropdown.Item>
-            ))}
-          </Dropdown.Menu>
-        </Dropdown>
-      </Col>
-    )}
+{/* Cheapest Region */}
+<Col xs={6} md={6} className="col-style">
+  <Dropdown className="m-1">
+    <Dropdown.Toggle size="sm" id="dd-cheapest" className="dropdown-style w-100">
+      {regionFilter ? (
+        <span
+          className={`${regionIconClass(regionFilter)} align-middle me-2`}
+          style={{ display: "inline-block", width: 15, height: 15 }}
+          aria-hidden
+        />
+      ) : (
+        <AnyIcon />
+      )}
+
+      <span
+        className="d-inline-block text-truncate align-middle"
+        style={{ maxWidth: "calc(100% - 1.5rem)" }}
+        title={`Region: ${REGION_LABEL[regionFilter] ?? "Any"}`}
+      >
+        {`Region: ${REGION_LABEL[regionFilter] ?? "Any"}`}
+      </span>
+    </Dropdown.Toggle>
+
+    <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>
+      {(isPS
+        ? ["", "ID", "IN", "SG", "TR", "US"]
+        : ["", "AR", "AU", "BR", "CA", "CO", "HK", "JP", "MX", "MY", "NO", "NZ", "PE", "PL", "SG", "TH", "ZA", "US"]
+      ).map((code) => (
+        <Dropdown.Item
+          as="button"
+          key={code || "any"}
+          onClick={() => onRegionChange(code)}
+        >
+          {code ? (
+            <span
+              className={`${regionIconClass(code)} align-middle me-2`}
+              style={{ display: "inline-block", width: 15, height: 15 }}
+              aria-hidden
+            />
+          ) : (
+            <AnyIcon />
+          )}
+
+          <span className="align-middle">
+            {REGION_LABEL[code] ?? "Any"}
+          </span>
+        </Dropdown.Item>
+      ))}
+    </Dropdown.Menu>
+  </Dropdown>
+</Col>
   </Row>
 </Container>
 
