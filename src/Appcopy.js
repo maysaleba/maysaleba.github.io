@@ -475,7 +475,8 @@ function normalizeGenre(genre = "") {
         const regionPass = !regionFilter || !ratesReady || minRegion === regionFilter;
 
         return (
-          review.Title.replace(/[^a-zA-Z0-9é ]/g, "")
+          `${review.Title || ""} ${review.Slug || review.slug || ""}`
+            .replace(/[^a-zA-Z0-9é ]/g, "")
             .replace("é", "e")
             .replace(/\s/g, "")
             .toLowerCase()
@@ -486,9 +487,9 @@ function normalizeGenre(genre = "") {
                 .replace(/\s/g, "")
                 .toLowerCase()
             ) &&
-            filterGenres.some((filterGenre) =>
-              normalizeGenre(review.genre || "").includes(filterGenre)
-            ) &&
+          filterGenres.some((filterGenre) =>
+            normalizeGenre(review.genre || "").includes(filterGenre)
+          ) &&
           review.platform.toLowerCase().includes(platformField.toLowerCase()) &&
           pricePass &&
           regionPass
