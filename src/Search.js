@@ -57,20 +57,41 @@ return (
 	 	<Search sx={{width: {xs: '92vw', md: '50vw', lg: '30vw'}, margin: 'auto', marginBottom: '20px'}}>
 	 	<form 
     style={{display: 'flex'}}
-    onSubmit={
-              (e) => {
-              
-                history.push('/allgames')
-                clearGenre();
-                clearPriceRange();
-                onPlatformChange("");
-                onPlatformDrop("All Platforms");
-                onPriceRangeDrop("All Price Range");
-                onDropDownChange("All Genres");
-                setSearchQuery(e.target.s.value);
-                e.preventDefault();
-                onRegionChange?.("");            // reset Cheapest Region to "Any"
-            }}
+    onSubmit={(e) => {
+      e.preventDefault();
+
+      const value = e.target.s.value;
+      const path = history.location.pathname;
+
+      const isPlaystation = path === "/playstation";
+      const isSwitch = path === "/switch";
+      const isSwitch2 = path === "/switch-2";
+
+      clearGenre();
+      clearPriceRange();
+      onPriceRangeDrop("All Price Range");
+      onDropDownChange("All Genres");
+      onRegionChange?.("");
+      setSearchQuery(value);
+
+      if (isPlaystation) {
+        history.push("/playstation");
+        onPlatformChange("Playstation");
+        onPlatformDrop("Playstation");
+      } else if (isSwitch) {
+        history.push("/switch");
+        onPlatformChange("Switch");
+        onPlatformDrop("Switch");
+      } else if (isSwitch2) {
+        history.push("/switch-2");
+        onPlatformChange("Switch 2");
+        onPlatformDrop("Switch 2");
+      } else {
+        history.push("/allgames");
+        onPlatformChange("");
+        onPlatformDrop("All Platforms");
+      }
+    }}
 
 
     >	
