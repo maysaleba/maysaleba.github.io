@@ -3,6 +3,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
+import ClearIcon from '@mui/icons-material/Clear';
 import IconButton from '@mui/material/IconButton';
 import { withRouter } from "react-router-dom";
 
@@ -52,6 +53,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const SearchAppBar = props => {
 const {history, onPlatformDrop, onPlatformChange, onPriceRangeDrop, clearPriceRange, searchQuery, setSearchQuery, clearGenre, onDropDownChange, onRegionChange} = props;
+const [searchText, setSearchText] = React.useState(searchQuery || "");
 return (
 	 <Box sx={{ flexGrow: 1 }}>
 	 	<Search sx={{width: {xs: '92vw', md: '50vw', lg: '30vw'}, margin: 'auto', marginBottom: '20px'}}>
@@ -60,7 +62,7 @@ return (
     onSubmit={(e) => {
       e.preventDefault();
 
-      const value = e.target.s.value;
+      const value = searchText;
       const path = history.location.pathname;
 
       const isPlaystation = path === "/playstation";
@@ -96,27 +98,34 @@ return (
 
     >	
             <StyledInputBase
-              defaultValue={searchQuery}
-
-
-              // onChange={
-
-              //   (e) => {
-              //   clearGenre();
-              //   clearPriceRange();
-              //   onPlatformChange("");
-              //   onPlatformDrop("All Platforms");
-              //   onPriceRangeDrop("All Price Range");
-              //   onDropDownChange("All Genres");
-              //   setSearchQuery(e.target.value);
-              //   // document.searchform.submit();
-
-              // }}
-
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
               autoComplete="off"
               placeholder="May Sale Ba...?"
               id="s"
             />
+
+{searchText && (
+  <IconButton
+    type="button"
+    onClick={() => {
+      setSearchText("");
+      setSearchQuery("");
+    }}
+    sx={{
+      position: "absolute",
+      right: "42px",
+      top: "50%",
+      transform: "translateY(-50%)",
+      width: "28px",
+      height: "28px",
+      padding: 0,
+      color: "#55597d",
+    }}
+  >
+    <ClearIcon fontSize="small" />
+  </IconButton>
+)}
 
 
             
