@@ -33,6 +33,7 @@
     onDropDownChange,
     onRegionChange,     // <-- add
     regionFilter,       // <-- add
+    datam,
   }) => {
     return (
       <div>
@@ -70,6 +71,7 @@
                     {pageData().map((review, key) => (
                       <div key={key}>
                                     <Cards  
+                                            datam={datam}
                                             Score={review.SCORE}
                                             Title={review.Title}
                                             SaleEnds={review.SaleEnds}

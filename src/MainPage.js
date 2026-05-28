@@ -5,7 +5,7 @@ import "./Cards.css";
 import Paper from "@mui/material/Paper";
 import reviewssw from "./csvjson.json";
 
-const MainPage = ({ filteredReviews, pageData, reviewsps }) => {
+const MainPage = ({ filteredReviews, pageData, reviewsps, datam  }) => {
   var d = new Date();
   var lastt = new Date(d.setDate(d.getDate() - 2));
   var dato = String(lastt.getDate()).padStart(2, "0");
@@ -105,6 +105,7 @@ function sortJson(element, prop, propType, asc) {
           {topSwitchDiscounts.slice(0, 12).map((review, key) => (
             <div key={key}>
              <Cards  
+                                          datam={datam}
                                           Score={review.SCORE}
                                           Title={review.Title}
                                           SaleEnds={review.SaleEnds}
@@ -154,6 +155,7 @@ function sortJson(element, prop, propType, asc) {
           {newSwitchDiscounts.slice(0, 12).map((review, key) => (
             <div key={key}>
               <Cards  
+                                          datam={datam}
                                           Score={review.SCORE}
                                           Title={review.Title}
                                           SaleEnds={review.SaleEnds}
@@ -211,6 +213,7 @@ function sortJson(element, prop, propType, asc) {
           {topPSDiscounts.slice(0, 12).map((review, key) => (
             <div key={key}>
               <Cards
+                datam={datam}
                 Score={review.SCORE}
                 Title={review.Title}
                 SaleEnds={review.SaleEnds}
@@ -253,6 +256,7 @@ function sortJson(element, prop, propType, asc) {
           {newPSDiscounts.slice(0, 12).map((review, key) => (
             <div key={key}>
               <Cards
+                datam={datam}
                 Score={review.SCORE}
                 Title={review.Title}
                 SaleEnds={review.SaleEnds}

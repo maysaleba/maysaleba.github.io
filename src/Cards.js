@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Badge, Card, Col } from "react-bootstrap";
 import "./Cards.css";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import noimage from "./noimage.jpg";
-import axios from "axios";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import { Box } from "@mui/material";
 import 'react-circular-progressbar/dist/styles.css';
@@ -15,6 +14,7 @@ import 'react-circular-progressbar/dist/styles.css';
 //   + "\nMXN\n" + mxnExchange + "\nPEN\n" + penExchange + "\nPLN\n" + plnExchange + "\nRUB\n" + rubExchange + "\nZAR\n" + zarExchange);
 
 const Cards = ({
+  datam = {},
   Title,
   Image,
   Score,
@@ -61,33 +61,6 @@ const Cards = ({
   IsPS5
 }) => {
 
- const theURLa =
-    "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json";
-
-  const [datam, setDatam] = React.useState({});
-  const [makeswitch, setMakeswitch] = React.useState(null);
-
-useEffect(() => {
-  axios
-    .get(theURLa)
-    .then((response) => {
-      const rates = response.data.usd; // always USD base
-
-      // Convert keys to UPPERCASE
-      const uppercased = Object.fromEntries(
-        Object.entries(rates).map(([k, v]) => [k.toUpperCase(), v])
-      );
-
-      setDatam(uppercased);
-      setMakeswitch("1");
-    })
-    .catch((error) => {
-      console.error("Error fetching currency data:", error);
-    });
-}, []);
-
-
-
 
     var usdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.USD);
     var arsExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.ARS);
@@ -111,7 +84,7 @@ useEffect(() => {
   
 
   // Is rate data loaded?
-  const ratesReady = makeswitch === null ? !!datam?.usd : !!datam?.USD;
+  const ratesReady = !!datam?.PHP;
 
 const safePhp = (amt, rate, placeholder = "₱--") =>
   Number.isFinite(Number(amt)) && Number.isFinite(Number(rate))

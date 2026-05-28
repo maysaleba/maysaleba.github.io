@@ -777,6 +777,7 @@ function normalizeGenre(genre = "") {
     filteredReviews,
     pageData,
     maxPage,
+    datam,
     // for ListPage init defaults
     setPlatformField,
     setPlatformDropDown,
@@ -841,10 +842,11 @@ function normalizeGenre(genre = "") {
         render={() => (
           <div>
             <Search {...SearchCmpProps} />
-            <MainPage
+<MainPage
   filteredReviews={filteredReviews}
   pageData={pageData}
   reviewsps={latestField.filter((review) => review.platform === "Playstation")}
+  datam={datam}
 />
             <Helmet>
               <meta charSet="utf-8" />
