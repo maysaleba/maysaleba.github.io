@@ -2,6 +2,13 @@
 <html lang="en">
    <head>
       <meta charset="utf-8" />
+<script>
+  try {
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.add("dark-mode");
+    }
+  } catch (e) {}
+</script
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DT9ESY6EY1"></script>
       <script>
