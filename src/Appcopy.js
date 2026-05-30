@@ -184,18 +184,22 @@ useEffect(() => {
   }, []);
 
   // Re-apply current sort when data or FX rates are ready.
-  useEffect(() => {
-    if (!originalData.length) return;
-    const withLowest = originalData.map((r) => ((() => {
-return {
-  ...r,
-  _lowestPHP: lowestPhpFor(r),
-};
-})()));
-    const sortFn = SORTERS[latestDropDown] || SORTERS["Popular"];
-    setLatestField([...withLowest].sort(sortFn));
-  }, [originalData, latestDropDown, datam]);
+useEffect(() => {
+  if (!originalData.length) return;
 
+  const needsPriceSort =
+    latestDropDown === "Price ↓" || latestDropDown === "Price ↑";
+
+  const dataToSort = needsPriceSort
+    ? originalData.map((r) => ({
+        ...r,
+        _lowestPHP: lowestPhpFor(r),
+      }))
+    : originalData;
+
+  const sortFn = SORTERS[latestDropDown] || SORTERS["Popular"];
+  setLatestField([...dataToSort].sort(sortFn));
+}, [originalData, latestDropDown, datam]);
   const onPriceRangeDrop = (dropDownValue) => setPriceRangeDropDown(dropDownValue);
   const onPlatformDrop = (dropDownValue) => setPlatformDropDown(dropDownValue);
   const onLatestDrop = (dropDownValue) => setLatestDropDown(dropDownValue);
@@ -249,14 +253,17 @@ return {
   };
 
   const onLatestChange = (label) => {
-    const withLowest = originalData.map((r) => ((() => {
-return {
-  ...r,
-  _lowestPHP: lowestPhpFor(r),
-};
-})()));
+    const needsPriceSort = label === "Price ↓" || label === "Price ↑";
+
+    const dataToSort = needsPriceSort
+      ? originalData.map((r) => ({
+          ...r,
+          _lowestPHP: lowestPhpFor(r),
+        }))
+      : originalData;
+
     const sortFn = SORTERS[label] || SORTERS["Popular"];
-    setLatestField([...withLowest].sort(sortFn));
+    setLatestField([...dataToSort].sort(sortFn));
     setLatestDropDown(label);
   };
 
@@ -464,15 +471,19 @@ function normalizeGenre(genre = "") {
 
         const filterGenres = cleanFilterField.split(",").map((g) => g.trim());
 
-        const lowPhp = lowestPhpFor(review);
-        const fxReady = Number.isFinite(lowPhp) && lowPhp !== Infinity;
-
-        const pricePass = fxReady ? lowPhp <= priceRangeField && lowPhp >= priceRangeLow : true;
-
         const ratesReady = Boolean(datam && datam.PHP);
-        const minRegion = ratesReady ? cheapestRegionCode(review) : null;
-        // If region filter is set but FX rates aren't ready yet, don't filter by region yet
-        const regionPass = !regionFilter || !ratesReady || minRegion === regionFilter;
+
+        let pricePass = true;
+        if (priceRangeDropDown !== "All Price Range" && ratesReady) {
+          const lowPhp = lowestPhpFor(review);
+          pricePass = lowPhp <= priceRangeField && lowPhp >= priceRangeLow;
+        }
+
+        let regionPass = true;
+        if (regionFilter && ratesReady) {
+          const minRegion = cheapestRegionCode(review);
+          regionPass = minRegion === regionFilter;
+        }
 
         return (
           `${review.Title || ""} ${review.Slug || review.slug || ""}`
@@ -502,6 +513,7 @@ function normalizeGenre(genre = "") {
       platformField,
       priceRangeField,
       priceRangeLow,
+      priceRangeDropDown,
       datam,
       regionFilter,
     ]
