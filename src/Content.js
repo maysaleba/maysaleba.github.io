@@ -17,7 +17,7 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import InfoIcon from "@mui/icons-material/Info";
 import CloseIcon from "@mui/icons-material/Close";
-import noimage from "./noimage1.jpg";
+import noimage from "./noimage.jpg";
 
 const style = {
   position: "absolute",
