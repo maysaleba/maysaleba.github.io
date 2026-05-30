@@ -145,7 +145,7 @@ export default function Main() {
 });
 
 useEffect(() => {
-  document.body.classList.toggle("dark-mode", darkMode);
+  document.documentElement.classList.toggle("dark-mode", darkMode);
   localStorage.setItem("theme", darkMode ? "dark" : "light");
 }, [darkMode]);
   const [datam, setDatam] = React.useState({});

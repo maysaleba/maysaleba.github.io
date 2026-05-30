@@ -86,11 +86,12 @@ const {
       },
     },
 {
-  text: darkMode ? "Light Mode" : "Dark Mode",
-  icon: darkMode ? <LightModeIcon /> : <DarkModeIcon />,
+  text: darkMode ? "Dark Mode" : "Light Mode",
+  icon: darkMode ? <DarkModeIcon /> : <LightModeIcon />,
   onClick: () => {
     setDarkMode((prev) => !prev);
   },
+  isThemeToggle: true,
 },
   ];
 
@@ -200,7 +201,7 @@ const {
   className="theme-toggle-btn"
   onClick={() => setDarkMode((prev) => !prev)}
 >
-  {darkMode ? <LightModeIcon fontSize="small" /> : <DarkModeIcon fontSize="small" />}
+  {darkMode ? <DarkModeIcon fontSize="small" /> : <LightModeIcon fontSize="small" />}
 </button>
           </Stack>
           <IconButton
@@ -242,21 +243,29 @@ const {
                 </IconButton>
               </Box>
               <Divider />
-              <List>
-                {itemsList.map((item, index) => {
-                  const { text, icon, onClick } = item;
-                  return (
-                    <ListItem button key={text} onClick={onClick}>
-                      {icon && <ListItemIcon>{icon}</ListItemIcon>}
-                      <ListItemText
-                        disableTypography
-                        style={{ fontFamily: "Cairo", fontSize: "16px" }}
-                        primary={text}
-                      />
-                    </ListItem>
-                  );
-                })}
-              </List>
+<List>
+  {itemsList.map((item) => {
+    const { text, icon, onClick, isThemeToggle } = item;
+
+    return (
+      <ListItem button key={text} onClick={onClick}>
+        {icon && <ListItemIcon>{icon}</ListItemIcon>}
+
+        <ListItemText
+          disableTypography
+          style={{ fontFamily: "Cairo", fontSize: "16px" }}
+          primary={text}
+        />
+
+        {isThemeToggle && (
+          <span className={`drawer-theme-toggle ${darkMode ? "active" : ""}`}>
+            <span className="drawer-theme-toggle-dot" />
+          </span>
+        )}
+      </ListItem>
+    );
+  })}
+</List>
             </div>
           </Drawer>
         </Toolbar>

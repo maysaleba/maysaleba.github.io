@@ -590,7 +590,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
   return (
     <Col>
 <Link to={`/games/${Slug}`} className="linkto card-link">
-<Card className="border-0"> 
+<Card className={`border-0 ${Slug.includes("switch-2") ? "switch2-card" : ""}`}>
 
     {Slug.includes("switch-2") && (
        <div className="platform-top-badge-outside">

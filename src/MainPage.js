@@ -142,7 +142,7 @@ function sortJson(element, prop, propType, asc) {
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/switch" className="mainpage-footer-link"><b><u>VIEW ALL SWITCH GAMES</u></b></a></div>
+        <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/switch?genre=All+Genres&sort=Popular&price=All+Price+Range" className="mainpage-footer-link"><b><u>BROWSE ALL TRENDING DEALS →</u></b></a></div>
       </Paper>
       <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
@@ -192,7 +192,7 @@ function sortJson(element, prop, propType, asc) {
           ))}
         </Row>
         <hr className="linedivideb"/>
-        <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/switch" className="mainpage-footer-link"><b><u>VIEW ALL SWITCH GAMES</u></b></a></div>
+        <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/switch?genre=All+Genres&sort=New+Discounts&price=All+Price+Range" className="mainpage-footer-link"><b><u>BROWSE ALL NEW DEALS →</u></b></a></div>
       </Paper>
     {/*  <div align="center">
       <AdSense.Google
@@ -244,7 +244,7 @@ function sortJson(element, prop, propType, asc) {
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/playstation" className="mainpage-footer-link"><b><u>VIEW ALL PLAYSTATION GAMES</u></b></a></div>
+        <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/playstation?genre=All+Genres&sort=Popular&price=All+Price+Range" className="mainpage-footer-link"><b><u>BROWSE ALL TRENDING DEALS →</u></b></a></div>
       </Paper>
         <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
@@ -287,7 +287,7 @@ function sortJson(element, prop, propType, asc) {
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div className="card-footer-custom" align="center"><a href="https://maysaleba.com/playstation" className="mainpage-footer-link"><b><u>VIEW ALL PLAYSTATION GAMES</u></b></a></div>
+        <div className="card-footer-custom" align="center"><a href="https://maysaleba.com/playstation?genre=All+Genres&sort=New+Discounts&price=All+Price+Range" className="mainpage-footer-link"><b><u>BROWSE ALL NEW DEALS →</u></b></a></div>
       </Paper>
     </div>
   );
