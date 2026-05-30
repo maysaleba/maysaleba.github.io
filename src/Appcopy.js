@@ -140,6 +140,14 @@ export default function Main() {
 
   const theURLa = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json";
 
+  const [darkMode, setDarkMode] = useState(() => {
+  return localStorage.getItem("theme") === "dark";
+});
+
+useEffect(() => {
+  document.body.classList.toggle("dark-mode", darkMode);
+  localStorage.setItem("theme", darkMode ? "dark" : "light");
+}, [darkMode]);
   const [datam, setDatam] = React.useState({});
   const [makeswitch, setMakeswitch] = React.useState(null);
 
@@ -692,48 +700,51 @@ function normalizeGenre(genre = "") {
 
   // ---------- BACKGROUND ----------
   const BackgroundContainer = styled.div`
-    -blur-radius: 20px;
+  --blur-radius: 20px;
+  position: absolute;
+  width: 100%;
+  height: 60vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+
+  background: var(--hero-bg);
+
+  z-index: -1;
+
+  &:after {
+    --color-background--rgb: var(--hero-gradient-rgb);
+
+    content: "";
     position: absolute;
-    width: 100%;
-    height: 60vh;
-    top: 0;
+    height: 50%;
     left: 0;
     right: 0;
     bottom: 0;
-    overflow: hidden;
-    background: #6e7290;
-    z-index: -1;
 
-    &:after {
-      --color-background--rgb: 103, 103, 171;
-      content: "";
-      position: absolute;
-      height: 50%;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: transparent;
-      background: linear-gradient(
-        0deg,
-        rgba(var(--color-background--rgb), 1) 0,
-        rgba(var(--color-background--rgb), 0.987) 8.1%,
-        rgba(var(--color-background--rgb), 0.951) 15.5%,
-        rgba(var(--color-background--rgb), 0.896) 22.5%,
-        rgba(var(--color-background--rgb), 0.825) 29%,
-        rgba(var(--color-background--rgb), 0.741) 35.3%,
-        rgba(var(--color-background--rgb), 0.648) 41.2%,
-        rgba(var(--color-background--rgb), 0.55) 47.1%,
-        rgba(var(--color-background--rgb), 0.45) 52.9%,
-        rgba(var(--color-background--rgb), 0.352) 58.8%,
-        rgba(var(--color-background--rgb), 0.259) 64.7%,
-        rgba(var(--color-background--rgb), 0.175) 71%,
-        rgba(var(--color-background--rgb), 0.104) 77.5%,
-        rgba(var(--color-background--rgb), 0.049) 84.5%,
-        rgba(var(--color-background--rgb), 0.013) 91.9%,
-        rgba(var(--color-background--rgb), 0)
-      );
-    }
-  `;
+    background: linear-gradient(
+      0deg,
+      rgba(var(--color-background--rgb), 1) 0,
+      rgba(var(--color-background--rgb), 0.987) 8.1%,
+      rgba(var(--color-background--rgb), 0.951) 15.5%,
+      rgba(var(--color-background--rgb), 0.896) 22.5%,
+      rgba(var(--color-background--rgb), 0.825) 29%,
+      rgba(var(--color-background--rgb), 0.741) 35.3%,
+      rgba(var(--color-background--rgb), 0.648) 41.2%,
+      rgba(var(--color-background--rgb), 0.55) 47.1%,
+      rgba(var(--color-background--rgb), 0.45) 52.9%,
+      rgba(var(--color-background--rgb), 0.352) 58.8%,
+      rgba(var(--color-background--rgb), 0.259) 64.7%,
+      rgba(var(--color-background--rgb), 0.175) 71%,
+      rgba(var(--color-background--rgb), 0.104) 77.5%,
+      rgba(var(--color-background--rgb), 0.049) 84.5%,
+      rgba(var(--color-background--rgb), 0.013) 91.9%,
+      rgba(var(--color-background--rgb), 0)
+    );
+  }
+`;
 
   const Background = styled.div`
     --blur-radius: 20px;
@@ -835,13 +846,15 @@ function normalizeGenre(genre = "") {
   return (
     <Router>
       <ScrollToTop />
-      <NaviBar
-        onPlatformDrop={onPlatformDrop}
-        clearFilter={clearFilter}
-        clearSearchChange={clearSearchChange}
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-      />
+<NaviBar
+  onPlatformDrop={onPlatformDrop}
+  clearFilter={clearFilter}
+  clearSearchChange={clearSearchChange}
+  searchQuery={searchQuery}
+  setSearchQuery={setSearchQuery}
+  darkMode={darkMode}
+  setDarkMode={setDarkMode}
+/>
 
       <BackgroundContainer>
         <Background />

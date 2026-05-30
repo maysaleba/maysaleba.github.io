@@ -11,10 +11,10 @@ import { withRouter } from "react-router-dom";
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: 20,
-  backgroundColor: '#ffffff',
+  backgroundColor: 'var(--search-bg)',
   border: '1px',
   // borderStyle: 'solid',
-  borderColor: '#55597d',
+  borderColor: 'var(--search-border)',
   // marginLeft: 10,
    "& :first-of-type": {
     flexGrow: 1
@@ -40,8 +40,12 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
+  color: 'var(--search-text)',
   '& .MuiInputBase-input': {
+    '&::placeholder': {
+  color: 'var(--search-text)',
+  opacity: 0.8,
+},
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(0)})`,
@@ -120,7 +124,7 @@ return (
       width: "28px",
       height: "28px",
       padding: 0,
-      color: "#55597d",
+      color: "var(--search-text)",
     }}
   >
     <ClearIcon fontSize="small" />
@@ -132,7 +136,7 @@ return (
             <SearchIconWrapper>
             <IconButton type="submit"
             >
-              <SearchIcon style={{color:'#55597d'}} />
+              <SearchIcon style={{color:'var(--search-text)'}} />
               </IconButton>
             </SearchIconWrapper>
             </form>

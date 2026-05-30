@@ -25,11 +25,12 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: { xs: "100%", sm: "600px", md: "600px" },
-  bgcolor: "background.paper",
+  bgcolor: "var(--surface-bg)",
+  color: "var(--text-main)",
   border: "none",
   outline: "none",
   p: 4,
-  borderRadius: "8px", // Optional: Make the modal corners rounded
+  borderRadius: "8px",
 };
 
 const modalBackdropStyle = {
@@ -139,14 +140,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     if (matchGames[0].NumberofPlayers !== undefined) {
       // console.log("SHOPEE!!"+matchGames[0].NumberofPlayers)
       return (
-        <div
-          style={{
-            marginTop: -10,
-            marginBottom: 15,
-            textAlign: "center",
-            fontSize: "0.8rem",
-          }}
-        >
+      <div className="orig-price-container">
           <InfoIcon sx={{ color: "white" }} fontSize="small" />{" "}
           <a
             className="origprice"
@@ -160,14 +154,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       );
     } else {
       return (
-        <div
-          style={{
-            marginTop: -10,
-            marginBottom: 15,
-            textAlign: "center",
-            fontSize: "0.8rem",
-          }}
-        >
+      <div className="orig-price-container">
           <InfoIcon sx={{ color: "white" }} fontSize="small" />{" "}
           <a
             className="origprice"
@@ -185,13 +172,13 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
   function WhichStore() {
     if (matchGames[0].platform === "Playstation") {
       return (
-        <div style={{ marginLeft: "10px" }} className="logonin psstore">
+        <div className="logonin psstore store-logo-wrapper">
           <img src={download} />
         </div>
       );
     } else {
       return (
-        <div style={{ marginLeft: "10px" }} className="logonin eshop">
+        <div className="logonin eshop store-logo-wrapper">
           <img src={download} />
         </div>
       );
@@ -593,41 +580,33 @@ function WhichPlatform() {
   const game = matchGames[0];
   const slug = game.Slug;
 
-  const badgeStyle = {
-    fontSize: 12,
-    borderRadius: 30,
-    border: "1px solid black",
-    paddingLeft: "10px",
-    paddingRight: "10px",
-  };
-
 
   if (slug?.includes("-switch-2")) {
-    return <span style={badgeStyle}>Nintendo Switch 2</span>;
+    return <span className="platform-pill">Nintendo Switch 2</span>
   }
 
   if (slug?.includes("-switch")) {
-    return <span style={badgeStyle}>Nintendo Switch</span>;
+    return <span className="platform-pill">Nintendo Switch</span>
   }
 
   if (game.IsPS4 === "1" && game.IsPS5 === "1") {
     return (
       <>
-        <span style={badgeStyle}>Playstation 5</span>{" "}
-        <span style={badgeStyle}>Playstation 4</span>
+        <span className="platform-pill">Playstation 5</span>{" "}
+        <span className="platform-pill">Playstation 4</span>
       </>
     );
   }
 
   if (game.IsPS4 === "1") {
-    return <span style={badgeStyle}>Playstation 4</span>;
+    return <span className="platform-pill">Playstation 4</span>;
   }
 
   if (game.IsPS5 === "1") {
-    return <span style={badgeStyle}>Playstation 5</span>;
+    return <span className="platform-pill">Playstation 5</span>;
   }
 
-  return <span style={badgeStyle}>UNKNOWN</span>;
+  return <span className="platform-pill">UNKNOWN</span>;
 }
 
 
@@ -722,6 +701,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
         return (
           <>
             <Link
+                className="content-link-static"
               underline="none"
               hover="none"
               color="black"
@@ -729,9 +709,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
               target="_blank"
               rel="noreferrer"
             >
-              <Card.Header
-                style={{ backgroundColor: "white", fontWeight: "bold" }}
-              >
+<Card.Header className="content-header">
                 HOW LONG TO BEAT
                 <img style={{ paddingRight: "5px" }} src={download} />
                 <AccessTimeIcon />
@@ -762,9 +740,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
               target="_blank"
               rel="noreferrer"
             >
-              <Card.Header
-                style={{ backgroundColor: "white", fontWeight: "bold" }}
-              >
+<Card.Header className="content-header">
                 HOW LONG TO BEAT
                 <img style={{ paddingRight: "5px" }} src={download} />
                 <AccessTimeIcon />
@@ -792,14 +768,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
     if (matchGames[0].MainStory == 0 || matchGames[0].MainStory == null) {
       return (
         <Col
-          className="hltb-container"
-          style={{
-            borderTopLeftRadius: 5,
-            backgroundColor: "#3a6db5",
-            paddingBottom: 10,
-            textAlign: "center",
-          }}
-        >
+className="hltb-main hltb-cell">
           <div
             style={{
               textAlign: "center",
@@ -819,14 +788,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
     } else {
       return (
         <Col
-          className="hltb-container"
-          style={{
-            borderTopLeftRadius: 5,
-            backgroundColor: "#3a6db5",
-            paddingBottom: 10,
-            textAlign: "center",
-          }}
-        >
+className="hltb-main hltb-cell">
           <div
             style={{
               textAlign: "center",
@@ -918,14 +880,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
   function MainExtra() {
     if (matchGames[0].MainExtra == 0 || matchGames[0].MainExtra == null) {
       return (
-        <Col
-          className="hltb-container"
-          style={{
-            backgroundColor: "#5650a1",
-            paddingBottom: 10,
-            textAlign: "center",
-          }}
-        >
+        <Col className="hltb-extra hltb-cell">
           <div
             style={{
               textAlign: "center",
@@ -944,14 +899,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
       );
     } else {
       return (
-        <Col
-          className="hltb-container"
-          style={{
-            backgroundColor: "#5650a1",
-            paddingBottom: 10,
-            textAlign: "center",
-          }}
-        >
+        <Col className="hltb-extra hltb-cell">
           <div
             style={{
               textAlign: "center",
@@ -980,14 +928,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
     ) {
       return (
         <Col
-          className="hltb-container"
-          style={{
-            borderTopRightRadius: 5,
-            backgroundColor: "#824985",
-            paddingBottom: 10,
-            textAlign: "center",
-          }}
-        >
+className="hltb-complete hltb-cell">
           <div
             style={{
               textAlign: "center",
@@ -1007,14 +948,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
     } else {
       return (
         <Col
-          className="hltb-container"
-          style={{
-            borderTopRightRadius: 5,
-            backgroundColor: "#824985",
-            paddingBottom: 10,
-            textAlign: "center",
-          }}
-        >
+className="hltb-complete hltb-cell">
           <div
             style={{
               textAlign: "center",
@@ -1046,7 +980,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
       // console.log(youtubeid);
       return (
         <div style={{ paddingBottom: 10, fontSize: 14 }}>
-          {/* <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
+          {/* <Card.Header className="content-header">
             TRAILER
           </Card.Header>*/}
 
@@ -1211,7 +1145,7 @@ function PsPrices() {
                   <div style={{ marginLeft: "10px" }} className={row.className}>
                     {row.name}
                     <br />
-                    <div style={{ fontSize: 11, color: "#000000" }}>
+                    <div className="region-subprice">
                       {row.currency} {Number(row.sale).toLocaleString()}
                     </div>
                   </div>
@@ -1272,15 +1206,7 @@ function PsPrices() {
                   }}
                 >
                   <Box sx={style}>
-                    <CloseIcon
-                      onClick={handleClose}
-                      style={{
-                        position: "absolute",
-                        top: "10px",
-                        right: "10px",
-                        cursor: "pointer",
-                      }}
-                    />
+<CloseIcon onClick={handleClose} className="modal-close-icon" />
 
                     <Typography
                       id="ps-modal-title"
@@ -1316,19 +1242,14 @@ function PsPrices() {
 
         {hasToggle && (
           <tr className="item-table-best">
-            <td colSpan={3} className="text-center" style={{ paddingTop: 6 }}>
+           <td colSpan={3} className="text-center region-toggle-row">
               <a
                 href="#"
                 onClick={(e) => {
                   e.preventDefault();
                   setExpanded((v) => !v);
                 }}
-                style={{
-                  fontSize: "0.8rem",
-                  textDecoration: "underline",
-                  cursor: "pointer",
-                  color: "#555",
-                }}
+                className="show-regions-link"
               >
                 <u>{expanded ? "Show Top 3" : `Show All ${visibleRows.length}`} Regions</u>
               </a>
@@ -1453,16 +1374,7 @@ function PsPrices() {
           return (
             <>
               {" "}
-              <Box
-                style={{
-                  borderRadius: 5,
-                  backgroundColor: "#ffc4c4",
-                  marginBottom: 10,
-                  padding: 8,
-                  fontSize: 12,
-                  textAlign: "center",
-                }}
-              >
+<Box className="info-tax-box">
                 You can only buy from Argentina via {" "}
                 <a className="infotax" href="https://maysaleba.com/pasabuy">
                   Pasabuy
@@ -1510,7 +1422,7 @@ function PsPrices() {
             {formattedPrice && currency && (
               <>
                 <br />
-                <div style={style}>
+               <div className="region-subprice">
                   {currency} {formattedPrice}
                 </div>
               </>
@@ -1525,21 +1437,21 @@ function PsPrices() {
           price: Math.round(matchGames[0].SalePrice).toString(),
           currency: "$",
           className: "usregion-logo",
-          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+          
         },
         Canada: {
           name: "Canada",
           price: Math.round(matchGames[0].CanadaPrice).toString(),
           currency: "C$",
           className: "caregion-logo",
-          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+         
         },
         Peru: {
           name: "Peru",
           price: Math.round(matchGames[0].PeruPrice).toString(),
           currency: "S/",
           className: "peregion-logo",
-          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+          
         },
         Argentina: {
           name: "Argentina",
@@ -1548,21 +1460,21 @@ function PsPrices() {
             .replace(".", ","),
           currency: "AR$",
           className: "arregion-logo",
-          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+          
         },
         Colombia: {
           name: "Colombia",
           price: Math.round(matchGames[0].ColombiaPrice).toString(),
           currency: "Col$",
           className: "coregion-logo",
-          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+         
         },
         "South Africa": {
           name: "South Africa",
           price: Math.round(matchGames[0].SouthafricaPrice).toString(),
           currency: "R",
           className: "zaregion-logo",
-          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+          
         },
         Brazil: {
           name: "Brazil",
@@ -1571,7 +1483,7 @@ function PsPrices() {
             .replace(".", ","),
           currency: "R$",
           className: "brregion-logo",
-          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+         
         },
         Norway: {
           name: "Norway",
@@ -1580,77 +1492,77 @@ function PsPrices() {
             .replace(".", ","),
           currency: "kr",
           className: "noregion-logo",
-          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+         
         },
         Poland: {
           name: "Poland",
           price: Math.round(matchGames[0].PolandPrice).toString(),
           currency: "zł",
           className: "plregion-logo",
-          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+         
         },
         "New Zealand": {
           name: "New Zealand",
           price: Math.round(matchGames[0].NewZealandPrice).toString(),
           currency: "NZ$",
           className: "nzregion-logo",
-          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+          
         },
         Mexico: {
           name: "Mexico",
           price: Math.round(matchGames[0].MexicoPrice).toString(),
           currency: "MX$",
           className: "mxregion-logo",
-          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+         
         },
         Australia: {
           name: "Australia",
           price: Math.round(matchGames[0].AustraliaPrice).toString(),
           currency: "A$",
           className: "auregion-logo",
-          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+         
         },
         "Hong Kong": {
           name: "Hong Kong",
           price: Math.round(matchGames[0].HongKongPrice).toString(),
           currency: "HK$",
           className: "hkregion-logo",
-          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+         
         },
         "Korea": {
           name: "Korea",
           price: Math.round(matchGames[0].KoreaPrice).toString(),
           currency: "₩",
           className: "krregion-logo",
-          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+          
         },
         "Japan": {
           name: "Japan",
           price: Math.round(matchGames[0].JapanPrice).toString(),
           currency: "¥",
           className: "jpregion-logo",
-          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+         
         },
         "Singapore": {
           name: "Singapore",
           price: Math.round(matchGames[0].SingaporePrice).toString(),
           currency: "$",
           className: "sgregion-logo",
-          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+          
         },
         "Malaysia": {
           name: "Malaysia",
           price: Math.round(matchGames[0].MalaysiaPrice).toString(),
           currency: "RM",
           className: "myregion-logo",
-          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+          
         },
         "Thailand": {
           name: "Thailand",
           price: Math.round(matchGames[0].ThailandPrice).toString(),
           currency: "฿",
           className: "thregion-logo",
-          style: { fontSize: 11, fontWeight: "", color: "#000000" },
+          
         },
       };
 
@@ -1954,15 +1866,7 @@ const getModalTextForCountry = (country) => {
                   }}
                 >
                   <Box sx={style}>
-                  <CloseIcon
-            onClick={handleClose}
-            style={{
-              position: "absolute",
-              top: "10px",
-              right: "10px",
-              cursor: "pointer",
-            }}
-          />
+<CloseIcon onClick={handleClose} className="modal-close-icon" />
                     <Typography
                       id="modal-modal-title"
                       variant="h6"
@@ -2089,12 +1993,12 @@ const getModalTextForCountry = (country) => {
             {/* Only show the toggle if there are more than 3 rows */}
             {hasToggle && (
               <tr className="item-table-best">
-                <td colSpan={3} className="text-center" style={{ paddingTop: 6 }}>
+                <td colSpan={3} className="text-center region-toggle-row">
                   <a
                     href="#"
                     onClick={(e) => { e.preventDefault(); setExpanded(v => !v); }}
                     aria-expanded={expanded}
-                    style={{ fontSize: "0.8rem", textDecoration: "underline", cursor: "pointer", color: "#555" }}
+                    className="show-regions-link"
                   >
                     <u>{expanded ? "Show Top 3" : `Show All ${entries.length}`} Regions</u>
                   </a>
@@ -2125,48 +2029,51 @@ const getModalTextForCountry = (country) => {
   }
 
   const BackgroundContainer = styled.div`
-    -blur-radius: 20px;
+  --blur-radius: 20px;
+  position: absolute;
+  width: 100%;
+  height: 60vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+
+  background: var(--hero-bg);
+
+  z-index: -1;
+
+  &:after {
+    --color-background--rgb: var(--hero-gradient-rgb);
+
+    content: "";
     position: absolute;
-    width: 100%;
-    height: 60vh;
-    top: 0;
+    height: 50%;
     left: 0;
     right: 0;
     bottom: 0;
-    overflow: hidden;
-    background: #6e7290;
-    z-index: -1;
 
-    &:after {
-      --color-background--rgb: 103, 103, 171;
-      content: "";
-      position: absolute;
-      height: 50%;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: transparent;
-      background: linear-gradient(
-        0deg,
-        rgba(var(--color-background--rgb), 1) 0,
-        rgba(var(--color-background--rgb), 0.987) 8.1%,
-        rgba(var(--color-background--rgb), 0.951) 15.5%,
-        rgba(var(--color-background--rgb), 0.896) 22.5%,
-        rgba(var(--color-background--rgb), 0.825) 29%,
-        rgba(var(--color-background--rgb), 0.741) 35.3%,
-        rgba(var(--color-background--rgb), 0.648) 41.2%,
-        rgba(var(--color-background--rgb), 0.55) 47.1%,
-        rgba(var(--color-background--rgb), 0.45) 52.9%,
-        rgba(var(--color-background--rgb), 0.352) 58.8%,
-        rgba(var(--color-background--rgb), 0.259) 64.7%,
-        rgba(var(--color-background--rgb), 0.175) 71%,
-        rgba(var(--color-background--rgb), 0.104) 77.5%,
-        rgba(var(--color-background--rgb), 0.049) 84.5%,
-        rgba(var(--color-background--rgb), 0.013) 91.9%,
-        rgba(var(--color-background--rgb), 0)
-      );
-    }
-  `;
+    background: linear-gradient(
+      0deg,
+      rgba(var(--color-background--rgb), 1) 0,
+      rgba(var(--color-background--rgb), 0.987) 8.1%,
+      rgba(var(--color-background--rgb), 0.951) 15.5%,
+      rgba(var(--color-background--rgb), 0.896) 22.5%,
+      rgba(var(--color-background--rgb), 0.825) 29%,
+      rgba(var(--color-background--rgb), 0.741) 35.3%,
+      rgba(var(--color-background--rgb), 0.648) 41.2%,
+      rgba(var(--color-background--rgb), 0.55) 47.1%,
+      rgba(var(--color-background--rgb), 0.45) 52.9%,
+      rgba(var(--color-background--rgb), 0.352) 58.8%,
+      rgba(var(--color-background--rgb), 0.259) 64.7%,
+      rgba(var(--color-background--rgb), 0.175) 71%,
+      rgba(var(--color-background--rgb), 0.104) 77.5%,
+      rgba(var(--color-background--rgb), 0.049) 84.5%,
+      rgba(var(--color-background--rgb), 0.013) 91.9%,
+      rgba(var(--color-background--rgb), 0)
+    );
+  }
+`;
 
   // console.log(matchGames[0].description.split('\n'));
 
@@ -2231,19 +2138,10 @@ const getModalTextForCountry = (country) => {
           </BackgroundContainer>
           {/*    <NaviBar />*/}
 
-          <div className="m-3 p-auto" style={{ paddingBottom: 15 }}>
+          <div className="m-3 p-auto game-cover-wrapper">
 
 <Col>
-<Card
-  className="border-0" 
-  style={{
-    maxWidth: "236px",
-    width: "50%",
-    marginLeft: "auto",
-    marginRight: "auto",
-    borderRadius: "7px"
-    // overflow: "hidden", // Important to clip rounded corners
-  }}>
+<Card className="border-0 game-cover-card">
  
     {matchGames[0].Slug.includes("switch-2") && (
               <div className="platform-top-badge-outside-in">
@@ -2310,13 +2208,7 @@ const getModalTextForCountry = (country) => {
           <Paper elevation={2} className="content-container">
             {/*<Card className="content-container-gameinfo">*/}
 
-            <Card.Header
-              style={{
-                fontSize: 18,
-                backgroundColor: "white",
-                fontWeight: "bold",
-              }}
-            >
+<Card.Header className="content-header content-header-title">
               {matchGames[0].Title.toUpperCase()
                 .replace(/ *\([^)]*\) */g, "")
                 .replace("Ã¢„Â¢", "™")
@@ -2339,9 +2231,7 @@ const getModalTextForCountry = (country) => {
                 <GoogleAds />
               </Box>
 
-              <Card.Header
-                style={{ backgroundColor: "white", fontWeight: "bold" }}
-              >
+<Card.Header className="content-header">
                 INFORMATION
               </Card.Header>
               <Card.Body style={{ fontSize: 14 }}>
@@ -2349,16 +2239,16 @@ const getModalTextForCountry = (country) => {
 {matchGames[0].Publisher &&
  matchGames[0].Publisher.trim() !== "" &&
  matchGames[0].Publisher !== "Unknown" && (
-  <Col style={{ paddingBottom: 10 }}>
-    <span style={{ fontWeight: "bold" }}>Publisher:</span>{" "}
+<Col className="game-info-col">
+  <span className="game-info-label">Publisher:</span>{" "}
     {matchGames[0].Publisher}
   </Col>
 )}
 
 {matchGames[0].ReleaseDate !== "0000-00-00" &&
   DateConvert(matchGames[0].ReleaseDate) !== "Nov 30, 1899" && (
-    <Col style={{ paddingBottom: 10 }}>
-      <span style={{ fontWeight: "bold" }}>Release Date:</span>{" "}
+<Col className="game-info-col">
+  <span className="game-info-label">Release Date:</span>{" "}
       {DateConvert(matchGames[0].ReleaseDate)}
     </Col>
 )}
@@ -2366,18 +2256,18 @@ const getModalTextForCountry = (country) => {
 
                 </Row>
                 <Row xs={1} sm={2}>
-                  <Col style={{ paddingBottom: 10 }}>
-                    <span style={{ fontWeight: "bold" }}>Platform: </span>{" "}
+                 <Col className="game-info-col">
+  <span className="game-info-label">Platform: </span>{" "}
                     <WhichPlatform />
                   </Col>
-                  <Col style={{ paddingBottom: 10 }}>
-                    <span style={{ fontWeight: "bold" }}>Sale Started: </span>{" "}
+                 <Col className="game-info-col">
+  <span className="game-info-label">Sale Started: </span>{" "}
                     {DateConvert(matchGames[0].SaleStarted)}
                   </Col>
                 </Row>
                 <Row xs={1} sm={2}>
-                  <Col style={{ paddingBottom: 10 }}>
-                    <span style={{ fontWeight: "bold" }}>Genre:</span>{" "}
+                  <Col className="game-info-col">
+  <span className="game-info-label">Genre:</span>{" "}
                     {(matchGames[0].genre || matchGames[0].Genre || "").replaceAll(",", ", ")}
                   </Col>
                   <Col style={{ paddingBottom: 10 }}></Col>
@@ -2388,9 +2278,7 @@ const getModalTextForCountry = (country) => {
             <YoutubeTrailer />
 
             <div style={{ fontSize: 14 }}>
-              <Card.Header
-                style={{ backgroundColor: "white", fontWeight: "bold" }}
-              >
+<Card.Header className="content-header">
                 DESCRIPTION
               </Card.Header>
               <Card.Body>

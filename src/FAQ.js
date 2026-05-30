@@ -1,6 +1,5 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import NaviBar from "./NaviBar";
 import { Paper, Grid, Box, TableHead, TableRow, Table, TableBody, TableCell, TableContainer, Button, Modal } from "@mui/material";
 import styled from "styled-components";
 import InfoIcon from "@mui/icons-material/Info";
@@ -40,7 +39,7 @@ const SeaGMstep1 = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <CloseIcon
+          <CloseIcon className="modal-close-icon"
             onClick={handleClose}
             style={{
               position: "absolute",
@@ -81,7 +80,7 @@ const SeaGMstep2 = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <CloseIcon
+          <CloseIcon className="modal-close-icon"
             onClick={handleClose}
             style={{
               position: "absolute",
@@ -122,7 +121,7 @@ const SeaGMstep3 = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <CloseIcon
+          <CloseIcon className="modal-close-icon"
             onClick={handleClose}
             style={{
               position: "absolute",
@@ -163,7 +162,7 @@ const SeaGMstep4 = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <CloseIcon
+          <CloseIcon className="modal-close-icon"
             onClick={handleClose}
             style={{
               position: "absolute",
@@ -205,7 +204,7 @@ const SeaGMstep5 = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <CloseIcon
+          <CloseIcon className="modal-close-icon"
             onClick={handleClose}
             style={{
               position: "absolute",
@@ -247,7 +246,7 @@ const SeaGMstep6 = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <CloseIcon
+          <CloseIcon className="modal-close-icon"
             onClick={handleClose}
             style={{
               position: "absolute",
@@ -490,10 +489,9 @@ const About = () => {
   // console.log(matchGames[0].description.split('\n'));
   return (
     <div>
-      <NaviBar />
       <Paper elevation={2} className="content-container">
         <div style={{ fontSize: 14 }}>
-          <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
+          <Card.Header className="content-header">
             <InfoIcon /> Frequently Asked Questions
           </Card.Header>
           <Card.Body>
@@ -506,7 +504,7 @@ const About = () => {
               region to buy to get the best deals! 🤑
             </p>
           </Card.Body>
-          <Card.Header style={{ backgroundColor: "white" }}>
+          <Card.Header className="content-header">
             <strong>Table of Contents</strong>
           </Card.Header>
           <Card.Body>
@@ -569,7 +567,7 @@ const About = () => {
             </ul>
           </Card.Body>
 
-          <Card.Header style={{ backgroundColor: "white" }}>
+          <Card.Header className="content-header">
             <strong>
               <p id="buy-region" />
               How do I buy from a Nintendo eShop in another region?
@@ -622,7 +620,7 @@ const About = () => {
             </ol>
           </Card.Body>
 
-          <Card.Header style={{ backgroundColor: "white" }}>
+          <Card.Header className="content-header">
             <strong>
               <p id="pay-region" />
               How do I pay on a Nintendo eShop in another region?
@@ -717,7 +715,7 @@ const About = () => {
 
           </Card.Body>
 
-          <Card.Header style={{ backgroundColor: "white" }}>
+          <Card.Header className="content-header">
             <strong><p id="debit-credit-virtual-cards" />Pay using Debit/Credit/Virtual Cards</strong>
           </Card.Header>
           <Card.Body>
@@ -746,7 +744,7 @@ const About = () => {
               <li>CIMB (Virtual Card)</li>
             </ul>
           </Card.Body>
-          <Card.Header style={{ backgroundColor: "white" }}>
+          <Card.Header className="content-header">
             <strong><p id="eshop-gift-cards"/>Pay using Nintendo eShop Gift Card </strong>
           </Card.Header>
           <Card.Body>
@@ -804,7 +802,7 @@ const About = () => {
               </li>
             </ul>
           </Card.Body>
-          <Card.Header style={{ backgroundColor: "white" }}>
+          <Card.Header className="content-header">
             <strong><p id="buying-from-seagm"/>
               Buy from SEAGM
             </strong>
@@ -900,7 +898,7 @@ const About = () => {
             </Box>
           </Card.Body>
           </Card.Body>
-          <Card.Header style={{ backgroundColor: "white" }}>
+          <Card.Header className="content-header">
             <strong><p id="buying-from-shopee-lazada"/>Buy from Shopee and Lazada</strong>
           </Card.Header>
           <Card.Body>
@@ -927,7 +925,7 @@ const About = () => {
               </li>
             </ol>
           </Card.Body>
-           <Card.Header style={{ backgroundColor: "white" }}>
+           <Card.Header className="content-header">
             <strong><p id="pasabuy"/>Pasabuy</strong>
           </Card.Header>
           <Card.Body>
@@ -939,7 +937,7 @@ const About = () => {
                   style={{ color: "#fc430a", fontWeight: "bold" }}
                 >Learn more about Pasabuy here</a>
           </Card.Body>
-          <Card.Header style={{ backgroundColor: "white" }}>
+          <Card.Header className="content-header">
             <strong><p id="error-2813-2470"/>Why am I getting error 2813-2470 when I try to purchase?</strong>
           </Card.Header>
           <Card.Body>
@@ -958,7 +956,7 @@ const About = () => {
   </ul>
 </ol>
           </Card.Body>
-          <Card.Header style={{ backgroundColor: "white" }}>
+          <Card.Header className="content-header">
             <strong>How can I contact you?</strong>
           </Card.Header>
           <Card.Body>

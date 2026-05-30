@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import { Container, Dropdown, Row, Col } from "react-bootstrap";
 import { withRouter } from "react-router-dom";
 import "./Cards.css";
+import { Icon } from "@iconify/react";
 
 const FilterDropDown = (props) => {
   const {
@@ -29,6 +30,51 @@ const FilterDropDown = (props) => {
   const isPS = (platformDropDown || "").toLowerCase() === "playstation";
 
   // ---------- helpers ----------
+
+const Switch2Icon = () => (
+  <span
+    style={{
+      position: "relative",
+      display: "inline-flex",
+      alignItems: "center",
+    }}
+  >
+    <Icon icon="mdi:nintendo-switch" width="18" />
+
+    <span
+      style={{
+        position: "absolute",
+        right: "-5px",
+        top: "-5px",
+        fontSize: "9px",
+        fontWeight: "bold",
+        lineHeight: 1,
+      }}
+    >
+      2
+    </span>
+  </span>
+);
+
+const platformIcon = (platform) => {
+  switch (platform) {
+    case "Switch":
+      return <Icon icon="mdi:nintendo-switch" width="18" />;
+
+    case "Switch 2":
+      return <Switch2Icon />;
+
+    case "Playstation":
+      return <Icon icon="bi:playstation" width="18" />;
+
+    case "All Platforms":
+      return <Icon icon="mdi:gamepad-variant" width="18" />;
+
+    default:
+      return <Icon icon="mdi:gamepad-variant" width="18" />;
+  }
+};
+
   const resetSearchAndPrice = () => {
     clearSearchChange?.();
     clearPriceRange?.();
@@ -169,19 +215,30 @@ const selectCheapest = (code) => () => {
     <Col xs={4} md={4} className="col-style">
       <Dropdown className="m-1">
 <Dropdown.Toggle size="sm" id="dd-platform" className="dropdown-style w-100">
-  <span
-    className="d-inline-block text-truncate align-middle"
-    style={{ maxWidth: 'calc(100% - 1.5rem)' }}
-    title={platformDropDown}
-  >
-    {platformDropDown}
+  <span className="d-inline-flex align-items-center">
+    <span className="me-md-2">
+      {platformIcon(platformDropDown)}
+    </span>
+
+    {/* Desktop only */}
+    <span
+      className="d-none d-md-inline text-truncate"
+      title={platformDropDown}
+    >
+      {platformDropDown}
+    </span>
   </span>
 </Dropdown.Toggle>
         <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>
           {PLATFORM_OPTIONS.map((opt) => (
-            <Dropdown.Item as="button" key={opt.label} onClick={selectPlatform(opt)}>
-              {opt.label}
-            </Dropdown.Item>
+<Dropdown.Item as="button" key={opt.label} onClick={selectPlatform(opt)}>
+  <span className="d-flex align-items-center">
+    <span className="me-2">
+      {platformIcon(opt.label)}
+    </span>
+    {opt.label}
+  </span>
+</Dropdown.Item>
           ))}
         </Dropdown.Menu>
       </Dropdown>

@@ -22,6 +22,8 @@ import InfoIcon from "@mui/icons-material/Info";
 import CloseIcon from "@mui/icons-material/Close";
 import HomeIcon from "@mui/icons-material/Home";
 import { Icon } from "@iconify/react";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
 
 const useStyles = makeStyles({
   list: {
@@ -35,10 +37,12 @@ const useStyles = makeStyles({
 });
 
 const NaviBar = (props) => {
-  const {
-    searchQuery,
-    history,
-  } = props;
+const {
+  searchQuery,
+  history,
+  darkMode,
+  setDarkMode,
+} = props;
   const classes = useStyles();
   const itemsList = [
     {
@@ -81,6 +85,13 @@ const NaviBar = (props) => {
         history.push("/faq");
       },
     },
+{
+  text: darkMode ? "Light Mode" : "Dark Mode",
+  icon: darkMode ? <LightModeIcon /> : <DarkModeIcon />,
+  onClick: () => {
+    setDarkMode((prev) => !prev);
+  },
+},
   ];
 
   const [open, setOpen] = useState(false);
@@ -184,6 +195,13 @@ const NaviBar = (props) => {
               FAQ
             </Box>
             </a>
+<button
+  type="button"
+  className="theme-toggle-btn"
+  onClick={() => setDarkMode((prev) => !prev)}
+>
+  {darkMode ? <LightModeIcon fontSize="small" /> : <DarkModeIcon fontSize="small" />}
+</button>
           </Stack>
           <IconButton
             size="large"

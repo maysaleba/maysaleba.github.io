@@ -68,16 +68,18 @@
     margin-right: auto;
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem !important;
     padding: .75rem 1.25rem;
-    background-color: #ffffff;
+  background-color: var(--surface-bg);
+  color: var(--text-main);
     /*box-shadow: 0 3px 10px rgb(0 0 0 / 0.15);*/
     margin-bottom: 30px;
   }
 
 
-  body {
-  padding-top: 90px;
-  background-color:  #6767ab !important;
-  }
+body {
+padding-top: 90px;
+  background-color: var(--page-bg) !important;
+  color: var(--text-main);
+}
 
 }
 
@@ -104,8 +106,8 @@ padding-top: 10px;
 
 
 .badge-danger {
-    color:  black !important;
-    background-color: white !important;
+  color: var(--badge-text) !important;
+  background-color: var(--badge-bg) !important;
 }
 
 .badge-info {
@@ -151,9 +153,9 @@ padding-top: 10px;
 }
 
 .btn-secondary {
-    color: white !important;
-    background-color: #5a33ff !important;
-    border-color: #5a33ff !important;
+  color: var(--button-text) !important;
+  background-color: var(--button-bg) !important;
+  border-color: var(--button-border) !important;
 }
 
 p {
@@ -335,8 +337,9 @@ a.infotax {
 }
 
 .item-table-best {
-    background-color: #f0e9f8;
-  }
+  background-color: var(--surface-soft-bg);
+  color: var(--text-main);
+}
 
 
   .item-price-table td.version {
@@ -351,7 +354,7 @@ a.infotax {
 }
 
 .item-price-table td {
-  border-bottom: 1px solid white;  /* white line between rows */
+   border-bottom: 1px solid var(--table-border);;  /* white line between rows */
   border-right: none;              /* optional: no vertical lines */
   padding: 8px;
 }
@@ -501,296 +504,47 @@ padding-left: 20px;  /* width of the image plus a little extra padding */
 display: inline-block;  /* may not need this, but I've found I do */
 }
 
-.usregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('US.svg');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
+
+/* Shared styling for ALL region flags */
+[class*="region-logo"],
+.blank-flag-logo {
+  background-size: 15px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  margin-left: 5px;
+  padding-left: 20px;
+  display: inline-block;
 }
 
-.sgregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/SG.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.hkregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/HK.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.trregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/TR.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-
-.arregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/AR.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.auregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/AU.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.brregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/BR.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.caregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/CA.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.nzregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/NZ.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.clregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/CL.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.coregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/CO.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.deregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/DE.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.euregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/EU.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.jpregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/JP.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.mxregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/MX.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.noregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/NO.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.peregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/PE.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.phregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/PH.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.plregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/PL.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.noregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/NO.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.zaregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/ZA.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.krregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/KR.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.seregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/SE.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.chregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/CH.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.thregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/TH.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.myregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/MY.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.idregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/ID.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.inregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/IN.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
-.gbregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/GB.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
+.usregion-logo { background-image: url('US.svg'); }
+.sgregion-logo { background-image: url('flags/SG.png'); }
+.hkregion-logo { background-image: url('flags/HK.png'); }
+.trregion-logo { background-image: url('flags/TR.png'); }
+.arregion-logo { background-image: url('flags/AR.png'); }
+.auregion-logo { background-image: url('flags/AU.png'); }
+.brregion-logo { background-image: url('flags/BR.png'); }
+.caregion-logo { background-image: url('flags/CA.png'); }
+.nzregion-logo { background-image: url('flags/NZ.png'); }
+.clregion-logo { background-image: url('flags/CL.png'); }
+.coregion-logo { background-image: url('flags/CO.png'); }
+.deregion-logo { background-image: url('flags/DE.png'); }
+.euregion-logo { background-image: url('flags/EU.png'); }
+.jpregion-logo { background-image: url('flags/JP.png'); }
+.mxregion-logo { background-image: url('flags/MX.png'); }
+.noregion-logo { background-image: url('flags/NO.png'); }
+.peregion-logo { background-image: url('flags/PE.png'); }
+.phregion-logo { background-image: url('flags/PH.png'); }
+.plregion-logo { background-image: url('flags/PL.png'); }
+.zaregion-logo { background-image: url('flags/ZA.png'); }
+.krregion-logo { background-image: url('flags/KR.png'); }
+.seregion-logo { background-image: url('flags/SE.png'); }
+.chregion-logo { background-image: url('flags/CH.png'); }
+.thregion-logo { background-image: url('flags/TH.png'); }
+.myregion-logo { background-image: url('flags/MY.png'); }
+.idregion-logo { background-image: url('flags/ID.png'); }
+.inregion-logo { background-image: url('flags/IN.png'); }
+.gbregion-logo { background-image: url('flags/GB.png'); }
+.blank-flag-logo { background-image: url('flags/blank.png'); }
 
 .fire-logo {
 background-size:  20px;
@@ -938,18 +692,6 @@ display: inline-block;  /* may not need this, but I've found I do */
 }
 
 
-
-
-.phregion-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('philippines.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
-
 .card-img-overlay {
   position: absolute ;
   top: -10px !important;
@@ -1065,11 +807,15 @@ display: inline-block;  /* may not need this, but I've found I do */
 /* Foreground image */
 .card-img-foreground {
   position: absolute;
-  inset: 0;
+  top: 50%;
+  left: 50%;
   width: 100%;
-  height: 100%;
+  max-width: none;
+  max-height: none;
+  transform: translate(-50%, -50%);
   object-fit: contain;
   z-index: 2;
+  border-radius: 5px;
 }
 
 
@@ -1186,9 +932,10 @@ label:focus,
 .dropdown-style{
     font-family: 'Cairo';
   /*margin-left:  0px !important;*/
-  background-color: white !important;
-  color: #777 !important;
-  border: 1px solid #e5e5e5 !important;
+  background-color: var(--surface-bg) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--section-border) !important;
+  /*border: 1px solid #e5e5e5 !important;*/
   border-radius:  5px !important;
   padding: 12px !important;
   width: 100% !important;
@@ -1405,7 +1152,8 @@ label:focus,
     margin-right: auto;
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem !important;
     padding: .75rem 1.25rem;
-    background-color: #ffffff;
+  background-color: var(--surface-bg);
+  color: var(--text-main);
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.15);
     margin-bottom: 30px;
   }
@@ -1465,7 +1213,8 @@ label:focus,
   padding: 0;
 -webkit-overflow-scrolling: touch;
     padding-top: 80px !important;
-      background-color:  #6767ab !important;
+   background-color: var(--page-bg) !important;
+  color: var(--text-main);
 
   }
 
@@ -1494,15 +1243,6 @@ label:focus,
   }
 }
 
-.blank-flag-logo {
-background-size:  15px;
-background-position:  left center;
-background-image: url('flags/blank.png');
-background-repeat: no-repeat;
-margin-left: 5px;
-padding-left: 20px;  /* width of the image plus a little extra padding */
-display: inline-block;  /* may not need this, but I've found I do */
-}
 
 
 /* Only the button turns yellow, never the menu */
@@ -1513,3 +1253,490 @@ display: inline-block;  /* may not need this, but I've found I do */
   color: #000 !important;
   border-color: #ffba20 !important;
 }
+
+/* Content.js reusable styles */
+
+:root {
+  --page-bg: #6767ab;
+    --hero-bg: #6767ab;
+  --hero-gradient-rgb: 103, 103, 171;
+  --surface-bg: #ffffff;
+  --surface-soft-bg: #f0e9f8;
+  --card-header-bg: #ffffff;
+  --text-main: #000000;
+  --text-muted: #555555;
+  --table-border: #ffffff;
+  --section-border: rgba(0, 0, 0, 0.125);
+  --button-bg: #5a33ff;
+  --button-border: #5a33ff;
+  --button-text: #ffffff;
+  --badge-bg: #ffffff;
+  --badge-text: #000000;
+
+  --search-bg: #ffffff;
+  --search-border: #55597d;
+  --search-text: #55597d;
+}
+
+body.dark-mode {
+--page-bg: #3a414c;
+--hero-bg: #3a414c;
+--hero-gradient-rgb: 58, 65, 76;
+
+  --surface-bg: #252b36;
+  --surface-soft-bg: #313847;
+  --card-header-bg: #252b36;
+
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+
+  --table-border: #3b4352;
+  --section-border: rgba(255,255,255,.08);
+
+  --button-bg: #566074;
+  --button-border: #566074;
+  --button-text: #ffffff;
+
+  --badge-bg: #313847;
+  --badge-text: #e5e7eb;
+
+  --search-bg: #343c4d;
+  --search-border: #566074;
+  --search-text: #ffffff;
+
+}
+
+body.dark-mode .hltb-main {
+  background-color: #4c627d;
+}
+
+body.dark-mode .hltb-extra {
+  background-color: #5a667c;
+}
+
+body.dark-mode .hltb-complete {
+  background-color: #6b6678;
+}
+body.dark-mode .CircularProgressbar-text {
+  fill: var(--text-main) !important;
+}
+
+.info-tax-box {
+  background-color: #ffc4c4;
+  color: #000000;
+  border: 1px solid var(--section-border);
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+
+
+
+.content-header {
+  background-color: var(--card-header-bg) !important;
+  color: var(--text-main) !important;
+  font-weight: bold;
+  border-bottom: 1px solid var(--section-border) !important;
+}
+
+.content-header-title {
+  font-size: 18px;
+}
+
+.content-section {
+  font-size: 14px;
+}
+
+.content-card-body {
+  font-size: 14px;
+}
+
+.game-info-col {
+  padding-bottom: 10px;
+}
+
+.game-info-label {
+  font-weight: bold;
+}
+
+.orig-price-container {
+  margin-top: -10px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.game-cover-card {
+  max-width: 236px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 7px;
+  background: transparent !important;
+  position: relative;
+  overflow: visible;
+}
+
+.card-img-wrapper-in,
+.card-img-wrapper-sw2 {
+  overflow: hidden !important;
+}
+
+.game-cover-wrapper {
+  padding-bottom: 15px;
+}
+
+.store-logo-wrapper {
+  margin-left: 10px;
+}
+
+.region-subprice {
+  font-size: 11px;
+  color: var(--text-main);
+}
+
+.platform-pill {
+  font-size: 12px;
+  border-radius: 30px;
+  color: var(--text-main);
+  border: 1px solid var(--text-main);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.modal-close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.modal-link-orange {
+  color: #fc430a;
+  font-weight: bold;
+}
+
+.region-toggle-row {
+  padding-top: 6px;
+}
+
+.show-regions-link {
+  font-size: 0.8rem;
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.show-regions-link:hover,
+.show-regions-link:focus,
+.show-regions-link:active,
+.show-regions-link:visited {
+  color: var(--text-muted);
+  text-decoration: underline;
+}
+
+
+.content-link-static,
+.content-link-static:hover,
+.content-link-static:focus,
+.content-link-static:active,
+.content-link-static:visited {
+    color: #000000;
+}
+
+
+.vendor-row {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.vendor-row-left {
+  justify-content: left;
+}
+
+.vendor-row-center {
+  justify-content: center;
+}
+
+.trailer-wrapper {
+  padding-bottom: 10px;
+  font-size: 14px;
+}
+
+.hltb-card-body {
+  font-size: 14px;
+  margin: auto;
+}
+
+.hltb-columns {
+  column-rule: 4px double #ff00ff;
+}
+
+.hltb-cell {
+  padding: 10px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hltb-main {
+  background-color: #3a6db5;
+  border-top-left-radius: 5px;
+}
+
+.hltb-extra {
+  background-color: #5650a1;
+}
+
+.hltb-complete {
+  background-color: #824985;
+  border-top-right-radius: 5px;
+}
+
+
+
+.hltb-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hltb-label {
+  border-bottom: 1px solid #fff;
+  font-size: 12px;
+}
+
+.hltb-value {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.ad-wrapper {
+  padding-bottom: 16px;
+}
+
+.price-bold {
+  font-weight: bold;
+}
+
+.price-light {
+  font-weight: 300;
+}
+
+.card-link,
+.card-link:hover,
+.card-link:focus,
+.card-link:active,
+.card-link:visited {
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.card,
+.card-body {
+  background-color: var(--surface-bg);
+  color: var(--text-main);
+}
+
+.content-container {
+  background-color: var(--surface-bg) !important;
+  color: var(--text-main) !important;
+}
+
+.deal-type-badge {
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 3px;
+  margin-left: 5px;
+  padding: 1px 5px;
+  font-size: 0.7rem;
+  text-align: center;
+  color: white;
+}
+
+.deal-type-dlc {
+  background-color: #fc3e04;
+}
+
+.deal-type-bundle {
+  background-color: #6f00cb;
+}
+
+.mainpage-footer-link,
+.mainpage-footer-link:hover,
+.mainpage-footer-link:focus,
+.mainpage-footer-link:active,
+.mainpage-footer-link:visited {
+  color: var(--text-main) !important;
+  text-decoration: underline !important;
+}
+
+.linedividet,
+.linedivideb {
+  border-color: var(--section-border);
+  opacity: 1;
+}
+
+.custom-container {
+  background-color: var(--surface-bg) !important;
+  color: var(--text-main) !important;
+}
+
+.card-header-custom,
+.card-footer-custom {
+  color: var(--text-main) !important;
+}
+
+.linedividet,
+.linedivideb {
+  border-color: var(--section-border) !important;
+  opacity: 1;
+}
+
+.card-link .card.border-0 {
+  background-color: transparent !important;
+}
+
+body.dark-mode .card-img-wrapper,
+body.dark-mode .card-img-wrapper-in,
+body.dark-mode .card-img-wrapper-sw2 {
+  background-color: var(--surface-bg) !important;
+}
+
+/* KEEP THIS EXACTLY AS IS */
+.dropdown-toggle.dropdown-style:hover,
+.dropdown-toggle.dropdown-style:focus,
+.dropdown.show > .dropdown-toggle.dropdown-style {
+  background-color: #ffba20 !important;
+  color: #000 !important;
+  border-color: #ffba20 !important;
+}
+
+/* LIGHT MODE + DEFAULT */
+.dropdown-style {
+  background-color: var(--surface-bg) !important;
+  color: var(--text-main) !important;
+  border-color: var(--section-border) !important;
+}
+
+/* DARK MODE BUTTON */
+body.dark-mode .dropdown-style {
+  background-color: #566074 !important;
+  color: #ffffff !important;
+  border-color: #566074 !important;
+}
+
+/* LIGHT MODE MENU */
+.dropdown-menu.dropdown-style,
+.dropdown-menu {
+  background-color: var(--surface-bg) !important;
+  border-color: var(--section-border) !important;
+}
+
+/* DARK MODE MENU */
+body.dark-mode .dropdown-menu {
+  background-color: #313847 !important;
+  border-color: #3b4352 !important;
+}
+
+.dropdown-item {
+  color: var(--text-main) !important;
+}
+
+/* DARK MODE MENU ITEMS */
+body.dark-mode .dropdown-item {
+  color: #ffffff !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: var(--surface-soft-bg) !important;
+  color: var(--text-main) !important;
+}
+
+/* DARK MODE ITEM HOVER */
+body.dark-mode .dropdown-item:hover,
+body.dark-mode .dropdown-item:focus {
+  background-color: #566074 !important;
+  color: #ffffff !important;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--button-bg) !important;
+  color: var(--button-text) !important;
+}
+
+body.dark-mode .pagination .MuiPaginationItem-root {
+  color: var(--text-main) !important;
+}
+
+body.dark-mode .pagination .MuiPaginationItem-root.Mui-selected {
+  background-color: var(--button-bg) !important;
+  color: var(--button-text) !important;
+}
+
+body.dark-mode .pagination .MuiPaginationItem-root:hover {
+  background-color: var(--surface-soft-bg) !important;
+}
+
+.giftcard-table {
+  background-color: var(--surface-bg) !important;
+  color: var(--text-main) !important;
+}
+
+body.dark-mode .giftcard-table .MuiTableCell-root {
+  color: var(--text-main) !important;
+  border-color: var(--section-border) !important;
+}
+
+body.dark-mode .giftcard-table .MuiTableRow-root {
+  background-color: var(--surface-bg) !important;
+}
+
+
+body.dark-mode .faq-table {
+  background-color: var(--surface-bg) !important;
+}
+
+body.dark-mode .faq-table .MuiTableCell-root {
+  color: var(--text-main) !important;
+  border-color: var(--section-border) !important;
+}
+
+body.dark-mode .faq-table .MuiTableRow-root {
+  background-color: var(--surface-bg) !important;
+}
+
+.modal-close-icon {
+  color: var(--text-main);
+}
+
+body.dark-mode .MuiDrawer-paper {
+  background-color: var(--surface-bg) !important;
+  color: var(--text-main) !important;
+}
+
+body.dark-mode .MuiListItem-root {
+  color: var(--text-main) !important;
+}
+
+body.dark-mode .MuiListItemText-root {
+  color: var(--text-main) !important;
+}
+
+body.dark-mode .MuiListItemIcon-root {
+  color: var(--text-main) !important;
+}
+
+body.dark-mode .MuiDivider-root {
+  border-color: var(--section-border) !important;
+}
+body.dark-mode .MuiListItem-root:hover {
+  background-color: var(--surface-soft-bg) !important;
+}
+

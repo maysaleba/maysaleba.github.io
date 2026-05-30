@@ -321,7 +321,7 @@ function SmallestFlag() {
   if (!ratesReady || !smallest) {
     // render a blank flag container + placeholder price
     return (
-      <span className="blank-flag-logo" style={{ fontWeight: "bold" }}>
+      <span className="blank-flag-logo price-bold">
         {safePhp(smallestprice, 1)}
       </span>
     );
@@ -331,7 +331,7 @@ function SmallestFlag() {
   if (!className) return null;
 
   return (
-    <span className={className} style={{ fontWeight: "bold" }}>
+    <span className={`${className} price-bold`}>
       {safePhp(smallestprice, 1)}
     </span>
   );
@@ -350,10 +350,7 @@ if (props.psorsw === "Playstation") {
   const cheapest = getPsCheapest();
 
   return (
-    <span
-      className={cheapest?.className || "psregion-logo"}
-      style={{ fontWeight: "bold" }}
-    >
+<span className={`${cheapest?.className || "psregion-logo"} price-bold`}>
       {cheapest ? "₱" + Math.round(cheapest.salePhp) : "₱--"}
     </span>
   );
@@ -365,7 +362,7 @@ if (props.psorsw === "Playstation") {
         const cheapest = getPsCheapest();
 
         return (
-          <span style={{ fontWeight: "light" }}>
+          <span className="price-light">
             {cheapest && Number.isFinite(cheapest.originalPhp)
               ? "₱" + Math.round(cheapest.originalPhp)
               : "₱--"}
@@ -373,7 +370,7 @@ if (props.psorsw === "Playstation") {
         );
       } else {
         return (
-          <span style={{ fontWeight: "light" }}>
+          <span className="price-light">
             {safePhp(props.saleprice, usdExchange)}
           </span>
         );
@@ -518,8 +515,9 @@ else if (PlusPrice === 202020) {
         <> 
         <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>
         <div className="d-flex justify-content float-start opencritic-container2">
-        <Box style={{fontWeight: 'bold', borderRadius: 5, backgroundColor: "#fc3e04", marginTop: 3, marginLeft: 5, paddingTop: 1, paddingBottom: 1, paddingLeft: 5, paddingRight: 5, fontSize: '0.7rem', textAlign: 'center', color: 'white'}}>
-        DLC</Box>
+<Box className="deal-type-badge deal-type-dlc">
+  DLC
+</Box>
       </div>
         </>
       );
@@ -530,8 +528,9 @@ else if (PlusPrice === 202020) {
         <>
         <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>
         <div className="d-flex justify-content float-start opencritic-container2">
-        <Box style={{fontWeight: 'bold', borderRadius: 5, backgroundColor: "#6f00cb", marginTop: 3, marginLeft: 5, paddingTop: 1, paddingBottom: 1, paddingLeft: 5, paddingRight: 5, fontSize: '0.7rem', textAlign: 'center', color: 'white'}}>
-        BUNDLE</Box>
+<Box className="deal-type-badge deal-type-bundle">
+  BUNDLE
+</Box>
       </div>
       </>
       );
@@ -590,11 +589,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
 
   return (
     <Col>
-      <Link
-        to={`/games/${Slug}`}
-        className="linkto"
-        style={{ color: "black", textDecoration: "none" }}
-      >
+<Link to={`/games/${Slug}`} className="linkto card-link">
 <Card className="border-0"> 
 
     {Slug.includes("switch-2") && (

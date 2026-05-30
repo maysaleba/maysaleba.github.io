@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
 import { List, Paper, Grid, Box, TableHead, TableRow, Table, TableBody, TableCell, TableContainer, Button, Modal } from "@mui/material";
-import NaviBar from "./NaviBar";
 import styled from "styled-components";
 import download from "./download.gif";
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
@@ -193,14 +192,13 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
   // console.log(matchGames[0].description.split('\n'));
   return (
     <div>
-      <NaviBar />
       <Paper elevation={2} className="content-container">
         <div style={{ fontSize: 14 }}>
 
-          <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
+          <Card.Header className="content-header">
             <CardGiftcardIcon/> Gift Cards
           </Card.Header>
-          <Card.Header style={{ backgroundColor: "white" }}>
+          <Card.Header className="content-header">
             <strong><p id="eshop-gift-cards"/>Pay using Nintendo eShop Gift Card </strong>
           </Card.Header>
           <Card.Body>
@@ -261,7 +259,7 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
          
             <b>Click on the Eneba icon to purchase an eShop Gift Card for that region</b>
               <p/>
-             <TableContainer component={Paper}>
+             <TableContainer component={Paper} className="giftcard-table">
               <Table
                 sx={{ width: "100%" }}
                 size="small"
