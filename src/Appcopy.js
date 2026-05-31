@@ -1,5 +1,5 @@
 // Appcopy.js
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import usePagination from "./usePagination.js";
 import reviewssw from "./csvjson.json";
 import reviewsst from "./csvjsontr.json";
@@ -23,7 +23,7 @@ var today = new Date();
 var dd = String(today.getDate()).padStart(2, "0");
 var mm = String(today.getMonth() + 1).padStart(2, "0");
 var yyyy = today.getFullYear();
-let hour = today.getHours();
+
 today = yyyy + "-" + mm + "-" + dd;
 
 // ---------------- Minimal list route wrapper ----------------
@@ -46,14 +46,14 @@ function ListPage({ defaults, SearchCmpProps, CardGroupProps, HelmetProps }) {
     jumpPage,
   } = CardGroupProps;
 
-  React.useEffect(() => {
-    if (defaults?.platform !== undefined) {
-      setPlatformField(defaults.platform);
-      setPlatformDropDown(defaults.platformLabel ?? (defaults.platform || "All Platforms"));
-    }
-  }, [location.pathname]);
+useLayoutEffect(() => {
+  if (defaults?.platform !== undefined) {
+    setPlatformField(defaults.platform);
+    setPlatformDropDown(defaults.platformLabel ?? (defaults.platform || "All Platforms"));
+  }
+}, [defaults?.platform, defaults?.platformLabel, location.pathname]);
 
-  React.useEffect(() => {
+useEffect(() => {
     const params = new URLSearchParams(location.search);
 
     const readQP = (key, def = "") => {
@@ -334,22 +334,8 @@ useEffect(() => {
 
   const clearSearchChange = () => setSearchQuery("");
 
-  // Currency → region mapping
-  const CCY_TO_REGION = {
-    USD: "US", CAD: "CA", PEN: "PE", AUD: "AU", COP: "CO", ZAR: "ZA",
-    BRL: "BR", NOK: "NO", PLN: "PL", NZD: "NZ", MXN: "MX", HKD: "HK",
-    KRW: "KR", JPY: "JP", SGD: "SG", TRY: "TR", PHP: "PH", ARS: "AR",
-    IDR: "ID", INR: "IN",
-  };
 
-  function ccyFromEsrb(review) {
-    const tag = String(review.ESRBRating || "").toUpperCase();
-    if (tag === "TRD") return "TRY";
-    const known = new Set([
-      "PHP","USD","HKD","SGD","JPY","KRW","AUD","NZD","CAD","MXN","BRL","PLN","NOK","ZAR","PEN","ARS","TRY",
-    ]);
-    return known.has(tag) ? tag : "PHP";
-  }
+
 
   function addPhpCandidate(bucket, key, amt, ccy, rates) {
     const n = +amt;
@@ -516,6 +502,17 @@ function normalizeGenre(genre = "") {
     .replaceAll("casual", "unique");
 }
 
+const currentPath = window.location.pathname;
+
+const routePlatformField =
+  currentPath === "/switch"
+    ? "Switch"
+    : currentPath === "/switch-2"
+    ? "Switch 2"
+    : currentPath === "/playstation"
+    ? "Playstation"
+    : platformField;
+
   // ---------- FILTERING + PAGINATION ----------
   let filteredReviews = useMemo(
     () =>
@@ -526,7 +523,9 @@ function normalizeGenre(genre = "") {
           .replace(/\s/g, "")
           .toLowerCase();
 
-        const filterGenres = cleanFilterField.split(",").map((g) => g.trim());
+        const filterGenres = cleanFilterField
+  ? cleanFilterField.split(",").map((g) => g.trim()).filter(Boolean)
+  : [];
 
         const ratesReady = Boolean(datam && datam.PHP);
 
@@ -555,10 +554,13 @@ function normalizeGenre(genre = "") {
                 .replace(/\s/g, "")
                 .toLowerCase()
             ) &&
-          filterGenres.some((filterGenre) =>
-            normalizeGenre(review.genre || "").includes(filterGenre)
-          ) &&
-          review.platform.toLowerCase().includes(platformField.toLowerCase()) &&
+(filterGenres.length === 0 ||
+  filterGenres.some((filterGenre) =>
+    normalizeGenre(review.genre || "").includes(filterGenre)
+  )) &&
+          review.platform
+  .toLowerCase()
+  .includes(routePlatformField.toLowerCase()) &&
           pricePass &&
           regionPass
         );
@@ -568,6 +570,7 @@ function normalizeGenre(genre = "") {
       filterField,
       searchQuery,
       platformField,
+      routePlatformField,
       priceRangeField,
       priceRangeLow,
       priceRangeDropDown,
@@ -626,10 +629,14 @@ function normalizeGenre(genre = "") {
    if (initialPageConsumedRef.current) return; // already applied once
  
    const initial = initialPageRef.current || 1;
-   if (initial <= 1) {
-     initialPageConsumedRef.current = true; // nothing to do; mark consumed to avoid future overrides
-     return;
-   }
+if (initial <= 1) {
+  if (page !== 1) {
+    jumpPage(1);
+  }
+
+  initialPageConsumedRef.current = true;
+  return;
+}
  
    const pageSize = 40; // must match usePagination(..., 40)
    const max = Math.max(1, Math.ceil(filteredReviews.length / pageSize));

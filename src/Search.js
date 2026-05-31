@@ -63,49 +63,43 @@ return (
 	 	<Search sx={{width: {xs: '92vw', md: '50vw', lg: '30vw'}, margin: 'auto', marginBottom: '20px'}}>
 	 	<form 
     style={{display: 'flex'}}
-    onSubmit={(e) => {
-      e.preventDefault();
+onSubmit={(e) => {
+  e.preventDefault();
 
-      const value = searchText;
-      const path = history.location.pathname;
+  const value = searchText.trim();
+  const path = history.location.pathname;
 
-      const isPlaystation = path === "/playstation";
-      const isSwitch = path === "/switch";
-      const isSwitch2 = path === "/switch-2";
-
-      clearGenre();
-      clearPriceRange();
-      onPriceRangeDrop("All Price Range");
-      onDropDownChange("All Genres");
-      onRegionChange?.("");
-      setSearchQuery(value);
-
-      if (isPlaystation) {
-        history.push("/playstation");
-        onPlatformChange("Playstation");
-        onPlatformDrop("Playstation");
-      } else if (isSwitch) {
-        history.push("/switch");
-        onPlatformChange("Switch");
-        onPlatformDrop("Switch");
-      } else if (isSwitch2) {
-        history.push("/switch-2");
-        onPlatformChange("Switch 2");
-        onPlatformDrop("Switch 2");
-      } else {
   const params = new URLSearchParams();
-
-  if (value.trim()) params.set("s", value.trim());
+  if (value) params.set("s", value);
   params.set("genre", "All Genres");
   params.set("sort", "Popular");
   params.set("price", "All Price Range");
 
-  history.push(`/allgames?${params.toString()}`);
+  clearGenre();
+  clearPriceRange();
+  onPriceRangeDrop("All Price Range");
+  onDropDownChange("All Genres");
+  onRegionChange?.("");
+  setSearchQuery(value);
 
-  onPlatformChange("");
-  onPlatformDrop("All Platforms");
-}
-    }}
+  if (path === "/playstation") {
+    history.push(`/playstation?${params.toString()}`);
+    onPlatformChange("Playstation");
+    onPlatformDrop("Playstation");
+  } else if (path === "/switch") {
+    history.push(`/switch?${params.toString()}`);
+    onPlatformChange("Switch");
+    onPlatformDrop("Switch");
+  } else if (path === "/switch-2") {
+    history.push(`/switch-2?${params.toString()}`);
+    onPlatformChange("Switch 2");
+    onPlatformDrop("Switch 2");
+  } else {
+    history.push(`/allgames?${params.toString()}`);
+    onPlatformChange("");
+    onPlatformDrop("All Platforms");
+  }
+}}
 
 
     >	
