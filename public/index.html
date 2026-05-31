@@ -6,9 +6,11 @@
   try {
     if (localStorage.getItem("theme") === "dark") {
       document.documentElement.classList.add("dark-mode");
+    } else {
+      document.documentElement.classList.remove("dark-mode");
     }
   } catch (e) {}
-</script
+</script>
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DT9ESY6EY1"></script>
       <script>
