@@ -102,7 +102,7 @@ function sortJson(element, prop, propType, asc) {
           
         </div>
 <hr className="linedividet"/>
-        <Row xs={2} md={4} className="g-3">
+        <Row xs={2} sm={3} md={4} className="g-3">
           {topSwitchDiscounts.slice(0, 12).map((review, key) => (
             <div key={key}>
              <Cards  
@@ -157,7 +157,7 @@ function sortJson(element, prop, propType, asc) {
         </div>
          <hr className="linedividet"/>
 
-        <Row xs={2} md={4} className="g-3">
+        <Row xs={2} sm={3} md={4} className="g-3">
           {newSwitchDiscounts.slice(0, 12).map((review, key) => (
             <div key={key}>
               <Cards  
@@ -220,7 +220,7 @@ function sortJson(element, prop, propType, asc) {
           
         </div>
 <hr className="linedividet"/>
-        <Row xs={2} md={4} className="g-3">
+        <Row xs={2} sm={3} md={4} className="g-3">
           {topPSDiscounts.slice(0, 12).map((review, key) => (
             <div key={key}>
               <Cards
@@ -268,7 +268,7 @@ function sortJson(element, prop, propType, asc) {
           
         </div>
 <hr className="linedividet"/>
-        <Row xs={2} md={4} className="g-3">
+        <Row xs={2} sm={3} md={4} className="g-3">
           {newPSDiscounts.slice(0, 12).map((review, key) => (
             <div key={key}>
               <Cards

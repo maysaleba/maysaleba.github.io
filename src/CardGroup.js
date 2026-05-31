@@ -67,7 +67,7 @@
        
               {filteredReviews.length > 0 ? (
                 <>        
-                  <Row xs={2} md={4} className="g-3">
+                  <Row xs={2} sm={3} md={4} className="g-3">
                     {pageData().map((review, key) => (
                       <div key={key}>
                                     <Cards  
