@@ -595,12 +595,18 @@ const routePlatformField =
 
 const prevPageRef = React.useRef(page);
 const skipNextPageScrollRef = React.useRef(true);
+const isRestoringHistoryRef = React.useRef(false);
 
 useEffect(() => {
   if (!hydrated) return;
 
   if (skipNextPageScrollRef.current) {
     skipNextPageScrollRef.current = false;
+    prevPageRef.current = page;
+    return;
+  }
+
+  if (isRestoringHistoryRef.current) {
     prevPageRef.current = page;
     return;
   }
@@ -746,7 +752,16 @@ if (initial <= 1) {
       const qs = params.toString();
       const newUrl = `${pathname}${qs ? `?${qs}` : ""}`;
       // After initial hydration, write changes as NEW history entries
-      window.history.replaceState({}, "", newUrl);
+      const oldUrl = window.location.pathname + window.location.search;
+const oldParams = new URLSearchParams(window.location.search);
+const oldPage = oldParams.get("page") || "1";
+const newPage = params.get("page") || "1";
+
+if (oldPage !== newPage) {
+  window.history.pushState({}, "", newUrl);
+} else if (oldUrl !== newUrl) {
+  window.history.replaceState({}, "", newUrl);
+}
     }
   }, [
     hydrated,
@@ -760,8 +775,14 @@ if (initial <= 1) {
 
   // 3) Respond to browser Back/Forward by re-reading the URL (popstate)
    useEffect(() => {
-     const onPop = () => {
-       const params = new URLSearchParams(window.location.search);
+const onPop = () => {
+  isRestoringHistoryRef.current = true;
+
+  setTimeout(() => {
+    isRestoringHistoryRef.current = false;
+  }, 1500);
+
+  const params = new URLSearchParams(window.location.search);
        const s = readQP(params, "s", "");
        const genre = readQP(params, "genre", "All Genres");
        const sort = readQP(params, "sort", "Popular");
