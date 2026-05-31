@@ -188,13 +188,18 @@ function ScrollToTop() {
   const location = useLocation();
 
   useEffect(() => {
-    // Let list pages keep/restored scroll when returning from content
     const listPaths = ["/allgames", "/switch", "/switch-2", "/playstation"];
 
+    if (location.state?.scrollToTop) {
+      window.scrollTo({ left: 0, top: 0, behavior: "instant" });
+      return;
+    }
+
+    // Let list pages keep/restored scroll when returning from content
     if (listPaths.includes(location.pathname)) return;
 
     window.scrollTo({ left: 0, top: 0, behavior: "instant" });
-  }, [location.pathname]);
+  }, [location.pathname, location.state]);
 
   return null;
 }
