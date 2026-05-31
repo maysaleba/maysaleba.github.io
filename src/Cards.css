@@ -1231,6 +1231,7 @@ label:focus,
 --page-bg: #6464bf;
 --hero-bg: #6464bf;
 --hero-gradient-rgb: 100, 100, 191;
+--hero-blend: overlay;
 
   --surface-bg: #ffffff;
   --card-header-bg: #ffffff;
@@ -1259,6 +1260,7 @@ label:focus,
   --page-bg: #18191a;
   --hero-bg: #18191a;
   --hero-gradient-rgb: 24, 25, 26;
+  --hero-blend: soft-light;
 
   --surface-bg: #242526;
   --card-header-bg: #242526;

@@ -806,7 +806,7 @@ function normalizeGenre(genre = "") {
     margin: calc(var(--blur-radius) * -1) calc(var(--blur-radius) * -1);
     background-size: cover;
     background-position: 50%;
-    mix-blend-mode: overlay;
+    mix-blend-mode: var(--hero-blend);
     filter: blur(var(--blur-radius));
   `;
 
