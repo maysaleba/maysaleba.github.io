@@ -144,7 +144,11 @@ function sortJson(element, prop, propType, asc) {
         </Row>
              <hr className="linedivideb"/>
         <div  className="card-footer-custom" align="center"><Link
-  to="/switch?genre=All+Genres&sort=Popular&price=All+Price+Range"
+  to={{
+    pathname: "/switch",
+    search: "?genre=All+Genres&sort=Popular&price=All+Price+Range",
+    state: { scrollToTop: true },
+  }}
   className="mainpage-footer-link"
 >
   <b><u>BROWSE ALL TRENDING DEALS →</u></b>
@@ -199,7 +203,11 @@ function sortJson(element, prop, propType, asc) {
         </Row>
         <hr className="linedivideb"/>
         <div  className="card-footer-custom" align="center"><Link
-  to="/switch?genre=All+Genres&sort=New+Discounts&price=All+Price+Range"
+  to={{
+    pathname: "/switch",
+    search: "?genre=All+Genres&sort=New+Discounts&price=All+Price+Range",
+    state: { scrollToTop: true },
+  }}
   className="mainpage-footer-link"
 >
   <b><u>BROWSE ALL NEW DEALS →</u></b>
@@ -256,7 +264,11 @@ function sortJson(element, prop, propType, asc) {
         </Row>
              <hr className="linedivideb"/>
         <div  className="card-footer-custom" align="center"><Link
-  to="/playstation?genre=All+Genres&sort=Popular&price=All+Price+Range"
+  to={{
+    pathname: "/playstation",
+    search: "?genre=All+Genres&sort=Popular&price=All+Price+Range",
+    state: { scrollToTop: true },
+  }}
   className="mainpage-footer-link"
 >
   <b><u>BROWSE ALL TRENDING DEALS →</u></b>
@@ -304,7 +316,11 @@ function sortJson(element, prop, propType, asc) {
         </Row>
              <hr className="linedivideb"/>
         <div className="card-footer-custom" align="center"><Link
-  to="/playstation?genre=All+Genres&sort=New+Discounts&price=All+Price+Range"
+  to={{
+    pathname: "/playstation",
+    search: "?genre=All+Genres&sort=New+Discounts&price=All+Price+Range",
+    state: { scrollToTop: true },
+  }}
   className="mainpage-footer-link"
 >
   <b><u>BROWSE ALL NEW DEALS →</u></b>
