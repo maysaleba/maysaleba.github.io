@@ -93,10 +93,18 @@ return (
         onPlatformChange("Switch 2");
         onPlatformDrop("Switch 2");
       } else {
-        history.push("/allgames");
-        onPlatformChange("");
-        onPlatformDrop("All Platforms");
-      }
+  const params = new URLSearchParams();
+
+  if (value.trim()) params.set("s", value.trim());
+  params.set("genre", "All Genres");
+  params.set("sort", "Popular");
+  params.set("price", "All Price Range");
+
+  history.push(`/allgames?${params.toString()}`);
+
+  onPlatformChange("");
+  onPlatformDrop("All Platforms");
+}
     }}
 
 
