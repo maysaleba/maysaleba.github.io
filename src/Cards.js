@@ -8,6 +8,7 @@ import noimage from "./noimage.jpg";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import { Box } from "@mui/material";
 import 'react-circular-progressbar/dist/styles.css';
+import { Icon } from "@iconify/react";
 
 // import download from "./download.gif";
 // console.log("USD\n" + usdExchange + "\nARS\n" + arsExchange + "\nAUD\n" + audExchange + "\nBRL\n" + brlExchange + "\nCAD\n" + cadExchange + "\nCLP\n" + clpExchange + "\nCOP\n" + copExchange
@@ -318,14 +319,18 @@ function SmallestFlag() {
     Thailand: 'thregion-logo'
   };
 
-  if (!ratesReady || !smallest) {
-    // render a blank flag container + placeholder price
-    return (
-      <span className="blank-flag-logo price-bold">
-        {safePhp(smallestprice, 1)}
-      </span>
-    );
-  }
+if (!ratesReady || !smallest) {
+  return (
+    <span className="price-bold d-inline-flex align-items-center">
+      <Icon
+        icon="mdi:earth"
+        width="15"
+        style={{ marginRight: "5px" }}
+      />
+      {safePhp(smallestprice, 1)}
+    </span>
+  );
+}
 
   const className = regionClassMap[smallest];
   if (!className) return null;
