@@ -106,6 +106,12 @@ useEffect(() => {
 }
 
 export default function Main() {
+useEffect(() => {
+  if ("scrollRestoration" in window.history) {
+    window.history.scrollRestoration = "auto";
+  }
+}, []);
+
   function sortJson(element, prop, propType, asc) {
     switch (propType) {
       case "int":
@@ -178,14 +184,20 @@ export default function Main() {
     return raw ? decodeURIComponent(raw.replace(/\+/g, " ")) : "";
   })();
 
-  function ScrollToTop() {
-    const { pathname } = useLocation();
-    useEffect(() => {
-      // keep this simple; browsers will restore on Back which overrides this (desired)
-      window.scrollTo({ left: 0, top: 0, behavior: "instant" });
-    }, [pathname]);
-    return null;
-  }
+function ScrollToTop() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Let list pages keep/restored scroll when returning from content
+    const listPaths = ["/allgames", "/switch", "/switch-2", "/playstation"];
+
+    if (listPaths.includes(location.pathname)) return;
+
+    window.scrollTo({ left: 0, top: 0, behavior: "instant" });
+  }, [location.pathname]);
+
+  return null;
+}
 
   const theURLa = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json";
 
@@ -581,6 +593,24 @@ const routePlatformField =
 
   let { pageData, page, maxPage, jumpPage } = usePagination(filteredReviews, 40);
 
+const prevPageRef = React.useRef(page);
+const skipNextPageScrollRef = React.useRef(true);
+
+useEffect(() => {
+  if (!hydrated) return;
+
+  if (skipNextPageScrollRef.current) {
+    skipNextPageScrollRef.current = false;
+    prevPageRef.current = page;
+    return;
+  }
+
+  if (prevPageRef.current !== page) {
+    window.scrollTo({ left: 0, top: 0, behavior: "instant" });
+    prevPageRef.current = page;
+  }
+}, [page, hydrated]);
+
   // --- URL / pagination refs (must be declared before effects that use them) ---
   const initialPageRef = React.useRef(1);
   const initialUrlAppliedRef = React.useRef(false);
@@ -716,7 +746,7 @@ if (initial <= 1) {
       const qs = params.toString();
       const newUrl = `${pathname}${qs ? `?${qs}` : ""}`;
       // After initial hydration, write changes as NEW history entries
-      window.history.pushState({}, "", newUrl);
+      window.history.replaceState({}, "", newUrl);
     }
   }, [
     hydrated,

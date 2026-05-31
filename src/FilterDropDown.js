@@ -101,7 +101,7 @@ const platformIcon = (platform) => {
 
   const selectGenre = (label) => () => {
     resetSearchAndPrice();
-    if (label === "Genres") {
+    if (label === "All Genres") {
       clearGenre?.();
     } else {
       onFilterChange?.(label);
