@@ -73,7 +73,7 @@ const platformIcon = (platform) => {
     default:
       return <Icon icon="mdi:gamepad-variant" width="18" />;
   }
-};
+};  
 
   const resetSearchAndPrice = () => {
     clearSearchChange?.();
@@ -101,7 +101,7 @@ const platformIcon = (platform) => {
 
   const selectGenre = (label) => () => {
     resetSearchAndPrice();
-    if (label === "All Genres") {
+    if (label === "Genres") {
       clearGenre?.();
     } else {
       onFilterChange?.(label);
@@ -212,7 +212,7 @@ const selectCheapest = (code) => () => {
 <Container fluid="md">
   <Row className="g-100 justify-content-md-center">
     {/* Platform */}
-    <Col xs={4} md={4} className="col-style">
+    <Col xs={3} md={4} className="col-style">
       <Dropdown className="m-1">
 <Dropdown.Toggle size="sm" id="dd-platform" className="dropdown-style w-100">
   <span className="d-inline-flex align-items-center">
@@ -267,7 +267,7 @@ const selectCheapest = (code) => () => {
     </Col>
 
     {/* Genre */}
-    <Col xs={4} md={4} className="col-style">
+    <Col xs={5} md={4} className="col-style">
       <Dropdown className="m-1">
 <Dropdown.Toggle size="sm" id="dd-genre" className="dropdown-style w-100">
   <span

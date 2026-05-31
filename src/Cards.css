@@ -748,10 +748,11 @@ display: inline-block;  /* may not need this, but I've found I do */
   height: 20px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+   margin-top: -5px;
 }
 
 .switch2-card .card-img-wrapper {
-  margin-top: 0;
+  margin-top: 0px;
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
 }

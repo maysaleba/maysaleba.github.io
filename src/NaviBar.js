@@ -16,7 +16,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import logo from "./logo.svg";
 import Drawer from "@mui/material/Drawer";
 import { makeStyles } from "@mui/styles";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 import InfoIcon from "@mui/icons-material/Info";
 import CloseIcon from "@mui/icons-material/Close";
@@ -50,7 +50,7 @@ const {
       icon: <HomeIcon />,
       onClick: () => {
         setOpen(false);
-        window.location.href = "http://maysaleba.com/";
+        history.push("/");
       },
     },
     {
@@ -58,7 +58,7 @@ const {
       icon: <Icon icon="mdi:nintendo-switch" width="24" />,
       onClick: () => {
         setOpen(false);
-        window.location.href = "http://maysaleba.com/switch";
+        history.push("/switch");
       },
     },
     {
@@ -66,7 +66,7 @@ const {
       icon: <Icon icon="bi:playstation" width="24" />,
       onClick: () => {
         setOpen(false);
-        window.location.href = "http://maysaleba.com/playstation";
+        history.push("/playstation");
       },
     },
     {
@@ -145,7 +145,7 @@ const {
               fontSize: 16,
             }}
           >
-            <a className="logocolortext" href="https://maysaleba.com/switch">
+            <Link className="logocolortext" to="/switch">
               <Box
                 sx={{
                   marginRight: 2,
@@ -156,8 +156,8 @@ const {
               >
                 Switch
               </Box>
-            </a>
-            <a className="logocolortext" href="https://maysaleba.com/playstation">
+            </Link>
+           <Link className="logocolortext" to="/playstation">
             <Box
               sx={{
                 marginRight: 2,
@@ -168,8 +168,8 @@ const {
             >
               Playstation
             </Box>
-            </a>
-            <a className="logocolortext" href="https://maysaleba.com/giftcards">
+            </Link>
+            <Link className="logocolortext" to="/giftcards">
             
               <Typography
                 noWrap
@@ -183,8 +183,8 @@ const {
                 Gift Cards
               </Typography>
            
-            </a>
-            <a className="logocolortext" href="https://maysaleba.com/faq">
+           </Link>
+           <Link className="logocolortext" to="/faq">
             <Box
               sx={{
                 marginRight: 2,
@@ -195,7 +195,7 @@ const {
             >
               FAQ
             </Box>
-            </a>
+           </Link>
 <button
   type="button"
   className="theme-toggle-btn"

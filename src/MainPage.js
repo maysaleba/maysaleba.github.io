@@ -4,6 +4,7 @@ import { Row } from "react-bootstrap";
 import "./Cards.css";
 import Paper from "@mui/material/Paper";
 import reviewssw from "./csvjson.json";
+import { Link } from "react-router-dom";
 
 const MainPage = ({ filteredReviews, pageData, reviewsps, datam  }) => {
   var d = new Date();
@@ -142,7 +143,12 @@ function sortJson(element, prop, propType, asc) {
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/switch?genre=All+Genres&sort=Popular&price=All+Price+Range" className="mainpage-footer-link"><b><u>BROWSE ALL TRENDING DEALS →</u></b></a></div>
+        <div  className="card-footer-custom" align="center"><Link
+  to="/switch?genre=All+Genres&sort=Popular&price=All+Price+Range"
+  className="mainpage-footer-link"
+>
+  <b><u>BROWSE ALL TRENDING DEALS →</u></b>
+</Link></div>
       </Paper>
       <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
@@ -192,7 +198,12 @@ function sortJson(element, prop, propType, asc) {
           ))}
         </Row>
         <hr className="linedivideb"/>
-        <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/switch?genre=All+Genres&sort=New+Discounts&price=All+Price+Range" className="mainpage-footer-link"><b><u>BROWSE ALL NEW DEALS →</u></b></a></div>
+        <div  className="card-footer-custom" align="center"><Link
+  to="/switch?genre=All+Genres&sort=New+Discounts&price=All+Price+Range"
+  className="mainpage-footer-link"
+>
+  <b><u>BROWSE ALL NEW DEALS →</u></b>
+</Link></div>
       </Paper>
     {/*  <div align="center">
       <AdSense.Google
@@ -244,7 +255,12 @@ function sortJson(element, prop, propType, asc) {
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div  className="card-footer-custom" align="center"><a href="https://maysaleba.com/playstation?genre=All+Genres&sort=Popular&price=All+Price+Range" className="mainpage-footer-link"><b><u>BROWSE ALL TRENDING DEALS →</u></b></a></div>
+        <div  className="card-footer-custom" align="center"><Link
+  to="/playstation?genre=All+Genres&sort=Popular&price=All+Price+Range"
+  className="mainpage-footer-link"
+>
+  <b><u>BROWSE ALL TRENDING DEALS →</u></b>
+</Link></div>
       </Paper>
         <Paper elevation={2} className="custom-container">
         <div className="card-header-custom">
@@ -287,7 +303,12 @@ function sortJson(element, prop, propType, asc) {
           ))}
         </Row>
              <hr className="linedivideb"/>
-        <div className="card-footer-custom" align="center"><a href="https://maysaleba.com/playstation?genre=All+Genres&sort=New+Discounts&price=All+Price+Range" className="mainpage-footer-link"><b><u>BROWSE ALL NEW DEALS →</u></b></a></div>
+        <div className="card-footer-custom" align="center"><Link
+  to="/playstation?genre=All+Genres&sort=New+Discounts&price=All+Price+Range"
+  className="mainpage-footer-link"
+>
+  <b><u>BROWSE ALL NEW DEALS →</u></b>
+</Link></div>
       </Paper>
     </div>
   );

@@ -28,18 +28,67 @@ today = yyyy + "-" + mm + "-" + dd;
 
 // ---------------- Minimal list route wrapper ----------------
 function ListPage({ defaults, SearchCmpProps, CardGroupProps, HelmetProps }) {
-  const { setPlatformField, setPlatformDropDown, setRegionFilter } = CardGroupProps;
+  const location = useLocation();
+
+  const {
+    setPlatformField,
+    setPlatformDropDown,
+    setRegionFilter,
+    setSearchQuery,
+    onDropDownChange,
+    onFilterChange,
+    clearGenre,
+    onLatestChange,
+    onLatestDrop,
+    onPriceRangeDrop,
+    onPriceRangeChange,
+    onRegionChange,
+    jumpPage,
+  } = CardGroupProps;
 
   React.useEffect(() => {
     if (defaults?.platform !== undefined) {
       setPlatformField(defaults.platform);
       setPlatformDropDown(defaults.platformLabel ?? (defaults.platform || "All Platforms"));
     }
-    if (defaults?.region !== undefined) {
-      setRegionFilter((prev) => (prev ? prev : defaults.region));
+  }, [location.pathname]);
+
+  React.useEffect(() => {
+    const params = new URLSearchParams(location.search);
+
+    const readQP = (key, def = "") => {
+      const raw = params.get(key);
+      if (raw == null) return def;
+      return decodeURIComponent(raw.replace(/\+/g, " "));
+    };
+
+    const s = readQP("s", "");
+    const genre = readQP("genre", "All Genres");
+    const sort = readQP("sort", "Popular");
+    const price = readQP("price", "All Price Range");
+    const region = params.get("region") || "";
+    const page = parseInt(params.get("page") || "1", 10);
+
+    setSearchQuery(s);
+
+    onDropDownChange(genre);
+    if (genre === "All Genres") {
+      clearGenre();
+    } else {
+      onFilterChange(genre);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+
+    onLatestChange(sort);
+    onLatestDrop(sort);
+
+    onPriceRangeDrop(price);
+    onPriceRangeChange(price);
+
+    onRegionChange(region);
+    setRegionFilter(region);
+
+    jumpPage(Number.isFinite(page) ? page : 1);
+  }, [location.search]);
 
   return (
     <>
