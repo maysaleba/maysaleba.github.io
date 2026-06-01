@@ -77,6 +77,7 @@ const DiscordModal = () => {
       >
         <Box sx={style}>
           <CloseIcon
+            className="modal-close-icon"
             onClick={handleClose}
             style={{
               position: "absolute",
@@ -120,6 +121,7 @@ const TicketModal = () => {
       >
         <Box sx={style}>
           <CloseIcon
+            className="modal-close-icon"
             onClick={handleClose}
             style={{
               position: "absolute",
@@ -163,6 +165,7 @@ const FormModal = () => {
       >
         <Box sx={style}>
           <CloseIcon
+            className="modal-close-icon"
             onClick={handleClose}
             style={{
               position: "absolute",
@@ -206,6 +209,7 @@ const CreateTicketModal = () => {
       >
         <Box sx={style}>
           <CloseIcon
+            className="modal-close-icon"
             onClick={handleClose}
             style={{
               position: "absolute",
@@ -249,6 +253,7 @@ const PurchaseModal = () => {
       >
         <Box sx={style}>
           <CloseIcon
+            className="modal-close-icon"
             onClick={handleClose}
             style={{
               position: "absolute",
@@ -292,6 +297,7 @@ const LanguageModal = () => {
       >
         <Box sx={style}>
           <CloseIcon
+            className="modal-close-icon"
             onClick={handleClose}
             style={{
               position: "absolute",
@@ -335,6 +341,7 @@ const RegionalityModal = () => {
       >
         <Box sx={style}>
           <CloseIcon
+            className="modal-close-icon"
             onClick={handleClose}
             style={{
               position: "absolute",
@@ -381,10 +388,10 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
     <div>
       <Paper elevation={2} className="content-container">
         <div style={{ fontSize: 14 }}>
-          <Card.Header style={{ backgroundColor: "white", fontWeight: "bold" }}>
+          <Card.Header className="content-header">
             <InfoIcon /> Argentina Pasabuy
           </Card.Header>
-          <Card.Header style={{ backgroundColor: "white" }}>
+          <Card.Header className="content-header">
             <strong>What is Pasabuy?</strong>
           </Card.Header>
           <Card.Body>
@@ -415,7 +422,7 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
             </ul>
           </Card.Body>
 
-          <Card.Header style={{ backgroundColor: "white" }}>
+          <Card.Header className="content-header">
             <strong>Pasabuy Discord Servers</strong>
           </Card.Header>
           <Card.Body>
@@ -436,7 +443,7 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
             </ul>
           </Card.Body>
 
-          <Card.Header style={{ backgroundColor: "white" }}>
+          <Card.Header className="content-header">
             <strong>How to Order?</strong>
           </Card.Header>
           <Card.Body>
@@ -458,7 +465,7 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
               </li>
             </ul>
           </Card.Body>
-          <Card.Header style={{ backgroundColor: "white" }}>
+          <Card.Header className="content-header">
             <strong>
               <p id="join" />
               Joining a Discord Server
@@ -544,7 +551,7 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
               </Grid>
             </Box>
           </Card.Body>
-          <Card.Header style={{ backgroundColor: "white" }}>
+          <Card.Header className="content-header">
             <strong>
               <p id="order" />
               Placing an Order
@@ -616,7 +623,7 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
               </Grid>
             </Grid>
           </Card.Body>
-          <Card.Header style={{ backgroundColor: "white" }}>
+          <Card.Header className="content-header">
             <strong>
               <p id="rates" />
               Denomination and Rates
@@ -625,16 +632,7 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
           <Card.Body>
             <>
               {" "}
-              <Box
-                style={{
-                  borderRadius: 5,
-                  backgroundColor: "#ffc4c4",
-                  marginBottom: 10,
-                  padding: 8,
-
-                  textAlign: "center",
-                }}
-              >
+<Box className="price-update-box">
                 Prices as of <b>{formattedDate}</b>
               </Box>
             </>
@@ -643,9 +641,12 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
 
             <TableContainer component={Paper}>
               <Table
-                sx={{ width: "100%" }}
+                sx={{ width: "100%",
+                    backgroundColor: "var(--surface-bg)",
+    color: "var(--text-main)" }}
                 size="small"
                 aria-label="a dense table"
+
               >
                 <TableHead>
                   <TableRow>
@@ -653,11 +654,12 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
                       style={{
                         fontFamily: "system-ui",
                         borderRight: "1px solid rgba(224, 224, 224, 1)",
+                        color: "var(--text-main)",
                       }}
                     >
                       <b>Denomination</b>
                     </TableCell>
-                    <TableCell style={{ fontFamily: "system-ui" }} align="left">
+                    <TableCell style={{ fontFamily: "system-ui", color: "var(--text-main)", }} align="left">
                       Price
                     </TableCell>
                   </TableRow>
@@ -682,6 +684,7 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
                         style={{
                           fontFamily: "system-ui",
                           borderBottom: "1px solid rgba(224, 224, 224, 1)",
+                          color: "var(--text-main)",
                         }}
                       >
                         {row.name}
@@ -691,6 +694,7 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
                         style={{
                           fontFamily: "system-ui",
                           borderBottom: "1px solid rgba(224, 224, 224, 1)",
+                          color: "var(--text-main)",
                         }}
                       >
                         {row.calories}
