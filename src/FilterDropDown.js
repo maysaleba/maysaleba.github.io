@@ -57,23 +57,43 @@ const Switch2Icon = () => (
 );
 
 const platformIcon = (platform) => {
+  const iconStyle = {
+    width: 22,
+    display: "inline-flex",
+    justifyContent: "center",
+    alignItems: "center",
+  };
+
   switch (platform) {
     case "Switch":
-      return <Icon icon="mdi:nintendo-switch" width="18" />;
+      return (
+        <span style={iconStyle}>
+          <Icon icon="mdi:nintendo-switch" width="18" />
+        </span>
+      );
 
     case "Switch 2":
-      return <Switch2Icon />;
+      return (
+        <span style={iconStyle}>
+          <Switch2Icon />
+        </span>
+      );
 
     case "Playstation":
-      return <Icon icon="bi:playstation" width="18" />;
-
-    case "All Platforms":
-      return <Icon icon="mdi:gamepad-variant" width="18" />;
+      return (
+        <span style={iconStyle}>
+          <Icon icon="bi:playstation" width="18" />
+        </span>
+      );
 
     default:
-      return <Icon icon="mdi:gamepad-variant" width="18" />;
+      return (
+        <span style={iconStyle}>
+          <Icon icon="mdi:gamepad-variant" width="18" />
+        </span>
+      );
   }
-};  
+};
 
   const resetSearchAndPrice = () => {
     clearSearchChange?.();
@@ -216,11 +236,13 @@ const selectCheapest = (code) => () => {
       <Dropdown className="m-1">
 <Dropdown.Toggle size="sm" id="dd-platform" className="dropdown-style w-100">
   <span className="d-inline-flex align-items-center">
-    <span className="me-md-2">
+    <span
+      className="me-md-2 d-flex align-items-center justify-content-center"
+      style={{ width: 22, height: 22 }}
+    >
       {platformIcon(platformDropDown)}
     </span>
 
-    {/* Desktop only */}
     <span
       className="d-none d-md-inline text-truncate"
       title={platformDropDown}
@@ -232,12 +254,18 @@ const selectCheapest = (code) => () => {
         <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>
           {PLATFORM_OPTIONS.map((opt) => (
 <Dropdown.Item as="button" key={opt.label} onClick={selectPlatform(opt)}>
+<span className="d-flex align-items-center">
+  <span
+    className="me-2 d-flex align-items-center justify-content-center"
+    style={{ width: 22, height: 22 }}
+  >
+    {platformIcon(opt.label)}
+  </span>
+
   <span className="d-flex align-items-center">
-    <span className="me-2">
-      {platformIcon(opt.label)}
-    </span>
     {opt.label}
   </span>
+</span>
 </Dropdown.Item>
           ))}
         </Dropdown.Menu>
