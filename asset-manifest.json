@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/maysaleba.github.io/static/css/main.d7a0824c.chunk.css",
-    "main.js": "/maysaleba.github.io/static/js/main.7e8a3e32.chunk.js",
-    "main.js.map": "/maysaleba.github.io/static/js/main.7e8a3e32.chunk.js.map",
+    "main.js": "/maysaleba.github.io/static/js/main.8e3da608.chunk.js",
+    "main.js.map": "/maysaleba.github.io/static/js/main.8e3da608.chunk.js.map",
     "runtime-main.js": "/maysaleba.github.io/static/js/runtime-main.51806aa7.js",
     "runtime-main.js.map": "/maysaleba.github.io/static/js/runtime-main.51806aa7.js.map",
     "static/css/2.a07948fa.chunk.css": "/maysaleba.github.io/static/css/2.a07948fa.chunk.css",
-    "static/js/2.49e07e42.chunk.js": "/maysaleba.github.io/static/js/2.49e07e42.chunk.js",
-    "static/js/2.49e07e42.chunk.js.map": "/maysaleba.github.io/static/js/2.49e07e42.chunk.js.map",
+    "static/js/2.6bde9136.chunk.js": "/maysaleba.github.io/static/js/2.6bde9136.chunk.js",
+    "static/js/2.6bde9136.chunk.js.map": "/maysaleba.github.io/static/js/2.6bde9136.chunk.js.map",
     "static/js/3.4de111ec.chunk.js": "/maysaleba.github.io/static/js/3.4de111ec.chunk.js",
     "static/js/3.4de111ec.chunk.js.map": "/maysaleba.github.io/static/js/3.4de111ec.chunk.js.map",
     "index.html": "/maysaleba.github.io/index.html",
     "static/css/2.a07948fa.chunk.css.map": "/maysaleba.github.io/static/css/2.a07948fa.chunk.css.map",
     "static/css/main.d7a0824c.chunk.css.map": "/maysaleba.github.io/static/css/main.d7a0824c.chunk.css.map",
-    "static/js/2.49e07e42.chunk.js.LICENSE.txt": "/maysaleba.github.io/static/js/2.49e07e42.chunk.js.LICENSE.txt",
+    "static/js/2.6bde9136.chunk.js.LICENSE.txt": "/maysaleba.github.io/static/js/2.6bde9136.chunk.js.LICENSE.txt",
     "static/media/Cards.css": "/maysaleba.github.io/static/media/silver-medal.26c1865a.png",
     "static/media/create_ticket.37e82424.jpg": "/maysaleba.github.io/static/media/create_ticket.37e82424.jpg",
     "static/media/discord.da2cc576.jpg": "/maysaleba.github.io/static/media/discord.da2cc576.jpg",
@@ -35,8 +35,8 @@
   "entrypoints": [
     "static/js/runtime-main.51806aa7.js",
     "static/css/2.a07948fa.chunk.css",
-    "static/js/2.49e07e42.chunk.js",
+    "static/js/2.6bde9136.chunk.js",
     "static/css/main.d7a0824c.chunk.css",
-    "static/js/main.7e8a3e32.chunk.js"
+    "static/js/main.8e3da608.chunk.js"
   ]
 }
