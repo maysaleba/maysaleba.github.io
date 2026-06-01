@@ -18,6 +18,7 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import InfoIcon from "@mui/icons-material/Info";
 import CloseIcon from "@mui/icons-material/Close";
 import noimage from "./noimage.jpg";
+import { Link as RouterLink } from "react-router-dom";
 
 const style = {
   position: "absolute",
@@ -1376,9 +1377,9 @@ function PsPrices() {
               {" "}
 <Box className="info-tax-box">
                 You can only buy from Argentina via {" "}
-                <a className="infotax" href="https://maysaleba.com/pasabuy">
+                <RouterLink className="infotax" to="/pasabuy">
                   Pasabuy
-                </a>
+                </RouterLink>
                 . Argentina Price is based on 10K ARS top up, inclusive of 21% tax and service fee.
                 {/*
  Note: Argentina eShop only accepts payment from Argentina issued cards. Use {" "}
