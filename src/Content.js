@@ -815,7 +815,7 @@ className="hltb-main hltb-cell">
     const platform = props.hasBadge;
     const esrbrating = props.esrbrating;
     if (platform === "Nintendo Switch" || platform === "Nintendo Switch 2") {
-      if (props.esrbrating === "Individual" || props.esrbrating === "Bundle") {
+      if (props.esrbrating === "Individual" || props.esrbrating === "Bundle" || props.esrbrating === "DLC") {
         return (
           <>
             <span className="d-flex justify-content float-start opencritic-container2 img-responsive nbadges nintendo"></span>
