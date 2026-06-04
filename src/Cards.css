@@ -941,6 +941,23 @@ label:focus,
      /*box-shadow: 0 0 8px 0px rgb(0 0 0 / 10%);*/
 }
 
+.dropdown-toggle.dropdown-style {
+  min-height: 50px;
+  position: relative;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-toggle.dropdown-style::after {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0;
+  float: none;
+}
+
 .dropdown-menu {
     max-height: 280px;
     overflow-y: auto;
