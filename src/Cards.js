@@ -87,10 +87,13 @@ const Cards = ({
   // Is rate data loaded?
   const ratesReady = !!datam?.PHP;
 
-const safePhp = (amt, rate, placeholder = "₱--") =>
-  Number.isFinite(Number(amt)) && Number.isFinite(Number(rate))
-    ? "₱" + Math.round(Number(amt) * Number(rate))
+const phpCeil = (value, placeholder = "₱--") =>
+  Number.isFinite(Number(value))
+    ? "₱" + Math.ceil(Number(value))
     : placeholder;
+
+const safePhp = (amt, rate, placeholder = "₱--") =>
+  phpCeil(Number(amt) * Number(rate), placeholder);
 
 
 
@@ -356,7 +359,7 @@ if (props.psorsw === "Playstation") {
 
   return (
 <span className={`${cheapest?.className || "psregion-logo"} price-bold`}>
-      {cheapest ? "₱" + Math.round(cheapest.salePhp) : "₱--"}
+      {phpCeil(cheapest?.salePhp)}
     </span>
   );
 }
@@ -369,7 +372,7 @@ if (props.psorsw === "Playstation") {
         return (
           <span className="price-light">
             {cheapest && Number.isFinite(cheapest.originalPhp)
-              ? "₱" + Math.round(cheapest.originalPhp)
+              ? phpCeil(cheapest.originalPhp)
               : "₱--"}
           </span>
         );

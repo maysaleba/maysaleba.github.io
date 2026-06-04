@@ -83,6 +83,8 @@ today = yyyy + "-" + mm + "-" + dd;
 
 let games = games1.concat(games2);
 
+
+
 const Content = ({ makeswitch, datam, search, setSearch, match }) => {
 
     var usdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.USD);
@@ -113,11 +115,16 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
 
   // console.log("HELLO"+matchGames)
 
+const phpCeil = (value, placeholder = "₱--") =>
+  Number.isFinite(Number(value))
+    ? "₱" + Math.ceil(Number(value))
+    : placeholder;
+
   function PesoPrice(props) {
     if (matchGames[0].platform === "Playstation") {
-      return "₱" + Math.round(props.props);
+      return phpCeil(props.props);
     } else {
-      return "₱" + Math.round(props.props * usdExchange);
+      return phpCeil(props.props * usdExchange);
     }
   }
 
@@ -237,7 +244,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         return (
           <>
             <span className="psplusbadge">
-              {"₱" + Math.round(matchGames[0].PlusPrice * usdExchange)}
+              {phpCeil(matchGames[0].PlusPrice * usdExchange)}
             </span>
             <br />
           </>
@@ -277,7 +284,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         return (
           <>
             <span className="psplusbadge">
-              {"₱" + Math.round(matchGames[0].PlusPrice * hkdExchange)}
+              {phpCeil(matchGames[0].PlusPrice * hkdExchange)}
             </span>
             <br />
           </>
@@ -317,7 +324,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         return (
           <>
             <span className="psplusbadge">
-              {"₱" + Math.round(matchGames[0].PlusPrice * sgdExchange)}
+              {phpCeil(matchGames[0].PlusPrice * sgdExchange)}
             </span>
             <br />
           </>
@@ -359,7 +366,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
         return (
           <>
             <span className="psplusbadge">
-              {"₱" + Math.round(matchGames[0].PlusPrice * trdExchange)}
+              {phpCeil(matchGames[0].PlusPrice * trdExchange)}
             </span>
             <br />
           </>
@@ -1165,10 +1172,10 @@ function PsPrices() {
                   <div className="btn btn-block btn-secondary">
                     <div className="price-container-in">
                       <span className="price">
-                        {"₱" + Math.round(row.salePhp)}
+                        {phpCeil(row.salePhp)}
                         {Number.isFinite(row.originalPhp) && row.originalPhp > 0 && (
                           <span className="ml-2 badge badge-danger">
-                            <strike>{"₱" + Math.round(row.originalPhp)}</strike>
+                            <strike>{phpCeil(row.originalPhp)}</strike>
                           </span>
                         )}
                       </span>
@@ -1826,7 +1833,7 @@ const getModalTextForCountry = (country) => {
                   <div className="btn btn-block btn-secondary">
                     <div className="price-container-in">
                       <span className="price">
-                        {"₱" + Math.round(price)}
+                        {phpCeil(price)}
                         {isStrikeThrough && (
                           <span className="ml-2 badge badge-danger">
                             <strike>
