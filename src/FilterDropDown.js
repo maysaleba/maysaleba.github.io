@@ -273,7 +273,7 @@ const selectCheapest = (code) => () => {
     </Col>
 
     {/* Latest */}
-    <Col xs={4} md={4} className="col-style">
+    <Col xs={6} md={4} className="col-style">
       <Dropdown className="m-1">
 <Dropdown.Toggle size="sm" id="dd-latest" className="dropdown-style w-100">
   <span
@@ -294,72 +294,25 @@ const selectCheapest = (code) => () => {
       </Dropdown>
     </Col>
 
-    {/* Genre */}
-    <Col xs={5} md={4} className="col-style">
-      <Dropdown className="m-1">
-<Dropdown.Toggle size="sm" id="dd-genre" className="dropdown-style w-100">
-  <span
-    className="d-inline-block text-truncate align-middle"
-    style={{ maxWidth: 'calc(100% - 1.5rem)' }}
-    title={genreDropDown}
-  >
-    {genreDropDown}
-  </span>
-</Dropdown.Toggle>
-        <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>
-          {GENRE_OPTIONS.map((label) => (
-            <Dropdown.Item as="button" key={label} onClick={selectGenre(label)}>
-              {label}
-            </Dropdown.Item>
-          ))}
-        </Dropdown.Menu>
-      </Dropdown>
-    </Col>
-
-    {/* Price */}
-    <Col xs={6} md={6} className="col-style">
-      <Dropdown className="m-1">
-<Dropdown.Toggle size="sm" id="dd-price" className="dropdown-style w-100">
-  <span
-    className="d-inline-block text-truncate align-middle"
-    style={{ maxWidth: 'calc(100% - 1.5rem)' }}
-    title={priceRangeDropDown}
-  >
-    {priceRangeDropDown}
-  </span>
-</Dropdown.Toggle>
-        <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>
-          {PRICE_OPTIONS.map((label) => (
-            <Dropdown.Item as="button" key={label} onClick={selectPrice(label)}>
-              {label}
-            </Dropdown.Item>
-          ))}
-        </Dropdown.Menu>
-      </Dropdown>
-    </Col>
 
 {/* Cheapest Region */}
-<Col xs={6} md={6} className="col-style">
+<Col xs={3} md={4} className="col-style">
   <Dropdown className="m-1">
-    <Dropdown.Toggle size="sm" id="dd-cheapest" className="dropdown-style w-100">
-      {regionFilter ? (
-        <span
-          className={`${regionIconClass(regionFilter)} align-middle me-2`}
-          style={{ display: "inline-block", width: 15, height: 15 }}
-          aria-hidden
-        />
-      ) : (
-        <AnyIcon />
-      )}
+<Dropdown.Toggle size="sm" id="dd-cheapest" className="dropdown-style w-100">
+  {regionFilter ? (
+    <span
+      className={`${regionIconClass(regionFilter)} align-middle me-2`}
+      style={{ display: "inline-block", width: 15, height: 15 }}
+      aria-hidden
+    />
+  ) : (
+    <AnyIcon />
+  )}
 
-<span className="region-label-desktop">
+<span className="region-filter-text">
   {`Region: ${REGION_LABEL[regionFilter] ?? "Any"}`}
 </span>
-
-<span className="region-label-mobile">
-  {REGION_LABEL[regionFilter] ?? "Any"}
-</span>
-    </Dropdown.Toggle>
+</Dropdown.Toggle>
 
     <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>
       {(isPS
@@ -389,6 +342,52 @@ const selectCheapest = (code) => () => {
     </Dropdown.Menu>
   </Dropdown>
 </Col>
+
+
+    {/* Price */}
+    <Col xs={6} md={6} className="col-style">
+      <Dropdown className="m-1">
+<Dropdown.Toggle size="sm" id="dd-price" className="dropdown-style w-100">
+  <span
+    className="d-inline-block text-truncate align-middle"
+    style={{ maxWidth: 'calc(100% - 1.5rem)' }}
+    title={priceRangeDropDown}
+  >
+    {priceRangeDropDown}
+  </span>
+</Dropdown.Toggle>
+        <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>
+          {PRICE_OPTIONS.map((label) => (
+            <Dropdown.Item as="button" key={label} onClick={selectPrice(label)}>
+              {label}
+            </Dropdown.Item>
+          ))}
+        </Dropdown.Menu>
+      </Dropdown>
+    </Col>
+
+    {/* Genre */}
+    <Col xs={6} md={6} className="col-style">
+      <Dropdown className="m-1">
+<Dropdown.Toggle size="sm" id="dd-genre" className="dropdown-style w-100">
+  <span
+    className="d-inline-block text-truncate align-middle"
+    style={{ maxWidth: 'calc(100% - 1.5rem)' }}
+    title={genreDropDown}
+  >
+    {genreDropDown}
+  </span>
+</Dropdown.Toggle>
+        <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>
+          {GENRE_OPTIONS.map((label) => (
+            <Dropdown.Item as="button" key={label} onClick={selectGenre(label)}>
+              {label}
+            </Dropdown.Item>
+          ))}
+        </Dropdown.Menu>
+      </Dropdown>
+    </Col>
+
   </Row>
 </Container>
 

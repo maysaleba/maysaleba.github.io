@@ -1812,3 +1812,9 @@ a.infotax:hover {
     display: inline;
   }
 }
+
+@media screen and (max-width: 575.98px) {
+  .region-filter-text {
+    display: none !important;
+  }
+}
