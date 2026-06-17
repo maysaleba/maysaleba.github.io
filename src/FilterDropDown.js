@@ -146,10 +146,10 @@ const platformIcon = (platform) => {
     []
   );
 
-  const LATEST_OPTIONS = useMemo(
-    () => ["Popular", "Top Rated", "New Discounts", "Latest Release", "Price ↑", "Price ↓"],
-    []
-  );
+const LATEST_OPTIONS = useMemo(
+  () => ["Popular", "Deep Sale", "Top Rated", "New Discounts", "Latest Release", "Price ↑", "Price ↓" ],
+  []
+);
 
   const GENRE_OPTIONS = useMemo(
     () => [
@@ -352,13 +352,13 @@ const selectCheapest = (code) => () => {
         <AnyIcon />
       )}
 
-      <span
-        className="d-inline-block text-truncate align-middle"
-        style={{ maxWidth: "calc(100% - 1.5rem)" }}
-        title={`Region: ${REGION_LABEL[regionFilter] ?? "Any"}`}
-      >
-        {`Region: ${REGION_LABEL[regionFilter] ?? "Any"}`}
-      </span>
+<span className="region-label-desktop">
+  {`Region: ${REGION_LABEL[regionFilter] ?? "Any"}`}
+</span>
+
+<span className="region-label-mobile">
+  {REGION_LABEL[regionFilter] ?? "Any"}
+</span>
     </Dropdown.Toggle>
 
     <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>

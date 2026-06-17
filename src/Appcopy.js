@@ -171,6 +171,73 @@ useEffect(() => {
     );
 
   // ---------------- helper to decode '+' → space ----------------
+
+function getDeepSaleRegionalPrices(review) {
+  const prices = {};
+
+  if (!datam || !datam.PHP) return [];
+
+  if (review.platform === "Playstation") {
+    Object.entries(getPsRegionalPrices(review)).forEach(([code, php]) => {
+      if (Number.isFinite(php) && php > 0) {
+        prices[code] = php;
+      }
+    });
+  } else {
+    addPhpCandidate(prices, "US", review.SalePrice || review.Price, "USD", datam);
+    addPhpCandidate(prices, "CA", review.CanadaPrice, "CAD", datam);
+    addPhpCandidate(prices, "PE", review.PeruPrice, "PEN", datam);
+    addPhpCandidate(prices, "AU", review.AustraliaPrice, "AUD", datam);
+    addPhpCandidate(prices, "CO", review.ColombiaPrice, "COP", datam);
+    addPhpCandidate(prices, "ZA", review.SouthafricaPrice, "ZAR", datam);
+    addPhpCandidate(prices, "BR", review.BrazilPrice, "BRL", datam);
+    addPhpCandidate(prices, "NO", review.NorwayPrice, "NOK", datam);
+    addPhpCandidate(prices, "PL", review.PolandPrice, "PLN", datam);
+    addPhpCandidate(prices, "NZ", review.NewZealandPrice, "NZD", datam);
+    addPhpCandidate(prices, "MX", review.MexicoPrice, "MXN", datam);
+    addPhpCandidate(prices, "HK", review.HongKongPrice, "HKD", datam);
+    addPhpCandidate(prices, "KR", review.KoreaPrice, "KRW", datam);
+    addPhpCandidate(prices, "JP", review.JapanPrice, "JPY", datam);
+    addPhpCandidate(prices, "SG", review.SingaporePrice, "SGD", datam);
+    addPhpCandidate(prices, "MY", review.MalaysiaPrice, "MYR", datam);
+    addPhpCandidate(prices, "TH", review.ThailandPrice, "THB", datam);
+
+    const ars = +review.ArgentinaPrice;
+    if (Number.isFinite(ars) && ars > 0 && datam.ARS) {
+      const phpPerARS = Number(datam.PHP) / Number(datam.ARS);
+      const basePhp = ars * phpPerARS;
+      const vat = basePhp * 0.21;
+      const regionality =
+        basePhp * 1.21 * ((1500 - 12100 * phpPerARS) / (12100 * phpPerARS));
+
+      prices.AR = basePhp + vat + regionality;
+    }
+  }
+
+  return Object.entries(prices)
+    .map(([region, php]) => ({ region, php }))
+    .filter((x) => Number.isFinite(x.php) && x.php > 0)
+    .sort((a, b) => a.php - b.php);
+}
+
+function isDeepSale(review) {
+  const prices = getDeepSaleRegionalPrices(review);
+
+  if (prices.length < 2) return false;
+
+  const first = prices[0]?.php;
+  const second = prices[1]?.php;
+  const third = prices[2]?.php;
+
+  // Cheapest region is at least 50% cheaper than the next cheapest region
+  if (second && first <= second * 0.65) return true;
+
+  // Top 2 regions are both at least 50% cheaper than the rest
+  if (third && second <= third * 0.65) return true;
+
+  return false;
+}
+
   const readQP = (params, key, def = "") => {
     const raw = params.get(key);
     if (raw == null) return def;
@@ -316,15 +383,19 @@ useEffect(() => {
   };
 
   // Sorting
-  const SORTERS = {
-    Popular: (a, b) => b.Popularity - a.Popularity,
-    "Top Rated": (a, b) => b.SCORE - a.SCORE,
-    "New Discounts": (a, b) =>
-      new Date(b.SaleStarted) - new Date(a.SaleStarted) || b.SCORE - a.SCORE,
-    "Latest Release": (a, b) => new Date(b.ReleaseDate) - new Date(a.ReleaseDate),
-    "Price ↓": (a, b) => a._lowestPHP - b._lowestPHP,
-    "Price ↑": (a, b) => b._lowestPHP - a._lowestPHP,
-  };
+const SORTERS = {
+  Popular: (a, b) => b.Popularity - a.Popularity,
+  "Top Rated": (a, b) => b.SCORE - a.SCORE,
+  "New Discounts": (a, b) =>
+    new Date(b.SaleStarted) - new Date(a.SaleStarted) || b.SCORE - a.SCORE,
+  "Latest Release": (a, b) => new Date(b.ReleaseDate) - new Date(a.ReleaseDate),
+  "Price ↓": (a, b) => a._lowestPHP - b._lowestPHP,
+  "Price ↑": (a, b) => b._lowestPHP - a._lowestPHP,
+"Deep Sale": (a, b) =>
+  (b.SCORE || 0) - (a.SCORE || 0) ||
+  (b.Popularity || 0) - (a.Popularity || 0) ||
+  new Date(b.ReleaseDate) - new Date(a.ReleaseDate),
+};
 
   const onLatestChange = (label) => {
     const needsPriceSort = label === "Price ↓" || label === "Price ↑";
@@ -558,6 +629,11 @@ const routePlatformField =
           regionPass = minRegion === regionFilter;
         }
 
+        let deepSalePass = true;
+        if (latestDropDown === "Deep Sale" && ratesReady) {
+          deepSalePass = isDeepSale(review);
+        }
+
         return (
           `${review.Title || ""} ${review.Slug || review.slug || ""}`
             .replace(/[^a-zA-Z0-9é ]/g, "")
@@ -578,8 +654,9 @@ const routePlatformField =
           review.platform
   .toLowerCase()
   .includes(routePlatformField.toLowerCase()) &&
-          pricePass &&
-          regionPass
+        pricePass &&
+        regionPass &&
+        deepSalePass
         );
       }),
     [

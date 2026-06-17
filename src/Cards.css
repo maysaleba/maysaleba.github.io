@@ -1798,3 +1798,17 @@ a.infotax:hover {
   background-color: #4d2c2c;
   color: #ffd6d6;
 }
+
+.region-label-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 575.98px) {
+  .region-label-desktop {
+    display: none;
+  }
+
+  .region-label-mobile {
+    display: inline;
+  }
+}

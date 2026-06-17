@@ -202,15 +202,19 @@ const phpCeil = (value, placeholder = "₱--") =>
     );
   }
 
-  function DateConvert(s) {
-    var s = s.split(/\D/),
-      dt = new Date(s[0], s[1] - 1, s[2]);
-    return dt.toLocaleString("en-CA", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-  }
+function DateConvert(value) {
+  if (!value) return "";
+
+  const dt = new Date(value);
+
+  if (Number.isNaN(dt.getTime())) return "";
+
+  return dt.toLocaleString("en-CA", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
 
   function PesoPlusPrice() {
     if (matchGames[0].platform === "Nintendo Switch" || matchGames[0].platform === "Nintendo Switch 2") {

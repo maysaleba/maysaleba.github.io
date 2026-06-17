@@ -98,40 +98,53 @@ const safePhp = (amt, rate, placeholder = "₱--") =>
 
 
   const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-  const firstDate = new Date();
-  const secondDate = new Date(SaleEnds);
-  // const diffDays = Math.round((secondDate - firstDate) / oneDay);
+ 
 
-  function DaysLeft(props) {
+function DaysLeft(props) {
+  const saleEndDate = new Date(props.isExpired);
 
-    // console.log(props.platform);
+  if (!props.isExpired || Number.isNaN(saleEndDate.getTime())) {
+    return null;
+  }
 
+  const msLeft = saleEndDate - new Date();
 
-    const isExpired = props.isExpired;
-    var diffDays = 0;
+  // Keep old Nintendo behavior: show "0 days left" on the sale end date
+  if (
+    props.platform === "Nintendo Switch" ||
+    props.platform === "Nintendo Switch 2"
+  ) {
+    const todayDateOnly = new Date().toISOString().slice(0, 10);
+    const saleDateOnly = String(props.isExpired).slice(0, 10);
 
-    if (props.platform === "Playstation"){
-diffDays = Math.round((secondDate - firstDate) / oneDay);
-    } else {
+    if (saleDateOnly >= todayDateOnly) {
+      const diffDays = Math.max(0, Math.ceil(msLeft / oneDay));
 
-      diffDays = Math.round((secondDate - firstDate) / oneDay);
-    }
-
-    
-
-    if (diffDays >= 0) {
       return (
         <Badge bg="warning" text="dark">
           {diffDays} days left
         </Badge>
       );
     }
+  }
+
+  // PlayStation uses real timestamp
+  if (msLeft > 0) {
+    const diffDays = Math.ceil(msLeft / oneDay);
+
     return (
-      <Badge bg="secondary" text="light">
-        Expired
+      <Badge bg="warning" text="dark">
+        {diffDays} days left
       </Badge>
     );
   }
+
+  return (
+    <Badge bg="secondary" text="light">
+      Expired
+    </Badge>
+  );
+}
 
   function OpenScore(score) {
     const hasScore = score.hasScore;
