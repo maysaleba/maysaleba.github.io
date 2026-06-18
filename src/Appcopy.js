@@ -220,22 +220,24 @@ function getDeepSaleRegionalPrices(review) {
     .sort((a, b) => a.php - b.php);
 }
 
+const DEEP_SALE_THRESHOLD = 0.65;
+
 function isDeepSale(review) {
   const prices = getDeepSaleRegionalPrices(review);
 
   if (prices.length < 2) return false;
 
-  const first = prices[0]?.php;
-  const second = prices[1]?.php;
-  const third = prices[2]?.php;
+  const cheapest = prices[0].php;
 
-  // Cheapest region is at least 50% cheaper than the next cheapest region
-  if (second && first <= second * 0.65) return true;
+  // Only 2 prices available
+  if (prices.length === 2) {
+    const second = prices[1].php;
+    return cheapest <= second * DEEP_SALE_THRESHOLD;
+  }
 
-  // Top 2 regions are both at least 50% cheaper than the rest
-  if (third && second <= third * 0.65) return true;
-
-  return false;
+  // 3+ prices available
+  const third = prices[2].php;
+  return cheapest <= third * DEEP_SALE_THRESHOLD;
 }
 
   const readQP = (params, key, def = "") => {
