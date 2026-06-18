@@ -393,7 +393,7 @@ const SORTERS = {
   "Latest Release": (a, b) => new Date(b.ReleaseDate) - new Date(a.ReleaseDate),
   "Price ↓": (a, b) => a._lowestPHP - b._lowestPHP,
   "Price ↑": (a, b) => b._lowestPHP - a._lowestPHP,
-"Deep Sale": (a, b) =>
+"Best Deals": (a, b) =>
 (b.Popularity || 0) - (a.Popularity || 0) ||
   (b.SCORE || 0) - (a.SCORE || 0) ||
   new Date(b.ReleaseDate) - new Date(a.ReleaseDate),
@@ -632,7 +632,7 @@ const routePlatformField =
         }
 
         let deepSalePass = true;
-        if (latestDropDown === "Deep Sale" && ratesReady) {
+        if (latestDropDown === "Best Deals" && ratesReady) {
           deepSalePass = isDeepSale(review);
         }
 

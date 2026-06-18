@@ -147,7 +147,7 @@ const platformIcon = (platform) => {
   );
 
 const LATEST_OPTIONS = useMemo(
-  () => ["Popular", "Deep Sale", "Top Rated", "New Discounts", "Latest Release", "Price ↑", "Price ↓" ],
+  () => ["Popular", "Best Deals", "Top Rated", "New Discounts", "Latest Release", "Price ↑", "Price ↓" ],
   []
 );
 
