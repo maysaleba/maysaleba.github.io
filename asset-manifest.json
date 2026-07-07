@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/maysaleba.github.io/static/css/main.f709240f.chunk.css",
-    "main.js": "/maysaleba.github.io/static/js/main.9eba540d.chunk.js",
-    "main.js.map": "/maysaleba.github.io/static/js/main.9eba540d.chunk.js.map",
+    "main.js": "/maysaleba.github.io/static/js/main.587a484a.chunk.js",
+    "main.js.map": "/maysaleba.github.io/static/js/main.587a484a.chunk.js.map",
     "runtime-main.js": "/maysaleba.github.io/static/js/runtime-main.51806aa7.js",
     "runtime-main.js.map": "/maysaleba.github.io/static/js/runtime-main.51806aa7.js.map",
     "static/css/2.a07948fa.chunk.css": "/maysaleba.github.io/static/css/2.a07948fa.chunk.css",
@@ -19,7 +19,7 @@
     "static/media/discord.da2cc576.jpg": "/maysaleba.github.io/static/media/discord.da2cc576.jpg",
     "static/media/form.9f219672.jpg": "/maysaleba.github.io/static/media/form.9f219672.jpg",
     "static/media/language.56f6f635.jpg": "/maysaleba.github.io/static/media/language.56f6f635.jpg",
-    "static/media/logo.f72aa506.svg": "/maysaleba.github.io/static/media/logo.f72aa506.svg",
+    "static/media/logo.959ef871.svg": "/maysaleba.github.io/static/media/logo.959ef871.svg",
     "static/media/noimage.52e869e4.jpg": "/maysaleba.github.io/static/media/noimage.52e869e4.jpg",
     "static/media/purchase.a9ccbefc.jpg": "/maysaleba.github.io/static/media/purchase.a9ccbefc.jpg",
     "static/media/regionality_invite.637c1227.jpg": "/maysaleba.github.io/static/media/regionality_invite.637c1227.jpg",
@@ -37,6 +37,6 @@
     "static/css/2.a07948fa.chunk.css",
     "static/js/2.6bde9136.chunk.js",
     "static/css/main.f709240f.chunk.css",
-    "static/js/main.9eba540d.chunk.js"
+    "static/js/main.587a484a.chunk.js"
   ]
 }
