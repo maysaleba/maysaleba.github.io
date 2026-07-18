@@ -44,56 +44,64 @@ const {
   setDarkMode,
 } = props;
   const classes = useStyles();
-  const itemsList = [
-    {
-      text: "Home",
-      icon: <HomeIcon />,
-      onClick: () => {
-        setOpen(false);
-        history.push("/");
-      },
+const itemsList = [
+  {
+    text: "Home",
+    icon: <HomeIcon />,
+    onClick: () => {
+      setOpen(false);
+      history.push("/");
     },
-    {
-      text: "Switch",
-      icon: <Icon icon="mdi:nintendo-switch" width="24" />,
-      onClick: () => {
-        setOpen(false);
-        history.push("/switch");
-      },
-    },
-    {
-      text: "Playstation",
-      icon: <Icon icon="bi:playstation" width="24" />,
-      onClick: () => {
-        setOpen(false);
-        history.push("/playstation");
-      },
-    },
-    {
-      text: "Gift Cards",
-      icon: <CardGiftcardIcon />,
-      onClick: () => {
-        setOpen(false);
-        history.push("/giftcards");
-      },
-    },
-    {
-      text: "FAQ",
-      icon: <InfoIcon />,
-      onClick: () => {
-        setOpen(false);
-        history.push("/faq");
-      },
-    },
-{
-  text: darkMode ? "Dark Mode" : "Light Mode",
-  icon: darkMode ? <DarkModeIcon /> : <LightModeIcon />,
-  onClick: () => {
-    setDarkMode((prev) => !prev);
   },
-  isThemeToggle: true,
-},
-  ];
+  {
+    text: "Switch",
+    icon: <Icon icon="mdi:nintendo-switch" width="24" />,
+    onClick: () => {
+      setOpen(false);
+      history.push("/switch");
+    },
+  },
+  {
+    text: "Playstation",
+    icon: <Icon icon="bi:playstation" width="24" />,
+    onClick: () => {
+      setOpen(false);
+      history.push("/playstation");
+    },
+  },
+  {
+    text: "Flip",
+    icon: <Icon icon="mdi:coin" width="24" />,
+    onClick: () => {
+      setOpen(false);
+      history.push("/flip");
+    },
+  },
+  {
+    text: "Gift Cards",
+    icon: <CardGiftcardIcon />,
+    onClick: () => {
+      setOpen(false);
+      history.push("/giftcards");
+    },
+  },
+  {
+    text: "FAQ",
+    icon: <InfoIcon />,
+    onClick: () => {
+      setOpen(false);
+      history.push("/faq");
+    },
+  },
+  {
+    text: darkMode ? "Dark Mode" : "Light Mode",
+    icon: darkMode ? <DarkModeIcon /> : <LightModeIcon />,
+    onClick: () => {
+      setDarkMode((prev) => !prev);
+    },
+    isThemeToggle: true,
+  },
+];
 
   const [open, setOpen] = useState(false);
   console.log(searchQuery);

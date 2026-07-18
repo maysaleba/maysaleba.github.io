@@ -3,7 +3,7 @@ import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import usePagination from "./usePagination.js";
 import reviewssw from "./csvjson.json";
 import reviewsst from "./csvjsontr.json";
-
+import Flip from "./Flip";
 import CardGroup from "./CardGroup";
 import "./App.css";
 import { BrowserRouter as Router, Route, useLocation } from "react-router-dom";
@@ -1157,6 +1157,25 @@ const onPop = () => {
           </div>
         )}
       />
+<Route
+  path="/flip"
+  exact
+  render={() => (
+    <div>
+      <Flip />
+      <Helmet>
+        <title>Coin Flip - May Sale Ba?</title>
+        <meta
+          name="description"
+          content="Flip a coin"
+        />
+      </Helmet>
+    </div>
+  )}
+/>
+
     </Router>
+
+
   );
 }
