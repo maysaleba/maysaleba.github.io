@@ -1,9 +1,9 @@
 // Appcopy.js
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import usePagination from "./usePagination.js";
 import reviewssw from "./csvjson.json";
 import reviewsst from "./csvjsontr.json";
-
+import Flip from "./Flip";
 import CardGroup from "./CardGroup";
 import "./App.css";
 import { BrowserRouter as Router, Route, useLocation } from "react-router-dom";
@@ -23,23 +23,72 @@ var today = new Date();
 var dd = String(today.getDate()).padStart(2, "0");
 var mm = String(today.getMonth() + 1).padStart(2, "0");
 var yyyy = today.getFullYear();
-let hour = today.getHours();
+
 today = yyyy + "-" + mm + "-" + dd;
 
 // ---------------- Minimal list route wrapper ----------------
 function ListPage({ defaults, SearchCmpProps, CardGroupProps, HelmetProps }) {
-  const { setPlatformField, setPlatformDropDown, setRegionFilter } = CardGroupProps;
+  const location = useLocation();
 
-  React.useEffect(() => {
-    if (defaults?.platform !== undefined) {
-      setPlatformField(defaults.platform);
-      setPlatformDropDown(defaults.platformLabel ?? (defaults.platform || "All Platforms"));
+  const {
+    setPlatformField,
+    setPlatformDropDown,
+    setRegionFilter,
+    setSearchQuery,
+    onDropDownChange,
+    onFilterChange,
+    clearGenre,
+    onLatestChange,
+    onLatestDrop,
+    onPriceRangeDrop,
+    onPriceRangeChange,
+    onRegionChange,
+    jumpPage,
+  } = CardGroupProps;
+
+useLayoutEffect(() => {
+  if (defaults?.platform !== undefined) {
+    setPlatformField(defaults.platform);
+    setPlatformDropDown(defaults.platformLabel ?? (defaults.platform || "All Platforms"));
+  }
+}, [defaults?.platform, defaults?.platformLabel, location.pathname]);
+
+useEffect(() => {
+    const params = new URLSearchParams(location.search);
+
+    const readQP = (key, def = "") => {
+      const raw = params.get(key);
+      if (raw == null) return def;
+      return decodeURIComponent(raw.replace(/\+/g, " "));
+    };
+
+    const s = readQP("s", "");
+    const genre = readQP("genre", "All Genres");
+    const sort = readQP("sort", "Popular");
+    const price = readQP("price", "All Price Range");
+    const region = params.get("region") || "";
+    const page = parseInt(params.get("page") || "1", 10);
+
+    setSearchQuery(s);
+
+    onDropDownChange(genre);
+    if (genre === "All Genres") {
+      clearGenre();
+    } else {
+      onFilterChange(genre);
     }
-    if (defaults?.region !== undefined) {
-      setRegionFilter((prev) => (prev ? prev : defaults.region));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+
+    onLatestChange(sort);
+    onLatestDrop(sort);
+
+    onPriceRangeDrop(price);
+    onPriceRangeChange(price);
+
+    onRegionChange(region);
+    setRegionFilter(region);
+
+    jumpPage(Number.isFinite(page) ? page : 1);
+  }, [location.search]);
 
   return (
     <>
@@ -57,6 +106,12 @@ function ListPage({ defaults, SearchCmpProps, CardGroupProps, HelmetProps }) {
 }
 
 export default function Main() {
+useEffect(() => {
+  if ("scrollRestoration" in window.history) {
+    window.history.scrollRestoration = "auto";
+  }
+}, []);
+
   function sortJson(element, prop, propType, asc) {
     switch (propType) {
       case "int":
@@ -116,6 +171,75 @@ export default function Main() {
     );
 
   // ---------------- helper to decode '+' → space ----------------
+
+function getDeepSaleRegionalPrices(review) {
+  const prices = {};
+
+  if (!datam || !datam.PHP) return [];
+
+  if (review.platform === "Playstation") {
+    Object.entries(getPsRegionalPrices(review)).forEach(([code, php]) => {
+      if (Number.isFinite(php) && php > 0) {
+        prices[code] = php;
+      }
+    });
+  } else {
+    addPhpCandidate(prices, "US", review.SalePrice || review.Price, "USD", datam);
+    addPhpCandidate(prices, "CA", review.CanadaPrice, "CAD", datam);
+    addPhpCandidate(prices, "PE", review.PeruPrice, "PEN", datam);
+    addPhpCandidate(prices, "AU", review.AustraliaPrice, "AUD", datam);
+    addPhpCandidate(prices, "CO", review.ColombiaPrice, "COP", datam);
+    addPhpCandidate(prices, "ZA", review.SouthafricaPrice, "ZAR", datam);
+    addPhpCandidate(prices, "BR", review.BrazilPrice, "BRL", datam);
+    addPhpCandidate(prices, "NO", review.NorwayPrice, "NOK", datam);
+    addPhpCandidate(prices, "PL", review.PolandPrice, "PLN", datam);
+    addPhpCandidate(prices, "NZ", review.NewZealandPrice, "NZD", datam);
+    addPhpCandidate(prices, "MX", review.MexicoPrice, "MXN", datam);
+    addPhpCandidate(prices, "HK", review.HongKongPrice, "HKD", datam);
+    addPhpCandidate(prices, "KR", review.KoreaPrice, "KRW", datam);
+    addPhpCandidate(prices, "JP", review.JapanPrice, "JPY", datam);
+    addPhpCandidate(prices, "SG", review.SingaporePrice, "SGD", datam);
+    addPhpCandidate(prices, "MY", review.MalaysiaPrice, "MYR", datam);
+    addPhpCandidate(prices, "TH", review.ThailandPrice, "THB", datam);
+
+    const ars = +review.ArgentinaPrice;
+    if (Number.isFinite(ars) && ars > 0 && datam.ARS) {
+      const phpPerARS = Number(datam.PHP) / Number(datam.ARS);
+      const basePhp = ars * phpPerARS;
+      const vat = basePhp * 0.21;
+      const regionality =
+        basePhp * 1.21 * ((1500 - 12100 * phpPerARS) / (12100 * phpPerARS));
+
+      prices.AR = basePhp + vat + regionality;
+    }
+  }
+
+  return Object.entries(prices)
+    .map(([region, php]) => ({ region, php }))
+    .filter((x) => Number.isFinite(x.php) && x.php > 0)
+    .sort((a, b) => a.php - b.php);
+}
+
+const DEEP_SALE_THRESHOLD = 0.65;
+
+function isDeepSale(review) {
+  const prices = getDeepSaleRegionalPrices(review);
+
+  if (prices.length < 2) return false;
+
+  const cheapest = prices[0].php;
+
+  // Only 2 prices available
+  if (prices.length === 2) {
+    const second = prices[1].php;
+    return cheapest <= second * DEEP_SALE_THRESHOLD;
+  }
+
+  // 3+ prices available
+  const third = prices[2].php;
+  return cheapest <= third * DEEP_SALE_THRESHOLD;
+}
+
   const readQP = (params, key, def = "") => {
     const raw = params.get(key);
     if (raw == null) return def;
@@ -129,14 +253,25 @@ export default function Main() {
     return raw ? decodeURIComponent(raw.replace(/\+/g, " ")) : "";
   })();
 
-  function ScrollToTop() {
-    const { pathname } = useLocation();
-    useEffect(() => {
-      // keep this simple; browsers will restore on Back which overrides this (desired)
+function ScrollToTop() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const listPaths = ["/allgames", "/switch", "/switch-2", "/playstation"];
+
+    if (location.state?.scrollToTop) {
       window.scrollTo({ left: 0, top: 0, behavior: "instant" });
-    }, [pathname]);
-    return null;
-  }
+      return;
+    }
+
+    // Let list pages keep/restored scroll when returning from content
+    if (listPaths.includes(location.pathname)) return;
+
+    window.scrollTo({ left: 0, top: 0, behavior: "instant" });
+  }, [location.pathname, location.state]);
+
+  return null;
+}
 
   const theURLa = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json";
 
@@ -250,15 +385,19 @@ useEffect(() => {
   };
 
   // Sorting
-  const SORTERS = {
-    Popular: (a, b) => b.Popularity - a.Popularity,
-    "Top Rated": (a, b) => b.SCORE - a.SCORE,
-    "New Discounts": (a, b) =>
-      new Date(b.SaleStarted) - new Date(a.SaleStarted) || b.SCORE - a.SCORE,
-    "Latest Release": (a, b) => new Date(b.ReleaseDate) - new Date(a.ReleaseDate),
-    "Price ↓": (a, b) => a._lowestPHP - b._lowestPHP,
-    "Price ↑": (a, b) => b._lowestPHP - a._lowestPHP,
-  };
+const SORTERS = {
+  Popular: (a, b) => b.Popularity - a.Popularity,
+  "Top Rated": (a, b) => b.SCORE - a.SCORE,
+  "New Discounts": (a, b) =>
+    new Date(b.SaleStarted) - new Date(a.SaleStarted) || b.SCORE - a.SCORE,
+  "Latest Release": (a, b) => new Date(b.ReleaseDate) - new Date(a.ReleaseDate),
+  "Price ↓": (a, b) => a._lowestPHP - b._lowestPHP,
+  "Price ↑": (a, b) => b._lowestPHP - a._lowestPHP,
+"Best Deals": (a, b) =>
+(b.Popularity || 0) - (a.Popularity || 0) ||
+  (b.SCORE || 0) - (a.SCORE || 0) ||
+  new Date(b.ReleaseDate) - new Date(a.ReleaseDate),
+};
 
   const onLatestChange = (label) => {
     const needsPriceSort = label === "Price ↓" || label === "Price ↑";
@@ -285,22 +424,8 @@ useEffect(() => {
 
   const clearSearchChange = () => setSearchQuery("");
 
-  // Currency → region mapping
-  const CCY_TO_REGION = {
-    USD: "US", CAD: "CA", PEN: "PE", AUD: "AU", COP: "CO", ZAR: "ZA",
-    BRL: "BR", NOK: "NO", PLN: "PL", NZD: "NZ", MXN: "MX", HKD: "HK",
-    KRW: "KR", JPY: "JP", SGD: "SG", TRY: "TR", PHP: "PH", ARS: "AR",
-    IDR: "ID", INR: "IN",
-  };
 
-  function ccyFromEsrb(review) {
-    const tag = String(review.ESRBRating || "").toUpperCase();
-    if (tag === "TRD") return "TRY";
-    const known = new Set([
-      "PHP","USD","HKD","SGD","JPY","KRW","AUD","NZD","CAD","MXN","BRL","PLN","NOK","ZAR","PEN","ARS","TRY",
-    ]);
-    return known.has(tag) ? tag : "PHP";
-  }
+
 
   function addPhpCandidate(bucket, key, amt, ccy, rates) {
     const n = +amt;
@@ -467,6 +592,17 @@ function normalizeGenre(genre = "") {
     .replaceAll("casual", "unique");
 }
 
+const currentPath = window.location.pathname;
+
+const routePlatformField =
+  currentPath === "/switch"
+    ? "Switch"
+    : currentPath === "/switch-2"
+    ? "Switch 2"
+    : currentPath === "/playstation"
+    ? "Playstation"
+    : platformField;
+
   // ---------- FILTERING + PAGINATION ----------
   let filteredReviews = useMemo(
     () =>
@@ -477,7 +613,9 @@ function normalizeGenre(genre = "") {
           .replace(/\s/g, "")
           .toLowerCase();
 
-        const filterGenres = cleanFilterField.split(",").map((g) => g.trim());
+        const filterGenres = cleanFilterField
+  ? cleanFilterField.split(",").map((g) => g.trim()).filter(Boolean)
+  : [];
 
         const ratesReady = Boolean(datam && datam.PHP);
 
@@ -493,6 +631,11 @@ function normalizeGenre(genre = "") {
           regionPass = minRegion === regionFilter;
         }
 
+        let deepSalePass = true;
+        if (latestDropDown === "Best Deals" && ratesReady) {
+          deepSalePass = isDeepSale(review);
+        }
+
         return (
           `${review.Title || ""} ${review.Slug || review.slug || ""}`
             .replace(/[^a-zA-Z0-9é ]/g, "")
@@ -506,12 +649,16 @@ function normalizeGenre(genre = "") {
                 .replace(/\s/g, "")
                 .toLowerCase()
             ) &&
-          filterGenres.some((filterGenre) =>
-            normalizeGenre(review.genre || "").includes(filterGenre)
-          ) &&
-          review.platform.toLowerCase().includes(platformField.toLowerCase()) &&
-          pricePass &&
-          regionPass
+(filterGenres.length === 0 ||
+  filterGenres.some((filterGenre) =>
+    normalizeGenre(review.genre || "").includes(filterGenre)
+  )) &&
+          review.platform
+  .toLowerCase()
+  .includes(routePlatformField.toLowerCase()) &&
+        pricePass &&
+        regionPass &&
+        deepSalePass
         );
       }),
     [
@@ -519,6 +666,7 @@ function normalizeGenre(genre = "") {
       filterField,
       searchQuery,
       platformField,
+      routePlatformField,
       priceRangeField,
       priceRangeLow,
       priceRangeDropDown,
@@ -528,6 +676,30 @@ function normalizeGenre(genre = "") {
   );
 
   let { pageData, page, maxPage, jumpPage } = usePagination(filteredReviews, 40);
+
+const prevPageRef = React.useRef(page);
+const skipNextPageScrollRef = React.useRef(true);
+const isRestoringHistoryRef = React.useRef(false);
+
+useEffect(() => {
+  if (!hydrated) return;
+
+  if (skipNextPageScrollRef.current) {
+    skipNextPageScrollRef.current = false;
+    prevPageRef.current = page;
+    return;
+  }
+
+  if (isRestoringHistoryRef.current) {
+    prevPageRef.current = page;
+    return;
+  }
+
+  if (prevPageRef.current !== page) {
+    window.scrollTo({ left: 0, top: 0, behavior: "instant" });
+    prevPageRef.current = page;
+  }
+}, [page, hydrated]);
 
   // --- URL / pagination refs (must be declared before effects that use them) ---
   const initialPageRef = React.useRef(1);
@@ -577,10 +749,14 @@ function normalizeGenre(genre = "") {
    if (initialPageConsumedRef.current) return; // already applied once
  
    const initial = initialPageRef.current || 1;
-   if (initial <= 1) {
-     initialPageConsumedRef.current = true; // nothing to do; mark consumed to avoid future overrides
-     return;
-   }
+if (initial <= 1) {
+  if (page !== 1) {
+    jumpPage(1);
+  }
+
+  initialPageConsumedRef.current = true;
+  return;
+}
  
    const pageSize = 40; // must match usePagination(..., 40)
    const max = Math.max(1, Math.ceil(filteredReviews.length / pageSize));
@@ -660,7 +836,16 @@ function normalizeGenre(genre = "") {
       const qs = params.toString();
       const newUrl = `${pathname}${qs ? `?${qs}` : ""}`;
       // After initial hydration, write changes as NEW history entries
-      window.history.pushState({}, "", newUrl);
+      const oldUrl = window.location.pathname + window.location.search;
+const oldParams = new URLSearchParams(window.location.search);
+const oldPage = oldParams.get("page") || "1";
+const newPage = params.get("page") || "1";
+
+if (oldPage !== newPage) {
+  window.history.pushState({}, "", newUrl);
+} else if (oldUrl !== newUrl) {
+  window.history.replaceState({}, "", newUrl);
+}
     }
   }, [
     hydrated,
@@ -674,8 +859,14 @@ function normalizeGenre(genre = "") {
 
   // 3) Respond to browser Back/Forward by re-reading the URL (popstate)
    useEffect(() => {
-     const onPop = () => {
-       const params = new URLSearchParams(window.location.search);
+const onPop = () => {
+  isRestoringHistoryRef.current = true;
+
+  setTimeout(() => {
+    isRestoringHistoryRef.current = false;
+  }, 1500);
+
+  const params = new URLSearchParams(window.location.search);
        const s = readQP(params, "s", "");
        const genre = readQP(params, "genre", "All Genres");
        const sort = readQP(params, "sort", "Popular");
@@ -757,7 +948,7 @@ function normalizeGenre(genre = "") {
     margin: calc(var(--blur-radius) * -1) calc(var(--blur-radius) * -1);
     background-size: cover;
     background-position: 50%;
-    mix-blend-mode: overlay;
+    mix-blend-mode: var(--hero-blend);
     filter: blur(var(--blur-radius));
   `;
 
@@ -966,6 +1157,25 @@ function normalizeGenre(genre = "") {
           </div>
         )}
       />
+<Route
+  path="/flip"
+  exact
+  render={() => (
+    <div>
+      <Flip />
+      <Helmet>
+        <title>Coin Flip - May Sale Ba?</title>
+        <meta
+          name="description"
+          content="Flip a coin"
+        />
+      </Helmet>
+    </div>
+  )}
+/>
+
     </Router>
+
+
   );
 }

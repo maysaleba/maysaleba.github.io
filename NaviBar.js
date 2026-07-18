@@ -16,7 +16,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import logo from "./logo.svg";
 import Drawer from "@mui/material/Drawer";
 import { makeStyles } from "@mui/styles";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 import InfoIcon from "@mui/icons-material/Info";
 import CloseIcon from "@mui/icons-material/Close";
@@ -44,56 +44,64 @@ const {
   setDarkMode,
 } = props;
   const classes = useStyles();
-  const itemsList = [
-    {
-      text: "Home",
-      icon: <HomeIcon />,
-      onClick: () => {
-        setOpen(false);
-        window.location.href = "http://maysaleba.com/";
-      },
+const itemsList = [
+  {
+    text: "Home",
+    icon: <HomeIcon />,
+    onClick: () => {
+      setOpen(false);
+      history.push("/");
     },
-    {
-      text: "Switch",
-      icon: <Icon icon="mdi:nintendo-switch" width="24" />,
-      onClick: () => {
-        setOpen(false);
-        window.location.href = "http://maysaleba.com/switch";
-      },
-    },
-    {
-      text: "Playstation",
-      icon: <Icon icon="bi:playstation" width="24" />,
-      onClick: () => {
-        setOpen(false);
-        window.location.href = "http://maysaleba.com/playstation";
-      },
-    },
-    {
-      text: "Gift Cards",
-      icon: <CardGiftcardIcon />,
-      onClick: () => {
-        setOpen(false);
-        history.push("/giftcards");
-      },
-    },
-    {
-      text: "FAQ",
-      icon: <InfoIcon />,
-      onClick: () => {
-        setOpen(false);
-        history.push("/faq");
-      },
-    },
-{
-  text: darkMode ? "Dark Mode" : "Light Mode",
-  icon: darkMode ? <DarkModeIcon /> : <LightModeIcon />,
-  onClick: () => {
-    setDarkMode((prev) => !prev);
   },
-  isThemeToggle: true,
-},
-  ];
+  {
+    text: "Switch",
+    icon: <Icon icon="mdi:nintendo-switch" width="24" />,
+    onClick: () => {
+      setOpen(false);
+      history.push("/switch");
+    },
+  },
+  {
+    text: "Playstation",
+    icon: <Icon icon="bi:playstation" width="24" />,
+    onClick: () => {
+      setOpen(false);
+      history.push("/playstation");
+    },
+  },
+  {
+    text: "Flip",
+    icon: <Icon icon="mdi:coin" width="24" />,
+    onClick: () => {
+      setOpen(false);
+      history.push("/flip");
+    },
+  },
+  {
+    text: "Gift Cards",
+    icon: <CardGiftcardIcon />,
+    onClick: () => {
+      setOpen(false);
+      history.push("/giftcards");
+    },
+  },
+  {
+    text: "FAQ",
+    icon: <InfoIcon />,
+    onClick: () => {
+      setOpen(false);
+      history.push("/faq");
+    },
+  },
+  {
+    text: darkMode ? "Dark Mode" : "Light Mode",
+    icon: darkMode ? <DarkModeIcon /> : <LightModeIcon />,
+    onClick: () => {
+      setDarkMode((prev) => !prev);
+    },
+    isThemeToggle: true,
+  },
+];
 
   const [open, setOpen] = useState(false);
   console.log(searchQuery);
@@ -145,7 +153,7 @@ const {
               fontSize: 16,
             }}
           >
-            <a className="logocolortext" href="https://maysaleba.com/switch">
+            <Link className="logocolortext" to="/switch">
               <Box
                 sx={{
                   marginRight: 2,
@@ -156,8 +164,8 @@ const {
               >
                 Switch
               </Box>
-            </a>
-            <a className="logocolortext" href="https://maysaleba.com/playstation">
+            </Link>
+           <Link className="logocolortext" to="/playstation">
             <Box
               sx={{
                 marginRight: 2,
@@ -168,8 +176,8 @@ const {
             >
               Playstation
             </Box>
-            </a>
-            <a className="logocolortext" href="https://maysaleba.com/giftcards">
+            </Link>
+            <Link className="logocolortext" to="/giftcards">
             
               <Typography
                 noWrap
@@ -183,8 +191,8 @@ const {
                 Gift Cards
               </Typography>
            
-            </a>
-            <a className="logocolortext" href="https://maysaleba.com/faq">
+           </Link>
+           <Link className="logocolortext" to="/faq">
             <Box
               sx={{
                 marginRight: 2,
@@ -195,7 +203,7 @@ const {
             >
               FAQ
             </Box>
-            </a>
+           </Link>
 <button
   type="button"
   className="theme-toggle-btn"
