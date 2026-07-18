@@ -205,6 +205,16 @@
   gap: 6px;
 }
 
+.buy small,
+.save small {
+  display: block;
+  margin-top: 6px;
+  font-size: 1rem;
+  font-weight: normal;
+  opacity: 0.8;
+  font-style: italic;
+}
+
 .result-icon {
   width: 1.15em;
   height: 1.15em;
@@ -213,6 +223,36 @@
 
 .flipping {
   color: #b0b0b0;
+}
+
+.flip-history-reset {
+  margin-top: 12px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: #9ca3af;
+  transition: color 0.2s ease;
+
+    text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.flip-history-reset:hover {
+  color: #ffffff;
+}
+
+.flip-history-reset:active {
+  opacity: 0.7;
 }
 
 /* ---------- BUTTON ---------- */

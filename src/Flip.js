@@ -8,8 +8,79 @@ export default function Flip() {
   const [result, setResult] = useState(null);
   const [landingResult, setLandingResult] = useState(null);
   const [history, setHistory] = useState([]);
+  const [resultMessage, setResultMessage] = useState("");
 
   const flipSound = useRef(null);
+
+const buyMessages = [
+  "Deserve mo 'yan.",
+  "Hindi ka magsisisi.",
+  "Sayang ang sale!",
+  "Checkout mo na!",
+  "Baka mawala.",
+  "Habang discounted pa.",
+  "Go na 'yan!",
+  "Add to cart na!",
+  "Hindi na bababa 'yan... siguro.",
+  "Sulitin ang discount!",
+  "Treat yourself.",
+  "One click away.",
+  "Budol responsibly.",
+  "Minsan lang 'to.",
+  "Sulit yan!",
+  "Heal your inner child.",
+  "Mukhang sign na 'to.",
+  "Kunin mo na bago mawala.",
+  "Don't overthink it.",
+  "Tinatawag na ang pangalan mo.",
+  "Worth the hype.",
+  "Reward mo na sa sarili mo.",
+  "Hindi ka araw-araw gumagastos.",
+  "Perfect time to buy.",
+  "Okay lang 'yan.",
+  "Go bago matapos ang sale.",
+  "Mukhang good deal.",
+  "Aanhin ang wishlist kung di bibilhin?",
+  "Heal your inner demon.",
+  "Sakto sa budget.",
+  "This is your sign.",
+  "Bili now, thank yourself later.",
+];
+
+const saveMessages = [
+  "Next sale na lang.",
+  "Hintay muna.",
+  "Ipunin mo muna.",
+  "May mas magandang deal pa.",
+  "Patience pays off.",
+  "Abang ng bigger discount.",
+  "Future you will thank you.",
+  "Hindi lahat ng sale, sulit.",
+  "Wishlist muna.",
+  "Hindi naman mawawala agad 'yan.",
+  "Pwede pang pag-isipan.",
+  "Konting tiis pa.",
+  "Relax lang.",
+  "Baka bumaba pa.",
+  "Hold your wallet.",
+  "Save now, buy later.",
+  "May next Sale pa naman.",
+  "Hintay ng all-time low.",
+  "Wallet first, Game later.",
+  "Hindi ka nagmamadali.",
+  "Resist the budol.",
+  "Needs over wants.",
+  "Pag-isipan mo muna.",
+  "Baka impulse buy lang.",
+  "Masarap din mag-ipon.",
+  "Wait for a better deal.",
+  "Madami ka pang backlogs.",
+  "Tapusin mo muna backlog mo.",
+  "Hindi naman urgent.",
+  "May susunod pang sale.",
+  "Your wallet approves.",
+  "Stay strong.",
+];
 
   const flipCoin = () => {
     if (flipping) return;
@@ -22,15 +93,23 @@ export default function Flip() {
       });
     }
 
-    const nextResult = Math.random() < 0.6 ? "buy" : "save";
+    const nextResult = Math.random() < 0.5 ? "buy" : "save";
 
     setResult(null);
     setLandingResult(nextResult);
     setFlipping(true);
 
     setTimeout(() => {
-      setResult(nextResult);
-      setFlipping(false);
+setResult(nextResult);
+
+const messages =
+  nextResult === "buy" ? buyMessages : saveMessages;
+
+setResultMessage(
+  messages[Math.floor(Math.random() * messages.length)]
+);
+
+setFlipping(false);
 
       setHistory((previousHistory) => [
         nextResult,
@@ -88,23 +167,25 @@ export default function Flip() {
         <div className="flip-result" aria-live="polite">
           {flipping && <span className="flipping">Flipping...</span>}
 
-          {!flipping && result === "buy" && (
-            <span className="buy">
+{!flipping && result === "buy" && (
+  <span className="buy">
+    <span>
+      Bilhin Mo Na!
+      <br />
+      <small>{resultMessage}</small>
+    </span>
+  </span>
+)}
 
-              <span>Bilhin Mo Na!</span>
-            </span>
-          )}
-
-          {!flipping && result === "save" && (
-            <span className="save">
-
-              <span>Tipid Muna!</span>
-            </span>
-          )}
-
-          {!flipping && !result && (
-            <span>Click the coin to begin.</span>
-          )}
+{!flipping && result === "save" && (
+  <span className="save">
+    <span>
+      Tipid Muna!
+      <br />
+      <small>{resultMessage}</small>
+    </span>
+  </span>
+)}
         </div>
 
         <button
@@ -113,38 +194,44 @@ export default function Flip() {
           onClick={flipCoin}
           disabled={flipping}
         >
-          {flipping ? "FLIPPING..." : "FLIP COIN"}
+          {flipping ? "FLIPPING..." : "FLIP"}
         </button>
 
-        <div className="flip-history">
-          <p className="flip-history-title">LAST 5 FLIPS</p>
+<div className="flip-history">
+  <p className="flip-history-title">LAST 5 FLIPS</p>
 
-          {history.length === 0 ? (
-            <p className="flip-history-empty">No flips yet.</p>
-          ) : (
-            <div className="flip-history-list">
-              {history.map((flip, index) => (
-                <span
-                  key={`${flip}-${index}`}
-                  className={`flip-history-item ${flip}`}
-                  title={
-                    flip === "buy"
-                      ? "Bilhin Mo Na"
-                      : "Tipid Muna"
-                  }
-                >
-                  <Icon
-                    icon={
-                      flip === "buy"
-                        ? "tabler:shopping-bag-plus"
-                        : "material-symbols:savings-outline-rounded"
-                    }
-                  />
-                </span>
-              ))}
-            </div>
-          )}
-        </div>
+  {history.length === 0 ? (
+    <p className="flip-history-empty">No flips yet.</p>
+  ) : (
+    <>
+      <div className="flip-history-list">
+        {history.map((flip, index) => (
+          <span
+            key={`${flip}-${index}`}
+            className={`flip-history-item ${flip}`}
+            title={flip === "buy" ? "Bilhin Mo Na" : "Tipid Muna"}
+          >
+            <Icon
+              icon={
+                flip === "buy"
+                  ? "tabler:shopping-bag-plus"
+                  : "material-symbols:savings-outline-rounded"
+              }
+            />
+          </span>
+        ))}
+      </div>
+
+      <button
+        type="button"
+        className="flip-history-reset"
+        onClick={() => setHistory([])}
+      >
+        RESET
+      </button>
+    </>
+  )}
+</div>
       </section>
     </main>
   );

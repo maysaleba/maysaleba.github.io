@@ -70,14 +70,6 @@ const itemsList = [
     },
   },
   {
-    text: "Flip",
-    icon: <Icon icon="mdi:coin" width="24" />,
-    onClick: () => {
-      setOpen(false);
-      history.push("/flip");
-    },
-  },
-  {
     text: "Gift Cards",
     icon: <CardGiftcardIcon />,
     onClick: () => {
@@ -100,6 +92,14 @@ const itemsList = [
       setDarkMode((prev) => !prev);
     },
     isThemeToggle: true,
+  },
+    {
+    text: "Flip",
+    icon: <Icon icon="mdi:coin" width="24" />,
+    onClick: () => {
+      setOpen(false);
+      history.push("/flip");
+    },
   },
 ];
 
