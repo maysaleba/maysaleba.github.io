@@ -22,7 +22,7 @@ export default function Flip() {
       });
     }
 
-    const nextResult = Math.random() < 0.5 ? "buy" : "save";
+    const nextResult = Math.random() < 0.6 ? "buy" : "save";
 
     setResult(null);
     setLandingResult(nextResult);
