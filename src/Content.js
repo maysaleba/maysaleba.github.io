@@ -15,7 +15,7 @@ import GoogleAds from "./AdSense";
 import axios from "axios";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import InfoIcon from "@mui/icons-material/Info";
+import InfoIcon from "@mui/icons-material/Info";  
 import CloseIcon from "@mui/icons-material/Close";
 import noimage from "./noimage.jpg";
 import { Link as RouterLink } from "react-router-dom";
@@ -1013,6 +1013,7 @@ const psGiftCardUrls = {
   SG: "https://www.eneba.com/psn-playstation-network-card-15-sgd-sgp-psn-key-singapore?af_id=maysaleba&currency=PHP&region=global",
   TR: "https://www.eneba.com/psn-playstation-network-card-200-try-tr-psn-key-turkey?af_id=maysaleba&currency=PHP&region=global",
   US: "https://www.eneba.com/psn-playstation-network-card-1-usd-usa-psn-key-united-states?af_id=maysaleba&currency=PHP&region=global",
+  HK: "https://www.eneba.com/psn-playstation-network-card-20-hkd-psn-key-hong-kong?af_id=maysaleba&currency=PHP&region=global",
 };
 
 function getPsRows() {
@@ -1068,6 +1069,16 @@ function getPsRows() {
       priceRaw: game.usPrice,
       rate: Number(datam.PHP) / Number(datam.USD),
       urlRegion: "en-us",
+    },
+    {
+      code: "HK",
+      name: "Hong Kong",
+      className: "hkregion-logo",
+      currency: "HK$",
+      saleRaw: game.hkSalePrice,
+      priceRaw: game.hkPrice,
+      rate: Number(datam.PHP) / Number(datam.HKD),
+      urlRegion: "en-hk",
     },
   ];
 

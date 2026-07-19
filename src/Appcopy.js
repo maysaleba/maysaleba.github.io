@@ -452,7 +452,7 @@ const SORTERS = {
     addPhpCandidate(prices, "TR", trPrice, "TRY", datam);
 
     addPhpCandidate(prices, "US", review.usSalePrice || review.usPrice, "USD", datam);
-
+    addPhpCandidate(prices, "HK", review.hkSalePrice || review.hkPrice, "HKD", datam);
     return prices;
   }
 

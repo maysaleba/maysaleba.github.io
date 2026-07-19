@@ -40,6 +40,8 @@ const Cards = ({
   trSalePrice,
   usPrice,
   usSalePrice,
+  hkPrice,
+  hkSalePrice,
   CanadaPrice,
   PeruPrice,
   ArgentinaPrice,
@@ -206,6 +208,7 @@ function getPsCheapest() {
       ccy: "TRY",
     },
     { code: "US", className: "usregion-logo", sale: usSalePrice || usPrice, original: usPrice, ccy: "USD" },
+    { code: "HK", className: "hkregion-logo", sale: hkSalePrice || hkPrice, original: hkPrice, ccy: "HKD",},
   ];
 
   return rows

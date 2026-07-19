@@ -105,6 +105,8 @@
                                             trSalePrice={review.trSalePrice}
                                             usPrice={review.usPrice}
                                             usSalePrice={review.usSalePrice}
+                                            hkPrice={review.hkPrice}
+                                            hkSalePrice={review.hkSalePrice}
                                             ESRBRating={review.ESRBRating}
                                             IsPS4={review.IsPS4}
                                             IsPS5={review.IsPS5}

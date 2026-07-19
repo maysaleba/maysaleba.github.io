@@ -316,7 +316,7 @@ const selectCheapest = (code) => () => {
 
     <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>
       {(isPS
-        ? ["", "ID", "IN", "SG", "TR", "US"]
+        ? ["", "HK", "ID", "IN", "SG", "TR", "US"]
         : ["", "AR", "AU", "BR", "CA", "CO", "HK", "JP", "MX", "MY", "NO", "NZ", "PE", "PL", "SG", "TH", "ZA", "US"]
       ).map((code) => (
         <Dropdown.Item
