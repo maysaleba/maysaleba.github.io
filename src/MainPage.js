@@ -250,6 +250,8 @@ function sortJson(element, prop, propType, asc) {
                 trSalePrice={review.trSalePrice}
                 usPrice={review.usPrice}
                 usSalePrice={review.usSalePrice}
+                hkPrice={review.hkPrice}
+                hkSalePrice={review.hkSalePrice}
                 Discount={review.PercentOff}
                 URL={review.URL}
                 Platform={review.platform}
@@ -302,6 +304,8 @@ function sortJson(element, prop, propType, asc) {
                 trSalePrice={review.trSalePrice}
                 usPrice={review.usPrice}
                 usSalePrice={review.usSalePrice}
+                hkPrice={review.hkPrice}
+                hkSalePrice={review.hkSalePrice}
                 Discount={review.PercentOff}
                 URL={review.URL}
                 Platform={review.platform}
