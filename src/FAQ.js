@@ -497,8 +497,8 @@ const About = () => {
           <Card.Body>
             MaySaleBa? is a website designed to keep{" "}
             <span className="phregion-logo">Filipino</span> gamers up-to-date
-            with the latest discounts on the Nintendo eShop and Playstation
-            Store.
+            with the latest discounts on the different Nintendo eShop and Playstation
+            Store regions.
             <p style={{ fontWeight: "bold" }}>
               Nope, we don’t sell games—we’re just here to let you know which
               region to buy to get the best deals! 🤑
