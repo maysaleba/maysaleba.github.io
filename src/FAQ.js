@@ -580,7 +580,7 @@ const About = () => {
                 <li>
                   <a
                     href="https://accounts.nintendo.com/profile/edit"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                     style={{ color: "#fc430a", fontWeight: "bold" }}
                   >
                     Change the country/region on your account
@@ -592,7 +592,7 @@ const About = () => {
                 <li>
                   <a
                     href="https://accounts.nintendo.com/register"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                     style={{ color: "#fc430a", fontWeight: "bold" }}
                   >
                     Create a separate Nintendo account
@@ -767,7 +767,7 @@ const About = () => {
               <li>
                 <a
                   href="https://www.eneba.com/?af_id=maysaleba"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                   style={{ color: "#fc430a", fontWeight: "bold" }}
                 >
                   Eneba
@@ -776,7 +776,7 @@ const About = () => {
               <li>
                 <a
                   href="https://s.shopee.ph/6V6xDmuabY"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                   style={{ color: "#fc430a", fontWeight: "bold" }}
                 >
                   Shopee (US only)
@@ -785,7 +785,7 @@ const About = () => {
               <li>
                 <a
                   href="https://bit.ly/3L2qm2e"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                   style={{ color: "#fc430a", fontWeight: "bold" }}
                 >
                   Lazada (US only)
@@ -794,7 +794,7 @@ const About = () => {
               <li>
                 <a
                   href="https://bit.ly/3pxXLXT"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                   style={{ color: "#fc430a", fontWeight: "bold" }}
                 >
                   Codashop (US only)
@@ -819,12 +819,12 @@ const About = () => {
                   <ol>
                     <li>Go to the                 <a
                   href="https://www.seagm.com/"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                   style={{ color: "#fc430a", fontWeight: "bold" }}
                 >SEAGM website</a> or download the app</li>
                 <li><a
                   href="https://member.seagm.com/en-ph/sso/register"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                   style={{ color: "#fc430a", fontWeight: "bold" }}
                 >Sign Up</a> if you don’t have an account yet. If you already have an account, click Log In and enter your credentials</li>
                 <li>Use the search bar on the homepage and type <b>Nintendo eShop</b></li>
@@ -933,7 +933,7 @@ const About = () => {
             <p/>
             <a
                   href="https://www.maysaleba.com/pasabuy"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                   style={{ color: "#fc430a", fontWeight: "bold" }}
                 >Learn more about Pasabuy here</a>
           </Card.Body>

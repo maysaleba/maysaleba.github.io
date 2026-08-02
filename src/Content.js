@@ -1114,7 +1114,7 @@ function PsPrices() {
       <ol>
         <li>
   Open the
-  <a href="${row.url}" target="_blank" style="color: #fc430a; font-weight: bold;">
+  <a href="${row.url}" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">
     ${row.name} PlayStation Store page
   </a>
   for this game.
@@ -1123,7 +1123,7 @@ function PsPrices() {
         <li>Add funds using a <b>PlayStation Network gift card</b> for <b>${row.name}</b>.</li>
         ${
           giftCardUrl
-            ? `<ul><li><a href="${giftCardUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">Buy ${row.name} PSN card on Eneba</a></li></ul>`
+            ? `<ul><li><a href="${giftCardUrl}" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Buy ${row.name} PSN card on Eneba</a></li></ul>`
             : ""
         }
         <li>Once funds are added, purchase the game from the PlayStation Store.</li>
@@ -1694,9 +1694,9 @@ const getModalTextForCountry = (country) => {
       <ol>
       <li> Set up an account in the <b>${country}</b> eShop
       <ul>
-        <li><a href="https://accounts.nintendo.com/profile/edit" target="_blank" style="color: #fc430a; font-weight: bold;">Change your eshop account country</a> to <b>${country}</b></li>
-        <li>You can also <a href="https://accounts.nintendo.com/register" target="_blank" style="color: #fc430a; font-weight: bold;">create a new Nintendo account</a></li>
-        <li><a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" style="color: #fc430a; font-weight: bold;">Watch video guide</a></li>
+        <li><a href="https://accounts.nintendo.com/profile/edit" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Change your eshop account country</a> to <b>${country}</b></li>
+        <li>You can also <a href="https://accounts.nintendo.com/register" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">create a new Nintendo account</a></li>
+        <li><a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Watch video guide</a></li>
       </ul>
       <li> Open the eShop on your Nintendo Switch and search for your game</li>
       <li> Proceed to Purchase</li>
@@ -1704,7 +1704,7 @@ const getModalTextForCountry = (country) => {
       <li>Use a compatible debit or credit card (Visa/Mastercard) or virtual cards from Maya, GoTyme, and GrabPay.</li>
       <li>You can also purchase a <b>Nintendo eShop gift card</b> valid in <b>${country}</b> from the link(s) below: </li>
       <ul>
-      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">Eneba</a></li>
+      <li><a href="${countryUrl}" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Eneba</a></li>
       </ul>
       </ul>
       </ol>
@@ -1713,9 +1713,9 @@ const getModalTextForCountry = (country) => {
       <ol>
       <li> Set up an account in the <b>${country}</b> eShop
       <ul>
-        <li><a href="https://accounts.nintendo.com/profile/edit" target="_blank" style="color: #fc430a; font-weight: bold;">Change your eshop account country</a> to <b>${country}</b></li>
-        <li>You can also <a href="https://accounts.nintendo.com/register" target="_blank" style="color: #fc430a; font-weight: bold;">create a new Nintendo account</a></li>
-        <li><a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" style="color: #fc430a; font-weight: bold;">Watch video guide</a></li>
+        <li><a href="https://accounts.nintendo.com/profile/edit" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Change your eshop account country</a> to <b>${country}</b></li>
+        <li>You can also <a href="https://accounts.nintendo.com/register" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">create a new Nintendo account</a></li>
+        <li><a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Watch video guide</a></li>
       </ul>
       <li> Open the eShop on your Nintendo Switch and search for your game</li>
       <li> Proceed to Purchase</li>
@@ -1728,16 +1728,16 @@ const getModalTextForCountry = (country) => {
       <ol>
       <li> Set up an account in the <b>${country}</b> eShop
       <ul>
-        <li><a href="https://accounts.nintendo.com/profile/edit" target="_blank" style="color: #fc430a; font-weight: bold;">Change your eshop account country</a> to <b>${country}</b></li>
-        <li>You can also <a href="https://accounts.nintendo.com/register" target="_blank" style="color: #fc430a; font-weight: bold;">create a new Nintendo account</a></li>
-        <li><a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" style="color: #fc430a; font-weight: bold;">Watch video guide</a></li>
+        <li><a href="https://accounts.nintendo.com/profile/edit" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Change your eshop account country</a> to <b>${country}</b></li>
+        <li>You can also <a href="https://accounts.nintendo.com/register" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">create a new Nintendo account</a></li>
+        <li><a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Watch video guide</a></li>
       </ul>
       <li> Open the eShop on your Nintendo Switch and search for your game</li>
       <li> Proceed to Purchase</li>
       <ul>
       <li>Purchase a <b>Nintendo eShop gift card</b> valid in <b>${country}</b> from the link(s) below: </li>
       <ul>
-      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">Eneba</a></li>
+      <li><a href="${countryUrl}" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Eneba</a></li>
       </ul>
       <li >Using local debit or credit cards in Brazil is highly discouraged as it requires a CPF, a personal ID for tax purposes, which non-residents or foreign nationals are generally not eligible. <b>Using a gift card is the safer option, as it does not require a CPF.</b></li>
       </ul>
@@ -1747,19 +1747,19 @@ const getModalTextForCountry = (country) => {
       <ol>
       <li> Set up an account in the <b>${country}</b> eShop
       <ul>
-        <li><a href="https://accounts.nintendo.com/profile/edit" target="_blank" style="color: #fc430a; font-weight: bold;">Change your eshop account country</a> to <b>${country}</b></li>
-        <li>You can also <a href="https://accounts.nintendo.com/register" target="_blank" style="color: #fc430a; font-weight: bold;">create a new Nintendo account</a></li>
+        <li><a href="https://accounts.nintendo.com/profile/edit" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Change your eshop account country</a> to <b>${country}</b></li>
+        <li>You can also <a href="https://accounts.nintendo.com/register" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">create a new Nintendo account</a></li>
       </ul>
-      <li> Top-up Argentina funds or purchase a single game via <a href="https://maysaleba.com/pasabuy" target="_blank" style="color: #fc430a; font-weight: bold;">Pasabuy</a></li>
+      <li> Top-up Argentina funds or purchase a single game via <a href="https://maysaleba.com/pasabuy" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Pasabuy</a></li>
       </ol>
     `,
         "US": `
       <ol>
       <li> Set up an account in the <b>${country}</b> eShop
       <ul>
-        <li><a href="https://accounts.nintendo.com/profile/edit" target="_blank" style="color: #fc430a; font-weight: bold;">Change your eshop account country</a> to <b>${country}</b></li>
-        <li>You can also <a href="https://accounts.nintendo.com/register" target="_blank" style="color: #fc430a; font-weight: bold;">create a new Nintendo account</a></li>
-        <li><a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" style="color: #fc430a; font-weight: bold;">Watch video guide</a></li>
+        <li><a href="https://accounts.nintendo.com/profile/edit" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Change your eshop account country</a> to <b>${country}</b></li>
+        <li>You can also <a href="https://accounts.nintendo.com/register" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">create a new Nintendo account</a></li>
+        <li><a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Watch video guide</a></li>
       </ul>
       <li> Open the eShop on your Nintendo Switch and search for your game</li>
       <li> Proceed to Purchase</li>
@@ -1767,10 +1767,10 @@ const getModalTextForCountry = (country) => {
       <li>Use a compatible debit or credit card (Visa/Mastercard) or virtual cards from Maya, GoTyme, and GrabPay.</li>
       <li>You can also purchase a <b>Nintendo eShop gift card</b> valid in <b>${country}</b> from the link(s) below: </li>
       <ul>
-      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">Eneba</a></li>
-      <li><a href="https://s.shopee.ph/6V6xDmuabY" target="_blank" style="color: #fc430a; font-weight: bold;">Shopee</a></li>
-      <li><a href="bit.ly/3L2qm2e" target="_blank" style="color: #fc430a; font-weight: bold;">Lazada</a></li>
-      <li><a href="bit.ly/3pxXLXT" target="_blank" style="color: #fc430a; font-weight: bold;">Codashop</a></li>
+      <li><a href="${countryUrl}" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Eneba</a></li>
+      <li><a href="https://s.shopee.ph/6V6xDmuabY" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Shopee</a></li>
+      <li><a href="bit.ly/3L2qm2e" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Lazada</a></li>
+      <li><a href="bit.ly/3pxXLXT" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Codashop</a></li>
       </ul>
       <li>To avoid additional fees when checking out, enter a tax-free U.S zip code. Here are the following states and zip codes that you can use:</li>
 <ul>
@@ -1790,16 +1790,16 @@ const getModalTextForCountry = (country) => {
       <ol>
       <li> Set up an account in the <b>${country}</b> eShop
       <ul>
-        <li><a href="https://accounts.nintendo.com/profile/edit" target="_blank" style="color: #fc430a; font-weight: bold;">Change your eshop account country</a> to <b>${country}</b></li>
-        <li>You can also <a href="https://accounts.nintendo.com/register" target="_blank" style="color: #fc430a; font-weight: bold;">create a new Nintendo account</a></li>
-        <li><a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" style="color: #fc430a; font-weight: bold;">Watch video guide</a></li>
+        <li><a href="https://accounts.nintendo.com/profile/edit" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Change your eshop account country</a> to <b>${country}</b></li>
+        <li>You can also <a href="https://accounts.nintendo.com/register" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">create a new Nintendo account</a></li>
+        <li><a href="https://www.youtube.com/watch?v=iIHNfDa8-1o" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Watch video guide</a></li>
       </ul>
       <li> Open the eShop on your Nintendo Switch and search for your game</li>
       <li> Proceed to Purchase</li>
       <ul>
       <li>Purchase a <b>Nintendo eShop gift card</b> valid in <b>${country}</b> from the link(s) below: </li>
       <ul>
-      <li><a href="${countryUrl}" target="_blank" style="color: #fc430a; font-weight: bold;">Eneba</a></li>
+      <li><a href="${countryUrl}" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Eneba</a></li>
       </ul>
       </ul>
       </ol>

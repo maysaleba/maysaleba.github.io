@@ -222,6 +222,7 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
                 <a
                   href="https://www.eneba.com/?af_id=maysaleba"
                   target="_blank"
+                  rel="noreferrer"
                   style={{ color: "#fc430a", fontWeight: "bold" }}
                 >
                   Eneba
@@ -231,6 +232,7 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
                 <a
                   href="https://s.shopee.ph/6V6xDmuabY"
                   target="_blank"
+                  rel="noreferrer"
                   style={{ color: "#fc430a", fontWeight: "bold" }}
                 >
                   Shopee (US only)
@@ -240,6 +242,7 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
                 <a
                   href="https://bit.ly/3L2qm2e"
                   target="_blank"
+                  rel="noreferrer"
                   style={{ color: "#fc430a", fontWeight: "bold" }}
                 >
                   Lazada (US only)
@@ -249,6 +252,7 @@ const GiftCards = ({searchQuery, setSearchQuery}) => {
                 <a
                   href="https://bit.ly/3pxXLXT"
                   target="_blank"
+                  rel="noreferrer"
                   style={{ color: "#fc430a", fontWeight: "bold" }}
                 >
                   Codashop (US only)
