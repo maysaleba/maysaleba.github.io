@@ -7,15 +7,7 @@ import reviewssw from "./csvjson.json";
 import { Link } from "react-router-dom";
 
 const MainPage = ({ filteredReviews, pageData, reviewsps, datam  }) => {
-  var d = new Date();
-  var lastt = new Date(d.setDate(d.getDate() - 2));
-  var dato = String(lastt.getDate()).padStart(2, "0");
-  var moto = String(lastt.getMonth() + 1).padStart(2, "0"); //January is 0!
-  var yearto = lastt.getFullYear();
-  
-
-
-
+  // Legacy date calculations were removed because they are no longer needed.
 
   // var lastd = new Date(d.setDate(d.getDate() ));
   // var da = String(lastd.getDate()).padStart(2, "0");

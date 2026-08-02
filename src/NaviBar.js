@@ -78,6 +78,14 @@ const itemsList = [
     },
   },
   {
+    text: "Pasabuy",
+    icon: <Icon icon="mdi:package-variant-closed" width="24" />,
+    onClick: () => {
+      setOpen(false);
+      history.push("/pasabuy");
+    },
+  },
+  {
     text: "FAQ",
     icon: <InfoIcon />,
     onClick: () => {
@@ -191,6 +199,18 @@ const itemsList = [
                 Gift Cards
               </Typography>
            
+           </Link>
+           <Link className="logocolortext" to="/pasabuy">
+            <Box
+              sx={{
+                marginRight: 2,
+                marginLeft: "auto",
+                fontFamily: "Cairo",
+                fontSize: 16,
+              }}
+            >
+              Pasabuy
+            </Box>
            </Link>
            <Link className="logocolortext" to="/faq">
             <Box

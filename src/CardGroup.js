@@ -35,6 +35,15 @@
     regionFilter,       // <-- add
     datam,
   }) => {
+    const hasActiveFilters = Boolean(
+      searchQuery ||
+        genreDropDown !== "All Genres" ||
+        latestDropDown !== "Popular" ||
+        priceRangeDropDown !== "All Price Range" ||
+        platformDropDown !== "All Platforms" ||
+        regionFilter
+    );
+
     return (
       <div>
 
@@ -66,75 +75,83 @@
           </div>
        
               {filteredReviews.length > 0 ? (
-                <>        
+                <>
                   <Row xs={2} sm={3} md={4} className="g-3">
                     {pageData().map((review, key) => (
                       <div key={key}>
-                                    <Cards  
-                                            datam={datam}
-                                            Score={review.SCORE}
-                                            Title={review.Title}
-                                            SaleEnds={review.SaleEnds}
-                                            Genre={review.genre}
-                                            Slug={review.Slug}
-                                            Image={review.Image}
-                                            SalePrice={review.SalePrice}
-                                            CanadaPrice={review.CanadaPrice}
-                                            PeruPrice={review.PeruPrice}
-                                            ArgentinaPrice={review.ArgentinaPrice}
-                                            AustraliaPrice={review.AustraliaPrice}
-                                            ColombiaPrice={review.ColombiaPrice}
-                                            SouthafricaPrice={review.SouthafricaPrice}
-                                            BrazilPrice={review.BrazilPrice}
-                                            NorwayPrice={review.NorwayPrice}
-                                            PolandPrice={review.PolandPrice}
-                                            NewZealandPrice={review.NewZealandPrice}
-                                            MexicoPrice={review.MexicoPrice}
-                                            Discount={review.PercentOff}
-                                            URL={review.URL}
-                                            Platform={review.platform}                                  
-                                            PlusPrice={review.PlusPrice}
-                                            Price={review.Price}
-                                            idPrice={review.idPrice}
-                                            idSalePrice={review.idSalePrice}
-                                            inPrice={review.inPrice}
-                                            inSalePrice={review.inSalePrice}
-                                            sgPrice={review.sgPrice}
-                                            sgSalePrice={review.sgSalePrice}
-                                            trPrice={review.trPrice}
-                                            trSalePrice={review.trSalePrice}
-                                            usPrice={review.usPrice}
-                                            usSalePrice={review.usSalePrice}
-                                            hkPrice={review.hkPrice}
-                                            hkSalePrice={review.hkSalePrice}
-                                            ESRBRating={review.ESRBRating}
-                                            IsPS4={review.IsPS4}
-                                            IsPS5={review.IsPS5}
-                                            HongKongPrice={review.HongKongPrice}
-                                            KoreaPrice={review.KoreaPrice}
-                                            JapanPrice={review.JapanPrice}
-                                            SingaporePrice={review.SingaporePrice}
-                                            MalaysiaPrice={review.MalaysiaPrice}
-                                            ThailandPrice={review.ThailandPrice}
-                                    />
+                        <Cards
+                          datam={datam}
+                          Score={review.SCORE}
+                          Title={review.Title}
+                          SaleEnds={review.SaleEnds}
+                          Genre={review.genre}
+                          Slug={review.Slug}
+                          Image={review.Image}
+                          SalePrice={review.SalePrice}
+                          CanadaPrice={review.CanadaPrice}
+                          PeruPrice={review.PeruPrice}
+                          ArgentinaPrice={review.ArgentinaPrice}
+                          AustraliaPrice={review.AustraliaPrice}
+                          ColombiaPrice={review.ColombiaPrice}
+                          SouthafricaPrice={review.SouthafricaPrice}
+                          BrazilPrice={review.BrazilPrice}
+                          NorwayPrice={review.NorwayPrice}
+                          PolandPrice={review.PolandPrice}
+                          NewZealandPrice={review.NewZealandPrice}
+                          MexicoPrice={review.MexicoPrice}
+                          Discount={review.PercentOff}
+                          URL={review.URL}
+                          Platform={review.platform}
+                          PlusPrice={review.PlusPrice}
+                          Price={review.Price}
+                          idPrice={review.idPrice}
+                          idSalePrice={review.idSalePrice}
+                          inPrice={review.inPrice}
+                          inSalePrice={review.inSalePrice}
+                          sgPrice={review.sgPrice}
+                          sgSalePrice={review.sgSalePrice}
+                          trPrice={review.trPrice}
+                          trSalePrice={review.trSalePrice}
+                          usPrice={review.usPrice}
+                          usSalePrice={review.usSalePrice}
+                          hkPrice={review.hkPrice}
+                          hkSalePrice={review.hkSalePrice}
+                          ESRBRating={review.ESRBRating}
+                          IsPS4={review.IsPS4}
+                          IsPS5={review.IsPS5}
+                          HongKongPrice={review.HongKongPrice}
+                          KoreaPrice={review.KoreaPrice}
+                          JapanPrice={review.JapanPrice}
+                          SingaporePrice={review.SingaporePrice}
+                          MalaysiaPrice={review.MalaysiaPrice}
+                          ThailandPrice={review.ThailandPrice}
+                        />
                       </div>
-                  ))}
+                    ))}
                   </Row>
                 </>
               ) : (
-                    <div style={{ textAlign: "center" }}>
-                        <h4>No ongoing sale.</h4>
-                    </div>
-                  )
-            }
-            <p/>
-               <Pagination className="pagination"
-                    color="secondary"
-                    size="small"
-                    count={maxPage}
-                    page={page}
-                    onChange={(e, p) => jumpPage(p)}
-                  />
+                <div className="empty-state">
+                  <h4>No deals match your current filters.</h4>
+                  <p>Try widening your search or clearing the active filters to see more deals.</p>
+                  {hasActiveFilters && (
+                    <button type="button" className="empty-state-action" onClick={clearFilter}>
+                      Clear filters
+                    </button>
+                  )}
+                </div>
+              )}
+            <p />
+            {filteredReviews.length > 0 && maxPage > 1 && (
+              <Pagination
+                className="pagination"
+                color="secondary"
+                size="small"
+                count={maxPage}
+                page={page}
+                onChange={(e, p) => jumpPage(p)}
+              />
+            )}
 
                     </Paper>
 
