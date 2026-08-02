@@ -1,23 +1,29 @@
 // Appcopy.js
-import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
+import React, { lazy, Suspense, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import usePagination from "./usePagination.js";
 import reviewssw from "./csvjson.json";
 import reviewsst from "./csvjsontr.json";
-import Flip from "./Flip";
 import CardGroup from "./CardGroup";
 import "./App.css";
 import { BrowserRouter as Router, Route, useLocation } from "react-router-dom";
-import Content from "./Content";
 import NaviBar from "./NaviBar";
 import styled from "styled-components";
 import Search from "./Search";
-import GiftCards from "./GiftCards";
-import FAQ from "./FAQ";
-import MainPage from "./MainPage";
-import Pasabuy from "./Pasabuy";
 import { Helmet } from "react-helmet";
 import axios from "axios";
-// import MessengerCustomerChat from 'react-messenger-customer-chat';
+
+const Flip = lazy(() => import("./Flip"));
+const Content = lazy(() => import("./Content"));
+const GiftCards = lazy(() => import("./GiftCards"));
+const FAQ = lazy(() => import("./FAQ"));
+const MainPage = lazy(() => import("./MainPage"));
+const Pasabuy = lazy(() => import("./Pasabuy"));
+
+const RouteLoadingFallback = () => (
+  <div className="route-loading" role="status">
+    Loading…
+  </div>
+);
 
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, "0");
@@ -99,6 +105,8 @@ useEffect(() => {
           <meta charSet="utf-8" />
           <title>{HelmetProps.title}</title>
           <meta name="description" content={HelmetProps.description} />
+          <link rel="canonical" href={HelmetProps.canonical} />
+          <meta name="robots" content="index,follow" />
         </Helmet>
       )}
     </>
@@ -275,9 +283,7 @@ function ScrollToTop() {
 
   const theURLa = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json";
 
-  const [darkMode, setDarkMode] = useState(() => {
-  return localStorage.getItem("theme") === "dark";
-});
+  const [darkMode, setDarkMode] = useState(() => localStorage.getItem("theme") === "dark");
 
 useEffect(() => {
   document.documentElement.classList.toggle("dark-mode", darkMode);
@@ -790,7 +796,6 @@ if (initial <= 1) {
     setFilterField(genre === "All Genres" ? "" : genre);
 
     onLatestChange(sort);
-    setLatestDropDown(sort);
 
     setPriceRangeDropDown(price);
     onPriceRangeChange(price);
@@ -880,7 +885,6 @@ const onPop = () => {
        setPriceRangeDropDown(price);
        onPriceRangeChange(price);
        setRegionFilter(region);
-       setLatestDropDown(sort);
        onLatestChange(sort);
        jumpPage(Number.isFinite(p) ? p : 1);
      };
@@ -1004,32 +1008,36 @@ const onPop = () => {
       path: "/allgames",
       defaults: { platform: "", platformLabel: "All Platforms", region: "" },
       helmet: {
-        title: "All Games - May Sale Ba?",
-        description: "Get the latest Nintendo and Playstation deals in Philippine Peso!",
+        title: "All Games Deals | May Sale Ba?",
+        description: "Browse the latest Nintendo Switch and PlayStation deals in the Philippines with price comparisons in PHP.",
+        canonical: "https://maysaleba.com/allgames",
       },
     },
     {
       path: "/switch",
       defaults: { platform: "Switch", platformLabel: "Switch", region: "" },
       helmet: {
-        title: "Nintendo Switch - May Sale Ba?",
-        description: `Get to know about ${reviewssw.length} Nintendo Switch deals in Philippine Peso!`,
+        title: "Nintendo Switch | May Sale Ba?",
+        description: `Find ${reviewssw.length}+ Nintendo Switch game deals and discounts in the Philippines, updated in PHP.`,
+        canonical: "https://maysaleba.com/switch",
       },
     },
     {
       path: "/switch-2",
       defaults: { platform: "Switch 2", platformLabel: "Switch 2", region: "" },
       helmet: {
-        title: "Nintendo Switch 2 - May Sale Ba?",
-        description: `Get to know about ${reviewssw.length} Nintendo Switch deals in Philippine Peso!`,
+        title: "Nintendo Switch 2 | May Sale Ba?",
+        description: `Compare the latest Nintendo Switch 2 deals and discounts in the Philippines with updated PHP prices.`,
+        canonical: "https://maysaleba.com/switch-2",
       },
     },
     {
       path: "/playstation",
       defaults: { platform: "Playstation", platformLabel: "Playstation", region: "" },
       helmet: {
-        title: "Playstation - PH - May Sale Ba?",
-        description: `Get to know about ${reviewsstf.length} Playstation deals in Philippine Peso!`,
+        title: "PlayStation | May Sale Ba?",
+        description: `Discover ${reviewsstf.length}+ PlayStation deals and discounts in the Philippines, updated in PHP.`,
+        canonical: "https://maysaleba.com/playstation",
       },
     },
   ];
@@ -1058,19 +1066,23 @@ const onPop = () => {
         render={() => (
           <div>
             <Search {...SearchCmpProps} />
-<MainPage
-  filteredReviews={filteredReviews}
-  pageData={pageData}
-  reviewsps={latestField.filter((review) => review.platform === "Playstation")}
-  datam={datam}
-/>
+            <Suspense fallback={<RouteLoadingFallback />}>
+              <MainPage
+                filteredReviews={filteredReviews}
+                pageData={pageData}
+                reviewsps={latestField.filter((review) => review.platform === "Playstation")}
+                datam={datam}
+              />
+            </Suspense>
             <Helmet>
               <meta charSet="utf-8" />
-              <title>{`May Sale Ba? - Get the latest prices on Nintendo Switch and Playstation deals in Philippine Peso!`}</title>
+              <title>{`May Sale Ba? - Nintendo Switch and PlayStation deals in the Philippines`}</title>
               <meta
                 name="description"
-                content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
+                content="Track the latest Nintendo Switch and PlayStation deals in the Philippines with price comparisons in PHP."
               />
+              <link rel="canonical" href="https://maysaleba.com/" />
+              <meta name="robots" content="index,follow" />
             </Helmet>
           </div>
         )}
@@ -1099,7 +1111,9 @@ const onPop = () => {
         exact
         render={({ match }) => (
           <div>
-            <Content makeswitch={makeswitch} datam={datam} match={match} />
+            <Suspense fallback={<RouteLoadingFallback />}>
+              <Content makeswitch={makeswitch} datam={datam} match={match} />
+            </Suspense>
           </div>
         )}
       />
@@ -1109,14 +1123,18 @@ const onPop = () => {
         path="/giftcards"
         render={() => (
           <div>
-            <GiftCards searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+            <Suspense fallback={<RouteLoadingFallback />}>
+              <GiftCards searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+            </Suspense>
             <Helmet>
               <meta charSet="utf-8" />
-              <title>Gift Cards - May Sale Ba?</title>
+              <title>Gift Cards and Digital Store Help | May Sale Ba?</title>
               <meta
                 name="description"
-                content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
+                content="Learn about gift card options and digital purchase guidance for Nintendo Switch and PlayStation deals in the Philippines."
               />
+              <link rel="canonical" href="https://maysaleba.com/giftcards" />
+              <meta name="robots" content="index,follow" />
             </Helmet>
           </div>
         )}
@@ -1127,14 +1145,18 @@ const onPop = () => {
         path="/faq"
         render={() => (
           <div>
-            <FAQ searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+            <Suspense fallback={<RouteLoadingFallback />}>
+              <FAQ searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+            </Suspense>
             <Helmet>
               <meta charSet="utf-8" />
-              <title>FAQ - May Sale Ba?</title>
+              <title>FAQ - Nintendo and PlayStation Deal Questions | May Sale Ba?</title>
               <meta
                 name="description"
-                content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
+                content="Find answers about Nintendo Switch, PlayStation deals, buying tips, and regional pricing in the Philippines."
               />
+              <link rel="canonical" href="https://maysaleba.com/faq" />
+              <meta name="robots" content="index,follow" />
             </Helmet>
           </div>
         )}
@@ -1145,14 +1167,18 @@ const onPop = () => {
         path="/pasabuy"
         render={() => (
           <div>
-            <Pasabuy searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+            <Suspense fallback={<RouteLoadingFallback />}>
+              <Pasabuy searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+            </Suspense>
             <Helmet>
               <meta charSet="utf-8" />
-              <title>Pasabuy - May Sale Ba?</title>
+              <title>Pasabuy Guide for Nintendo and PlayStation Purchases | May Sale Ba?</title>
               <meta
                 name="description"
-                content="Get to know about the latest Nintendo and Playstation deals from digital platforms in Philippine Peso!"
+                content="Learn how Pasabuy works for Nintendo Switch and PlayStation purchases in the Philippines and other regions."
               />
+              <link rel="canonical" href="https://maysaleba.com/pasabuy" />
+              <meta name="robots" content="index,follow" />
             </Helmet>
           </div>
         )}
@@ -1162,13 +1188,17 @@ const onPop = () => {
   exact
   render={() => (
     <div>
-      <Flip />
+      <Suspense fallback={<RouteLoadingFallback />}>
+        <Flip />
+      </Suspense>
       <Helmet>
-        <title>Coin Flip - May Sale Ba?</title>
+        <title>Coin Flip Game | May Sale Ba?</title>
         <meta
           name="description"
-          content="Flip a coin"
+          content="Try a simple coin flip game while browsing Nintendo and PlayStation deals in the Philippines."
         />
+        <link rel="canonical" href="https://maysaleba.com/flip" />
+        <meta name="robots" content="index,follow" />
       </Helmet>
     </div>
   )}
