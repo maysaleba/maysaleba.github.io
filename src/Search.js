@@ -27,7 +27,7 @@ const Search = styled('div')(({ theme }) => ({
 }));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
-  padding: theme.spacing(0, 2),
+  padding: 2,
   height: '100%',
   // position: 'absolute',
   // pointerEvents: 'none',
@@ -136,6 +136,7 @@ onSubmit={(e) => {
             
             <SearchIconWrapper>
             <IconButton type="submit"
+            sx={{ padding: theme => theme.spacing(1) }}
             >
               <SearchIcon style={{color:'var(--search-text)'}} />
               </IconButton>
