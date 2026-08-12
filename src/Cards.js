@@ -103,20 +103,21 @@ const safePhp = (amt, rate, placeholder = "₱--") =>
  
 
 function DaysLeft(props) {
-  const saleEndDate = new Date(props.isExpired);
-
-  if (!props.isExpired || Number.isNaN(saleEndDate.getTime())) {
-    return null;
-  }
-
-  const msLeft = saleEndDate - new Date();
+  if (!props.isExpired) return null;
 
   const now = new Date();
   const todayDateOnly = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
   const saleDateOnly = String(props.isExpired).slice(0, 10);
 
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(saleDateOnly)) return null;
+
   if (saleDateOnly >= todayDateOnly) {
-    const diffDays = Math.round((new Date(saleDateOnly) - new Date(todayDateOnly)) / oneDay);
+    // integer day difference using local date parts to avoid UTC offset drift
+    const [sy, sm, sd] = saleDateOnly.split("-").map(Number);
+    const [ty, tm, td] = todayDateOnly.split("-").map(Number);
+    const saleMs = new Date(sy, sm - 1, sd).getTime();
+    const todayMs = new Date(ty, tm - 1, td).getTime();
+    const diffDays = Math.round((saleMs - todayMs) / oneDay);
 
     return (
       <Badge bg="warning" text="dark">
