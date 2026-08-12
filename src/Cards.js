@@ -142,8 +142,8 @@ function DaysLeft(props) {
   }
 
   return (
-    <Badge bg="secondary" text="light">
-      Expired
+    <Badge bg="warning" text="dark">
+      0 days left
     </Badge>
   );
 }
