@@ -111,28 +111,11 @@ function DaysLeft(props) {
 
   const msLeft = saleEndDate - new Date();
 
-  // Keep old Nintendo behavior: show "0 days left" on the sale end date
-  if (
-    props.platform === "Nintendo Switch" ||
-    props.platform === "Nintendo Switch 2"
-  ) {
-    const todayDateOnly = new Date().toISOString().slice(0, 10);
-    const saleDateOnly = String(props.isExpired).slice(0, 10);
+  const todayDateOnly = new Date().toISOString().slice(0, 10);
+  const saleDateOnly = String(props.isExpired).slice(0, 10);
 
-    if (saleDateOnly >= todayDateOnly) {
-      const diffDays = Math.max(0, Math.ceil(msLeft / oneDay));
-
-      return (
-        <Badge bg="warning" text="dark">
-          {diffDays} days left
-        </Badge>
-      );
-    }
-  }
-
-  // PlayStation uses real timestamp
-  if (msLeft > 0) {
-    const diffDays = Math.ceil(msLeft / oneDay);
+  if (saleDateOnly >= todayDateOnly) {
+    const diffDays = Math.round((new Date(saleDateOnly) - new Date(todayDateOnly)) / oneDay);
 
     return (
       <Badge bg="warning" text="dark">
