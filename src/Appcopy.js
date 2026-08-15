@@ -36,6 +36,12 @@ today = yyyy + "-" + mm + "-" + dd;
 function ListPage({ defaults, SearchCmpProps, CardGroupProps, HelmetProps }) {
   const location = useLocation();
 
+  const parseRegionList = (value) =>
+    String(value || "")
+      .split(",")
+      .map((x) => x.trim().toUpperCase())
+      .filter(Boolean);
+
   const {
     setPlatformField,
     setPlatformDropDown,
@@ -72,7 +78,13 @@ useEffect(() => {
     const genre = readQP("genre", "All Genres");
     const sort = readQP("sort", "Popular");
     const price = readQP("price", "All Price Range");
-    const region = params.get("region") || "";
+    const regionIn = parseRegionList(params.get("regionIn"));
+    const regionEx = parseRegionList(params.get("regionEx"));
+    const regionLegacy = (params.get("region") || "").trim().toUpperCase();
+    const region = {
+      include: regionIn.length ? regionIn : regionLegacy ? [regionLegacy] : [],
+      exclude: regionEx,
+    };
     const page = parseInt(params.get("page") || "1", 10);
 
     setSearchQuery(s);
@@ -254,6 +266,12 @@ function isDeepSale(review) {
     return decodeURIComponent(raw.replace(/\+/g, " "));
   };
 
+  const parseRegionList = (value) =>
+    String(value || "")
+      .split(",")
+      .map((x) => x.trim().toUpperCase())
+      .filter(Boolean);
+
   const { search } = window.location;
   const _params0 = new URLSearchParams(search);
   const query = (() => {
@@ -316,7 +334,29 @@ useEffect(() => {
   const [priceRangeDropDown, setPriceRangeDropDown] = useState("All Price Range");
   const [platformField, setPlatformField] = useState("");
   const [filterField, setFilterField] = useState("");
-  const [regionFilter, setRegionFilter] = useState("");
+  const normalizeRegionFilter = React.useCallback((input) => {
+    if (typeof input === "string") {
+      const code = input.trim().toUpperCase();
+      return { include: code ? [code] : [], exclude: [] };
+    }
+
+    const includeRaw = Array.isArray(input?.include) ? input.include : [];
+    const excludeRaw = Array.isArray(input?.exclude) ? input.exclude : [];
+
+    const include = [...new Set(includeRaw.map((x) => String(x || "").trim().toUpperCase()).filter(Boolean))];
+    const exclude = [...new Set(excludeRaw.map((x) => String(x || "").trim().toUpperCase()).filter(Boolean))]
+      .filter((code) => !include.includes(code));
+
+    return { include, exclude };
+  }, []);
+
+  const [regionFilter, _setRegionFilter] = useState({ include: [], exclude: [] });
+  const setRegionFilter = React.useCallback(
+    (next) => {
+      _setRegionFilter(normalizeRegionFilter(next));
+    },
+    [normalizeRegionFilter]
+  );
   const [genreDropDown, setGenreDropDown] = useState("All Genres");
   const [platformDropDown, setPlatformDropDown] = useState("All Platforms");
   const [latestField, setLatestField] = useState([]);
@@ -366,6 +406,7 @@ useEffect(() => {
     onFilterChange("");
     onLatestChange("Popular");
     onLatestDrop("Popular");
+    setRegionFilter({ include: [], exclude: [] });
   };
 
   const clearGenre = () => setFilterField("");
@@ -632,9 +673,14 @@ const routePlatformField =
         }
 
         let regionPass = true;
-        if (regionFilter && ratesReady) {
+        if ((regionFilter.include.length || regionFilter.exclude.length) && ratesReady) {
           const minRegion = cheapestRegionCode(review);
-          regionPass = minRegion === regionFilter;
+          if (regionFilter.include.length && !regionFilter.include.includes(minRegion)) {
+            regionPass = false;
+          }
+          if (regionFilter.exclude.length && regionFilter.exclude.includes(minRegion)) {
+            regionPass = false;
+          }
         }
 
         let deepSalePass = true;
@@ -723,7 +769,8 @@ useEffect(() => {
       filterField || "",
       latestDropDown || "Popular",
       platformField || "",
-      regionFilter || "",
+      regionFilter.include.join(",") || "",
+      regionFilter.exclude.join(",") || "",
       priceRangeDropDown || "All Price Range",
     ].join("|");
 
@@ -786,7 +833,13 @@ if (initial <= 1) {
     const genre = readQP(params, "genre", "All Genres");
     const sort = readQP(params, "sort", "Popular");
     const price = readQP(params, "price", "All Price Range");
-    const region = params.get("region") || "";
+    const regionIn = parseRegionList(params.get("regionIn"));
+    const regionEx = parseRegionList(params.get("regionEx"));
+    const regionLegacy = (params.get("region") || "").trim().toUpperCase();
+    const region = {
+      include: regionIn.length ? regionIn : regionLegacy ? [regionLegacy] : [],
+      exclude: regionEx,
+    };
     const p = parseInt(params.get("page") || "1", 10);
 
     initialPageRef.current = Number.isFinite(p) ? p : 1;
@@ -829,7 +882,11 @@ if (initial <= 1) {
       if (genreDropDown) params.set("genre", genreDropDown);
       if (latestDropDown) params.set("sort", latestDropDown);
       if (priceRangeDropDown) params.set("price", priceRangeDropDown);
-      if (regionFilter) params.set("region", regionFilter);
+      if (regionFilter.include.length) params.set("regionIn", regionFilter.include.join(","));
+      if (regionFilter.exclude.length) params.set("regionEx", regionFilter.exclude.join(","));
+      if (regionFilter.include.length === 1 && regionFilter.exclude.length === 0) {
+        params.set("region", regionFilter.include[0]);
+      }
       //if (page > 1) params.set("page", page);
 
       // Write a safe, 1-based page number to the URL (avoid transient 0 from pagination init)
@@ -876,7 +933,13 @@ const onPop = () => {
        const genre = readQP(params, "genre", "All Genres");
        const sort = readQP(params, "sort", "Popular");
        const price = readQP(params, "price", "All Price Range");
-       const region = params.get("region") || "";
+       const regionIn = parseRegionList(params.get("regionIn"));
+       const regionEx = parseRegionList(params.get("regionEx"));
+       const regionLegacy = (params.get("region") || "").trim().toUpperCase();
+       const region = {
+         include: regionIn.length ? regionIn : regionLegacy ? [regionLegacy] : [],
+         exclude: regionEx,
+       };
        const p = parseInt(params.get("page") || "1", 10);
  
        setSearchQuery(s);
@@ -884,7 +947,7 @@ const onPop = () => {
        setFilterField(genre === "All Genres" ? "" : genre);
        setPriceRangeDropDown(price);
        onPriceRangeChange(price);
-       setRegionFilter(region);
+      setRegionFilter(region);
        onLatestChange(sort);
        jumpPage(Number.isFinite(p) ? p : 1);
      };

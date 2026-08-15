@@ -22,8 +22,8 @@ const FilterDropDown = (props) => {
     onFilterChange,
     genreDropDown,
     onDropDownChange,
-    onRegionChange,      // <-- add
-    regionFilter,        // <-- add
+    onRegionChange,
+    regionFilter,
   } = props;
 
 
@@ -204,13 +204,73 @@ const REGION_LABEL = {
 };
 
 const CHEAPEST_OPTIONS = useMemo(
-  () => ["", "AR","TR","HK","SG","JP","US","CA","MX","BR","PL","NO","ZA","PE","AU","NZ","CO","MY","TH","PH"],
-  []
+  () =>
+    isPS
+      ? ["HK", "ID", "IN", "SG", "TR", "US"]
+      : ["AR", "AU", "BR", "CA", "CO", "HK", "JP", "MX", "MY", "NO", "NZ", "PE", "PL", "SG", "TH", "ZA", "US"],
+  [isPS]
 );
+
+const regionState = {
+  include: Array.isArray(regionFilter?.include)
+    ? regionFilter.include.map((x) => String(x || "").trim().toUpperCase()).filter(Boolean)
+    : typeof regionFilter === "string" && regionFilter
+    ? [regionFilter.trim().toUpperCase()]
+    : [],
+  exclude: Array.isArray(regionFilter?.exclude)
+    ? regionFilter.exclude.map((x) => String(x || "").trim().toUpperCase()).filter(Boolean)
+    : [],
+};
+
+const includeSet = new Set(regionState.include);
+const excludeSet = new Set(regionState.exclude);
+
+const applyRegionFilter = (include, exclude) => {
+  onRegionChange?.({
+    include: [...new Set(include)],
+    exclude: [...new Set(exclude)].filter((code) => !include.includes(code)),
+  });
+};
+
+const cycleRegionState = (code) => {
+  const included = includeSet.has(code);
+  const excluded = excludeSet.has(code);
+
+  if (!included && !excluded) {
+    applyRegionFilter([...regionState.include, code], regionState.exclude.filter((x) => x !== code));
+    return;
+  }
+
+  if (included) {
+    applyRegionFilter(regionState.include.filter((x) => x !== code), [...regionState.exclude, code]);
+    return;
+  }
+
+  applyRegionFilter(regionState.include.filter((x) => x !== code), regionState.exclude.filter((x) => x !== code));
+};
+
+const clearRegions = () => applyRegionFilter([], []);
+
+const selectedRegionCount = new Set([
+  ...regionState.include,
+  ...regionState.exclude,
+]).size;
+
+const regionRowClass = (code) => {
+  if (includeSet.has(code)) return "is-include";
+  if (excludeSet.has(code)) return "is-exclude";
+  return "";
+};
 
 // "HK" -> "hkregion-logo"
 const regionIconClass = (code) =>
   code ? `${String(code).toLowerCase()}region-logo` : "";
+
+const AnyGlyph = () => (
+  <span className="region-any-glyph" aria-hidden>
+    <Icon icon="mdi:web" width="11" />
+  </span>
+);
 
 // small globe icon with same box as flags (so it lines up nicely)
 const AnyIcon = () => (
@@ -219,14 +279,10 @@ const AnyIcon = () => (
     className="me-2 align-middle"
     style={{ display: "inline-block", width: 15, height: 15, lineHeight: "15px", textAlign: "center" }}
   >
-    🌐
+    <AnyGlyph />
   </span>
 );
 
-
-const selectCheapest = (code) => () => {
-  onRegionChange?.(code);
-};
 
   return (
 <Container fluid="md">
@@ -297,45 +353,52 @@ const selectCheapest = (code) => () => {
 
 {/* Cheapest Region */}
 <Col xs={3} md={4} className="col-style">
-  <Dropdown className="m-1">
+  <Dropdown className="m-1" autoClose="outside">
 <Dropdown.Toggle size="sm" id="dd-cheapest" className="dropdown-style w-100">
-  {regionFilter ? (
-    <span
-      className={`${regionIconClass(regionFilter)} align-middle me-2`}
-      style={{ display: "inline-block", width: 15, height: 15 }}
-      aria-hidden
-    />
-  ) : (
-    <AnyIcon />
-  )}
+  <span className="region-toggle-icon-wrap" aria-hidden>
+    {regionState.include.length === 1 && !regionState.exclude.length ? (
+      <span
+        className={`${regionIconClass(regionState.include[0])} align-middle`}
+        style={{ display: "inline-block", width: 15, height: 15 }}
+      />
+    ) : (
+      <span className="region-toggle-any-icon">
+        <AnyGlyph />
+      </span>
+    )}
+
+    {selectedRegionCount > 0 && (
+      <span className="region-icon-badge">{selectedRegionCount}</span>
+    )}
+  </span>
 
 <span className="region-filter-text">
-  {`Region: ${REGION_LABEL[regionFilter] ?? "Any"}`}
+  Region
 </span>
 </Dropdown.Toggle>
 
     <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>
-      {(isPS
-        ? ["", "HK", "ID", "IN", "SG", "TR", "US"]
-        : ["", "AR", "AU", "BR", "CA", "CO", "HK", "JP", "MX", "MY", "NO", "NZ", "PE", "PL", "SG", "TH", "ZA", "US"]
-      ).map((code) => (
+      <Dropdown.Item as="button" className="region-filter-item" onClick={clearRegions}>
+        <span className="d-inline-flex align-items-center">
+          <AnyIcon />
+          <span className="align-middle">Any</span>
+        </span>
+      </Dropdown.Item>
+
+      {CHEAPEST_OPTIONS.map((code) => (
         <Dropdown.Item
           as="button"
-          key={code || "any"}
-          onClick={() => onRegionChange(code)}
+          className={`region-filter-item ${regionRowClass(code)}`}
+          key={code}
+          onClick={() => cycleRegionState(code)}
         >
-          {code ? (
+          <span className="d-inline-flex align-items-center">
             <span
               className={`${regionIconClass(code)} align-middle me-2`}
               style={{ display: "inline-block", width: 15, height: 15 }}
               aria-hidden
             />
-          ) : (
-            <AnyIcon />
-          )}
-
-          <span className="align-middle">
-            {REGION_LABEL[code] ?? "Any"}
+            <span className="align-middle">{REGION_LABEL[code] ?? code}</span>
           </span>
         </Dropdown.Item>
       ))}

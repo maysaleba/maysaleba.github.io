@@ -35,13 +35,18 @@
     regionFilter,       // <-- add
     datam,
   }) => {
+    const hasActiveRegionFilter =
+      (Array.isArray(regionFilter?.include) && regionFilter.include.length > 0) ||
+      (Array.isArray(regionFilter?.exclude) && regionFilter.exclude.length > 0) ||
+      typeof regionFilter === "string";
+
     const hasActiveFilters = Boolean(
       searchQuery ||
         genreDropDown !== "All Genres" ||
         latestDropDown !== "Popular" ||
         priceRangeDropDown !== "All Price Range" ||
         platformDropDown !== "All Platforms" ||
-        regionFilter
+        hasActiveRegionFilter
     );
 
     return (
