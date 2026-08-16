@@ -123,6 +123,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       .replace(/-?nintendo-switch-2-edition/g, "")
       .replace(/-?standard-edition/g, "")
       .replace(/-?for-nintendo-switch/g, "")
+      .replace(/-?plus/g, "")
       .replace(/-{2,}/g, "-")
       .replace(/^-|-$/g, "");
   };
