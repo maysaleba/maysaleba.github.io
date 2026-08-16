@@ -115,7 +115,7 @@ const itemsList = [
   console.log(searchQuery);
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="absolute" sx={{background: 'transparent', boxShadow: 'none'}}>
+      <AppBar className="top-nav-contrast" position="absolute" sx={{background: 'transparent', boxShadow: 'none'}}>
         <Toolbar
           sx={{
             justifyContent: "space-between",

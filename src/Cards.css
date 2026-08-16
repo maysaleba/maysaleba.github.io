@@ -87,6 +87,25 @@ padding-top: 90px;
   color: white !important;
 }
 
+:root:not(.dark-mode) .top-nav-contrast {
+  background: linear-gradient(180deg, rgba(15, 22, 40, 0.38) 0%, rgba(15, 22, 40, 0.12) 72%, rgba(15, 22, 40, 0) 100%) !important;
+  backdrop-filter: blur(2px);
+}
+
+.top-nav-contrast .logocolortext,
+.top-nav-contrast .MuiTypography-root,
+.top-nav-contrast .MuiSvgIcon-root,
+.top-nav-contrast .theme-toggle-btn {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+:root.dark-mode .top-nav-contrast .logocolortext,
+:root.dark-mode .top-nav-contrast .MuiTypography-root,
+:root.dark-mode .top-nav-contrast .MuiSvgIcon-root,
+:root.dark-mode .top-nav-contrast .theme-toggle-btn {
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+}
+
 
 .hltb-container {
 
@@ -113,6 +132,20 @@ padding-top: 10px;
 .badge-info {
     color:  black !important;
     background-color: #f0e9f8 !important;
+}
+
+.datablitz-availability-badge {
+  color: var(--badge-text) !important;
+  background-color: var(--badge-bg) !important;
+  border: none;
+  font-size: 0.65rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+:root.dark-mode .datablitz-availability-badge {
+  color: var(--badge-text) !important;
+  background-color: var(--badge-bg) !important;
 }
 
 .badge {
@@ -341,6 +374,43 @@ a.infotax {
   color: var(--text-main);
 }
 
+.item-price-table tr.datablitz-row td:first-child {
+  box-shadow: inset 4px 0 0 #ffba20;
+}
+
+.datablitz-retailer-card.btn.btn-secondary {
+  border-color: var(--button-border) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.datablitz-row-link,
+.datablitz-row-link:hover,
+.datablitz-row-link:focus,
+.datablitz-row-link:active,
+.datablitz-row-link:visited {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.datablitz-retailer-card.btn.btn-secondary:focus,
+.datablitz-retailer-card.btn.btn-secondary:active,
+.datablitz-retailer-card.btn.btn-secondary:hover,
+.datablitz-retailer-card.btn.btn-secondary.focus,
+.datablitz-retailer-card.btn.btn-secondary:not(:disabled):not(.disabled):active:focus,
+.datablitz-retailer-card.btn.btn-secondary:not(:disabled):not(.disabled):active,
+.datablitz-retailer-card.btn.btn-secondary:focus-visible {
+  outline: none !important;
+  border-color: var(--button-border) !important;
+  box-shadow: none !important;
+}
+
+:root.dark-mode .datablitz-retailer-card.btn.btn-secondary {
+  border-color: var(--button-border) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
 
   .item-price-table td.version {
     font-size: 0.8rem;
@@ -371,6 +441,11 @@ a.infotax {
 }
 .item-price-table tr:last-child td:last-child {
   border-bottom-right-radius: 10px;
+}
+
+/* If Datablitz is the last row (3 or fewer rows), keep the left strip edge straight. */
+.item-price-table tr.datablitz-row:last-child td:first-child {
+  border-bottom-left-radius: 0;
 }
 
 /* 3) Don’t draw a line under the last row */
@@ -603,6 +678,7 @@ display: inline-block;  /* may not need this, but I've found I do */
 .noregion-logo { background-image: url('flags/NO.png'); }
 .peregion-logo { background-image: url('flags/PE.png'); }
 .phregion-logo { background-image: url('flags/PH.png'); }
+.dbregion-logo { background-image: url('flags/db.avif'); }
 .plregion-logo { background-image: url('flags/PL.png'); }
 .zaregion-logo { background-image: url('flags/ZA.png'); }
 .krregion-logo { background-image: url('flags/KR.png'); }
@@ -1512,6 +1588,27 @@ a.infotax:hover {
   font-size: 14px;
 }
 
+.datablitz-poc-box {
+  border: 1px solid var(--section-border);
+  border-radius: 8px;
+  padding: 10px;
+  background: var(--surface-soft-bg);
+  margin-bottom: 8px;
+}
+
+.datablitz-price {
+  font-weight: bold;
+}
+
+.datablitz-poc-meta {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.datablitz-poc-empty {
+  padding: 8px 0;
+}
+
 .game-info-col {
   padding-bottom: 10px;
 }
@@ -1554,6 +1651,55 @@ a.infotax:hover {
 .region-subprice {
   font-size: 11px;
   color: var(--text-main);
+}
+
+.datablitz-label-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.datablitz-availability-under {
+  margin-left: 0;
+  position: relative;
+  display: block;
+  padding-left: 25px;
+  min-height: 12px;
+}
+
+.datablitz-availability-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  left: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
+
+.datablitz-availability-text {
+  display: inline-block;
+}
+
+.datablitz-availability-dot.is-in {
+  background: #2faa48;
+}
+
+.datablitz-availability-dot.is-out {
+  background: #d74c45;
+}
+
+.datablitz-availability-dot.is-pre {
+  background: #3b82f6;
+}
+
+.datablitz-availability-dot.is-low {
+  background: #f59e0b;
+}
+
+.datablitz-availability-dot.is-unknown {
+  background: #8b8b9a;
 }
 
 .platform-pill {

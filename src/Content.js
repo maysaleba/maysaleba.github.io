@@ -12,13 +12,12 @@ import enebalogo from "./flags/eneba.png";
 import { Helmet } from "react-helmet";
 import { Redirect } from "react-router-dom";
 import GoogleAds from "./AdSense";
-import axios from "axios";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import InfoIcon from "@mui/icons-material/Info";  
 import CloseIcon from "@mui/icons-material/Close";
 import noimage from "./noimage.jpg";
 import { Link as RouterLink } from "react-router-dom";
+import datablitzPricesSwitch from "./datablitz_prices.json";
 
 const style = {
   position: "absolute",
@@ -113,6 +112,76 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     return game.Slug === match.params.games;
   });
 
+  const datablitzPricesPOC = Array.isArray(datablitzPricesSwitch)
+    ? datablitzPricesSwitch
+    : [];
+
+  const normalizeDatablitzSlug = (slug = "") => {
+    return String(slug)
+      .toLowerCase()
+      .replace(/-ps4-ps5(?=-|$)/g, "-ps4")
+      .replace(/-?nintendo-switch-2-edition/g, "")
+      .replace(/-?standard-edition/g, "")
+      .replace(/-?for-nintendo-switch/g, "")
+      .replace(/-{2,}/g, "-")
+      .replace(/^-|-$/g, "");
+  };
+
+  const targetDatablitzSlug = normalizeDatablitzSlug(matchGames[0]?.Slug);
+
+  const datablitzPOCEntry = datablitzPricesPOC.find(
+    (item) => normalizeDatablitzSlug(item.slug) === targetDatablitzSlug
+  );
+
+  const getDatablitzAvailabilityTone = (availability = "") => {
+    const v = String(availability).toLowerCase();
+
+    if (v.includes("out") && v.includes("stock")) return "is-out";
+    if (v.includes("in") && v.includes("stock")) return "is-in";
+    if (v.includes("pre") && v.includes("order")) return "is-pre";
+    if (v.includes("low") && v.includes("stock")) return "is-low";
+    return "is-unknown";
+  };
+
+  function DatablitzPhysicalRow() {
+    if (!datablitzPOCEntry) return null;
+
+    const availabilityText = datablitzPOCEntry.availability || "Physical";
+    const availabilityTone = getDatablitzAvailabilityTone(availabilityText);
+
+    return (
+      <tr className="item-table-best datablitz-row">
+        <td className="version">
+          <span className="blank-medal-logo">
+            <div style={{ marginLeft: "10px" }} className="datablitz-label-stack">
+              <div className="dbregion-logo">DataBlitz</div>
+              <div className="region-subprice datablitz-availability-under">
+                <span className={`datablitz-availability-dot ${availabilityTone}`} aria-hidden="true"></span>
+                <span className="datablitz-availability-text">{availabilityText}</span>
+              </div>
+            </div>
+          </span>
+        </td>
+
+        <td className="version"></td>
+
+        <td className="version">
+          <a href={datablitzPOCEntry.url} target="_blank" rel="noreferrer">
+            <div className="btn btn-block btn-secondary datablitz-retailer-card">
+              <div className="price-container-in">
+                <span className="price">₱{Number(datablitzPOCEntry.pricePhp).toFixed(0)}</span>
+                <div
+                  className="placeholder-logo"
+                  style={{ width: "27px", height: "20px" }}
+                ></div>
+              </div>
+            </div>
+          </a>
+        </td>
+      </tr>
+    );
+  }
+
   // console.log("HELLO"+matchGames)
 
 const phpCeil = (value, placeholder = "₱--") =>
@@ -141,39 +210,6 @@ const phpCeil = (value, placeholder = "₱--") =>
         .split(/(?=•)/)
         .map((item, i) => <p key={i}>{item}</p>);
       return newText;
-    }
-  }
-
-  function OrigPrice() {
-    if (matchGames[0].NumberofPlayers !== undefined) {
-      // console.log("SHOPEE!!"+matchGames[0].NumberofPlayers)
-      return (
-      <div className="orig-price-container">
-          <InfoIcon sx={{ color: "white" }} fontSize="small" />{" "}
-          <a
-            className="origprice"
-            href={matchGames[0].NumberofPlayers}
-            target="_blank"
-            rel="noreferrer"
-          >
-            CHECK RETAIL PRICE
-          </a>
-        </div>
-      );
-    } else {
-      return (
-      <div className="orig-price-container">
-          <InfoIcon sx={{ color: "white" }} fontSize="small" />{" "}
-          <a
-            className="origprice"
-            href="https://shope.ee/5ALD8alAHo"
-            target="_blank"
-            rel="noreferrer"
-          >
-            CHECK RETAIL PRICE
-          </a>
-        </div>
-      );
     }
   }
 
@@ -1263,6 +1299,8 @@ function PsPrices() {
           );
         })}
 
+        <DatablitzPhysicalRow />
+
         {hasToggle && (
           <tr className="item-table-best">
            <td colSpan={3} className="text-center region-toggle-row">
@@ -2013,6 +2051,8 @@ const getModalTextForCountry = (country) => {
           <>
             {ranks}
 
+            <DatablitzPhysicalRow />
+
             {/* Only show the toggle if there are more than 3 rows */}
             {hasToggle && (
               <tr className="item-table-best">
@@ -2028,6 +2068,7 @@ const getModalTextForCountry = (country) => {
                 </td>
               </tr>
             )}
+
           </>
         );
       }
@@ -2065,6 +2106,31 @@ const getModalTextForCountry = (country) => {
   background: var(--hero-bg);
 
   z-index: -1;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 34%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.52) 0%,
+      rgba(0, 0, 0, 0.34) 42%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    pointer-events: none;
+  }
+
+  :root.dark-mode &:before {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.22) 0%,
+      rgba(0, 0, 0, 0.12) 42%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
 
   &:after {
     --color-background--rgb: var(--hero-gradient-rgb);
@@ -2227,7 +2293,6 @@ const getModalTextForCountry = (country) => {
 </Card>  
 </Col>
           </div>
-          <OrigPrice />
           <Paper elevation={2} className="content-container">
             {/*<Card className="content-container-gameinfo">*/}
 
