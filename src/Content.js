@@ -122,6 +122,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
       .replace(/-ps4-ps5(?=-|$)/g, "-ps4")
       .replace(/-?nintendo-switch-2-edition/g, "")
       .replace(/-?standard-edition/g, "")
+      .replace(/-?anniversary-edition/g, "")
       .replace(/-?for-nintendo-switch/g, "")
       .replace(/-?plus/g, "")
       .replace(/-{2,}/g, "-")
