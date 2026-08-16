@@ -491,9 +491,39 @@ display: inline-block;  /* may not need this, but I've found I do */
   margin-top: 1rem;
 }
 
+.pagination-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.pagination-status {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
 .pagination .MuiPagination-ul {
   flex-wrap: wrap;
   justify-content: center;
+  gap: 0.2rem;
+}
+
+.pagination .MuiPaginationItem-root {
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.pagination .MuiPaginationItem-root.Mui-selected {
+  background-color: var(--button-bg) !important;
+  color: var(--button-text) !important;
+}
+
+.pagination .MuiPaginationItem-root:hover {
+  background-color: var(--surface-soft-bg) !important;
 }
 
 .route-loading {
@@ -552,10 +582,24 @@ display: inline-block;  /* may not need this, but I've found I do */
     margin-top: 0.75rem;
   }
 
+  .pagination-block {
+    gap: 0.4rem;
+  }
+
+  .pagination-status {
+    font-size: 0.72rem;
+  }
+
+  .pagination .MuiPagination-ul {
+    gap: 0.08rem;
+  }
+
   .pagination .MuiPaginationItem-root {
-    min-width: 32px;
-    height: 32px;
-    font-size: 0.9rem;
+    min-width: 29px;
+    height: 29px;
+    margin: 0;
+    font-size: 0.76rem;
+    padding: 0 0.08rem;
   }
 }
 

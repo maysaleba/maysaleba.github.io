@@ -4,7 +4,9 @@
   import "./Cards.css";
   import FilterDropDown from "./FilterDropDown";
   import Pagination from '@mui/material/Pagination';
+  import PaginationItem from '@mui/material/PaginationItem';
   import Paper from '@mui/material/Paper';
+  import useMediaQuery from '@mui/material/useMediaQuery';
 
   const CardGroup = ({  
     clearPriceRange,
@@ -35,6 +37,8 @@
     regionFilter,       // <-- add
     datam,
   }) => {
+    const isMobilePagination = useMediaQuery('(max-width:575.98px)');
+
     const hasActiveRegionFilter =
       (Array.isArray(regionFilter?.include) && regionFilter.include.length > 0) ||
       (Array.isArray(regionFilter?.exclude) && regionFilter.exclude.length > 0) ||
@@ -148,14 +152,30 @@
               )}
             <p />
             {filteredReviews.length > 0 && maxPage > 1 && (
-              <Pagination
-                className="pagination"
-                color="secondary"
-                size="small"
-                count={maxPage}
-                page={page}
-                onChange={(e, p) => jumpPage(p)}
-              />
+              <div className="pagination-block">
+                <div className="pagination-status">
+                  Page {page} of {maxPage}
+                </div>
+                <Pagination
+                  className="pagination"
+                  color="secondary"
+                  size="small"
+                  count={maxPage}
+                  page={page}
+                  siblingCount={isMobilePagination ? 1 : 4}
+                  boundaryCount={0}
+                  showFirstButton
+                  showLastButton
+                  onChange={(e, p) => jumpPage(p)}
+                  renderItem={(item) => {
+                    if (item.type === 'start-ellipsis' || item.type === 'end-ellipsis') {
+                      return null;
+                    }
+
+                    return <PaginationItem {...item} />;
+                  }}
+                />
+              </div>
             )}
 
                     </Paper>
