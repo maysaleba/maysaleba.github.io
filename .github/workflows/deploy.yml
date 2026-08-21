@@ -10,6 +10,7 @@ on:
       - "src/csvjson.csv"
       - "src/csvjsontr.json"
       - "src/csvjsontr.csv"
+      - "src/datablitz_prices.json"
 
 jobs:
   deploy:
