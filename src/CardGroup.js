@@ -13,6 +13,9 @@
     priceRangeDropDown,
     onPriceRangeDrop,
     onPriceRangeChange,
+    onPriceRangeBoundsChange,
+    priceRangeLow,
+    priceRangeField,
     clearGenre,
     onPlatformDrop,
     onPlatformChange,
@@ -66,6 +69,9 @@
               priceRangeDropDown={priceRangeDropDown}
               onPriceRangeDrop={onPriceRangeDrop}
               onPriceRangeChange={onPriceRangeChange}
+              onPriceRangeBoundsChange={onPriceRangeBoundsChange}
+              priceRangeLow={priceRangeLow}
+              priceRangeField={priceRangeField}
               clearGenre={clearGenre}
               onPlatformDrop={onPlatformDrop}
               onPlatformChange={onPlatformChange}

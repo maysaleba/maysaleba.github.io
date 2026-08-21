@@ -1,5 +1,6 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Container, Dropdown, Row, Col } from "react-bootstrap";
+import Slider from "@mui/material/Slider";
 import { withRouter } from "react-router-dom";
 import "./Cards.css";
 import { Icon } from "@iconify/react";
@@ -10,6 +11,9 @@ const FilterDropDown = (props) => {
     priceRangeDropDown,
     onPriceRangeDrop,
     onPriceRangeChange,
+    onPriceRangeBoundsChange,
+    priceRangeLow,
+    priceRangeField,
     clearGenre,
     onPlatformDrop,
     onPlatformChange,
@@ -119,10 +123,47 @@ const platformIcon = (platform) => {
   };
 
   const selectPrice = (label) => () => {
-    // clearSearchChange?.();
     onPriceRangeDrop?.(label);
     onPriceRangeChange?.(label);
   };
+
+  const [priceMenuOpen, setPriceMenuOpen] = useState(false);
+  const sliderUpperValue = Number.isFinite(priceRangeField) ? Math.min(priceRangeField, 2501) : 2501;
+  const committedSliderValue = [Math.min(priceRangeLow || 0, sliderUpperValue), sliderUpperValue];
+  const [draftSliderValue, setDraftSliderValue] = useState(committedSliderValue);
+  const [draftMinInput, setDraftMinInput] = useState(String(committedSliderValue[0]));
+  const [draftMaxInput, setDraftMaxInput] = useState(
+    committedSliderValue[1] === 2501 ? "" : String(committedSliderValue[1])
+  );
+
+  useEffect(() => {
+    setDraftSliderValue(committedSliderValue);
+    setDraftMinInput(String(committedSliderValue[0]));
+    setDraftMaxInput(committedSliderValue[1] === 2501 ? "" : String(committedSliderValue[1]));
+  }, [priceRangeLow, priceRangeField]);
+
+  const sliderValue = draftSliderValue;
+  const commitSliderValue = (nextValue) => {
+    const min = Math.max(0, Math.min(nextValue[0], 2500));
+    const max = Math.max(min + 1, Math.min(nextValue[1], 2501));
+    const committedMax = max === 2501 ? Number.POSITIVE_INFINITY : max;
+    setDraftSliderValue([min, max]);
+    onPriceRangeBoundsChange?.(min, committedMax);
+  };
+
+  const commitInputValues = () => {
+    const min = Number(draftMinInput);
+    const max = draftMaxInput.trim() === "" ? 2501 : Number(draftMaxInput);
+
+    if (!Number.isFinite(min) || !Number.isFinite(max)) return;
+
+    commitSliderValue([min, max]);
+  };
+  const sliderLabel = sliderValue[1] === 2501
+    ? sliderValue[0] === 0 ? "Any price" : `P${sliderValue[0] + 1}+`
+    : sliderValue[0] === 0
+    ? `P0-${sliderValue[1].toLocaleString()}`
+    : `P${(sliderValue[0] + 1).toLocaleString()}-${sliderValue[1].toLocaleString()}`;
 
   // ---------- data sources (easy to extend) ----------
   const PLATFORM_OPTIONS = useMemo(
@@ -160,11 +201,6 @@ const LATEST_OPTIONS = useMemo(
       "Strategy",
       "Unique",
     ],
-    []
-  );
-
-  const PRICE_OPTIONS = useMemo(
-    () => ["All Price Range", "≤ P100", "≤ P250", "≤ P500", "≤ P750", "≤ P1,000", "≤ P1,500", "≤ P2,000", "≤ P2,500", "≤ P2,500+"],
     []
   );
 
@@ -398,22 +434,81 @@ const AnyIcon = () => (
 
     {/* Price */}
     <Col xs={6} md={6} className="col-style">
-      <Dropdown className="m-1">
+      <Dropdown
+        className="m-1"
+        autoClose={false}
+        show={priceMenuOpen}
+        onToggle={setPriceMenuOpen}
+      >
 <Dropdown.Toggle size="sm" id="dd-price" className="dropdown-style w-100">
   <span
     className="d-inline-block text-truncate align-middle"
     style={{ maxWidth: 'calc(100% - 1.5rem)' }}
-    title={priceRangeDropDown}
+    title={priceRangeDropDown === "All Price Range" ? "Any price" : sliderLabel}
   >
-    {priceRangeDropDown}
+    {priceRangeDropDown === "All Price Range" ? "Any price" : sliderLabel}
   </span>
 </Dropdown.Toggle>
-        <Dropdown.Menu className="w-100 dropdown-style" style={{ zIndex: 2000 }}>
-          {PRICE_OPTIONS.map((label) => (
-            <Dropdown.Item as="button" key={label} onClick={selectPrice(label)}>
-              {label}
-            </Dropdown.Item>
-          ))}
+        <Dropdown.Menu className="w-100 dropdown-style price-slider-menu" style={{ zIndex: 2000 }}>
+          <div className="price-slider-content">
+            <div className="price-slider-inputs">
+              <label>
+                <span>Min</span>
+                <input
+                  type="number"
+                  min="0"
+                  max="2500"
+                  value={draftMinInput}
+                  onChange={(event) => setDraftMinInput(event.target.value)}
+                  onBlur={commitInputValues}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter") event.currentTarget.blur();
+                  }}
+                  aria-label="Minimum price"
+                />
+              </label>
+              <label>
+                <span>Max</span>
+                <input
+                  type="number"
+                  min="1"
+                  max="2501"
+                  value={draftMaxInput}
+                  placeholder="2.5K+"
+                  onChange={(event) => setDraftMaxInput(event.target.value)}
+                  onBlur={commitInputValues}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter") event.currentTarget.blur();
+                  }}
+                  aria-label="Maximum price"
+                />
+              </label>
+            </div>
+            <Slider
+              value={sliderValue}
+              min={0}
+              max={2501}
+              step={1}
+              minDistance={1}
+              onChange={(_, value) => setDraftSliderValue(value)}
+              onChangeCommitted={(_, value) => commitSliderValue(value)}
+              valueLabelDisplay="auto"
+              valueLabelFormat={(value) => value === 2501 ? "2.5K+" : `P${value.toLocaleString()}`}
+              aria-label="Price range"
+            />
+            <div className="price-slider-scale" aria-hidden="true">
+              <span>P0</span>
+              <span>P2.5K+</span>
+            </div>
+            <button
+              type="button"
+              className="price-slider-reset"
+              onClick={selectPrice("All Price Range")}
+            >
+              <Icon icon="mdi:restart" width="14" aria-hidden="true" />
+              <span>Reset price</span>
+            </button>
+          </div>
         </Dropdown.Menu>
       </Dropdown>
     </Col>

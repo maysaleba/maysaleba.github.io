@@ -1148,6 +1148,141 @@ label:focus,
   float: none;
 }
 
+.price-slider-menu {
+  min-width: 260px;
+  max-height: none;
+  max-width: calc(100vw - 24px);
+  overflow: visible;
+  overflow-x: hidden;
+  padding: 0 !important;
+}
+
+.price-slider-content {
+  box-sizing: border-box;
+  padding: 14px 16px 10px;
+  width: 100%;
+}
+
+.price-slider-value {
+  color: var(--text-main);
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.price-slider-inputs {
+  display: flex;
+  gap: 8px;
+  margin-top: 0;
+}
+
+.price-slider-inputs label {
+  color: var(--text-main);
+  display: flex;
+  flex-basis: 0;
+  flex: 1;
+  flex-direction: column;
+  font-size: 11px;
+  gap: 3px;
+}
+
+.price-slider-inputs input {
+  background: var(--surface-bg);
+  border: 1px solid var(--section-border);
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: var(--text-main);
+  color-scheme: light;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  height: 32px;
+  min-width: 0;
+  padding: 5px 6px;
+  width: 100%;
+}
+
+.price-slider-inputs input::placeholder {
+  color: var(--text-muted);
+  font-size: 13px;
+  opacity: 1;
+}
+
+.price-slider-inputs input:focus {
+  border-color: var(--button-bg);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--button-bg) 20%, transparent);
+  outline: none;
+}
+
+.price-slider-content .MuiSlider-root {
+  color: var(--button-bg);
+}
+
+.price-slider-content .MuiSlider-rail {
+  background-color: var(--section-border);
+  opacity: 1;
+}
+
+.price-slider-content .MuiSlider-track {
+  background-color: var(--button-bg);
+  border: 0;
+}
+
+.price-slider-content .MuiSlider-thumb {
+  background-color: var(--surface-bg);
+  border: 2px solid var(--button-bg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.price-slider-content .MuiSlider-thumb:hover,
+.price-slider-content .MuiSlider-thumb.Mui-focusVisible,
+.price-slider-content .MuiSlider-thumb.Mui-active {
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--button-bg) 18%, transparent);
+}
+
+.price-slider-content .MuiSlider-valueLabel {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+.price-slider-content .MuiSlider-root {
+  display: flex;
+  margin: 10px 4px 0;
+  max-width: calc(100% - 8px);
+  width: auto;
+}
+
+.price-slider-scale {
+  color: var(--text-main);
+  display: flex;
+  font-size: 11px;
+  justify-content: space-between;
+  opacity: 0.7;
+}
+
+.price-slider-reset {
+  align-items: center;
+  background: transparent;
+  border: 1px solid var(--section-border);
+  border-radius: 4px;
+  color: var(--text-muted);
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 12px;
+  gap: 5px;
+  justify-content: center;
+  margin: 12px auto 0;
+  padding: 5px 9px;
+  width: 100%;
+}
+
+.price-slider-reset:hover,
+.price-slider-reset:focus-visible {
+  background: var(--surface-soft-bg);
+  border-color: var(--button-bg);
+  color: var(--text-main);
+  outline: none;
+}
+
 .dropdown-menu {
     max-height: 280px;
     overflow-y: auto;
@@ -2010,6 +2145,34 @@ a.infotax:hover {
   color: #ffffff !important;
 }
 
+:root.dark-mode .price-slider-content .MuiSlider-root {
+  color: #ffba20;
+}
+
+:root.dark-mode .price-slider-content .MuiSlider-track {
+  background-color: #ffba20;
+}
+
+:root.dark-mode .price-slider-content .MuiSlider-thumb {
+  border-color: #ffba20;
+}
+
+:root.dark-mode .price-slider-content .MuiSlider-thumb:hover,
+:root.dark-mode .price-slider-content .MuiSlider-thumb.Mui-focusVisible,
+:root.dark-mode .price-slider-content .MuiSlider-thumb.Mui-active {
+  box-shadow: 0 0 0 6px rgba(255, 186, 32, 0.2);
+}
+
+:root.dark-mode .price-slider-content .MuiSlider-valueLabel {
+  background-color: #ffba20;
+  color: #000000;
+}
+
+:root.dark-mode .price-slider-inputs input:focus {
+  border-color: #ffba20;
+  box-shadow: 0 0 0 2px rgba(255, 186, 32, 0.2);
+}
+
 .dropdown-item.active,
 .dropdown-item:active {
   background-color: var(--button-bg) !important;
@@ -2127,6 +2290,10 @@ a.infotax:hover {
   color: #ffd6d6;
 }
 
+:root.dark-mode .price-slider-inputs input {
+  color-scheme: dark;
+}
+
 .region-label-mobile {
   display: none;
 }
@@ -2149,5 +2316,9 @@ a.infotax:hover {
   .dropdown-item.region-filter-item {
     padding: 10px 12px;
     min-height: 36px;
+  }
+
+  .price-slider-menu {
+    min-width: min(260px, calc(100vw - 24px));
   }
 }

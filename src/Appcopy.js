@@ -331,6 +331,7 @@ useEffect(() => {
 
   const [priceRangeField, setPriceRangeField] = useState(99999);
   const [priceRangeLow, setPriceRangeLow] = useState(0);
+  const [priceRangeLowExclusive, setPriceRangeLowExclusive] = useState(false);
   const [priceRangeDropDown, setPriceRangeDropDown] = useState("All Price Range");
   const [platformField, setPlatformField] = useState("");
   const [filterField, setFilterField] = useState("");
@@ -394,7 +395,11 @@ useEffect(() => {
   const onLatestDrop = (dropDownValue) => setLatestDropDown(dropDownValue);
   const onDropDownChange = (dropDownValue) => setGenreDropDown(dropDownValue);
 
-  const clearPriceRange = () => setPriceRangeField(99999);
+  const clearPriceRange = () => {
+    setPriceRangeLow(0);
+    setPriceRangeLowExclusive(false);
+    setPriceRangeField(99999);
+  };
 
   const clearFilter = () => {
     clearPriceRange();
@@ -413,22 +418,50 @@ useEffect(() => {
 
   // Price map + setter
   const PRICE_MAP = {
-    "All Price Range": [0, Number.POSITIVE_INFINITY],
-    "≤ P100": [0, 100],
-    "≤ P250": [0, 250],
-    "≤ P500": [0, 500],
-    "≤ P750": [0, 750],
-    "≤ P1,000": [0, 1000],
-    "≤ P1,500": [0, 1500],
-    "≤ P2,000": [0, 2000],
-    "≤ P2,500": [0, 2500],
-    "≤ P2,500+": [0, Number.POSITIVE_INFINITY],
+    "All Price Range": [0, Number.POSITIVE_INFINITY, false],
+    "P0-100": [0, 100, false],
+    "P101-250": [100, 250, true],
+    "P251-500": [250, 500, true],
+    "P501-750": [500, 750, true],
+    "P751-1,000": [750, 1000, true],
+    "P1,001-1,500": [1000, 1500, true],
+    "P1,501-2,000": [1500, 2000, true],
+    "P2,001-2,500": [2000, 2500, true],
+    "P2,501+": [2500, Number.POSITIVE_INFINITY, true],
+    "≤ P100": [0, 100, false],
+    "≤ P250": [0, 250, false],
+    "≤ P500": [0, 500, false],
+    "≤ P750": [0, 750, false],
+    "≤ P1,000": [0, 1000, false],
+    "≤ P1,500": [0, 1500, false],
+    "≤ P2,000": [0, 2000, false],
+    "≤ P2,500": [0, 2500, false],
+    "≤ P2,500+": [0, Number.POSITIVE_INFINITY, false],
   };
 
   const onPriceRangeChange = (label) => {
-    const [min, max] = PRICE_MAP[label] ?? PRICE_MAP["All Price Range"];
+    const compactRange = label.replace(/,/g, "").match(/^P(\d+)-(\d+)$/);
+    const compactUpper = label.replace(/,/g, "").match(/^P(\d+)\+$/);
+    const parsedRange = compactRange
+      ? [compactRange[1] === "0" ? 0 : Number(compactRange[1]) - 1, Number(compactRange[2]), compactRange[1] !== "0"]
+      : compactUpper
+      ? [Number(compactUpper[1]) - 1, Number.POSITIVE_INFINITY, true]
+      : PRICE_MAP[label] ?? PRICE_MAP["All Price Range"];
+    const [min, max, exclusive] = parsedRange;
     setPriceRangeLow(min);
+    setPriceRangeLowExclusive(exclusive);
     setPriceRangeField(max);
+  };
+
+  const onPriceRangeBoundsChange = (min, max) => {
+    const lowerLabel = min === 0 ? "P0" : `P${min + 1}`;
+    const label = Number.isFinite(max)
+      ? `${lowerLabel}-${max.toLocaleString()}`
+      : `${lowerLabel}+`;
+    setPriceRangeLow(min);
+    setPriceRangeLowExclusive(min > 0);
+    setPriceRangeField(max);
+    setPriceRangeDropDown(min === 0 && !Number.isFinite(max) ? "All Price Range" : label);
   };
 
   // Sorting
@@ -669,7 +702,9 @@ const routePlatformField =
         let pricePass = true;
         if (priceRangeDropDown !== "All Price Range" && ratesReady) {
           const lowPhp = lowestPhpFor(review);
-          pricePass = lowPhp <= priceRangeField && lowPhp >= priceRangeLow;
+          pricePass =
+            lowPhp <= priceRangeField &&
+            (priceRangeLowExclusive ? lowPhp > priceRangeLow : lowPhp >= priceRangeLow);
         }
 
         let regionPass = true;
@@ -721,6 +756,7 @@ const routePlatformField =
       routePlatformField,
       priceRangeField,
       priceRangeLow,
+      priceRangeLowExclusive,
       priceRangeDropDown,
       datam,
       regionFilter,
@@ -793,6 +829,8 @@ useEffect(() => {
     platformField,
     regionFilter,
     priceRangeDropDown,
+    priceRangeLow,
+    priceRangeField,
     jumpPage,
   ]);
 
@@ -1035,8 +1073,11 @@ const onPop = () => {
   const CardGroupProps = {
     clearPriceRange,
     priceRangeDropDown,
+    priceRangeLow,
+    priceRangeField,
     onPriceRangeDrop,
     onPriceRangeChange,
+    onPriceRangeBoundsChange,
     clearGenre,
     onPlatformDrop,
     onPlatformChange,
