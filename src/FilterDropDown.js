@@ -7,7 +7,6 @@ import { Icon } from "@iconify/react";
 const FilterDropDown = (props) => {
   const {
     history,
-    clearPriceRange,
     priceRangeDropDown,
     onPriceRangeDrop,
     onPriceRangeChange,
@@ -18,7 +17,6 @@ const FilterDropDown = (props) => {
     onLatestDrop,
     onLatestChange,
     latestDropDown,
-    clearSearchChange,
     onFilterChange,
     genreDropDown,
     onDropDownChange,
@@ -95,32 +93,23 @@ const platformIcon = (platform) => {
   }
 };
 
-  const resetSearchAndPrice = () => {
-    clearSearchChange?.();
-    clearPriceRange?.();
-    onPriceRangeDrop?.("All Price Range");
-  };
-
-  const resetPriceOnly = () => {
-    clearPriceRange?.();
-    onPriceRangeDrop?.("All Price Range");
-  };
-
   const selectPlatform = ({ route, label, value }) => () => {
-    if (route) history.push(route);
-    resetPriceOnly(); 
+    if (route) {
+      const params = new URLSearchParams(history.location.search);
+      params.delete("page");
+      const query = params.toString();
+      history.push(query ? `${route}?${query}` : route);
+    }
     onPlatformChange?.(value);
     onPlatformDrop?.(label);
   };
 
   const selectLatest = (label) => () => {
-    resetSearchAndPrice();
     onLatestChange?.(label);
     onLatestDrop?.(label);
   };
 
   const selectGenre = (label) => () => {
-    resetSearchAndPrice();
     if (label === "All Genres") {
       clearGenre?.();
     } else {
