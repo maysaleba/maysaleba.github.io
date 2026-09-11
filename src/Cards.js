@@ -380,11 +380,31 @@ if (props.psorsw === "Playstation") {
       } else {
         return (
           <span className="price-light">
-            {safePhp(props.saleprice, usdExchange)}
+            {safePhp(props.saleprice, regularPriceRate())}
           </span>
         );
       }
     }
+  }
+
+  // Mirrors the scraper's REGULAR_FALLBACK order. Price always has a value
+  // regardless of currency, so use SalePrice's presence to detect USD instead.
+  function regularPriceRate() {
+    if (Number(SalePrice) > 0) return usdExchange;
+
+    const REGIONAL_FALLBACK = [
+      { value: AustraliaPrice, rate: audExchange },
+      { value: JapanPrice, rate: jpyExchange },
+      { value: KoreaPrice, rate: krwExchange },
+      { value: HongKongPrice, rate: hkdExchange },
+    ];
+
+    for (const candidate of REGIONAL_FALLBACK) {
+      const n = Number(candidate.value);
+      if (Number.isFinite(n) && n > 0) return candidate.rate;
+    }
+
+    return usdExchange;
   }
 
   function PesoPlusPrice(props) {

@@ -191,11 +191,31 @@ const phpCeil = (value, placeholder = "₱--") =>
     ? "₱" + Math.ceil(Number(value))
     : placeholder;
 
+  // Mirrors the scraper's REGULAR_FALLBACK order. Price always has a value
+  // regardless of currency, so use SalePrice's presence to detect USD instead.
+  function regularPriceRate() {
+    if (Number(matchGames[0].SalePrice) > 0) return usdExchange;
+
+    const REGIONAL_FALLBACK = [
+      { value: matchGames[0].AustraliaPrice, rate: audExchange },
+      { value: matchGames[0].JapanPrice, rate: jpyExchange },
+      { value: matchGames[0].KoreaPrice, rate: krwExchange },
+      { value: matchGames[0].HongKongPrice, rate: hkdExchange },
+    ];
+
+    for (const candidate of REGIONAL_FALLBACK) {
+      const n = Number(candidate.value);
+      if (Number.isFinite(n) && n > 0) return candidate.rate;
+    }
+
+    return usdExchange;
+  }
+
   function PesoPrice(props) {
     if (matchGames[0].platform === "Playstation") {
       return phpCeil(props.props);
     } else {
-      return phpCeil(props.props * usdExchange);
+      return phpCeil(props.props * regularPriceRate());
     }
   }
 
@@ -1442,7 +1462,6 @@ function PsPrices() {
                 <RouterLink className="infotax" to="/pasabuy">
                   Pasabuy
                 </RouterLink>
-                . Argentina Price is based on 10K ARS top up, inclusive of 21% tax and service fee.
                 {/*
  Note: Argentina eShop only accepts payment from Argentina issued cards. Use {" "}
                 <a
