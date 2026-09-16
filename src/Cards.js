@@ -30,6 +30,7 @@ const Cards = ({
   Platform,
   PlusPrice,
   Price,
+  Currency,
   idPrice,
   idSalePrice,
   inPrice,
@@ -380,31 +381,39 @@ if (props.psorsw === "Playstation") {
       } else {
         return (
           <span className="price-light">
-            {safePhp(props.saleprice, regularPriceRate())}
+            {safePhp(props.saleprice, regularPriceRate(Currency))}
           </span>
         );
       }
     }
   }
 
-  // Mirrors the scraper's REGULAR_FALLBACK order. Price always has a value
-  // regardless of currency, so use SalePrice's presence to detect USD instead.
-  function regularPriceRate() {
-    if (Number(SalePrice) > 0) return usdExchange;
+  const currencyRates = {
+    USD: usdExchange,
+    ARS: arsExchange,
+    AUD: audExchange,
+    BRL: brlExchange,
+    CAD: cadExchange,
+    NZD: nzdExchange,
+    COP: copExchange,
+    MXN: mxnExchange,
+    PEN: penExchange,
+    PLN: plnExchange,
+    NOK: nokExchange,
+    ZAR: zarExchange,
+    SGD: sgdExchange,
+    HKD: hkdExchange,
+    TRY: trdExchange,
+    JPY: jpyExchange,
+    KRW: krwExchange,
+    MYR: myrExchange,
+    THB: thbExchange,
+    PHP: 1,
+  };
 
-    const REGIONAL_FALLBACK = [
-      { value: AustraliaPrice, rate: audExchange },
-      { value: JapanPrice, rate: jpyExchange },
-      { value: KoreaPrice, rate: krwExchange },
-      { value: HongKongPrice, rate: hkdExchange },
-    ];
-
-    for (const candidate of REGIONAL_FALLBACK) {
-      const n = Number(candidate.value);
-      if (Number.isFinite(n) && n > 0) return candidate.rate;
-    }
-
-    return usdExchange;
+  function regularPriceRate(currencyCode) {
+    const normalized = String(currencyCode || "USD").trim().toUpperCase();
+    return currencyRates[normalized] ?? usdExchange;
   }
 
   function PesoPlusPrice(props) {

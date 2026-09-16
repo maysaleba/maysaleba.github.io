@@ -119,6 +119,7 @@
                           Platform={review.platform}
                           PlusPrice={review.PlusPrice}
                           Price={review.Price}
+                          Currency={review.Currency}
                           idPrice={review.idPrice}
                           idSalePrice={review.idSalePrice}
                           inPrice={review.inPrice}

@@ -122,6 +122,7 @@ function sortJson(element, prop, propType, asc) {
                                           Platform={review.platform}
                                           PlusPrice={review.PlusPrice}
                                           Price={review.Price}
+                                          Currency={review.Currency}
                                           ESRBRating={review.ESRBRating}
                                           HongKongPrice={review.HongKongPrice}
                                           KoreaPrice={review.KoreaPrice}
@@ -181,6 +182,7 @@ function sortJson(element, prop, propType, asc) {
                                           Platform={review.platform}
                                           PlusPrice={review.PlusPrice}
                                           Price={review.Price}
+                                          Currency={review.Currency}
                                           ESRBRating={review.ESRBRating}
                                           HongKongPrice={review.HongKongPrice}
                                           KoreaPrice={review.KoreaPrice}
@@ -249,6 +251,7 @@ function sortJson(element, prop, propType, asc) {
                 Platform={review.platform}
                 PlusPrice={review.PlusPrice}
                 Price={review.Price}
+                Currency={review.Currency}
                 ESRBRating={review.ESRBRating}
                 IsPS4={review.IsPS4}
                 IsPS5={review.IsPS5}
@@ -303,6 +306,7 @@ function sortJson(element, prop, propType, asc) {
                 Platform={review.platform}
                 PlusPrice={review.PlusPrice}
                 Price={review.Price}
+                Currency={review.Currency}
                 ESRBRating={review.ESRBRating}
                 IsPS4={review.IsPS4}
                 IsPS5={review.IsPS5}

@@ -191,31 +191,42 @@ const phpCeil = (value, placeholder = "₱--") =>
     ? "₱" + Math.ceil(Number(value))
     : placeholder;
 
-  // Mirrors the scraper's REGULAR_FALLBACK order. Price always has a value
-  // regardless of currency, so use SalePrice's presence to detect USD instead.
-  function regularPriceRate() {
-    if (Number(matchGames[0].SalePrice) > 0) return usdExchange;
+  function regularPriceRate(currencyCode) {
+    const currencyRates = {
+      USD: usdExchange,
+      ARS: arsExchange,
+      AUD: audExchange,
+      BRL: brlExchange,
+      CAD: cadExchange,
+      NZD: nzdExchange,
+      COP: copExchange,
+      MXN: mxnExchange,
+      PEN: penExchange,
+      PLN: plnExchange,
+      NOK: nokExchange,
+      ZAR: zarExchange,
+      SGD: sgdExchange,
+      HKD: hkdExchange,
+      TRY: trdExchange,
+      JPY: jpyExchange,
+      KRW: krwExchange,
+      MYR: myrExchange,
+      THB: thbExchange,
+      PHP: 1,
+    };
 
-    const REGIONAL_FALLBACK = [
-      { value: matchGames[0].AustraliaPrice, rate: audExchange },
-      { value: matchGames[0].JapanPrice, rate: jpyExchange },
-      { value: matchGames[0].KoreaPrice, rate: krwExchange },
-      { value: matchGames[0].HongKongPrice, rate: hkdExchange },
-    ];
+    const normalized = String(currencyCode || matchGames[0]?.Currency || "USD")
+      .trim()
+      .toUpperCase();
 
-    for (const candidate of REGIONAL_FALLBACK) {
-      const n = Number(candidate.value);
-      if (Number.isFinite(n) && n > 0) return candidate.rate;
-    }
-
-    return usdExchange;
+    return currencyRates[normalized] ?? usdExchange;
   }
 
   function PesoPrice(props) {
     if (matchGames[0].platform === "Playstation") {
       return phpCeil(props.props);
     } else {
-      return phpCeil(props.props * regularPriceRate());
+      return phpCeil(props.props * regularPriceRate(matchGames[0]?.Currency));
     }
   }
 
