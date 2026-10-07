@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Badge, Card, Col } from "react-bootstrap";
 import "./Cards.css";
 import { Link } from "react-router-dom";
@@ -13,6 +13,34 @@ import { Icon } from "@iconify/react";
 // import download from "./download.gif";
 // console.log("USD\n" + usdExchange + "\nARS\n" + arsExchange + "\nAUD\n" + audExchange + "\nBRL\n" + brlExchange + "\nCAD\n" + cadExchange + "\nCLP\n" + clpExchange + "\nCOP\n" + copExchange
 //   + "\nMXN\n" + mxnExchange + "\nPEN\n" + penExchange + "\nPLN\n" + plnExchange + "\nRUB\n" + rubExchange + "\nZAR\n" + zarExchange);
+
+const SALE_STATUS_URLS = [
+  "https://raw.githubusercontent.com/maysaleba/switch-games/main/output/current_sale_status.json",
+  "https://raw.githubusercontent.com/maysaleba/playstation-games/main/playstation_current_sale_status.json",
+];
+let saleStatusPromise = null;
+const loadSaleStatus = () => {
+  if (!saleStatusPromise) {
+    saleStatusPromise = Promise.all(
+      SALE_STATUS_URLS.map((url) =>
+        fetch(url)
+          .then((r) => (r.ok ? r.json() : {}))
+          .catch(() => ({}))
+      )
+    ).then((parts) => Object.assign({}, ...parts));
+  }
+  return saleStatusPromise;
+};
+
+const parseTurkeyPrice = (value) => {
+  if (value === undefined || value === null || value === "" || value === "null") return "";
+  return Number(String(value).replace(".", "")) / 100;
+};
+
+const LOW_TAGS = {
+  new_low: { label: "New Low", bg: "success" },
+  matches_low: { label: "Matches Low", bg: "", className: "low-tag-subtle" },
+};
 
 const Cards = ({
   datam = {},
@@ -588,6 +616,78 @@ else if (PlusPrice === 202020) {
   }
 
 
+  const [saleStatus, setSaleStatus] = useState(null);
+  useEffect(() => {
+    let alive = true;
+    loadSaleStatus().then((d) => alive && setSaleStatus(d));
+    return () => {
+      alive = false;
+    };
+  }, []);
+
+  // Country code of the cheapest region (in PHP), used to look up the status
+  function cheapestCountry() {
+    if (!datam || !datam.PHP) return null;
+    const toPHP = (amt, ccy) =>
+      +amt * (Number(datam.PHP) / Number(datam[ccy] || 1));
+    const candidates =
+      Platform === "Playstation"
+        ? {
+            ID: [idSalePrice || idPrice, "IDR"],
+            IN: [inSalePrice || inPrice, "INR"],
+            SG: [sgSalePrice || sgPrice, "SGD"],
+            TR: [parseTurkeyPrice(trSalePrice || trPrice), "TRY"],
+            US: [usSalePrice || usPrice, "USD"],
+            HK: [hkSalePrice || hkPrice, "HKD"],
+          }
+        : {
+      US: [SalePrice, "USD"],
+      CA: [CanadaPrice, "CAD"],
+      PE: [PeruPrice, "PEN"],
+      AU: [AustraliaPrice, "AUD"],
+      CO: [ColombiaPrice, "COP"],
+      ZA: [SouthafricaPrice, "ZAR"],
+      BR: [BrazilPrice, "BRL"],
+      NO: [NorwayPrice, "NOK"],
+      PL: [PolandPrice, "PLN"],
+      NZ: [NewZealandPrice, "NZD"],
+      MX: [MexicoPrice, "MXN"],
+      HK: [HongKongPrice, "HKD"],
+      KR: [KoreaPrice, "KRW"],
+      JP: [JapanPrice, "JPY"],
+      SG: [SingaporePrice, "SGD"],
+      MY: [MalaysiaPrice, "MYR"],
+      TH: [ThailandPrice, "THB"],
+    };
+    let best = null;
+    let bestPrice = Infinity;
+    Object.entries(candidates).forEach(([code, [amt, ccy]]) => {
+      const php = toPHP(amt, ccy);
+      if (Number.isFinite(php) && php > 0 && php < bestPrice) {
+        best = code;
+        bestPrice = php;
+      }
+    });
+    const ars = +ArgentinaPrice;
+    if (Platform !== "Playstation" && Number.isFinite(ars) && ars > 0 && datam.ARS) {
+      const phpPerARS = Number(datam.PHP) / Number(datam.ARS);
+      const base = ars * phpPerARS;
+      const tax = base * 1.21 * ((1500 - 12100 * phpPerARS) / (12100 * phpPerARS));
+      const total = base * 1.21 + tax;
+      if (total > 0 && total < bestPrice) best = "AR";
+    }
+    return best;
+  }
+
+  // TEMP PREVIEW: remove this line after checking the New Low look
+  const previewStatus = Slug === "hades-ii-switch" ? "new_low" : null;
+  const lowStatus =
+    previewStatus ||
+    (saleStatus && Slug && saleStatus[Slug]
+      ? saleStatus[Slug][cheapestCountry()]
+      : null);
+  const lowTag = LOW_TAGS[lowStatus];
+
 function PlatformOverlay({ title, slug, isps4, isps5 }) {
   if (!slug) {
     console.error("Undefined slug found in record:", title);
@@ -715,7 +815,8 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
                 thailandprice={ThailandPrice}
             />{" "}
             <PesoPlusPrice psorsw={Platform} pesoplus={PlusPrice}  esrbrating={ESRBRating}/>{" "}
-            <DaysLeft isExpired={SaleEnds} platform={Platform} />
+            <DaysLeft isExpired={SaleEnds} platform={Platform} />{" "}
+            {lowTag && <Badge bg={lowTag.bg} className={lowTag.className}>{lowTag.label}</Badge>}
         </Card.Text>
     </Card.Body>
 </Card>

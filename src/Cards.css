@@ -1007,6 +1007,17 @@ display: inline-block;  /* may not need this, but I've found I do */
 }
 
 
+.badge.low-tag-subtle {
+    background: transparent;
+    color: #343a40;
+    border: 1px solid currentColor;
+    font-weight: 500;
+}
+
+.dark-mode .badge.low-tag-subtle {
+    color: #ced4da;
+}
+
 .additional-overlay {
     position: absolute;
     bottom: 5px; /* Adjust as needed */
