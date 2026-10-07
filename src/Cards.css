@@ -1018,6 +1018,49 @@ display: inline-block;  /* may not need this, but I've found I do */
     color: #ced4da;
 }
 
+.dropdown-toggle.dropdown-style.no-caret::after {
+    display: none;
+}
+
+.dropdown-toggle.dropdown-style.no-caret .region-toggle-icon-wrap {
+    margin-right: 0;
+}
+
+.badge.low-tag-new {
+    background-color: #00a845;
+    color: #fff;
+}
+
+.dropdown-toggle.low-new_low svg,
+.low-icon-new_low {
+    color: #00a845;
+}
+
+.dropdown-toggle.low-matches_low svg,
+.low-icon-matches_low {
+    color: #0d6efd;
+}
+
+.dropdown-toggle.low-not_low svg,
+.low-icon-not_low {
+    color: #6c757d;
+}
+
+.btn.dropdown-style.new-low-btn {
+    min-height: 50px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0 !important;
+}
+
+.btn.dropdown-style.new-low-btn.is-active {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+    color: #fff !important;
+}
+
 .additional-overlay {
     position: absolute;
     bottom: 5px; /* Adjust as needed */

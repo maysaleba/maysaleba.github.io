@@ -39,6 +39,8 @@
     onRegionChange,     // <-- add
     regionFilter,       // <-- add
     datam,
+    lowFilter,
+    setLowFilter,
   }) => {
     const isMobilePagination = useMediaQuery('(max-width:575.98px)');
 
@@ -53,6 +55,7 @@
         latestDropDown !== "Popular" ||
         priceRangeDropDown !== "All Price Range" ||
         platformDropDown !== "All Platforms" ||
+        lowFilter ||
         hasActiveRegionFilter
     );
 
@@ -86,6 +89,8 @@
               onDropDownChange={onDropDownChange}
               onRegionChange={onRegionChange}    // <-- add
               regionFilter={regionFilter}        // <-- add
+              lowFilter={lowFilter}
+              setLowFilter={setLowFilter}
             />
           </div>
        

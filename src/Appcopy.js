@@ -11,6 +11,7 @@ import styled from "styled-components";
 import Search from "./Search";
 import { Helmet } from "react-helmet";
 import axios from "axios";
+import { loadSaleStatus } from "./Cards";
 
 const Flip = lazy(() => import("./Flip"));
 const Content = lazy(() => import("./Content"));
@@ -18,6 +19,11 @@ const GiftCards = lazy(() => import("./GiftCards"));
 const FAQ = lazy(() => import("./FAQ"));
 const MainPage = lazy(() => import("./MainPage"));
 const Pasabuy = lazy(() => import("./Pasabuy"));
+
+const readLow = (params) => {
+  const value = params.get("low");
+  return ["new_low", "matches_low", "not_low"].includes(value) ? value : "";
+};
 
 const RouteLoadingFallback = () => (
   <div className="route-loading" role="status">
@@ -55,6 +61,7 @@ function ListPage({ defaults, SearchCmpProps, CardGroupProps, HelmetProps }) {
     onPriceRangeDrop,
     onPriceRangeChange,
     onRegionChange,
+    setLowFilter,
     jumpPage,
   } = CardGroupProps;
 
@@ -104,6 +111,7 @@ useEffect(() => {
 
     onRegionChange(region);
     setRegionFilter(region);
+    setLowFilter(readLow(params));
 
     jumpPage(Number.isFinite(page) ? page : 1);
   }, [location.search]);
@@ -365,6 +373,12 @@ useEffect(() => {
 
   const [originalData, setOriginalData] = useState([]);
 
+  const [lowFilter, setLowFilter] = useState("");
+  const [saleStatus, setSaleStatus] = useState(null);
+  useEffect(() => {
+    loadSaleStatus().then(setSaleStatus);
+  }, []);
+
   useEffect(() => {
     const sortedSwitch = sortJson(reviewsswf, "Popularity", "int", false);
     const sortedPlaystation = sortJson(reviewsstf, "Popularity", "int", false);
@@ -412,6 +426,7 @@ useEffect(() => {
     onLatestChange("Popular");
     onLatestDrop("Popular");
     setRegionFilter({ include: [], exclude: [] });
+    setLowFilter("");
   };
 
   const clearGenre = () => setFilterField("");
@@ -723,6 +738,10 @@ const routePlatformField =
           deepSalePass = isDeepSale(review);
         }
 
+        const lowPass =
+          !lowFilter ||
+          saleStatus?.[review.Slug]?.[cheapestRegionCode(review)] === lowFilter;
+
         return (
           `${review.Title || ""} ${review.Slug || review.slug || ""}`
             .replace(/[^a-zA-Z0-9é ]/g, "")
@@ -745,7 +764,8 @@ const routePlatformField =
   .includes(routePlatformField.toLowerCase()) &&
         pricePass &&
         regionPass &&
-        deepSalePass
+        deepSalePass &&
+        lowPass
         );
       }),
     [
@@ -760,6 +780,8 @@ const routePlatformField =
       priceRangeDropDown,
       datam,
       regionFilter,
+      lowFilter,
+      saleStatus,
     ]
   );
 
@@ -808,6 +830,7 @@ useEffect(() => {
       regionFilter.include.join(",") || "",
       regionFilter.exclude.join(",") || "",
       priceRangeDropDown || "All Price Range",
+      lowFilter,
     ].join("|");
 
     // First run after hydration: record baseline, don't reset
@@ -831,6 +854,7 @@ useEffect(() => {
     priceRangeDropDown,
     priceRangeLow,
     priceRangeField,
+    lowFilter,
     jumpPage,
   ]);
 
@@ -892,6 +916,7 @@ if (initial <= 1) {
     onPriceRangeChange(price);
 
     setRegionFilter(region);
+    setLowFilter(readLow(params));
 
     // Defer: let pagination + child defaults settle before flipping hydrated
     if (Number.isFinite(p) && p > 1) {
@@ -920,6 +945,7 @@ if (initial <= 1) {
       if (genreDropDown) params.set("genre", genreDropDown);
       if (latestDropDown) params.set("sort", latestDropDown);
       if (priceRangeDropDown) params.set("price", priceRangeDropDown);
+      if (lowFilter) params.set("low", lowFilter);
       if (regionFilter.include.length) params.set("regionIn", regionFilter.include.join(","));
       if (regionFilter.exclude.length) params.set("regionEx", regionFilter.exclude.join(","));
       if (regionFilter.include.length === 1 && regionFilter.exclude.length === 0) {
@@ -954,6 +980,7 @@ if (oldPage !== newPage) {
     latestDropDown,
     priceRangeDropDown,
     regionFilter,
+    lowFilter,
     page,
   ]);
 
@@ -986,6 +1013,7 @@ const onPop = () => {
        setPriceRangeDropDown(price);
        onPriceRangeChange(price);
       setRegionFilter(region);
+       setLowFilter(readLow(params));
        onLatestChange(sort);
        jumpPage(Number.isFinite(p) ? p : 1);
      };
@@ -1100,6 +1128,8 @@ const onPop = () => {
     pageData,
     maxPage,
     datam,
+    lowFilter,
+    setLowFilter,
     // for ListPage init defaults
     setPlatformField,
     setPlatformDropDown,

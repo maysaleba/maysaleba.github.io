@@ -19,7 +19,7 @@ const SALE_STATUS_URLS = [
   "https://raw.githubusercontent.com/maysaleba/playstation-games/main/playstation_current_sale_status.json",
 ];
 let saleStatusPromise = null;
-const loadSaleStatus = () => {
+export const loadSaleStatus = () => {
   if (!saleStatusPromise) {
     saleStatusPromise = Promise.all(
       SALE_STATUS_URLS.map((url) =>
@@ -38,7 +38,7 @@ const parseTurkeyPrice = (value) => {
 };
 
 const LOW_TAGS = {
-  new_low: { label: "New Low", bg: "success" },
+  new_low: { label: "New Low", bg: "", className: "low-tag-new" },
   matches_low: { label: "Matches Low", bg: "", className: "low-tag-subtle" },
 };
 

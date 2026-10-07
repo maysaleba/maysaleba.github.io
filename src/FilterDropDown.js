@@ -26,10 +26,20 @@ const FilterDropDown = (props) => {
     onDropDownChange,
     onRegionChange,
     regionFilter,
+    lowFilter,
+    setLowFilter,
   } = props;
 
 
   const isPS = (platformDropDown || "").toLowerCase() === "playstation";
+
+  const LOW_OPTIONS = [
+    { label: "All deals", value: "", icon: "mdi:trending-down" },
+    { label: "New historical low", value: "new_low", icon: "mdi:arrow-down-bold-circle" },
+    { label: "Matches all-time low", value: "matches_low", icon: "mdi:equal-box" },
+    { label: "Not an all-time low", value: "not_low", icon: "mdi:minus-circle-outline" },
+  ];
+  const currentLow = LOW_OPTIONS.find((o) => o.value === (lowFilter || "")) || LOW_OPTIONS[0];
 
   // ---------- helpers ----------
 
@@ -313,19 +323,19 @@ const AnyIcon = () => (
 <Container fluid="md">
   <Row className="g-100 justify-content-md-center">
     {/* Platform */}
-    <Col xs={3} md={4} className="col-style">
+    <Col xs={2} md={2} className="col-style order-1">
       <Dropdown className="m-1">
-<Dropdown.Toggle size="sm" id="dd-platform" className="dropdown-style w-100">
+<Dropdown.Toggle size="sm" id="dd-platform" className="dropdown-style no-caret w-100" title={platformDropDown}>
   <span className="d-inline-flex align-items-center">
     <span
-      className="me-md-2 d-flex align-items-center justify-content-center"
+      className="d-flex align-items-center justify-content-center"
       style={{ width: 22, height: 22 }}
     >
       {platformIcon(platformDropDown)}
     </span>
 
     <span
-      className="d-none d-md-inline text-truncate"
+      className="d-none"
       title={platformDropDown}
     >
       {platformDropDown}
@@ -354,7 +364,7 @@ const AnyIcon = () => (
     </Col>
 
     {/* Latest */}
-    <Col xs={6} md={4} className="col-style">
+    <Col xs={6} md={6} className="col-style order-4">
       <Dropdown className="m-1">
 <Dropdown.Toggle size="sm" id="dd-latest" className="dropdown-style w-100">
   <span
@@ -377,9 +387,9 @@ const AnyIcon = () => (
 
 
 {/* Cheapest Region */}
-<Col xs={3} md={4} className="col-style">
+<Col xs={2} md={2} className="col-style order-2">
   <Dropdown className="m-1" autoClose="outside">
-<Dropdown.Toggle size="sm" id="dd-cheapest" className="dropdown-style w-100">
+<Dropdown.Toggle size="sm" id="dd-cheapest" className="dropdown-style no-caret w-100" title="Region">
   <span className="region-toggle-icon-wrap" aria-hidden>
     {regionState.include.length === 1 && !regionState.exclude.length ? (
       <span
@@ -397,7 +407,7 @@ const AnyIcon = () => (
     )}
   </span>
 
-<span className="region-filter-text">
+<span className="region-filter-text d-none">
   Region
 </span>
 </Dropdown.Toggle>
@@ -433,7 +443,7 @@ const AnyIcon = () => (
 
 
     {/* Price */}
-    <Col xs={6} md={6} className="col-style">
+    <Col xs={6} md={6} className="col-style order-5">
       <Dropdown
         className="m-1"
         autoClose={false}
@@ -514,7 +524,7 @@ const AnyIcon = () => (
     </Col>
 
     {/* Genre */}
-    <Col xs={6} md={6} className="col-style">
+    <Col xs={6} md={6} className="col-style order-6">
       <Dropdown className="m-1">
 <Dropdown.Toggle size="sm" id="dd-genre" className="dropdown-style w-100">
   <span
@@ -534,6 +544,37 @@ const AnyIcon = () => (
         </Dropdown.Menu>
       </Dropdown>
     </Col>
+
+    {/* All-time low status */}
+    {setLowFilter && (
+      <Col xs={2} md={2} className="col-style order-3">
+        <Dropdown className="m-1">
+          <Dropdown.Toggle
+            size="sm"
+            id="dd-lows"
+            className={`dropdown-style no-caret w-100 ${lowFilter ? `low-active low-${lowFilter}` : ""}`}
+            title={currentLow.label}
+          >
+            <Icon icon={currentLow.icon} width="18" aria-hidden="true" />
+          </Dropdown.Toggle>
+          <Dropdown.Menu align="end" className="dropdown-style" style={{ zIndex: 2000, minWidth: 210 }}>
+            {LOW_OPTIONS.map((opt) => (
+              <Dropdown.Item
+                as="button"
+                key={opt.label}
+                active={(lowFilter || "") === opt.value}
+                onClick={() => setLowFilter(opt.value)}
+              >
+                <span className="d-inline-flex align-items-center">
+                  <Icon icon={opt.icon} width="16" className={`me-2 low-icon-${opt.value}`} aria-hidden="true" />
+                  {opt.label}
+                </span>
+              </Dropdown.Item>
+            ))}
+          </Dropdown.Menu>
+        </Dropdown>
+      </Col>
+    )}
 
   </Row>
 </Container>
