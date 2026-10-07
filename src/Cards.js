@@ -679,13 +679,10 @@ else if (PlusPrice === 202020) {
     return best;
   }
 
-  // TEMP PREVIEW: remove this line after checking the New Low look
-  const previewStatus = Slug === "hades-ii-switch" ? "new_low" : null;
   const lowStatus =
-    previewStatus ||
-    (saleStatus && Slug && saleStatus[Slug]
+    saleStatus && Slug && saleStatus[Slug]
       ? saleStatus[Slug][cheapestCountry()]
-      : null);
+      : null;
   const lowTag = LOW_TAGS[lowStatus];
 
 function PlatformOverlay({ title, slug, isps4, isps5 }) {
