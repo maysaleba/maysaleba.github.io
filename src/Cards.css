@@ -1390,11 +1390,15 @@ label:focus,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #2d8cff;
-  color: #ffffff;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  color: inherit;
+}
+
+.region-any-glyph svg {
+  width: 18px;
+  height: 18px;
 }
 
 .region-icon-badge {

@@ -364,7 +364,7 @@ const AnyIcon = () => (
     </Col>
 
     {/* Latest */}
-    <Col xs={6} md={6} className="col-style order-4">
+    <Col xs={6} md={6} className="col-style" style={{ order: 0 }}>
       <Dropdown className="m-1">
 <Dropdown.Toggle size="sm" id="dd-latest" className="dropdown-style w-100">
   <span
@@ -524,7 +524,7 @@ const AnyIcon = () => (
     </Col>
 
     {/* Genre */}
-    <Col xs={6} md={6} className="col-style order-6">
+    <Col xs={6} md={6} className="col-style" style={{ order: 4 }}>
       <Dropdown className="m-1">
 <Dropdown.Toggle size="sm" id="dd-genre" className="dropdown-style w-100">
   <span
