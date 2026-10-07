@@ -23,7 +23,7 @@ export default function usePagination(allReviews, perPage) {
   const jumpPage = useCallback(
     (page) => {
       const pageNumber = Math.max(1, page);
-      setPage(Math.min(pageNumber, maxPage));
+      setPage(Math.max(1, Math.min(pageNumber, maxPage)));
     },
     [maxPage]
   );

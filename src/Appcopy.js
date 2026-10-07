@@ -862,6 +862,7 @@ useEffect(() => {
  useEffect(() => {
    if (!hydrated) return;
    if (initialPageConsumedRef.current) return; // already applied once
+   if (lowFilter && !saleStatus) return; // list is empty until status data loads
  
    const initial = initialPageRef.current || 1;
 if (initial <= 1) {
@@ -884,7 +885,7 @@ if (initial <= 1) {
    // Mark as consumed so user interactions aren't overridden later
    initialPageConsumedRef.current = true;
    initialPageRef.current = 1; // clear out the initial page
- }, [hydrated, filteredReviews, page, jumpPage]);
+ }, [hydrated, filteredReviews, page, jumpPage, lowFilter, saleStatus]);
 
   // 1) Load state from URL once on mount
   useEffect(() => {

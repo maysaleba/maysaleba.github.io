@@ -1029,6 +1029,7 @@ display: inline-block;  /* may not need this, but I've found I do */
 .badge.low-tag-new {
     background-color: #00a845;
     color: #fff;
+    font-weight: 500;
 }
 
 .dropdown-toggle.low-new_low svg,
