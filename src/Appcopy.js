@@ -1024,6 +1024,13 @@ const onPop = () => {
 
 
   // ---------- BACKGROUND ----------
+  const mostPopularGame = sortJson(
+    [...reviewssw].filter((game) => game.Image && Number.isFinite(Number(game.Popularity))),
+    "Popularity",
+    "int",
+    false
+  )[0];
+
   const BackgroundContainer = styled.div`
   --blur-radius: 20px;
   position: absolute;
@@ -1073,7 +1080,7 @@ const onPop = () => {
 
   const Background = styled.div`
     --blur-radius: 20px;
-    background-image: url(${reviewssw[0].Image});
+    background-image: url(${mostPopularGame?.Image || reviewssw[0]?.Image || ""});
     position: absolute;
     top: 0;
     left: 0;
