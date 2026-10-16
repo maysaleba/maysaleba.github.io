@@ -401,7 +401,7 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
               </li>
               <li>
                 For proper queuing of orders, a "Pasabuy" is done through
-                Discord servers. You can check our affiliate Pasabuy servers
+                Discord servers. You can check the Pasabuy servers
                 below.
               </li>
             </ul>

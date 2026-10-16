@@ -10,7 +10,6 @@ export default (
 	<Route path='/playstation' />
 	<Route path='/games/:games' />
 	<Route path='/giftcards' />
-	<Route path='/pasabuy' />
 	<Route path='/faq' />
 	<Route path='/flip' />
     </Route>

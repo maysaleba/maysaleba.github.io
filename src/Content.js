@@ -1469,10 +1469,12 @@ function PsPrices() {
             <>
               {" "}
 <Box className="info-tax-box">
+                You can only buy from Argentina using a valid Argentina payment method.
+{/* <Box className="info-tax-box">
                 You can only buy from Argentina via {" "}
                 <RouterLink className="infotax" to="/pasabuy">
                   Pasabuy
-                </RouterLink>
+                </RouterLink> */}
                 {/*
  Note: Argentina eShop only accepts payment from Argentina issued cards. Use {" "}
                 <a
