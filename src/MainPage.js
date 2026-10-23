@@ -107,6 +107,7 @@ function sortJson(element, prop, propType, asc) {
                                           Image={review.Image}
                                           SalePrice={review.SalePrice}
                                           CanadaPrice={review.CanadaPrice}
+                                          SwitzerlandPrice={review.SwitzerlandPrice}
                                           PeruPrice={review.PeruPrice}
                                           ArgentinaPrice={review.ArgentinaPrice}
                                           AustraliaPrice={review.AustraliaPrice}
@@ -167,6 +168,7 @@ function sortJson(element, prop, propType, asc) {
                                           Image={review.Image}
                                           SalePrice={review.SalePrice}
                                           CanadaPrice={review.CanadaPrice}
+                                          SwitzerlandPrice={review.SwitzerlandPrice}
                                           PeruPrice={review.PeruPrice}
                                           ArgentinaPrice={review.ArgentinaPrice}
                                           AustraliaPrice={review.AustraliaPrice}

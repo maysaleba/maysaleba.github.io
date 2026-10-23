@@ -88,6 +88,7 @@ const Cards = ({
   SingaporePrice,
   ThailandPrice,
   MalaysiaPrice,
+  SwitzerlandPrice,
   ESRBRating,
   IsPS4,
   IsPS5
@@ -99,6 +100,7 @@ const Cards = ({
     var audExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.AUD);
     var brlExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.BRL);
     var cadExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.CAD);
+    var chfExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.CHF);
     var nzdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.NZD);
     var copExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.COP);
     var mxnExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.MXN);
@@ -282,6 +284,7 @@ function getPsCheapest() {
 
       var pricesobj = {
         Canada: CanadaPrice * cadExchange,
+        Switzerland: SwitzerlandPrice * chfExchange,
         Peru: PeruPrice * penExchange,
         Argentina: argentinaTax + regionalityTax + ArgentinaPrice * arsExchange,
         //Argentina: ArgentinaPrice * arsExchange * 1.64,
@@ -337,6 +340,7 @@ function SmallestFlag() {
     Australia: "auregion-logo",
     Brazil: "brregion-logo",
     Canada: "caregion-logo",
+    Switzerland: "chregion-logo",
     NewZealand: "nzregion-logo",
     Colombia: "coregion-logo",
     Mexico: "mxregion-logo",
@@ -643,6 +647,7 @@ else if (PlusPrice === 202020) {
         : {
       US: [SalePrice, "USD"],
       CA: [CanadaPrice, "CAD"],
+      CH: [SwitzerlandPrice, "CHF"],
       PE: [PeruPrice, "PEN"],
       AU: [AustraliaPrice, "AUD"],
       CO: [ColombiaPrice, "COP"],

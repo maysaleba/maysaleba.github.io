@@ -91,6 +91,7 @@ const Content = ({ makeswitch, datam, search, setSearch, match }) => {
     var audExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.AUD);
     var brlExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.BRL);
     var cadExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.CAD);
+    var chfExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.CHF);
     var nzdExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.NZD);
     var copExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.COP);
     var mxnExchange = JSON.stringify(datam.PHP) / JSON.stringify(datam.MXN);
@@ -1421,6 +1422,7 @@ function PsPrices() {
 
       var pricesobj = {
         Canada: matchGames[0].CanadaPrice * cadExchange,
+        Switzerland: matchGames[0].SwitzerlandPrice * chfExchange,
         Peru: matchGames[0].PeruPrice * penExchange,
         Argentina:
           argentinaTax +
@@ -1540,6 +1542,12 @@ function PsPrices() {
           currency: "C$",
           className: "caregion-logo",
          
+        },
+        Switzerland: {
+          name: "Switzerland",
+          price: Math.round(matchGames[0].SwitzerlandPrice).toString(),
+          currency: "CHF",
+          className: "chregion-logo",
         },
         Peru: {
           name: "Peru",
@@ -1762,7 +1770,7 @@ const getModalTextForCountry = (country) => {
 
   const countryUrl = countryURLs[country] || ""; // Get the URL or fallback to an empty string
   const countryGroups = {
-    "Canada & Poland & Mexico & Australia & Norway & Hong Kong": `
+    "Canada & Switzerland & Poland & Mexico & Australia & Norway & Hong Kong": `
       <ol>
       <li> Set up an account in the <b>${country}</b> eShop
       <ul>
@@ -1879,8 +1887,8 @@ const getModalTextForCountry = (country) => {
   };
 
   // Check if the country belongs to a group, if so, return the group's description
-  if (["Canada", "Poland", "Mexico", "Australia", "Norway", "Hong Kong"].includes(country)) {
-    return countryGroups["Canada & Poland & Mexico & Australia & Norway & Hong Kong"];
+  if (["Canada", "Switzerland", "Poland", "Mexico", "Australia", "Norway", "Hong Kong"].includes(country)) {
+    return countryGroups["Canada & Switzerland & Poland & Mexico & Australia & Norway & Hong Kong"];
   } else if (["Peru", "Colombia", "South Africa", "New Zealand", "Singapore", "Malaysia", "Thailand"].includes(country)) {
     return countryGroups["Peru & Colombia & South Africa & New Zealand & Singapore & Malaysia & Thailand"];
   } else if (["Korea", "Japan"].includes(country)) {

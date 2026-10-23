@@ -213,6 +213,7 @@ function getDeepSaleRegionalPrices(review) {
   } else {
     addPhpCandidate(prices, "US", review.SalePrice || review.Price, "USD", datam);
     addPhpCandidate(prices, "CA", review.CanadaPrice, "CAD", datam);
+    addPhpCandidate(prices, "CH", review.SwitzerlandPrice, "CHF", datam);
     addPhpCandidate(prices, "PE", review.PeruPrice, "PEN", datam);
     addPhpCandidate(prices, "AU", review.AustraliaPrice, "AUD", datam);
     addPhpCandidate(prices, "CO", review.ColombiaPrice, "COP", datam);
@@ -562,6 +563,7 @@ const SORTERS = {
     }
 
     addPhpCandidate(prices, "Canada", review.CanadaPrice, "CAD", datam);
+    addPhpCandidate(prices, "Switzerland", review.SwitzerlandPrice, "CHF", datam);
     addPhpCandidate(prices, "Peru", review.PeruPrice, "PEN", datam);
     addPhpCandidate(prices, "Australia", review.AustraliaPrice, "AUD", datam);
     addPhpCandidate(prices, "Colombia", review.ColombiaPrice, "COP", datam);
@@ -630,6 +632,7 @@ function cheapestRegionCode(review) {
   putMin("US", toPHP(review.SalePrice, "USD"));
   putMin("US", toPHP(review.Price, "USD"));
   putMin("CA", toPHP(review.CanadaPrice, "CAD"));
+  putMin("CH", toPHP(review.SwitzerlandPrice, "CHF"));
   putMin("PE", toPHP(review.PeruPrice, "PEN"));
   putMin("AU", toPHP(review.AustraliaPrice, "AUD"));
   putMin("CO", toPHP(review.ColombiaPrice, "COP"));

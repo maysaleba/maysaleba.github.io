@@ -223,6 +223,7 @@ const REGION_LABEL = {
   AU: "Australia",
   BR: "Brazil",
   CA: "Canada",
+  CH: "Switzerland",
   CO: "Colombia",
   HK: "Hong Kong",
   JP: "Japan",
@@ -242,8 +243,12 @@ const CHEAPEST_OPTIONS = useMemo(
   () =>
     isPS
       ? ["HK", "ID", "IN", "SG", "TR", "US"]
-      : ["AR", "AU", "BR", "CA", "CO", "HK", "JP", "MX", "MY", "NO", "NZ", "PE", "PL", "SG", "TH", "ZA", "US"],
+      : ["AR", "AU", "BR", "CA", "CH", "CO", "HK", "JP", "MX", "MY", "NO", "NZ", "PE", "PL", "SG", "TH", "ZA", "US"],
   [isPS]
+);
+
+const sortedCheapestOptions = [...CHEAPEST_OPTIONS].sort((a, b) =>
+  (REGION_LABEL[a] ?? a).localeCompare(REGION_LABEL[b] ?? b)
 );
 
 const regionState = {
@@ -420,7 +425,7 @@ const AnyIcon = () => (
         </span>
       </Dropdown.Item>
 
-      {CHEAPEST_OPTIONS.map((code) => (
+      {sortedCheapestOptions.map((code) => (
         <Dropdown.Item
           as="button"
           className={`region-filter-item ${regionRowClass(code)}`}
