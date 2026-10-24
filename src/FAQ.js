@@ -486,6 +486,24 @@ const About = () => {
     ),
   ];
 
+  const psEnebaLinks = {
+    "Hong Kong": "https://www.eneba.com/psn-playstation-network-card-20-hkd-psn-key-hong-kong?af_id=maysaleba&currency=PHP&region=global",
+    India: "https://www.eneba.com/psn-playstation-network-card-rs-1000-in-psn-key-india?af_id=maysaleba&currency=PHP&region=global",
+    Indonesia: "https://www.eneba.com/psn-playstation-network-card-100000-idr-id-psn-key-indonesia?af_id=maysaleba&currency=PHP&region=global",
+    Singapore: "https://www.eneba.com/psn-playstation-network-card-15-sgd-sgp-psn-key-singapore?af_id=maysaleba&currency=PHP&region=global",
+    Turkey: "https://www.eneba.com/psn-playstation-network-card-200-try-tr-psn-key-turkey?af_id=maysaleba&currency=PHP&region=global",
+    "United States": "https://www.eneba.com/psn-playstation-network-card-1-usd-usa-psn-key-united-states?af_id=maysaleba&currency=PHP&region=global",
+  };
+  const psRows = [
+    ["Hong Kong", "hkregion-logo", true],
+    ["India", "inregion-logo", false],
+    ["Indonesia", "idregion-logo", true],
+    ["Singapore", "sgregion-logo", true],
+    ["Turkey", "trregion-logo", false],
+    ["United States", "usregion-logo", false],
+  ];
+  const iconStyle = { width: 16, height: "auto" };
+
   // console.log(matchGames[0].description.split('\n'));
   return (
     <div>
@@ -508,6 +526,11 @@ const About = () => {
             <strong>Table of Contents</strong>
           </Card.Header>
           <Card.Body>
+            <div style={{ fontWeight: "bold" }}>
+              <a href="#nintendo-switch" className="giftcardlink">
+                Nintendo Switch
+              </a>
+            </div>
             <ul>
               <li>
                 <a href="#buy-region" className="giftcardlink">
@@ -559,6 +582,25 @@ const About = () => {
                   Why am I getting error 2813-2470 when I try to purchase?
                 </a>
               </li>
+            </ul>
+            <div style={{ fontWeight: "bold" }}>
+              <a href="#playstation" className="giftcardlink">
+                PlayStation 4 & 5
+              </a>
+            </div>
+            <ul>
+              <li>
+                <a href="#ps-buy-region" className="giftcardlink">
+                  How do I buy from a PlayStation Store in another region?
+                </a>
+              </li>
+              <li>
+                <a href="#ps-pay-region" className="giftcardlink">
+                  How do I pay on a PlayStation Store in another region?
+                </a>
+              </li>
+            </ul>
+            <ul>
               <li>
                 <a href="#contact-us" className="giftcardlink">
                   How can I contact you?
@@ -567,6 +609,12 @@ const About = () => {
             </ul>
           </Card.Body>
 
+          <Card.Header className="content-header">
+            <strong>
+              <p id="nintendo-switch" />
+              Nintendo Switch
+            </strong>
+          </Card.Header>
           <Card.Header className="content-header">
             <strong>
               <p id="buy-region" />
@@ -948,7 +996,7 @@ const About = () => {
  <b><li>You have a failed or stuck transaction.</li></b>
   <ul><li>Delete your saved card information or contact the bank/merchant to check on their end.</li>
   <li>Try using a different payment method/card.</li>
-  <li>Clear your cache (System Settings > System > Formatting Options).</li>
+  <li>Clear your cache (System Settings &gt; System &gt; Formatting Options).</li>
   </ul>
  <b> <li>Your Switch console or IP might be blocked (just a suspicion!).</li></b>
   <ul><li>If all your payment methods or accounts are encountering the same error, it’s most likely that your Switch + IP has been blocked by the eShop region you were trying to purchase from.</li>
@@ -956,6 +1004,165 @@ const About = () => {
   </ul>
 </ol>
           </Card.Body>
+
+          <Card.Header className="content-header">
+            <strong>
+              <p id="playstation" />
+              PlayStation 4 & 5
+            </strong>
+          </Card.Header>
+          <Card.Header className="content-header">
+            <strong>
+              <p id="ps-buy-region" />
+              How do I buy from a PlayStation Store in another region?
+            </strong>
+          </Card.Header>
+          <Card.Body>
+            <ol>
+              <li>Setup your account</li>
+              <ul>
+                <li>
+                    Create a new PlayStation Network account
+                  {" "}
+                  for each region you want to buy from. The region is tied to
+                  the account when it is created and <b>cannot be changed</b>{" "}
+                  afterwards. Each account needs a different email address.
+                  <br />
+                  Tip: If you use Gmail, put anything behind a "+" just before
+                  the @ and it will still point towards your email. Ex:
+                  msbph+US@gmail.com is the same as msbph@gmail.com
+                </li>
+                <li>
+                  When signing up, set the <b>Country/Region</b> to the store
+                  you want to buy from.
+                </li>
+              </ul>
+              <li>
+                On your PS4/PS5, add the new account (<b>Add User</b>) and sign
+                in, or sign in at the PlayStation Store website/app
+              </li>
+              <li>
+                Search for the game, DLC, or content you want to buy and select{" "}
+                <b>Add to Cart</b>
+              </li>
+              <li>
+                Proceed to checkout. Steps may vary depending on the payment
+                method. <b>See section below</b>
+              </li>
+            </ol>
+          </Card.Body>
+
+          <Card.Header className="content-header">
+            <strong>
+              <p id="ps-pay-region" />
+              How do I pay on a PlayStation Store in another region?
+            </strong>
+          </Card.Header>
+          <Card.Body>
+            The table below shows which payment methods you can use on the
+            PlayStation Store for each region:
+            <p />
+            <TableContainer component={Paper}>
+              <Table
+                className="faq-table"
+                size="small"
+                aria-label="playstation regions table"
+                sx={{
+                  width: "100%",
+                  tableLayout: "fixed",
+                  "& thead th:nth-of-type(1)": { width: "40%" },
+                  "& thead th:nth-of-type(2)": { width: "30%" },
+                  "& thead th:nth-of-type(3)": { width: "30%" },
+                  "& th, & td": {
+                    whiteSpace: "normal",
+                    wordBreak: "break-word",
+                    p: { xs: 0.5, sm: 1 },
+                    fontSize: { xs: 12, sm: 14 },
+                  },
+                }}
+              >
+                <TableHead>
+                  <TableRow>
+                    <TableCell style={{ borderRight: "1px solid rgba(224,224,224,1)" }}>
+                      <b>Region</b>
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      style={{ borderRight: "1px solid rgba(224,224,224,1)" }}
+                    >
+                      <b>Debit/Credit/Virtual</b>
+                    </TableCell>
+                    <TableCell align="center">
+                      <b>PSN Gift Cards</b>
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {psRows.map(([region, logoClass, dcv]) => (
+                    <TableRow
+                      key={region}
+                      sx={{
+                        "& > *": {
+                          borderBottom: "1px solid rgba(224,224,224,1)",
+                          borderRight: "1px solid rgba(224,224,224,1)",
+                        },
+                        "& > *:last-child": { borderRight: "none" },
+                      }}
+                    >
+                      <TableCell>
+                        <span className={logoClass}>{region}</span>
+                      </TableCell>
+                      <TableCell align="center">
+                        <img src={dcv ? mark : xmark} style={iconStyle} alt={dcv ? "Yes" : "No"} />
+                      </TableCell>
+                      <TableCell align="center">
+                        <a href={psEnebaLinks[region]} target="_blank" rel="noreferrer">
+                          <img src={enebalogo} style={iconStyle} alt="Eneba" />
+                        </a>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+            <p />
+            <b>Pay using Debit/Credit/Virtual Cards</b>
+            <ol>
+              <li>
+                At checkout, choose <b>Add a Payment Method</b> then{" "}
+                <b>Credit/Debit Card</b>
+              </li>
+              <li>
+                Enter your card details (card number, expiration date, and CVV)
+                and billing address
+              </li>
+              <li>
+                Select <b>Confirm</b> to complete the transaction
+              </li>
+            </ol>
+            <b>Pay using PSN Gift Cards</b>
+            <ol>
+              <li>
+                Buy a PSN Gift Card matching your account's region from{" "}
+                <a
+                  href="https://www.eneba.com/?af_id=maysaleba"
+                  target="_blank" rel="noreferrer"
+                  style={{ color: "#fc430a", fontWeight: "bold" }}
+                >
+                  Eneba
+                </a>
+              </li>
+              <li>
+                On PlayStation, go to <b>PlayStation Store</b> &gt;{" "}
+                <b>Redeem Codes</b> and enter the 12-digit code
+              </li>
+              <li>
+                The funds are added to your wallet and used automatically at
+                checkout
+              </li>
+            </ol>
+          </Card.Body>
+
           <Card.Header className="content-header">
             <strong>How can I contact you?</strong>
           </Card.Header>
