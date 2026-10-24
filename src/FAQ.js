@@ -10,15 +10,15 @@ import enebalogo from "./flags/eneba.png";
 import CloseIcon from "@mui/icons-material/Close";
 
 
-import seagmstep1 from "./images/seagm_img1.jpeg";
-import seagmstep2 from "./images/seagm_img2.jpeg";
-import seagmstep3 from "./images/seagm_img3.jpeg";
-import seagmstep4 from "./images/seagm_img4.jpeg";
-import seagmstep5 from "./images/seagm_img5.jpeg";
-import seagmstep6 from "./images/seagm_img6.jpeg";
+import enebastep1 from "./images/eneba_img1.jpg";
+import enebastep2 from "./images/eneba_img2.jpg";
+import enebastep3 from "./images/eneba_img3.jpg";
+import enebastep4 from "./images/eneba_img4.jpg";
+import enebastep5 from "./images/eneba_img5.jpg";
+import enebastep6 from "./images/eneba_img6.jpg";
 
 
-const SeaGMstep1 = () => {
+const EnebaStep = ({ src }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -27,7 +27,7 @@ const SeaGMstep1 = () => {
     <>
       <Button onClick={handleOpen}>
         <img
-          src={seagmstep1}
+          src={src}
           width="100%"
           style={{ borderRadius: "10px" }}
         />
@@ -49,214 +49,7 @@ const SeaGMstep1 = () => {
             }}
           />
           <img
-            src={seagmstep1}
-            width="100%"
-            style={{ borderRadius: "10px" }}
-          />
-        </Box>
-      </Modal>
-    </>
-  );
-};
-
-const SeaGMstep2 = () => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
-  return (
-    <>
-      <Button onClick={handleOpen}>
-        <img
-          src={seagmstep2}
-          width="100%"
-          style={{ borderRadius: "10px" }}
-        />
-      </Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <CloseIcon className="modal-close-icon"
-            onClick={handleClose}
-            style={{
-              position: "absolute",
-              top: "10px",
-              right: "10px",
-              cursor: "pointer",
-            }}
-          />
-          <img
-            src={seagmstep2}
-            width="100%"
-            style={{ borderRadius: "10px" }}
-          />
-        </Box>
-      </Modal>
-    </>
-  );
-};
-
-const SeaGMstep3 = () => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
-  return (
-    <>
-      <Button onClick={handleOpen}>
-        <img
-          src={seagmstep3}
-          width="100%"
-          style={{ borderRadius: "10px" }}
-        />
-      </Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <CloseIcon className="modal-close-icon"
-            onClick={handleClose}
-            style={{
-              position: "absolute",
-              top: "10px",
-              right: "10px",
-              cursor: "pointer",
-            }}
-          />
-          <img
-            src={seagmstep3}
-            width="100%"
-            style={{ borderRadius: "10px" }}
-          />
-        </Box>
-      </Modal>
-    </>
-  );
-};
-
-const SeaGMstep4 = () => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
-  return (
-    <>
-      <Button onClick={handleOpen}>
-        <img
-          src={seagmstep4}
-          width="100%"
-          style={{ borderRadius: "10px" }}
-        />
-      </Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <CloseIcon className="modal-close-icon"
-            onClick={handleClose}
-            style={{
-              position: "absolute",
-              top: "10px",
-              right: "10px",
-              cursor: "pointer",
-            }}
-          />
-          <img
-            src={seagmstep4}
-            width="100%"
-            style={{ borderRadius: "10px" }}
-          />
-        </Box>
-      </Modal>
-    </>
-  );
-};
-
-
-const SeaGMstep5 = () => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
-  return (
-    <>
-      <Button onClick={handleOpen}>
-        <img
-          src={seagmstep5}
-          width="100%"
-          style={{ borderRadius: "10px" }}
-        />
-      </Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <CloseIcon className="modal-close-icon"
-            onClick={handleClose}
-            style={{
-              position: "absolute",
-              top: "10px",
-              right: "10px",
-              cursor: "pointer",
-            }}
-          />
-          <img
-            src={seagmstep5}
-            width="100%"
-            style={{ borderRadius: "10px" }}
-          />
-        </Box>
-      </Modal>
-    </>
-  );
-};
-
-
-const SeaGMstep6 = () => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
-  return (
-    <>
-      <Button onClick={handleOpen}>
-        <img
-          src={seagmstep6}
-          width="100%"
-          style={{ borderRadius: "10px" }}
-        />
-      </Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <CloseIcon className="modal-close-icon"
-            onClick={handleClose}
-            style={{
-              position: "absolute",
-              top: "10px",
-              right: "10px",
-              cursor: "pointer",
-            }}
-          />
-          <img
-            src={seagmstep6}
+            src={src}
             width="100%"
             style={{ borderRadius: "10px" }}
           />
@@ -290,7 +83,7 @@ const About = () => {
 
   const regionLinks = {
     "United States": {
-      enebalogo: "https://www.eneba.com/nintendo-nintendo-eshop-card-5-usd-key-united-states?af_id=maysaleba&currency=PHP&region=global", // Seagm logo link
+      enebalogo: "https://www.eneba.com/nintendo-nintendo-eshop-card-5-usd-key-united-states?af_id=maysaleba&currency=PHP&region=global",
     },
         "United Kingdom": "https://www.eneba.com/nintendo-nintendo-eshop-card-15-gbp-key-united-kingdom?af_id=maysaleba&currency=PHP&region=global",
         Australia: "https://www.eneba.com/nintendo-nintendo-eshop-card-15-aud-key-australia?af_id=maysaleba&currency=PHP&region=global",
@@ -542,39 +335,7 @@ const About = () => {
                   How do I pay on a Nintendo eShop in another region?
                 </a>
                 <ul>
-                  <li>
-                    <a
-                      href="#debit-credit-virtual-cards"
-                      className="giftcardlink"
-                    >
-                      D/C/V Cards
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#eshop-gift-cards" className="giftcardlink">
-                      eShop Gift Cards
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="#buying-from-seagm" className="giftcardlink">
-                          Buy from SEAGM
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#buying-from-shopee-lazada"
-                          className="giftcardlink"
-                        >
-                          Buy from Shopee and Lazada
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#pasabuy" className="giftcardlink">
-                      Pasabuy
-                    </a>
-                  </li>
+                  
                 </ul>
               </li>
               <li>
@@ -601,6 +362,11 @@ const About = () => {
               </li>
             </ul>
             <ul>
+              <li>
+                <a href="#buying-from-eneba" className="giftcardlink">
+                  How do I buy gift cards from Eneba?
+                </a>
+              </li>
               <li>
                 <a href="#contact-us" className="giftcardlink">
                   How can I contact you?
@@ -703,7 +469,7 @@ const About = () => {
     <TableHead>
       <TableRow>
         <TableCell style={{ borderRight: "1px solid rgba(224,224,224,1)" }}>
-          <b>Region</b>
+          <b>eShop Region</b>
         </TableCell>
         <TableCell
           align="center"
@@ -819,7 +585,8 @@ const About = () => {
                   style={{ color: "#fc430a", fontWeight: "bold" }}
                 >
                   Eneba
-                </a>
+                </a>{" "}
+                (<a href="#buying-from-eneba" className="giftcardlink">see guide</a>)
               </li>
               <li>
                 <a
@@ -849,102 +616,6 @@ const About = () => {
                 </a>
               </li>
             </ul>
-          </Card.Body>
-          <Card.Header className="content-header">
-            <strong><p id="buying-from-seagm"/>
-              Buy from SEAGM
-            </strong>
-          </Card.Header>
-          <Card.Body>
-          <b>SEAGM (SEA Gamer Mall)</b> is a popular online platform where you can purchase eShop Gift Card for various Nintendo eShop regions. Follow these steps to buy eShop codes easily and securely:
-                      <Card.Body>
-            <Box sx={{ flexGrow: 1 }}>
-              <Grid container spacing={2}>
-                <Grid item xs={4}>
-                  <SeaGMstep1 />
-                </Grid>
-                <Grid item xs={8}>
-                  <ol>
-                    <li>Go to the                 <a
-                  href="https://www.seagm.com/"
-                  target="_blank" rel="noreferrer"
-                  style={{ color: "#fc430a", fontWeight: "bold" }}
-                >SEAGM website</a> or download the app</li>
-                <li><a
-                  href="https://member.seagm.com/en-ph/sso/register"
-                  target="_blank" rel="noreferrer"
-                  style={{ color: "#fc430a", fontWeight: "bold" }}
-                >Sign Up</a> if you don’t have an account yet. If you already have an account, click Log In and enter your credentials</li>
-                <li>Use the search bar on the homepage and type <b>Nintendo eShop</b></li>
-                <li>Select the eShop card region you want to purchase</li>
-                  </ol>
-                </Grid>
-              </Grid>
-              <p />
-              <Grid container spacing={2}>
-                <Grid item xs={4}>
-                  <SeaGMstep2 />
-                </Grid>
-                <Grid item xs={8}>
-                 <ol start="5">
-                 <li>Choose the Desired Denomination and Quantity</li>
-                 <li>Select <b>Buy Now</b></li>
-                 </ol>
-                </Grid>
-              </Grid>
-              <p />
-              <Grid container spacing={2}>
-                <Grid item xs={4}>
-                  <SeaGMstep3 />
-                </Grid>
-                <Grid item xs={8}>
-                  <ol start="7">
-                 <li>Choose the Desired Payment Method</li>
-                 <ul>
-                   <li> SEAGM accepts payment from major local and international banks and payment providers</li>
-                 </ul>
-                 <li>Select <b>Confirm</b></li>
-                 </ol>
-                </Grid>
-              </Grid>
-                            <p />
-              <Grid container spacing={2}>
-                <Grid item xs={4}>
-                  <SeaGMstep4 />
-                </Grid>
-                <Grid item xs={8}>
-                  <ol start="9">
-                 <li>Review your order to ensure the details are correct.</li>
-                 <li>Select <b>Pay Now</b></li>
-                 </ol>
-                </Grid>
-              </Grid>
-                 <p />
-              <Grid container spacing={2}>
-                <Grid item xs={4}>
-                  <SeaGMstep5 />
-                </Grid>
-                <Grid item xs={8}>
-                  <ol start="11">
-                 <li>Once your payment has been completed and your order processed, go to <b>My Cards</b> to see your eShop Gift Card Code </li>
-                 </ol>
-                </Grid>
-              </Grid>
-                 <p />
-              <Grid container spacing={2}>
-                <Grid item xs={4}>
-                  <SeaGMstep6 />
-                </Grid>
-                <Grid item xs={8}>
-                  <ol start="12">
-                 <li>On the My Cards page, you will see your most recent eShop Gift Card order</li>
-                 <li>Select <b>Show</b> to view your 16-digit Prepaid Code</li>
-                 <li>You can now use that 16-digit code to add funds to your eShop account!</li>
-                 </ol>
-                </Grid>
-              </Grid>
-            </Box>
-          </Card.Body>
           </Card.Body>
           <Card.Header className="content-header">
             <strong><p id="buying-from-shopee-lazada"/>Buy from Shopee and Lazada</strong>
@@ -1084,7 +755,7 @@ const About = () => {
                 <TableHead>
                   <TableRow>
                     <TableCell style={{ borderRight: "1px solid rgba(224,224,224,1)" }}>
-                      <b>Region</b>
+                      <b>PS Store Region</b>
                     </TableCell>
                     <TableCell
                       align="center"
@@ -1150,7 +821,8 @@ const About = () => {
                   style={{ color: "#fc430a", fontWeight: "bold" }}
                 >
                   Eneba
-                </a>
+                </a>{" "}
+                (<a href="#buying-from-eneba" className="giftcardlink">see guide</a>)
               </li>
               <li>
                 On PlayStation, go to <b>PlayStation Store</b> &gt;{" "}
@@ -1161,6 +833,92 @@ const About = () => {
                 checkout
               </li>
             </ol>
+          </Card.Body>
+
+          <Card.Header className="content-header">
+            <strong><p id="buying-from-eneba"/>
+              How do I buy gift cards from Eneba?
+            </strong>
+          </Card.Header>
+          <Card.Body>
+          <b>Eneba</b> is an online marketplace where you can purchase Nintendo eShop and PlayStation Network (PSN) gift cards for various regions. Follow these steps to buy codes easily and securely:
+            <Box sx={{ flexGrow: 1 }} style={{ marginTop: 16 }}>
+              <Grid container spacing={2}>
+                <Grid item xs={4}>
+                  <EnebaStep src={enebastep1} />
+                </Grid>
+                <Grid item xs={8}>
+                  <ol>
+                    <li>Go to the <a
+                  href="https://www.eneba.com/?af_id=maysaleba"
+                  target="_blank" rel="noreferrer"
+                  style={{ color: "#fc430a", fontWeight: "bold" }}
+                >Eneba website</a> or download the app</li>
+                    <li>Sign Up if you don’t have an account yet. If you already have an account, click Log In and enter your credentials</li>
+                  </ol>
+                </Grid>
+              </Grid>
+              <p />
+              <Grid container spacing={2}>
+                <Grid item xs={4}>
+                  <EnebaStep src={enebastep2} />
+                </Grid>
+                <Grid item xs={8}>
+                  <ol start="3">
+                    <li>Use the search bar on the homepage and type <b>Nintendo eShop</b> or <b>PSN</b></li>
+                    <li>Select the gift card region you want to purchase</li>
+                  </ol>
+                </Grid>
+              </Grid>
+              <p />
+              <Grid container spacing={2}>
+                <Grid item xs={4}>
+                  <EnebaStep src={enebastep3} />
+                </Grid>
+                <Grid item xs={8}>
+                  <ol start="5">
+                    <li>Choose the desired denomination</li>
+                    <li>Select <b>Add to Cart</b> or <b>Buy Now</b></li>
+                  </ol>
+                </Grid>
+              </Grid>
+              <p />
+              <Grid container spacing={2}>
+                <Grid item xs={4}>
+                  <EnebaStep src={enebastep4} />
+                </Grid>
+                <Grid item xs={8}>
+                  <ol start="7">
+                    <li>Review your order to ensure the details are correct</li>
+                    <li>Select <b>Proceed toCheckout</b></li>
+                  </ol>
+                </Grid>
+              </Grid>
+              <p />
+              <Grid container spacing={2}>
+                <Grid item xs={4}>
+                  <EnebaStep src={enebastep5} />
+                </Grid>
+                <Grid item xs={8}>
+                  <ol start="9">
+                    <li>Choose the desired payment method</li>
+                    <li>Select <b>Pay Now</b></li>
+                  </ol>
+                </Grid>
+              </Grid>
+              <p />
+              <Grid container spacing={2}>
+                <Grid item xs={4}>
+                  <EnebaStep src={enebastep6} />
+                </Grid>
+                <Grid item xs={8}>
+                  <ol start="11">
+                    <li>Once your payment has been completed, go to your <b>Orders</b> to see your gift card code</li>
+                    <li>Use that code to add funds to your Nintendo eShop or PlayStation account!</li>
+                  </ol>
+                </Grid>
+              </Grid>
+            </Box>
           </Card.Body>
 
           <Card.Header className="content-header">
