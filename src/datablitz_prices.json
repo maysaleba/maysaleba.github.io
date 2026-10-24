@@ -1,5 +1,37 @@
 [
   {
+    "slug": "pac-man-world-2-re-pac-switch",
+    "title": "Pac-Man World 2 Re-PAC",
+    "pricePhp": 1750,
+    "availability": "In Stock",
+    "url": "https://ecommerce.datablitz.com.ph/products/nintendo-switch-pac-man-world-2-re-pac-us-eng-fr-sp",
+    "updatedAt": "2026-10-24"
+  },
+  {
+    "slug": "minecraft-dungeons-ii-deluxe-edition-switch",
+    "title": "Minecraft Dungeons II – Deluxe Edition",
+    "pricePhp": 500,
+    "availability": "Pre-order",
+    "url": "https://ecommerce.datablitz.com.ph/products/nintendo-switch-minecraft-dungeons-ii-deluxe-edition-pre-order",
+    "updatedAt": "2026-10-24"
+  },
+  {
+    "slug": "unpetrified-echoes-of-nature-switch",
+    "title": "Unpetrified: Echoes of Nature",
+    "pricePhp": 500,
+    "availability": "Pre-order",
+    "url": "https://ecommerce.datablitz.com.ph/products/nintendo-switch-unpetrified-echoes-of-nature-pre-order-downpayment",
+    "updatedAt": "2026-10-24"
+  },
+  {
+    "slug": "demons-night-fever-switch",
+    "title": "Demons Night Fever",
+    "pricePhp": 2295,
+    "availability": "In Stock",
+    "url": "https://ecommerce.datablitz.com.ph/products/nintendo-switch-demons-night-fever-asian",
+    "updatedAt": "2026-10-24"
+  },
+  {
     "slug": "astonishia-story-special-edition-switch",
     "title": "Astonishia Story - Special Edition",
     "pricePhp": 500,
@@ -453,14 +485,6 @@
     "pricePhp": 2895,
     "availability": "In Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/nintendo-switch-tristia-chronicles-us",
-    "updatedAt": "2026-10-24"
-  },
-  {
-    "slug": "demons-night-fever-switch",
-    "title": "Demons Night Fever",
-    "pricePhp": 500,
-    "availability": "Pre-order",
-    "url": "https://ecommerce.datablitz.com.ph/products/nintendo-switch-demons-night-fever-pre-order-downpayment",
     "updatedAt": "2026-10-24"
   },
   {
@@ -2821,14 +2845,6 @@
     "pricePhp": 2195,
     "availability": "In Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/nintendo-switch-ea-sports-fc-26-eu",
-    "updatedAt": "2026-10-24"
-  },
-  {
-    "slug": "pac-man-world-2-re-pac-switch",
-    "title": "Pac-Man World 2 Re-PAC",
-    "pricePhp": 1750,
-    "availability": "In Stock",
-    "url": "https://ecommerce.datablitz.com.ph/products/nintendo-switch-pac-man-world-2-re-pac-asian",
     "updatedAt": "2026-10-24"
   },
   {
@@ -12138,7 +12154,7 @@
   {
     "slug": "pikmin-3-deluxe-switch",
     "title": "Pikmin 3 Deluxe",
-    "pricePhp": 2295,
+    "pricePhp": 2595,
     "availability": "Out of Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/nsw-pikmin-3-deluxe-au",
     "updatedAt": "2026-10-24"
@@ -16914,7 +16930,7 @@
   {
     "slug": "ben-10-switch",
     "title": "Ben 10",
-    "pricePhp": 995,
+    "pricePhp": 1095,
     "availability": "In Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/nsw-ben-10-us",
     "updatedAt": "2026-10-24"
@@ -18043,7 +18059,7 @@
     "slug": "double-switch-25th-anniversary-edition-switch",
     "title": "Double Switch 25Th Anniversary Edition",
     "pricePhp": 1995,
-    "availability": "Out of Stock",
+    "availability": "In Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/nsw-double-switch-25th-anniversary-edition-us-1",
     "updatedAt": "2026-10-24"
   },
@@ -20189,6 +20205,22 @@
     "pricePhp": 895,
     "availability": "Out of Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/nsw-biohazard-revelations-unveiled-edition-jpn",
+    "updatedAt": "2026-10-24"
+  },
+  {
+    "slug": "crymelight-switch-2",
+    "title": "CRYMELIGHT",
+    "pricePhp": 500,
+    "availability": "Pre-order",
+    "url": "https://ecommerce.datablitz.com.ph/products/nintendo-switch-2-crymelight-pre-order-downpayment",
+    "updatedAt": "2026-10-24"
+  },
+  {
+    "slug": "citizen-sleeper-2-starward-vector-switch-2",
+    "title": "Citizen Sleeper 2: Starward Vector",
+    "pricePhp": 500,
+    "availability": "Pre-order",
+    "url": "https://ecommerce.datablitz.com.ph/products/nintendo-switch-2-citizen-sleeper-2-starward-vector-pre-order",
     "updatedAt": "2026-10-24"
   },
   {
@@ -28592,6 +28624,14 @@
     "updatedAt": "2026-10-24"
   },
   {
+    "slug": "sega-genesis-classics-ps4-ps5",
+    "title": "Sega Genesis Classics",
+    "pricePhp": 1495,
+    "availability": "Out of Stock",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps4-sega-genesis-classics-all-us-eng-fr",
+    "updatedAt": "2026-10-24"
+  },
+  {
     "slug": "the-sims-4-plus-eco-lifestyle-bundle-ps4-ps5",
     "title": "The Sims 4 Plus Eco Lifestyle Bundle",
     "pricePhp": 995,
@@ -28933,14 +28973,6 @@
     "pricePhp": 1095,
     "availability": "Out of Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/ps4-no-mans-sky-beyond-vr",
-    "updatedAt": "2026-10-24"
-  },
-  {
-    "slug": "sega-genesis-classics-ps4-ps5",
-    "title": "Sega Genesis Classics",
-    "pricePhp": 1495,
-    "availability": "In Stock",
-    "url": "https://ecommerce.datablitz.com.ph/products/ps4-sega-genesis-classics-all-us-eng-fr",
     "updatedAt": "2026-10-24"
   },
   {
@@ -29349,6 +29381,14 @@
     "pricePhp": 995,
     "availability": "In Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/ps4-jumanji-the-video-game-all-eng-fr-sp",
+    "updatedAt": "2026-10-24"
+  },
+  {
+    "slug": "bluey-the-videogame-ps4-ps5",
+    "title": "Bluey The Videogame",
+    "pricePhp": 1295,
+    "availability": "In Stock",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps4-bluey-the-videogame-all-us-eng-fr-sp",
     "updatedAt": "2026-10-24"
   },
   {
@@ -29789,14 +29829,6 @@
     "pricePhp": 250,
     "availability": "Out of Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/ps4-avicii-invector-reg-2-eng-fr",
-    "updatedAt": "2026-10-24"
-  },
-  {
-    "slug": "bluey-the-videogame-ps4-ps5",
-    "title": "Bluey The Videogame",
-    "pricePhp": 1295,
-    "availability": "In Stock",
-    "url": "https://ecommerce.datablitz.com.ph/products/ps4-bluey-the-videogame-all-us-eng-fr-sp",
     "updatedAt": "2026-10-24"
   },
   {
@@ -40776,6 +40808,14 @@
     "updatedAt": "2026-10-24"
   },
   {
+    "slug": "nba-2k27-ps5",
+    "title": "NBA 2K27",
+    "pricePhp": 3450,
+    "availability": "In Stock",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps5-nba-2k27-asian",
+    "updatedAt": "2026-10-24"
+  },
+  {
     "slug": "007-first-light-ps5",
     "title": "007 First Light",
     "pricePhp": 3695,
@@ -40789,14 +40829,6 @@
     "pricePhp": 3595,
     "availability": "In Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/ps5-the-blood-of-dawnwalker-day-1-edition-asian",
-    "updatedAt": "2026-10-24"
-  },
-  {
-    "slug": "nba-2k27-ps5",
-    "title": "NBA 2K27",
-    "pricePhp": 3450,
-    "availability": "In Stock",
-    "url": "https://ecommerce.datablitz.com.ph/products/ps5-nba-2k27-asian",
     "updatedAt": "2026-10-24"
   },
   {
@@ -40818,7 +40850,7 @@
   {
     "slug": "assassins-creed-mirage-ps5",
     "title": "Assassins Creed Mirage",
-    "pricePhp": 1595,
+    "pricePhp": 1495,
     "availability": "In Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/ps5-assassins-creed-mirage-reg-3",
     "updatedAt": "2026-10-24"
@@ -40840,19 +40872,19 @@
     "updatedAt": "2026-10-24"
   },
   {
-    "slug": "nba-2k24-black-mamba-edition-ps5",
-    "title": "NBA 2K24 Black Mamba Edition",
-    "pricePhp": 2950,
-    "availability": "Out of Stock",
-    "url": "https://ecommerce.datablitz.com.ph/products/ps5-nba-2k24-black-mamba-edition-asian",
-    "updatedAt": "2026-10-24"
-  },
-  {
     "slug": "kena-bridge-of-spirits-deluxe-edition-ps5",
     "title": "Kena Bridge of Spirits Deluxe Edition",
     "pricePhp": 1395,
     "availability": "In Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/ps5-kena-bridge-of-spirits-deluxe-edition-us-eng-fr",
+    "updatedAt": "2026-10-24"
+  },
+  {
+    "slug": "nba-2k24-black-mamba-edition-ps5",
+    "title": "NBA 2K24 Black Mamba Edition",
+    "pricePhp": 2950,
+    "availability": "Out of Stock",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps5-nba-2k24-black-mamba-edition-asian",
     "updatedAt": "2026-10-24"
   },
   {
@@ -40896,19 +40928,19 @@
     "updatedAt": "2026-10-24"
   },
   {
-    "slug": "like-a-dragon-infinite-wealth-ps5",
-    "title": "Like a Dragon Infinite Wealth",
-    "pricePhp": 1895,
-    "availability": "In Stock",
-    "url": "https://ecommerce.datablitz.com.ph/products/ps5-like-a-dragon-infinite-wealth-asian",
-    "updatedAt": "2026-10-24"
-  },
-  {
     "slug": "visions-of-mana-ps5",
     "title": "Visions of Mana",
     "pricePhp": 1195,
     "availability": "In Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/ps5-visions-of-mana-asian",
+    "updatedAt": "2026-10-24"
+  },
+  {
+    "slug": "like-a-dragon-infinite-wealth-ps5",
+    "title": "Like a Dragon Infinite Wealth",
+    "pricePhp": 1895,
+    "availability": "In Stock",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps5-like-a-dragon-infinite-wealth-asian",
     "updatedAt": "2026-10-24"
   },
   {
@@ -41288,6 +41320,14 @@
     "updatedAt": "2026-10-24"
   },
   {
+    "slug": "final-fantasy-resonance-ps5",
+    "title": "Final Fantasy Resonance",
+    "pricePhp": 2795,
+    "availability": "Out of Stock",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps5-final-fantasy-resonance-asian",
+    "updatedAt": "2026-10-24"
+  },
+  {
     "slug": "dragon-age-the-veilguard-ps5",
     "title": "Dragon Age The Veilguard",
     "pricePhp": 2950,
@@ -41349,14 +41389,6 @@
     "pricePhp": 3490,
     "availability": "In Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/ps5-forspoken-asian",
-    "updatedAt": "2026-10-24"
-  },
-  {
-    "slug": "final-fantasy-resonance-ps5",
-    "title": "Final Fantasy Resonance",
-    "pricePhp": 2795,
-    "availability": "Out of Stock",
-    "url": "https://ecommerce.datablitz.com.ph/products/ps5-final-fantasy-resonance-asian",
     "updatedAt": "2026-10-24"
   },
   {
@@ -41544,6 +41576,14 @@
     "updatedAt": "2026-10-24"
   },
   {
+    "slug": "castlevania-belmonts-curse-midnight-edition-ps5",
+    "title": "Castlevania Belmonts Curse Midnight Edition",
+    "pricePhp": 1950,
+    "availability": "In Stock",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps5-castlevania-belmonts-curse-midnight-edition-asian",
+    "updatedAt": "2026-10-24"
+  },
+  {
     "slug": "reanimal-ps5",
     "title": "Reanimal",
     "pricePhp": 1895,
@@ -41581,14 +41621,6 @@
     "pricePhp": 1695,
     "availability": "Out of Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/ps5-dead-space-remake-asian",
-    "updatedAt": "2026-10-24"
-  },
-  {
-    "slug": "castlevania-belmonts-curse-midnight-edition-ps5",
-    "title": "Castlevania Belmonts Curse Midnight Edition",
-    "pricePhp": 1950,
-    "availability": "In Stock",
-    "url": "https://ecommerce.datablitz.com.ph/products/ps5-castlevania-belmonts-curse-midnight-edition-asian",
     "updatedAt": "2026-10-24"
   },
   {
@@ -42000,6 +42032,14 @@
     "updatedAt": "2026-10-24"
   },
   {
+    "slug": "control-resonant-ps5",
+    "title": "CONTROL Resonant",
+    "pricePhp": 3250,
+    "availability": "In Stock",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps5-control-resonant",
+    "updatedAt": "2026-10-24"
+  },
+  {
     "slug": "honkai-star-rail-trailblazer-edition-ps5",
     "title": "Honkai Star Rail Trailblazer Edition",
     "pricePhp": 2250,
@@ -42040,14 +42080,6 @@
     "updatedAt": "2026-10-24"
   },
   {
-    "slug": "control-resonant-ps5",
-    "title": "CONTROL Resonant",
-    "pricePhp": 3250,
-    "availability": "In Stock",
-    "url": "https://ecommerce.datablitz.com.ph/products/ps5-control-resonant",
-    "updatedAt": "2026-10-24"
-  },
-  {
     "slug": "trails-in-the-sky-2nd-chapter-ps5",
     "title": "Trails in the Sky 2nd Chapter",
     "pricePhp": 3195,
@@ -42077,6 +42109,14 @@
     "pricePhp": 1295,
     "availability": "In Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/ps5-the-prince-of-persia-the-lost-crown-with-dlc-asian",
+    "updatedAt": "2026-10-24"
+  },
+  {
+    "slug": "call-of-duty-modern-warfare-4-ps5",
+    "title": "Call of Duty Modern Warfare 4",
+    "pricePhp": 4195,
+    "availability": "In Stock",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps5-call-of-duty-modern-warfare-4-asian",
     "updatedAt": "2026-10-24"
   },
   {
@@ -42736,14 +42776,6 @@
     "updatedAt": "2026-10-24"
   },
   {
-    "slug": "call-of-duty-modern-warfare-4-ps5",
-    "title": "Call of Duty Modern Warfare 4",
-    "pricePhp": 4195,
-    "availability": "In Stock",
-    "url": "https://ecommerce.datablitz.com.ph/products/ps5-call-of-duty-modern-warfare-4-asian",
-    "updatedAt": "2026-10-24"
-  },
-  {
     "slug": "ea-sports-ufc-6-ps5",
     "title": "EA Sports UFC 6",
     "pricePhp": 4150,
@@ -42813,6 +42845,14 @@
     "pricePhp": 2395,
     "availability": "In Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/ps5-fate-samurai-remnant-asian",
+    "updatedAt": "2026-10-24"
+  },
+  {
+    "slug": "jurassic-world-evolution-2-ps5",
+    "title": "Jurassic World Evolution 2",
+    "pricePhp": 1695,
+    "availability": "In Stock",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps5-jurassic-world-evolution-2-us",
     "updatedAt": "2026-10-24"
   },
   {
@@ -42893,14 +42933,6 @@
     "pricePhp": 1695,
     "availability": "Out of Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/ps5-goat-simulator-3-pre-udder-edition-asian",
-    "updatedAt": "2026-10-24"
-  },
-  {
-    "slug": "jurassic-world-evolution-2-ps5",
-    "title": "Jurassic World Evolution 2",
-    "pricePhp": 1695,
-    "availability": "In Stock",
-    "url": "https://ecommerce.datablitz.com.ph/products/ps5-jurassic-world-evolution-2-us",
     "updatedAt": "2026-10-24"
   },
   {
@@ -43400,6 +43432,14 @@
     "updatedAt": "2026-10-24"
   },
   {
+    "slug": "dynasty-warriors-3-complete-edition-remastered-ps5",
+    "title": "Dynasty Warriors 3 Complete Edition Remastered",
+    "pricePhp": 2750,
+    "availability": "In Stock",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps5-dynasty-warriors-3-complete-edition-remastered",
+    "updatedAt": "2026-10-24"
+  },
+  {
     "slug": "halo-campaign-evolved-ps5",
     "title": "Halo Campaign Evolved",
     "pricePhp": 3295,
@@ -43501,14 +43541,6 @@
     "pricePhp": 3295,
     "availability": "In Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/ps5-star-wars-galactic-racer-asian",
-    "updatedAt": "2026-10-24"
-  },
-  {
-    "slug": "dynasty-warriors-3-complete-edition-remastered-ps5",
-    "title": "Dynasty Warriors 3 Complete Edition Remastered",
-    "pricePhp": 2750,
-    "availability": "In Stock",
-    "url": "https://ecommerce.datablitz.com.ph/products/ps5-dynasty-warriors-3-complete-edition-remastered",
     "updatedAt": "2026-10-24"
   },
   {
@@ -44354,7 +44386,7 @@
   {
     "slug": "super-bomberman-r2-ps5",
     "title": "Super Bomberman R2",
-    "pricePhp": 2295,
+    "pricePhp": 1195,
     "availability": "In Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/ps5-super-bomberman-r2-asian",
     "updatedAt": "2026-10-24"
@@ -47520,6 +47552,14 @@
     "updatedAt": "2026-10-24"
   },
   {
+    "slug": "the-apothecary-diaries-the-false-imperial-brother-ps5",
+    "title": "The Apothecary Diaries: The False Imperial Brother",
+    "pricePhp": 500,
+    "availability": "Pre-order",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps5-the-apothecary-diaries-the-false-imperial-brother-pre-order-downpayment",
+    "updatedAt": "2026-10-24"
+  },
+  {
     "slug": "halloween-the-game-ps5",
     "title": "Halloween the Game",
     "pricePhp": 2595,
@@ -47557,6 +47597,14 @@
     "pricePhp": 2495,
     "availability": "In Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/ps5-starsand-island-asian",
+    "updatedAt": "2026-10-24"
+  },
+  {
+    "slug": "godzilla-destroy-all-monsters-melee-remastered-ps5",
+    "title": "Godzilla Destroy All Monsters Melee Remastered",
+    "pricePhp": 500,
+    "availability": "Pre-order",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps5-godzilla-destroy-all-monsters-melee-remastered-pre-order",
     "updatedAt": "2026-10-24"
   },
   {
@@ -48984,11 +49032,19 @@
     "updatedAt": "2026-10-24"
   },
   {
-    "slug": "the-apothecary-diaries-the-false-imperial-brother-ps5",
-    "title": "The Apothecary Diaries: The False Imperial Brother",
+    "slug": "anomalith-ps5",
+    "title": "ANOMALITH",
     "pricePhp": 500,
     "availability": "Pre-order",
-    "url": "https://ecommerce.datablitz.com.ph/products/ps5-the-apothecary-diaries-the-false-imperial-brother-pre-order-downpayment",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps5-anomalith-pre-order-downpayment",
+    "updatedAt": "2026-10-24"
+  },
+  {
+    "slug": "planet-zoo-2-ps5",
+    "title": "Planet Zoo 2",
+    "pricePhp": 2395,
+    "availability": "In Stock",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps5-planet-zoo-2-eng-eu",
     "updatedAt": "2026-10-24"
   },
   {
@@ -49117,14 +49173,6 @@
     "pricePhp": 500,
     "availability": "Pre-order",
     "url": "https://ecommerce.datablitz.com.ph/products/ps5-village-in-the-shade-deluxe-edition-pre-order",
-    "updatedAt": "2026-10-24"
-  },
-  {
-    "slug": "godzilla-destroy-all-monsters-melee-remastered-ps5",
-    "title": "Godzilla Destroy All Monsters Melee Remastered",
-    "pricePhp": 500,
-    "availability": "Pre-order",
-    "url": "https://ecommerce.datablitz.com.ph/products/ps5-godzilla-destroy-all-monsters-melee-remastered-pre-order",
     "updatedAt": "2026-10-24"
   },
   {
@@ -51024,6 +51072,38 @@
     "updatedAt": "2026-10-24"
   },
   {
+    "slug": "crymelight-ps5",
+    "title": "CRYMELIGHT",
+    "pricePhp": 500,
+    "availability": "Pre-order",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps5-crymelight-pre-order-downpayment",
+    "updatedAt": "2026-10-24"
+  },
+  {
+    "slug": "unpetrified-echoes-of-nature-ps5",
+    "title": "Unpetrified: Echoes of Nature",
+    "pricePhp": 500,
+    "availability": "Pre-order",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps5-unpetrified-echoes-of-nature-pre-order-downpayment",
+    "updatedAt": "2026-10-24"
+  },
+  {
+    "slug": "demons-night-fever-ps5",
+    "title": "Demons Night Fever",
+    "pricePhp": 2295,
+    "availability": "In Stock",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps5-demons-night-fever-asian",
+    "updatedAt": "2026-10-24"
+  },
+  {
+    "slug": "docked-deluxe-edition-ps5",
+    "title": "Docked Deluxe Edition",
+    "pricePhp": 2250,
+    "availability": "In Stock",
+    "url": "https://ecommerce.datablitz.com.ph/products/ps5-docked-deluxe-edition-eng-eu",
+    "updatedAt": "2026-10-24"
+  },
+  {
     "slug": "astonishia-story-special-edition-ps5",
     "title": "Astonishia Story - Special Edition",
     "pricePhp": 500,
@@ -51061,22 +51141,6 @@
     "pricePhp": 1850,
     "availability": "In Stock",
     "url": "https://ecommerce.datablitz.com.ph/products/ps5-the-walking-dead-streets-of-survival-deluxe-edition-eng-eu",
-    "updatedAt": "2026-10-24"
-  },
-  {
-    "slug": "anomalith-ps5",
-    "title": "ANOMALITH",
-    "pricePhp": 500,
-    "availability": "Pre-order",
-    "url": "https://ecommerce.datablitz.com.ph/products/ps5-anomalith-pre-order-downpayment",
-    "updatedAt": "2026-10-24"
-  },
-  {
-    "slug": "planet-zoo-2-ps5",
-    "title": "Planet Zoo 2",
-    "pricePhp": 2395,
-    "availability": "In Stock",
-    "url": "https://ecommerce.datablitz.com.ph/products/ps5-planet-zoo-2-eng-eu",
     "updatedAt": "2026-10-24"
   },
   {
@@ -51304,14 +51368,6 @@
     "updatedAt": "2026-10-24"
   },
   {
-    "slug": "docked-deluxe-edition-ps5",
-    "title": "Docked Deluxe Edition",
-    "pricePhp": 500,
-    "availability": "Pre-order",
-    "url": "https://ecommerce.datablitz.com.ph/products/ps5-docked-deluxe-edition-pre-order-downpayment",
-    "updatedAt": "2026-10-24"
-  },
-  {
     "slug": "ninja-baseball-league-man-bases-loaded-limited-edition-ps5",
     "title": "Ninja Baseball League Man - Bases Loaded Limited Edition",
     "pricePhp": 500,
@@ -51512,14 +51568,6 @@
     "updatedAt": "2026-10-24"
   },
   {
-    "slug": "demons-night-fever-ps5",
-    "title": "Demons Night Fever",
-    "pricePhp": 500,
-    "availability": "Pre-order",
-    "url": "https://ecommerce.datablitz.com.ph/products/ps5-demons-night-fever-pre-order-downpayment",
-    "updatedAt": "2026-10-24"
-  },
-  {
     "slug": "rival-stars-horse-racing-ps5",
     "title": "Rival Stars Horse Racing",
     "pricePhp": 1895,
@@ -51653,14 +51701,6 @@
     "pricePhp": 500,
     "availability": "Pre-order",
     "url": "https://ecommerce.datablitz.com.ph/products/ps5-barbie-rewind-pre-order",
-    "updatedAt": "2026-10-24"
-  },
-  {
-    "slug": "dog-man-bark-in-action-ps5",
-    "title": "Dog Man Bark in Action",
-    "pricePhp": 500,
-    "availability": "Pre-order",
-    "url": "https://ecommerce.datablitz.com.ph/products/ps5-dog-man-bark-in-action-pre-order",
     "updatedAt": "2026-10-24"
   },
   {
