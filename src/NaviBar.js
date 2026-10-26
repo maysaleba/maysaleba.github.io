@@ -78,6 +78,14 @@ const itemsList = [
     },
   },
   {
+    text: "Pasabuy",
+    icon: <Icon icon="mdi:package-variant-closed" width="24" />,
+    onClick: () => {
+      setOpen(false);
+      history.push("/pasabuy");
+    },
+  },
+  {
     text: "FAQ",
     icon: <InfoIcon />,
     onClick: () => {

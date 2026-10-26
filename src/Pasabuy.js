@@ -429,7 +429,7 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
           </Card.Body>
 
           <Card.Header className="content-header">
-            <strong>How to Order?</strong>
+            <strong>Process</strong>
           </Card.Header>
           <Card.Body>
             <ul>
@@ -722,13 +722,13 @@ const About = ({ filteredReviews, pageData, reviewsps }) => {
               <li>
                 This means that if you choose to buy 1,500 PHP for 10,000 ARS
                 and you get Metal Slug Tactics, you are effectively buying Metal Slug Tactics for 205 PHP as of this writing's foreign exchange rate.{" "}
-                <b>Still cheaper than the next cheapest region!</b>
+                <br />Still cheaper than the next cheapest region.
               </li>
               <li>
                 <b>
                   Argentina prices reflected on the website already accounts for
                   the 21% tax and 142% service fee, so you would know if it is
-                  still the cheapest region to buy all things considered!
+                  still the cheapest region to buy all things considered.
                 </b>
               </li>
             </ul>

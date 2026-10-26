@@ -5,7 +5,7 @@ import reviewssw from "./csvjson.json";
 import reviewsst from "./csvjsontr.json";
 import CardGroup from "./CardGroup";
 import "./App.css";
-import { BrowserRouter as Router, Route, Redirect, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Route, useLocation } from "react-router-dom";
 import NaviBar from "./NaviBar";
 import styled from "styled-components";
 import Search from "./Search";
@@ -18,6 +18,7 @@ const Content = lazy(() => import("./Content"));
 const GiftCards = lazy(() => import("./GiftCards"));
 const FAQ = lazy(() => import("./FAQ"));
 const MainPage = lazy(() => import("./MainPage"));
+const Pasabuy = lazy(() => import("./Pasabuy"));
 
 const readLow = (params) => {
   const value = params.get("low");
@@ -213,7 +214,6 @@ function getDeepSaleRegionalPrices(review) {
   } else {
     addPhpCandidate(prices, "US", review.SalePrice || review.Price, "USD", datam);
     addPhpCandidate(prices, "CA", review.CanadaPrice, "CAD", datam);
-    addPhpCandidate(prices, "CH", review.SwitzerlandPrice, "CHF", datam);
     addPhpCandidate(prices, "PE", review.PeruPrice, "PEN", datam);
     addPhpCandidate(prices, "AU", review.AustraliaPrice, "AUD", datam);
     addPhpCandidate(prices, "CO", review.ColombiaPrice, "COP", datam);
@@ -563,7 +563,6 @@ const SORTERS = {
     }
 
     addPhpCandidate(prices, "Canada", review.CanadaPrice, "CAD", datam);
-    addPhpCandidate(prices, "Switzerland", review.SwitzerlandPrice, "CHF", datam);
     addPhpCandidate(prices, "Peru", review.PeruPrice, "PEN", datam);
     addPhpCandidate(prices, "Australia", review.AustraliaPrice, "AUD", datam);
     addPhpCandidate(prices, "Colombia", review.ColombiaPrice, "COP", datam);
@@ -632,7 +631,6 @@ function cheapestRegionCode(review) {
   putMin("US", toPHP(review.SalePrice, "USD"));
   putMin("US", toPHP(review.Price, "USD"));
   putMin("CA", toPHP(review.CanadaPrice, "CAD"));
-  putMin("CH", toPHP(review.SwitzerlandPrice, "CHF"));
   putMin("PE", toPHP(review.PeruPrice, "PEN"));
   putMin("AU", toPHP(review.AustraliaPrice, "AUD"));
   putMin("CO", toPHP(review.ColombiaPrice, "COP"));
@@ -1306,8 +1304,27 @@ const onPop = () => {
         )}
       />
 
-      {/* Pasabuy is disabled; send existing links and bookmarks to Home. */}
-      <Route path="/pasabuy" exact render={() => <Redirect to="/" />} />
+      {/* Pasabuy */}
+      <Route
+        path="/pasabuy"
+        render={() => (
+          <div>
+            <Suspense fallback={<RouteLoadingFallback />}>
+              <Pasabuy searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+            </Suspense>
+            <Helmet>
+              <meta charSet="utf-8" />
+              <title>Pasabuy Guide for Nintendo and PlayStation Purchases | May Sale Ba?</title>
+              <meta
+                name="description"
+                content="Learn how Pasabuy works for Nintendo Switch and PlayStation purchases in the Philippines and other regions."
+              />
+              <link rel="canonical" href="https://maysaleba.com/pasabuy" />
+              <meta name="robots" content="index,follow" />
+            </Helmet>
+          </div>
+        )}
+      />
 <Route
   path="/flip"
   exact
