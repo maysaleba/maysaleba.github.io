@@ -535,6 +535,10 @@ display: inline-block;  /* may not need this, but I've found I do */
   font-weight: 600;
 }
 
+:root:not(.dark-mode) .route-loading {
+  color: #fff !important;
+}
+
 .empty-state {
   text-align: center;
   padding: 2rem 1rem 1rem;
