@@ -11,7 +11,7 @@ import styled from "styled-components";
 import Search from "./Search";
 import { Helmet } from "react-helmet";
 import axios from "axios";
-import { loadSaleStatus } from "./Cards";
+import { loadSaleStatus, resolveLowStatus } from "./Cards";
 
 const Flip = lazy(() => import("./Flip"));
 const Content = lazy(() => import("./Content"));
@@ -740,7 +740,10 @@ const routePlatformField =
 
         const lowPass =
           !lowFilter ||
-          saleStatus?.[review.Slug]?.[cheapestRegionCode(review)] === lowFilter;
+          resolveLowStatus(
+            saleStatus?.[review.Slug],
+            cheapestRegionCode(review)
+          ) === lowFilter;
 
         return (
           `${review.Title || ""} ${review.Slug || review.slug || ""}`

@@ -42,6 +42,13 @@ const LOW_TAGS = {
   matches_low: { label: "Matches Low", bg: "", className: "low-tag-subtle" },
 };
 
+export const resolveLowStatus = (statuses, cheapestRegion) => {
+  if (statuses && Object.values(statuses).includes("new_low")) {
+    return "new_low";
+  }
+  return statuses?.[cheapestRegion] ?? null;
+};
+
 const Cards = ({
   datam = {},
   Title,
@@ -684,10 +691,9 @@ else if (PlusPrice === 202020) {
     return best;
   }
 
-  const lowStatus =
-    saleStatus && Slug && saleStatus[Slug]
-      ? saleStatus[Slug][cheapestCountry()]
-      : null;
+  const lowStatus = saleStatus && Slug
+    ? resolveLowStatus(saleStatus[Slug], cheapestCountry())
+    : null;
   const lowTag = LOW_TAGS[lowStatus];
 
 function PlatformOverlay({ title, slug, isps4, isps5 }) {
