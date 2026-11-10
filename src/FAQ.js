@@ -120,7 +120,7 @@ const About = () => {
     createData(
       "Australia",
       "auregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={enebalogo} style={{ width: "17px" }} />,
       <img src={xmark} />
     ),
@@ -134,7 +134,7 @@ const About = () => {
     createData(
       "Canada",
       "caregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={enebalogo} style={{ width: "17px" }} />,
       <img src={xmark} />
     ),
@@ -148,28 +148,28 @@ const About = () => {
     createData(
       "Colombia",
       "coregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={xmark} />,
       <img src={xmark} />
     ),
     createData(
       "Denmark",
       "deregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={enebalogo} style={{ width: "17px" }} />,
       <img src={xmark} />
     ),
     createData(
       "Europe",
       "euregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={enebalogo} style={{ width: "17px" }} />,
       <img src={xmark} />
     ),
     createData(
       "Hong Kong",
       "hkregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={enebalogo} style={{ width: "17px" }} />,
       <img src={xmark} />
     ),
@@ -183,35 +183,35 @@ const About = () => {
     createData(
       "Malaysia",
       "myregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={xmark} />,
       <img src={xmark} />
     ),
     createData(
       "Mexico",
       "mxregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={enebalogo} style={{ width: "17px" }} />,
       <img src={xmark} />
     ),
     createData(
       "New Zealand",
       "nzregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={xmark} />,
       <img src={xmark} />
     ),
     createData(
       "Norway",
       "noregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={enebalogo} style={{ width: "17px" }} />,
       <img src={xmark} />
     ),
     createData(
       "Peru",
       "peregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={xmark} />,
       <img src={xmark} />
     ),
@@ -225,21 +225,21 @@ const About = () => {
     createData(
       "Poland",
       "plregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={enebalogo} style={{ width: "17px" }} />,
       <img src={xmark} />
     ),
      createData(
       "Singapore",
       "sgregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={xmark} />,
       <img src={xmark} />
     ),
     createData(
       "South Africa",
       "zaregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={xmark} />,
       <img src={xmark} />
     ),
@@ -253,35 +253,35 @@ const About = () => {
     createData(
       "Sweden",
       "seregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={enebalogo} style={{ width: "17px" }} />,
       <img src={xmark} />
     ),
     createData(
       "Switzerland",
       "chregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={enebalogo} style={{ width: "17px" }} />,
       <img src={xmark} />
     ),
     createData(
       "Thailand",
       "thregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={xmark} />,
       <img src={xmark} />
     ),
     createData(
       "United Kingdom",
       "gbregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={enebalogo} style={{ width: "17px" }} />,
       <img src={xmark} />
     ),
     createData(
       "United States",
       "usregion-logo",
-      <img src={mark} />,
+      <img src={xmark} />,
       <img src={enebalogo} style={{ width: "17px" }} />,
       <img src={xmark} />
     ),
@@ -484,7 +484,7 @@ const About = () => {
           style={{ borderRight: "1px solid rgba(224,224,224,1)" }}
         >
           {/* shorter label → wraps to 2 lines nicely */}
-          <b>Debit/Credit/Virtual</b>
+          <b>PH Debit/Credit/Virtual</b>
         </TableCell>
         <TableCell
           align="center"
@@ -769,7 +769,7 @@ const About = () => {
                       align="center"
                       style={{ borderRight: "1px solid rgba(224,224,224,1)" }}
                     >
-                      <b>Debit/Credit/Virtual</b>
+                      <b>PH Debit/Credit/Virtual</b>
                     </TableCell>
                     <TableCell align="center">
                       <b>PSN Gift Cards</b>

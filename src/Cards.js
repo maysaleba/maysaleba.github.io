@@ -42,10 +42,26 @@ const LOW_TAGS = {
   matches_low: { label: "Matches Low", bg: "", className: "low-tag-subtle" },
 };
 
+const EXCLUDED_NINTENDO_PRICE_KEYS = [
+  "Colombia",
+  "Malaysia",
+  "Peru",
+  "NewZealand",
+  "Singapore",
+  "Southafrica",
+  "Thailand",
+];
+const EXCLUDED_NINTENDO_PRICE_CODES = new Set([
+  "CO",
+  "MY",
+  "PE",
+  "NZ",
+  "SG",
+  "ZA",
+  "TH",
+]);
+
 export const resolveLowStatus = (statuses, cheapestRegion) => {
-  if (statuses && Object.values(statuses).includes("new_low")) {
-    return "new_low";
-  }
   return statuses?.[cheapestRegion] ?? null;
 };
 
@@ -314,6 +330,8 @@ function getPsCheapest() {
         Philippines: Number(PhilippinesPrice)
 
       };
+
+      EXCLUDED_NINTENDO_PRICE_KEYS.forEach((region) => delete pricesobj[region]);
 
       Object.entries(pricesobj).forEach(([k, v]) => {
         if (v === 0) delete pricesobj[k];
@@ -678,6 +696,7 @@ else if (PlusPrice === 202020) {
     let best = null;
     let bestPrice = Infinity;
     Object.entries(candidates).forEach(([code, [amt, ccy]]) => {
+      if (Platform !== "Playstation" && EXCLUDED_NINTENDO_PRICE_CODES.has(code)) return;
       const php = toPHP(amt, ccy);
       if (Number.isFinite(php) && php > 0 && php < bestPrice) {
         best = code;

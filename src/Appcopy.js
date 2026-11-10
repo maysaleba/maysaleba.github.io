@@ -564,21 +564,14 @@ const SORTERS = {
     }
 
     addPhpCandidate(prices, "Canada", review.CanadaPrice, "CAD", datam);
-    addPhpCandidate(prices, "Peru", review.PeruPrice, "PEN", datam);
     addPhpCandidate(prices, "Australia", review.AustraliaPrice, "AUD", datam);
-    addPhpCandidate(prices, "Colombia", review.ColombiaPrice, "COP", datam);
-    addPhpCandidate(prices, "South Africa", review.SouthafricaPrice, "ZAR", datam);
     addPhpCandidate(prices, "Brazil", review.BrazilPrice, "BRL", datam);
     addPhpCandidate(prices, "Norway", review.NorwayPrice, "NOK", datam);
     addPhpCandidate(prices, "Poland", review.PolandPrice, "PLN", datam);
-    addPhpCandidate(prices, "New Zealand", review.NewZealandPrice, "NZD", datam);
     addPhpCandidate(prices, "Mexico", review.MexicoPrice, "MXN", datam);
     addPhpCandidate(prices, "Hong Kong", review.HongKongPrice, "HKD", datam);
     addPhpCandidate(prices, "Korea", review.KoreaPrice, "KRW", datam);
     addPhpCandidate(prices, "Japan", review.JapanPrice, "JPY", datam);
-    addPhpCandidate(prices, "Singapore", review.SingaporePrice, "SGD", datam);
-    addPhpCandidate(prices, "Malaysia", review.MalaysiaPrice, "MYR", datam);
-    addPhpCandidate(prices, "Thailand", review.ThailandPrice, "THB", datam);
     addPhpCandidate(prices, "Philippines", review.PhilippinesPrice, "PHP", datam);
     addPhpCandidate(prices, "Turkey", review.TurkeyPrice, "TRY", datam);
 
@@ -633,21 +626,14 @@ function cheapestRegionCode(review) {
   putMin("US", toPHP(review.SalePrice, "USD"));
   putMin("US", toPHP(review.Price, "USD"));
   putMin("CA", toPHP(review.CanadaPrice, "CAD"));
-  putMin("PE", toPHP(review.PeruPrice, "PEN"));
   putMin("AU", toPHP(review.AustraliaPrice, "AUD"));
-  putMin("CO", toPHP(review.ColombiaPrice, "COP"));
-  putMin("ZA", toPHP(review.SouthafricaPrice, "ZAR"));
   putMin("BR", toPHP(review.BrazilPrice, "BRL"));
   putMin("NO", toPHP(review.NorwayPrice, "NOK"));
   putMin("PL", toPHP(review.PolandPrice, "PLN"));
-  putMin("NZ", toPHP(review.NewZealandPrice, "NZD"));
   putMin("MX", toPHP(review.MexicoPrice, "MXN"));
   putMin("HK", toPHP(review.HongKongPrice, "HKD"));
   putMin("KR", toPHP(review.KoreaPrice, "KRW"));
   putMin("JP", toPHP(review.JapanPrice, "JPY"));
-  putMin("SG", toPHP(review.SingaporePrice, "SGD"));
-  putMin("MY", toPHP(review.MalaysiaPrice, "MYR"));
-  putMin("TH", toPHP(review.ThailandPrice, "THB"));
   putMin("PH", toPHP(review.PhilippinesPrice, "PHP"));
   putMin("TR", toPHP(review.TurkeyPrice, "TRY"));
 

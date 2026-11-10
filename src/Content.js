@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 import styled from "styled-components";
 import download from "./download.gif";
 import enebalogo from "./flags/eneba.png";
+import xmark from "./flags/xmark.png";
 import { Helmet } from "react-helmet";
 import { Redirect } from "react-router-dom";
 import GoogleAds from "./AdSense";
@@ -1754,6 +1755,16 @@ function PsPrices() {
         "Philippines": ""
       };
 
+      const noGiftCardRegions = new Set([
+        "Colombia",
+        "Malaysia",
+        "Peru",
+        "New Zealand",
+        "Singapore",
+        "South Africa",
+        "Thailand",
+      ]);
+
       function RankRows() {
         const [open, setOpen] = React.useState(false);
         const [modalText, setModalText] = React.useState(""); // State to hold the modal text
@@ -1761,9 +1772,10 @@ function PsPrices() {
 
                 // NEW:
         const [expanded, setExpanded] = React.useState(false);
-        const hasToggle = entries.length > 3;
-        const visibleEntries = expanded || !hasToggle ? entries : entries.slice(0, 3);
-        const top3 = entries.slice(0, 3).map(([c]) => c);
+                const topEntries = entries.filter(([country]) => !noGiftCardRegions.has(country));
+                const hasToggle = entries.length > Math.min(topEntries.length, 3);
+                const visibleEntries = expanded || !hasToggle ? entries : topEntries.slice(0, 3);
+                const top3 = topEntries.slice(0, 3).map(([country]) => country);
 
         const handleOpen = (event, country) => {
           event.preventDefault(); // Prevent the default behavior of the <a> tag
@@ -1778,6 +1790,9 @@ const getModalTextForCountry = (country) => {
   // Define country groups with shared descriptions
 
   const countryUrl = countryURLs[country] || ""; // Get the URL or fallback to an empty string
+  const cardPaymentInstruction = country === "Philippines"
+    ? "Use a compatible debit or credit card (Visa/Mastercard) or virtual cards from Maya, GoTyme, and GrabPay."
+    : "Use a compatible debit, credit or virtual card (Visa/Mastercard).";
   const countryGroups = {
     "Canada & Switzerland & Poland & Mexico & Australia & Norway & Hong Kong": `
       <ol>
@@ -1790,7 +1805,7 @@ const getModalTextForCountry = (country) => {
       <li> Open the eShop on your Nintendo Switch and search for your game</li>
       <li> Proceed to Purchase</li>
       <ul>
-      <li>Use a compatible debit or credit card (Visa/Mastercard) or virtual cards from Maya, GoTyme, and GrabPay.</li>
+      <li>${cardPaymentInstruction}</li>
       <li>You can also purchase a <b>Nintendo eShop gift card</b> valid in <b>${country}</b> from the link(s) below: </li>
       <ul>
       <li><a href="${countryUrl}" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Eneba</a></li>
@@ -1809,7 +1824,7 @@ const getModalTextForCountry = (country) => {
       <li> Open the eShop on your Nintendo Switch and search for your game</li>
       <li> Proceed to Purchase</li>
       <ul>
-      <li>Use a compatible debit or credit card (Visa/Mastercard) or virtual cards from Maya, GoTyme, and GrabPay.</li>
+      <li>${cardPaymentInstruction}</li>
       </ul>
       </ol>
     `,
@@ -1853,7 +1868,7 @@ const getModalTextForCountry = (country) => {
       <li> Open the eShop on your Nintendo Switch and search for your game</li>
       <li> Proceed to Purchase</li>
       <ul>
-      <li>Use a compatible debit or credit card (Visa/Mastercard) or virtual cards from Maya, GoTyme, and GrabPay.</li>
+      <li>${cardPaymentInstruction}</li>
       <li>You can also purchase a <b>Nintendo eShop gift card</b> valid in <b>${country}</b> from the link(s) below: </li>
       <ul>
       <li><a href="${countryUrl}" target="_blank" rel="noreferrer" style="color: #fc430a; font-weight: bold;">Eneba</a></li>
@@ -1959,6 +1974,13 @@ const getModalTextForCountry = (country) => {
 
                            />
                         </a>
+                      ) : noGiftCardRegions.has(country) ? (
+                        <img
+                          src={xmark}
+                          className="seagm-logo"
+                          style={{ width: "17px", height: "17px" }}
+                          alt="Gift card unavailable"
+                        />
                       ) : (
                         <div
                           className="placeholder-logo"
