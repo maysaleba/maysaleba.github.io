@@ -62,6 +62,9 @@ const EXCLUDED_NINTENDO_PRICE_CODES = new Set([
 ]);
 
 export const resolveLowStatus = (statuses, cheapestRegion) => {
+  if (statuses && Object.values(statuses).includes("new_low")) {
+    return "new_low";
+  }
   return statuses?.[cheapestRegion] ?? null;
 };
 
