@@ -96,6 +96,7 @@ const Cards = ({
   ThailandPrice,
   MalaysiaPrice,
   SwitzerlandPrice,
+  PhilippinesPrice,
   ESRBRating,
   IsPS4,
   IsPS5
@@ -309,7 +310,8 @@ function getPsCheapest() {
         Korea: KoreaPrice * krwExchange,
         Singapore: SingaporePrice * sgdExchange,
         Malaysia: MalaysiaPrice * myrExchange,
-        Thailand: ThailandPrice * thbExchange
+        Thailand: ThailandPrice * thbExchange,
+        Philippines: Number(PhilippinesPrice)
 
       };
 
@@ -360,7 +362,8 @@ function SmallestFlag() {
     Japan: "jpregion-logo",
     Singapore: 'sgregion-logo',
     Malaysia: 'myregion-logo',
-    Thailand: 'thregion-logo'
+    Thailand: 'thregion-logo',
+    Philippines: "phregion-logo",
   };
 
 if (!ratesReady || !smallest) {
@@ -670,6 +673,7 @@ else if (PlusPrice === 202020) {
       SG: [SingaporePrice, "SGD"],
       MY: [MalaysiaPrice, "MYR"],
       TH: [ThailandPrice, "THB"],
+      PH: [PhilippinesPrice, "PHP"],
     };
     let best = null;
     let bestPrice = Infinity;
@@ -821,6 +825,7 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
                 singaporeprice={SingaporePrice}
                 malaysiaprice={MalaysiaPrice}
                 thailandprice={ThailandPrice}
+                philippinesprice={PhilippinesPrice}
             />{" "}
             <PesoPlusPrice psorsw={Platform} pesoplus={PlusPrice}  esrbrating={ESRBRating}/>{" "}
             <DaysLeft isExpired={SaleEnds} platform={Platform} />{" "}

@@ -229,6 +229,7 @@ function getDeepSaleRegionalPrices(review) {
     addPhpCandidate(prices, "SG", review.SingaporePrice, "SGD", datam);
     addPhpCandidate(prices, "MY", review.MalaysiaPrice, "MYR", datam);
     addPhpCandidate(prices, "TH", review.ThailandPrice, "THB", datam);
+    addPhpCandidate(prices, "PH", review.PhilippinesPrice, "PHP", datam);
 
     const ars = +review.ArgentinaPrice;
     if (Number.isFinite(ars) && ars > 0 && datam.ARS) {
@@ -578,6 +579,7 @@ const SORTERS = {
     addPhpCandidate(prices, "Singapore", review.SingaporePrice, "SGD", datam);
     addPhpCandidate(prices, "Malaysia", review.MalaysiaPrice, "MYR", datam);
     addPhpCandidate(prices, "Thailand", review.ThailandPrice, "THB", datam);
+    addPhpCandidate(prices, "Philippines", review.PhilippinesPrice, "PHP", datam);
     addPhpCandidate(prices, "Turkey", review.TurkeyPrice, "TRY", datam);
 
     // Argentina math
@@ -646,6 +648,7 @@ function cheapestRegionCode(review) {
   putMin("SG", toPHP(review.SingaporePrice, "SGD"));
   putMin("MY", toPHP(review.MalaysiaPrice, "MYR"));
   putMin("TH", toPHP(review.ThailandPrice, "THB"));
+  putMin("PH", toPHP(review.PhilippinesPrice, "PHP"));
   putMin("TR", toPHP(review.TurkeyPrice, "TRY"));
 
   const ars = +review.ArgentinaPrice;

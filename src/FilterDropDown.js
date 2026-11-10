@@ -232,6 +232,7 @@ const REGION_LABEL = {
   NO: "Norway",
   NZ: "New Zealand",
   PE: "Peru",
+  PH: "Philippines",
   PL: "Poland",
   SG: "Singapore",
   TH: "Thailand",
@@ -243,7 +244,7 @@ const CHEAPEST_OPTIONS = useMemo(
   () =>
     isPS
       ? ["HK", "ID", "IN", "SG", "TR", "US"]
-      : ["AR", "AU", "BR", "CA", "CH", "CO", "HK", "JP", "MX", "MY", "NO", "NZ", "PE", "PL", "SG", "TH", "ZA", "US"],
+      : ["AR", "AU", "BR", "CA", "CH", "CO", "HK", "JP", "MX", "MY", "NO", "NZ", "PE", "PH", "PL", "SG", "TH", "ZA", "US"],
   [isPS]
 );
 

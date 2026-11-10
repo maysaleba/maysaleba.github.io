@@ -147,6 +147,7 @@
                           SingaporePrice={review.SingaporePrice}
                           MalaysiaPrice={review.MalaysiaPrice}
                           ThailandPrice={review.ThailandPrice}
+                          PhilippinesPrice={review.PhilippinesPrice}
                         />
                       </div>
                     ))}

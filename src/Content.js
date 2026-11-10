@@ -1443,7 +1443,8 @@ function PsPrices() {
         Japan: matchGames[0].JapanPrice * jpyExchange,
         Singapore: matchGames[0].SingaporePrice * sgdExchange,
         Malaysia: matchGames[0].MalaysiaPrice * myrExchange,
-        Thailand: matchGames[0].ThailandPrice * thbExchange
+        Thailand: matchGames[0].ThailandPrice * thbExchange,
+        Philippines: Number(matchGames[0].PhilippinesPrice)
       };
 
       for (const [k, v] of Object.entries(pricesobj)) {
@@ -1667,6 +1668,12 @@ function PsPrices() {
           className: "thregion-logo",
           
         },
+        Philippines: {
+          name: "Philippines",
+          price: Math.round(Number(matchGames[0].PhilippinesPrice)).toString(),
+          currency: "₱",
+          className: "phregion-logo",
+        },
       };
 
       function Rank1(props) {
@@ -1735,6 +1742,7 @@ function PsPrices() {
         Sweden: "https://www.eneba.com/nintendo-nintendo-eshop-card-150-sek-key-sweden?af_id=maysaleba&currency=PHP&region=global",
         Brazil: "https://www.eneba.com/nintendo-nintendo-eshop-card-30-brl-key-brazil?af_id=maysaleba&currency=PHP&region=global",
         Norway: "https://www.eneba.com/nintendo-nintendo-eshop-card-150-nok-key-norway?af_id=maysaleba&currency=PHP&region=global",
+        Philippines: "https://www.eneba.com/nintendo-nintendo-eshop-card-1160-php-key-philippines",
         Peru: "",
         Argentina: "",
         Colombia: "",
@@ -1742,7 +1750,8 @@ function PsPrices() {
         "New Zealand": "",
         "Singapore": "",
         "Malaysia": "",
-        "Thailand": ""
+        "Thailand": "",
+        "Philippines": ""
       };
 
       function RankRows() {
@@ -1887,7 +1896,7 @@ const getModalTextForCountry = (country) => {
   };
 
   // Check if the country belongs to a group, if so, return the group's description
-  if (["Canada", "Switzerland", "Poland", "Mexico", "Australia", "Norway", "Hong Kong"].includes(country)) {
+  if (["Canada", "Switzerland", "Poland", "Mexico", "Australia", "Norway", "Hong Kong", "Philippines"].includes(country)) {
     return countryGroups["Canada & Switzerland & Poland & Mexico & Australia & Norway & Hong Kong"];
   } else if (["Peru", "Colombia", "South Africa", "New Zealand", "Singapore", "Malaysia", "Thailand"].includes(country)) {
     return countryGroups["Peru & Colombia & South Africa & New Zealand & Singapore & Malaysia & Thailand"];
