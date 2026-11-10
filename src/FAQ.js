@@ -519,8 +519,40 @@ const About = () => {
           </TableCell>
           <TableCell align="center">
             {regionLinks[row.region] ? (
-              <a href={regionLinks[row.region]}>
-                {React.cloneElement(row.enebalogo, { style: { width: 16, height: "auto" } })}
+              <a href={regionLinks[row.region]} aria-label={`${row.region} eShop gift card on Eneba`}>
+                <span style={{ position: "relative", display: "inline-flex", lineHeight: 0 }}>
+                  {React.cloneElement(row.enebalogo, { style: { width: 16, height: "auto" } })}
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      top: -5,
+                      right: -6,
+                      width: 13,
+                      lineHeight: 0,
+                    }}
+                  >
+                    <span
+                      style={{
+                        position: "absolute",
+                        inset: 0,
+                        width: "100%",
+                        height: 13,
+                        backgroundColor: "var(--surface-bg, #fff)",
+                        WebkitMaskImage: `url(${mark})`,
+                        maskImage: `url(${mark})`,
+                        WebkitMaskSize: "contain",
+                        maskSize: "contain",
+                        WebkitMaskRepeat: "no-repeat",
+                        maskRepeat: "no-repeat",
+                        WebkitMaskPosition: "center",
+                        maskPosition: "center",
+                        transform: "scale(1.35)",
+                      }}
+                    />
+                    <img src={mark} style={{ position: "relative", width: "100%", height: "auto" }} />
+                  </span>
+                </span>
               </a>
             ) : (
               React.cloneElement(row.enebalogo, { style: { width: 16, height: "auto" } })
@@ -796,7 +828,39 @@ const About = () => {
                       </TableCell>
                       <TableCell align="center">
                         <a href={psEnebaLinks[region]} target="_blank" rel="noreferrer">
-                          <img src={enebalogo} style={iconStyle} alt="Eneba" />
+                          <span style={{ position: "relative", display: "inline-flex", lineHeight: 0 }}>
+                            <img src={enebalogo} style={iconStyle} alt="Eneba" />
+                            <span
+                              aria-hidden="true"
+                              style={{
+                                position: "absolute",
+                                top: -5,
+                                right: -6,
+                                width: 13,
+                                lineHeight: 0,
+                              }}
+                            >
+                              <span
+                                style={{
+                                  position: "absolute",
+                                  inset: 0,
+                                  width: "100%",
+                                  height: 13,
+                                  backgroundColor: "var(--surface-bg, #fff)",
+                                  WebkitMaskImage: `url(${mark})`,
+                                  maskImage: `url(${mark})`,
+                                  WebkitMaskSize: "contain",
+                                  maskSize: "contain",
+                                  WebkitMaskRepeat: "no-repeat",
+                                  maskRepeat: "no-repeat",
+                                  WebkitMaskPosition: "center",
+                                  maskPosition: "center",
+                                  transform: "scale(1.35)",
+                                }}
+                              />
+                              <img src={mark} style={{ position: "relative", width: "100%", height: "auto" }} />
+                            </span>
+                          </span>
                         </a>
                       </TableCell>
                     </TableRow>
