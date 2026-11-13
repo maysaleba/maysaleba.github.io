@@ -3,6 +3,7 @@ import { Card } from "react-bootstrap";
 import { Paper, Grid, Box, TableHead, TableRow, Table, TableBody, TableCell, TableContainer, Button, Modal } from "@mui/material";
 import styled from "styled-components";
 import InfoIcon from "@mui/icons-material/Info";
+import LinkIcon from "@mui/icons-material/Link";
 import download from "./download.gif";
 import mark from "./flags/mark.png";
 import xmark from "./flags/xmark.png";
@@ -16,6 +17,61 @@ import enebastep3 from "./images/eneba_img3.jpg";
 import enebastep4 from "./images/eneba_img4.jpg";
 import enebastep5 from "./images/eneba_img5.jpg";
 import enebastep6 from "./images/eneba_img6.jpg";
+
+
+const FaqHeader = ({ id, children, section = false, aliases = [] }) => {
+  const [copied, setCopied] = React.useState(false);
+
+  const copyLink = async () => {
+    const url = `${window.location.origin}${window.location.pathname}${window.location.search}#${id}`;
+
+    try {
+      await navigator.clipboard.writeText(url);
+    } catch (error) {
+      const input = document.createElement("textarea");
+      input.value = url;
+      input.setAttribute("readonly", "");
+      input.style.position = "absolute";
+      input.style.left = "-9999px";
+      document.body.appendChild(input);
+      input.select();
+      const didCopy = document.execCommand("copy");
+      input.remove();
+      if (!didCopy) return;
+    }
+
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <>
+      {aliases.map((alias) => (
+        <span key={alias} id={alias} style={{ display: "block", height: 0 }} />
+      ))}
+      <Card.Header
+        id={id}
+        className={`content-header${section ? " faq-section-header" : ""}`}
+        style={{ display: "flex", alignItems: "center", gap: 8 }}
+      >
+        <strong>{children}</strong>
+        <Button
+          size="small"
+          className="faq-copy-link-button"
+          onClick={copyLink}
+          startIcon={<LinkIcon fontSize="small" />}
+          aria-label={copied ? "Link copied" : `Copy link to ${id}`}
+          title={copied ? "Copied!" : "Copy link"}
+          style={{ marginLeft: "auto", minWidth: "auto", textTransform: "none", flexShrink: 0 }}
+        >
+          <span className="faq-copy-link-label">
+            {copied ? "Copied!" : "Copy link"}
+          </span>
+        </Button>
+      </Card.Header>
+    </>
+  );
+};
 
 
 const EnebaStep = ({ src }) => {
@@ -76,6 +132,13 @@ const style = {
 
 
 const About = () => {
+  React.useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id) return;
+
+    document.getElementById(id)?.scrollIntoView();
+  }, []);
+
   function createData(region, logoClass, dcvcard, enebalogo, pasabuy) {
     return { region, logoClass, dcvcard, enebalogo, pasabuy };
   }
@@ -334,20 +397,29 @@ const About = () => {
             </div>
             <ul>
               <li>
-                <a href="#buy-region" className="giftcardlink">
+                <a href="#sw-buy-region" className="giftcardlink">
                   How do I buy from a Nintendo eShop in another region?
                 </a>
               </li>
               <li>
-                <a href="#pay-region" className="giftcardlink">
+                <a href="#sw-pay-region" className="giftcardlink">
                   How do I pay on a Nintendo eShop in another region?
                 </a>
                 <ul>
-                  
+                  <li>
+                    <a href="#sw-pay-cards" className="giftcardlink">
+                      Pay using PH Payment Cards
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#sw-pay-gift-cards" className="giftcardlink">
+                      Pay using Nintendo eShop Gift Card
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li>
-                <a href="#error-2813-2470" className="giftcardlink">
+                <a href="#sw-error-2813-2470" className="giftcardlink">
                   Why am I getting error 2813-2470 when I try to purchase?
                 </a>
               </li>
@@ -367,6 +439,18 @@ const About = () => {
                 <a href="#ps-pay-region" className="giftcardlink">
                   How do I pay on a PlayStation Store in another region?
                 </a>
+                <ul>
+                  <li>
+                    <a href="#ps-pay-cards" className="giftcardlink">
+                      Pay using PH Payment Cards
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#ps-pay-gift-cards" className="giftcardlink">
+                      Pay using PSN Gift Cards
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
             <ul>
@@ -383,18 +467,8 @@ const About = () => {
             </ul>
           </Card.Body>
 
-          <Card.Header className="content-header">
-            <strong>
-              <p id="nintendo-switch" />
-              Nintendo Switch
-            </strong>
-          </Card.Header>
-          <Card.Header className="content-header">
-            <strong>
-              <p id="buy-region" />
-              How do I buy from a Nintendo eShop in another region?
-            </strong>
-          </Card.Header>
+          <FaqHeader id="nintendo-switch" section>Nintendo Switch</FaqHeader>
+          <FaqHeader id="sw-buy-region">How do I buy from a Nintendo eShop in another region?</FaqHeader>
           <Card.Body>
             <ol>
               <li>Setup your account</li>
@@ -442,12 +516,7 @@ const About = () => {
             </ol>
           </Card.Body>
 
-          <Card.Header className="content-header">
-            <strong>
-              <p id="pay-region" />
-              How do I pay on a Nintendo eShop in another region?
-            </strong>
-          </Card.Header>
+          <FaqHeader id="sw-pay-region">How do I pay on a Nintendo eShop in another region?</FaqHeader>
           <Card.Body>
             The table below shows which payment methods you can use in the eShop
             for each region:
@@ -474,6 +543,12 @@ const About = () => {
       },
     }}
   >
+    <colgroup>
+      <col style={{ width: "40%" }} />
+      <col style={{ width: "20%" }} />
+      <col style={{ width: "20%" }} />
+      <col style={{ width: "20%" }} />
+    </colgroup>
     <TableHead>
       <TableRow>
         <TableCell style={{ borderRight: "1px solid rgba(224,224,224,1)" }}>
@@ -483,14 +558,16 @@ const About = () => {
           align="center"
           style={{ borderRight: "1px solid rgba(224,224,224,1)" }}
         >
-          {/* shorter label → wraps to 2 lines nicely */}
-          <b>PH Debit/Credit/Virtual</b>
+          <b>PH Payment Cards</b>
         </TableCell>
         <TableCell
           align="center"
           style={{ borderRight: "1px solid rgba(224,224,224,1)" }}
         >
-          <b>eShop Gift Cards</b>
+          <b>
+            <span className="faq-table-header-full">eShop Gift Cards</span>
+            <span className="faq-table-header-mobile">Gift Cards</span>
+          </b>
         </TableCell>
         <TableCell align="center">
           <b>Pasabuy</b>
@@ -513,11 +590,17 @@ const About = () => {
           <TableCell>
             <span className={row.logoClass}>{row.region}</span>
           </TableCell>
-          <TableCell align="center">
+          <TableCell
+            align="center"
+            className={row.dcvcard.props.src === mark ? "faq-status-yes" : "faq-status-no"}
+          >
             {/* keep icons tiny so columns stay narrow */}
             {React.cloneElement(row.dcvcard, { style: { width: 16, height: "auto" } })}
           </TableCell>
-          <TableCell align="center">
+          <TableCell
+            align="center"
+            className={regionLinks[row.region] ? "faq-status-yes" : "faq-status-no"}
+          >
             {regionLinks[row.region] ? (
               <a href={regionLinks[row.region]} aria-label={`${row.region} eShop gift card on Eneba`}>
                 <span style={{ position: "relative", display: "inline-flex", lineHeight: 0 }}>
@@ -558,7 +641,10 @@ const About = () => {
               React.cloneElement(row.enebalogo, { style: { width: 16, height: "auto" } })
             )}
           </TableCell>
-          <TableCell align="center">
+          <TableCell
+            align="center"
+            className={row.pasabuy.props.src === mark ? "faq-status-yes" : "faq-status-no"}
+          >
             {React.cloneElement(row.pasabuy, { style: { width: 16, height: "auto" } })}
           </TableCell>
         </TableRow>
@@ -569,9 +655,12 @@ const About = () => {
 
           </Card.Body>
 
-          <Card.Header className="content-header">
-            <strong><p id="debit-credit-virtual-cards" />Pay using Debit/Credit/Virtual Cards</strong>
-          </Card.Header>
+          <FaqHeader
+            id="sw-pay-cards"
+            aliases={["debit-credit-virtual-cards"]}
+          >
+            Pay using PH Payment Cards
+          </FaqHeader>
           <Card.Body>
             You can use most credit or debit cards from major local banks that
             support Visa or Mastercard.
@@ -598,9 +687,12 @@ const About = () => {
               <li>CIMB (Virtual Card)</li>
             </ul>
           </Card.Body>
-          <Card.Header className="content-header">
-            <strong><p id="eshop-gift-cards"/>Pay using Nintendo eShop Gift Card </strong>
-          </Card.Header>
+          <FaqHeader
+            id="switch-pay-gift-cards"
+            aliases={["eshop-gift-cards"]}
+          >
+            Pay using Nintendo eShop Gift Card
+          </FaqHeader>
           <Card.Body>
             Use Nintendo eShop Gift Cards (Prepaid Cards) to add funds into your
             Nintendo account and purchase your game
@@ -657,9 +749,7 @@ const About = () => {
               </li>
             </ul>
           </Card.Body>
-          <Card.Header className="content-header">
-            <strong><p id="buying-from-shopee-lazada"/>Buy from Shopee and Lazada</strong>
-          </Card.Header>
+          <FaqHeader id="buying-from-shopee-lazada">Buy from Shopee and Lazada</FaqHeader>
           <Card.Body>
             <ol>
               <li>Select Gift Card denomination</li>
@@ -684,9 +774,7 @@ const About = () => {
               </li>
             </ol>
           </Card.Body>
-           <Card.Header className="content-header">
-            <strong><p id="pasabuy"/>Pasabuy</strong>
-          </Card.Header>
+          <FaqHeader id="pasabuy">Pasabuy</FaqHeader>
           <Card.Body>
             <b>Pasabuy</b> is a service that will allow you to buy from Argentina eShop by asking a provider with a valid Argentina issued credit card to top up your eShop account in exchange for a fee.
             <p/>
@@ -696,38 +784,20 @@ const About = () => {
                   style={{ color: "#fc430a", fontWeight: "bold" }}
                 >Learn more about Pasabuy here</a>
           </Card.Body>
-          <Card.Header className="content-header">
-            <strong><p id="error-2813-2470"/>Why am I getting error 2813-2470 when I try to purchase?</strong>
-          </Card.Header>
+          <FaqHeader id="sw-error-2813-2470">Why am I getting error 2813-2470 when I try to purchase?</FaqHeader>
           <Card.Body>
-<b>POSSIBLE CAUSES</b>
-<ol><b><li>Insufficient funds in your payment method or merchant account.</li></b>
-<ul><li>The prices shown in the website are not exact; they are just estimates.</li>
-<li>Make sure you have an additional P20 to P50 balance as an allowance when purchasing.</li></ul>
- <b><li>You have a failed or stuck transaction.</li></b>
-  <ul><li>Delete your saved card information or contact the bank/merchant to check on their end.</li>
-  <li>Try using a different payment method/card.</li>
-  <li>Clear your cache (System Settings &gt; System &gt; Formatting Options).</li>
-  </ul>
- <b> <li>Your Switch console or IP might be blocked (just a suspicion!).</li></b>
-  <ul><li>If all your payment methods or accounts are encountering the same error, it’s most likely that your Switch + IP has been blocked by the eShop region you were trying to purchase from.</li>
-  <li>There’s no known solution at the moment except to wait for the block to be lifted (some say it takes 30 days) or try your luck and contact Nintendo Support.</li>
-  </ul>
-</ol>
+            This error usually means the payment card you’re using was not issued
+            in the same country or region as the Nintendo eShop. Use a card
+            issued in the country or region of the eShop you’re purchasing from.
+            <p />
+            If you’re already using a card issued in that region, check that you
+            have enough available funds (the prices shown here are estimates, so
+            leave an extra P20–P50) and contact your bank or Nintendo Support if
+            the error continues.
           </Card.Body>
 
-          <Card.Header className="content-header">
-            <strong>
-              <p id="playstation" />
-              PlayStation 4 & 5
-            </strong>
-          </Card.Header>
-          <Card.Header className="content-header">
-            <strong>
-              <p id="ps-buy-region" />
-              How do I buy from a PlayStation Store in another region?
-            </strong>
-          </Card.Header>
+          <FaqHeader id="playstation" section>PlayStation 4 &amp; 5</FaqHeader>
+          <FaqHeader id="ps-buy-region">How do I buy from a PlayStation Store in another region?</FaqHeader>
           <Card.Body>
             <ol>
               <li>Setup your account</li>
@@ -763,12 +833,7 @@ const About = () => {
             </ol>
           </Card.Body>
 
-          <Card.Header className="content-header">
-            <strong>
-              <p id="ps-pay-region" />
-              How do I pay on a PlayStation Store in another region?
-            </strong>
-          </Card.Header>
+          <FaqHeader id="ps-pay-region">How do I pay on a PlayStation Store in another region?</FaqHeader>
           <Card.Body>
             The table below shows which payment methods you can use on the
             PlayStation Store for each region:
@@ -792,6 +857,11 @@ const About = () => {
                   },
                 }}
               >
+                <colgroup>
+                  <col style={{ width: "40%" }} />
+                  <col style={{ width: "30%" }} />
+                  <col style={{ width: "30%" }} />
+                </colgroup>
                 <TableHead>
                   <TableRow>
                     <TableCell style={{ borderRight: "1px solid rgba(224,224,224,1)" }}>
@@ -801,10 +871,13 @@ const About = () => {
                       align="center"
                       style={{ borderRight: "1px solid rgba(224,224,224,1)" }}
                     >
-                      <b>PH Debit/Credit/Virtual</b>
+                      <b>PH Payment Cards</b>
                     </TableCell>
                     <TableCell align="center">
-                      <b>PSN Gift Cards</b>
+                      <b>
+                        <span className="faq-table-header-full">PSN Gift Cards</span>
+                        <span className="faq-table-header-mobile">Gift Cards</span>
+                      </b>
                     </TableCell>
                   </TableRow>
                 </TableHead>
@@ -823,10 +896,13 @@ const About = () => {
                       <TableCell>
                         <span className={logoClass}>{region}</span>
                       </TableCell>
-                      <TableCell align="center">
+                      <TableCell
+                        align="center"
+                        className={dcv ? "faq-status-yes" : "faq-status-no"}
+                      >
                         <img src={dcv ? mark : xmark} style={iconStyle} alt={dcv ? "Yes" : "No"} />
                       </TableCell>
-                      <TableCell align="center">
+                      <TableCell align="center" className="faq-status-yes">
                         <a href={psEnebaLinks[region]} target="_blank" rel="noreferrer">
                           <span style={{ position: "relative", display: "inline-flex", lineHeight: 0 }}>
                             <img src={enebalogo} style={iconStyle} alt="Eneba" />
@@ -868,8 +944,9 @@ const About = () => {
                 </TableBody>
               </Table>
             </TableContainer>
-            <p />
-            <b>Pay using Debit/Credit/Virtual Cards</b>
+          </Card.Body>
+          <FaqHeader id="ps-pay-cards">Pay using PH Payment Cards</FaqHeader>
+          <Card.Body>
             <ol>
               <li>
                 At checkout, choose <b>Add a Payment Method</b> then{" "}
@@ -883,7 +960,9 @@ const About = () => {
                 Select <b>Confirm</b> to complete the transaction
               </li>
             </ol>
-            <b>Pay using PSN Gift Cards</b>
+          </Card.Body>
+          <FaqHeader id="ps-pay-gift-cards">Pay using PSN Gift Cards</FaqHeader>
+          <Card.Body>
             <ol>
               <li>
                 Buy a PSN Gift Card matching your account's region from{" "}
@@ -907,11 +986,7 @@ const About = () => {
             </ol>
           </Card.Body>
 
-          <Card.Header className="content-header">
-            <strong><p id="buying-from-eneba"/>
-              How do I buy gift cards from Eneba?
-            </strong>
-          </Card.Header>
+          <FaqHeader id="buying-from-eneba">How do I buy gift cards from Eneba?</FaqHeader>
           <Card.Body>
           <b>Eneba</b> is an online marketplace where you can purchase Nintendo eShop and PlayStation Network (PSN) gift cards for various regions. Follow these steps to buy codes easily and securely:
             <Box sx={{ flexGrow: 1 }} style={{ marginTop: 16 }}>
@@ -993,9 +1068,7 @@ const About = () => {
             </Box>
           </Card.Body>
 
-          <Card.Header className="content-header">
-            <strong>How can I contact you?</strong>
-          </Card.Header>
+          <FaqHeader id="contact-us">How can I contact you?</FaqHeader>
           <Card.Body>
             You can send me an email at{" "}
             <a className="giftcardlink" href="mailto:maysalebaph@gmail.com">

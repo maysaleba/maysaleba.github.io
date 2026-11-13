@@ -1710,6 +1710,9 @@ label:focus,
   --card-header-bg: #ffffff;
 
   --surface-soft-bg: #f0e9f8;
+  --faq-section-bg: #dedcff;
+  --faq-status-yes-bg: #d7f0dc;
+  --faq-status-no-bg: #f9dada;
 
   --text-main: #171717;
   --text-muted: #5f5f6f;
@@ -1740,6 +1743,9 @@ label:focus,
 
   --search-bg: #3a3b3c;
   --surface-soft-bg: #3a3b3c;
+  --faq-section-bg: #39365a;
+  --faq-status-yes-bg: #244b32;
+  --faq-status-no-bg: #5a2c2c;
 
   --text-main: #e4e6eb;
   --text-muted: #b0b3b8;
@@ -1818,12 +1824,43 @@ a.infotax:hover {
   border-bottom: 1px solid var(--section-border) !important;
 }
 
+.faq-section-header {
+  background-color: var(--faq-section-bg) !important;
+}
+
 .content-header-title {
   font-size: 18px;
 }
 
 .content-section {
   font-size: 14px;
+}
+
+.faq-table-header-mobile {
+  display: none;
+}
+
+@media (max-width: 575.98px) {
+  .faq-table-header-full {
+    display: none;
+  }
+
+  .faq-table-header-mobile {
+    display: inline;
+  }
+
+  .faq-copy-link-label {
+    display: none;
+  }
+
+  .faq-copy-link-button {
+    min-width: 32px !important;
+    padding: 4px !important;
+  }
+
+  .faq-copy-link-button .MuiButton-startIcon {
+    margin: 0;
+  }
 }
 
 .content-card-body {
@@ -2281,6 +2318,14 @@ a.infotax:hover {
 
 :root.dark-mode .faq-table .MuiTableRow-root {
   background-color: var(--surface-bg) !important;
+}
+
+.faq-status-yes {
+  background-color: var(--faq-status-yes-bg) !important;
+}
+
+.faq-status-no {
+  background-color: var(--faq-status-no-bg) !important;
 }
 
 .modal-close-icon {

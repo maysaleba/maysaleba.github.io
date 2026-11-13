@@ -243,8 +243,8 @@ const REGION_LABEL = {
 const CHEAPEST_OPTIONS = useMemo(
   () =>
     isPS
-      ? ["HK", "ID", "IN", "SG", "TR", "US"]
-      : ["AR", "AU", "BR", "CA", "CH", "CO", "HK", "JP", "MX", "MY", "NO", "NZ", "PE", "PH", "PL", "SG", "TH", "ZA", "US"],
+      ? ["HK", "ID", "IN", "TR", "US"]
+      : ["AR", "AU", "BR", "CA", "CH", "HK", "JP", "MX", "NO", "PH", "PL", "US"],
   [isPS]
 );
 

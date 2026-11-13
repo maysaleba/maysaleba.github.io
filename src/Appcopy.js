@@ -292,6 +292,28 @@ function ScrollToTop() {
   const location = useLocation();
 
   useEffect(() => {
+    if (location.hash) {
+      const targetId = decodeURIComponent(location.hash.slice(1));
+      const scrollToTarget = () => {
+        const target = document.getElementById(targetId);
+        if (!target) return false;
+        target.scrollIntoView();
+        return true;
+      };
+
+      if (!scrollToTarget()) {
+        const root = document.getElementById("root");
+        if (!root) return;
+
+        const observer = new MutationObserver(() => {
+          if (scrollToTarget()) observer.disconnect();
+        });
+        observer.observe(root, { childList: true, subtree: true });
+        return () => observer.disconnect();
+      }
+      return;
+    }
+
     const listPaths = ["/allgames", "/switch", "/switch-2", "/playstation"];
 
     if (location.state?.scrollToTop) {
@@ -303,7 +325,7 @@ function ScrollToTop() {
     if (listPaths.includes(location.pathname)) return;
 
     window.scrollTo({ left: 0, top: 0, behavior: "instant" });
-  }, [location.pathname, location.state]);
+  }, [location.pathname, location.hash, location.state]);
 
   return null;
 }
