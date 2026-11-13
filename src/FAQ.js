@@ -645,7 +645,7 @@ const About = () => {
             className={regionLinks[row.region] ? "faq-status-yes" : "faq-status-no"}
           >
             {regionLinks[row.region] ? (
-              <a href={regionLinks[row.region]} aria-label={`${row.region} eShop gift card on Eneba`}>
+              <a className="faq-eneba-cell-link" href={regionLinks[row.region]} aria-label={`${row.region} eShop gift card on Eneba`}>
                 <span style={{ position: "relative", display: "inline-flex", lineHeight: 0 }}>
                   {React.cloneElement(row.enebalogo, { style: { width: 16, height: "auto" } })}
                   <span
@@ -1048,7 +1048,7 @@ const About = () => {
                         <img src={dcv ? mark : xmark} style={iconStyle} alt={dcv ? "Yes" : "No"} />
                       </TableCell>
                       <TableCell align="center" className="faq-status-yes">
-                        <a href={psEnebaLinks[region]} target="_blank" rel="noreferrer">
+                        <a className="faq-eneba-cell-link" href={psEnebaLinks[region]} target="_blank" rel="noreferrer">
                           <span style={{ position: "relative", display: "inline-flex", lineHeight: 0 }}>
                             <img src={enebalogo} style={iconStyle} alt="Eneba" />
                             <span

@@ -305,17 +305,14 @@ a {
 
 a.giftcardlink {
     color: inherit !important; /* Inherit the color from the parent */
-    text-decoration: none !important; /* Remove default underline */
-    position: relative; /* Set position relative for pseudo-element */
+  text-decoration-line: underline !important;
+  text-decoration-color: #9c27b0 !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 
 a.giftcardlink::after {
-    content: ""; /* Add empty content */
-    position: absolute; /* Position the pseudo-element */
-    left: 0; /* Align the pseudo-element with the left edge of the link */
-    bottom: -2px; /* Move the pseudo-element below the link */
-    width: 100%; /* Make the pseudo-element cover the entire width of the link */
-    border-bottom: 1px solid #9c27b0; /* Set the color of the underline */
+  content: none;
 }
 
 a.origprice {
@@ -2326,6 +2323,15 @@ a.infotax:hover {
 
 .faq-status-no {
   background-color: var(--faq-status-no-bg) !important;
+}
+
+.faq-eneba-cell-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  vertical-align: middle;
+  line-height: 0;
 }
 
 .modal-close-icon {
