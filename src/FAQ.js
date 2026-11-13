@@ -163,7 +163,7 @@ const About = () => {
         Sweden: "https://www.eneba.com/nintendo-nintendo-eshop-card-150-sek-key-sweden?af_id=maysaleba&currency=PHP&region=global",
         Brazil: "https://www.eneba.com/nintendo-nintendo-eshop-card-30-brl-key-brazil?af_id=maysaleba&currency=PHP&region=global",
         Norway: "https://www.eneba.com/nintendo-nintendo-eshop-card-150-nok-key-norway?af_id=maysaleba&currency=PHP&region=global",
-        Philippines: "https://www.eneba.com/nintendo-nintendo-eshop-card-1160-php-key-philippines",
+        Philippines: "https://www.eneba.com/nintendo-nintendo-eshop-card-1160-php-key-philippines?af_id=maysaleba&currency=PHP&region=global",
         Peru: "",
         Argentina: "",
         Colombia: "",
