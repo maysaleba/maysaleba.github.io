@@ -419,6 +419,51 @@ const About = () => {
                 </ul>
               </li>
               <li>
+                <a href="#sw-ph-1" className="giftcardlink">
+                  Can I still use my Philippine-issued credit/debit/virtual card to buy games from another region?
+                </a>
+              </li>
+              <li>
+                <a href="#sw-ph-2" className="giftcardlink">
+                  Can I still buy games from other regions?
+                </a>
+              </li>
+              <li>
+                <a href="#sw-ph-3" className="giftcardlink">
+                  Do I need to change my current region to PH?
+                </a>
+              </li>
+              <li>
+                <a href="#sw-ph-4" className="giftcardlink">
+                  Hindi ako makapag-switch to PH kasi may remaining balance ako.
+                </a>
+              </li>
+              <li>
+                <a href="#sw-ph-5" className="giftcardlink">
+                  What happens to games I purchased from other regions when I switch to PH?
+                </a>
+              </li>
+              <li>
+                <a href="#sw-ph-6" className="giftcardlink">
+                  What happens to DLCs I purchased from other regions when I switch to PH?
+                </a>
+              </li>
+              <li>
+                <a href="#sw-ph-7" className="giftcardlink">
+                  For future DLC purchases, do I now need to buy the PH version of the DLC?
+                </a>
+              </li>
+              <li>
+                <a href="#sw-ph-8" className="giftcardlink">
+                  Bakit hindi ko na makita lahat ng regions sa MaySaleBa website, like Thailand, Malaysia, Singapore, etc.?
+                </a>
+              </li>
+              <li>
+                <a href="#sw-ph-9" className="giftcardlink">
+                  May English support ba ang games from other eShop regions?
+                </a>
+              </li>
+              <li>
                 <a href="#sw-error-2813-2470" className="giftcardlink">
                   Why am I getting error 2813-2470 when I try to purchase?
                 </a>
@@ -453,6 +498,11 @@ const About = () => {
                 </ul>
               </li>
             </ul>
+            <div style={{ fontWeight: "bold" }}>
+              <a href="#other-questions" className="giftcardlink">
+                Other Questions
+              </a>
+            </div>
             <ul>
               <li>
                 <a href="#buying-from-eneba" className="giftcardlink">
@@ -784,6 +834,108 @@ const About = () => {
                   style={{ color: "#fc430a", fontWeight: "bold" }}
                 >Learn more about Pasabuy here</a>
           </Card.Body>
+          <FaqHeader id="sw-ph-1">
+            Can I still use my Philippine-issued credit/debit/virtual card to buy games from another region?
+          </FaqHeader>
+          <Card.Body>
+            Not anymore. Since may sarili na tayong Nintendo eShop, PH-issued
+            credit, debit, and virtual cards will no longer work for purchases
+            from other regions.
+            <p />
+            This also includes PayPal if the linked card is PH-issued.
+          </Card.Body>
+          <FaqHeader id="sw-ph-2">
+            Can I still buy games from other regions?
+          </FaqHeader>
+          <Card.Body>
+            Yes! You can still purchase games using gift cards. Regions that
+            support gift cards, such as US, Japan, Brazil, etc., will continue
+            to work as usual.
+            <p />
+            The pasabuy method for Argentina will also continue to work.
+            <p />
+            Check the <a href="#sw-pay-region" className="giftcardlink">payment table</a> to see which regions support gift cards.
+          </Card.Body>
+          <FaqHeader id="sw-ph-3">
+            Do I need to change my current region to PH?
+          </FaqHeader>
+          <Card.Body>
+            Not necessarily. Pero since limited na ang payment options natin sa
+            ibang regions, it's best to switch to the PH eShop para magamit mo
+            pa rin ang local cards mo for purchases.
+          </Card.Body>
+          <FaqHeader id="sw-ph-4">
+            Hindi ako makapag-switch to PH kasi may remaining balance ako.
+          </FaqHeader>
+          <Card.Body>
+            You'll need to zero out your remaining balance first. You can
+            contact Nintendo Support to have it removed.
+            <p />
+            Some regions also allow you to forfeit your remaining balance when
+            switching regions. Pwede kang mag-switch muna sa region na may
+            ganitong option (US), forfeit your balance, then switch to PH.
+          </Card.Body>
+          <FaqHeader id="sw-ph-5">
+            What happens to games I purchased from other regions when I switch to PH?
+          </FaqHeader>
+          <Card.Body>
+            Nothing! Your purchased games will continue to work as usual.
+          </Card.Body>
+          <FaqHeader id="sw-ph-6">
+            What happens to DLCs I purchased from other regions when I switch to PH?
+          </FaqHeader>
+          <Card.Body>
+            Same as your games, your purchased DLCs will continue to work as
+            long as they're compatible with your base game.
+          </Card.Body>
+          <FaqHeader id="sw-ph-7">
+            For future DLC purchases, do I now need to buy the PH version of the DLC?
+          </FaqHeader>
+          <Card.Body>
+            Not necessarily. DLC compatibility depends on the region/version of
+            your base game, not your account's current region.
+            <p />
+            Here's a long-known trick to check if a DLC from another region is
+            compatible with your base game:
+            <ol>
+              <li>Select your base game from the HOME Menu.</li>
+              <li>
+                Press <b>+</b> → <b>Software Information</b> → <b>Nintendo eShop</b>.
+              </li>
+              <li>
+                Select the account associated with the region where you want to
+                purchase the DLC. For example, if you want to check
+                compatibility with the PH eShop, select your PH account.
+              </li>
+              <li>
+                If the game's product page opens successfully, it's a good
+                indication that DLCs from that region will be compatible with
+                your base game.
+              </li>
+            </ol>
+          </Card.Body>
+          <FaqHeader id="sw-ph-8">
+            Bakit hindi ko na makita lahat ng regions sa MaySaleBa website, like Thailand, Malaysia, Singapore, etc.?
+          </FaqHeader>
+          <Card.Body>
+            I intentionally filtered out regions where we no longer have a way
+            to purchase games, whether through PH-issued cards or gift cards.
+            <p />
+            You can still view their prices (if available) by selecting
+            <b> Show All Regions</b> on a game's page.
+          </Card.Body>
+          <FaqHeader id="sw-ph-9">
+            May English support ba ang games from other eShop regions?
+          </FaqHeader>
+          <Card.Body>
+            Not always. English support varies depending on the game and region.
+            You can check this by visiting the game's eShop page and looking
+            under <b>Supported Languages</b>.
+            <p />
+            However, games listed on the MaySaleBa website are already filtered
+            to show only those with English support, so you don't have to check
+            them manually.
+          </Card.Body>
           <FaqHeader id="sw-error-2813-2470">Why am I getting error 2813-2470 when I try to purchase?</FaqHeader>
           <Card.Body>
             This error usually means the payment card you’re using was not issued
@@ -986,6 +1138,7 @@ const About = () => {
             </ol>
           </Card.Body>
 
+          <FaqHeader id="other-questions" section>Other Questions</FaqHeader>
           <FaqHeader id="buying-from-eneba">How do I buy gift cards from Eneba?</FaqHeader>
           <Card.Body>
           <b>Eneba</b> is an online marketplace where you can purchase Nintendo eShop and PlayStation Network (PSN) gift cards for various regions. Follow these steps to buy codes easily and securely:
