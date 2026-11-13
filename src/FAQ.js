@@ -601,7 +601,10 @@ const About = () => {
           align="center"
           style={{ borderRight: "1px solid rgba(224,224,224,1)" }}
         >
-          <b>PH Payment Cards</b>
+          <b>
+            <span className="faq-table-header-full">PH Payment Cards</span>
+            <span className="faq-table-header-mobile">PH Cards</span>
+          </b>
         </TableCell>
         <TableCell
           align="center"
@@ -1016,7 +1019,10 @@ const About = () => {
                       align="center"
                       style={{ borderRight: "1px solid rgba(224,224,224,1)" }}
                     >
-                      <b>PH Payment Cards</b>
+                      <b>
+                        <span className="faq-table-header-full">PH Payment Cards</span>
+                        <span className="faq-table-header-mobile">PH Cards</span>
+                      </b>
                     </TableCell>
                     <TableCell align="center">
                       <b>
