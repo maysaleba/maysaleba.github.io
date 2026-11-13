@@ -594,11 +594,12 @@ const About = () => {
     </colgroup>
     <TableHead>
       <TableRow>
-        <TableCell style={{ borderRight: "1px solid rgba(224,224,224,1)" }}>
+        <TableCell className="faq-mobile-table-header-cell" style={{ borderRight: "1px solid rgba(224,224,224,1)" }}>
           <b>eShop Region</b>
         </TableCell>
         <TableCell
           align="center"
+          className="faq-mobile-table-header-cell"
           style={{ borderRight: "1px solid rgba(224,224,224,1)" }}
         >
           <b>
@@ -608,6 +609,7 @@ const About = () => {
         </TableCell>
         <TableCell
           align="center"
+          className="faq-mobile-table-header-cell"
           style={{ borderRight: "1px solid rgba(224,224,224,1)" }}
         >
           <b>
@@ -615,8 +617,8 @@ const About = () => {
             <span className="faq-table-header-mobile">Gift Cards</span>
           </b>
         </TableCell>
-        <TableCell align="center">
-          <b>Pasabuy</b>
+        <TableCell align="center" className="faq-mobile-table-header-cell faq-pasabuy-cell">
+          <b className="faq-pasabuy-header">Pasabuy</b>
         </TableCell>
       </TableRow>
     </TableHead>
@@ -1012,11 +1014,12 @@ const About = () => {
                 </colgroup>
                 <TableHead>
                   <TableRow>
-                    <TableCell style={{ borderRight: "1px solid rgba(224,224,224,1)" }}>
+                    <TableCell className="faq-mobile-table-header-cell" style={{ borderRight: "1px solid rgba(224,224,224,1)" }}>
                       <b>PS Store Region</b>
                     </TableCell>
                     <TableCell
                       align="center"
+                      className="faq-mobile-table-header-cell"
                       style={{ borderRight: "1px solid rgba(224,224,224,1)" }}
                     >
                       <b>
@@ -1024,7 +1027,7 @@ const About = () => {
                         <span className="faq-table-header-mobile">PH Cards</span>
                       </b>
                     </TableCell>
-                    <TableCell align="center">
+                    <TableCell align="center" className="faq-mobile-table-header-cell">
                       <b>
                         <span className="faq-table-header-full">PSN Gift Cards</span>
                         <span className="faq-table-header-mobile">Gift Cards</span>

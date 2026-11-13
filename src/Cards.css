@@ -1846,6 +1846,28 @@ a.infotax:hover {
     display: inline;
   }
 
+  .faq-mobile-table-header-cell {
+    white-space: nowrap !important;
+    word-break: normal !important;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+    font-size: clamp(9px, 3vw, 12px) !important;
+    transition: font-size 120ms ease;
+  }
+
+  .faq-pasabuy-header {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: inherit;
+  }
+
+  .faq-pasabuy-cell {
+    white-space: nowrap !important;
+    word-break: normal !important;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+  }
+
   .faq-copy-link-label {
     display: none;
   }
