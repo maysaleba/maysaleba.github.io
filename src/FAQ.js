@@ -132,13 +132,6 @@ const style = {
 
 
 const About = () => {
-  React.useEffect(() => {
-    const id = decodeURIComponent(window.location.hash.slice(1));
-    if (!id) return;
-
-    document.getElementById(id)?.scrollIntoView();
-  }, []);
-
   function createData(region, logoClass, dcvcard, enebalogo, pasabuy) {
     return { region, logoClass, dcvcard, enebalogo, pasabuy };
   }

@@ -294,24 +294,64 @@ function ScrollToTop() {
   useEffect(() => {
     if (location.hash) {
       const targetId = decodeURIComponent(location.hash.slice(1));
+      let active = true;
+      let userInteracted = false;
+      let animationFrame = null;
+      const timers = [];
+      let mutationObserver;
+      let resizeObserver;
+
       const scrollToTarget = () => {
+        if (!active || userInteracted) return;
         const target = document.getElementById(targetId);
-        if (!target) return false;
-        target.scrollIntoView();
-        return true;
+        if (target) target.scrollIntoView({ block: "start", behavior: "auto" });
       };
 
-      if (!scrollToTarget()) {
-        const root = document.getElementById("root");
-        if (!root) return;
-
-        const observer = new MutationObserver(() => {
-          if (scrollToTarget()) observer.disconnect();
+      const scheduleScroll = () => {
+        if (animationFrame !== null || !active || userInteracted) return;
+        animationFrame = window.requestAnimationFrame(() => {
+          animationFrame = null;
+          scrollToTarget();
         });
-        observer.observe(root, { childList: true, subtree: true });
-        return () => observer.disconnect();
+      };
+
+      const cleanup = () => {
+        active = false;
+        timers.forEach(window.clearTimeout);
+        if (animationFrame !== null) window.cancelAnimationFrame(animationFrame);
+        mutationObserver?.disconnect();
+        resizeObserver?.disconnect();
+        window.removeEventListener("wheel", stopOnInteraction);
+        window.removeEventListener("touchstart", stopOnInteraction);
+        window.removeEventListener("pointerdown", stopOnInteraction);
+        window.removeEventListener("keydown", stopOnInteraction);
+      };
+
+      const stopOnInteraction = () => {
+        userInteracted = true;
+        cleanup();
+      };
+
+      scrollToTarget();
+      [100, 300, 700, 1400, 2500, 4000, 6500, 9000].forEach((delay) => {
+        timers.push(window.setTimeout(scrollToTarget, delay));
+      });
+
+      mutationObserver = new MutationObserver(scheduleScroll);
+      mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+      if (typeof ResizeObserver !== "undefined") {
+        resizeObserver = new ResizeObserver(scheduleScroll);
+        resizeObserver.observe(document.body);
       }
-      return;
+
+      window.addEventListener("wheel", stopOnInteraction, { passive: true });
+      window.addEventListener("touchstart", stopOnInteraction, { passive: true });
+      window.addEventListener("pointerdown", stopOnInteraction, { passive: true });
+      window.addEventListener("keydown", stopOnInteraction);
+
+      timers.push(window.setTimeout(cleanup, 10000));
+      return cleanup;
     }
 
     const listPaths = ["/allgames", "/switch", "/switch-2", "/playstation"];
