@@ -778,73 +778,50 @@ function PlatformOverlay({ title, slug, isps4, isps5 }) {
   return <div className="additional-overlay">NONE</div>;
 }
 
-  function HasHLTB(props) {
-    {
-      if (matchGames[0].LowestPrice !== undefined) {
-        return (
-          <>
-            <Link
-                className="content-link-static"
-              underline="none"
-              hover="none"
-              color="black"
-              href={"https://howlongtobeat.com" + matchGames[0].LowestPrice}
-              target="_blank"
-              rel="noreferrer"
-            >
+  function HasHLTB() {
+    const hltbPath = String(matchGames[0].LowestPrice || "").trim();
+    const hasHLTBData = [
+      matchGames[0].MainStory,
+      matchGames[0].MainExtra,
+      matchGames[0].Completionist,
+    ].some((time) => Number.isFinite(Number(time)) && Number(time) > 0);
+    if (!hasHLTBData) return null;
+
+    return (
+      <>
+        <Link
+          className="content-link-static"
+          underline="none"
+          hover="none"
+          color="black"
+          href={
+            hltbPath
+              ? `https://howlongtobeat.com${hltbPath}`
+              : "https://howlongtobeat.com"
+          }
+          target="_blank"
+          rel="noreferrer"
+        >
 <Card.Header className="content-header">
-                HOW LONG TO BEAT
-                <img style={{ paddingRight: "5px" }} src={download} />
-                <AccessTimeIcon />
-                {/*              <span className="hltb-logo">
+            HOW LONG TO BEAT
+            <img style={{ paddingRight: "5px" }} src={download} />
+            <AccessTimeIcon />
+            {/*              <span className="hltb-logo">
                 <img src={download} />
               </span>*/}
-              </Card.Header>
-              <Card.Body style={{ fontSize: 14, margin: "auto" }}>
-                <div style={{ columnRule: "4px double #ff00ff" }}>
-                  <Row xs={3} sm={3}>
-                    <MainStory />
-                    <MainExtra />
-                    <Completionist />
-                  </Row>
-                </div>
-              </Card.Body>
-            </Link>
-          </>
-        );
-      } else {
-        return (
-          <>
-            <Link
-              underline="none"
-              hover="none"
-              color="black"
-              href={"https://howlongtobeat.com"}
-              target="_blank"
-              rel="noreferrer"
-            >
-<Card.Header className="content-header">
-                HOW LONG TO BEAT
-                <img style={{ paddingRight: "5px" }} src={download} />
-                <AccessTimeIcon />
-                {/*              <span className="hltb-logo">
-                <img src={download} />
-              </span>*/}
-              </Card.Header>
-              <Card.Body style={{ fontSize: 14, margin: "auto" }}>
-                <div style={{ columnRule: "4px double #ff00ff" }}>
-                  <Row xs={3} sm={3}>
-                    <MainStory />
-                    <MainExtra />
-                    <Completionist />
-                  </Row>
-                </div>
-              </Card.Body>
-            </Link>
-          </>
-        );
-      }
-    }
+        </Card.Header>
+        <Card.Body style={{ fontSize: 14, margin: "auto" }}>
+          <div style={{ columnRule: "4px double #ff00ff" }}>
+            <Row xs={3} sm={3}>
+              <MainStory />
+              <MainExtra />
+              <Completionist />
+            </Row>
+          </div>
+        </Card.Body>
+      </Link>
+      </>
+    );
   }
 
   function MainStory() {
