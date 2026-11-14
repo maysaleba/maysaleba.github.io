@@ -3,17 +3,17 @@
     "static/js/0.a37a2322.chunk.js": "/maysaleba.github.io/static/js/0.a37a2322.chunk.js",
     "static/js/0.a37a2322.chunk.js.map": "/maysaleba.github.io/static/js/0.a37a2322.chunk.js.map",
     "main.css": "/maysaleba.github.io/static/css/main.564c2fc2.chunk.css",
-    "main.js": "/maysaleba.github.io/static/js/main.2e129acd.chunk.js",
-    "main.js.map": "/maysaleba.github.io/static/js/main.2e129acd.chunk.js.map",
-    "runtime-main.js": "/maysaleba.github.io/static/js/runtime-main.5d81fc82.js",
-    "runtime-main.js.map": "/maysaleba.github.io/static/js/runtime-main.5d81fc82.js.map",
+    "main.js": "/maysaleba.github.io/static/js/main.09acccc7.chunk.js",
+    "main.js.map": "/maysaleba.github.io/static/js/main.09acccc7.chunk.js.map",
+    "runtime-main.js": "/maysaleba.github.io/static/js/runtime-main.c90423cd.js",
+    "runtime-main.js.map": "/maysaleba.github.io/static/js/runtime-main.c90423cd.js.map",
     "static/css/3.13106ac0.chunk.css": "/maysaleba.github.io/static/css/3.13106ac0.chunk.css",
     "static/js/3.16ec03b0.chunk.js": "/maysaleba.github.io/static/js/3.16ec03b0.chunk.js",
     "static/js/3.16ec03b0.chunk.js.map": "/maysaleba.github.io/static/js/3.16ec03b0.chunk.js.map",
     "static/js/4.5d2461d9.chunk.js": "/maysaleba.github.io/static/js/4.5d2461d9.chunk.js",
     "static/js/4.5d2461d9.chunk.js.map": "/maysaleba.github.io/static/js/4.5d2461d9.chunk.js.map",
-    "static/js/5.cd1c07a1.chunk.js": "/maysaleba.github.io/static/js/5.cd1c07a1.chunk.js",
-    "static/js/5.cd1c07a1.chunk.js.map": "/maysaleba.github.io/static/js/5.cd1c07a1.chunk.js.map",
+    "static/js/5.592a755d.chunk.js": "/maysaleba.github.io/static/js/5.592a755d.chunk.js",
+    "static/js/5.592a755d.chunk.js.map": "/maysaleba.github.io/static/js/5.592a755d.chunk.js.map",
     "static/js/6.125bcc6a.chunk.js": "/maysaleba.github.io/static/js/6.125bcc6a.chunk.js",
     "static/js/6.125bcc6a.chunk.js.map": "/maysaleba.github.io/static/js/6.125bcc6a.chunk.js.map",
     "static/css/7.754b9d66.chunk.css": "/maysaleba.github.io/static/css/7.754b9d66.chunk.css",
@@ -49,10 +49,10 @@
     "static/media/App.css": "/maysaleba.github.io/static/media/woojooaidp-webfont.3fa0e295.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.5d81fc82.js",
+    "static/js/runtime-main.c90423cd.js",
     "static/css/3.13106ac0.chunk.css",
     "static/js/3.16ec03b0.chunk.js",
     "static/css/main.564c2fc2.chunk.css",
-    "static/js/main.2e129acd.chunk.js"
+    "static/js/main.09acccc7.chunk.js"
   ]
 }
