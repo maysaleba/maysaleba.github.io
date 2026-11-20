@@ -83,7 +83,7 @@
     "MexicoPrice": "120",
     "MainExtra": 91,
     "SalePrice": "7.49",
-    "Popularity": "98",
+    "Popularity": "101",
     "SwitzerlandPrice": "8.98",
     "JapanPrice": "986",
     "KoreaPrice": "",
@@ -741,7 +741,7 @@
     "MexicoPrice": "160",
     "MainExtra": "",
     "SalePrice": "7.99",
-    "Popularity": "42",
+    "Popularity": "43",
     "SwitzerlandPrice": "9.98",
     "JapanPrice": "986",
     "KoreaPrice": "",
@@ -976,7 +976,7 @@
     "MexicoPrice": "140",
     "MainExtra": 6,
     "SalePrice": "",
-    "Popularity": "3",
+    "Popularity": "4",
     "SwitzerlandPrice": "30.8",
     "JapanPrice": "940",
     "KoreaPrice": "",
@@ -2059,7 +2059,7 @@
     "SalePrice": "22.49",
     "Popularity": "7",
     "SwitzerlandPrice": "20.93",
-    "JapanPrice": "",
+    "JapanPrice": "2475",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -2621,7 +2621,7 @@
     "MexicoPrice": "806",
     "MainExtra": "",
     "SalePrice": "38.99",
-    "Popularity": "17",
+    "Popularity": "18",
     "SwitzerlandPrice": "",
     "JapanPrice": "",
     "KoreaPrice": "",
@@ -2715,7 +2715,7 @@
     "MexicoPrice": "339.99",
     "MainExtra": 27,
     "SalePrice": "",
-    "Popularity": "1",
+    "Popularity": "2",
     "SwitzerlandPrice": "16.75",
     "JapanPrice": "3410",
     "KoreaPrice": "",
@@ -2903,7 +2903,7 @@
     "MexicoPrice": "199",
     "MainExtra": 12,
     "SalePrice": "",
-    "Popularity": "13",
+    "Popularity": "14",
     "SwitzerlandPrice": "2",
     "JapanPrice": "2199",
     "KoreaPrice": "",
@@ -3890,7 +3890,7 @@
     "MexicoPrice": "614.8",
     "MainExtra": "",
     "SalePrice": "",
-    "Popularity": "",
+    "Popularity": "1",
     "SwitzerlandPrice": "42",
     "JapanPrice": "",
     "KoreaPrice": "",
@@ -6146,7 +6146,7 @@
     "MexicoPrice": "1199",
     "MainExtra": 49,
     "SalePrice": "",
-    "Popularity": "3",
+    "Popularity": "4",
     "SwitzerlandPrice": "59.9",
     "JapanPrice": "3072",
     "KoreaPrice": "",
@@ -6945,7 +6945,7 @@
     "MexicoPrice": "699",
     "MainExtra": 15,
     "SalePrice": "",
-    "Popularity": "64",
+    "Popularity": "66",
     "SwitzerlandPrice": "5.98",
     "JapanPrice": "",
     "KoreaPrice": "",
@@ -7979,7 +7979,7 @@
     "MexicoPrice": "600",
     "MainExtra": 6,
     "SalePrice": "",
-    "Popularity": "5",
+    "Popularity": "6",
     "SwitzerlandPrice": "40",
     "JapanPrice": "4784",
     "KoreaPrice": "",
@@ -8684,7 +8684,7 @@
     "MexicoPrice": "104.99",
     "MainExtra": 4,
     "SalePrice": "7.49",
-    "Popularity": "4",
+    "Popularity": "5",
     "SwitzerlandPrice": "7.50",
     "JapanPrice": "1012",
     "KoreaPrice": "",
@@ -8778,7 +8778,7 @@
     "MexicoPrice": "233.99",
     "MainExtra": 66,
     "SalePrice": "",
-    "Popularity": "8",
+    "Popularity": "9",
     "SwitzerlandPrice": "7",
     "JapanPrice": "2800",
     "KoreaPrice": "",
@@ -9295,7 +9295,7 @@
     "MexicoPrice": "489.99",
     "MainExtra": 81,
     "SalePrice": "34.99",
-    "Popularity": "19",
+    "Popularity": "20",
     "SwitzerlandPrice": "49.9",
     "JapanPrice": "3960",
     "KoreaPrice": "",
@@ -11316,7 +11316,7 @@
     "MexicoPrice": "899",
     "MainExtra": "",
     "SalePrice": "",
-    "Popularity": "46",
+    "Popularity": "47",
     "SwitzerlandPrice": "49.9",
     "JapanPrice": "6930",
     "KoreaPrice": "",
@@ -13572,7 +13572,7 @@
     "MexicoPrice": "277.49",
     "MainExtra": 73,
     "SalePrice": "14.79",
-    "Popularity": "29",
+    "Popularity": "30",
     "SwitzerlandPrice": "16.47",
     "JapanPrice": "2400",
     "KoreaPrice": "",
@@ -15499,7 +15499,7 @@
     "MexicoPrice": "73.80",
     "MainExtra": 8,
     "SalePrice": "3.99",
-    "Popularity": "15",
+    "Popularity": "16",
     "SwitzerlandPrice": "3.99",
     "JapanPrice": "599",
     "KoreaPrice": "",
@@ -16488,7 +16488,7 @@
     "SalePrice": "18.74",
     "Popularity": "",
     "SwitzerlandPrice": "23",
-    "JapanPrice": "",
+    "JapanPrice": "4070",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -18460,7 +18460,7 @@
     "MexicoPrice": "301.49",
     "MainExtra": 22,
     "SalePrice": "26.99",
-    "Popularity": "11",
+    "Popularity": "12",
     "SwitzerlandPrice": "",
     "JapanPrice": "2961",
     "KoreaPrice": "",
@@ -20622,7 +20622,7 @@
     "MexicoPrice": "149.75",
     "MainExtra": 77,
     "SalePrice": "9.99",
-    "Popularity": "9",
+    "Popularity": "10",
     "SwitzerlandPrice": "56",
     "JapanPrice": "",
     "KoreaPrice": "",
@@ -21105,7 +21105,7 @@
   {
     "CanadaPrice": "55.99",
     "SCORE": "77",
-    "SaleEnds": "2026-12-03",
+    "SaleEnds": "2026-12-02",
     "LowestPrice": "/game/106639",
     "SaleStarted": "2026-11-19",
     "description": "",
@@ -21141,7 +21141,7 @@
     "SalePrice": "41.99",
     "Popularity": "",
     "SwitzerlandPrice": "47.92",
-    "JapanPrice": "",
+    "JapanPrice": "4200",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -21188,7 +21188,7 @@
     "SalePrice": "15.99",
     "Popularity": "",
     "SwitzerlandPrice": "15.60",
-    "JapanPrice": "",
+    "JapanPrice": "1840",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -24147,7 +24147,7 @@
     "MexicoPrice": "561.75",
     "MainExtra": 12,
     "SalePrice": "29.99",
-    "Popularity": "7",
+    "Popularity": "9",
     "SwitzerlandPrice": "29.99",
     "JapanPrice": "",
     "KoreaPrice": "",
@@ -25040,7 +25040,7 @@
     "MexicoPrice": "130.80",
     "MainExtra": 19,
     "SalePrice": "5.99",
-    "Popularity": "4",
+    "Popularity": "5",
     "SwitzerlandPrice": "59.9",
     "JapanPrice": "6578",
     "KoreaPrice": "",
@@ -26262,7 +26262,7 @@
     "MexicoPrice": "",
     "MainExtra": 36,
     "SalePrice": "",
-    "Popularity": "4",
+    "Popularity": "5",
     "SwitzerlandPrice": "13.35",
     "JapanPrice": "",
     "KoreaPrice": "",
@@ -27249,7 +27249,7 @@
     "MexicoPrice": "134.70",
     "MainExtra": 80,
     "SalePrice": "8.99",
-    "Popularity": "19",
+    "Popularity": "20",
     "SwitzerlandPrice": "39.9",
     "JapanPrice": "",
     "KoreaPrice": "",
@@ -31009,7 +31009,7 @@
     "MexicoPrice": "149.99",
     "MainExtra": 22,
     "SalePrice": "8.99",
-    "Popularity": "3",
+    "Popularity": "4",
     "SwitzerlandPrice": "69.9",
     "JapanPrice": "",
     "KoreaPrice": "",
@@ -35427,7 +35427,7 @@
     "MexicoPrice": "587.83",
     "MainExtra": 70,
     "SalePrice": "",
-    "Popularity": "2",
+    "Popularity": "3",
     "SwitzerlandPrice": "",
     "JapanPrice": "2090",
     "KoreaPrice": "",
@@ -40409,7 +40409,7 @@
     "MexicoPrice": "174.99",
     "MainExtra": 86,
     "SalePrice": "13.99",
-    "Popularity": "7",
+    "Popularity": "8",
     "SwitzerlandPrice": "69.9",
     "JapanPrice": "",
     "KoreaPrice": "",
@@ -46190,7 +46190,7 @@
     "MexicoPrice": "58.18",
     "MainExtra": "",
     "SalePrice": "1.99",
-    "Popularity": "8",
+    "Popularity": "9",
     "SwitzerlandPrice": "7",
     "JapanPrice": "692",
     "KoreaPrice": "",
@@ -83649,7 +83649,7 @@
     "MexicoPrice": "265",
     "MainExtra": "",
     "SalePrice": "",
-    "Popularity": "3",
+    "Popularity": "4",
     "SwitzerlandPrice": "17.99",
     "JapanPrice": "1840",
     "KoreaPrice": "",
@@ -164395,7 +164395,7 @@
     "MexicoPrice": "82.99",
     "MainExtra": "",
     "SalePrice": "3.99",
-    "Popularity": "10",
+    "Popularity": "11",
     "SwitzerlandPrice": "4.49",
     "JapanPrice": "",
     "KoreaPrice": "",
@@ -180798,7 +180798,7 @@
     "MexicoPrice": "119.90",
     "MainExtra": 45,
     "SalePrice": "6.99",
-    "Popularity": "120",
+    "Popularity": "122",
     "SwitzerlandPrice": "7.39",
     "JapanPrice": "987",
     "KoreaPrice": "",
@@ -186485,7 +186485,7 @@
     "MexicoPrice": "67.76",
     "MainExtra": 3,
     "SalePrice": "3.49",
-    "Popularity": "10",
+    "Popularity": "11",
     "SwitzerlandPrice": "3.92",
     "JapanPrice": "350",
     "KoreaPrice": "",
@@ -196496,7 +196496,7 @@
     "MexicoPrice": "182.39",
     "MainExtra": "",
     "SalePrice": "15.99",
-    "Popularity": "18",
+    "Popularity": "19",
     "SwitzerlandPrice": "17.59",
     "JapanPrice": "1840",
     "KoreaPrice": "",
@@ -236493,7 +236493,7 @@
     "MexicoPrice": "129.90",
     "MainExtra": "",
     "SalePrice": "9.99",
-    "Popularity": "3",
+    "Popularity": "4",
     "SwitzerlandPrice": "9.99",
     "JapanPrice": "",
     "KoreaPrice": "",
@@ -236540,7 +236540,7 @@
     "MexicoPrice": "149.90",
     "MainExtra": "",
     "SalePrice": "6.99",
-    "Popularity": "63",
+    "Popularity": "64",
     "SwitzerlandPrice": "7.39",
     "JapanPrice": "",
     "KoreaPrice": "",
@@ -291389,7 +291389,7 @@
     "MexicoPrice": "219",
     "MainExtra": "",
     "SalePrice": "",
-    "Popularity": "17",
+    "Popularity": "18",
     "SwitzerlandPrice": "12",
     "JapanPrice": "700",
     "KoreaPrice": "",
@@ -311131,7 +311131,7 @@
     "SalePrice": "2.54",
     "Popularity": "",
     "SwitzerlandPrice": "2.55",
-    "JapanPrice": "",
+    "JapanPrice": "466",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -318380,7 +318380,7 @@
   {
     "CanadaPrice": "9.34",
     "SCORE": "",
-    "SaleEnds": "2027-01-01",
+    "SaleEnds": "2026-12-31",
     "LowestPrice": "",
     "SaleStarted": "2026-11-19",
     "description": "",
@@ -318416,7 +318416,7 @@
     "SalePrice": "6.79",
     "Popularity": "",
     "SwitzerlandPrice": "",
-    "JapanPrice": "",
+    "JapanPrice": "977",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -318651,13 +318651,13 @@
     "SalePrice": "9.99",
     "Popularity": "",
     "SwitzerlandPrice": "",
-    "JapanPrice": "",
+    "JapanPrice": "1596",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "599"
   },
   {
     "CanadaPrice": "13.99",
@@ -318698,13 +318698,13 @@
     "SalePrice": "9.99",
     "Popularity": "",
     "SwitzerlandPrice": "",
-    "JapanPrice": "",
+    "JapanPrice": "1596",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "599"
   },
   {
     "CanadaPrice": "",
@@ -318986,7 +318986,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "780"
   },
   {
     "CanadaPrice": "8.75",
@@ -319315,7 +319315,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "1490"
   },
   {
     "CanadaPrice": "3.24",
@@ -319461,7 +319461,7 @@
   {
     "CanadaPrice": "9.00",
     "SCORE": "",
-    "SaleEnds": "2026-11-24",
+    "SaleEnds": "2026-11-23",
     "LowestPrice": "",
     "SaleStarted": "2026-11-19",
     "description": "",
@@ -319497,7 +319497,7 @@
     "SalePrice": "7.99",
     "Popularity": "",
     "SwitzerlandPrice": "",
-    "JapanPrice": "",
+    "JapanPrice": "792",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -319967,7 +319967,7 @@
     "SalePrice": "28.11",
     "Popularity": "",
     "SwitzerlandPrice": "",
-    "JapanPrice": "",
+    "JapanPrice": "5040",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -320161,7 +320161,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "189"
   },
   {
     "CanadaPrice": "14.99",
@@ -320396,7 +320396,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "120"
   },
   {
     "CanadaPrice": "3.39",
@@ -320506,7 +320506,7 @@
     "MainStory": "",
     "Trailer": "",
     "PeruPrice": "",
-    "PercentOff": "50%",
+    "PercentOff": "60%",
     "Completionist": "",
     "genre": "",
     "ArgentinaPrice": "2999.99",
@@ -320531,7 +320531,7 @@
     "SalePrice": "1.99",
     "Popularity": "",
     "SwitzerlandPrice": "",
-    "JapanPrice": "",
+    "JapanPrice": "199",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -321101,7 +321101,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "1499"
   },
   {
     "CanadaPrice": "7.49",
@@ -321712,7 +321712,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "115"
   },
   {
     "CanadaPrice": "28.19",
@@ -321759,7 +321759,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "1940"
   },
   {
     "CanadaPrice": "8.99",
@@ -321853,7 +321853,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "115"
   },
   {
     "CanadaPrice": "5.76",
@@ -321900,7 +321900,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "230"
   },
   {
     "CanadaPrice": "2.88",
@@ -321947,7 +321947,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "115"
   },
   {
     "CanadaPrice": "5.76",
@@ -321994,7 +321994,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "230"
   },
   {
     "CanadaPrice": "48.99",
@@ -322041,7 +322041,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "2525"
   },
   {
     "CanadaPrice": "48.99",
@@ -322088,7 +322088,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "2525"
   },
   {
     "CanadaPrice": "28.05",
@@ -322328,7 +322328,7 @@
   {
     "CanadaPrice": "79.19",
     "SCORE": "",
-    "SaleEnds": "2026-11-01",
+    "SaleEnds": "2026-12-03",
     "LowestPrice": "/game/141855",
     "SaleStarted": "2026-11-19",
     "description": "",
@@ -322339,7 +322339,7 @@
     "MainStory": 11,
     "Trailer": "",
     "PeruPrice": "",
-    "PercentOff": "37%",
+    "PercentOff": "34%",
     "Completionist": 44,
     "genre": "Action, Fighting",
     "ArgentinaPrice": "64910.34",
@@ -322366,16 +322366,16 @@
     "SwitzerlandPrice": "109.9",
     "JapanPrice": "",
     "KoreaPrice": "",
-    "HongKongPrice": "438",
+    "HongKongPrice": "699",
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "4995"
   },
   {
     "CanadaPrice": "79.19",
     "SCORE": "",
-    "SaleEnds": "2026-10-11",
+    "SaleEnds": "2026-12-03",
     "LowestPrice": "/game/141855",
     "SaleStarted": "2026-11-19",
     "description": "",
@@ -322386,7 +322386,7 @@
     "MainStory": 11,
     "Trailer": "",
     "PeruPrice": "",
-    "PercentOff": "35%",
+    "PercentOff": "34%",
     "Completionist": 44,
     "genre": "Action, Fighting",
     "ArgentinaPrice": "64910.34",
@@ -322413,11 +322413,11 @@
     "SwitzerlandPrice": "",
     "JapanPrice": "",
     "KoreaPrice": "",
-    "HongKongPrice": "638",
+    "HongKongPrice": "699",
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "4995"
   },
   {
     "CanadaPrice": "5.99",
@@ -322793,7 +322793,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "649"
   },
   {
     "CanadaPrice": "9.44",
@@ -322887,7 +322887,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "4995"
   },
   {
     "CanadaPrice": "12.99",
@@ -322934,7 +322934,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "749"
   },
   {
     "CanadaPrice": "25.19",
@@ -322981,7 +322981,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "3995"
   },
   {
     "CanadaPrice": "9.99",
@@ -323028,7 +323028,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "749"
   },
   {
     "CanadaPrice": "13.49",
@@ -323451,7 +323451,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "2995"
   },
   {
     "CanadaPrice": "47.99",
@@ -323498,7 +323498,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "3295"
   },
   {
     "CanadaPrice": "74.99",
@@ -323915,7 +323915,7 @@
     "SalePrice": "4.37",
     "Popularity": "",
     "SwitzerlandPrice": "",
-    "JapanPrice": "",
+    "JapanPrice": "690",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -324485,7 +324485,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "3799"
   },
   {
     "CanadaPrice": "5.25",
@@ -324579,7 +324579,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "390"
   },
   {
     "CanadaPrice": "3.49",
@@ -324720,7 +324720,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "3495"
   },
   {
     "CanadaPrice": "13.39",
@@ -325049,7 +325049,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "2599"
   },
   {
     "CanadaPrice": "51.98",
@@ -325096,7 +325096,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "2699"
   },
   {
     "CanadaPrice": "2.79",
@@ -325143,7 +325143,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "1249"
   },
   {
     "CanadaPrice": "12.49",
@@ -325331,7 +325331,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "2999"
   },
   {
     "CanadaPrice": "2.79",
@@ -325613,7 +325613,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "4495"
   },
   {
     "CanadaPrice": "95.99",
@@ -325660,7 +325660,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "4495"
   },
   {
     "CanadaPrice": "67.49",
@@ -325891,11 +325891,11 @@
     "SwitzerlandPrice": "",
     "JapanPrice": "",
     "KoreaPrice": "",
-    "HongKongPrice": "588",
+    "HongKongPrice": "235",
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "3795"
   },
   {
     "CanadaPrice": "42.49",
@@ -325942,7 +325942,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "2699"
   },
   {
     "CanadaPrice": "42.49",
@@ -325989,7 +325989,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "2699"
   },
   {
     "CanadaPrice": "53.99",
@@ -326079,16 +326079,16 @@
     "SwitzerlandPrice": "",
     "JapanPrice": "",
     "KoreaPrice": "",
-    "HongKongPrice": "348",
+    "HongKongPrice": "139",
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "1336"
   },
   {
     "CanadaPrice": "17.54",
     "SCORE": "",
-    "SaleEnds": "2026-12-03",
+    "SaleEnds": "2026-11-25",
     "LowestPrice": "/game/129720",
     "SaleStarted": "2026-11-19",
     "description": "",
@@ -326099,7 +326099,7 @@
     "MainStory": 7,
     "Trailer": "",
     "PeruPrice": "",
-    "PercentOff": "55%",
+    "PercentOff": "60%",
     "Completionist": "",
     "genre": "",
     "ArgentinaPrice": "429",
@@ -326124,7 +326124,7 @@
     "SalePrice": "13.49",
     "Popularity": "",
     "SwitzerlandPrice": "",
-    "JapanPrice": "4290",
+    "JapanPrice": "1716",
     "KoreaPrice": "",
     "HongKongPrice": "225",
     "MalaysiaPrice": "",
@@ -326173,11 +326173,11 @@
     "SwitzerlandPrice": "",
     "JapanPrice": "",
     "KoreaPrice": "",
-    "HongKongPrice": "338",
+    "HongKongPrice": "236",
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "1990"
   },
   {
     "CanadaPrice": "47.99",
@@ -326220,11 +326220,11 @@
     "SwitzerlandPrice": "",
     "JapanPrice": "",
     "KoreaPrice": "",
-    "HongKongPrice": "558",
+    "HongKongPrice": "438",
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "2399"
   },
   {
     "CanadaPrice": "18.69",
@@ -326464,7 +326464,7 @@
   {
     "CanadaPrice": "7.74",
     "SCORE": "",
-    "SaleEnds": "2026-10-22",
+    "SaleEnds": "2026-12-03",
     "LowestPrice": "",
     "SaleStarted": "2026-11-19",
     "description": "",
@@ -326500,7 +326500,7 @@
     "SalePrice": "5.99",
     "Popularity": "",
     "SwitzerlandPrice": "",
-    "JapanPrice": "770",
+    "JapanPrice": "1400",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -326647,7 +326647,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "1180"
   },
   {
     "CanadaPrice": "2.79",
@@ -326793,7 +326793,7 @@
   {
     "CanadaPrice": "18.89",
     "SCORE": "",
-    "SaleEnds": "2026-12-03",
+    "SaleEnds": "2026-11-29",
     "LowestPrice": "",
     "SaleStarted": "2026-11-19",
     "description": "",
@@ -326829,7 +326829,7 @@
     "SalePrice": "13.99",
     "Popularity": "",
     "SwitzerlandPrice": "",
-    "JapanPrice": "2420",
+    "JapanPrice": "1694",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -326929,7 +326929,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "2159"
   },
   {
     "CanadaPrice": "6.69",
@@ -327164,7 +327164,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "1809"
   },
   {
     "CanadaPrice": "9.75",
@@ -327258,7 +327258,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "1809"
   },
   {
     "CanadaPrice": "0.53",
@@ -327451,7 +327451,7 @@
   {
     "CanadaPrice": "21.14",
     "SCORE": "",
-    "SaleEnds": "2026-12-03",
+    "SaleEnds": "2026-12-02",
     "LowestPrice": "",
     "SaleStarted": "2026-11-19",
     "description": "",
@@ -327487,7 +327487,7 @@
     "SalePrice": "14.99",
     "Popularity": "",
     "SwitzerlandPrice": "",
-    "JapanPrice": "3375",
+    "JapanPrice": "1687",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -327498,7 +327498,7 @@
   {
     "CanadaPrice": "15.29",
     "SCORE": "",
-    "SaleEnds": "2026-12-03",
+    "SaleEnds": "2026-12-02",
     "LowestPrice": "",
     "SaleStarted": "2026-11-19",
     "description": "",
@@ -327534,7 +327534,7 @@
     "SalePrice": "11.69",
     "Popularity": "",
     "SwitzerlandPrice": "",
-    "JapanPrice": "2925",
+    "JapanPrice": "1316",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -327587,12 +327587,12 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "1750"
   },
   {
     "CanadaPrice": "46.39",
     "SCORE": "",
-    "SaleEnds": "2026-11-15",
+    "SaleEnds": "2026-12-03",
     "LowestPrice": "/game/134553",
     "SaleStarted": "2026-11-19",
     "description": "",
@@ -327603,7 +327603,7 @@
     "MainStory": 6,
     "Trailer": "",
     "PeruPrice": "",
-    "PercentOff": "43%",
+    "PercentOff": "42%",
     "Completionist": 11,
     "genre": "Adventure, Platformer",
     "ArgentinaPrice": "29875.22",
@@ -327630,16 +327630,16 @@
     "SwitzerlandPrice": "",
     "JapanPrice": "",
     "KoreaPrice": "",
-    "HongKongPrice": "275",
+    "HongKongPrice": "479",
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "3295"
   },
   {
     "CanadaPrice": "46.39",
     "SCORE": "",
-    "SaleEnds": "2026-11-15",
+    "SaleEnds": "2026-12-03",
     "LowestPrice": "/game/134553",
     "SaleStarted": "2026-11-19",
     "description": "",
@@ -327650,7 +327650,7 @@
     "MainStory": 6,
     "Trailer": "",
     "PeruPrice": "",
-    "PercentOff": "43%",
+    "PercentOff": "42%",
     "Completionist": 11,
     "genre": "Adventure, Platformer",
     "ArgentinaPrice": "29875.22",
@@ -327677,11 +327677,11 @@
     "SwitzerlandPrice": "",
     "JapanPrice": "",
     "KoreaPrice": "",
-    "HongKongPrice": "275",
+    "HongKongPrice": "479",
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "3295"
   },
   {
     "CanadaPrice": "3.98",
@@ -328715,7 +328715,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "2990"
   },
   {
     "CanadaPrice": "10.79",
@@ -328762,7 +328762,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "510"
   },
   {
     "CanadaPrice": "34.99",
@@ -328809,7 +328809,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "1990"
   },
   {
     "CanadaPrice": "13.99",
@@ -328856,7 +328856,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "539"
   },
   {
     "CanadaPrice": "13.99",
@@ -328903,7 +328903,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "539"
   },
   {
     "CanadaPrice": "5.52",
@@ -329279,7 +329279,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "3995"
   },
   {
     "CanadaPrice": "19.99",
@@ -329702,7 +329702,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "2095"
   },
   {
     "CanadaPrice": "29.41",
@@ -329749,7 +329749,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "2095"
   },
   {
     "CanadaPrice": "11.69",
@@ -329790,7 +329790,7 @@
     "SalePrice": "8.99",
     "Popularity": "",
     "SwitzerlandPrice": "",
-    "JapanPrice": "3500",
+    "JapanPrice": "1050",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -330031,7 +330031,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "1695"
   },
   {
     "CanadaPrice": "6.49",
@@ -330266,7 +330266,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "1065"
   },
   {
     "CanadaPrice": "6.39",
@@ -330360,7 +330360,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "2195"
   },
   {
     "CanadaPrice": "14.83",
@@ -330401,7 +330401,7 @@
     "SalePrice": "10.98",
     "Popularity": "",
     "SwitzerlandPrice": "",
-    "JapanPrice": "",
+    "JapanPrice": "2780",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -330777,7 +330777,7 @@
     "SalePrice": "3.13",
     "Popularity": "",
     "SwitzerlandPrice": "",
-    "JapanPrice": "",
+    "JapanPrice": "490",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -331112,7 +331112,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "2700"
   },
   {
     "CanadaPrice": "39.99",
@@ -331206,7 +331206,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "539"
   },
   {
     "CanadaPrice": "13.99",
@@ -331253,12 +331253,12 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "539"
   },
   {
     "CanadaPrice": "26.74",
     "SCORE": "",
-    "SaleEnds": "2026-11-08",
+    "SaleEnds": "2026-12-03",
     "LowestPrice": "/game/169263",
     "SaleStarted": "2026-11-19",
     "description": "",
@@ -331269,7 +331269,7 @@
     "MainStory": "",
     "Trailer": "",
     "PeruPrice": "",
-    "PercentOff": "51%",
+    "PercentOff": "50%",
     "Completionist": "",
     "genre": "Action",
     "ArgentinaPrice": "17169.50",
@@ -331296,11 +331296,11 @@
     "SwitzerlandPrice": "",
     "JapanPrice": "",
     "KoreaPrice": "",
-    "HongKongPrice": "148",
+    "HongKongPrice": "299",
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "2195"
   },
   {
     "CanadaPrice": "6.98",
@@ -331341,7 +331341,7 @@
     "SalePrice": "4.98",
     "Popularity": "",
     "SwitzerlandPrice": "",
-    "JapanPrice": "",
+    "JapanPrice": "780",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -331488,12 +331488,12 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "1299"
   },
   {
     "CanadaPrice": "2.79",
     "SCORE": "",
-    "SaleEnds": "2026-12-03",
+    "SaleEnds": "2026-12-02",
     "LowestPrice": "/game/153311",
     "SaleStarted": "2026-11-19",
     "description": "",
@@ -331504,7 +331504,7 @@
     "MainStory": "",
     "Trailer": "",
     "PeruPrice": "",
-    "PercentOff": "92%",
+    "PercentOff": "96%",
     "Completionist": "",
     "genre": "Puzzle, Lifestyle, Adventure, Simulation",
     "ArgentinaPrice": "2799.99",
@@ -331529,7 +331529,7 @@
     "SalePrice": "1.99",
     "Popularity": "",
     "SwitzerlandPrice": "",
-    "JapanPrice": "3619",
+    "JapanPrice": "149",
     "KoreaPrice": "",
     "HongKongPrice": "",
     "MalaysiaPrice": "",
@@ -331958,7 +331958,7 @@
     "MalaysiaPrice": "",
     "SingaporePrice": "",
     "ThailandPrice": "",
-    "PhilippinesPrice": ""
+    "PhilippinesPrice": "5795"
   },
   {
     "CanadaPrice": "4.11",
